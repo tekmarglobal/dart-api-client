@@ -7,10 +7,6 @@ abstract class NeighborRequest implements Built<NeighborRequest, NeighborRequest
 
     
         @nullable
-    @BuiltValueField(wireName: r'city')
-    int get city;
-    
-        @nullable
     @BuiltValueField(wireName: r'county')
     int get county;
     

@@ -21,6 +21,10 @@ abstract class NeighborResponse implements Built<NeighborResponse, NeighborRespo
         @nullable
     @BuiltValueField(wireName: r'countyName')
     String get countyName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'region')
+    int get region;
 
     // Boilerplate code needed to wire-up generated code
     NeighborResponse._();
