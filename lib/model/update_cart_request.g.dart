@@ -20,12 +20,6 @@ class _$UpdateCartRequestSerializer
   Iterable<Object> serialize(Serializers serializers, UpdateCartRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
     if (object.region != null) {
       result
         ..add('region')
@@ -71,10 +65,6 @@ class _$UpdateCartRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'region':
           result.region = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -104,8 +94,6 @@ class _$UpdateCartRequestSerializer
 
 class _$UpdateCartRequest extends UpdateCartRequest {
   @override
-  final int customer;
-  @override
   final int region;
   @override
   final int productId;
@@ -121,8 +109,7 @@ class _$UpdateCartRequest extends UpdateCartRequest {
       (new UpdateCartRequestBuilder()..update(updates)).build();
 
   _$UpdateCartRequest._(
-      {this.customer,
-      this.region,
+      {this.region,
       this.productId,
       this.quantity,
       this.cartNote,
@@ -141,7 +128,6 @@ class _$UpdateCartRequest extends UpdateCartRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is UpdateCartRequest &&
-        customer == other.customer &&
         region == other.region &&
         productId == other.productId &&
         quantity == other.quantity &&
@@ -153,9 +139,7 @@ class _$UpdateCartRequest extends UpdateCartRequest {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc(
-                $jc($jc($jc(0, customer.hashCode), region.hashCode),
-                    productId.hashCode),
+            $jc($jc($jc(0, region.hashCode), productId.hashCode),
                 quantity.hashCode),
             cartNote.hashCode),
         productNote.hashCode));
@@ -164,7 +148,6 @@ class _$UpdateCartRequest extends UpdateCartRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('UpdateCartRequest')
-          ..add('customer', customer)
           ..add('region', region)
           ..add('productId', productId)
           ..add('quantity', quantity)
@@ -177,10 +160,6 @@ class _$UpdateCartRequest extends UpdateCartRequest {
 class UpdateCartRequestBuilder
     implements Builder<UpdateCartRequest, UpdateCartRequestBuilder> {
   _$UpdateCartRequest _$v;
-
-  int _customer;
-  int get customer => _$this._customer;
-  set customer(int customer) => _$this._customer = customer;
 
   int _region;
   int get region => _$this._region;
@@ -206,7 +185,6 @@ class UpdateCartRequestBuilder
 
   UpdateCartRequestBuilder get _$this {
     if (_$v != null) {
-      _customer = _$v.customer;
       _region = _$v.region;
       _productId = _$v.productId;
       _quantity = _$v.quantity;
@@ -234,7 +212,6 @@ class UpdateCartRequestBuilder
   _$UpdateCartRequest build() {
     final _$result = _$v ??
         new _$UpdateCartRequest._(
-            customer: customer,
             region: region,
             productId: productId,
             quantity: quantity,

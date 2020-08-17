@@ -86,11 +86,8 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
 *OrderApi* | [**apiOrderUpdateOrderPost**](doc//OrderApi.md#apiorderupdateorderpost) | **post** /api/Order/UpdateOrder | 
-*PaymentApi* | [**apiPaymentCardResultGet**](doc//PaymentApi.md#apipaymentcardresultget) | **get** /api/Payment/CardResult | 
-*PaymentApi* | [**apiPaymentCardTestPost**](doc//PaymentApi.md#apipaymentcardtestpost) | **post** /api/Payment/CardTest | 
-*PaymentApi* | [**apiPaymentCreditCardPayment3dTestPost**](doc//PaymentApi.md#apipaymentcreditcardpayment3dtestpost) | **post** /api/Payment/CreditCardPayment3dTest | 
+*PaymentApi* | [**apiPaymentCardResultPost**](doc//PaymentApi.md#apipaymentcardresultpost) | **post** /api/Payment/CardResult | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
-*PaymentApi* | [**apiPaymentTestbankaPost**](doc//PaymentApi.md#apipaymenttestbankapost) | **post** /api/Payment/testbanka | 
 *PaymentApi* | [**apiPaymentUpdatePaymentPost**](doc//PaymentApi.md#apipaymentupdatepaymentpost) | **post** /api/Payment/UpdatePayment | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
@@ -139,6 +136,7 @@ Class | Method | HTTP request | Description
  - [NeighborResponse](doc//NeighborResponse.md)
  - [NeighborResponseListRestResult](doc//NeighborResponseListRestResult.md)
  - [NewCustomerRequest](doc//NewCustomerRequest.md)
+ - [ObjectRestResult](doc//ObjectRestResult.md)
  - [OrderRequest](doc//OrderRequest.md)
  - [OrderResponse](doc//OrderResponse.md)
  - [OrderResponseRestResult](doc//OrderResponseRestResult.md)
@@ -168,13 +166,10 @@ Class | Method | HTTP request | Description
  - [SmsRequest](doc//SmsRequest.md)
  - [SmsResponse](doc//SmsResponse.md)
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
- - [StringRestResult](doc//StringRestResult.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)
- - [VerifyResponse](doc//VerifyResponse.md)
- - [VerifyResponseRestResult](doc//VerifyResponseRestResult.md)
 
 
 ## Documentation For Authorization

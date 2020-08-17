@@ -7,10 +7,6 @@ abstract class PaymentResponse implements Built<PaymentResponse, PaymentResponse
 
     
         @nullable
-    @BuiltValueField(wireName: r'transactionCode')
-    String get transactionCode;
-    
-        @nullable
     @BuiltValueField(wireName: r'transactionMessage')
     String get transactionMessage;
 

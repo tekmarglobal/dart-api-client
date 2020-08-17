@@ -20,12 +20,6 @@ class _$PaymentResponseSerializer
   Iterable<Object> serialize(Serializers serializers, PaymentResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.transactionCode != null) {
-      result
-        ..add('transactionCode')
-        ..add(serializers.serialize(object.transactionCode,
-            specifiedType: const FullType(String)));
-    }
     if (object.transactionMessage != null) {
       result
         ..add('transactionMessage')
@@ -47,10 +41,6 @@ class _$PaymentResponseSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'transactionCode':
-          result.transactionCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'transactionMessage':
           result.transactionMessage = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -64,15 +54,12 @@ class _$PaymentResponseSerializer
 
 class _$PaymentResponse extends PaymentResponse {
   @override
-  final String transactionCode;
-  @override
   final String transactionMessage;
 
   factory _$PaymentResponse([void Function(PaymentResponseBuilder) updates]) =>
       (new PaymentResponseBuilder()..update(updates)).build();
 
-  _$PaymentResponse._({this.transactionCode, this.transactionMessage})
-      : super._();
+  _$PaymentResponse._({this.transactionMessage}) : super._();
 
   @override
   PaymentResponse rebuild(void Function(PaymentResponseBuilder) updates) =>
@@ -86,20 +73,17 @@ class _$PaymentResponse extends PaymentResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is PaymentResponse &&
-        transactionCode == other.transactionCode &&
         transactionMessage == other.transactionMessage;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc(0, transactionCode.hashCode), transactionMessage.hashCode));
+    return $jf($jc(0, transactionMessage.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PaymentResponse')
-          ..add('transactionCode', transactionCode)
           ..add('transactionMessage', transactionMessage))
         .toString();
   }
@@ -108,11 +92,6 @@ class _$PaymentResponse extends PaymentResponse {
 class PaymentResponseBuilder
     implements Builder<PaymentResponse, PaymentResponseBuilder> {
   _$PaymentResponse _$v;
-
-  String _transactionCode;
-  String get transactionCode => _$this._transactionCode;
-  set transactionCode(String transactionCode) =>
-      _$this._transactionCode = transactionCode;
 
   String _transactionMessage;
   String get transactionMessage => _$this._transactionMessage;
@@ -123,7 +102,6 @@ class PaymentResponseBuilder
 
   PaymentResponseBuilder get _$this {
     if (_$v != null) {
-      _transactionCode = _$v.transactionCode;
       _transactionMessage = _$v.transactionMessage;
       _$v = null;
     }
@@ -145,10 +123,8 @@ class PaymentResponseBuilder
 
   @override
   _$PaymentResponse build() {
-    final _$result = _$v ??
-        new _$PaymentResponse._(
-            transactionCode: transactionCode,
-            transactionMessage: transactionMessage);
+    final _$result =
+        _$v ?? new _$PaymentResponse._(transactionMessage: transactionMessage);
     replace(_$result);
     return _$result;
   }

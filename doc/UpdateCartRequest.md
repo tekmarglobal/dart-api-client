@@ -8,7 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**customer** | **int** |  | [optional] [default to null]
 **region** | **int** |  | [optional] [default to null]
 **productId** | **int** |  | [optional] [default to null]
 **quantity** | **double** |  | [optional] [default to null]

@@ -7,10 +7,6 @@ abstract class UpdateCartRequest implements Built<UpdateCartRequest, UpdateCartR
 
     
         @nullable
-    @BuiltValueField(wireName: r'customer')
-    int get customer;
-    
-        @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
     

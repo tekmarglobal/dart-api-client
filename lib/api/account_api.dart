@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/string_rest_result.dart';
+import 'package:openapi/model/object_rest_result.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
 import 'package:openapi/model/login_request.dart';
 
@@ -68,7 +68,7 @@ class AccountApi {
         /// 
         ///
         /// 
-        Future<Response<StringRestResult>>apiAccountWhoAmIGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<ObjectRestResult>>apiAccountWhoAmIGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Account/WhoAmI";
 
@@ -98,10 +98,10 @@ class AccountApi {
             cancelToken: cancelToken,
             ).then((response) {
 
-        var serializer = _serializers.serializerForType(StringRestResult);
-        var data = _serializers.deserializeWith<StringRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+        var serializer = _serializers.serializerForType(ObjectRestResult);
+        var data = _serializers.deserializeWith<ObjectRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
-            return Response<StringRestResult>(
+            return Response<ObjectRestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,

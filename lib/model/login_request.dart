@@ -7,12 +7,8 @@ abstract class LoginRequest implements Built<LoginRequest, LoginRequestBuilder> 
 
     
         @nullable
-    @BuiltValueField(wireName: r'userName')
-    String get userName;
-    
-        @nullable
-    @BuiltValueField(wireName: r'password')
-    String get password;
+    @BuiltValueField(wireName: r'sessionId')
+    String get sessionId;
 
     // Boilerplate code needed to wire-up generated code
     LoginRequest._();

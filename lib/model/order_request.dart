@@ -15,10 +15,6 @@ abstract class OrderRequest implements Built<OrderRequest, OrderRequestBuilder> 
     int get cartId;
     
         @nullable
-    @BuiltValueField(wireName: r'customerId')
-    int get customerId;
-    
-        @nullable
     @BuiltValueField(wireName: r'deliveryAddressId')
     int get deliveryAddressId;
     
@@ -29,6 +25,10 @@ abstract class OrderRequest implements Built<OrderRequest, OrderRequestBuilder> 
         @nullable
     @BuiltValueField(wireName: r'orderStatus')
     int get orderStatus;
+    
+        @nullable
+    @BuiltValueField(wireName: r'timeStotId')
+    int get timeStotId;
 
     // Boilerplate code needed to wire-up generated code
     OrderRequest._();

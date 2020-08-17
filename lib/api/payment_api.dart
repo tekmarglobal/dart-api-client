@@ -18,7 +18,7 @@ class PaymentApi {
         /// 
         ///
         /// 
-        Future<Response<String>>apiPaymentCardResultGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<String>>apiPaymentCardResultPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Payment/CardResult";
 
@@ -26,108 +26,6 @@ class PaymentApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'get'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(String);
-        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<String>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<bool>>apiPaymentCardTestPost({ String cardNo,String expiryDate,String cvv,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Payment/CardTest";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-                queryParams[r'cardNo'] = cardNo;
-                queryParams[r'expiryDate'] = expiryDate;
-                queryParams[r'cvv'] = cvv;
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(bool);
-        var data = _serializers.deserializeWith<bool>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<bool>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<String>>apiPaymentCreditCardPayment3dTestPost({ String cardNo,String expiryDate,String cvv,int orderid,double amount,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Payment/CreditCardPayment3dTest";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-                queryParams[r'cardNo'] = cardNo;
-                queryParams[r'expiryDate'] = expiryDate;
-                queryParams[r'cvv'] = cvv;
-                queryParams[r'orderid'] = orderid;
-                queryParams[r'Amount'] = amount;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
@@ -210,39 +108,6 @@ class PaymentApi {
                 extra: response.extra,
             );
             });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response>apiPaymentTestbankaPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Payment/testbanka";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            );
             }
         /// 
         ///

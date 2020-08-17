@@ -20,12 +20,6 @@ class _$NeighborRequestSerializer
   Iterable<Object> serialize(Serializers serializers, NeighborRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.city != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(object.city,
-            specifiedType: const FullType(int)));
-    }
     if (object.county != null) {
       result
         ..add('county')
@@ -53,10 +47,6 @@ class _$NeighborRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'county':
           result.county = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -74,8 +64,6 @@ class _$NeighborRequestSerializer
 
 class _$NeighborRequest extends NeighborRequest {
   @override
-  final int city;
-  @override
   final int county;
   @override
   final String name;
@@ -83,7 +71,7 @@ class _$NeighborRequest extends NeighborRequest {
   factory _$NeighborRequest([void Function(NeighborRequestBuilder) updates]) =>
       (new NeighborRequestBuilder()..update(updates)).build();
 
-  _$NeighborRequest._({this.city, this.county, this.name}) : super._();
+  _$NeighborRequest._({this.county, this.name}) : super._();
 
   @override
   NeighborRequest rebuild(void Function(NeighborRequestBuilder) updates) =>
@@ -97,20 +85,18 @@ class _$NeighborRequest extends NeighborRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is NeighborRequest &&
-        city == other.city &&
         county == other.county &&
         name == other.name;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, city.hashCode), county.hashCode), name.hashCode));
+    return $jf($jc($jc(0, county.hashCode), name.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('NeighborRequest')
-          ..add('city', city)
           ..add('county', county)
           ..add('name', name))
         .toString();
@@ -120,10 +106,6 @@ class _$NeighborRequest extends NeighborRequest {
 class NeighborRequestBuilder
     implements Builder<NeighborRequest, NeighborRequestBuilder> {
   _$NeighborRequest _$v;
-
-  int _city;
-  int get city => _$this._city;
-  set city(int city) => _$this._city = city;
 
   int _county;
   int get county => _$this._county;
@@ -137,7 +119,6 @@ class NeighborRequestBuilder
 
   NeighborRequestBuilder get _$this {
     if (_$v != null) {
-      _city = _$v.city;
       _county = _$v.county;
       _name = _$v.name;
       _$v = null;
@@ -160,8 +141,7 @@ class NeighborRequestBuilder
 
   @override
   _$NeighborRequest build() {
-    final _$result =
-        _$v ?? new _$NeighborRequest._(city: city, county: county, name: name);
+    final _$result = _$v ?? new _$NeighborRequest._(county: county, name: name);
     replace(_$result);
     return _$result;
   }

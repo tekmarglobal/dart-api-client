@@ -19,16 +19,10 @@ class _$LoginRequestSerializer implements StructuredSerializer<LoginRequest> {
   Iterable<Object> serialize(Serializers serializers, LoginRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.userName != null) {
+    if (object.sessionId != null) {
       result
-        ..add('userName')
-        ..add(serializers.serialize(object.userName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.password != null) {
-      result
-        ..add('password')
-        ..add(serializers.serialize(object.password,
+        ..add('sessionId')
+        ..add(serializers.serialize(object.sessionId,
             specifiedType: const FullType(String)));
     }
     return result;
@@ -45,12 +39,8 @@ class _$LoginRequestSerializer implements StructuredSerializer<LoginRequest> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'userName':
-          result.userName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'password':
-          result.password = serializers.deserialize(value,
+        case 'sessionId':
+          result.sessionId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -62,14 +52,12 @@ class _$LoginRequestSerializer implements StructuredSerializer<LoginRequest> {
 
 class _$LoginRequest extends LoginRequest {
   @override
-  final String userName;
-  @override
-  final String password;
+  final String sessionId;
 
   factory _$LoginRequest([void Function(LoginRequestBuilder) updates]) =>
       (new LoginRequestBuilder()..update(updates)).build();
 
-  _$LoginRequest._({this.userName, this.password}) : super._();
+  _$LoginRequest._({this.sessionId}) : super._();
 
   @override
   LoginRequest rebuild(void Function(LoginRequestBuilder) updates) =>
@@ -81,21 +69,18 @@ class _$LoginRequest extends LoginRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is LoginRequest &&
-        userName == other.userName &&
-        password == other.password;
+    return other is LoginRequest && sessionId == other.sessionId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, userName.hashCode), password.hashCode));
+    return $jf($jc(0, sessionId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('LoginRequest')
-          ..add('userName', userName)
-          ..add('password', password))
+          ..add('sessionId', sessionId))
         .toString();
   }
 }
@@ -104,20 +89,15 @@ class LoginRequestBuilder
     implements Builder<LoginRequest, LoginRequestBuilder> {
   _$LoginRequest _$v;
 
-  String _userName;
-  String get userName => _$this._userName;
-  set userName(String userName) => _$this._userName = userName;
-
-  String _password;
-  String get password => _$this._password;
-  set password(String password) => _$this._password = password;
+  String _sessionId;
+  String get sessionId => _$this._sessionId;
+  set sessionId(String sessionId) => _$this._sessionId = sessionId;
 
   LoginRequestBuilder();
 
   LoginRequestBuilder get _$this {
     if (_$v != null) {
-      _userName = _$v.userName;
-      _password = _$v.password;
+      _sessionId = _$v.sessionId;
       _$v = null;
     }
     return this;
@@ -138,8 +118,7 @@ class LoginRequestBuilder
 
   @override
   _$LoginRequest build() {
-    final _$result =
-        _$v ?? new _$LoginRequest._(userName: userName, password: password);
+    final _$result = _$v ?? new _$LoginRequest._(sessionId: sessionId);
     replace(_$result);
     return _$result;
   }

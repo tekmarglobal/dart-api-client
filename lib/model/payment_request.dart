@@ -27,8 +27,8 @@ abstract class PaymentRequest implements Built<PaymentRequest, PaymentRequestBui
     String get cartCvv;
     
         @nullable
-    @BuiltValueField(wireName: r'bankId')
-    int get bankId;
+    @BuiltValueField(wireName: r'posId')
+    int get posId;
 
     // Boilerplate code needed to wire-up generated code
     PaymentRequest._();

@@ -44,6 +44,12 @@ class _$NeighborResponseSerializer
         ..add(serializers.serialize(object.countyName,
             specifiedType: const FullType(String)));
     }
+    if (object.region != null) {
+      result
+        ..add('region')
+        ..add(serializers.serialize(object.region,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -75,6 +81,10 @@ class _$NeighborResponseSerializer
           result.countyName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -91,12 +101,15 @@ class _$NeighborResponse extends NeighborResponse {
   final String cityName;
   @override
   final String countyName;
+  @override
+  final int region;
 
   factory _$NeighborResponse(
           [void Function(NeighborResponseBuilder) updates]) =>
       (new NeighborResponseBuilder()..update(updates)).build();
 
-  _$NeighborResponse._({this.id, this.name, this.cityName, this.countyName})
+  _$NeighborResponse._(
+      {this.id, this.name, this.cityName, this.countyName, this.region})
       : super._();
 
   @override
@@ -114,14 +127,16 @@ class _$NeighborResponse extends NeighborResponse {
         id == other.id &&
         name == other.name &&
         cityName == other.cityName &&
-        countyName == other.countyName;
+        countyName == other.countyName &&
+        region == other.region;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, id.hashCode), name.hashCode), cityName.hashCode),
-        countyName.hashCode));
+        $jc($jc($jc($jc(0, id.hashCode), name.hashCode), cityName.hashCode),
+            countyName.hashCode),
+        region.hashCode));
   }
 
   @override
@@ -130,7 +145,8 @@ class _$NeighborResponse extends NeighborResponse {
           ..add('id', id)
           ..add('name', name)
           ..add('cityName', cityName)
-          ..add('countyName', countyName))
+          ..add('countyName', countyName)
+          ..add('region', region))
         .toString();
   }
 }
@@ -155,6 +171,10 @@ class NeighborResponseBuilder
   String get countyName => _$this._countyName;
   set countyName(String countyName) => _$this._countyName = countyName;
 
+  int _region;
+  int get region => _$this._region;
+  set region(int region) => _$this._region = region;
+
   NeighborResponseBuilder();
 
   NeighborResponseBuilder get _$this {
@@ -163,6 +183,7 @@ class NeighborResponseBuilder
       _name = _$v.name;
       _cityName = _$v.cityName;
       _countyName = _$v.countyName;
+      _region = _$v.region;
       _$v = null;
     }
     return this;
@@ -185,7 +206,11 @@ class NeighborResponseBuilder
   _$NeighborResponse build() {
     final _$result = _$v ??
         new _$NeighborResponse._(
-            id: id, name: name, cityName: cityName, countyName: countyName);
+            id: id,
+            name: name,
+            cityName: cityName,
+            countyName: countyName,
+            region: region);
     replace(_$result);
     return _$result;
   }

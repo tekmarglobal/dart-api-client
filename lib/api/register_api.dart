@@ -8,7 +8,7 @@ import 'package:built_value/serializer.dart';
 import 'package:openapi/model/sms_request.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
 import 'package:openapi/model/verify_request.dart';
-import 'package:openapi/model/verify_response_rest_result.dart';
+import 'package:openapi/model/login_respone_rest_result.dart';
 
 class RegisterApi {
     final Dio _dio;
@@ -69,7 +69,7 @@ class RegisterApi {
         /// 
         ///
         /// 
-        Future<Response<VerifyResponseRestResult>>apiRegisterVerifySmsPost({ VerifyRequest verifyRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<LoginResponeRestResult>>apiRegisterVerifySmsPost({ VerifyRequest verifyRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Register/VerifySms";
 
@@ -102,10 +102,10 @@ class RegisterApi {
             cancelToken: cancelToken,
             ).then((response) {
 
-        var serializer = _serializers.serializerForType(VerifyResponseRestResult);
-        var data = _serializers.deserializeWith<VerifyResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+        var serializer = _serializers.serializerForType(LoginResponeRestResult);
+        var data = _serializers.deserializeWith<LoginResponeRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
-            return Response<VerifyResponseRestResult>(
+            return Response<LoginResponeRestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,

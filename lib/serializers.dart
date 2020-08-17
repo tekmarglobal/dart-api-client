@@ -42,6 +42,7 @@ import 'package:openapi/model/neighbor_request.dart';
 import 'package:openapi/model/neighbor_response.dart';
 import 'package:openapi/model/neighbor_response_list_rest_result.dart';
 import 'package:openapi/model/new_customer_request.dart';
+import 'package:openapi/model/object_rest_result.dart';
 import 'package:openapi/model/order_request.dart';
 import 'package:openapi/model/order_response.dart';
 import 'package:openapi/model/order_response_rest_result.dart';
@@ -71,13 +72,10 @@ import 'package:openapi/model/search_product_request.dart';
 import 'package:openapi/model/sms_request.dart';
 import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
-import 'package:openapi/model/string_rest_result.dart';
 import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/verify_request.dart';
-import 'package:openapi/model/verify_response.dart';
-import 'package:openapi/model/verify_response_rest_result.dart';
 
 
 part 'serializers.g.dart';
@@ -119,6 +117,7 @@ NeighborRequest,
 NeighborResponse,
 NeighborResponseListRestResult,
 NewCustomerRequest,
+ObjectRestResult,
 OrderRequest,
 OrderResponse,
 OrderResponseRestResult,
@@ -148,13 +147,10 @@ SearchProductRequest,
 SmsRequest,
 SmsResponse,
 SmsResponseRestResult,
-StringRestResult,
 TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
 UpdateCartRequest,
 VerifyRequest,
-VerifyResponse,
-VerifyResponseRestResult,
 
 ])
 
@@ -269,6 +265,9 @@ const FullType(BuiltList, const [const FullType(NeighborResponseListRestResult)]
 const FullType(BuiltList, const [const FullType(NewCustomerRequest)]),
 () => new ListBuilder<NewCustomerRequest>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(ObjectRestResult)]),
+() => new ListBuilder<ObjectRestResult>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(OrderRequest)]),
 () => new ListBuilder<OrderRequest>())
 ..addBuilderFactory(
@@ -356,9 +355,6 @@ const FullType(BuiltList, const [const FullType(SmsResponse)]),
 const FullType(BuiltList, const [const FullType(SmsResponseRestResult)]),
 () => new ListBuilder<SmsResponseRestResult>())
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(StringRestResult)]),
-() => new ListBuilder<StringRestResult>())
-..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
 () => new ListBuilder<TimeSlotsResponse>())
 ..addBuilderFactory(
@@ -370,12 +366,6 @@ const FullType(BuiltList, const [const FullType(UpdateCartRequest)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(VerifyRequest)]),
 () => new ListBuilder<VerifyRequest>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(VerifyResponse)]),
-() => new ListBuilder<VerifyResponse>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(VerifyResponseRestResult)]),
-() => new ListBuilder<VerifyResponseRestResult>())
 
 ..add(Iso8601DateTimeSerializer())
 ).build();

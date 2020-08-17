@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **cartNumber** | **String** |  | [optional] [default to null]
 **expiryDate** | **String** |  | [optional] [default to null]
 **cartCvv** | **String** |  | [optional] [default to null]
-**bankId** | **int** |  | [optional] [default to null]
+**posId** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

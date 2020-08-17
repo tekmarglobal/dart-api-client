@@ -50,10 +50,10 @@ class _$PaymentRequestSerializer
         ..add(serializers.serialize(object.cartCvv,
             specifiedType: const FullType(String)));
     }
-    if (object.bankId != null) {
+    if (object.posId != null) {
       result
-        ..add('bankId')
-        ..add(serializers.serialize(object.bankId,
+        ..add('posId')
+        ..add(serializers.serialize(object.posId,
             specifiedType: const FullType(int)));
     }
     return result;
@@ -91,8 +91,8 @@ class _$PaymentRequestSerializer
           result.cartCvv = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'bankId':
-          result.bankId = serializers.deserialize(value,
+        case 'posId':
+          result.posId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
       }
@@ -114,7 +114,7 @@ class _$PaymentRequest extends PaymentRequest {
   @override
   final String cartCvv;
   @override
-  final int bankId;
+  final int posId;
 
   factory _$PaymentRequest([void Function(PaymentRequestBuilder) updates]) =>
       (new PaymentRequestBuilder()..update(updates)).build();
@@ -125,7 +125,7 @@ class _$PaymentRequest extends PaymentRequest {
       this.cartNumber,
       this.expiryDate,
       this.cartCvv,
-      this.bankId})
+      this.posId})
       : super._();
 
   @override
@@ -145,7 +145,7 @@ class _$PaymentRequest extends PaymentRequest {
         cartNumber == other.cartNumber &&
         expiryDate == other.expiryDate &&
         cartCvv == other.cartCvv &&
-        bankId == other.bankId;
+        posId == other.posId;
   }
 
   @override
@@ -157,7 +157,7 @@ class _$PaymentRequest extends PaymentRequest {
                     cartNumber.hashCode),
                 expiryDate.hashCode),
             cartCvv.hashCode),
-        bankId.hashCode));
+        posId.hashCode));
   }
 
   @override
@@ -168,7 +168,7 @@ class _$PaymentRequest extends PaymentRequest {
           ..add('cartNumber', cartNumber)
           ..add('expiryDate', expiryDate)
           ..add('cartCvv', cartCvv)
-          ..add('bankId', bankId))
+          ..add('posId', posId))
         .toString();
   }
 }
@@ -197,9 +197,9 @@ class PaymentRequestBuilder
   String get cartCvv => _$this._cartCvv;
   set cartCvv(String cartCvv) => _$this._cartCvv = cartCvv;
 
-  int _bankId;
-  int get bankId => _$this._bankId;
-  set bankId(int bankId) => _$this._bankId = bankId;
+  int _posId;
+  int get posId => _$this._posId;
+  set posId(int posId) => _$this._posId = posId;
 
   PaymentRequestBuilder();
 
@@ -210,7 +210,7 @@ class PaymentRequestBuilder
       _cartNumber = _$v.cartNumber;
       _expiryDate = _$v.expiryDate;
       _cartCvv = _$v.cartCvv;
-      _bankId = _$v.bankId;
+      _posId = _$v.posId;
       _$v = null;
     }
     return this;
@@ -238,7 +238,7 @@ class PaymentRequestBuilder
             cartNumber: cartNumber,
             expiryDate: expiryDate,
             cartCvv: cartCvv,
-            bankId: bankId);
+            posId: posId);
     replace(_$result);
     return _$result;
   }
