@@ -33,6 +33,10 @@ abstract class RCartProducts implements Built<RCartProducts, RCartProductsBuilde
         @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
+    
+        @nullable
+    @BuiltValueField(wireName: r'productId')
+    int get productId;
 
     // Boilerplate code needed to wire-up generated code
     RCartProducts._();
