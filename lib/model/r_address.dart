@@ -39,28 +39,32 @@ abstract class RAddress implements Built<RAddress, RAddressBuilder> {
     String get description;
     
         @nullable
-    @BuiltValueField(wireName: r'neighborhoodid')
-    int get neighborhoodid;
+    @BuiltValueField(wireName: r'neighborhoodId')
+    int get neighborhoodId;
     
         @nullable
     @BuiltValueField(wireName: r'neighborhoodName')
     String get neighborhoodName;
     
         @nullable
-    @BuiltValueField(wireName: r'cityid')
-    int get cityid;
+    @BuiltValueField(wireName: r'cityId')
+    int get cityId;
     
         @nullable
     @BuiltValueField(wireName: r'cityName')
     String get cityName;
     
         @nullable
-    @BuiltValueField(wireName: r'countyid')
-    int get countyid;
+    @BuiltValueField(wireName: r'countyId')
+    int get countyId;
     
         @nullable
     @BuiltValueField(wireName: r'countyName')
     String get countyName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'name')
+    String get name;
 
     // Boilerplate code needed to wire-up generated code
     RAddress._();

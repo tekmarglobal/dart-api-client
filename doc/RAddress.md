@@ -16,12 +16,13 @@ Name | Type | Description | Notes
 **door** | **int** |  | [optional] [default to null]
 **postalCode** | **String** |  | [optional] [default to null]
 **description** | **String** |  | [optional] [default to null]
-**neighborhoodid** | **int** |  | [optional] [default to null]
+**neighborhoodId** | **int** |  | [optional] [default to null]
 **neighborhoodName** | **String** |  | [optional] [default to null]
-**cityid** | **int** |  | [optional] [default to null]
+**cityId** | **int** |  | [optional] [default to null]
 **cityName** | **String** |  | [optional] [default to null]
-**countyid** | **int** |  | [optional] [default to null]
+**countyId** | **int** |  | [optional] [default to null]
 **countyName** | **String** |  | [optional] [default to null]
+**name** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

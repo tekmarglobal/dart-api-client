@@ -66,10 +66,10 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
     }
-    if (object.neighborhoodid != null) {
+    if (object.neighborhoodId != null) {
       result
-        ..add('neighborhoodid')
-        ..add(serializers.serialize(object.neighborhoodid,
+        ..add('neighborhoodId')
+        ..add(serializers.serialize(object.neighborhoodId,
             specifiedType: const FullType(int)));
     }
     if (object.neighborhoodName != null) {
@@ -78,10 +78,10 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.neighborhoodName,
             specifiedType: const FullType(String)));
     }
-    if (object.cityid != null) {
+    if (object.cityId != null) {
       result
-        ..add('cityid')
-        ..add(serializers.serialize(object.cityid,
+        ..add('cityId')
+        ..add(serializers.serialize(object.cityId,
             specifiedType: const FullType(int)));
     }
     if (object.cityName != null) {
@@ -90,16 +90,22 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.cityName,
             specifiedType: const FullType(String)));
     }
-    if (object.countyid != null) {
+    if (object.countyId != null) {
       result
-        ..add('countyid')
-        ..add(serializers.serialize(object.countyid,
+        ..add('countyId')
+        ..add(serializers.serialize(object.countyId,
             specifiedType: const FullType(int)));
     }
     if (object.countyName != null) {
       result
         ..add('countyName')
         ..add(serializers.serialize(object.countyName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.name != null) {
+      result
+        ..add('name')
+        ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
     return result;
@@ -148,28 +154,32 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'neighborhoodid':
-          result.neighborhoodid = serializers.deserialize(value,
+        case 'neighborhoodId':
+          result.neighborhoodId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'neighborhoodName':
           result.neighborhoodName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'cityid':
-          result.cityid = serializers.deserialize(value,
+        case 'cityId':
+          result.cityId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'cityName':
           result.cityName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'countyid':
-          result.countyid = serializers.deserialize(value,
+        case 'countyId':
+          result.countyId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'countyName':
           result.countyName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'name':
+          result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -197,17 +207,19 @@ class _$RAddress extends RAddress {
   @override
   final String description;
   @override
-  final int neighborhoodid;
+  final int neighborhoodId;
   @override
   final String neighborhoodName;
   @override
-  final int cityid;
+  final int cityId;
   @override
   final String cityName;
   @override
-  final int countyid;
+  final int countyId;
   @override
   final String countyName;
+  @override
+  final String name;
 
   factory _$RAddress([void Function(RAddressBuilder) updates]) =>
       (new RAddressBuilder()..update(updates)).build();
@@ -221,12 +233,13 @@ class _$RAddress extends RAddress {
       this.door,
       this.postalCode,
       this.description,
-      this.neighborhoodid,
+      this.neighborhoodId,
       this.neighborhoodName,
-      this.cityid,
+      this.cityId,
       this.cityName,
-      this.countyid,
-      this.countyName})
+      this.countyId,
+      this.countyName,
+      this.name})
       : super._();
 
   @override
@@ -248,12 +261,13 @@ class _$RAddress extends RAddress {
         door == other.door &&
         postalCode == other.postalCode &&
         description == other.description &&
-        neighborhoodid == other.neighborhoodid &&
+        neighborhoodId == other.neighborhoodId &&
         neighborhoodName == other.neighborhoodName &&
-        cityid == other.cityid &&
+        cityId == other.cityId &&
         cityName == other.cityName &&
-        countyid == other.countyid &&
-        countyName == other.countyName;
+        countyId == other.countyId &&
+        countyName == other.countyName &&
+        name == other.name;
   }
 
   @override
@@ -271,21 +285,26 @@ class _$RAddress extends RAddress {
                                             $jc(
                                                 $jc(
                                                     $jc(
-                                                        $jc(0,
-                                                            adressId.hashCode),
-                                                        customerId.hashCode),
-                                                    fullAddress.hashCode),
-                                                building.hashCode),
-                                            floor.hashCode),
-                                        door.hashCode),
-                                    postalCode.hashCode),
-                                description.hashCode),
-                            neighborhoodid.hashCode),
-                        neighborhoodName.hashCode),
-                    cityid.hashCode),
-                cityName.hashCode),
-            countyid.hashCode),
-        countyName.hashCode));
+                                                        $jc(
+                                                            $jc(
+                                                                0,
+                                                                adressId
+                                                                    .hashCode),
+                                                            customerId
+                                                                .hashCode),
+                                                        fullAddress.hashCode),
+                                                    building.hashCode),
+                                                floor.hashCode),
+                                            door.hashCode),
+                                        postalCode.hashCode),
+                                    description.hashCode),
+                                neighborhoodId.hashCode),
+                            neighborhoodName.hashCode),
+                        cityId.hashCode),
+                    cityName.hashCode),
+                countyId.hashCode),
+            countyName.hashCode),
+        name.hashCode));
   }
 
   @override
@@ -299,12 +318,13 @@ class _$RAddress extends RAddress {
           ..add('door', door)
           ..add('postalCode', postalCode)
           ..add('description', description)
-          ..add('neighborhoodid', neighborhoodid)
+          ..add('neighborhoodId', neighborhoodId)
           ..add('neighborhoodName', neighborhoodName)
-          ..add('cityid', cityid)
+          ..add('cityId', cityId)
           ..add('cityName', cityName)
-          ..add('countyid', countyid)
-          ..add('countyName', countyName))
+          ..add('countyId', countyId)
+          ..add('countyName', countyName)
+          ..add('name', name))
         .toString();
   }
 }
@@ -344,31 +364,35 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
 
-  int _neighborhoodid;
-  int get neighborhoodid => _$this._neighborhoodid;
-  set neighborhoodid(int neighborhoodid) =>
-      _$this._neighborhoodid = neighborhoodid;
+  int _neighborhoodId;
+  int get neighborhoodId => _$this._neighborhoodId;
+  set neighborhoodId(int neighborhoodId) =>
+      _$this._neighborhoodId = neighborhoodId;
 
   String _neighborhoodName;
   String get neighborhoodName => _$this._neighborhoodName;
   set neighborhoodName(String neighborhoodName) =>
       _$this._neighborhoodName = neighborhoodName;
 
-  int _cityid;
-  int get cityid => _$this._cityid;
-  set cityid(int cityid) => _$this._cityid = cityid;
+  int _cityId;
+  int get cityId => _$this._cityId;
+  set cityId(int cityId) => _$this._cityId = cityId;
 
   String _cityName;
   String get cityName => _$this._cityName;
   set cityName(String cityName) => _$this._cityName = cityName;
 
-  int _countyid;
-  int get countyid => _$this._countyid;
-  set countyid(int countyid) => _$this._countyid = countyid;
+  int _countyId;
+  int get countyId => _$this._countyId;
+  set countyId(int countyId) => _$this._countyId = countyId;
 
   String _countyName;
   String get countyName => _$this._countyName;
   set countyName(String countyName) => _$this._countyName = countyName;
+
+  String _name;
+  String get name => _$this._name;
+  set name(String name) => _$this._name = name;
 
   RAddressBuilder();
 
@@ -382,12 +406,13 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
       _door = _$v.door;
       _postalCode = _$v.postalCode;
       _description = _$v.description;
-      _neighborhoodid = _$v.neighborhoodid;
+      _neighborhoodId = _$v.neighborhoodId;
       _neighborhoodName = _$v.neighborhoodName;
-      _cityid = _$v.cityid;
+      _cityId = _$v.cityId;
       _cityName = _$v.cityName;
-      _countyid = _$v.countyid;
+      _countyId = _$v.countyId;
       _countyName = _$v.countyName;
+      _name = _$v.name;
       _$v = null;
     }
     return this;
@@ -418,12 +443,13 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
             door: door,
             postalCode: postalCode,
             description: description,
-            neighborhoodid: neighborhoodid,
+            neighborhoodId: neighborhoodId,
             neighborhoodName: neighborhoodName,
-            cityid: cityid,
+            cityId: cityId,
             cityName: cityName,
-            countyid: countyid,
-            countyName: countyName);
+            countyId: countyId,
+            countyName: countyName,
+            name: name);
     replace(_$result);
     return _$result;
   }
