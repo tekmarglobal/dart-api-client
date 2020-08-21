@@ -15,10 +15,6 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
     String get name;
     
         @nullable
-    @BuiltValueField(wireName: r'customerId')
-    int get customerId;
-    
-        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
     

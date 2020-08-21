@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **apiOrderGetOrderListPost**
-> GetOrderListResponseRestResult apiOrderGetOrderListPost(getOrderListRequest)
+> GetOrderListResponseRestResult apiOrderGetOrderListPost()
 
 
 
@@ -28,10 +28,9 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new OrderApi();
-var getOrderListRequest = new GetOrderListRequest(); // GetOrderListRequest | 
 
 try { 
-    var result = api_instance.apiOrderGetOrderListPost(getOrderListRequest);
+    var result = api_instance.apiOrderGetOrderListPost();
     print(result);
 } catch (e) {
     print("Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n");
@@ -39,10 +38,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **getOrderListRequest** | [**GetOrderListRequest**](GetOrderListRequest.md)|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -54,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

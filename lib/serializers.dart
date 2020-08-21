@@ -6,7 +6,6 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/standard_json_plugin.dart';
 
-import 'package:openapi/model/address_request.dart';
 import 'package:openapi/model/banner_request.dart';
 import 'package:openapi/model/banner_response.dart';
 import 'package:openapi/model/banner_response_rest_result.dart';
@@ -21,7 +20,6 @@ import 'package:openapi/model/counties_response_list_rest_result.dart';
 import 'package:openapi/model/customer_address_request.dart';
 import 'package:openapi/model/customer_address_response.dart';
 import 'package:openapi/model/customer_address_response_rest_result.dart';
-import 'package:openapi/model/customer_request.dart';
 import 'package:openapi/model/customer_response.dart';
 import 'package:openapi/model/customer_response_rest_result.dart';
 import 'package:openapi/model/erp_product_request.dart';
@@ -31,7 +29,6 @@ import 'package:openapi/model/favorite_list_request.dart';
 import 'package:openapi/model/favorite_list_response.dart';
 import 'package:openapi/model/favorite_list_response_rest_result.dart';
 import 'package:openapi/model/favorite_request.dart';
-import 'package:openapi/model/get_order_list_request.dart';
 import 'package:openapi/model/get_order_list_response.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
@@ -81,7 +78,6 @@ import 'package:openapi/model/verify_request.dart';
 part 'serializers.g.dart';
 
 @SerializersFor(const [
-AddressRequest,
 BannerRequest,
 BannerResponse,
 BannerResponseRestResult,
@@ -96,7 +92,6 @@ CountiesResponseListRestResult,
 CustomerAddressRequest,
 CustomerAddressResponse,
 CustomerAddressResponseRestResult,
-CustomerRequest,
 CustomerResponse,
 CustomerResponseRestResult,
 ErpProductRequest,
@@ -106,7 +101,6 @@ FavoriteListRequest,
 FavoriteListResponse,
 FavoriteListResponseRestResult,
 FavoriteRequest,
-GetOrderListRequest,
 GetOrderListResponse,
 GetOrderListResponseRestResult,
 GetOrderRequest,
@@ -157,9 +151,6 @@ VerifyRequest,
 //allow all models to be serialized within a list
 Serializers serializers = (_$serializers.toBuilder()
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(AddressRequest)]),
-() => new ListBuilder<AddressRequest>())
-..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(BannerRequest)]),
 () => new ListBuilder<BannerRequest>())
 ..addBuilderFactory(
@@ -202,9 +193,6 @@ const FullType(BuiltList, const [const FullType(CustomerAddressResponse)]),
 const FullType(BuiltList, const [const FullType(CustomerAddressResponseRestResult)]),
 () => new ListBuilder<CustomerAddressResponseRestResult>())
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(CustomerRequest)]),
-() => new ListBuilder<CustomerRequest>())
-..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CustomerResponse)]),
 () => new ListBuilder<CustomerResponse>())
 ..addBuilderFactory(
@@ -231,9 +219,6 @@ const FullType(BuiltList, const [const FullType(FavoriteListResponseRestResult)]
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(FavoriteRequest)]),
 () => new ListBuilder<FavoriteRequest>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(GetOrderListRequest)]),
-() => new ListBuilder<GetOrderListRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(GetOrderListResponse)]),
 () => new ListBuilder<GetOrderListResponse>())

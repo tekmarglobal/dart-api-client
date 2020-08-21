@@ -100,7 +100,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AddressRequest](doc//AddressRequest.md)
  - [BannerRequest](doc//BannerRequest.md)
  - [BannerResponse](doc//BannerResponse.md)
  - [BannerResponseRestResult](doc//BannerResponseRestResult.md)
@@ -115,7 +114,6 @@ Class | Method | HTTP request | Description
  - [CustomerAddressRequest](doc//CustomerAddressRequest.md)
  - [CustomerAddressResponse](doc//CustomerAddressResponse.md)
  - [CustomerAddressResponseRestResult](doc//CustomerAddressResponseRestResult.md)
- - [CustomerRequest](doc//CustomerRequest.md)
  - [CustomerResponse](doc//CustomerResponse.md)
  - [CustomerResponseRestResult](doc//CustomerResponseRestResult.md)
  - [ErpProductRequest](doc//ErpProductRequest.md)
@@ -125,7 +123,6 @@ Class | Method | HTTP request | Description
  - [FavoriteListResponse](doc//FavoriteListResponse.md)
  - [FavoriteListResponseRestResult](doc//FavoriteListResponseRestResult.md)
  - [FavoriteRequest](doc//FavoriteRequest.md)
- - [GetOrderListRequest](doc//GetOrderListRequest.md)
  - [GetOrderListResponse](doc//GetOrderListResponse.md)
  - [GetOrderListResponseRestResult](doc//GetOrderListResponseRestResult.md)
  - [GetOrderRequest](doc//GetOrderRequest.md)

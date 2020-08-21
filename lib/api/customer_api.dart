@@ -5,10 +5,8 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/address_request.dart';
 import 'package:openapi/model/customer_address_response_rest_result.dart';
 import 'package:openapi/model/customer_response_rest_result.dart';
-import 'package:openapi/model/customer_request.dart';
 import 'package:openapi/model/new_customer_request.dart';
 import 'package:openapi/model/customer_address_request.dart';
 
@@ -21,7 +19,7 @@ class CustomerApi {
         /// 
         ///
         /// 
-        Future<Response<CustomerAddressResponseRestResult>>apiCustomerGetCustomerAdressesPost({ AddressRequest addressRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<CustomerAddressResponseRestResult>>apiCustomerGetCustomerAdressesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Customer/GetCustomerAdresses";
 
@@ -32,12 +30,9 @@ class CustomerApi {
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        List<String> contentTypes = [];
 
 
-            var serializedBody = _serializers.serialize(addressRequest);
-            var jsonaddressRequest = json.encode(serializedBody);
-            bodyData = jsonaddressRequest;
 
             return _dio.request(
             _path,
@@ -71,7 +66,7 @@ class CustomerApi {
         /// 
         ///
         /// 
-        Future<Response<CustomerResponseRestResult>>apiCustomerPost({ CustomerRequest customerRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<CustomerResponseRestResult>>apiCustomerPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Customer";
 
@@ -82,12 +77,9 @@ class CustomerApi {
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        List<String> contentTypes = [];
 
 
-            var serializedBody = _serializers.serialize(customerRequest);
-            var jsoncustomerRequest = json.encode(serializedBody);
-            bodyData = jsoncustomerRequest;
 
             return _dio.request(
             _path,

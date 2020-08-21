@@ -5,7 +5,6 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/get_order_list_request.dart';
 import 'package:openapi/model/order_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
@@ -20,7 +19,7 @@ class OrderApi {
         /// 
         ///
         /// 
-        Future<Response<GetOrderListResponseRestResult>>apiOrderGetOrderListPost({ GetOrderListRequest getOrderListRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<GetOrderListResponseRestResult>>apiOrderGetOrderListPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Order/GetOrderList";
 
@@ -31,12 +30,9 @@ class OrderApi {
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        List<String> contentTypes = [];
 
 
-            var serializedBody = _serializers.serialize(getOrderListRequest);
-            var jsongetOrderListRequest = json.encode(serializedBody);
-            bodyData = jsongetOrderListRequest;
 
             return _dio.request(
             _path,

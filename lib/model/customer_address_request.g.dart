@@ -36,12 +36,6 @@ class _$CustomerAddressRequestSerializer
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
-    if (object.customerId != null) {
-      result
-        ..add('customerId')
-        ..add(serializers.serialize(object.customerId,
-            specifiedType: const FullType(int)));
-    }
     if (object.active != null) {
       result
         ..add('active')
@@ -155,10 +149,6 @@ class _$CustomerAddressRequestSerializer
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'customerId':
-          result.customerId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -232,8 +222,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   @override
   final String name;
   @override
-  final int customerId;
-  @override
   final bool active;
   @override
   final int neighborhood;
@@ -271,7 +259,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   _$CustomerAddressRequest._(
       {this.adressId,
       this.name,
-      this.customerId,
       this.active,
       this.neighborhood,
       this.fullAddress,
@@ -304,7 +291,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
     return other is CustomerAddressRequest &&
         adressId == other.adressId &&
         name == other.name &&
-        customerId == other.customerId &&
         active == other.active &&
         neighborhood == other.neighborhood &&
         fullAddress == other.fullAddress &&
@@ -341,13 +327,10 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        $jc(
-                                                                            0,
-                                                                            adressId
-                                                                                .hashCode),
-                                                                        name
+                                                                        0,
+                                                                        adressId
                                                                             .hashCode),
-                                                                    customerId
+                                                                    name
                                                                         .hashCode),
                                                                 active
                                                                     .hashCode),
@@ -373,7 +356,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
     return (newBuiltValueToStringHelper('CustomerAddressRequest')
           ..add('adressId', adressId)
           ..add('name', name)
-          ..add('customerId', customerId)
           ..add('active', active)
           ..add('neighborhood', neighborhood)
           ..add('fullAddress', fullAddress)
@@ -404,10 +386,6 @@ class CustomerAddressRequestBuilder
   String _name;
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
-
-  int _customerId;
-  int get customerId => _$this._customerId;
-  set customerId(int customerId) => _$this._customerId = customerId;
 
   bool _active;
   bool get active => _$this._active;
@@ -476,7 +454,6 @@ class CustomerAddressRequestBuilder
     if (_$v != null) {
       _adressId = _$v.adressId;
       _name = _$v.name;
-      _customerId = _$v.customerId;
       _active = _$v.active;
       _neighborhood = _$v.neighborhood;
       _fullAddress = _$v.fullAddress;
@@ -516,7 +493,6 @@ class CustomerAddressRequestBuilder
         new _$CustomerAddressRequest._(
             adressId: adressId,
             name: name,
-            customerId: customerId,
             active: active,
             neighborhood: neighborhood,
             fullAddress: fullAddress,

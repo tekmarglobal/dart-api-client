@@ -20,12 +20,6 @@ class _$FavoriteRequestSerializer
   Iterable<Object> serialize(Serializers serializers, FavoriteRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.customerId != null) {
-      result
-        ..add('customerId')
-        ..add(serializers.serialize(object.customerId,
-            specifiedType: const FullType(int)));
-    }
     if (object.productId != null) {
       result
         ..add('productId')
@@ -47,10 +41,6 @@ class _$FavoriteRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'customerId':
-          result.customerId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'productId':
           result.productId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -64,14 +54,12 @@ class _$FavoriteRequestSerializer
 
 class _$FavoriteRequest extends FavoriteRequest {
   @override
-  final int customerId;
-  @override
   final int productId;
 
   factory _$FavoriteRequest([void Function(FavoriteRequestBuilder) updates]) =>
       (new FavoriteRequestBuilder()..update(updates)).build();
 
-  _$FavoriteRequest._({this.customerId, this.productId}) : super._();
+  _$FavoriteRequest._({this.productId}) : super._();
 
   @override
   FavoriteRequest rebuild(void Function(FavoriteRequestBuilder) updates) =>
@@ -84,20 +72,17 @@ class _$FavoriteRequest extends FavoriteRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is FavoriteRequest &&
-        customerId == other.customerId &&
-        productId == other.productId;
+    return other is FavoriteRequest && productId == other.productId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, customerId.hashCode), productId.hashCode));
+    return $jf($jc(0, productId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FavoriteRequest')
-          ..add('customerId', customerId)
           ..add('productId', productId))
         .toString();
   }
@@ -107,10 +92,6 @@ class FavoriteRequestBuilder
     implements Builder<FavoriteRequest, FavoriteRequestBuilder> {
   _$FavoriteRequest _$v;
 
-  int _customerId;
-  int get customerId => _$this._customerId;
-  set customerId(int customerId) => _$this._customerId = customerId;
-
   int _productId;
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
@@ -119,7 +100,6 @@ class FavoriteRequestBuilder
 
   FavoriteRequestBuilder get _$this {
     if (_$v != null) {
-      _customerId = _$v.customerId;
       _productId = _$v.productId;
       _$v = null;
     }
@@ -141,8 +121,7 @@ class FavoriteRequestBuilder
 
   @override
   _$FavoriteRequest build() {
-    final _$result = _$v ??
-        new _$FavoriteRequest._(customerId: customerId, productId: productId);
+    final _$result = _$v ?? new _$FavoriteRequest._(productId: productId);
     replace(_$result);
     return _$result;
   }

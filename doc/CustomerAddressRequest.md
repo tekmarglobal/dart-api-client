@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adressId** | **int** |  | [optional] [default to null]
 **name** | **String** |  | [optional] [default to null]
-**customerId** | **int** |  | [optional] [default to null]
 **active** | **bool** |  | [optional] [default to null]
 **neighborhood** | **int** |  | [optional] [default to null]
 **fullAddress** | **String** |  | [optional] [default to null]

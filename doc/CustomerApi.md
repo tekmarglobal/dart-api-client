@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **apiCustomerGetCustomerAdressesPost**
-> CustomerAddressResponseRestResult apiCustomerGetCustomerAdressesPost(addressRequest)
+> CustomerAddressResponseRestResult apiCustomerGetCustomerAdressesPost()
 
 
 
@@ -29,10 +29,9 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var addressRequest = new AddressRequest(); // AddressRequest | 
 
 try { 
-    var result = api_instance.apiCustomerGetCustomerAdressesPost(addressRequest);
+    var result = api_instance.apiCustomerGetCustomerAdressesPost();
     print(result);
 } catch (e) {
     print("Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n");
@@ -40,10 +39,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **addressRequest** | [**AddressRequest**](AddressRequest.md)|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -55,13 +51,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerPost**
-> CustomerResponseRestResult apiCustomerPost(customerRequest)
+> CustomerResponseRestResult apiCustomerPost()
 
 
 
@@ -74,10 +70,9 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var customerRequest = new CustomerRequest(); // CustomerRequest | 
 
 try { 
-    var result = api_instance.apiCustomerPost(customerRequest);
+    var result = api_instance.apiCustomerPost();
     print(result);
 } catch (e) {
     print("Exception when calling CustomerApi->apiCustomerPost: $e\n");
@@ -85,10 +80,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customerRequest** | [**CustomerRequest**](CustomerRequest.md)|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -100,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

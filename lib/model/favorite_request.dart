@@ -7,10 +7,6 @@ abstract class FavoriteRequest implements Built<FavoriteRequest, FavoriteRequest
 
     
         @nullable
-    @BuiltValueField(wireName: r'customerId')
-    int get customerId;
-    
-        @nullable
     @BuiltValueField(wireName: r'productId')
     int get productId;
 
