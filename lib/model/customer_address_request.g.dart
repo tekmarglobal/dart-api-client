@@ -58,19 +58,19 @@ class _$CustomerAddressRequestSerializer
       result
         ..add('building')
         ..add(serializers.serialize(object.building,
-            specifiedType: const FullType(int)));
+            specifiedType: const FullType(String)));
     }
     if (object.floor != null) {
       result
         ..add('floor')
         ..add(serializers.serialize(object.floor,
-            specifiedType: const FullType(int)));
+            specifiedType: const FullType(String)));
     }
     if (object.door != null) {
       result
         ..add('door')
         ..add(serializers.serialize(object.door,
-            specifiedType: const FullType(int)));
+            specifiedType: const FullType(String)));
     }
     if (object.postalCode != null) {
       result
@@ -163,15 +163,15 @@ class _$CustomerAddressRequestSerializer
           break;
         case 'building':
           result.building = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(String)) as String;
           break;
         case 'floor':
           result.floor = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(String)) as String;
           break;
         case 'door':
           result.door = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+              specifiedType: const FullType(String)) as String;
           break;
         case 'postalCode':
           result.postalCode = serializers.deserialize(value,
@@ -228,11 +228,11 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   @override
   final String fullAddress;
   @override
-  final int building;
+  final String building;
   @override
-  final int floor;
+  final String floor;
   @override
-  final int door;
+  final String door;
   @override
   final String postalCode;
   @override
@@ -399,17 +399,17 @@ class CustomerAddressRequestBuilder
   String get fullAddress => _$this._fullAddress;
   set fullAddress(String fullAddress) => _$this._fullAddress = fullAddress;
 
-  int _building;
-  int get building => _$this._building;
-  set building(int building) => _$this._building = building;
+  String _building;
+  String get building => _$this._building;
+  set building(String building) => _$this._building = building;
 
-  int _floor;
-  int get floor => _$this._floor;
-  set floor(int floor) => _$this._floor = floor;
+  String _floor;
+  String get floor => _$this._floor;
+  set floor(String floor) => _$this._floor = floor;
 
-  int _door;
-  int get door => _$this._door;
-  set door(int door) => _$this._door = door;
+  String _door;
+  String get door => _$this._door;
+  set door(String door) => _$this._door = door;
 
   String _postalCode;
   String get postalCode => _$this._postalCode;

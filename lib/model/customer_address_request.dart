@@ -28,15 +28,15 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
     
         @nullable
     @BuiltValueField(wireName: r'building')
-    int get building;
+    String get building;
     
         @nullable
     @BuiltValueField(wireName: r'floor')
-    int get floor;
+    String get floor;
     
         @nullable
     @BuiltValueField(wireName: r'door')
-    int get door;
+    String get door;
     
         @nullable
     @BuiltValueField(wireName: r'postalCode')
