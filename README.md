@@ -25,7 +25,6 @@ dependencies:
 ```
 
 ### Local
-
 To use the package in your local drive, please include the following in pubspec.yaml
 ```
 dependencies:
