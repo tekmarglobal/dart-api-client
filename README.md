@@ -60,6 +60,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountApi* | [**apiAccountLoginPost**](doc//AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
 *AccountApi* | [**apiAccountWhoAmIGet**](doc//AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
+*AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *ApiApi* | [**apiCartProductPut**](doc//ApiApi.md#apicartproductput) | **put** /api/cart/product | 
 *ApiApi* | [**apiProductAllGet**](doc//ApiApi.md#apiproductallget) | **get** /api/product/all | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
@@ -163,6 +164,8 @@ Class | Method | HTTP request | Description
  - [SmsRequest](doc//SmsRequest.md)
  - [SmsResponse](doc//SmsResponse.md)
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
+ - [TimeSlotResponse](doc//TimeSlotResponse.md)
+ - [TimeSlotResponseListRestResult](doc//TimeSlotResponseListRestResult.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)

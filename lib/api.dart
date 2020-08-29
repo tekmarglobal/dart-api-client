@@ -7,6 +7,7 @@ import 'package:openapi/auth/api_key_auth.dart';
 import 'package:openapi/auth/basic_auth.dart';
 import 'package:openapi/auth/oauth.dart';
 import 'package:openapi/api/account_api.dart';
+import 'package:openapi/api/admin_api.dart';
 import 'package:openapi/api/api_api.dart';
 import 'package:openapi/api/banner_api.dart';
 import 'package:openapi/api/cart_api.dart';
@@ -66,6 +67,15 @@ class Openapi {
     */
     AccountApi getAccountApi() {
     return AccountApi(dio, serializers);
+    }
+
+
+    /**
+    * Get AdminApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    AdminApi getAdminApi() {
+    return AdminApi(dio, serializers);
     }
 
 

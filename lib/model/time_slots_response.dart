@@ -11,16 +11,12 @@ abstract class TimeSlotsResponse implements Built<TimeSlotsResponse, TimeSlotsRe
     int get id;
     
         @nullable
-    @BuiltValueField(wireName: r'day')
-    DateTime get day;
+    @BuiltValueField(wireName: r'start')
+    DateTime get start;
     
         @nullable
-    @BuiltValueField(wireName: r'startTime')
-    double get startTime;
-    
-        @nullable
-    @BuiltValueField(wireName: r'endTime')
-    double get endTime;
+    @BuiltValueField(wireName: r'end')
+    DateTime get end;
     
         @nullable
     @BuiltValueField(wireName: r'quota')
@@ -29,6 +25,10 @@ abstract class TimeSlotsResponse implements Built<TimeSlotsResponse, TimeSlotsRe
         @nullable
     @BuiltValueField(wireName: r'isFree')
     bool get isFree;
+    
+        @nullable
+    @BuiltValueField(wireName: r'fee')
+    double get fee;
 
     // Boilerplate code needed to wire-up generated code
     TimeSlotsResponse._();

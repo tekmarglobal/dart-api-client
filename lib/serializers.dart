@@ -69,6 +69,8 @@ import 'package:openapi/model/search_product_request.dart';
 import 'package:openapi/model/sms_request.dart';
 import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
+import 'package:openapi/model/time_slot_response.dart';
+import 'package:openapi/model/time_slot_response_list_rest_result.dart';
 import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
 import 'package:openapi/model/update_cart_request.dart';
@@ -141,6 +143,8 @@ SearchProductRequest,
 SmsRequest,
 SmsResponse,
 SmsResponseRestResult,
+TimeSlotResponse,
+TimeSlotResponseListRestResult,
 TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
 UpdateCartRequest,
@@ -339,6 +343,12 @@ const FullType(BuiltList, const [const FullType(SmsResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(SmsResponseRestResult)]),
 () => new ListBuilder<SmsResponseRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(TimeSlotResponse)]),
+() => new ListBuilder<TimeSlotResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(TimeSlotResponseListRestResult)]),
+() => new ListBuilder<TimeSlotResponseListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
 () => new ListBuilder<TimeSlotsResponse>())
