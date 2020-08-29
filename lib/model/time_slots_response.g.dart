@@ -26,23 +26,17 @@ class _$TimeSlotsResponseSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(int)));
     }
-    if (object.day != null) {
+    if (object.start != null) {
       result
-        ..add('day')
-        ..add(serializers.serialize(object.day,
+        ..add('start')
+        ..add(serializers.serialize(object.start,
             specifiedType: const FullType(DateTime)));
     }
-    if (object.startTime != null) {
+    if (object.end != null) {
       result
-        ..add('startTime')
-        ..add(serializers.serialize(object.startTime,
-            specifiedType: const FullType(double)));
-    }
-    if (object.endTime != null) {
-      result
-        ..add('endTime')
-        ..add(serializers.serialize(object.endTime,
-            specifiedType: const FullType(double)));
+        ..add('end')
+        ..add(serializers.serialize(object.end,
+            specifiedType: const FullType(DateTime)));
     }
     if (object.quota != null) {
       result
@@ -55,6 +49,12 @@ class _$TimeSlotsResponseSerializer
         ..add('isFree')
         ..add(serializers.serialize(object.isFree,
             specifiedType: const FullType(bool)));
+    }
+    if (object.fee != null) {
+      result
+        ..add('fee')
+        ..add(serializers.serialize(object.fee,
+            specifiedType: const FullType(double)));
     }
     return result;
   }
@@ -75,17 +75,13 @@ class _$TimeSlotsResponseSerializer
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'day':
-          result.day = serializers.deserialize(value,
+        case 'start':
+          result.start = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
-        case 'startTime':
-          result.startTime = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'endTime':
-          result.endTime = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
+        case 'end':
+          result.end = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
           break;
         case 'quota':
           result.quota = serializers.deserialize(value,
@@ -94,6 +90,10 @@ class _$TimeSlotsResponseSerializer
         case 'isFree':
           result.isFree = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'fee':
+          result.fee = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
       }
     }
@@ -106,27 +106,22 @@ class _$TimeSlotsResponse extends TimeSlotsResponse {
   @override
   final int id;
   @override
-  final DateTime day;
+  final DateTime start;
   @override
-  final double startTime;
-  @override
-  final double endTime;
+  final DateTime end;
   @override
   final int quota;
   @override
   final bool isFree;
+  @override
+  final double fee;
 
   factory _$TimeSlotsResponse(
           [void Function(TimeSlotsResponseBuilder) updates]) =>
       (new TimeSlotsResponseBuilder()..update(updates)).build();
 
   _$TimeSlotsResponse._(
-      {this.id,
-      this.day,
-      this.startTime,
-      this.endTime,
-      this.quota,
-      this.isFree})
+      {this.id, this.start, this.end, this.quota, this.isFree, this.fee})
       : super._();
 
   @override
@@ -142,32 +137,32 @@ class _$TimeSlotsResponse extends TimeSlotsResponse {
     if (identical(other, this)) return true;
     return other is TimeSlotsResponse &&
         id == other.id &&
-        day == other.day &&
-        startTime == other.startTime &&
-        endTime == other.endTime &&
+        start == other.start &&
+        end == other.end &&
         quota == other.quota &&
-        isFree == other.isFree;
+        isFree == other.isFree &&
+        fee == other.fee;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc($jc(0, id.hashCode), day.hashCode), startTime.hashCode),
-                endTime.hashCode),
-            quota.hashCode),
-        isFree.hashCode));
+            $jc($jc($jc($jc(0, id.hashCode), start.hashCode), end.hashCode),
+                quota.hashCode),
+            isFree.hashCode),
+        fee.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('TimeSlotsResponse')
           ..add('id', id)
-          ..add('day', day)
-          ..add('startTime', startTime)
-          ..add('endTime', endTime)
+          ..add('start', start)
+          ..add('end', end)
           ..add('quota', quota)
-          ..add('isFree', isFree))
+          ..add('isFree', isFree)
+          ..add('fee', fee))
         .toString();
   }
 }
@@ -180,17 +175,13 @@ class TimeSlotsResponseBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  DateTime _day;
-  DateTime get day => _$this._day;
-  set day(DateTime day) => _$this._day = day;
+  DateTime _start;
+  DateTime get start => _$this._start;
+  set start(DateTime start) => _$this._start = start;
 
-  double _startTime;
-  double get startTime => _$this._startTime;
-  set startTime(double startTime) => _$this._startTime = startTime;
-
-  double _endTime;
-  double get endTime => _$this._endTime;
-  set endTime(double endTime) => _$this._endTime = endTime;
+  DateTime _end;
+  DateTime get end => _$this._end;
+  set end(DateTime end) => _$this._end = end;
 
   int _quota;
   int get quota => _$this._quota;
@@ -200,16 +191,20 @@ class TimeSlotsResponseBuilder
   bool get isFree => _$this._isFree;
   set isFree(bool isFree) => _$this._isFree = isFree;
 
+  double _fee;
+  double get fee => _$this._fee;
+  set fee(double fee) => _$this._fee = fee;
+
   TimeSlotsResponseBuilder();
 
   TimeSlotsResponseBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
-      _day = _$v.day;
-      _startTime = _$v.startTime;
-      _endTime = _$v.endTime;
+      _start = _$v.start;
+      _end = _$v.end;
       _quota = _$v.quota;
       _isFree = _$v.isFree;
+      _fee = _$v.fee;
       _$v = null;
     }
     return this;
@@ -233,11 +228,11 @@ class TimeSlotsResponseBuilder
     final _$result = _$v ??
         new _$TimeSlotsResponse._(
             id: id,
-            day: day,
-            startTime: startTime,
-            endTime: endTime,
+            start: start,
+            end: end,
             quota: quota,
-            isFree: isFree);
+            isFree: isFree,
+            fee: fee);
     replace(_$result);
     return _$result;
   }

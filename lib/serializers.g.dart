@@ -70,6 +70,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SmsRequest.serializer)
       ..add(SmsResponse.serializer)
       ..add(SmsResponseRestResult.serializer)
+      ..add(TimeSlotResponse.serializer)
+      ..add(TimeSlotResponseListRestResult.serializer)
       ..add(TimeSlotsResponse.serializer)
       ..add(TimeSlotsResponseListRestResult.serializer)
       ..add(UpdateCartRequest.serializer)
@@ -122,6 +124,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(RProductPrice)]),
           () => new ListBuilder<RProductPrice>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(TimeSlotResponse)]),
+          () => new ListBuilder<TimeSlotResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
           () => new ListBuilder<TimeSlotsResponse>()))
