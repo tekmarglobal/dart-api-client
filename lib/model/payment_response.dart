@@ -7,8 +7,8 @@ abstract class PaymentResponse implements Built<PaymentResponse, PaymentResponse
 
     
         @nullable
-    @BuiltValueField(wireName: r'transactionMessage')
-    String get transactionMessage;
+    @BuiltValueField(wireName: r'responseHtml')
+    String get responseHtml;
 
     // Boilerplate code needed to wire-up generated code
     PaymentResponse._();

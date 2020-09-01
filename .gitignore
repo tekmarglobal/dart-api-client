@@ -1,4 +1,4 @@
-# See https://dart.dev/guides/libraries/private-files
+# See https:
 
 # Files and directories created by pub
 .dart_tool/
@@ -30,8 +30,8 @@ pubspec.lock
 # Don’t commit files and directories created by other development environments.
 # For example, if your development environment creates any of the following files,
 # consider putting them in a global ignore file:
-*.iml
-*.ipr
-*.iws
-.idea/
-.DS_Store
+*.iml         
+*.ipr         
+*.iws         
+.idea/        
+.DS_Store     

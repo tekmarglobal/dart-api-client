@@ -65,56 +65,9 @@ class PaymentApi {
         /// 
         ///
         /// 
-        Future<Response<PaymentTypeResponseRestResult>>apiPaymentGetPaymentTypesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<PaymentResponseRestResult>>apiPaymentCreatePaymentPost({ PaymentRequest paymentRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        String _path = "/api/Payment/GetPaymentTypes";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(PaymentTypeResponseRestResult);
-        var data = _serializers.deserializeWith<PaymentTypeResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<PaymentTypeResponseRestResult>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<PaymentResponseRestResult>>apiPaymentUpdatePaymentPost({ PaymentRequest paymentRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Payment/UpdatePayment";
+        String _path = "/api/Payment/CreatePayment";
 
         Map<String, dynamic> queryParams = {};
         Map<String, String> headerParams = Map.from(headers ?? {});
@@ -149,6 +102,53 @@ class PaymentApi {
         var data = _serializers.deserializeWith<PaymentResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<PaymentResponseRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<PaymentTypeResponseRestResult>>apiPaymentGetPaymentTypesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Payment/GetPaymentTypes";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(PaymentTypeResponseRestResult);
+        var data = _serializers.deserializeWith<PaymentTypeResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<PaymentTypeResponseRestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,

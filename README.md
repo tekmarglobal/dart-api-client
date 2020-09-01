@@ -66,9 +66,9 @@ Class | Method | HTTP request | Description
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc//BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
 *CartApi* | [**apiCartDeleteCardDelete**](doc//CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
-*CartApi* | [**apiCartGetTimeSlotTestPost**](doc//CartApi.md#apicartgettimeslottestpost) | **post** /api/Cart/GetTimeSlotTest | 
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc//CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc//CartApi.md#apicartpost) | **post** /api/Cart | 
+*CartApi* | [**apiCartUpdateCartNotePost**](doc//CartApi.md#apicartupdatecartnotepost) | **post** /api/Cart/UpdateCartNote | 
 *CartApi* | [**apiCartUpdateCartPost**](doc//CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
@@ -84,12 +84,13 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc//DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc//MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc//MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
+*OrderApi* | [**apiOrderCreateOrderPost**](doc//OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
 *OrderApi* | [**apiOrderUpdateOrderPost**](doc//OrderApi.md#apiorderupdateorderpost) | **post** /api/Order/UpdateOrder | 
 *PaymentApi* | [**apiPaymentCardResultPost**](doc//PaymentApi.md#apipaymentcardresultpost) | **post** /api/Payment/CardResult | 
+*PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
-*PaymentApi* | [**apiPaymentUpdatePaymentPost**](doc//PaymentApi.md#apipaymentupdatepaymentpost) | **post** /api/Payment/UpdatePayment | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
@@ -168,6 +169,7 @@ Class | Method | HTTP request | Description
  - [TimeSlotResponseListRestResult](doc//TimeSlotResponseListRestResult.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
+ - [UpdateCartNoteRequest](doc//UpdateCartNoteRequest.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)
 

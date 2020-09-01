@@ -74,6 +74,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TimeSlotResponseListRestResult.serializer)
       ..add(TimeSlotsResponse.serializer)
       ..add(TimeSlotsResponseListRestResult.serializer)
+      ..add(UpdateCartNoteRequest.serializer)
       ..add(UpdateCartRequest.serializer)
       ..add(VerifyRequest.serializer)
       ..addBuilderFactory(

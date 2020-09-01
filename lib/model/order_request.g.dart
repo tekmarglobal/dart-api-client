@@ -19,12 +19,6 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
   Iterable<Object> serialize(Serializers serializers, OrderRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
     if (object.cartId != null) {
       result
         ..add('cartId')
@@ -43,17 +37,17 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
         ..add(serializers.serialize(object.billingAddressId,
             specifiedType: const FullType(int)));
     }
-    if (object.orderStatus != null) {
-      result
-        ..add('orderStatus')
-        ..add(serializers.serialize(object.orderStatus,
-            specifiedType: const FullType(int)));
-    }
     if (object.timeStotId != null) {
       result
         ..add('timeStotId')
         ..add(serializers.serialize(object.timeStotId,
             specifiedType: const FullType(int)));
+    }
+    if (object.transactionUid != null) {
+      result
+        ..add('transactionUid')
+        ..add(serializers.serialize(object.transactionUid,
+            specifiedType: const FullType(String)));
     }
     return result;
   }
@@ -69,10 +63,6 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'cartId':
           result.cartId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -85,13 +75,13 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
           result.billingAddressId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'orderStatus':
-          result.orderStatus = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'timeStotId':
           result.timeStotId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
+          break;
+        case 'transactionUid':
+          result.transactionUid = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -102,28 +92,25 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
 
 class _$OrderRequest extends OrderRequest {
   @override
-  final int id;
-  @override
   final int cartId;
   @override
   final int deliveryAddressId;
   @override
   final int billingAddressId;
   @override
-  final int orderStatus;
-  @override
   final int timeStotId;
+  @override
+  final String transactionUid;
 
   factory _$OrderRequest([void Function(OrderRequestBuilder) updates]) =>
       (new OrderRequestBuilder()..update(updates)).build();
 
   _$OrderRequest._(
-      {this.id,
-      this.cartId,
+      {this.cartId,
       this.deliveryAddressId,
       this.billingAddressId,
-      this.orderStatus,
-      this.timeStotId})
+      this.timeStotId,
+      this.transactionUid})
       : super._();
 
   @override
@@ -137,35 +124,31 @@ class _$OrderRequest extends OrderRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is OrderRequest &&
-        id == other.id &&
         cartId == other.cartId &&
         deliveryAddressId == other.deliveryAddressId &&
         billingAddressId == other.billingAddressId &&
-        orderStatus == other.orderStatus &&
-        timeStotId == other.timeStotId;
+        timeStotId == other.timeStotId &&
+        transactionUid == other.transactionUid;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc(
-                $jc($jc($jc(0, id.hashCode), cartId.hashCode),
-                    deliveryAddressId.hashCode),
+            $jc($jc($jc(0, cartId.hashCode), deliveryAddressId.hashCode),
                 billingAddressId.hashCode),
-            orderStatus.hashCode),
-        timeStotId.hashCode));
+            timeStotId.hashCode),
+        transactionUid.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('OrderRequest')
-          ..add('id', id)
           ..add('cartId', cartId)
           ..add('deliveryAddressId', deliveryAddressId)
           ..add('billingAddressId', billingAddressId)
-          ..add('orderStatus', orderStatus)
-          ..add('timeStotId', timeStotId))
+          ..add('timeStotId', timeStotId)
+          ..add('transactionUid', transactionUid))
         .toString();
   }
 }
@@ -173,10 +156,6 @@ class _$OrderRequest extends OrderRequest {
 class OrderRequestBuilder
     implements Builder<OrderRequest, OrderRequestBuilder> {
   _$OrderRequest _$v;
-
-  int _id;
-  int get id => _$this._id;
-  set id(int id) => _$this._id = id;
 
   int _cartId;
   int get cartId => _$this._cartId;
@@ -192,24 +171,24 @@ class OrderRequestBuilder
   set billingAddressId(int billingAddressId) =>
       _$this._billingAddressId = billingAddressId;
 
-  int _orderStatus;
-  int get orderStatus => _$this._orderStatus;
-  set orderStatus(int orderStatus) => _$this._orderStatus = orderStatus;
-
   int _timeStotId;
   int get timeStotId => _$this._timeStotId;
   set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
+
+  String _transactionUid;
+  String get transactionUid => _$this._transactionUid;
+  set transactionUid(String transactionUid) =>
+      _$this._transactionUid = transactionUid;
 
   OrderRequestBuilder();
 
   OrderRequestBuilder get _$this {
     if (_$v != null) {
-      _id = _$v.id;
       _cartId = _$v.cartId;
       _deliveryAddressId = _$v.deliveryAddressId;
       _billingAddressId = _$v.billingAddressId;
-      _orderStatus = _$v.orderStatus;
       _timeStotId = _$v.timeStotId;
+      _transactionUid = _$v.transactionUid;
       _$v = null;
     }
     return this;
@@ -232,12 +211,11 @@ class OrderRequestBuilder
   _$OrderRequest build() {
     final _$result = _$v ??
         new _$OrderRequest._(
-            id: id,
             cartId: cartId,
             deliveryAddressId: deliveryAddressId,
             billingAddressId: billingAddressId,
-            orderStatus: orderStatus,
-            timeStotId: timeStotId);
+            timeStotId: timeStotId,
+            transactionUid: transactionUid);
     replace(_$result);
     return _$result;
   }

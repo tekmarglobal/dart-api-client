@@ -9,10 +9,56 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiOrderCreateOrderPost**](OrderApi.md#apiOrderCreateOrderPost) | **post** /api/Order/CreateOrder | 
 [**apiOrderGetOrderListPost**](OrderApi.md#apiOrderGetOrderListPost) | **post** /api/Order/GetOrderList | 
 [**apiOrderGetOrderPost**](OrderApi.md#apiOrderGetOrderPost) | **post** /api/Order/GetOrder | 
 [**apiOrderUpdateOrderPost**](OrderApi.md#apiOrderUpdateOrderPost) | **post** /api/Order/UpdateOrder | 
 
+
+# **apiOrderCreateOrderPost**
+> OrderResponseRestResult apiOrderCreateOrderPost(orderRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new OrderApi();
+var orderRequest = new OrderRequest(); // OrderRequest | 
+
+try { 
+    var result = api_instance.apiOrderCreateOrderPost(orderRequest);
+    print(result);
+} catch (e) {
+    print("Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderRequest** | [**OrderRequest**](OrderRequest.md)|  | [optional] 
+
+### Return type
+
+[**OrderResponseRestResult**](OrderResponseRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderGetOrderListPost**
 > GetOrderListResponseRestResult apiOrderGetOrderListPost()

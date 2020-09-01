@@ -7,14 +7,6 @@ abstract class PaymentRequest implements Built<PaymentRequest, PaymentRequestBui
 
     
         @nullable
-    @BuiltValueField(wireName: r'orderId')
-    int get orderId;
-    
-        @nullable
-    @BuiltValueField(wireName: r'paymentTypeId')
-    int get paymentTypeId;
-    
-        @nullable
     @BuiltValueField(wireName: r'cartNumber')
     String get cartNumber;
     
@@ -29,6 +21,22 @@ abstract class PaymentRequest implements Built<PaymentRequest, PaymentRequestBui
         @nullable
     @BuiltValueField(wireName: r'posId')
     int get posId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'amount')
+    double get amount;
+    
+        @nullable
+    @BuiltValueField(wireName: r'use3dSecure')
+    bool get use3dSecure;
+    
+        @nullable
+    @BuiltValueField(wireName: r'transactionUid')
+    String get transactionUid;
+    
+        @nullable
+    @BuiltValueField(wireName: r'cardType')
+    int get cardType;
 
     // Boilerplate code needed to wire-up generated code
     PaymentRequest._();
