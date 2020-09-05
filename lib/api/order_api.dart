@@ -5,10 +5,13 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
+import 'package:openapi/model/send_order_mail_response_rest_result.dart';
 import 'package:openapi/model/order_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
 import 'package:openapi/model/order_request.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
+import 'package:openapi/model/send_order_mail_request.dart';
+import 'package:openapi/model/update_order_request.dart';
 
 class OrderApi {
     final Dio _dio;
@@ -166,7 +169,57 @@ class OrderApi {
         /// 
         ///
         /// 
-        Future<Response<OrderResponseRestResult>>apiOrderUpdateOrderPost({ OrderRequest orderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<SendOrderMailResponseRestResult>>apiOrderSendOrderMailPost({ SendOrderMailRequest sendOrderMailRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Order/SendOrderMail";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+
+
+            var serializedBody = _serializers.serialize(sendOrderMailRequest);
+            var jsonsendOrderMailRequest = json.encode(serializedBody);
+            bodyData = jsonsendOrderMailRequest;
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(SendOrderMailResponseRestResult);
+        var data = _serializers.deserializeWith<SendOrderMailResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<SendOrderMailResponseRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<OrderResponseRestResult>>apiOrderUpdateOrderPost({ UpdateOrderRequest updateOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Order/UpdateOrder";
 
@@ -180,9 +233,9 @@ class OrderApi {
         List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
 
-            var serializedBody = _serializers.serialize(orderRequest);
-            var jsonorderRequest = json.encode(serializedBody);
-            bodyData = jsonorderRequest;
+            var serializedBody = _serializers.serialize(updateOrderRequest);
+            var jsonupdateOrderRequest = json.encode(serializedBody);
+            bodyData = jsonupdateOrderRequest;
 
             return _dio.request(
             _path,

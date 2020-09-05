@@ -75,6 +75,7 @@ Class | Method | HTTP request | Description
 *CatalogApi* | [**apiCatalogDeleteCategoryDelete**](doc//CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
 *CatalogApi* | [**apiCatalogPost**](doc//CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
 *CatalogApi* | [**apiCatalogUpdateCategoryPut**](doc//CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
+*CustomerApi* | [**apiCustomerDeleteAddressPost**](doc//CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
 *CustomerApi* | [**apiCustomerGetCustomerAdressesPost**](doc//CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
 *CustomerApi* | [**apiCustomerPost**](doc//CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 *CustomerApi* | [**apiCustomerUpdateAddressPost**](doc//CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
@@ -87,8 +88,10 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**apiOrderCreateOrderPost**](doc//OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
+*OrderApi* | [**apiOrderSendOrderMailPost**](doc//OrderApi.md#apiordersendordermailpost) | **post** /api/Order/SendOrderMail | 
 *OrderApi* | [**apiOrderUpdateOrderPost**](doc//OrderApi.md#apiorderupdateorderpost) | **post** /api/Order/UpdateOrder | 
-*PaymentApi* | [**apiPaymentCardResultPost**](doc//PaymentApi.md#apipaymentcardresultpost) | **post** /api/Payment/CardResult | 
+*PaymentApi* | [**apiPaymentCardResultFailPost**](doc//PaymentApi.md#apipaymentcardresultfailpost) | **post** /api/Payment/CardResultFail | 
+*PaymentApi* | [**apiPaymentCardResultSuccessPost**](doc//PaymentApi.md#apipaymentcardresultsuccesspost) | **post** /api/Payment/CardResultSuccess | 
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
@@ -118,6 +121,8 @@ Class | Method | HTTP request | Description
  - [CustomerAddressResponseRestResult](doc//CustomerAddressResponseRestResult.md)
  - [CustomerResponse](doc//CustomerResponse.md)
  - [CustomerResponseRestResult](doc//CustomerResponseRestResult.md)
+ - [DeleteAddressRequest](doc//DeleteAddressRequest.md)
+ - [DeleteAddressResponseRestResult](doc//DeleteAddressResponseRestResult.md)
  - [ErpProductRequest](doc//ErpProductRequest.md)
  - [ErpProductResponse](doc//ErpProductResponse.md)
  - [ErpProductResponseRestResult](doc//ErpProductResponseRestResult.md)
@@ -162,6 +167,9 @@ Class | Method | HTTP request | Description
  - [RProductPrice](doc//RProductPrice.md)
  - [RProductRestResult](doc//RProductRestResult.md)
  - [SearchProductRequest](doc//SearchProductRequest.md)
+ - [SendOrderMailRequest](doc//SendOrderMailRequest.md)
+ - [SendOrderMailResponse](doc//SendOrderMailResponse.md)
+ - [SendOrderMailResponseRestResult](doc//SendOrderMailResponseRestResult.md)
  - [SmsRequest](doc//SmsRequest.md)
  - [SmsResponse](doc//SmsResponse.md)
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
@@ -171,6 +179,7 @@ Class | Method | HTTP request | Description
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
  - [UpdateCartNoteRequest](doc//UpdateCartNoteRequest.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
+ - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)
 
 

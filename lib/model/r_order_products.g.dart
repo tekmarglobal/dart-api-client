@@ -56,6 +56,12 @@ class _$ROrderProductsSerializer
         ..add(serializers.serialize(object.quantity,
             specifiedType: const FullType(double)));
     }
+    if (object.brandName != null) {
+      result
+        ..add('brandName')
+        ..add(serializers.serialize(object.brandName,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -95,6 +101,10 @@ class _$ROrderProductsSerializer
           result.quantity = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'brandName':
+          result.brandName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -115,6 +125,8 @@ class _$ROrderProducts extends ROrderProducts {
   final double discount;
   @override
   final double quantity;
+  @override
+  final String brandName;
 
   factory _$ROrderProducts([void Function(ROrderProductsBuilder) updates]) =>
       (new ROrderProductsBuilder()..update(updates)).build();
@@ -125,7 +137,8 @@ class _$ROrderProducts extends ROrderProducts {
       this.listPrice,
       this.price,
       this.discount,
-      this.quantity})
+      this.quantity,
+      this.brandName})
       : super._();
 
   @override
@@ -145,7 +158,8 @@ class _$ROrderProducts extends ROrderProducts {
         listPrice == other.listPrice &&
         price == other.price &&
         discount == other.discount &&
-        quantity == other.quantity;
+        quantity == other.quantity &&
+        brandName == other.brandName;
   }
 
   @override
@@ -153,11 +167,13 @@ class _$ROrderProducts extends ROrderProducts {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, productId.hashCode), name.hashCode),
-                    listPrice.hashCode),
-                price.hashCode),
-            discount.hashCode),
-        quantity.hashCode));
+                $jc(
+                    $jc($jc($jc(0, productId.hashCode), name.hashCode),
+                        listPrice.hashCode),
+                    price.hashCode),
+                discount.hashCode),
+            quantity.hashCode),
+        brandName.hashCode));
   }
 
   @override
@@ -168,7 +184,8 @@ class _$ROrderProducts extends ROrderProducts {
           ..add('listPrice', listPrice)
           ..add('price', price)
           ..add('discount', discount)
-          ..add('quantity', quantity))
+          ..add('quantity', quantity)
+          ..add('brandName', brandName))
         .toString();
   }
 }
@@ -201,6 +218,10 @@ class ROrderProductsBuilder
   double get quantity => _$this._quantity;
   set quantity(double quantity) => _$this._quantity = quantity;
 
+  String _brandName;
+  String get brandName => _$this._brandName;
+  set brandName(String brandName) => _$this._brandName = brandName;
+
   ROrderProductsBuilder();
 
   ROrderProductsBuilder get _$this {
@@ -211,6 +232,7 @@ class ROrderProductsBuilder
       _price = _$v.price;
       _discount = _$v.discount;
       _quantity = _$v.quantity;
+      _brandName = _$v.brandName;
       _$v = null;
     }
     return this;
@@ -238,7 +260,8 @@ class ROrderProductsBuilder
             listPrice: listPrice,
             price: price,
             discount: discount,
-            quantity: quantity);
+            quantity: quantity,
+            brandName: brandName);
     replace(_$result);
     return _$result;
   }

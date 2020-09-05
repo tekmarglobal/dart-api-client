@@ -29,6 +29,10 @@ abstract class ROrderProducts implements Built<ROrderProducts, ROrderProductsBui
         @nullable
     @BuiltValueField(wireName: r'quantity')
     double get quantity;
+    
+        @nullable
+    @BuiltValueField(wireName: r'brandName')
+    String get brandName;
 
     // Boilerplate code needed to wire-up generated code
     ROrderProducts._();

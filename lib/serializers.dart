@@ -22,6 +22,8 @@ import 'package:openapi/model/customer_address_response.dart';
 import 'package:openapi/model/customer_address_response_rest_result.dart';
 import 'package:openapi/model/customer_response.dart';
 import 'package:openapi/model/customer_response_rest_result.dart';
+import 'package:openapi/model/delete_address_request.dart';
+import 'package:openapi/model/delete_address_response_rest_result.dart';
 import 'package:openapi/model/erp_product_request.dart';
 import 'package:openapi/model/erp_product_response.dart';
 import 'package:openapi/model/erp_product_response_rest_result.dart';
@@ -66,6 +68,9 @@ import 'package:openapi/model/r_product_list_rest_result.dart';
 import 'package:openapi/model/r_product_price.dart';
 import 'package:openapi/model/r_product_rest_result.dart';
 import 'package:openapi/model/search_product_request.dart';
+import 'package:openapi/model/send_order_mail_request.dart';
+import 'package:openapi/model/send_order_mail_response.dart';
+import 'package:openapi/model/send_order_mail_response_rest_result.dart';
 import 'package:openapi/model/sms_request.dart';
 import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
@@ -75,6 +80,7 @@ import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
 import 'package:openapi/model/update_cart_note_request.dart';
 import 'package:openapi/model/update_cart_request.dart';
+import 'package:openapi/model/update_order_request.dart';
 import 'package:openapi/model/verify_request.dart';
 
 
@@ -97,6 +103,8 @@ CustomerAddressResponse,
 CustomerAddressResponseRestResult,
 CustomerResponse,
 CustomerResponseRestResult,
+DeleteAddressRequest,
+DeleteAddressResponseRestResult,
 ErpProductRequest,
 ErpProductResponse,
 ErpProductResponseRestResult,
@@ -141,6 +149,9 @@ RProductListRestResult,
 RProductPrice,
 RProductRestResult,
 SearchProductRequest,
+SendOrderMailRequest,
+SendOrderMailResponse,
+SendOrderMailResponseRestResult,
 SmsRequest,
 SmsResponse,
 SmsResponseRestResult,
@@ -150,6 +161,7 @@ TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
 UpdateCartNoteRequest,
 UpdateCartRequest,
+UpdateOrderRequest,
 VerifyRequest,
 
 ])
@@ -204,6 +216,12 @@ const FullType(BuiltList, const [const FullType(CustomerResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CustomerResponseRestResult)]),
 () => new ListBuilder<CustomerResponseRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(DeleteAddressRequest)]),
+() => new ListBuilder<DeleteAddressRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(DeleteAddressResponseRestResult)]),
+() => new ListBuilder<DeleteAddressResponseRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ErpProductRequest)]),
 () => new ListBuilder<ErpProductRequest>())
@@ -337,6 +355,15 @@ const FullType(BuiltList, const [const FullType(RProductRestResult)]),
 const FullType(BuiltList, const [const FullType(SearchProductRequest)]),
 () => new ListBuilder<SearchProductRequest>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SendOrderMailRequest)]),
+() => new ListBuilder<SendOrderMailRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SendOrderMailResponse)]),
+() => new ListBuilder<SendOrderMailResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SendOrderMailResponseRestResult)]),
+() => new ListBuilder<SendOrderMailResponseRestResult>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(SmsRequest)]),
 () => new ListBuilder<SmsRequest>())
 ..addBuilderFactory(
@@ -363,6 +390,9 @@ const FullType(BuiltList, const [const FullType(UpdateCartNoteRequest)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateCartRequest)]),
 () => new ListBuilder<UpdateCartRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateOrderRequest)]),
+() => new ListBuilder<UpdateOrderRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(VerifyRequest)]),
 () => new ListBuilder<VerifyRequest>())

@@ -9,11 +9,57 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiCustomerDeleteAddressPost**](CustomerApi.md#apiCustomerDeleteAddressPost) | **post** /api/Customer/DeleteAddress | 
 [**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apiCustomerGetCustomerAdressesPost) | **post** /api/Customer/GetCustomerAdresses | 
 [**apiCustomerPost**](CustomerApi.md#apiCustomerPost) | **post** /api/Customer | 
 [**apiCustomerUpdateAddressPost**](CustomerApi.md#apiCustomerUpdateAddressPost) | **post** /api/Customer/UpdateAddress | 
 [**apiCustomerUpdateCustomerPost**](CustomerApi.md#apiCustomerUpdateCustomerPost) | **post** /api/Customer/UpdateCustomer | 
 
+
+# **apiCustomerDeleteAddressPost**
+> DeleteAddressResponseRestResult apiCustomerDeleteAddressPost(deleteAddressRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CustomerApi();
+var deleteAddressRequest = new DeleteAddressRequest(); // DeleteAddressRequest | 
+
+try { 
+    var result = api_instance.apiCustomerDeleteAddressPost(deleteAddressRequest);
+    print(result);
+} catch (e) {
+    print("Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteAddressRequest** | [**DeleteAddressRequest**](DeleteAddressRequest.md)|  | [optional] 
+
+### Return type
+
+[**DeleteAddressResponseRestResult**](DeleteAddressResponseRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerGetCustomerAdressesPost**
 > CustomerAddressResponseRestResult apiCustomerGetCustomerAdressesPost()
