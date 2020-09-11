@@ -219,9 +219,9 @@ class OrderApi {
         /// 
         ///
         /// 
-        Future<Response<OrderResponseRestResult>>apiOrderUpdateOrderPost({ UpdateOrderRequest updateOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<OrderResponseRestResult>>apiOrderUpdateStatusPost({ UpdateOrderRequest updateOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        String _path = "/api/Order/UpdateOrder";
+        String _path = "/api/Order/UpdateStatus";
 
         Map<String, dynamic> queryParams = {};
         Map<String, String> headerParams = Map.from(headers ?? {});

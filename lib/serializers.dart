@@ -78,7 +78,6 @@ import 'package:openapi/model/time_slot_response.dart';
 import 'package:openapi/model/time_slot_response_list_rest_result.dart';
 import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
-import 'package:openapi/model/update_cart_note_request.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/update_order_request.dart';
 import 'package:openapi/model/verify_request.dart';
@@ -159,7 +158,6 @@ TimeSlotResponse,
 TimeSlotResponseListRestResult,
 TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
-UpdateCartNoteRequest,
 UpdateCartRequest,
 UpdateOrderRequest,
 VerifyRequest,
@@ -384,9 +382,6 @@ const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(TimeSlotsResponseListRestResult)]),
 () => new ListBuilder<TimeSlotsResponseListRestResult>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(UpdateCartNoteRequest)]),
-() => new ListBuilder<UpdateCartNoteRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateCartRequest)]),
 () => new ListBuilder<UpdateCartRequest>())

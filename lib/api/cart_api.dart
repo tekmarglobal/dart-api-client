@@ -5,7 +5,6 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/update_cart_note_request.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/cart_response_rest_result.dart';
@@ -127,56 +126,6 @@ class CartApi {
         List<String> contentTypes = [];
 
 
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(CartResponseRestResult);
-        var data = _serializers.deserializeWith<CartResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<CartResponseRestResult>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<CartResponseRestResult>>apiCartUpdateCartNotePost({ UpdateCartNoteRequest updateCartNoteRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Cart/UpdateCartNote";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(updateCartNoteRequest);
-            var jsonupdateCartNoteRequest = json.encode(serializedBody);
-            bodyData = jsonupdateCartNoteRequest;
 
             return _dio.request(
             _path,

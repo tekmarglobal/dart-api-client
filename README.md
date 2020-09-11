@@ -68,7 +68,6 @@ Class | Method | HTTP request | Description
 *CartApi* | [**apiCartDeleteCardDelete**](doc//CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc//CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc//CartApi.md#apicartpost) | **post** /api/Cart | 
-*CartApi* | [**apiCartUpdateCartNotePost**](doc//CartApi.md#apicartupdatecartnotepost) | **post** /api/Cart/UpdateCartNote | 
 *CartApi* | [**apiCartUpdateCartPost**](doc//CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
@@ -89,7 +88,7 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
 *OrderApi* | [**apiOrderSendOrderMailPost**](doc//OrderApi.md#apiordersendordermailpost) | **post** /api/Order/SendOrderMail | 
-*OrderApi* | [**apiOrderUpdateOrderPost**](doc//OrderApi.md#apiorderupdateorderpost) | **post** /api/Order/UpdateOrder | 
+*OrderApi* | [**apiOrderUpdateStatusPost**](doc//OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
 *PaymentApi* | [**apiPaymentCardResultFailPost**](doc//PaymentApi.md#apipaymentcardresultfailpost) | **post** /api/Payment/CardResultFail | 
 *PaymentApi* | [**apiPaymentCardResultSuccessPost**](doc//PaymentApi.md#apipaymentcardresultsuccesspost) | **post** /api/Payment/CardResultSuccess | 
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
@@ -177,7 +176,6 @@ Class | Method | HTTP request | Description
  - [TimeSlotResponseListRestResult](doc//TimeSlotResponseListRestResult.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
- - [UpdateCartNoteRequest](doc//UpdateCartNoteRequest.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)

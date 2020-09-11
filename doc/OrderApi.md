@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**apiOrderGetOrderListPost**](OrderApi.md#apiOrderGetOrderListPost) | **post** /api/Order/GetOrderList | 
 [**apiOrderGetOrderPost**](OrderApi.md#apiOrderGetOrderPost) | **post** /api/Order/GetOrder | 
 [**apiOrderSendOrderMailPost**](OrderApi.md#apiOrderSendOrderMailPost) | **post** /api/Order/SendOrderMail | 
-[**apiOrderUpdateOrderPost**](OrderApi.md#apiOrderUpdateOrderPost) | **post** /api/Order/UpdateOrder | 
+[**apiOrderUpdateStatusPost**](OrderApi.md#apiOrderUpdateStatusPost) | **post** /api/Order/UpdateStatus | 
 
 
 # **apiOrderCreateOrderPost**
@@ -192,8 +192,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiOrderUpdateOrderPost**
-> OrderResponseRestResult apiOrderUpdateOrderPost(updateOrderRequest)
+# **apiOrderUpdateStatusPost**
+> OrderResponseRestResult apiOrderUpdateStatusPost(updateOrderRequest)
 
 
 
@@ -209,10 +209,10 @@ var api_instance = new OrderApi();
 var updateOrderRequest = new UpdateOrderRequest(); // UpdateOrderRequest | 
 
 try { 
-    var result = api_instance.apiOrderUpdateOrderPost(updateOrderRequest);
+    var result = api_instance.apiOrderUpdateStatusPost(updateOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderUpdateOrderPost: $e\n");
+    print("Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n");
 }
 ```
 
