@@ -34,6 +34,8 @@ import 'package:openapi/model/favorite_request.dart';
 import 'package:openapi/model/get_order_list_response.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
+import 'package:openapi/model/import_categories_response.dart';
+import 'package:openapi/model/import_categories_response_rest_result.dart';
 import 'package:openapi/model/login_request.dart';
 import 'package:openapi/model/login_respone.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
@@ -114,6 +116,8 @@ FavoriteRequest,
 GetOrderListResponse,
 GetOrderListResponseRestResult,
 GetOrderRequest,
+ImportCategoriesResponse,
+ImportCategoriesResponseRestResult,
 LoginRequest,
 LoginRespone,
 LoginResponeRestResult,
@@ -250,6 +254,12 @@ const FullType(BuiltList, const [const FullType(GetOrderListResponseRestResult)]
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(GetOrderRequest)]),
 () => new ListBuilder<GetOrderRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(ImportCategoriesResponse)]),
+() => new ListBuilder<ImportCategoriesResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(ImportCategoriesResponseRestResult)]),
+() => new ListBuilder<ImportCategoriesResponseRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginRequest)]),
 () => new ListBuilder<LoginRequest>())

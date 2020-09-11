@@ -72,6 +72,7 @@ Class | Method | HTTP request | Description
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
 *CatalogApi* | [**apiCatalogDeleteCategoryDelete**](doc//CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
+*CatalogApi* | [**apiCatalogImportcategoriesPost**](doc//CatalogApi.md#apicatalogimportcategoriespost) | **post** /api/Catalog/importcategories | 
 *CatalogApi* | [**apiCatalogPost**](doc//CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
 *CatalogApi* | [**apiCatalogUpdateCategoryPut**](doc//CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
 *CustomerApi* | [**apiCustomerDeleteAddressPost**](doc//CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
@@ -132,6 +133,8 @@ Class | Method | HTTP request | Description
  - [GetOrderListResponse](doc//GetOrderListResponse.md)
  - [GetOrderListResponseRestResult](doc//GetOrderListResponseRestResult.md)
  - [GetOrderRequest](doc//GetOrderRequest.md)
+ - [ImportCategoriesResponse](doc//ImportCategoriesResponse.md)
+ - [ImportCategoriesResponseRestResult](doc//ImportCategoriesResponseRestResult.md)
  - [LoginRequest](doc//LoginRequest.md)
  - [LoginRespone](doc//LoginRespone.md)
  - [LoginResponeRestResult](doc//LoginResponeRestResult.md)

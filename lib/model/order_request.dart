@@ -25,6 +25,10 @@ abstract class OrderRequest implements Built<OrderRequest, OrderRequestBuilder> 
         @nullable
     @BuiltValueField(wireName: r'orderNote')
     String get orderNote;
+    
+        @nullable
+    @BuiltValueField(wireName: r'paymentTypeCode')
+    String get paymentTypeCode;
 
     // Boilerplate code needed to wire-up generated code
     OrderRequest._();

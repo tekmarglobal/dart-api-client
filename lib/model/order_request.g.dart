@@ -49,6 +49,12 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
         ..add(serializers.serialize(object.orderNote,
             specifiedType: const FullType(String)));
     }
+    if (object.paymentTypeCode != null) {
+      result
+        ..add('paymentTypeCode')
+        ..add(serializers.serialize(object.paymentTypeCode,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -83,6 +89,10 @@ class _$OrderRequestSerializer implements StructuredSerializer<OrderRequest> {
           result.orderNote = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'paymentTypeCode':
+          result.paymentTypeCode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -101,6 +111,8 @@ class _$OrderRequest extends OrderRequest {
   final String paymentCode;
   @override
   final String orderNote;
+  @override
+  final String paymentTypeCode;
 
   factory _$OrderRequest([void Function(OrderRequestBuilder) updates]) =>
       (new OrderRequestBuilder()..update(updates)).build();
@@ -110,7 +122,8 @@ class _$OrderRequest extends OrderRequest {
       this.billingAddressId,
       this.timeStotId,
       this.paymentCode,
-      this.orderNote})
+      this.orderNote,
+      this.paymentTypeCode})
       : super._();
 
   @override
@@ -128,7 +141,8 @@ class _$OrderRequest extends OrderRequest {
         billingAddressId == other.billingAddressId &&
         timeStotId == other.timeStotId &&
         paymentCode == other.paymentCode &&
-        orderNote == other.orderNote;
+        orderNote == other.orderNote &&
+        paymentTypeCode == other.paymentTypeCode;
   }
 
   @override
@@ -136,11 +150,13 @@ class _$OrderRequest extends OrderRequest {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc(0, deliveryAddressId.hashCode),
-                    billingAddressId.hashCode),
-                timeStotId.hashCode),
-            paymentCode.hashCode),
-        orderNote.hashCode));
+                $jc(
+                    $jc($jc(0, deliveryAddressId.hashCode),
+                        billingAddressId.hashCode),
+                    timeStotId.hashCode),
+                paymentCode.hashCode),
+            orderNote.hashCode),
+        paymentTypeCode.hashCode));
   }
 
   @override
@@ -150,7 +166,8 @@ class _$OrderRequest extends OrderRequest {
           ..add('billingAddressId', billingAddressId)
           ..add('timeStotId', timeStotId)
           ..add('paymentCode', paymentCode)
-          ..add('orderNote', orderNote))
+          ..add('orderNote', orderNote)
+          ..add('paymentTypeCode', paymentTypeCode))
         .toString();
   }
 }
@@ -181,6 +198,11 @@ class OrderRequestBuilder
   String get orderNote => _$this._orderNote;
   set orderNote(String orderNote) => _$this._orderNote = orderNote;
 
+  String _paymentTypeCode;
+  String get paymentTypeCode => _$this._paymentTypeCode;
+  set paymentTypeCode(String paymentTypeCode) =>
+      _$this._paymentTypeCode = paymentTypeCode;
+
   OrderRequestBuilder();
 
   OrderRequestBuilder get _$this {
@@ -190,6 +212,7 @@ class OrderRequestBuilder
       _timeStotId = _$v.timeStotId;
       _paymentCode = _$v.paymentCode;
       _orderNote = _$v.orderNote;
+      _paymentTypeCode = _$v.paymentTypeCode;
       _$v = null;
     }
     return this;
@@ -216,7 +239,8 @@ class OrderRequestBuilder
             billingAddressId: billingAddressId,
             timeStotId: timeStotId,
             paymentCode: paymentCode,
-            orderNote: orderNote);
+            orderNote: orderNote,
+            paymentTypeCode: paymentTypeCode);
     replace(_$result);
     return _$result;
   }
