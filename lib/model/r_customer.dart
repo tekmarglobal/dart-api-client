@@ -47,6 +47,10 @@ abstract class RCustomer implements Built<RCustomer, RCustomerBuilder> {
         @nullable
     @BuiltValueField(wireName: r'address')
     BuiltList<RAddress> get address;
+    
+        @nullable
+    @BuiltValueField(wireName: r'registered')
+    bool get registered;
 
     // Boilerplate code needed to wire-up generated code
     RCustomer._();

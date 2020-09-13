@@ -31,6 +31,12 @@ class _$LoginResponeSerializer implements StructuredSerializer<LoginRespone> {
         ..add(serializers.serialize(object.customerId,
             specifiedType: const FullType(int)));
     }
+    if (object.registered != null) {
+      result
+        ..add('registered')
+        ..add(serializers.serialize(object.registered,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -53,6 +59,10 @@ class _$LoginResponeSerializer implements StructuredSerializer<LoginRespone> {
           result.customerId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'registered':
+          result.registered = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -65,11 +75,13 @@ class _$LoginRespone extends LoginRespone {
   final String token;
   @override
   final int customerId;
+  @override
+  final bool registered;
 
   factory _$LoginRespone([void Function(LoginResponeBuilder) updates]) =>
       (new LoginResponeBuilder()..update(updates)).build();
 
-  _$LoginRespone._({this.token, this.customerId}) : super._();
+  _$LoginRespone._({this.token, this.customerId, this.registered}) : super._();
 
   @override
   LoginRespone rebuild(void Function(LoginResponeBuilder) updates) =>
@@ -83,19 +95,22 @@ class _$LoginRespone extends LoginRespone {
     if (identical(other, this)) return true;
     return other is LoginRespone &&
         token == other.token &&
-        customerId == other.customerId;
+        customerId == other.customerId &&
+        registered == other.registered;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, token.hashCode), customerId.hashCode));
+    return $jf($jc(
+        $jc($jc(0, token.hashCode), customerId.hashCode), registered.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('LoginRespone')
           ..add('token', token)
-          ..add('customerId', customerId))
+          ..add('customerId', customerId)
+          ..add('registered', registered))
         .toString();
   }
 }
@@ -112,12 +127,17 @@ class LoginResponeBuilder
   int get customerId => _$this._customerId;
   set customerId(int customerId) => _$this._customerId = customerId;
 
+  bool _registered;
+  bool get registered => _$this._registered;
+  set registered(bool registered) => _$this._registered = registered;
+
   LoginResponeBuilder();
 
   LoginResponeBuilder get _$this {
     if (_$v != null) {
       _token = _$v.token;
       _customerId = _$v.customerId;
+      _registered = _$v.registered;
       _$v = null;
     }
     return this;
@@ -138,8 +158,9 @@ class LoginResponeBuilder
 
   @override
   _$LoginRespone build() {
-    final _$result =
-        _$v ?? new _$LoginRespone._(token: token, customerId: customerId);
+    final _$result = _$v ??
+        new _$LoginRespone._(
+            token: token, customerId: customerId, registered: registered);
     replace(_$result);
     return _$result;
   }

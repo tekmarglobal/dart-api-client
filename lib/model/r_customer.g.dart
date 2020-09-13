@@ -79,6 +79,12 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(RAddress)])));
     }
+    if (object.registered != null) {
+      result
+        ..add('registered')
+        ..add(serializers.serialize(object.registered,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -135,6 +141,10 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
                       BuiltList, const [const FullType(RAddress)]))
               as BuiltList<Object>);
           break;
+        case 'registered':
+          result.registered = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -163,6 +173,8 @@ class _$RCustomer extends RCustomer {
   final bool allowEmail;
   @override
   final BuiltList<RAddress> address;
+  @override
+  final bool registered;
 
   factory _$RCustomer([void Function(RCustomerBuilder) updates]) =>
       (new RCustomerBuilder()..update(updates)).build();
@@ -177,7 +189,8 @@ class _$RCustomer extends RCustomer {
       this.gender,
       this.allowSms,
       this.allowEmail,
-      this.address})
+      this.address,
+      this.registered})
       : super._();
 
   @override
@@ -200,7 +213,8 @@ class _$RCustomer extends RCustomer {
         gender == other.gender &&
         allowSms == other.allowSms &&
         allowEmail == other.allowEmail &&
-        address == other.address;
+        address == other.address &&
+        registered == other.registered;
   }
 
   @override
@@ -213,16 +227,18 @@ class _$RCustomer extends RCustomer {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, id.hashCode),
-                                        customerName.hashCode),
-                                    customerSurname.hashCode),
-                                birthDate.hashCode),
-                            phone.hashCode),
-                        email.hashCode),
-                    gender.hashCode),
-                allowSms.hashCode),
-            allowEmail.hashCode),
-        address.hashCode));
+                                    $jc(
+                                        $jc($jc(0, id.hashCode),
+                                            customerName.hashCode),
+                                        customerSurname.hashCode),
+                                    birthDate.hashCode),
+                                phone.hashCode),
+                            email.hashCode),
+                        gender.hashCode),
+                    allowSms.hashCode),
+                allowEmail.hashCode),
+            address.hashCode),
+        registered.hashCode));
   }
 
   @override
@@ -237,7 +253,8 @@ class _$RCustomer extends RCustomer {
           ..add('gender', gender)
           ..add('allowSms', allowSms)
           ..add('allowEmail', allowEmail)
-          ..add('address', address))
+          ..add('address', address)
+          ..add('registered', registered))
         .toString();
   }
 }
@@ -287,6 +304,10 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _$this._address ??= new ListBuilder<RAddress>();
   set address(ListBuilder<RAddress> address) => _$this._address = address;
 
+  bool _registered;
+  bool get registered => _$this._registered;
+  set registered(bool registered) => _$this._registered = registered;
+
   RCustomerBuilder();
 
   RCustomerBuilder get _$this {
@@ -301,6 +322,7 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _allowSms = _$v.allowSms;
       _allowEmail = _$v.allowEmail;
       _address = _$v.address?.toBuilder();
+      _registered = _$v.registered;
       _$v = null;
     }
     return this;
@@ -334,7 +356,8 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
               gender: gender,
               allowSms: allowSms,
               allowEmail: allowEmail,
-              address: _address?.build());
+              address: _address?.build(),
+              registered: registered);
     } catch (_) {
       String _$failedField;
       try {

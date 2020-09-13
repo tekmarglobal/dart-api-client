@@ -13,6 +13,10 @@ abstract class LoginRespone implements Built<LoginRespone, LoginResponeBuilder> 
         @nullable
     @BuiltValueField(wireName: r'customerId')
     int get customerId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'registered')
+    bool get registered;
 
     // Boilerplate code needed to wire-up generated code
     LoginRespone._();
