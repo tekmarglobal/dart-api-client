@@ -219,6 +219,53 @@ class OrderApi {
         /// 
         ///
         /// 
+        Future<Response<String>>apiOrderSendmailPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Order/sendmail";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(String);
+        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<String>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
         Future<Response<OrderResponseRestResult>>apiOrderUpdateStatusPost({ UpdateOrderRequest updateOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Order/UpdateStatus";
