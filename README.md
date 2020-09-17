@@ -65,6 +65,7 @@ Class | Method | HTTP request | Description
 *ApiApi* | [**apiProductAllGet**](doc//ApiApi.md#apiproductallget) | **get** /api/product/all | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc//BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
+*CartApi* | [**apiCartCreateCartPost**](doc//CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 *CartApi* | [**apiCartDeleteCardDelete**](doc//CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc//CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc//CartApi.md#apicartpost) | **post** /api/Cart | 
@@ -117,6 +118,7 @@ Class | Method | HTTP request | Description
  - [CountiesRequest](doc//CountiesRequest.md)
  - [CountiesResponse](doc//CountiesResponse.md)
  - [CountiesResponseListRestResult](doc//CountiesResponseListRestResult.md)
+ - [CreateCartRequest](doc//CreateCartRequest.md)
  - [CustomerAddressRequest](doc//CustomerAddressRequest.md)
  - [CustomerAddressResponse](doc//CustomerAddressResponse.md)
  - [CustomerAddressResponseRestResult](doc//CustomerAddressResponseRestResult.md)

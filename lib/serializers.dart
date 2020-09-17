@@ -17,6 +17,7 @@ import 'package:openapi/model/cityes_request.dart';
 import 'package:openapi/model/counties_request.dart';
 import 'package:openapi/model/counties_response.dart';
 import 'package:openapi/model/counties_response_list_rest_result.dart';
+import 'package:openapi/model/create_cart_request.dart';
 import 'package:openapi/model/customer_address_request.dart';
 import 'package:openapi/model/customer_address_response.dart';
 import 'package:openapi/model/customer_address_response_rest_result.dart';
@@ -99,6 +100,7 @@ CityesRequest,
 CountiesRequest,
 CountiesResponse,
 CountiesResponseListRestResult,
+CreateCartRequest,
 CustomerAddressRequest,
 CustomerAddressResponse,
 CustomerAddressResponseRestResult,
@@ -203,6 +205,9 @@ const FullType(BuiltList, const [const FullType(CountiesResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CountiesResponseListRestResult)]),
 () => new ListBuilder<CountiesResponseListRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(CreateCartRequest)]),
+() => new ListBuilder<CreateCartRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CustomerAddressRequest)]),
 () => new ListBuilder<CustomerAddressRequest>())
