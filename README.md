@@ -119,6 +119,8 @@ Class | Method | HTTP request | Description
  - [CountiesResponse](doc//CountiesResponse.md)
  - [CountiesResponseListRestResult](doc//CountiesResponseListRestResult.md)
  - [CreateCartRequest](doc//CreateCartRequest.md)
+ - [CreateCartResponse](doc//CreateCartResponse.md)
+ - [CreateCartResponseRestResult](doc//CreateCartResponseRestResult.md)
  - [CustomerAddressRequest](doc//CustomerAddressRequest.md)
  - [CustomerAddressResponse](doc//CustomerAddressResponse.md)
  - [CustomerAddressResponseRestResult](doc//CustomerAddressResponseRestResult.md)

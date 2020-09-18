@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **apiCartCreateCartPost**
-> apiCartCreateCartPost(createCartRequest)
+> CreateCartResponseRestResult apiCartCreateCartPost(createCartRequest)
 
 
 
@@ -33,7 +33,8 @@ var api_instance = new CartApi();
 var createCartRequest = new CreateCartRequest(); // CreateCartRequest | 
 
 try { 
-    api_instance.apiCartCreateCartPost(createCartRequest);
+    var result = api_instance.apiCartCreateCartPost(createCartRequest);
+    print(result);
 } catch (e) {
     print("Exception when calling CartApi->apiCartCreateCartPost: $e\n");
 }
@@ -47,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CreateCartResponseRestResult**](CreateCartResponseRestResult.md)
 
 ### Authorization
 
@@ -56,7 +57,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

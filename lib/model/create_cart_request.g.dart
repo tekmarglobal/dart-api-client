@@ -20,10 +20,10 @@ class _$CreateCartRequestSerializer
   Iterable<Object> serialize(Serializers serializers, CreateCartRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.region != null) {
+    if (object.neighborhoodid != null) {
       result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
+        ..add('neighborhoodid')
+        ..add(serializers.serialize(object.neighborhoodid,
             specifiedType: const FullType(int)));
     }
     return result;
@@ -41,8 +41,8 @@ class _$CreateCartRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'region':
-          result.region = serializers.deserialize(value,
+        case 'neighborhoodid':
+          result.neighborhoodid = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
       }
@@ -54,13 +54,13 @@ class _$CreateCartRequestSerializer
 
 class _$CreateCartRequest extends CreateCartRequest {
   @override
-  final int region;
+  final int neighborhoodid;
 
   factory _$CreateCartRequest(
           [void Function(CreateCartRequestBuilder) updates]) =>
       (new CreateCartRequestBuilder()..update(updates)).build();
 
-  _$CreateCartRequest._({this.region}) : super._();
+  _$CreateCartRequest._({this.neighborhoodid}) : super._();
 
   @override
   CreateCartRequest rebuild(void Function(CreateCartRequestBuilder) updates) =>
@@ -73,18 +73,18 @@ class _$CreateCartRequest extends CreateCartRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateCartRequest && region == other.region;
+    return other is CreateCartRequest && neighborhoodid == other.neighborhoodid;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, region.hashCode));
+    return $jf($jc(0, neighborhoodid.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateCartRequest')
-          ..add('region', region))
+          ..add('neighborhoodid', neighborhoodid))
         .toString();
   }
 }
@@ -93,15 +93,16 @@ class CreateCartRequestBuilder
     implements Builder<CreateCartRequest, CreateCartRequestBuilder> {
   _$CreateCartRequest _$v;
 
-  int _region;
-  int get region => _$this._region;
-  set region(int region) => _$this._region = region;
+  int _neighborhoodid;
+  int get neighborhoodid => _$this._neighborhoodid;
+  set neighborhoodid(int neighborhoodid) =>
+      _$this._neighborhoodid = neighborhoodid;
 
   CreateCartRequestBuilder();
 
   CreateCartRequestBuilder get _$this {
     if (_$v != null) {
-      _region = _$v.region;
+      _neighborhoodid = _$v.neighborhoodid;
       _$v = null;
     }
     return this;
@@ -122,7 +123,8 @@ class CreateCartRequestBuilder
 
   @override
   _$CreateCartRequest build() {
-    final _$result = _$v ?? new _$CreateCartRequest._(region: region);
+    final _$result =
+        _$v ?? new _$CreateCartRequest._(neighborhoodid: neighborhoodid);
     replace(_$result);
     return _$result;
   }

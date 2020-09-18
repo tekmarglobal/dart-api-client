@@ -7,8 +7,8 @@ abstract class CreateCartRequest implements Built<CreateCartRequest, CreateCartR
 
     
         @nullable
-    @BuiltValueField(wireName: r'region')
-    int get region;
+    @BuiltValueField(wireName: r'neighborhoodid')
+    int get neighborhoodid;
 
     // Boilerplate code needed to wire-up generated code
     CreateCartRequest._();
