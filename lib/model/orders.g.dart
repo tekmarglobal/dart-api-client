@@ -84,6 +84,18 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
+    if (object.cityName != null) {
+      result
+        ..add('cityName')
+        ..add(serializers.serialize(object.cityName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.countyName != null) {
+      result
+        ..add('countyName')
+        ..add(serializers.serialize(object.countyName,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -142,6 +154,14 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'cityName':
+          result.cityName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'countyName':
+          result.countyName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -172,6 +192,10 @@ class _$Orders extends Orders {
   final String orderNote;
   @override
   final bool active;
+  @override
+  final String cityName;
+  @override
+  final String countyName;
 
   factory _$Orders([void Function(OrdersBuilder) updates]) =>
       (new OrdersBuilder()..update(updates)).build();
@@ -187,7 +211,9 @@ class _$Orders extends Orders {
       this.bagAmount,
       this.bagTotal,
       this.orderNote,
-      this.active})
+      this.active,
+      this.cityName,
+      this.countyName})
       : super._();
 
   @override
@@ -211,7 +237,9 @@ class _$Orders extends Orders {
         bagAmount == other.bagAmount &&
         bagTotal == other.bagTotal &&
         orderNote == other.orderNote &&
-        active == other.active;
+        active == other.active &&
+        cityName == other.cityName &&
+        countyName == other.countyName;
   }
 
   @override
@@ -225,17 +253,21 @@ class _$Orders extends Orders {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, orderId.hashCode),
-                                            orderDate.hashCode),
-                                        deliveryAddress.hashCode),
-                                    billingAddress.hashCode),
-                                productTotal.hashCode),
-                            orderTotal.hashCode),
-                        productDiscountsTotal.hashCode),
-                    bagAmount.hashCode),
-                bagTotal.hashCode),
-            orderNote.hashCode),
-        active.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, orderId.hashCode),
+                                                    orderDate.hashCode),
+                                                deliveryAddress.hashCode),
+                                            billingAddress.hashCode),
+                                        productTotal.hashCode),
+                                    orderTotal.hashCode),
+                                productDiscountsTotal.hashCode),
+                            bagAmount.hashCode),
+                        bagTotal.hashCode),
+                    orderNote.hashCode),
+                active.hashCode),
+            cityName.hashCode),
+        countyName.hashCode));
   }
 
   @override
@@ -251,7 +283,9 @@ class _$Orders extends Orders {
           ..add('bagAmount', bagAmount)
           ..add('bagTotal', bagTotal)
           ..add('orderNote', orderNote)
-          ..add('active', active))
+          ..add('active', active)
+          ..add('cityName', cityName)
+          ..add('countyName', countyName))
         .toString();
   }
 }
@@ -306,6 +340,14 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  String _cityName;
+  String get cityName => _$this._cityName;
+  set cityName(String cityName) => _$this._cityName = cityName;
+
+  String _countyName;
+  String get countyName => _$this._countyName;
+  set countyName(String countyName) => _$this._countyName = countyName;
+
   OrdersBuilder();
 
   OrdersBuilder get _$this {
@@ -321,6 +363,8 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
       _bagTotal = _$v.bagTotal;
       _orderNote = _$v.orderNote;
       _active = _$v.active;
+      _cityName = _$v.cityName;
+      _countyName = _$v.countyName;
       _$v = null;
     }
     return this;
@@ -353,7 +397,9 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
             bagAmount: bagAmount,
             bagTotal: bagTotal,
             orderNote: orderNote,
-            active: active);
+            active: active,
+            cityName: cityName,
+            countyName: countyName);
     replace(_$result);
     return _$result;
   }

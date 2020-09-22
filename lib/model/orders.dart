@@ -49,6 +49,14 @@ abstract class Orders implements Built<Orders, OrdersBuilder> {
         @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
+    
+        @nullable
+    @BuiltValueField(wireName: r'cityName')
+    String get cityName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'countyName')
+    String get countyName;
 
     // Boilerplate code needed to wire-up generated code
     Orders._();

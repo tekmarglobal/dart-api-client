@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **bagTotal** | **double** |  | [optional] [default to null]
 **orderNote** | **String** |  | [optional] [default to null]
 **active** | **bool** |  | [optional] [default to null]
+**cityName** | **String** |  | [optional] [default to null]
+**countyName** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
