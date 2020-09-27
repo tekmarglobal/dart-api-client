@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] [default to null]
 **active** | **bool** |  | [optional] [default to null]
 **neighborhood** | **int** |  | [optional] [default to null]
-**fullAddress** | **String** |  | [optional] [default to null]
 **building** | **String** |  | [optional] [default to null]
 **floor** | **String** |  | [optional] [default to null]
 **door** | **String** |  | [optional] [default to null]
@@ -25,6 +24,7 @@ Name | Type | Description | Notes
 **taxNumber** | **String** |  | [optional] [default to null]
 **latitude** | **double** |  | [optional] [default to null]
 **longitude** | **double** |  | [optional] [default to null]
+**street** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

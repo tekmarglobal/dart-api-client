@@ -108,6 +108,12 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
+    if (object.street != null) {
+      result
+        ..add('street')
+        ..add(serializers.serialize(object.street,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -182,6 +188,10 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'street':
+          result.street = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -220,6 +230,8 @@ class _$RAddress extends RAddress {
   final String countyName;
   @override
   final String name;
+  @override
+  final String street;
 
   factory _$RAddress([void Function(RAddressBuilder) updates]) =>
       (new RAddressBuilder()..update(updates)).build();
@@ -239,7 +251,8 @@ class _$RAddress extends RAddress {
       this.cityName,
       this.countyId,
       this.countyName,
-      this.name})
+      this.name,
+      this.street})
       : super._();
 
   @override
@@ -267,7 +280,8 @@ class _$RAddress extends RAddress {
         cityName == other.cityName &&
         countyId == other.countyId &&
         countyName == other.countyName &&
-        name == other.name;
+        name == other.name &&
+        street == other.street;
   }
 
   @override
@@ -287,24 +301,27 @@ class _$RAddress extends RAddress {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                adressId
+                                                                $jc(
+                                                                    0,
+                                                                    adressId
+                                                                        .hashCode),
+                                                                customerId
                                                                     .hashCode),
-                                                            customerId
+                                                            fullAddress
                                                                 .hashCode),
-                                                        fullAddress.hashCode),
-                                                    building.hashCode),
-                                                floor.hashCode),
-                                            door.hashCode),
-                                        postalCode.hashCode),
-                                    description.hashCode),
-                                neighborhoodId.hashCode),
-                            neighborhoodName.hashCode),
-                        cityId.hashCode),
-                    cityName.hashCode),
-                countyId.hashCode),
-            countyName.hashCode),
-        name.hashCode));
+                                                        building.hashCode),
+                                                    floor.hashCode),
+                                                door.hashCode),
+                                            postalCode.hashCode),
+                                        description.hashCode),
+                                    neighborhoodId.hashCode),
+                                neighborhoodName.hashCode),
+                            cityId.hashCode),
+                        cityName.hashCode),
+                    countyId.hashCode),
+                countyName.hashCode),
+            name.hashCode),
+        street.hashCode));
   }
 
   @override
@@ -324,7 +341,8 @@ class _$RAddress extends RAddress {
           ..add('cityName', cityName)
           ..add('countyId', countyId)
           ..add('countyName', countyName)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('street', street))
         .toString();
   }
 }
@@ -394,6 +412,10 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
+  String _street;
+  String get street => _$this._street;
+  set street(String street) => _$this._street = street;
+
   RAddressBuilder();
 
   RAddressBuilder get _$this {
@@ -413,6 +435,7 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
       _countyId = _$v.countyId;
       _countyName = _$v.countyName;
       _name = _$v.name;
+      _street = _$v.street;
       _$v = null;
     }
     return this;
@@ -449,7 +472,8 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
             cityName: cityName,
             countyId: countyId,
             countyName: countyName,
-            name: name);
+            name: name,
+            street: street);
     replace(_$result);
     return _$result;
   }

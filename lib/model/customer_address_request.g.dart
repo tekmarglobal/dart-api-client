@@ -48,12 +48,6 @@ class _$CustomerAddressRequestSerializer
         ..add(serializers.serialize(object.neighborhood,
             specifiedType: const FullType(int)));
     }
-    if (object.fullAddress != null) {
-      result
-        ..add('fullAddress')
-        ..add(serializers.serialize(object.fullAddress,
-            specifiedType: const FullType(String)));
-    }
     if (object.building != null) {
       result
         ..add('building')
@@ -126,6 +120,12 @@ class _$CustomerAddressRequestSerializer
         ..add(serializers.serialize(object.longitude,
             specifiedType: const FullType(double)));
     }
+    if (object.street != null) {
+      result
+        ..add('street')
+        ..add(serializers.serialize(object.street,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -156,10 +156,6 @@ class _$CustomerAddressRequestSerializer
         case 'neighborhood':
           result.neighborhood = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
-          break;
-        case 'fullAddress':
-          result.fullAddress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
           break;
         case 'building':
           result.building = serializers.deserialize(value,
@@ -209,6 +205,10 @@ class _$CustomerAddressRequestSerializer
           result.longitude = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'street':
+          result.street = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -225,8 +225,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   final bool active;
   @override
   final int neighborhood;
-  @override
-  final String fullAddress;
   @override
   final String building;
   @override
@@ -251,6 +249,8 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   final double latitude;
   @override
   final double longitude;
+  @override
+  final String street;
 
   factory _$CustomerAddressRequest(
           [void Function(CustomerAddressRequestBuilder) updates]) =>
@@ -261,7 +261,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
       this.name,
       this.active,
       this.neighborhood,
-      this.fullAddress,
       this.building,
       this.floor,
       this.door,
@@ -273,7 +272,8 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
       this.taxOffice,
       this.taxNumber,
       this.latitude,
-      this.longitude})
+      this.longitude,
+      this.street})
       : super._();
 
   @override
@@ -293,7 +293,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
         name == other.name &&
         active == other.active &&
         neighborhood == other.neighborhood &&
-        fullAddress == other.fullAddress &&
         building == other.building &&
         floor == other.floor &&
         door == other.door &&
@@ -305,7 +304,8 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
         taxOffice == other.taxOffice &&
         taxNumber == other.taxNumber &&
         latitude == other.latitude &&
-        longitude == other.longitude;
+        longitude == other.longitude &&
+        street == other.street;
   }
 
   @override
@@ -336,19 +336,19 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
                                                                     .hashCode),
                                                             neighborhood
                                                                 .hashCode),
-                                                        fullAddress.hashCode),
-                                                    building.hashCode),
-                                                floor.hashCode),
-                                            door.hashCode),
-                                        postalCode.hashCode),
-                                    description.hashCode),
-                                customerName.hashCode),
-                            customerSurname.hashCode),
-                        companyName.hashCode),
-                    taxOffice.hashCode),
-                taxNumber.hashCode),
-            latitude.hashCode),
-        longitude.hashCode));
+                                                        building.hashCode),
+                                                    floor.hashCode),
+                                                door.hashCode),
+                                            postalCode.hashCode),
+                                        description.hashCode),
+                                    customerName.hashCode),
+                                customerSurname.hashCode),
+                            companyName.hashCode),
+                        taxOffice.hashCode),
+                    taxNumber.hashCode),
+                latitude.hashCode),
+            longitude.hashCode),
+        street.hashCode));
   }
 
   @override
@@ -358,7 +358,6 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
           ..add('name', name)
           ..add('active', active)
           ..add('neighborhood', neighborhood)
-          ..add('fullAddress', fullAddress)
           ..add('building', building)
           ..add('floor', floor)
           ..add('door', door)
@@ -370,7 +369,8 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
           ..add('taxOffice', taxOffice)
           ..add('taxNumber', taxNumber)
           ..add('latitude', latitude)
-          ..add('longitude', longitude))
+          ..add('longitude', longitude)
+          ..add('street', street))
         .toString();
   }
 }
@@ -394,10 +394,6 @@ class CustomerAddressRequestBuilder
   int _neighborhood;
   int get neighborhood => _$this._neighborhood;
   set neighborhood(int neighborhood) => _$this._neighborhood = neighborhood;
-
-  String _fullAddress;
-  String get fullAddress => _$this._fullAddress;
-  set fullAddress(String fullAddress) => _$this._fullAddress = fullAddress;
 
   String _building;
   String get building => _$this._building;
@@ -448,6 +444,10 @@ class CustomerAddressRequestBuilder
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
 
+  String _street;
+  String get street => _$this._street;
+  set street(String street) => _$this._street = street;
+
   CustomerAddressRequestBuilder();
 
   CustomerAddressRequestBuilder get _$this {
@@ -456,7 +456,6 @@ class CustomerAddressRequestBuilder
       _name = _$v.name;
       _active = _$v.active;
       _neighborhood = _$v.neighborhood;
-      _fullAddress = _$v.fullAddress;
       _building = _$v.building;
       _floor = _$v.floor;
       _door = _$v.door;
@@ -469,6 +468,7 @@ class CustomerAddressRequestBuilder
       _taxNumber = _$v.taxNumber;
       _latitude = _$v.latitude;
       _longitude = _$v.longitude;
+      _street = _$v.street;
       _$v = null;
     }
     return this;
@@ -495,7 +495,6 @@ class CustomerAddressRequestBuilder
             name: name,
             active: active,
             neighborhood: neighborhood,
-            fullAddress: fullAddress,
             building: building,
             floor: floor,
             door: door,
@@ -507,7 +506,8 @@ class CustomerAddressRequestBuilder
             taxOffice: taxOffice,
             taxNumber: taxNumber,
             latitude: latitude,
-            longitude: longitude);
+            longitude: longitude,
+            street: street);
     replace(_$result);
     return _$result;
   }

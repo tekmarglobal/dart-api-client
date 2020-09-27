@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCatalogImportcategoriesPost**
-> ImportCategoriesResponseRestResult apiCatalogImportcategoriesPost(categoryId)
+> ImportCategoriesResponseRestResult apiCatalogImportcategoriesPost()
 
 
 
@@ -168,10 +168,9 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CatalogApi();
-var categoryId = 56; // int | 
 
 try { 
-    var result = api_instance.apiCatalogImportcategoriesPost(categoryId);
+    var result = api_instance.apiCatalogImportcategoriesPost();
     print(result);
 } catch (e) {
     print("Exception when calling CatalogApi->apiCatalogImportcategoriesPost: $e\n");
@@ -179,10 +178,7 @@ try {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoryId** | **int**|  | [optional] [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

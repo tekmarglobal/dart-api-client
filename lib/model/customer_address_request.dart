@@ -23,10 +23,6 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
     int get neighborhood;
     
         @nullable
-    @BuiltValueField(wireName: r'fullAddress')
-    String get fullAddress;
-    
-        @nullable
     @BuiltValueField(wireName: r'building')
     String get building;
     
@@ -73,6 +69,10 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
         @nullable
     @BuiltValueField(wireName: r'longitude')
     double get longitude;
+    
+        @nullable
+    @BuiltValueField(wireName: r'street')
+    String get street;
 
     // Boilerplate code needed to wire-up generated code
     CustomerAddressRequest._();

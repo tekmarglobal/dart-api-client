@@ -163,7 +163,7 @@ class CatalogApi {
         /// 
         ///
         /// 
-        Future<Response<ImportCategoriesResponseRestResult>>apiCatalogImportcategoriesPost({ int categoryId,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<ImportCategoriesResponseRestResult>>apiCatalogImportcategoriesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Catalog/importcategories";
 
@@ -171,7 +171,6 @@ class CatalogApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-                queryParams[r'CategoryId'] = categoryId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 

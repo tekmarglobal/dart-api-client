@@ -1,4 +1,4 @@
-            import 'package:built_value/json_object.dart';
+            import 'package:openapi/model/any_type.dart';
         import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +17,7 @@ abstract class ObjectRestResult implements Built<ObjectRestResult, ObjectRestRes
     
         @nullable
     @BuiltValueField(wireName: r'data')
-    JsonObject get data;
+    AnyType get data;
 
     // Boilerplate code needed to wire-up generated code
     ObjectRestResult._();
