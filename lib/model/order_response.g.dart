@@ -68,6 +68,12 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
             specifiedType: const FullType(
                 BuiltList, const [const FullType(ROrderProducts)])));
     }
+    if (object.orderNote != null) {
+      result
+        ..add('orderNote')
+        ..add(serializers.serialize(object.orderNote,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -117,6 +123,10 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
                       BuiltList, const [const FullType(ROrderProducts)]))
               as BuiltList<Object>);
           break;
+        case 'orderNote':
+          result.orderNote = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -141,6 +151,8 @@ class _$OrderResponse extends OrderResponse {
   final double orderTotal;
   @override
   final BuiltList<ROrderProducts> orderProducts;
+  @override
+  final String orderNote;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
@@ -153,7 +165,8 @@ class _$OrderResponse extends OrderResponse {
       this.billingAdrress,
       this.productTotal,
       this.orderTotal,
-      this.orderProducts})
+      this.orderProducts,
+      this.orderNote})
       : super._();
 
   @override
@@ -174,7 +187,8 @@ class _$OrderResponse extends OrderResponse {
         billingAdrress == other.billingAdrress &&
         productTotal == other.productTotal &&
         orderTotal == other.orderTotal &&
-        orderProducts == other.orderProducts;
+        orderProducts == other.orderProducts &&
+        orderNote == other.orderNote;
   }
 
   @override
@@ -184,13 +198,15 @@ class _$OrderResponse extends OrderResponse {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), customer.hashCode),
-                            orderDate.hashCode),
-                        deliveryAddress.hashCode),
-                    billingAdrress.hashCode),
-                productTotal.hashCode),
-            orderTotal.hashCode),
-        orderProducts.hashCode));
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), customer.hashCode),
+                                orderDate.hashCode),
+                            deliveryAddress.hashCode),
+                        billingAdrress.hashCode),
+                    productTotal.hashCode),
+                orderTotal.hashCode),
+            orderProducts.hashCode),
+        orderNote.hashCode));
   }
 
   @override
@@ -203,7 +219,8 @@ class _$OrderResponse extends OrderResponse {
           ..add('billingAdrress', billingAdrress)
           ..add('productTotal', productTotal)
           ..add('orderTotal', orderTotal)
-          ..add('orderProducts', orderProducts))
+          ..add('orderProducts', orderProducts)
+          ..add('orderNote', orderNote))
         .toString();
   }
 }
@@ -248,6 +265,10 @@ class OrderResponseBuilder
   set orderProducts(ListBuilder<ROrderProducts> orderProducts) =>
       _$this._orderProducts = orderProducts;
 
+  String _orderNote;
+  String get orderNote => _$this._orderNote;
+  set orderNote(String orderNote) => _$this._orderNote = orderNote;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
@@ -260,6 +281,7 @@ class OrderResponseBuilder
       _productTotal = _$v.productTotal;
       _orderTotal = _$v.orderTotal;
       _orderProducts = _$v.orderProducts?.toBuilder();
+      _orderNote = _$v.orderNote;
       _$v = null;
     }
     return this;
@@ -291,7 +313,8 @@ class OrderResponseBuilder
               billingAdrress: billingAdrress,
               productTotal: productTotal,
               orderTotal: orderTotal,
-              orderProducts: _orderProducts?.build());
+              orderProducts: _orderProducts?.build(),
+              orderNote: orderNote);
     } catch (_) {
       String _$failedField;
       try {

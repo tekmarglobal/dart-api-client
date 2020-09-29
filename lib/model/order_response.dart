@@ -39,6 +39,10 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
         @nullable
     @BuiltValueField(wireName: r'orderProducts')
     BuiltList<ROrderProducts> get orderProducts;
+    
+        @nullable
+    @BuiltValueField(wireName: r'orderNote')
+    String get orderNote;
 
     // Boilerplate code needed to wire-up generated code
     OrderResponse._();

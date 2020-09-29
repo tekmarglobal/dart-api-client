@@ -114,6 +114,18 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.street,
             specifiedType: const FullType(String)));
     }
+    if (object.customerName != null) {
+      result
+        ..add('customerName')
+        ..add(serializers.serialize(object.customerName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.customerSurname != null) {
+      result
+        ..add('customerSurname')
+        ..add(serializers.serialize(object.customerSurname,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -192,6 +204,14 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
           result.street = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'customerName':
+          result.customerName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'customerSurname':
+          result.customerSurname = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -232,6 +252,10 @@ class _$RAddress extends RAddress {
   final String name;
   @override
   final String street;
+  @override
+  final String customerName;
+  @override
+  final String customerSurname;
 
   factory _$RAddress([void Function(RAddressBuilder) updates]) =>
       (new RAddressBuilder()..update(updates)).build();
@@ -252,7 +276,9 @@ class _$RAddress extends RAddress {
       this.countyId,
       this.countyName,
       this.name,
-      this.street})
+      this.street,
+      this.customerName,
+      this.customerSurname})
       : super._();
 
   @override
@@ -281,7 +307,9 @@ class _$RAddress extends RAddress {
         countyId == other.countyId &&
         countyName == other.countyName &&
         name == other.name &&
-        street == other.street;
+        street == other.street &&
+        customerName == other.customerName &&
+        customerSurname == other.customerSurname;
   }
 
   @override
@@ -302,26 +330,31 @@ class _$RAddress extends RAddress {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    adressId
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            adressId
+                                                                                .hashCode),
+                                                                        customerId
+                                                                            .hashCode),
+                                                                    fullAddress
                                                                         .hashCode),
-                                                                customerId
+                                                                building
                                                                     .hashCode),
-                                                            fullAddress
-                                                                .hashCode),
-                                                        building.hashCode),
-                                                    floor.hashCode),
-                                                door.hashCode),
-                                            postalCode.hashCode),
-                                        description.hashCode),
-                                    neighborhoodId.hashCode),
-                                neighborhoodName.hashCode),
-                            cityId.hashCode),
-                        cityName.hashCode),
-                    countyId.hashCode),
-                countyName.hashCode),
-            name.hashCode),
-        street.hashCode));
+                                                            floor.hashCode),
+                                                        door.hashCode),
+                                                    postalCode.hashCode),
+                                                description.hashCode),
+                                            neighborhoodId.hashCode),
+                                        neighborhoodName.hashCode),
+                                    cityId.hashCode),
+                                cityName.hashCode),
+                            countyId.hashCode),
+                        countyName.hashCode),
+                    name.hashCode),
+                street.hashCode),
+            customerName.hashCode),
+        customerSurname.hashCode));
   }
 
   @override
@@ -342,7 +375,9 @@ class _$RAddress extends RAddress {
           ..add('countyId', countyId)
           ..add('countyName', countyName)
           ..add('name', name)
-          ..add('street', street))
+          ..add('street', street)
+          ..add('customerName', customerName)
+          ..add('customerSurname', customerSurname))
         .toString();
   }
 }
@@ -416,6 +451,15 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
   String get street => _$this._street;
   set street(String street) => _$this._street = street;
 
+  String _customerName;
+  String get customerName => _$this._customerName;
+  set customerName(String customerName) => _$this._customerName = customerName;
+
+  String _customerSurname;
+  String get customerSurname => _$this._customerSurname;
+  set customerSurname(String customerSurname) =>
+      _$this._customerSurname = customerSurname;
+
   RAddressBuilder();
 
   RAddressBuilder get _$this {
@@ -436,6 +480,8 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
       _countyName = _$v.countyName;
       _name = _$v.name;
       _street = _$v.street;
+      _customerName = _$v.customerName;
+      _customerSurname = _$v.customerSurname;
       _$v = null;
     }
     return this;
@@ -473,7 +519,9 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
             countyId: countyId,
             countyName: countyName,
             name: name,
-            street: street);
+            street: street,
+            customerName: customerName,
+            customerSurname: customerSurname);
     replace(_$result);
     return _$result;
   }
