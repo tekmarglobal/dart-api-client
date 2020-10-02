@@ -74,6 +74,12 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.orderNote,
             specifiedType: const FullType(String)));
     }
+    if (object.paymentType != null) {
+      result
+        ..add('paymentType')
+        ..add(serializers.serialize(object.paymentType,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -127,6 +133,10 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
           result.orderNote = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'paymentType':
+          result.paymentType = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -153,6 +163,8 @@ class _$OrderResponse extends OrderResponse {
   final BuiltList<ROrderProducts> orderProducts;
   @override
   final String orderNote;
+  @override
+  final String paymentType;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
@@ -166,7 +178,8 @@ class _$OrderResponse extends OrderResponse {
       this.productTotal,
       this.orderTotal,
       this.orderProducts,
-      this.orderNote})
+      this.orderNote,
+      this.paymentType})
       : super._();
 
   @override
@@ -188,7 +201,8 @@ class _$OrderResponse extends OrderResponse {
         productTotal == other.productTotal &&
         orderTotal == other.orderTotal &&
         orderProducts == other.orderProducts &&
-        orderNote == other.orderNote;
+        orderNote == other.orderNote &&
+        paymentType == other.paymentType;
   }
 
   @override
@@ -199,14 +213,16 @@ class _$OrderResponse extends OrderResponse {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, id.hashCode), customer.hashCode),
-                                orderDate.hashCode),
-                            deliveryAddress.hashCode),
-                        billingAdrress.hashCode),
-                    productTotal.hashCode),
-                orderTotal.hashCode),
-            orderProducts.hashCode),
-        orderNote.hashCode));
+                            $jc(
+                                $jc($jc($jc(0, id.hashCode), customer.hashCode),
+                                    orderDate.hashCode),
+                                deliveryAddress.hashCode),
+                            billingAdrress.hashCode),
+                        productTotal.hashCode),
+                    orderTotal.hashCode),
+                orderProducts.hashCode),
+            orderNote.hashCode),
+        paymentType.hashCode));
   }
 
   @override
@@ -220,7 +236,8 @@ class _$OrderResponse extends OrderResponse {
           ..add('productTotal', productTotal)
           ..add('orderTotal', orderTotal)
           ..add('orderProducts', orderProducts)
-          ..add('orderNote', orderNote))
+          ..add('orderNote', orderNote)
+          ..add('paymentType', paymentType))
         .toString();
   }
 }
@@ -269,6 +286,10 @@ class OrderResponseBuilder
   String get orderNote => _$this._orderNote;
   set orderNote(String orderNote) => _$this._orderNote = orderNote;
 
+  String _paymentType;
+  String get paymentType => _$this._paymentType;
+  set paymentType(String paymentType) => _$this._paymentType = paymentType;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
@@ -282,6 +303,7 @@ class OrderResponseBuilder
       _orderTotal = _$v.orderTotal;
       _orderProducts = _$v.orderProducts?.toBuilder();
       _orderNote = _$v.orderNote;
+      _paymentType = _$v.paymentType;
       _$v = null;
     }
     return this;
@@ -314,7 +336,8 @@ class OrderResponseBuilder
               productTotal: productTotal,
               orderTotal: orderTotal,
               orderProducts: _orderProducts?.build(),
-              orderNote: orderNote);
+              orderNote: orderNote,
+              paymentType: paymentType);
     } catch (_) {
       String _$failedField;
       try {

@@ -96,6 +96,12 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
         ..add(serializers.serialize(object.countyName,
             specifiedType: const FullType(String)));
     }
+    if (object.paymentType != null) {
+      result
+        ..add('paymentType')
+        ..add(serializers.serialize(object.paymentType,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -162,6 +168,10 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
           result.countyName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'paymentType':
+          result.paymentType = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -196,6 +206,8 @@ class _$Orders extends Orders {
   final String cityName;
   @override
   final String countyName;
+  @override
+  final String paymentType;
 
   factory _$Orders([void Function(OrdersBuilder) updates]) =>
       (new OrdersBuilder()..update(updates)).build();
@@ -213,7 +225,8 @@ class _$Orders extends Orders {
       this.orderNote,
       this.active,
       this.cityName,
-      this.countyName})
+      this.countyName,
+      this.paymentType})
       : super._();
 
   @override
@@ -239,7 +252,8 @@ class _$Orders extends Orders {
         orderNote == other.orderNote &&
         active == other.active &&
         cityName == other.cityName &&
-        countyName == other.countyName;
+        countyName == other.countyName &&
+        paymentType == other.paymentType;
   }
 
   @override
@@ -255,19 +269,23 @@ class _$Orders extends Orders {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, orderId.hashCode),
-                                                    orderDate.hashCode),
-                                                deliveryAddress.hashCode),
-                                            billingAddress.hashCode),
-                                        productTotal.hashCode),
-                                    orderTotal.hashCode),
-                                productDiscountsTotal.hashCode),
-                            bagAmount.hashCode),
-                        bagTotal.hashCode),
-                    orderNote.hashCode),
-                active.hashCode),
-            cityName.hashCode),
-        countyName.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        $jc(0,
+                                                            orderId.hashCode),
+                                                        orderDate.hashCode),
+                                                    deliveryAddress.hashCode),
+                                                billingAddress.hashCode),
+                                            productTotal.hashCode),
+                                        orderTotal.hashCode),
+                                    productDiscountsTotal.hashCode),
+                                bagAmount.hashCode),
+                            bagTotal.hashCode),
+                        orderNote.hashCode),
+                    active.hashCode),
+                cityName.hashCode),
+            countyName.hashCode),
+        paymentType.hashCode));
   }
 
   @override
@@ -285,7 +303,8 @@ class _$Orders extends Orders {
           ..add('orderNote', orderNote)
           ..add('active', active)
           ..add('cityName', cityName)
-          ..add('countyName', countyName))
+          ..add('countyName', countyName)
+          ..add('paymentType', paymentType))
         .toString();
   }
 }
@@ -348,6 +367,10 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
   String get countyName => _$this._countyName;
   set countyName(String countyName) => _$this._countyName = countyName;
 
+  String _paymentType;
+  String get paymentType => _$this._paymentType;
+  set paymentType(String paymentType) => _$this._paymentType = paymentType;
+
   OrdersBuilder();
 
   OrdersBuilder get _$this {
@@ -365,6 +388,7 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
       _active = _$v.active;
       _cityName = _$v.cityName;
       _countyName = _$v.countyName;
+      _paymentType = _$v.paymentType;
       _$v = null;
     }
     return this;
@@ -399,7 +423,8 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
             orderNote: orderNote,
             active: active,
             cityName: cityName,
-            countyName: countyName);
+            countyName: countyName,
+            paymentType: paymentType);
     replace(_$result);
     return _$result;
   }

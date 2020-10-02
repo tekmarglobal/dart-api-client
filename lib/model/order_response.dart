@@ -43,6 +43,10 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
         @nullable
     @BuiltValueField(wireName: r'orderNote')
     String get orderNote;
+    
+        @nullable
+    @BuiltValueField(wireName: r'paymentType')
+    String get paymentType;
 
     // Boilerplate code needed to wire-up generated code
     OrderResponse._();
