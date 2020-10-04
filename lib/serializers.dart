@@ -30,7 +30,6 @@ import 'package:openapi/model/delete_address_response_rest_result.dart';
 import 'package:openapi/model/erp_product_request.dart';
 import 'package:openapi/model/erp_product_response.dart';
 import 'package:openapi/model/erp_product_response_rest_result.dart';
-import 'package:openapi/model/favorite_list_request.dart';
 import 'package:openapi/model/favorite_list_response.dart';
 import 'package:openapi/model/favorite_list_response_rest_result.dart';
 import 'package:openapi/model/favorite_request.dart';
@@ -115,7 +114,6 @@ DeleteAddressResponseRestResult,
 ErpProductRequest,
 ErpProductResponse,
 ErpProductResponseRestResult,
-FavoriteListRequest,
 FavoriteListResponse,
 FavoriteListResponseRestResult,
 FavoriteRequest,
@@ -248,9 +246,6 @@ const FullType(BuiltList, const [const FullType(ErpProductResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ErpProductResponseRestResult)]),
 () => new ListBuilder<ErpProductResponseRestResult>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(FavoriteListRequest)]),
-() => new ListBuilder<FavoriteListRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(FavoriteListResponse)]),
 () => new ListBuilder<FavoriteListResponse>())

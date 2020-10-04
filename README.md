@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
+*ProductApi* | [**apiProductDeleteFavoriteDelete**](doc//ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
@@ -131,7 +132,6 @@ Class | Method | HTTP request | Description
  - [ErpProductRequest](doc//ErpProductRequest.md)
  - [ErpProductResponse](doc//ErpProductResponse.md)
  - [ErpProductResponseRestResult](doc//ErpProductResponseRestResult.md)
- - [FavoriteListRequest](doc//FavoriteListRequest.md)
  - [FavoriteListResponse](doc//FavoriteListResponse.md)
  - [FavoriteListResponseRestResult](doc//FavoriteListResponseRestResult.md)
  - [FavoriteRequest](doc//FavoriteRequest.md)

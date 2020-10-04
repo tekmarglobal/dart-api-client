@@ -5,7 +5,6 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/favorite_list_request.dart';
 import 'package:openapi/model/favorite_list_response_rest_result.dart';
 import 'package:openapi/model/erp_product_request.dart';
 import 'package:openapi/model/favorite_request.dart';
@@ -74,9 +73,9 @@ class ProductApi {
         /// 
         ///
         /// 
-        Future<Response<FavoriteListResponseRestResult>>apiProductGetFavoriteListPost({ FavoriteListRequest favoriteListRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<FavoriteListResponseRestResult>>apiProductDeleteFavoriteDelete({ FavoriteRequest favoriteRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        String _path = "/api/Product/GetFavoriteList";
+        String _path = "/api/Product/DeleteFavorite";
 
         Map<String, dynamic> queryParams = {};
         Map<String, String> headerParams = Map.from(headers ?? {});
@@ -88,9 +87,56 @@ class ProductApi {
         List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
 
-            var serializedBody = _serializers.serialize(favoriteListRequest);
-            var jsonfavoriteListRequest = json.encode(serializedBody);
-            bodyData = jsonfavoriteListRequest;
+            var serializedBody = _serializers.serialize(favoriteRequest);
+            var jsonfavoriteRequest = json.encode(serializedBody);
+            bodyData = jsonfavoriteRequest;
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'delete'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(FavoriteListResponseRestResult);
+        var data = _serializers.deserializeWith<FavoriteListResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<FavoriteListResponseRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<FavoriteListResponseRestResult>>apiProductGetFavoriteListPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Product/GetFavoriteList";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
 
             return _dio.request(
             _path,
