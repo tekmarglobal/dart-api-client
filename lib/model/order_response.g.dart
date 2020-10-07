@@ -80,6 +80,18 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.paymentType,
             specifiedType: const FullType(String)));
     }
+    if (object.productDiscountsTotal != null) {
+      result
+        ..add('productDiscountsTotal')
+        ..add(serializers.serialize(object.productDiscountsTotal,
+            specifiedType: const FullType(double)));
+    }
+    if (object.fee != null) {
+      result
+        ..add('fee')
+        ..add(serializers.serialize(object.fee,
+            specifiedType: const FullType(double)));
+    }
     return result;
   }
 
@@ -137,6 +149,14 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
           result.paymentType = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'productDiscountsTotal':
+          result.productDiscountsTotal = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
+        case 'fee':
+          result.fee = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
       }
     }
 
@@ -165,6 +185,10 @@ class _$OrderResponse extends OrderResponse {
   final String orderNote;
   @override
   final String paymentType;
+  @override
+  final double productDiscountsTotal;
+  @override
+  final double fee;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
@@ -179,7 +203,9 @@ class _$OrderResponse extends OrderResponse {
       this.orderTotal,
       this.orderProducts,
       this.orderNote,
-      this.paymentType})
+      this.paymentType,
+      this.productDiscountsTotal,
+      this.fee})
       : super._();
 
   @override
@@ -202,7 +228,9 @@ class _$OrderResponse extends OrderResponse {
         orderTotal == other.orderTotal &&
         orderProducts == other.orderProducts &&
         orderNote == other.orderNote &&
-        paymentType == other.paymentType;
+        paymentType == other.paymentType &&
+        productDiscountsTotal == other.productDiscountsTotal &&
+        fee == other.fee;
   }
 
   @override
@@ -214,15 +242,21 @@ class _$OrderResponse extends OrderResponse {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc($jc(0, id.hashCode), customer.hashCode),
-                                    orderDate.hashCode),
-                                deliveryAddress.hashCode),
-                            billingAdrress.hashCode),
-                        productTotal.hashCode),
-                    orderTotal.hashCode),
-                orderProducts.hashCode),
-            orderNote.hashCode),
-        paymentType.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, id.hashCode),
+                                                customer.hashCode),
+                                            orderDate.hashCode),
+                                        deliveryAddress.hashCode),
+                                    billingAdrress.hashCode),
+                                productTotal.hashCode),
+                            orderTotal.hashCode),
+                        orderProducts.hashCode),
+                    orderNote.hashCode),
+                paymentType.hashCode),
+            productDiscountsTotal.hashCode),
+        fee.hashCode));
   }
 
   @override
@@ -237,7 +271,9 @@ class _$OrderResponse extends OrderResponse {
           ..add('orderTotal', orderTotal)
           ..add('orderProducts', orderProducts)
           ..add('orderNote', orderNote)
-          ..add('paymentType', paymentType))
+          ..add('paymentType', paymentType)
+          ..add('productDiscountsTotal', productDiscountsTotal)
+          ..add('fee', fee))
         .toString();
   }
 }
@@ -290,6 +326,15 @@ class OrderResponseBuilder
   String get paymentType => _$this._paymentType;
   set paymentType(String paymentType) => _$this._paymentType = paymentType;
 
+  double _productDiscountsTotal;
+  double get productDiscountsTotal => _$this._productDiscountsTotal;
+  set productDiscountsTotal(double productDiscountsTotal) =>
+      _$this._productDiscountsTotal = productDiscountsTotal;
+
+  double _fee;
+  double get fee => _$this._fee;
+  set fee(double fee) => _$this._fee = fee;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
@@ -304,6 +349,8 @@ class OrderResponseBuilder
       _orderProducts = _$v.orderProducts?.toBuilder();
       _orderNote = _$v.orderNote;
       _paymentType = _$v.paymentType;
+      _productDiscountsTotal = _$v.productDiscountsTotal;
+      _fee = _$v.fee;
       _$v = null;
     }
     return this;
@@ -337,7 +384,9 @@ class OrderResponseBuilder
               orderTotal: orderTotal,
               orderProducts: _orderProducts?.build(),
               orderNote: orderNote,
-              paymentType: paymentType);
+              paymentType: paymentType,
+              productDiscountsTotal: productDiscountsTotal,
+              fee: fee);
     } catch (_) {
       String _$failedField;
       try {

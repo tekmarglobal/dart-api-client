@@ -61,6 +61,10 @@ abstract class Orders implements Built<Orders, OrdersBuilder> {
         @nullable
     @BuiltValueField(wireName: r'paymentType')
     String get paymentType;
+    
+        @nullable
+    @BuiltValueField(wireName: r'fee')
+    double get fee;
 
     // Boilerplate code needed to wire-up generated code
     Orders._();
