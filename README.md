@@ -99,7 +99,6 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductDeleteFavoriteDelete**](doc//ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
-*ProductApi* | [**apiProductInsertimagesPost**](doc//ProductApi.md#apiproductinsertimagespost) | **post** /api/Product/insertimages | 
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
 *ProductApi* | [**apiProductUpdateProductFromErpPost**](doc//ProductApi.md#apiproductupdateproductfromerppost) | **post** /api/Product/UpdateProductFromErp | 

@@ -47,6 +47,10 @@ abstract class RProduct implements Built<RProduct, RProductBuilder> {
         @nullable
     @BuiltValueField(wireName: r'eId')
     String get eId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'barcode')
+    String get barcode;
 
     // Boilerplate code needed to wire-up generated code
     RProduct._();

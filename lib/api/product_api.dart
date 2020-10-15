@@ -170,39 +170,6 @@ class ProductApi {
         /// 
         ///
         /// 
-        Future<Response>apiProductInsertimagesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Product/insertimages";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            );
-            }
-        /// 
-        ///
-        /// 
         Future<Response<RProductRestResult>>apiProductPost({ ProductRequest productRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Product";

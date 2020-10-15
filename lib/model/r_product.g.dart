@@ -79,6 +79,12 @@ class _$RProductSerializer implements StructuredSerializer<RProduct> {
         ..add(serializers.serialize(object.eId,
             specifiedType: const FullType(String)));
     }
+    if (object.barcode != null) {
+      result
+        ..add('barcode')
+        ..add(serializers.serialize(object.barcode,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -135,6 +141,10 @@ class _$RProductSerializer implements StructuredSerializer<RProduct> {
           result.eId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'barcode':
+          result.barcode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -163,6 +173,8 @@ class _$RProduct extends RProduct {
   final BuiltList<RProductPrice> prices;
   @override
   final String eId;
+  @override
+  final String barcode;
 
   factory _$RProduct([void Function(RProductBuilder) updates]) =>
       (new RProductBuilder()..update(updates)).build();
@@ -177,7 +189,8 @@ class _$RProduct extends RProduct {
       this.quantityStep,
       this.initalQuantity,
       this.prices,
-      this.eId})
+      this.eId,
+      this.barcode})
       : super._();
 
   @override
@@ -200,7 +213,8 @@ class _$RProduct extends RProduct {
         quantityStep == other.quantityStep &&
         initalQuantity == other.initalQuantity &&
         prices == other.prices &&
-        eId == other.eId;
+        eId == other.eId &&
+        barcode == other.barcode;
   }
 
   @override
@@ -212,15 +226,17 @@ class _$RProduct extends RProduct {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc($jc(0, id.hashCode), name.hashCode),
-                                    description.hashCode),
-                                brandName.hashCode),
-                            maxQuantity.hashCode),
-                        minQuantity.hashCode),
-                    quantityStep.hashCode),
-                initalQuantity.hashCode),
-            prices.hashCode),
-        eId.hashCode));
+                                $jc(
+                                    $jc($jc($jc(0, id.hashCode), name.hashCode),
+                                        description.hashCode),
+                                    brandName.hashCode),
+                                maxQuantity.hashCode),
+                            minQuantity.hashCode),
+                        quantityStep.hashCode),
+                    initalQuantity.hashCode),
+                prices.hashCode),
+            eId.hashCode),
+        barcode.hashCode));
   }
 
   @override
@@ -235,7 +251,8 @@ class _$RProduct extends RProduct {
           ..add('quantityStep', quantityStep)
           ..add('initalQuantity', initalQuantity)
           ..add('prices', prices)
-          ..add('eId', eId))
+          ..add('eId', eId)
+          ..add('barcode', barcode))
         .toString();
   }
 }
@@ -285,6 +302,10 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
   String get eId => _$this._eId;
   set eId(String eId) => _$this._eId = eId;
 
+  String _barcode;
+  String get barcode => _$this._barcode;
+  set barcode(String barcode) => _$this._barcode = barcode;
+
   RProductBuilder();
 
   RProductBuilder get _$this {
@@ -299,6 +320,7 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
       _initalQuantity = _$v.initalQuantity;
       _prices = _$v.prices?.toBuilder();
       _eId = _$v.eId;
+      _barcode = _$v.barcode;
       _$v = null;
     }
     return this;
@@ -332,7 +354,8 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
               quantityStep: quantityStep,
               initalQuantity: initalQuantity,
               prices: _prices?.build(),
-              eId: eId);
+              eId: eId,
+              barcode: barcode);
     } catch (_) {
       String _$failedField;
       try {
