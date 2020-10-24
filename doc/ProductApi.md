@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**apiProductAddToFavoriteListPost**](ProductApi.md#apiProductAddToFavoriteListPost) | **post** /api/Product/AddToFavoriteList | 
 [**apiProductDeleteFavoriteDelete**](ProductApi.md#apiProductDeleteFavoriteDelete) | **delete** /api/Product/DeleteFavorite | 
 [**apiProductGetFavoriteListPost**](ProductApi.md#apiProductGetFavoriteListPost) | **post** /api/Product/GetFavoriteList | 
+[**apiProductInsertimagesPost**](ProductApi.md#apiProductInsertimagesPost) | **post** /api/Product/insertimages | 
 [**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
 [**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
 [**apiProductUpdateProductFromErpPost**](ProductApi.md#apiProductUpdateProductFromErpPost) | **post** /api/Product/UpdateProductFromErp | 
@@ -145,6 +146,54 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiProductInsertimagesPost**
+> apiProductInsertimagesPost(i, shopid, client)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+var i = 56; // int | 
+var shopid = shopid_example; // String | 
+var client = client_example; // String | 
+
+try { 
+    api_instance.apiProductInsertimagesPost(i, shopid, client);
+} catch (e) {
+    print("Exception when calling ProductApi->apiProductInsertimagesPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **i** | **int**|  | [optional] [default to null]
+ **shopid** | **String**|  | [optional] [default to null]
+ **client** | **String**|  | [optional] [default to null]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
