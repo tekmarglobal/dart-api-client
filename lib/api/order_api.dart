@@ -219,6 +219,56 @@ class OrderApi {
         /// 
         ///
         /// 
+        Future<Response<SendOrderMailResponseRestResult>>apiOrderSendOrderMailtoCustomerPost({ SendOrderMailRequest sendOrderMailRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Order/SendOrderMailtoCustomer";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+
+
+            var serializedBody = _serializers.serialize(sendOrderMailRequest);
+            var jsonsendOrderMailRequest = json.encode(serializedBody);
+            bodyData = jsonsendOrderMailRequest;
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(SendOrderMailResponseRestResult);
+        var data = _serializers.deserializeWith<SendOrderMailResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<SendOrderMailResponseRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
         Future<Response<String>>apiOrderSendmailPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Order/sendmail";

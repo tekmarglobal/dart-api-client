@@ -11,8 +11,8 @@ abstract class RBanner implements Built<RBanner, RBannerBuilder> {
     String get name;
     
         @nullable
-    @BuiltValueField(wireName: r'aktive')
-    bool get aktive;
+    @BuiltValueField(wireName: r'active')
+    bool get active;
     
         @nullable
     @BuiltValueField(wireName: r'image')

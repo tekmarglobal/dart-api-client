@@ -90,10 +90,10 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
 *OrderApi* | [**apiOrderSendOrderMailPost**](doc//OrderApi.md#apiordersendordermailpost) | **post** /api/Order/SendOrderMail | 
+*OrderApi* | [**apiOrderSendOrderMailtoCustomerPost**](doc//OrderApi.md#apiordersendordermailtocustomerpost) | **post** /api/Order/SendOrderMailtoCustomer | 
 *OrderApi* | [**apiOrderSendmailPost**](doc//OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
 *OrderApi* | [**apiOrderUpdateStatusPost**](doc//OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
-*PaymentApi* | [**apiPaymentCardResultFailPost**](doc//PaymentApi.md#apipaymentcardresultfailpost) | **post** /api/Payment/CardResultFail | 
-*PaymentApi* | [**apiPaymentCardResultSuccessPost**](doc//PaymentApi.md#apipaymentcardresultsuccesspost) | **post** /api/Payment/CardResultSuccess | 
+*PaymentApi* | [**apiPaymentCardSuccessPost**](doc//PaymentApi.md#apipaymentcardsuccesspost) | **post** /api/Payment/CardSuccess | 
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
