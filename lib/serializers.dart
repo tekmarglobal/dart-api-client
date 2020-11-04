@@ -27,7 +27,6 @@ import 'package:openapi/model/customer_response.dart';
 import 'package:openapi/model/customer_response_rest_result.dart';
 import 'package:openapi/model/delete_address_request.dart';
 import 'package:openapi/model/delete_address_response_rest_result.dart';
-import 'package:openapi/model/erp_product_request.dart';
 import 'package:openapi/model/erp_product_response.dart';
 import 'package:openapi/model/erp_product_response_rest_result.dart';
 import 'package:openapi/model/favorite_list_response.dart';
@@ -111,7 +110,6 @@ CustomerResponse,
 CustomerResponseRestResult,
 DeleteAddressRequest,
 DeleteAddressResponseRestResult,
-ErpProductRequest,
 ErpProductResponse,
 ErpProductResponseRestResult,
 FavoriteListResponse,
@@ -237,9 +235,6 @@ const FullType(BuiltList, const [const FullType(DeleteAddressRequest)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(DeleteAddressResponseRestResult)]),
 () => new ListBuilder<DeleteAddressResponseRestResult>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(ErpProductRequest)]),
-() => new ListBuilder<ErpProductRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ErpProductResponse)]),
 () => new ListBuilder<ErpProductResponse>())

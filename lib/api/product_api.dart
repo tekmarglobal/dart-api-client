@@ -6,7 +6,6 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/favorite_list_response_rest_result.dart';
-import 'package:openapi/model/erp_product_request.dart';
 import 'package:openapi/model/favorite_request.dart';
 import 'package:openapi/model/r_product_rest_result.dart';
 import 'package:openapi/model/search_product_request.dart';
@@ -306,7 +305,7 @@ class ProductApi {
         /// 
         ///
         /// 
-        Future<Response<ErpProductResponseRestResult>>apiProductUpdateProductFromErpPost({ ErpProductRequest erpProductRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<ErpProductResponseRestResult>>apiProductUpdateProductFromErpPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Product/UpdateProductFromErp";
 
@@ -317,12 +316,9 @@ class ProductApi {
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        List<String> contentTypes = [];
 
 
-            var serializedBody = _serializers.serialize(erpProductRequest);
-            var jsonerpProductRequest = json.encode(serializedBody);
-            bodyData = jsonerpProductRequest;
 
             return _dio.request(
             _path,

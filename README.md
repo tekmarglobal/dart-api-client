@@ -130,7 +130,6 @@ Class | Method | HTTP request | Description
  - [CustomerResponseRestResult](doc//CustomerResponseRestResult.md)
  - [DeleteAddressRequest](doc//DeleteAddressRequest.md)
  - [DeleteAddressResponseRestResult](doc//DeleteAddressResponseRestResult.md)
- - [ErpProductRequest](doc//ErpProductRequest.md)
  - [ErpProductResponse](doc//ErpProductResponse.md)
  - [ErpProductResponseRestResult](doc//ErpProductResponseRestResult.md)
  - [FavoriteListResponse](doc//FavoriteListResponse.md)
