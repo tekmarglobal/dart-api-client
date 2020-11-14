@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **prices** | [**BuiltList&lt;RProductPrice&gt;**](RProductPrice.md) |  | [optional] [default to const []]
 **eId** | **String** |  | [optional] [default to null]
 **barcode** | **String** |  | [optional] [default to null]
+**unitId** | **int** |  | [optional] [default to null]
+**unitName** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

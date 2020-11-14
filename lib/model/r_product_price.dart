@@ -13,14 +13,6 @@ abstract class RProductPrice implements Built<RProductPrice, RProductPriceBuilde
         @nullable
     @BuiltValueField(wireName: r'listPrice')
     double get listPrice;
-    
-        @nullable
-    @BuiltValueField(wireName: r'unitId')
-    int get unitId;
-    
-        @nullable
-    @BuiltValueField(wireName: r'unitName')
-    String get unitName;
 
     // Boilerplate code needed to wire-up generated code
     RProductPrice._();
