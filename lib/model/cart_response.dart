@@ -29,6 +29,14 @@ abstract class CartResponse implements Built<CartResponse, CartResponseBuilder> 
     String get deviceToken;
     
         @nullable
+    @BuiltValueField(wireName: r'bagTotal')
+    double get bagTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'bagAmount')
+    int get bagAmount;
+    
+        @nullable
     @BuiltValueField(wireName: r'cardProducts')
     BuiltList<RCartProducts> get cardProducts;
 

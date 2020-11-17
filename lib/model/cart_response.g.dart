@@ -49,6 +49,18 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
         ..add(serializers.serialize(object.deviceToken,
             specifiedType: const FullType(String)));
     }
+    if (object.bagTotal != null) {
+      result
+        ..add('bagTotal')
+        ..add(serializers.serialize(object.bagTotal,
+            specifiedType: const FullType(double)));
+    }
+    if (object.bagAmount != null) {
+      result
+        ..add('bagAmount')
+        ..add(serializers.serialize(object.bagAmount,
+            specifiedType: const FullType(int)));
+    }
     if (object.cardProducts != null) {
       result
         ..add('cardProducts')
@@ -90,6 +102,14 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
           result.deviceToken = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'bagTotal':
+          result.bagTotal = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
+        case 'bagAmount':
+          result.bagAmount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'cardProducts':
           result.cardProducts.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -115,6 +135,10 @@ class _$CartResponse extends CartResponse {
   @override
   final String deviceToken;
   @override
+  final double bagTotal;
+  @override
+  final int bagAmount;
+  @override
   final BuiltList<RCartProducts> cardProducts;
 
   factory _$CartResponse([void Function(CartResponseBuilder) updates]) =>
@@ -126,6 +150,8 @@ class _$CartResponse extends CartResponse {
       this.cartTotal,
       this.regionId,
       this.deviceToken,
+      this.bagTotal,
+      this.bagAmount,
       this.cardProducts})
       : super._();
 
@@ -145,6 +171,8 @@ class _$CartResponse extends CartResponse {
         cartTotal == other.cartTotal &&
         regionId == other.regionId &&
         deviceToken == other.deviceToken &&
+        bagTotal == other.bagTotal &&
+        bagAmount == other.bagAmount &&
         cardProducts == other.cardProducts;
   }
 
@@ -153,10 +181,14 @@ class _$CartResponse extends CartResponse {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, cartId.hashCode), customer.hashCode),
-                    cartTotal.hashCode),
-                regionId.hashCode),
-            deviceToken.hashCode),
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, cartId.hashCode), customer.hashCode),
+                            cartTotal.hashCode),
+                        regionId.hashCode),
+                    deviceToken.hashCode),
+                bagTotal.hashCode),
+            bagAmount.hashCode),
         cardProducts.hashCode));
   }
 
@@ -168,6 +200,8 @@ class _$CartResponse extends CartResponse {
           ..add('cartTotal', cartTotal)
           ..add('regionId', regionId)
           ..add('deviceToken', deviceToken)
+          ..add('bagTotal', bagTotal)
+          ..add('bagAmount', bagAmount)
           ..add('cardProducts', cardProducts))
         .toString();
   }
@@ -197,6 +231,14 @@ class CartResponseBuilder
   String get deviceToken => _$this._deviceToken;
   set deviceToken(String deviceToken) => _$this._deviceToken = deviceToken;
 
+  double _bagTotal;
+  double get bagTotal => _$this._bagTotal;
+  set bagTotal(double bagTotal) => _$this._bagTotal = bagTotal;
+
+  int _bagAmount;
+  int get bagAmount => _$this._bagAmount;
+  set bagAmount(int bagAmount) => _$this._bagAmount = bagAmount;
+
   ListBuilder<RCartProducts> _cardProducts;
   ListBuilder<RCartProducts> get cardProducts =>
       _$this._cardProducts ??= new ListBuilder<RCartProducts>();
@@ -212,6 +254,8 @@ class CartResponseBuilder
       _cartTotal = _$v.cartTotal;
       _regionId = _$v.regionId;
       _deviceToken = _$v.deviceToken;
+      _bagTotal = _$v.bagTotal;
+      _bagAmount = _$v.bagAmount;
       _cardProducts = _$v.cardProducts?.toBuilder();
       _$v = null;
     }
@@ -242,6 +286,8 @@ class CartResponseBuilder
               cartTotal: cartTotal,
               regionId: regionId,
               deviceToken: deviceToken,
+              bagTotal: bagTotal,
+              bagAmount: bagAmount,
               cardProducts: _cardProducts?.build());
     } catch (_) {
       String _$failedField;
