@@ -60,6 +60,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountApi* | [**apiAccountLoginPost**](doc//AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
 *AccountApi* | [**apiAccountWhoAmIGet**](doc//AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
+*AdminApi* | [**apiAdminGenerateTimeSlotsGet**](doc//AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *ApiApi* | [**apiCartProductPut**](doc//ApiApi.md#apicartproductput) | **put** /api/cart/product | 
 *ApiApi* | [**apiProductAllGet**](doc//ApiApi.md#apiproductallget) | **get** /api/product/all | 

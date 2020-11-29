@@ -85,6 +85,12 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
         ..add(serializers.serialize(object.registered,
             specifiedType: const FullType(bool)));
     }
+    if (object.lastOrder != null) {
+      result
+        ..add('lastOrder')
+        ..add(serializers.serialize(object.lastOrder,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -145,6 +151,10 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
           result.registered = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'lastOrder':
+          result.lastOrder = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -175,6 +185,8 @@ class _$RCustomer extends RCustomer {
   final BuiltList<RAddress> address;
   @override
   final bool registered;
+  @override
+  final int lastOrder;
 
   factory _$RCustomer([void Function(RCustomerBuilder) updates]) =>
       (new RCustomerBuilder()..update(updates)).build();
@@ -190,7 +202,8 @@ class _$RCustomer extends RCustomer {
       this.allowSms,
       this.allowEmail,
       this.address,
-      this.registered})
+      this.registered,
+      this.lastOrder})
       : super._();
 
   @override
@@ -214,7 +227,8 @@ class _$RCustomer extends RCustomer {
         allowSms == other.allowSms &&
         allowEmail == other.allowEmail &&
         address == other.address &&
-        registered == other.registered;
+        registered == other.registered &&
+        lastOrder == other.lastOrder;
   }
 
   @override
@@ -228,17 +242,19 @@ class _$RCustomer extends RCustomer {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, id.hashCode),
-                                            customerName.hashCode),
-                                        customerSurname.hashCode),
-                                    birthDate.hashCode),
-                                phone.hashCode),
-                            email.hashCode),
-                        gender.hashCode),
-                    allowSms.hashCode),
-                allowEmail.hashCode),
-            address.hashCode),
-        registered.hashCode));
+                                        $jc(
+                                            $jc($jc(0, id.hashCode),
+                                                customerName.hashCode),
+                                            customerSurname.hashCode),
+                                        birthDate.hashCode),
+                                    phone.hashCode),
+                                email.hashCode),
+                            gender.hashCode),
+                        allowSms.hashCode),
+                    allowEmail.hashCode),
+                address.hashCode),
+            registered.hashCode),
+        lastOrder.hashCode));
   }
 
   @override
@@ -254,7 +270,8 @@ class _$RCustomer extends RCustomer {
           ..add('allowSms', allowSms)
           ..add('allowEmail', allowEmail)
           ..add('address', address)
-          ..add('registered', registered))
+          ..add('registered', registered)
+          ..add('lastOrder', lastOrder))
         .toString();
   }
 }
@@ -308,6 +325,10 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
   bool get registered => _$this._registered;
   set registered(bool registered) => _$this._registered = registered;
 
+  int _lastOrder;
+  int get lastOrder => _$this._lastOrder;
+  set lastOrder(int lastOrder) => _$this._lastOrder = lastOrder;
+
   RCustomerBuilder();
 
   RCustomerBuilder get _$this {
@@ -323,6 +344,7 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _allowEmail = _$v.allowEmail;
       _address = _$v.address?.toBuilder();
       _registered = _$v.registered;
+      _lastOrder = _$v.lastOrder;
       _$v = null;
     }
     return this;
@@ -357,7 +379,8 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
               allowSms: allowSms,
               allowEmail: allowEmail,
               address: _address?.build(),
-              registered: registered);
+              registered: registered,
+              lastOrder: lastOrder);
     } catch (_) {
       String _$failedField;
       try {
