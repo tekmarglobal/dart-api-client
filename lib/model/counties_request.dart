@@ -9,10 +9,6 @@ abstract class CountiesRequest implements Built<CountiesRequest, CountiesRequest
         @nullable
     @BuiltValueField(wireName: r'city')
     int get city;
-    
-        @nullable
-    @BuiltValueField(wireName: r'countyName')
-    String get countyName;
 
     // Boilerplate code needed to wire-up generated code
     CountiesRequest._();

@@ -14,7 +14,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CartResponseRestResult.serializer)
       ..add(CitiesResponse.serializer)
       ..add(CitiesResponseListRestResult.serializer)
-      ..add(CityesRequest.serializer)
       ..add(CountiesRequest.serializer)
       ..add(CountiesResponse.serializer)
       ..add(CountiesResponseListRestResult.serializer)
@@ -30,6 +29,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DeleteAddressResponseRestResult.serializer)
       ..add(ErpProductResponse.serializer)
       ..add(ErpProductResponseRestResult.serializer)
+      ..add(FaqResponse.serializer)
+      ..add(FaqResponseListRestResult.serializer)
       ..add(FavoriteListResponse.serializer)
       ..add(FavoriteListResponseRestResult.serializer)
       ..add(FavoriteRequest.serializer)
@@ -91,6 +92,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CountiesResponse)]),
           () => new ListBuilder<CountiesResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(FaqResponse)]),
+          () => new ListBuilder<FaqResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(NeighborResponse)]),
           () => new ListBuilder<NeighborResponse>())

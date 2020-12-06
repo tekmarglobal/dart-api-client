@@ -9,10 +9,6 @@ abstract class NeighborRequest implements Built<NeighborRequest, NeighborRequest
         @nullable
     @BuiltValueField(wireName: r'county')
     int get county;
-    
-        @nullable
-    @BuiltValueField(wireName: r'name')
-    String get name;
 
     // Boilerplate code needed to wire-up generated code
     NeighborRequest._();

@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**apiCustomerUpdateCustomerPost**](doc//CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
 *DefinitionApi* | [**apiDefinitionCitiesPost**](doc//DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
 *DefinitionApi* | [**apiDefinitionCountiesPost**](doc//DefinitionApi.md#apidefinitioncountiespost) | **post** /api/Definition/Counties | 
+*DefinitionApi* | [**apiDefinitionFaqGet**](doc//DefinitionApi.md#apidefinitionfaqget) | **get** /api/Definition/Faq | 
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc//DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc//MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc//MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
@@ -117,7 +118,6 @@ Class | Method | HTTP request | Description
  - [CartResponseRestResult](doc//CartResponseRestResult.md)
  - [CitiesResponse](doc//CitiesResponse.md)
  - [CitiesResponseListRestResult](doc//CitiesResponseListRestResult.md)
- - [CityesRequest](doc//CityesRequest.md)
  - [CountiesRequest](doc//CountiesRequest.md)
  - [CountiesResponse](doc//CountiesResponse.md)
  - [CountiesResponseListRestResult](doc//CountiesResponseListRestResult.md)
@@ -133,6 +133,8 @@ Class | Method | HTTP request | Description
  - [DeleteAddressResponseRestResult](doc//DeleteAddressResponseRestResult.md)
  - [ErpProductResponse](doc//ErpProductResponse.md)
  - [ErpProductResponseRestResult](doc//ErpProductResponseRestResult.md)
+ - [FaqResponse](doc//FaqResponse.md)
+ - [FaqResponseListRestResult](doc//FaqResponseListRestResult.md)
  - [FavoriteListResponse](doc//FavoriteListResponse.md)
  - [FavoriteListResponseRestResult](doc//FavoriteListResponseRestResult.md)
  - [FavoriteRequest](doc//FavoriteRequest.md)

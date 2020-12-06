@@ -13,7 +13,6 @@ import 'package:openapi/model/cart_response.dart';
 import 'package:openapi/model/cart_response_rest_result.dart';
 import 'package:openapi/model/cities_response.dart';
 import 'package:openapi/model/cities_response_list_rest_result.dart';
-import 'package:openapi/model/cityes_request.dart';
 import 'package:openapi/model/counties_request.dart';
 import 'package:openapi/model/counties_response.dart';
 import 'package:openapi/model/counties_response_list_rest_result.dart';
@@ -29,6 +28,8 @@ import 'package:openapi/model/delete_address_request.dart';
 import 'package:openapi/model/delete_address_response_rest_result.dart';
 import 'package:openapi/model/erp_product_response.dart';
 import 'package:openapi/model/erp_product_response_rest_result.dart';
+import 'package:openapi/model/faq_response.dart';
+import 'package:openapi/model/faq_response_list_rest_result.dart';
 import 'package:openapi/model/favorite_list_response.dart';
 import 'package:openapi/model/favorite_list_response_rest_result.dart';
 import 'package:openapi/model/favorite_request.dart';
@@ -96,7 +97,6 @@ CartResponse,
 CartResponseRestResult,
 CitiesResponse,
 CitiesResponseListRestResult,
-CityesRequest,
 CountiesRequest,
 CountiesResponse,
 CountiesResponseListRestResult,
@@ -112,6 +112,8 @@ DeleteAddressRequest,
 DeleteAddressResponseRestResult,
 ErpProductResponse,
 ErpProductResponseRestResult,
+FaqResponse,
+FaqResponseListRestResult,
 FavoriteListResponse,
 FavoriteListResponseRestResult,
 FavoriteRequest,
@@ -194,9 +196,6 @@ const FullType(BuiltList, const [const FullType(CitiesResponse)]),
 const FullType(BuiltList, const [const FullType(CitiesResponseListRestResult)]),
 () => new ListBuilder<CitiesResponseListRestResult>())
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(CityesRequest)]),
-() => new ListBuilder<CityesRequest>())
-..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CountiesRequest)]),
 () => new ListBuilder<CountiesRequest>())
 ..addBuilderFactory(
@@ -241,6 +240,12 @@ const FullType(BuiltList, const [const FullType(ErpProductResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ErpProductResponseRestResult)]),
 () => new ListBuilder<ErpProductResponseRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(FaqResponse)]),
+() => new ListBuilder<FaqResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(FaqResponseListRestResult)]),
+() => new ListBuilder<FaqResponseListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(FavoriteListResponse)]),
 () => new ListBuilder<FavoriteListResponse>())

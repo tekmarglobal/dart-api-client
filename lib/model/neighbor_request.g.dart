@@ -26,12 +26,6 @@ class _$NeighborRequestSerializer
         ..add(serializers.serialize(object.county,
             specifiedType: const FullType(int)));
     }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
     return result;
   }
 
@@ -51,10 +45,6 @@ class _$NeighborRequestSerializer
           result.county = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
       }
     }
 
@@ -65,13 +55,11 @@ class _$NeighborRequestSerializer
 class _$NeighborRequest extends NeighborRequest {
   @override
   final int county;
-  @override
-  final String name;
 
   factory _$NeighborRequest([void Function(NeighborRequestBuilder) updates]) =>
       (new NeighborRequestBuilder()..update(updates)).build();
 
-  _$NeighborRequest._({this.county, this.name}) : super._();
+  _$NeighborRequest._({this.county}) : super._();
 
   @override
   NeighborRequest rebuild(void Function(NeighborRequestBuilder) updates) =>
@@ -84,21 +72,18 @@ class _$NeighborRequest extends NeighborRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is NeighborRequest &&
-        county == other.county &&
-        name == other.name;
+    return other is NeighborRequest && county == other.county;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, county.hashCode), name.hashCode));
+    return $jf($jc(0, county.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('NeighborRequest')
-          ..add('county', county)
-          ..add('name', name))
+          ..add('county', county))
         .toString();
   }
 }
@@ -111,16 +96,11 @@ class NeighborRequestBuilder
   int get county => _$this._county;
   set county(int county) => _$this._county = county;
 
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
-
   NeighborRequestBuilder();
 
   NeighborRequestBuilder get _$this {
     if (_$v != null) {
       _county = _$v.county;
-      _name = _$v.name;
       _$v = null;
     }
     return this;
@@ -141,7 +121,7 @@ class NeighborRequestBuilder
 
   @override
   _$NeighborRequest build() {
-    final _$result = _$v ?? new _$NeighborRequest._(county: county, name: name);
+    final _$result = _$v ?? new _$NeighborRequest._(county: county);
     replace(_$result);
     return _$result;
   }

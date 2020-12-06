@@ -26,12 +26,6 @@ class _$CountiesRequestSerializer
         ..add(serializers.serialize(object.city,
             specifiedType: const FullType(int)));
     }
-    if (object.countyName != null) {
-      result
-        ..add('countyName')
-        ..add(serializers.serialize(object.countyName,
-            specifiedType: const FullType(String)));
-    }
     return result;
   }
 
@@ -51,10 +45,6 @@ class _$CountiesRequestSerializer
           result.city = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'countyName':
-          result.countyName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
       }
     }
 
@@ -65,13 +55,11 @@ class _$CountiesRequestSerializer
 class _$CountiesRequest extends CountiesRequest {
   @override
   final int city;
-  @override
-  final String countyName;
 
   factory _$CountiesRequest([void Function(CountiesRequestBuilder) updates]) =>
       (new CountiesRequestBuilder()..update(updates)).build();
 
-  _$CountiesRequest._({this.city, this.countyName}) : super._();
+  _$CountiesRequest._({this.city}) : super._();
 
   @override
   CountiesRequest rebuild(void Function(CountiesRequestBuilder) updates) =>
@@ -84,21 +72,17 @@ class _$CountiesRequest extends CountiesRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CountiesRequest &&
-        city == other.city &&
-        countyName == other.countyName;
+    return other is CountiesRequest && city == other.city;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, city.hashCode), countyName.hashCode));
+    return $jf($jc(0, city.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('CountiesRequest')
-          ..add('city', city)
-          ..add('countyName', countyName))
+    return (newBuiltValueToStringHelper('CountiesRequest')..add('city', city))
         .toString();
   }
 }
@@ -111,16 +95,11 @@ class CountiesRequestBuilder
   int get city => _$this._city;
   set city(int city) => _$this._city = city;
 
-  String _countyName;
-  String get countyName => _$this._countyName;
-  set countyName(String countyName) => _$this._countyName = countyName;
-
   CountiesRequestBuilder();
 
   CountiesRequestBuilder get _$this {
     if (_$v != null) {
       _city = _$v.city;
-      _countyName = _$v.countyName;
       _$v = null;
     }
     return this;
@@ -141,8 +120,7 @@ class CountiesRequestBuilder
 
   @override
   _$CountiesRequest build() {
-    final _$result =
-        _$v ?? new _$CountiesRequest._(city: city, countyName: countyName);
+    final _$result = _$v ?? new _$CountiesRequest._(city: city);
     replace(_$result);
     return _$result;
   }
