@@ -55,6 +55,14 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
         @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
+    
+        @nullable
+    @BuiltValueField(wireName: r'bagAmount')
+    int get bagAmount;
+    
+        @nullable
+    @BuiltValueField(wireName: r'bagTotal')
+    double get bagTotal;
 
     // Boilerplate code needed to wire-up generated code
     OrderResponse._();

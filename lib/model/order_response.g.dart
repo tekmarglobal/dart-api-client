@@ -92,6 +92,18 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.fee,
             specifiedType: const FullType(double)));
     }
+    if (object.bagAmount != null) {
+      result
+        ..add('bagAmount')
+        ..add(serializers.serialize(object.bagAmount,
+            specifiedType: const FullType(int)));
+    }
+    if (object.bagTotal != null) {
+      result
+        ..add('bagTotal')
+        ..add(serializers.serialize(object.bagTotal,
+            specifiedType: const FullType(double)));
+    }
     return result;
   }
 
@@ -157,6 +169,14 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
           result.fee = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'bagAmount':
+          result.bagAmount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'bagTotal':
+          result.bagTotal = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
       }
     }
 
@@ -189,6 +209,10 @@ class _$OrderResponse extends OrderResponse {
   final double productDiscountsTotal;
   @override
   final double fee;
+  @override
+  final int bagAmount;
+  @override
+  final double bagTotal;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
@@ -205,7 +229,9 @@ class _$OrderResponse extends OrderResponse {
       this.orderNote,
       this.paymentType,
       this.productDiscountsTotal,
-      this.fee})
+      this.fee,
+      this.bagAmount,
+      this.bagTotal})
       : super._();
 
   @override
@@ -230,7 +256,9 @@ class _$OrderResponse extends OrderResponse {
         orderNote == other.orderNote &&
         paymentType == other.paymentType &&
         productDiscountsTotal == other.productDiscountsTotal &&
-        fee == other.fee;
+        fee == other.fee &&
+        bagAmount == other.bagAmount &&
+        bagTotal == other.bagTotal;
   }
 
   @override
@@ -245,18 +273,22 @@ class _$OrderResponse extends OrderResponse {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, id.hashCode),
-                                                customer.hashCode),
-                                            orderDate.hashCode),
-                                        deliveryAddress.hashCode),
-                                    billingAdrress.hashCode),
-                                productTotal.hashCode),
-                            orderTotal.hashCode),
-                        orderProducts.hashCode),
-                    orderNote.hashCode),
-                paymentType.hashCode),
-            productDiscountsTotal.hashCode),
-        fee.hashCode));
+                                            $jc(
+                                                $jc(
+                                                    $jc($jc(0, id.hashCode),
+                                                        customer.hashCode),
+                                                    orderDate.hashCode),
+                                                deliveryAddress.hashCode),
+                                            billingAdrress.hashCode),
+                                        productTotal.hashCode),
+                                    orderTotal.hashCode),
+                                orderProducts.hashCode),
+                            orderNote.hashCode),
+                        paymentType.hashCode),
+                    productDiscountsTotal.hashCode),
+                fee.hashCode),
+            bagAmount.hashCode),
+        bagTotal.hashCode));
   }
 
   @override
@@ -273,7 +305,9 @@ class _$OrderResponse extends OrderResponse {
           ..add('orderNote', orderNote)
           ..add('paymentType', paymentType)
           ..add('productDiscountsTotal', productDiscountsTotal)
-          ..add('fee', fee))
+          ..add('fee', fee)
+          ..add('bagAmount', bagAmount)
+          ..add('bagTotal', bagTotal))
         .toString();
   }
 }
@@ -335,6 +369,14 @@ class OrderResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
+  int _bagAmount;
+  int get bagAmount => _$this._bagAmount;
+  set bagAmount(int bagAmount) => _$this._bagAmount = bagAmount;
+
+  double _bagTotal;
+  double get bagTotal => _$this._bagTotal;
+  set bagTotal(double bagTotal) => _$this._bagTotal = bagTotal;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
@@ -351,6 +393,8 @@ class OrderResponseBuilder
       _paymentType = _$v.paymentType;
       _productDiscountsTotal = _$v.productDiscountsTotal;
       _fee = _$v.fee;
+      _bagAmount = _$v.bagAmount;
+      _bagTotal = _$v.bagTotal;
       _$v = null;
     }
     return this;
@@ -386,7 +430,9 @@ class OrderResponseBuilder
               orderNote: orderNote,
               paymentType: paymentType,
               productDiscountsTotal: productDiscountsTotal,
-              fee: fee);
+              fee: fee,
+              bagAmount: bagAmount,
+              bagTotal: bagTotal);
     } catch (_) {
       String _$failedField;
       try {
