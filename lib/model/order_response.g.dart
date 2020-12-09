@@ -104,6 +104,18 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.bagTotal,
             specifiedType: const FullType(double)));
     }
+    if (object.deliveryTimeStart != null) {
+      result
+        ..add('deliveryTimeStart')
+        ..add(serializers.serialize(object.deliveryTimeStart,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.deliveryTimeEnd != null) {
+      result
+        ..add('deliveryTimeEnd')
+        ..add(serializers.serialize(object.deliveryTimeEnd,
+            specifiedType: const FullType(DateTime)));
+    }
     return result;
   }
 
@@ -177,6 +189,14 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
           result.bagTotal = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'deliveryTimeStart':
+          result.deliveryTimeStart = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'deliveryTimeEnd':
+          result.deliveryTimeEnd = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
       }
     }
 
@@ -213,6 +233,10 @@ class _$OrderResponse extends OrderResponse {
   final int bagAmount;
   @override
   final double bagTotal;
+  @override
+  final DateTime deliveryTimeStart;
+  @override
+  final DateTime deliveryTimeEnd;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
@@ -231,7 +255,9 @@ class _$OrderResponse extends OrderResponse {
       this.productDiscountsTotal,
       this.fee,
       this.bagAmount,
-      this.bagTotal})
+      this.bagTotal,
+      this.deliveryTimeStart,
+      this.deliveryTimeEnd})
       : super._();
 
   @override
@@ -258,7 +284,9 @@ class _$OrderResponse extends OrderResponse {
         productDiscountsTotal == other.productDiscountsTotal &&
         fee == other.fee &&
         bagAmount == other.bagAmount &&
-        bagTotal == other.bagTotal;
+        bagTotal == other.bagTotal &&
+        deliveryTimeStart == other.deliveryTimeStart &&
+        deliveryTimeEnd == other.deliveryTimeEnd;
   }
 
   @override
@@ -275,20 +303,30 @@ class _$OrderResponse extends OrderResponse {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc($jc(0, id.hashCode),
-                                                        customer.hashCode),
-                                                    orderDate.hashCode),
-                                                deliveryAddress.hashCode),
-                                            billingAdrress.hashCode),
-                                        productTotal.hashCode),
-                                    orderTotal.hashCode),
-                                orderProducts.hashCode),
-                            orderNote.hashCode),
-                        paymentType.hashCode),
-                    productDiscountsTotal.hashCode),
-                fee.hashCode),
-            bagAmount.hashCode),
-        bagTotal.hashCode));
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    id
+                                                                        .hashCode),
+                                                                customer
+                                                                    .hashCode),
+                                                            orderDate.hashCode),
+                                                        deliveryAddress
+                                                            .hashCode),
+                                                    billingAdrress.hashCode),
+                                                productTotal.hashCode),
+                                            orderTotal.hashCode),
+                                        orderProducts.hashCode),
+                                    orderNote.hashCode),
+                                paymentType.hashCode),
+                            productDiscountsTotal.hashCode),
+                        fee.hashCode),
+                    bagAmount.hashCode),
+                bagTotal.hashCode),
+            deliveryTimeStart.hashCode),
+        deliveryTimeEnd.hashCode));
   }
 
   @override
@@ -307,7 +345,9 @@ class _$OrderResponse extends OrderResponse {
           ..add('productDiscountsTotal', productDiscountsTotal)
           ..add('fee', fee)
           ..add('bagAmount', bagAmount)
-          ..add('bagTotal', bagTotal))
+          ..add('bagTotal', bagTotal)
+          ..add('deliveryTimeStart', deliveryTimeStart)
+          ..add('deliveryTimeEnd', deliveryTimeEnd))
         .toString();
   }
 }
@@ -377,6 +417,16 @@ class OrderResponseBuilder
   double get bagTotal => _$this._bagTotal;
   set bagTotal(double bagTotal) => _$this._bagTotal = bagTotal;
 
+  DateTime _deliveryTimeStart;
+  DateTime get deliveryTimeStart => _$this._deliveryTimeStart;
+  set deliveryTimeStart(DateTime deliveryTimeStart) =>
+      _$this._deliveryTimeStart = deliveryTimeStart;
+
+  DateTime _deliveryTimeEnd;
+  DateTime get deliveryTimeEnd => _$this._deliveryTimeEnd;
+  set deliveryTimeEnd(DateTime deliveryTimeEnd) =>
+      _$this._deliveryTimeEnd = deliveryTimeEnd;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
@@ -395,6 +445,8 @@ class OrderResponseBuilder
       _fee = _$v.fee;
       _bagAmount = _$v.bagAmount;
       _bagTotal = _$v.bagTotal;
+      _deliveryTimeStart = _$v.deliveryTimeStart;
+      _deliveryTimeEnd = _$v.deliveryTimeEnd;
       _$v = null;
     }
     return this;
@@ -432,7 +484,9 @@ class OrderResponseBuilder
               productDiscountsTotal: productDiscountsTotal,
               fee: fee,
               bagAmount: bagAmount,
-              bagTotal: bagTotal);
+              bagTotal: bagTotal,
+              deliveryTimeStart: deliveryTimeStart,
+              deliveryTimeEnd: deliveryTimeEnd);
     } catch (_) {
       String _$failedField;
       try {

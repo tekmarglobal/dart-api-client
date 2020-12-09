@@ -63,6 +63,14 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
         @nullable
     @BuiltValueField(wireName: r'bagTotal')
     double get bagTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'deliveryTimeStart')
+    DateTime get deliveryTimeStart;
+    
+        @nullable
+    @BuiltValueField(wireName: r'deliveryTimeEnd')
+    DateTime get deliveryTimeEnd;
 
     // Boilerplate code needed to wire-up generated code
     OrderResponse._();
