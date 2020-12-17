@@ -14,8 +14,10 @@ Method | HTTP request | Description
 [**apiProductGetFavoriteListPost**](ProductApi.md#apiProductGetFavoriteListPost) | **post** /api/Product/GetFavoriteList | 
 [**apiProductInsertimagesPost**](ProductApi.md#apiProductInsertimagesPost) | **post** /api/Product/insertimages | 
 [**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
+[**apiProductProductListPost**](ProductApi.md#apiProductProductListPost) | **post** /api/Product/ProductList | 
 [**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
 [**apiProductUpdateProductFromErpPost**](ProductApi.md#apiProductUpdateProductFromErpPost) | **post** /api/Product/UpdateProductFromErp | 
+[**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiProductUpdateProductFromOlimposPost) | **post** /api/Product/UpdateProductFromOlimpos | 
 
 
 # **apiProductAddToFavoriteListPost**
@@ -242,6 +244,47 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **apiProductProductListPost**
+> RProductListRestResult apiProductProductListPost()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+
+try { 
+    var result = api_instance.apiProductProductListPost();
+    print(result);
+} catch (e) {
+    print("Exception when calling ProductApi->apiProductProductListPost: $e\n");
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RProductListRestResult**](RProductListRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **apiProductProductSearchPost**
 > RProductListRestResult apiProductProductSearchPost(searchProductRequest)
 
@@ -325,6 +368,46 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiProductUpdateProductFromOlimposPost**
+> apiProductUpdateProductFromOlimposPost()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+
+try { 
+    api_instance.apiProductUpdateProductFromOlimposPost();
+} catch (e) {
+    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

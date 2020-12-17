@@ -82,10 +82,12 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**apiCustomerPost**](doc//CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 *CustomerApi* | [**apiCustomerUpdateAddressPost**](doc//CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
 *CustomerApi* | [**apiCustomerUpdateCustomerPost**](doc//CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
+*DefinitionApi* | [**apiDefinitionAgreementPhoneNumberGet**](doc//DefinitionApi.md#apidefinitionagreementphonenumberget) | **get** /api/Definition/Agreement/{PhoneNumber} | 
 *DefinitionApi* | [**apiDefinitionCitiesPost**](doc//DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
 *DefinitionApi* | [**apiDefinitionCountiesPost**](doc//DefinitionApi.md#apidefinitioncountiespost) | **post** /api/Definition/Counties | 
 *DefinitionApi* | [**apiDefinitionFaqGet**](doc//DefinitionApi.md#apidefinitionfaqget) | **get** /api/Definition/Faq | 
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc//DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
+*DefinitionApi* | [**apiDefinitionUpdateAgreementLogPost**](doc//DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc//MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc//MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
 *OrderApi* | [**apiOrderCreateOrderPost**](doc//OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
@@ -93,6 +95,7 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
 *OrderApi* | [**apiOrderSendOrderMailPost**](doc//OrderApi.md#apiordersendordermailpost) | **post** /api/Order/SendOrderMail | 
 *OrderApi* | [**apiOrderSendOrderMailtoCustomerPost**](doc//OrderApi.md#apiordersendordermailtocustomerpost) | **post** /api/Order/SendOrderMailtoCustomer | 
+*OrderApi* | [**apiOrderSendToOlimposPost**](doc//OrderApi.md#apiordersendtoolimpospost) | **post** /api/Order/SendToOlimpos | 
 *OrderApi* | [**apiOrderSendmailPost**](doc//OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
 *OrderApi* | [**apiOrderUpdateStatusPost**](doc//OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
 *PaymentApi* | [**apiPaymentCardSuccessPost**](doc//PaymentApi.md#apipaymentcardsuccesspost) | **post** /api/Payment/CardSuccess | 
@@ -103,14 +106,18 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
 *ProductApi* | [**apiProductInsertimagesPost**](doc//ProductApi.md#apiproductinsertimagespost) | **post** /api/Product/insertimages | 
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
+*ProductApi* | [**apiProductProductListPost**](doc//ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
 *ProductApi* | [**apiProductUpdateProductFromErpPost**](doc//ProductApi.md#apiproductupdateproductfromerppost) | **post** /api/Product/UpdateProductFromErp | 
+*ProductApi* | [**apiProductUpdateProductFromOlimposPost**](doc//ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc//RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc//RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
 
 
 ## Documentation For Models
 
+ - [AgreementResponse](doc//AgreementResponse.md)
+ - [AgreementResponseListRestResult](doc//AgreementResponseListRestResult.md)
  - [BannerRequest](doc//BannerRequest.md)
  - [BannerResponse](doc//BannerResponse.md)
  - [BannerResponseRestResult](doc//BannerResponseRestResult.md)
@@ -187,6 +194,7 @@ Class | Method | HTTP request | Description
  - [TimeSlotResponseListRestResult](doc//TimeSlotResponseListRestResult.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
+ - [UpdateAgreementRequest](doc//UpdateAgreementRequest.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)

@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**apiOrderGetOrderPost**](OrderApi.md#apiOrderGetOrderPost) | **post** /api/Order/GetOrder | 
 [**apiOrderSendOrderMailPost**](OrderApi.md#apiOrderSendOrderMailPost) | **post** /api/Order/SendOrderMail | 
 [**apiOrderSendOrderMailtoCustomerPost**](OrderApi.md#apiOrderSendOrderMailtoCustomerPost) | **post** /api/Order/SendOrderMailtoCustomer | 
+[**apiOrderSendToOlimposPost**](OrderApi.md#apiOrderSendToOlimposPost) | **post** /api/Order/SendToOlimpos | 
 [**apiOrderSendmailPost**](OrderApi.md#apiOrderSendmailPost) | **post** /api/Order/sendmail | 
 [**apiOrderUpdateStatusPost**](OrderApi.md#apiOrderUpdateStatusPost) | **post** /api/Order/UpdateStatus | 
 
@@ -236,6 +237,46 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiOrderSendToOlimposPost**
+> apiOrderSendToOlimposPost()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new OrderApi();
+
+try { 
+    api_instance.apiOrderSendToOlimposPost();
+} catch (e) {
+    print("Exception when calling OrderApi->apiOrderSendToOlimposPost: $e\n");
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **allowSms** | **bool** |  | [optional] [default to null]
 **allowEmail** | **bool** |  | [optional] [default to null]
 **gender** | **int** |  | [optional] [default to null]
+**allowCampaign** | **bool** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

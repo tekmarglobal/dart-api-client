@@ -6,6 +6,8 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/standard_json_plugin.dart';
 
+import 'package:openapi/model/agreement_response.dart';
+import 'package:openapi/model/agreement_response_list_rest_result.dart';
 import 'package:openapi/model/banner_request.dart';
 import 'package:openapi/model/banner_response.dart';
 import 'package:openapi/model/banner_response_rest_result.dart';
@@ -82,6 +84,7 @@ import 'package:openapi/model/time_slot_response.dart';
 import 'package:openapi/model/time_slot_response_list_rest_result.dart';
 import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
+import 'package:openapi/model/update_agreement_request.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/update_order_request.dart';
 import 'package:openapi/model/verify_request.dart';
@@ -90,6 +93,8 @@ import 'package:openapi/model/verify_request.dart';
 part 'serializers.g.dart';
 
 @SerializersFor(const [
+AgreementResponse,
+AgreementResponseListRestResult,
 BannerRequest,
 BannerResponse,
 BannerResponseRestResult,
@@ -166,6 +171,7 @@ TimeSlotResponse,
 TimeSlotResponseListRestResult,
 TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
+UpdateAgreementRequest,
 UpdateCartRequest,
 UpdateOrderRequest,
 VerifyRequest,
@@ -174,6 +180,12 @@ VerifyRequest,
 
 //allow all models to be serialized within a list
 Serializers serializers = (_$serializers.toBuilder()
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(AgreementResponse)]),
+() => new ListBuilder<AgreementResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(AgreementResponseListRestResult)]),
+() => new ListBuilder<AgreementResponseListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(BannerRequest)]),
 () => new ListBuilder<BannerRequest>())
@@ -402,6 +414,9 @@ const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(TimeSlotsResponseListRestResult)]),
 () => new ListBuilder<TimeSlotsResponseListRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateAgreementRequest)]),
+() => new ListBuilder<UpdateAgreementRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateCartRequest)]),
 () => new ListBuilder<UpdateCartRequest>())

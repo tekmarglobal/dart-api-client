@@ -7,6 +7,8 @@ part of serializers;
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(AgreementResponse.serializer)
+      ..add(AgreementResponseListRestResult.serializer)
       ..add(BannerRequest.serializer)
       ..add(BannerResponse.serializer)
       ..add(BannerResponseRestResult.serializer)
@@ -83,9 +85,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TimeSlotResponseListRestResult.serializer)
       ..add(TimeSlotsResponse.serializer)
       ..add(TimeSlotsResponseListRestResult.serializer)
+      ..add(UpdateAgreementRequest.serializer)
       ..add(UpdateCartRequest.serializer)
       ..add(UpdateOrderRequest.serializer)
       ..add(VerifyRequest.serializer)
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AgreementResponse)]),
+          () => new ListBuilder<AgreementResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CitiesResponse)]),
           () => new ListBuilder<CitiesResponse>())

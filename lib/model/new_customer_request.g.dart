@@ -68,6 +68,12 @@ class _$NewCustomerRequestSerializer
         ..add(serializers.serialize(object.gender,
             specifiedType: const FullType(int)));
     }
+    if (object.allowCampaign != null) {
+      result
+        ..add('allowCampaign')
+        ..add(serializers.serialize(object.allowCampaign,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -115,6 +121,10 @@ class _$NewCustomerRequestSerializer
           result.gender = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'allowCampaign':
+          result.allowCampaign = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -139,6 +149,8 @@ class _$NewCustomerRequest extends NewCustomerRequest {
   final bool allowEmail;
   @override
   final int gender;
+  @override
+  final bool allowCampaign;
 
   factory _$NewCustomerRequest(
           [void Function(NewCustomerRequestBuilder) updates]) =>
@@ -152,7 +164,8 @@ class _$NewCustomerRequest extends NewCustomerRequest {
       this.email,
       this.allowSms,
       this.allowEmail,
-      this.gender})
+      this.gender,
+      this.allowCampaign})
       : super._();
 
   @override
@@ -175,7 +188,8 @@ class _$NewCustomerRequest extends NewCustomerRequest {
         email == other.email &&
         allowSms == other.allowSms &&
         allowEmail == other.allowEmail &&
-        gender == other.gender;
+        gender == other.gender &&
+        allowCampaign == other.allowCampaign;
   }
 
   @override
@@ -185,13 +199,15 @@ class _$NewCustomerRequest extends NewCustomerRequest {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, name.hashCode), surname.hashCode),
-                            birthDate.hashCode),
-                        phone.hashCode),
-                    email.hashCode),
-                allowSms.hashCode),
-            allowEmail.hashCode),
-        gender.hashCode));
+                        $jc(
+                            $jc($jc($jc(0, name.hashCode), surname.hashCode),
+                                birthDate.hashCode),
+                            phone.hashCode),
+                        email.hashCode),
+                    allowSms.hashCode),
+                allowEmail.hashCode),
+            gender.hashCode),
+        allowCampaign.hashCode));
   }
 
   @override
@@ -204,7 +220,8 @@ class _$NewCustomerRequest extends NewCustomerRequest {
           ..add('email', email)
           ..add('allowSms', allowSms)
           ..add('allowEmail', allowEmail)
-          ..add('gender', gender))
+          ..add('gender', gender)
+          ..add('allowCampaign', allowCampaign))
         .toString();
   }
 }
@@ -245,6 +262,11 @@ class NewCustomerRequestBuilder
   int get gender => _$this._gender;
   set gender(int gender) => _$this._gender = gender;
 
+  bool _allowCampaign;
+  bool get allowCampaign => _$this._allowCampaign;
+  set allowCampaign(bool allowCampaign) =>
+      _$this._allowCampaign = allowCampaign;
+
   NewCustomerRequestBuilder();
 
   NewCustomerRequestBuilder get _$this {
@@ -257,6 +279,7 @@ class NewCustomerRequestBuilder
       _allowSms = _$v.allowSms;
       _allowEmail = _$v.allowEmail;
       _gender = _$v.gender;
+      _allowCampaign = _$v.allowCampaign;
       _$v = null;
     }
     return this;
@@ -286,7 +309,8 @@ class NewCustomerRequestBuilder
             email: email,
             allowSms: allowSms,
             allowEmail: allowEmail,
-            gender: gender);
+            gender: gender,
+            allowCampaign: allowCampaign);
     replace(_$result);
     return _$result;
   }

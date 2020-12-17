@@ -255,6 +255,53 @@ class ProductApi {
         /// 
         ///
         /// 
+        Future<Response<RProductListRestResult>>apiProductProductListPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Product/ProductList";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RProductListRestResult);
+        var data = _serializers.deserializeWith<RProductListRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<RProductListRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
         Future<Response<RProductListRestResult>>apiProductProductSearchPost({ SearchProductRequest searchProductRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Product/ProductSearch";
@@ -348,5 +395,38 @@ class ProductApi {
                 extra: response.extra,
             );
             });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response>apiProductUpdateProductFromOlimposPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Product/UpdateProductFromOlimpos";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            );
             }
         }

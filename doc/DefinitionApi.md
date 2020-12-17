@@ -9,11 +9,58 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiDefinitionAgreementPhoneNumberGet**](DefinitionApi.md#apiDefinitionAgreementPhoneNumberGet) | **get** /api/Definition/Agreement/{PhoneNumber} | 
 [**apiDefinitionCitiesPost**](DefinitionApi.md#apiDefinitionCitiesPost) | **post** /api/Definition/Cities | 
 [**apiDefinitionCountiesPost**](DefinitionApi.md#apiDefinitionCountiesPost) | **post** /api/Definition/Counties | 
 [**apiDefinitionFaqGet**](DefinitionApi.md#apiDefinitionFaqGet) | **get** /api/Definition/Faq | 
 [**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apiDefinitionNeighborhoodPost) | **post** /api/Definition/Neighborhood | 
+[**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apiDefinitionUpdateAgreementLogPost) | **post** /api/Definition/UpdateAgreementLog | 
 
+
+# **apiDefinitionAgreementPhoneNumberGet**
+> AgreementResponseListRestResult apiDefinitionAgreementPhoneNumberGet(phoneNumber)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new DefinitionApi();
+var phoneNumber = phoneNumber_example; // String | 
+
+try { 
+    var result = api_instance.apiDefinitionAgreementPhoneNumberGet(phoneNumber);
+    print(result);
+} catch (e) {
+    print("Exception when calling DefinitionApi->apiDefinitionAgreementPhoneNumberGet: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **phoneNumber** | **String**|  | [default to null]
+
+### Return type
+
+[**AgreementResponseListRestResult**](AgreementResponseListRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionCitiesPost**
 > CitiesResponseListRestResult apiDefinitionCitiesPost()
@@ -184,6 +231,50 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiDefinitionUpdateAgreementLogPost**
+> apiDefinitionUpdateAgreementLogPost(updateAgreementRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new DefinitionApi();
+var updateAgreementRequest = new UpdateAgreementRequest(); // UpdateAgreementRequest | 
+
+try { 
+    api_instance.apiDefinitionUpdateAgreementLogPost(updateAgreementRequest);
+} catch (e) {
+    print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateAgreementRequest** | [**UpdateAgreementRequest**](UpdateAgreementRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

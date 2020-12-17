@@ -37,6 +37,10 @@ abstract class NewCustomerRequest implements Built<NewCustomerRequest, NewCustom
         @nullable
     @BuiltValueField(wireName: r'gender')
     int get gender;
+    
+        @nullable
+    @BuiltValueField(wireName: r'allowCampaign')
+    bool get allowCampaign;
 
     // Boilerplate code needed to wire-up generated code
     NewCustomerRequest._();
