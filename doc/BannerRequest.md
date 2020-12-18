@@ -9,7 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] [default to null]
-**aktive** | **bool** |  | [optional] [default to null]
+**active** | **bool** |  | [optional] [default to null]
 **image** | **String** |  | [optional] [default to null]
 **index** | **int** |  | [optional] [default to null]
 **id** | **int** |  | [optional] [default to null]

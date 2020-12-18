@@ -20,10 +20,10 @@ class _$CreateCartRequestSerializer
   Iterable<Object> serialize(Serializers serializers, CreateCartRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.neighborhoodid != null) {
+    if (object.neighborhoodId != null) {
       result
-        ..add('neighborhoodid')
-        ..add(serializers.serialize(object.neighborhoodid,
+        ..add('neighborhoodId')
+        ..add(serializers.serialize(object.neighborhoodId,
             specifiedType: const FullType(int)));
     }
     return result;
@@ -41,8 +41,8 @@ class _$CreateCartRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'neighborhoodid':
-          result.neighborhoodid = serializers.deserialize(value,
+        case 'neighborhoodId':
+          result.neighborhoodId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
       }
@@ -54,13 +54,13 @@ class _$CreateCartRequestSerializer
 
 class _$CreateCartRequest extends CreateCartRequest {
   @override
-  final int neighborhoodid;
+  final int neighborhoodId;
 
   factory _$CreateCartRequest(
           [void Function(CreateCartRequestBuilder) updates]) =>
       (new CreateCartRequestBuilder()..update(updates)).build();
 
-  _$CreateCartRequest._({this.neighborhoodid}) : super._();
+  _$CreateCartRequest._({this.neighborhoodId}) : super._();
 
   @override
   CreateCartRequest rebuild(void Function(CreateCartRequestBuilder) updates) =>
@@ -73,18 +73,18 @@ class _$CreateCartRequest extends CreateCartRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateCartRequest && neighborhoodid == other.neighborhoodid;
+    return other is CreateCartRequest && neighborhoodId == other.neighborhoodId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, neighborhoodid.hashCode));
+    return $jf($jc(0, neighborhoodId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateCartRequest')
-          ..add('neighborhoodid', neighborhoodid))
+          ..add('neighborhoodId', neighborhoodId))
         .toString();
   }
 }
@@ -93,16 +93,16 @@ class CreateCartRequestBuilder
     implements Builder<CreateCartRequest, CreateCartRequestBuilder> {
   _$CreateCartRequest _$v;
 
-  int _neighborhoodid;
-  int get neighborhoodid => _$this._neighborhoodid;
-  set neighborhoodid(int neighborhoodid) =>
-      _$this._neighborhoodid = neighborhoodid;
+  int _neighborhoodId;
+  int get neighborhoodId => _$this._neighborhoodId;
+  set neighborhoodId(int neighborhoodId) =>
+      _$this._neighborhoodId = neighborhoodId;
 
   CreateCartRequestBuilder();
 
   CreateCartRequestBuilder get _$this {
     if (_$v != null) {
-      _neighborhoodid = _$v.neighborhoodid;
+      _neighborhoodId = _$v.neighborhoodId;
       _$v = null;
     }
     return this;
@@ -124,7 +124,7 @@ class CreateCartRequestBuilder
   @override
   _$CreateCartRequest build() {
     final _$result =
-        _$v ?? new _$CreateCartRequest._(neighborhoodid: neighborhoodid);
+        _$v ?? new _$CreateCartRequest._(neighborhoodId: neighborhoodId);
     replace(_$result);
     return _$result;
   }

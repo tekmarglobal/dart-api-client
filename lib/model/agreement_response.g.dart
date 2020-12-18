@@ -44,10 +44,10 @@ class _$AgreementResponseSerializer
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
-    if (object.requered != null) {
+    if (object.required_ != null) {
       result
-        ..add('requered')
-        ..add(serializers.serialize(object.requered,
+        ..add('required')
+        ..add(serializers.serialize(object.required_,
             specifiedType: const FullType(bool)));
     }
     return result;
@@ -81,8 +81,8 @@ class _$AgreementResponseSerializer
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'requered':
-          result.requered = serializers.deserialize(value,
+        case 'required':
+          result.required_ = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
       }
@@ -102,14 +102,14 @@ class _$AgreementResponse extends AgreementResponse {
   @override
   final String name;
   @override
-  final bool requered;
+  final bool required_;
 
   factory _$AgreementResponse(
           [void Function(AgreementResponseBuilder) updates]) =>
       (new AgreementResponseBuilder()..update(updates)).build();
 
   _$AgreementResponse._(
-      {this.id, this.code, this.content, this.name, this.requered})
+      {this.id, this.code, this.content, this.name, this.required_})
       : super._();
 
   @override
@@ -128,7 +128,7 @@ class _$AgreementResponse extends AgreementResponse {
         code == other.code &&
         content == other.content &&
         name == other.name &&
-        requered == other.requered;
+        required_ == other.required_;
   }
 
   @override
@@ -136,7 +136,7 @@ class _$AgreementResponse extends AgreementResponse {
     return $jf($jc(
         $jc($jc($jc($jc(0, id.hashCode), code.hashCode), content.hashCode),
             name.hashCode),
-        requered.hashCode));
+        required_.hashCode));
   }
 
   @override
@@ -146,7 +146,7 @@ class _$AgreementResponse extends AgreementResponse {
           ..add('code', code)
           ..add('content', content)
           ..add('name', name)
-          ..add('requered', requered))
+          ..add('required_', required_))
         .toString();
   }
 }
@@ -171,9 +171,9 @@ class AgreementResponseBuilder
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
-  bool _requered;
-  bool get requered => _$this._requered;
-  set requered(bool requered) => _$this._requered = requered;
+  bool _required_;
+  bool get required_ => _$this._required_;
+  set required_(bool required_) => _$this._required_ = required_;
 
   AgreementResponseBuilder();
 
@@ -183,7 +183,7 @@ class AgreementResponseBuilder
       _code = _$v.code;
       _content = _$v.content;
       _name = _$v.name;
-      _requered = _$v.requered;
+      _required_ = _$v.required_;
       _$v = null;
     }
     return this;
@@ -210,7 +210,7 @@ class AgreementResponseBuilder
             code: code,
             content: content,
             name: name,
-            requered: requered);
+            required_: required_);
     replace(_$result);
     return _$result;
   }

@@ -25,10 +25,10 @@ class _$BannerRequestSerializer implements StructuredSerializer<BannerRequest> {
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
-    if (object.aktive != null) {
+    if (object.active != null) {
       result
-        ..add('aktive')
-        ..add(serializers.serialize(object.aktive,
+        ..add('active')
+        ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
     if (object.image != null) {
@@ -68,8 +68,8 @@ class _$BannerRequestSerializer implements StructuredSerializer<BannerRequest> {
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'aktive':
-          result.aktive = serializers.deserialize(value,
+        case 'active':
+          result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
         case 'image':
@@ -95,7 +95,7 @@ class _$BannerRequest extends BannerRequest {
   @override
   final String name;
   @override
-  final bool aktive;
+  final bool active;
   @override
   final String image;
   @override
@@ -106,7 +106,7 @@ class _$BannerRequest extends BannerRequest {
   factory _$BannerRequest([void Function(BannerRequestBuilder) updates]) =>
       (new BannerRequestBuilder()..update(updates)).build();
 
-  _$BannerRequest._({this.name, this.aktive, this.image, this.index, this.id})
+  _$BannerRequest._({this.name, this.active, this.image, this.index, this.id})
       : super._();
 
   @override
@@ -121,7 +121,7 @@ class _$BannerRequest extends BannerRequest {
     if (identical(other, this)) return true;
     return other is BannerRequest &&
         name == other.name &&
-        aktive == other.aktive &&
+        active == other.active &&
         image == other.image &&
         index == other.index &&
         id == other.id;
@@ -130,7 +130,7 @@ class _$BannerRequest extends BannerRequest {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, name.hashCode), aktive.hashCode), image.hashCode),
+        $jc($jc($jc($jc(0, name.hashCode), active.hashCode), image.hashCode),
             index.hashCode),
         id.hashCode));
   }
@@ -139,7 +139,7 @@ class _$BannerRequest extends BannerRequest {
   String toString() {
     return (newBuiltValueToStringHelper('BannerRequest')
           ..add('name', name)
-          ..add('aktive', aktive)
+          ..add('active', active)
           ..add('image', image)
           ..add('index', index)
           ..add('id', id))
@@ -155,9 +155,9 @@ class BannerRequestBuilder
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
-  bool _aktive;
-  bool get aktive => _$this._aktive;
-  set aktive(bool aktive) => _$this._aktive = aktive;
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
 
   String _image;
   String get image => _$this._image;
@@ -176,7 +176,7 @@ class BannerRequestBuilder
   BannerRequestBuilder get _$this {
     if (_$v != null) {
       _name = _$v.name;
-      _aktive = _$v.aktive;
+      _active = _$v.active;
       _image = _$v.image;
       _index = _$v.index;
       _id = _$v.id;
@@ -202,7 +202,7 @@ class BannerRequestBuilder
   _$BannerRequest build() {
     final _$result = _$v ??
         new _$BannerRequest._(
-            name: name, aktive: aktive, image: image, index: index, id: id);
+            name: name, active: active, image: image, index: index, id: id);
     replace(_$result);
     return _$result;
   }

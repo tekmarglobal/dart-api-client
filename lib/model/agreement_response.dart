@@ -23,8 +23,8 @@ abstract class AgreementResponse implements Built<AgreementResponse, AgreementRe
     String get name;
     
         @nullable
-    @BuiltValueField(wireName: r'requered')
-    bool get requered;
+    @BuiltValueField(wireName: r'required')
+    bool get required_;
 
     // Boilerplate code needed to wire-up generated code
     AgreementResponse._();
