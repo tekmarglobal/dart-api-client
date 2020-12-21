@@ -23,9 +23,9 @@ class DefinitionApi {
         /// 
         ///
         /// 
-        Future<Response<AgreementResponseListRestResult>>apiDefinitionAgreementPhoneNumberGet(String phoneNumber,{ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<AgreementResponseListRestResult>>apiDefinitionAgreementGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        String _path = "/api/Definition/Agreement/{PhoneNumber}".replaceAll("{" r'PhoneNumber' "}", phoneNumber.toString());
+        String _path = "/api/Definition/Agreement";
 
         Map<String, dynamic> queryParams = {};
         Map<String, String> headerParams = Map.from(headers ?? {});

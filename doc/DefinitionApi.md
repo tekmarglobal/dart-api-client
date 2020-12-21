@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiDefinitionAgreementPhoneNumberGet**](DefinitionApi.md#apiDefinitionAgreementPhoneNumberGet) | **get** /api/Definition/Agreement/{PhoneNumber} | 
+[**apiDefinitionAgreementGet**](DefinitionApi.md#apiDefinitionAgreementGet) | **get** /api/Definition/Agreement | 
 [**apiDefinitionCitiesPost**](DefinitionApi.md#apiDefinitionCitiesPost) | **post** /api/Definition/Cities | 
 [**apiDefinitionCountiesPost**](DefinitionApi.md#apiDefinitionCountiesPost) | **post** /api/Definition/Counties | 
 [**apiDefinitionFaqGet**](DefinitionApi.md#apiDefinitionFaqGet) | **get** /api/Definition/Faq | 
@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apiDefinitionUpdateAgreementLogPost) | **post** /api/Definition/UpdateAgreementLog | 
 
 
-# **apiDefinitionAgreementPhoneNumberGet**
-> AgreementResponseListRestResult apiDefinitionAgreementPhoneNumberGet(phoneNumber)
+# **apiDefinitionAgreementGet**
+> AgreementResponseListRestResult apiDefinitionAgreementGet()
 
 
 
@@ -31,21 +31,17 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var phoneNumber = phoneNumber_example; // String | 
 
 try { 
-    var result = api_instance.apiDefinitionAgreementPhoneNumberGet(phoneNumber);
+    var result = api_instance.apiDefinitionAgreementGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionAgreementPhoneNumberGet: $e\n");
+    print("Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n");
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **phoneNumber** | **String**|  | [default to null]
+This endpoint does not need any parameter.
 
 ### Return type
 

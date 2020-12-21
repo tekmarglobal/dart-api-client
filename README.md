@@ -82,7 +82,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**apiCustomerPost**](doc//CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 *CustomerApi* | [**apiCustomerUpdateAddressPost**](doc//CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
 *CustomerApi* | [**apiCustomerUpdateCustomerPost**](doc//CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
-*DefinitionApi* | [**apiDefinitionAgreementPhoneNumberGet**](doc//DefinitionApi.md#apidefinitionagreementphonenumberget) | **get** /api/Definition/Agreement/{PhoneNumber} | 
+*DefinitionApi* | [**apiDefinitionAgreementGet**](doc//DefinitionApi.md#apidefinitionagreementget) | **get** /api/Definition/Agreement | 
 *DefinitionApi* | [**apiDefinitionCitiesPost**](doc//DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
 *DefinitionApi* | [**apiDefinitionCountiesPost**](doc//DefinitionApi.md#apidefinitioncountiespost) | **post** /api/Definition/Counties | 
 *DefinitionApi* | [**apiDefinitionFaqGet**](doc//DefinitionApi.md#apidefinitionfaqget) | **get** /api/Definition/Faq | 
