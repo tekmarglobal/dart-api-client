@@ -7,10 +7,6 @@ abstract class UpdateAgreementRequest implements Built<UpdateAgreementRequest, U
 
     
         @nullable
-    @BuiltValueField(wireName: r'phoneNumber')
-    String get phoneNumber;
-    
-        @nullable
     @BuiltValueField(wireName: r'code')
     String get code;
     

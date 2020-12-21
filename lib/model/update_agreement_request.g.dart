@@ -24,12 +24,6 @@ class _$UpdateAgreementRequestSerializer
       Serializers serializers, UpdateAgreementRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.phoneNumber != null) {
-      result
-        ..add('phoneNumber')
-        ..add(serializers.serialize(object.phoneNumber,
-            specifiedType: const FullType(String)));
-    }
     if (object.code != null) {
       result
         ..add('code')
@@ -57,10 +51,6 @@ class _$UpdateAgreementRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'phoneNumber':
-          result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'code':
           result.code = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -78,8 +68,6 @@ class _$UpdateAgreementRequestSerializer
 
 class _$UpdateAgreementRequest extends UpdateAgreementRequest {
   @override
-  final String phoneNumber;
-  @override
   final String code;
   @override
   final bool accept;
@@ -88,8 +76,7 @@ class _$UpdateAgreementRequest extends UpdateAgreementRequest {
           [void Function(UpdateAgreementRequestBuilder) updates]) =>
       (new UpdateAgreementRequestBuilder()..update(updates)).build();
 
-  _$UpdateAgreementRequest._({this.phoneNumber, this.code, this.accept})
-      : super._();
+  _$UpdateAgreementRequest._({this.code, this.accept}) : super._();
 
   @override
   UpdateAgreementRequest rebuild(
@@ -104,21 +91,18 @@ class _$UpdateAgreementRequest extends UpdateAgreementRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is UpdateAgreementRequest &&
-        phoneNumber == other.phoneNumber &&
         code == other.code &&
         accept == other.accept;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, phoneNumber.hashCode), code.hashCode), accept.hashCode));
+    return $jf($jc($jc(0, code.hashCode), accept.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('UpdateAgreementRequest')
-          ..add('phoneNumber', phoneNumber)
           ..add('code', code)
           ..add('accept', accept))
         .toString();
@@ -128,10 +112,6 @@ class _$UpdateAgreementRequest extends UpdateAgreementRequest {
 class UpdateAgreementRequestBuilder
     implements Builder<UpdateAgreementRequest, UpdateAgreementRequestBuilder> {
   _$UpdateAgreementRequest _$v;
-
-  String _phoneNumber;
-  String get phoneNumber => _$this._phoneNumber;
-  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
   String _code;
   String get code => _$this._code;
@@ -145,7 +125,6 @@ class UpdateAgreementRequestBuilder
 
   UpdateAgreementRequestBuilder get _$this {
     if (_$v != null) {
-      _phoneNumber = _$v.phoneNumber;
       _code = _$v.code;
       _accept = _$v.accept;
       _$v = null;
@@ -168,9 +147,8 @@ class UpdateAgreementRequestBuilder
 
   @override
   _$UpdateAgreementRequest build() {
-    final _$result = _$v ??
-        new _$UpdateAgreementRequest._(
-            phoneNumber: phoneNumber, code: code, accept: accept);
+    final _$result =
+        _$v ?? new _$UpdateAgreementRequest._(code: code, accept: accept);
     replace(_$result);
     return _$result;
   }

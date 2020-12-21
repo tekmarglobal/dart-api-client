@@ -8,7 +8,6 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phoneNumber** | **String** |  | [optional] [default to null]
 **code** | **String** |  | [optional] [default to null]
 **accept** | **bool** |  | [optional] [default to null]
 
