@@ -11,7 +11,6 @@ import 'package:openapi/model/r_product_rest_result.dart';
 import 'package:openapi/model/search_product_request.dart';
 import 'package:openapi/model/r_product_list_rest_result.dart';
 import 'package:openapi/model/product_request.dart';
-import 'package:openapi/model/erp_product_response_rest_result.dart';
 
 class ProductApi {
     final Dio _dio;
@@ -339,53 +338,6 @@ class ProductApi {
         var data = _serializers.deserializeWith<RProductListRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RProductListRestResult>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
-            );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<ErpProductResponseRestResult>>apiProductUpdateProductFromErpPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Product/UpdateProductFromErp";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
-            cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(ErpProductResponseRestResult);
-        var data = _serializers.deserializeWith<ErpProductResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<ErpProductResponseRestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,

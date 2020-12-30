@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **cityName** | **String** |  | [optional] [default to null]
 **countyName** | **String** |  | [optional] [default to null]
 **region** | **int** |  | [optional] [default to null]
+**regionName** | **String** |  | [optional] [default to null]
+**gpsId** | **int** |  | [optional] [default to null]
+**branch** | [**BuiltList&lt;BranchResponse&gt;**](BranchResponse.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

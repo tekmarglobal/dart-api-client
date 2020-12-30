@@ -62,6 +62,9 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**apiAccountWhoAmIGet**](doc//AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsGet**](doc//AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
+*AdminApi* | [**apiAdminRegionNeighborhoodPost**](doc//AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
+*AdminApi* | [**apiAdminRegionPost**](doc//AdminApi.md#apiadminregionpost) | **post** /api/Admin/Region | 
+*AdminApi* | [**apiAdminUpdateRegionNeighborhoodPost**](doc//AdminApi.md#apiadminupdateregionneighborhoodpost) | **post** /api/Admin/UpdateRegionNeighborhood | 
 *ApiApi* | [**apiCartProductPut**](doc//ApiApi.md#apicartproductput) | **put** /api/cart/product | 
 *ApiApi* | [**apiProductAllGet**](doc//ApiApi.md#apiproductallget) | **get** /api/product/all | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
@@ -108,7 +111,6 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductListPost**](doc//ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
-*ProductApi* | [**apiProductUpdateProductFromErpPost**](doc//ProductApi.md#apiproductupdateproductfromerppost) | **post** /api/Product/UpdateProductFromErp | 
 *ProductApi* | [**apiProductUpdateProductFromOlimposPost**](doc//ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc//RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc//RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
@@ -121,6 +123,7 @@ Class | Method | HTTP request | Description
  - [BannerRequest](doc//BannerRequest.md)
  - [BannerResponse](doc//BannerResponse.md)
  - [BannerResponseRestResult](doc//BannerResponseRestResult.md)
+ - [BranchResponse](doc//BranchResponse.md)
  - [CartResponse](doc//CartResponse.md)
  - [CartResponseRestResult](doc//CartResponseRestResult.md)
  - [CitiesResponse](doc//CitiesResponse.md)
@@ -138,8 +141,6 @@ Class | Method | HTTP request | Description
  - [CustomerResponseRestResult](doc//CustomerResponseRestResult.md)
  - [DeleteAddressRequest](doc//DeleteAddressRequest.md)
  - [DeleteAddressResponseRestResult](doc//DeleteAddressResponseRestResult.md)
- - [ErpProductResponse](doc//ErpProductResponse.md)
- - [ErpProductResponseRestResult](doc//ErpProductResponseRestResult.md)
  - [FaqResponse](doc//FaqResponse.md)
  - [FaqResponseListRestResult](doc//FaqResponseListRestResult.md)
  - [FavoriteListResponse](doc//FavoriteListResponse.md)
@@ -156,6 +157,7 @@ Class | Method | HTTP request | Description
  - [NeighborRequest](doc//NeighborRequest.md)
  - [NeighborResponse](doc//NeighborResponse.md)
  - [NeighborResponseListRestResult](doc//NeighborResponseListRestResult.md)
+ - [NeighborResponseRestResult](doc//NeighborResponseRestResult.md)
  - [NewCustomerRequest](doc//NewCustomerRequest.md)
  - [ObjectRestResult](doc//ObjectRestResult.md)
  - [OrderRequest](doc//OrderRequest.md)
@@ -183,6 +185,9 @@ Class | Method | HTTP request | Description
  - [RProductListRestResult](doc//RProductListRestResult.md)
  - [RProductPrice](doc//RProductPrice.md)
  - [RProductRestResult](doc//RProductRestResult.md)
+ - [RegionNeighborhoodRequest](doc//RegionNeighborhoodRequest.md)
+ - [RegionResponse](doc//RegionResponse.md)
+ - [RegionResponseListRestResult](doc//RegionResponseListRestResult.md)
  - [SearchProductRequest](doc//SearchProductRequest.md)
  - [SendOrderMailRequest](doc//SendOrderMailRequest.md)
  - [SendOrderMailResponse](doc//SendOrderMailResponse.md)
@@ -197,6 +202,7 @@ Class | Method | HTTP request | Description
  - [UpdateAgreementRequest](doc//UpdateAgreementRequest.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
+ - [UpdateRegionNeighborhoodRequest](doc//UpdateRegionNeighborhoodRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)
 
 

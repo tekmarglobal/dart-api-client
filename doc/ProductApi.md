@@ -16,7 +16,6 @@ Method | HTTP request | Description
 [**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
 [**apiProductProductListPost**](ProductApi.md#apiProductProductListPost) | **post** /api/Product/ProductList | 
 [**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
-[**apiProductUpdateProductFromErpPost**](ProductApi.md#apiProductUpdateProductFromErpPost) | **post** /api/Product/UpdateProductFromErp | 
 [**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiProductUpdateProductFromOlimposPost) | **post** /api/Product/UpdateProductFromOlimpos | 
 
 
@@ -326,47 +325,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **apiProductUpdateProductFromErpPost**
-> ErpProductResponseRestResult apiProductUpdateProductFromErpPost()
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new ProductApi();
-
-try { 
-    var result = api_instance.apiProductUpdateProductFromErpPost();
-    print(result);
-} catch (e) {
-    print("Exception when calling ProductApi->apiProductUpdateProductFromErpPost: $e\n");
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ErpProductResponseRestResult**](ErpProductResponseRestResult.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -12,6 +12,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BannerRequest.serializer)
       ..add(BannerResponse.serializer)
       ..add(BannerResponseRestResult.serializer)
+      ..add(BranchResponse.serializer)
       ..add(CartResponse.serializer)
       ..add(CartResponseRestResult.serializer)
       ..add(CitiesResponse.serializer)
@@ -29,8 +30,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CustomerResponseRestResult.serializer)
       ..add(DeleteAddressRequest.serializer)
       ..add(DeleteAddressResponseRestResult.serializer)
-      ..add(ErpProductResponse.serializer)
-      ..add(ErpProductResponseRestResult.serializer)
       ..add(FaqResponse.serializer)
       ..add(FaqResponseListRestResult.serializer)
       ..add(FavoriteListResponse.serializer)
@@ -47,6 +46,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(NeighborRequest.serializer)
       ..add(NeighborResponse.serializer)
       ..add(NeighborResponseListRestResult.serializer)
+      ..add(NeighborResponseRestResult.serializer)
       ..add(NewCustomerRequest.serializer)
       ..add(ObjectRestResult.serializer)
       ..add(OrderRequest.serializer)
@@ -74,6 +74,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RProductListRestResult.serializer)
       ..add(RProductPrice.serializer)
       ..add(RProductRestResult.serializer)
+      ..add(RegionNeighborhoodRequest.serializer)
+      ..add(RegionResponse.serializer)
+      ..add(RegionResponseListRestResult.serializer)
       ..add(SearchProductRequest.serializer)
       ..add(SendOrderMailRequest.serializer)
       ..add(SendOrderMailResponse.serializer)
@@ -88,10 +91,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UpdateAgreementRequest.serializer)
       ..add(UpdateCartRequest.serializer)
       ..add(UpdateOrderRequest.serializer)
+      ..add(UpdateRegionNeighborhoodRequest.serializer)
       ..add(VerifyRequest.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AgreementResponse)]),
           () => new ListBuilder<AgreementResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(BranchResponse)]),
+          () => new ListBuilder<BranchResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CitiesResponse)]),
           () => new ListBuilder<CitiesResponse>())
@@ -101,6 +108,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(FaqResponse)]),
           () => new ListBuilder<FaqResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(NeighborResponse)]),
+          () => new ListBuilder<NeighborResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(NeighborResponse)]),
           () => new ListBuilder<NeighborResponse>())
@@ -144,11 +154,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(RProductPrice)]),
           () => new ListBuilder<RProductPrice>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(RegionResponse)]),
+          () => new ListBuilder<RegionResponse>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TimeSlotResponse)]),
           () => new ListBuilder<TimeSlotResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
-          () => new ListBuilder<TimeSlotsResponse>()))
+          () => new ListBuilder<TimeSlotsResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(int)]),
+          () => new ListBuilder<int>()))
     .build();
 
 // ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

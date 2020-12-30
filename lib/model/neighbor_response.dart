@@ -1,3 +1,5 @@
+            import 'package:openapi/model/branch_response.dart';
+            import 'package:built_collection/built_collection.dart';
         import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -25,6 +27,18 @@ abstract class NeighborResponse implements Built<NeighborResponse, NeighborRespo
         @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
+    
+        @nullable
+    @BuiltValueField(wireName: r'regionName')
+    String get regionName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'gpsId')
+    int get gpsId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'branch')
+    BuiltList<BranchResponse> get branch;
 
     // Boilerplate code needed to wire-up generated code
     NeighborResponse._();
