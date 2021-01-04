@@ -93,6 +93,9 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc//DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
 *DefinitionApi* | [**apiDefinitionUpdateAgreementLogPost**](doc//DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc//MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
+*MigrationApi* | [**apiMigrationMatchCitiesGet**](doc//MigrationApi.md#apimigrationmatchcitiesget) | **get** /api/Migration/MatchCities | 
+*MigrationApi* | [**apiMigrationMatchCountiesGet**](doc//MigrationApi.md#apimigrationmatchcountiesget) | **get** /api/Migration/MatchCounties | 
+*MigrationApi* | [**apiMigrationMatchNeighborhoodGet**](doc//MigrationApi.md#apimigrationmatchneighborhoodget) | **get** /api/Migration/MatchNeighborhood | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc//MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
 *OrderApi* | [**apiOrderCreateOrderPost**](doc//OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
 *OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 

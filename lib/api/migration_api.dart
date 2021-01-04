@@ -62,6 +62,105 @@ class MigrationApi {
         /// 
         ///
         /// 
+        Future<Response>apiMigrationMatchCitiesGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Migration/MatchCities";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            );
+            }
+        /// 
+        ///
+        /// 
+        Future<Response>apiMigrationMatchCountiesGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Migration/MatchCounties";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            );
+            }
+        /// 
+        ///
+        /// 
+        Future<Response>apiMigrationMatchNeighborhoodGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Migration/MatchNeighborhood";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            );
+            }
+        /// 
+        ///
+        /// 
         Future<Response>apiMigrationUpdateCitiesFromRestGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Migration/UpdateCitiesFromRest";
