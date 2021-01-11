@@ -91,6 +91,30 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
         ..add(serializers.serialize(object.lastOrder,
             specifiedType: const FullType(int)));
     }
+    if (object.companyName != null) {
+      result
+        ..add('companyName')
+        ..add(serializers.serialize(object.companyName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.companyTaxName != null) {
+      result
+        ..add('companyTaxName')
+        ..add(serializers.serialize(object.companyTaxName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.companyTaxNumber != null) {
+      result
+        ..add('companyTaxNumber')
+        ..add(serializers.serialize(object.companyTaxNumber,
+            specifiedType: const FullType(String)));
+    }
+    if (object.identificationNumber != null) {
+      result
+        ..add('identificationNumber')
+        ..add(serializers.serialize(object.identificationNumber,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -155,6 +179,22 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
           result.lastOrder = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'companyName':
+          result.companyName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'companyTaxName':
+          result.companyTaxName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'companyTaxNumber':
+          result.companyTaxNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'identificationNumber':
+          result.identificationNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -187,6 +227,14 @@ class _$RCustomer extends RCustomer {
   final bool registered;
   @override
   final int lastOrder;
+  @override
+  final String companyName;
+  @override
+  final String companyTaxName;
+  @override
+  final String companyTaxNumber;
+  @override
+  final String identificationNumber;
 
   factory _$RCustomer([void Function(RCustomerBuilder) updates]) =>
       (new RCustomerBuilder()..update(updates)).build();
@@ -203,7 +251,11 @@ class _$RCustomer extends RCustomer {
       this.allowEmail,
       this.address,
       this.registered,
-      this.lastOrder})
+      this.lastOrder,
+      this.companyName,
+      this.companyTaxName,
+      this.companyTaxNumber,
+      this.identificationNumber})
       : super._();
 
   @override
@@ -228,7 +280,11 @@ class _$RCustomer extends RCustomer {
         allowEmail == other.allowEmail &&
         address == other.address &&
         registered == other.registered &&
-        lastOrder == other.lastOrder;
+        lastOrder == other.lastOrder &&
+        companyName == other.companyName &&
+        companyTaxName == other.companyTaxName &&
+        companyTaxNumber == other.companyTaxNumber &&
+        identificationNumber == other.identificationNumber;
   }
 
   @override
@@ -243,18 +299,32 @@ class _$RCustomer extends RCustomer {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, id.hashCode),
-                                                customerName.hashCode),
-                                            customerSurname.hashCode),
-                                        birthDate.hashCode),
-                                    phone.hashCode),
-                                email.hashCode),
-                            gender.hashCode),
-                        allowSms.hashCode),
-                    allowEmail.hashCode),
-                address.hashCode),
-            registered.hashCode),
-        lastOrder.hashCode));
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    0,
+                                                                    id
+                                                                        .hashCode),
+                                                                customerName
+                                                                    .hashCode),
+                                                            customerSurname
+                                                                .hashCode),
+                                                        birthDate.hashCode),
+                                                    phone.hashCode),
+                                                email.hashCode),
+                                            gender.hashCode),
+                                        allowSms.hashCode),
+                                    allowEmail.hashCode),
+                                address.hashCode),
+                            registered.hashCode),
+                        lastOrder.hashCode),
+                    companyName.hashCode),
+                companyTaxName.hashCode),
+            companyTaxNumber.hashCode),
+        identificationNumber.hashCode));
   }
 
   @override
@@ -271,7 +341,11 @@ class _$RCustomer extends RCustomer {
           ..add('allowEmail', allowEmail)
           ..add('address', address)
           ..add('registered', registered)
-          ..add('lastOrder', lastOrder))
+          ..add('lastOrder', lastOrder)
+          ..add('companyName', companyName)
+          ..add('companyTaxName', companyTaxName)
+          ..add('companyTaxNumber', companyTaxNumber)
+          ..add('identificationNumber', identificationNumber))
         .toString();
   }
 }
@@ -329,6 +403,25 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
   int get lastOrder => _$this._lastOrder;
   set lastOrder(int lastOrder) => _$this._lastOrder = lastOrder;
 
+  String _companyName;
+  String get companyName => _$this._companyName;
+  set companyName(String companyName) => _$this._companyName = companyName;
+
+  String _companyTaxName;
+  String get companyTaxName => _$this._companyTaxName;
+  set companyTaxName(String companyTaxName) =>
+      _$this._companyTaxName = companyTaxName;
+
+  String _companyTaxNumber;
+  String get companyTaxNumber => _$this._companyTaxNumber;
+  set companyTaxNumber(String companyTaxNumber) =>
+      _$this._companyTaxNumber = companyTaxNumber;
+
+  String _identificationNumber;
+  String get identificationNumber => _$this._identificationNumber;
+  set identificationNumber(String identificationNumber) =>
+      _$this._identificationNumber = identificationNumber;
+
   RCustomerBuilder();
 
   RCustomerBuilder get _$this {
@@ -345,6 +438,10 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _address = _$v.address?.toBuilder();
       _registered = _$v.registered;
       _lastOrder = _$v.lastOrder;
+      _companyName = _$v.companyName;
+      _companyTaxName = _$v.companyTaxName;
+      _companyTaxNumber = _$v.companyTaxNumber;
+      _identificationNumber = _$v.identificationNumber;
       _$v = null;
     }
     return this;
@@ -380,7 +477,11 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
               allowEmail: allowEmail,
               address: _address?.build(),
               registered: registered,
-              lastOrder: lastOrder);
+              lastOrder: lastOrder,
+              companyName: companyName,
+              companyTaxName: companyTaxName,
+              companyTaxNumber: companyTaxNumber,
+              identificationNumber: identificationNumber);
     } catch (_) {
       String _$failedField;
       try {

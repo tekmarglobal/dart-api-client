@@ -108,6 +108,12 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
         ..add(serializers.serialize(object.fee,
             specifiedType: const FullType(double)));
     }
+    if (object.region != null) {
+      result
+        ..add('region')
+        ..add(serializers.serialize(object.region,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -182,6 +188,10 @@ class _$OrdersSerializer implements StructuredSerializer<Orders> {
           result.fee = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -220,6 +230,8 @@ class _$Orders extends Orders {
   final String paymentType;
   @override
   final double fee;
+  @override
+  final int region;
 
   factory _$Orders([void Function(OrdersBuilder) updates]) =>
       (new OrdersBuilder()..update(updates)).build();
@@ -239,7 +251,8 @@ class _$Orders extends Orders {
       this.cityName,
       this.countyName,
       this.paymentType,
-      this.fee})
+      this.fee,
+      this.region})
       : super._();
 
   @override
@@ -267,7 +280,8 @@ class _$Orders extends Orders {
         cityName == other.cityName &&
         countyName == other.countyName &&
         paymentType == other.paymentType &&
-        fee == other.fee;
+        fee == other.fee &&
+        region == other.region;
   }
 
   @override
@@ -287,24 +301,28 @@ class _$Orders extends Orders {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                orderId
+                                                                $jc(
+                                                                    0,
+                                                                    orderId
+                                                                        .hashCode),
+                                                                orderDate
                                                                     .hashCode),
-                                                            orderDate.hashCode),
-                                                        deliveryAddress
+                                                            deliveryAddress
+                                                                .hashCode),
+                                                        billingAddress
                                                             .hashCode),
-                                                    billingAddress.hashCode),
-                                                productTotal.hashCode),
-                                            orderTotal.hashCode),
-                                        productDiscountsTotal.hashCode),
-                                    bagAmount.hashCode),
-                                bagTotal.hashCode),
-                            orderNote.hashCode),
-                        active.hashCode),
-                    cityName.hashCode),
-                countyName.hashCode),
-            paymentType.hashCode),
-        fee.hashCode));
+                                                    productTotal.hashCode),
+                                                orderTotal.hashCode),
+                                            productDiscountsTotal.hashCode),
+                                        bagAmount.hashCode),
+                                    bagTotal.hashCode),
+                                orderNote.hashCode),
+                            active.hashCode),
+                        cityName.hashCode),
+                    countyName.hashCode),
+                paymentType.hashCode),
+            fee.hashCode),
+        region.hashCode));
   }
 
   @override
@@ -324,7 +342,8 @@ class _$Orders extends Orders {
           ..add('cityName', cityName)
           ..add('countyName', countyName)
           ..add('paymentType', paymentType)
-          ..add('fee', fee))
+          ..add('fee', fee)
+          ..add('region', region))
         .toString();
   }
 }
@@ -395,6 +414,10 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
+  int _region;
+  int get region => _$this._region;
+  set region(int region) => _$this._region = region;
+
   OrdersBuilder();
 
   OrdersBuilder get _$this {
@@ -414,6 +437,7 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
       _countyName = _$v.countyName;
       _paymentType = _$v.paymentType;
       _fee = _$v.fee;
+      _region = _$v.region;
       _$v = null;
     }
     return this;
@@ -450,7 +474,8 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
             cityName: cityName,
             countyName: countyName,
             paymentType: paymentType,
-            fee: fee);
+            fee: fee,
+            region: region);
     replace(_$result);
     return _$result;
   }

@@ -50,6 +50,12 @@ class _$RCategorySerializer implements StructuredSerializer<RCategory> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(RCategory)])));
     }
+    if (object.order != null) {
+      result
+        ..add('order')
+        ..add(serializers.serialize(object.order,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -88,6 +94,10 @@ class _$RCategorySerializer implements StructuredSerializer<RCategory> {
                       BuiltList, const [const FullType(RCategory)]))
               as BuiltList<Object>);
           break;
+        case 'order':
+          result.order = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -106,12 +116,19 @@ class _$RCategory extends RCategory {
   final BuiltList<RProduct> products;
   @override
   final BuiltList<RCategory> subCategories;
+  @override
+  final int order;
 
   factory _$RCategory([void Function(RCategoryBuilder) updates]) =>
       (new RCategoryBuilder()..update(updates)).build();
 
   _$RCategory._(
-      {this.id, this.parentId, this.name, this.products, this.subCategories})
+      {this.id,
+      this.parentId,
+      this.name,
+      this.products,
+      this.subCategories,
+      this.order})
       : super._();
 
   @override
@@ -129,15 +146,18 @@ class _$RCategory extends RCategory {
         parentId == other.parentId &&
         name == other.name &&
         products == other.products &&
-        subCategories == other.subCategories;
+        subCategories == other.subCategories &&
+        order == other.order;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, id.hashCode), parentId.hashCode), name.hashCode),
-            products.hashCode),
-        subCategories.hashCode));
+        $jc(
+            $jc($jc($jc($jc(0, id.hashCode), parentId.hashCode), name.hashCode),
+                products.hashCode),
+            subCategories.hashCode),
+        order.hashCode));
   }
 
   @override
@@ -147,7 +167,8 @@ class _$RCategory extends RCategory {
           ..add('parentId', parentId)
           ..add('name', name)
           ..add('products', products)
-          ..add('subCategories', subCategories))
+          ..add('subCategories', subCategories)
+          ..add('order', order))
         .toString();
   }
 }
@@ -178,6 +199,10 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
   set subCategories(ListBuilder<RCategory> subCategories) =>
       _$this._subCategories = subCategories;
 
+  int _order;
+  int get order => _$this._order;
+  set order(int order) => _$this._order = order;
+
   RCategoryBuilder();
 
   RCategoryBuilder get _$this {
@@ -187,6 +212,7 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
       _name = _$v.name;
       _products = _$v.products?.toBuilder();
       _subCategories = _$v.subCategories?.toBuilder();
+      _order = _$v.order;
       _$v = null;
     }
     return this;
@@ -215,7 +241,8 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
               parentId: parentId,
               name: name,
               products: _products?.build(),
-              subCategories: _subCategories?.build());
+              subCategories: _subCategories?.build(),
+              order: order);
     } catch (_) {
       String _$failedField;
       try {

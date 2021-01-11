@@ -25,6 +25,12 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(int)));
     }
+    if (object.uuid != null) {
+      result
+        ..add('uuid')
+        ..add(serializers.serialize(object.uuid,
+            specifiedType: const FullType(String)));
+    }
     if (object.customer != null) {
       result
         ..add('customer')
@@ -116,6 +122,12 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         ..add(serializers.serialize(object.deliveryTimeEnd,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.region != null) {
+      result
+        ..add('region')
+        ..add(serializers.serialize(object.region,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -134,6 +146,10 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
+          break;
+        case 'uuid':
+          result.uuid = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'customer':
           result.customer = serializers.deserialize(value,
@@ -197,6 +213,10 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
           result.deliveryTimeEnd = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -207,6 +227,8 @@ class _$OrderResponseSerializer implements StructuredSerializer<OrderResponse> {
 class _$OrderResponse extends OrderResponse {
   @override
   final int id;
+  @override
+  final String uuid;
   @override
   final int customer;
   @override
@@ -237,12 +259,15 @@ class _$OrderResponse extends OrderResponse {
   final DateTime deliveryTimeStart;
   @override
   final DateTime deliveryTimeEnd;
+  @override
+  final int region;
 
   factory _$OrderResponse([void Function(OrderResponseBuilder) updates]) =>
       (new OrderResponseBuilder()..update(updates)).build();
 
   _$OrderResponse._(
       {this.id,
+      this.uuid,
       this.customer,
       this.orderDate,
       this.deliveryAddress,
@@ -257,7 +282,8 @@ class _$OrderResponse extends OrderResponse {
       this.bagAmount,
       this.bagTotal,
       this.deliveryTimeStart,
-      this.deliveryTimeEnd})
+      this.deliveryTimeEnd,
+      this.region})
       : super._();
 
   @override
@@ -272,6 +298,7 @@ class _$OrderResponse extends OrderResponse {
     if (identical(other, this)) return true;
     return other is OrderResponse &&
         id == other.id &&
+        uuid == other.uuid &&
         customer == other.customer &&
         orderDate == other.orderDate &&
         deliveryAddress == other.deliveryAddress &&
@@ -286,7 +313,8 @@ class _$OrderResponse extends OrderResponse {
         bagAmount == other.bagAmount &&
         bagTotal == other.bagTotal &&
         deliveryTimeStart == other.deliveryTimeStart &&
-        deliveryTimeEnd == other.deliveryTimeEnd;
+        deliveryTimeEnd == other.deliveryTimeEnd &&
+        region == other.region;
   }
 
   @override
@@ -307,32 +335,40 @@ class _$OrderResponse extends OrderResponse {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    id
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            id
+                                                                                .hashCode),
+                                                                        uuid
+                                                                            .hashCode),
+                                                                    customer
                                                                         .hashCode),
-                                                                customer
+                                                                orderDate
                                                                     .hashCode),
-                                                            orderDate.hashCode),
-                                                        deliveryAddress
+                                                            deliveryAddress
+                                                                .hashCode),
+                                                        billingAdrress
                                                             .hashCode),
-                                                    billingAdrress.hashCode),
-                                                productTotal.hashCode),
-                                            orderTotal.hashCode),
-                                        orderProducts.hashCode),
-                                    orderNote.hashCode),
-                                paymentType.hashCode),
-                            productDiscountsTotal.hashCode),
-                        fee.hashCode),
-                    bagAmount.hashCode),
-                bagTotal.hashCode),
-            deliveryTimeStart.hashCode),
-        deliveryTimeEnd.hashCode));
+                                                    productTotal.hashCode),
+                                                orderTotal.hashCode),
+                                            orderProducts.hashCode),
+                                        orderNote.hashCode),
+                                    paymentType.hashCode),
+                                productDiscountsTotal.hashCode),
+                            fee.hashCode),
+                        bagAmount.hashCode),
+                    bagTotal.hashCode),
+                deliveryTimeStart.hashCode),
+            deliveryTimeEnd.hashCode),
+        region.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('OrderResponse')
           ..add('id', id)
+          ..add('uuid', uuid)
           ..add('customer', customer)
           ..add('orderDate', orderDate)
           ..add('deliveryAddress', deliveryAddress)
@@ -347,7 +383,8 @@ class _$OrderResponse extends OrderResponse {
           ..add('bagAmount', bagAmount)
           ..add('bagTotal', bagTotal)
           ..add('deliveryTimeStart', deliveryTimeStart)
-          ..add('deliveryTimeEnd', deliveryTimeEnd))
+          ..add('deliveryTimeEnd', deliveryTimeEnd)
+          ..add('region', region))
         .toString();
   }
 }
@@ -359,6 +396,10 @@ class OrderResponseBuilder
   int _id;
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
+
+  String _uuid;
+  String get uuid => _$this._uuid;
+  set uuid(String uuid) => _$this._uuid = uuid;
 
   int _customer;
   int get customer => _$this._customer;
@@ -427,11 +468,16 @@ class OrderResponseBuilder
   set deliveryTimeEnd(DateTime deliveryTimeEnd) =>
       _$this._deliveryTimeEnd = deliveryTimeEnd;
 
+  int _region;
+  int get region => _$this._region;
+  set region(int region) => _$this._region = region;
+
   OrderResponseBuilder();
 
   OrderResponseBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
+      _uuid = _$v.uuid;
       _customer = _$v.customer;
       _orderDate = _$v.orderDate;
       _deliveryAddress = _$v.deliveryAddress;
@@ -447,6 +493,7 @@ class OrderResponseBuilder
       _bagTotal = _$v.bagTotal;
       _deliveryTimeStart = _$v.deliveryTimeStart;
       _deliveryTimeEnd = _$v.deliveryTimeEnd;
+      _region = _$v.region;
       _$v = null;
     }
     return this;
@@ -472,6 +519,7 @@ class OrderResponseBuilder
       _$result = _$v ??
           new _$OrderResponse._(
               id: id,
+              uuid: uuid,
               customer: customer,
               orderDate: orderDate,
               deliveryAddress: deliveryAddress,
@@ -486,7 +534,8 @@ class OrderResponseBuilder
               bagAmount: bagAmount,
               bagTotal: bagTotal,
               deliveryTimeStart: deliveryTimeStart,
-              deliveryTimeEnd: deliveryTimeEnd);
+              deliveryTimeEnd: deliveryTimeEnd,
+              region: region);
     } catch (_) {
       String _$failedField;
       try {

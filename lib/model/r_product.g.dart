@@ -97,6 +97,12 @@ class _$RProductSerializer implements StructuredSerializer<RProduct> {
         ..add(serializers.serialize(object.unitName,
             specifiedType: const FullType(String)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     return result;
   }
 
@@ -165,6 +171,10 @@ class _$RProductSerializer implements StructuredSerializer<RProduct> {
           result.unitName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -199,6 +209,8 @@ class _$RProduct extends RProduct {
   final int unitId;
   @override
   final String unitName;
+  @override
+  final bool active;
 
   factory _$RProduct([void Function(RProductBuilder) updates]) =>
       (new RProductBuilder()..update(updates)).build();
@@ -216,7 +228,8 @@ class _$RProduct extends RProduct {
       this.eId,
       this.barcode,
       this.unitId,
-      this.unitName})
+      this.unitName,
+      this.active})
       : super._();
 
   @override
@@ -242,7 +255,8 @@ class _$RProduct extends RProduct {
         eId == other.eId &&
         barcode == other.barcode &&
         unitId == other.unitId &&
-        unitName == other.unitName;
+        unitName == other.unitName &&
+        active == other.active;
   }
 
   @override
@@ -258,19 +272,21 @@ class _$RProduct extends RProduct {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, id.hashCode),
-                                                    name.hashCode),
-                                                description.hashCode),
-                                            brandName.hashCode),
-                                        maxQuantity.hashCode),
-                                    minQuantity.hashCode),
-                                quantityStep.hashCode),
-                            initalQuantity.hashCode),
-                        prices.hashCode),
-                    eId.hashCode),
-                barcode.hashCode),
-            unitId.hashCode),
-        unitName.hashCode));
+                                                $jc(
+                                                    $jc($jc(0, id.hashCode),
+                                                        name.hashCode),
+                                                    description.hashCode),
+                                                brandName.hashCode),
+                                            maxQuantity.hashCode),
+                                        minQuantity.hashCode),
+                                    quantityStep.hashCode),
+                                initalQuantity.hashCode),
+                            prices.hashCode),
+                        eId.hashCode),
+                    barcode.hashCode),
+                unitId.hashCode),
+            unitName.hashCode),
+        active.hashCode));
   }
 
   @override
@@ -288,7 +304,8 @@ class _$RProduct extends RProduct {
           ..add('eId', eId)
           ..add('barcode', barcode)
           ..add('unitId', unitId)
-          ..add('unitName', unitName))
+          ..add('unitName', unitName)
+          ..add('active', active))
         .toString();
   }
 }
@@ -350,6 +367,10 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
   String get unitName => _$this._unitName;
   set unitName(String unitName) => _$this._unitName = unitName;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   RProductBuilder();
 
   RProductBuilder get _$this {
@@ -367,6 +388,7 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
       _barcode = _$v.barcode;
       _unitId = _$v.unitId;
       _unitName = _$v.unitName;
+      _active = _$v.active;
       _$v = null;
     }
     return this;
@@ -403,7 +425,8 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
               eId: eId,
               barcode: barcode,
               unitId: unitId,
-              unitName: unitName);
+              unitName: unitName,
+              active: active);
     } catch (_) {
       String _$failedField;
       try {

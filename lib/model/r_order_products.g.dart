@@ -62,6 +62,24 @@ class _$ROrderProductsSerializer
         ..add(serializers.serialize(object.brandName,
             specifiedType: const FullType(String)));
     }
+    if (object.unitId != null) {
+      result
+        ..add('unitId')
+        ..add(serializers.serialize(object.unitId,
+            specifiedType: const FullType(int)));
+    }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.barcode != null) {
+      result
+        ..add('barcode')
+        ..add(serializers.serialize(object.barcode,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -105,6 +123,18 @@ class _$ROrderProductsSerializer
           result.brandName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'unitId':
+          result.unitId = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'barcode':
+          result.barcode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -127,6 +157,12 @@ class _$ROrderProducts extends ROrderProducts {
   final double quantity;
   @override
   final String brandName;
+  @override
+  final int unitId;
+  @override
+  final bool active;
+  @override
+  final String barcode;
 
   factory _$ROrderProducts([void Function(ROrderProductsBuilder) updates]) =>
       (new ROrderProductsBuilder()..update(updates)).build();
@@ -138,7 +174,10 @@ class _$ROrderProducts extends ROrderProducts {
       this.price,
       this.discount,
       this.quantity,
-      this.brandName})
+      this.brandName,
+      this.unitId,
+      this.active,
+      this.barcode})
       : super._();
 
   @override
@@ -159,7 +198,10 @@ class _$ROrderProducts extends ROrderProducts {
         price == other.price &&
         discount == other.discount &&
         quantity == other.quantity &&
-        brandName == other.brandName;
+        brandName == other.brandName &&
+        unitId == other.unitId &&
+        active == other.active &&
+        barcode == other.barcode;
   }
 
   @override
@@ -168,12 +210,20 @@ class _$ROrderProducts extends ROrderProducts {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, productId.hashCode), name.hashCode),
-                        listPrice.hashCode),
-                    price.hashCode),
-                discount.hashCode),
-            quantity.hashCode),
-        brandName.hashCode));
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, productId.hashCode),
+                                        name.hashCode),
+                                    listPrice.hashCode),
+                                price.hashCode),
+                            discount.hashCode),
+                        quantity.hashCode),
+                    brandName.hashCode),
+                unitId.hashCode),
+            active.hashCode),
+        barcode.hashCode));
   }
 
   @override
@@ -185,7 +235,10 @@ class _$ROrderProducts extends ROrderProducts {
           ..add('price', price)
           ..add('discount', discount)
           ..add('quantity', quantity)
-          ..add('brandName', brandName))
+          ..add('brandName', brandName)
+          ..add('unitId', unitId)
+          ..add('active', active)
+          ..add('barcode', barcode))
         .toString();
   }
 }
@@ -222,6 +275,18 @@ class ROrderProductsBuilder
   String get brandName => _$this._brandName;
   set brandName(String brandName) => _$this._brandName = brandName;
 
+  int _unitId;
+  int get unitId => _$this._unitId;
+  set unitId(int unitId) => _$this._unitId = unitId;
+
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
+  String _barcode;
+  String get barcode => _$this._barcode;
+  set barcode(String barcode) => _$this._barcode = barcode;
+
   ROrderProductsBuilder();
 
   ROrderProductsBuilder get _$this {
@@ -233,6 +298,9 @@ class ROrderProductsBuilder
       _discount = _$v.discount;
       _quantity = _$v.quantity;
       _brandName = _$v.brandName;
+      _unitId = _$v.unitId;
+      _active = _$v.active;
+      _barcode = _$v.barcode;
       _$v = null;
     }
     return this;
@@ -261,7 +329,10 @@ class ROrderProductsBuilder
             price: price,
             discount: discount,
             quantity: quantity,
-            brandName: brandName);
+            brandName: brandName,
+            unitId: unitId,
+            active: active,
+            barcode: barcode);
     replace(_$result);
     return _$result;
   }
