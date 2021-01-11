@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**apiCatalogAllCategoriesGet**](CatalogApi.md#apiCatalogAllCategoriesGet) | **get** /api/Catalog/allCategories | 
 [**apiCatalogCreateCategoryPost**](CatalogApi.md#apiCatalogCreateCategoryPost) | **post** /api/Catalog/createCategory | 
 [**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apiCatalogDeleteCategoryDelete) | **delete** /api/Catalog/deleteCategory | 
-[**apiCatalogImportcategoriesPost**](CatalogApi.md#apiCatalogImportcategoriesPost) | **post** /api/Catalog/importcategories | 
+[**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apiCatalogImportCategoriesFromOlimposPost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
 [**apiCatalogPost**](CatalogApi.md#apiCatalogPost) | **post** /api/Catalog | 
 [**apiCatalogUpdateCategoryPut**](CatalogApi.md#apiCatalogUpdateCategoryPut) | **put** /api/Catalog/updateCategory | 
 
@@ -154,8 +154,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiCatalogImportcategoriesPost**
-> ImportCategoriesResponseRestResult apiCatalogImportcategoriesPost()
+# **apiCatalogImportCategoriesFromOlimposPost**
+> apiCatalogImportCategoriesFromOlimposPost()
 
 
 
@@ -170,10 +170,9 @@ import 'package:openapi/api.dart';
 var api_instance = new CatalogApi();
 
 try { 
-    var result = api_instance.apiCatalogImportcategoriesPost();
-    print(result);
+    api_instance.apiCatalogImportCategoriesFromOlimposPost();
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogImportcategoriesPost: $e\n");
+    print("Exception when calling CatalogApi->apiCatalogImportCategoriesFromOlimposPost: $e\n");
 }
 ```
 
@@ -182,7 +181,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ImportCategoriesResponseRestResult**](ImportCategoriesResponseRestResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -191,7 +190,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

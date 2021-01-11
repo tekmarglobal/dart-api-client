@@ -27,6 +27,10 @@ abstract class RCategory implements Built<RCategory, RCategoryBuilder> {
         @nullable
     @BuiltValueField(wireName: r'subCategories')
     BuiltList<RCategory> get subCategories;
+    
+        @nullable
+    @BuiltValueField(wireName: r'order')
+    int get order;
 
     // Boilerplate code needed to wire-up generated code
     RCategory._();

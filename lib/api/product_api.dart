@@ -351,7 +351,7 @@ class ProductApi {
         /// 
         ///
         /// 
-        Future<Response>apiProductUpdateProductFromOlimposPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response>apiProductUpdateProductFromOlimposPost({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Product/UpdateProductFromOlimpos";
 
@@ -359,6 +359,7 @@ class ProductApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 

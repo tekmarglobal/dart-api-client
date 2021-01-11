@@ -6,7 +6,6 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/r_category_rest_result.dart';
-import 'package:openapi/model/import_categories_response_rest_result.dart';
 
 class CatalogApi {
     final Dio _dio;
@@ -163,9 +162,9 @@ class CatalogApi {
         /// 
         ///
         /// 
-        Future<Response<ImportCategoriesResponseRestResult>>apiCatalogImportcategoriesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response>apiCatalogImportCategoriesFromOlimposPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        String _path = "/api/Catalog/importcategories";
+        String _path = "/api/Catalog/ImportCategoriesFromOlimpos";
 
         Map<String, dynamic> queryParams = {};
         Map<String, String> headerParams = Map.from(headers ?? {});
@@ -191,21 +190,7 @@ class CatalogApi {
             contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(ImportCategoriesResponseRestResult);
-        var data = _serializers.deserializeWith<ImportCategoriesResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<ImportCategoriesResponseRestResult>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
             );
-            });
             }
         /// 
         ///

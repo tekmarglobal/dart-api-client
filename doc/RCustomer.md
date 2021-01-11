@@ -20,6 +20,10 @@ Name | Type | Description | Notes
 **address** | [**BuiltList&lt;RAddress&gt;**](RAddress.md) |  | [optional] [default to const []]
 **registered** | **bool** |  | [optional] [default to null]
 **lastOrder** | **int** |  | [optional] [default to null]
+**companyName** | **String** |  | [optional] [default to null]
+**companyTaxName** | **String** |  | [optional] [default to null]
+**companyTaxNumber** | **String** |  | [optional] [default to null]
+**identificationNumber** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

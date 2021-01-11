@@ -17,6 +17,10 @@ Name | Type | Description | Notes
 **allowEmail** | **bool** |  | [optional] [default to null]
 **gender** | **int** |  | [optional] [default to null]
 **allowCampaign** | **bool** |  | [optional] [default to null]
+**companyName** | **String** |  | [optional] [default to null]
+**companyTaxName** | **String** |  | [optional] [default to null]
+**companyTaxNumber** | **String** |  | [optional] [default to null]
+**identificationNumber** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

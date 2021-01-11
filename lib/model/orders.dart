@@ -65,6 +65,10 @@ abstract class Orders implements Built<Orders, OrdersBuilder> {
         @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
+    
+        @nullable
+    @BuiltValueField(wireName: r'region')
+    int get region;
 
     // Boilerplate code needed to wire-up generated code
     Orders._();

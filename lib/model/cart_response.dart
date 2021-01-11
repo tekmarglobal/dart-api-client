@@ -37,6 +37,10 @@ abstract class CartResponse implements Built<CartResponse, CartResponseBuilder> 
     int get bagAmount;
     
         @nullable
+    @BuiltValueField(wireName: r'estimatedFee')
+    double get estimatedFee;
+    
+        @nullable
     @BuiltValueField(wireName: r'cardProducts')
     BuiltList<RCartProducts> get cardProducts;
 

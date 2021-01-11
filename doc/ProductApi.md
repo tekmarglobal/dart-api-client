@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductUpdateProductFromOlimposPost**
-> apiProductUpdateProductFromOlimposPost()
+> apiProductUpdateProductFromOlimposPost(region)
 
 
 
@@ -343,16 +343,20 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
+var region = 56; // int | 
 
 try { 
-    api_instance.apiProductUpdateProductFromOlimposPost();
+    api_instance.apiProductUpdateProductFromOlimposPost(region);
 } catch (e) {
     print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 

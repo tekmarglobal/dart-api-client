@@ -33,6 +33,18 @@ abstract class ROrderProducts implements Built<ROrderProducts, ROrderProductsBui
         @nullable
     @BuiltValueField(wireName: r'brandName')
     String get brandName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'unitId')
+    int get unitId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
+    
+        @nullable
+    @BuiltValueField(wireName: r'barcode')
+    String get barcode;
 
     // Boilerplate code needed to wire-up generated code
     ROrderProducts._();

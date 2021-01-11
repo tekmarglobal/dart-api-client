@@ -59,6 +59,10 @@ abstract class RProduct implements Built<RProduct, RProductBuilder> {
         @nullable
     @BuiltValueField(wireName: r'unitName')
     String get unitName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
 
     // Boilerplate code needed to wire-up generated code
     RProduct._();

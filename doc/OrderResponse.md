@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [default to null]
+**uuid** | **String** |  | [optional] [default to null]
 **customer** | **int** |  | [optional] [default to null]
 **orderDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **deliveryAddress** | **String** |  | [optional] [default to null]
@@ -24,6 +25,7 @@ Name | Type | Description | Notes
 **bagTotal** | **double** |  | [optional] [default to null]
 **deliveryTimeStart** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **deliveryTimeEnd** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**region** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

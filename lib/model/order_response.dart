@@ -13,6 +13,10 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
     int get id;
     
         @nullable
+    @BuiltValueField(wireName: r'uuid')
+    String get uuid;
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
     
@@ -71,6 +75,10 @@ abstract class OrderResponse implements Built<OrderResponse, OrderResponseBuilde
         @nullable
     @BuiltValueField(wireName: r'deliveryTimeEnd')
     DateTime get deliveryTimeEnd;
+    
+        @nullable
+    @BuiltValueField(wireName: r'region')
+    int get region;
 
     // Boilerplate code needed to wire-up generated code
     OrderResponse._();

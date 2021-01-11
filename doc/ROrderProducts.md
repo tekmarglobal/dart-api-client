@@ -15,6 +15,9 @@ Name | Type | Description | Notes
 **discount** | **double** |  | [optional] [default to null]
 **quantity** | **double** |  | [optional] [default to null]
 **brandName** | **String** |  | [optional] [default to null]
+**unitId** | **int** |  | [optional] [default to null]
+**active** | **bool** |  | [optional] [default to null]
+**barcode** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

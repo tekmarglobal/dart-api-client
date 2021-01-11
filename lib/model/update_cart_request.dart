@@ -25,6 +25,10 @@ abstract class UpdateCartRequest implements Built<UpdateCartRequest, UpdateCartR
         @nullable
     @BuiltValueField(wireName: r'productNote')
     String get productNote;
+    
+        @nullable
+    @BuiltValueField(wireName: r'timeStotId')
+    int get timeStotId;
 
     // Boilerplate code needed to wire-up generated code
     UpdateCartRequest._();

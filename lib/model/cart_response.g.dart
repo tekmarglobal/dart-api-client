@@ -61,6 +61,12 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
         ..add(serializers.serialize(object.bagAmount,
             specifiedType: const FullType(int)));
     }
+    if (object.estimatedFee != null) {
+      result
+        ..add('estimatedFee')
+        ..add(serializers.serialize(object.estimatedFee,
+            specifiedType: const FullType(double)));
+    }
     if (object.cardProducts != null) {
       result
         ..add('cardProducts')
@@ -110,6 +116,10 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
           result.bagAmount = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'estimatedFee':
+          result.estimatedFee = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
         case 'cardProducts':
           result.cardProducts.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -139,6 +149,8 @@ class _$CartResponse extends CartResponse {
   @override
   final int bagAmount;
   @override
+  final double estimatedFee;
+  @override
   final BuiltList<RCartProducts> cardProducts;
 
   factory _$CartResponse([void Function(CartResponseBuilder) updates]) =>
@@ -152,6 +164,7 @@ class _$CartResponse extends CartResponse {
       this.deviceToken,
       this.bagTotal,
       this.bagAmount,
+      this.estimatedFee,
       this.cardProducts})
       : super._();
 
@@ -173,6 +186,7 @@ class _$CartResponse extends CartResponse {
         deviceToken == other.deviceToken &&
         bagTotal == other.bagTotal &&
         bagAmount == other.bagAmount &&
+        estimatedFee == other.estimatedFee &&
         cardProducts == other.cardProducts;
   }
 
@@ -183,12 +197,14 @@ class _$CartResponse extends CartResponse {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, cartId.hashCode), customer.hashCode),
-                            cartTotal.hashCode),
-                        regionId.hashCode),
-                    deviceToken.hashCode),
-                bagTotal.hashCode),
-            bagAmount.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, cartId.hashCode), customer.hashCode),
+                                cartTotal.hashCode),
+                            regionId.hashCode),
+                        deviceToken.hashCode),
+                    bagTotal.hashCode),
+                bagAmount.hashCode),
+            estimatedFee.hashCode),
         cardProducts.hashCode));
   }
 
@@ -202,6 +218,7 @@ class _$CartResponse extends CartResponse {
           ..add('deviceToken', deviceToken)
           ..add('bagTotal', bagTotal)
           ..add('bagAmount', bagAmount)
+          ..add('estimatedFee', estimatedFee)
           ..add('cardProducts', cardProducts))
         .toString();
   }
@@ -239,6 +256,10 @@ class CartResponseBuilder
   int get bagAmount => _$this._bagAmount;
   set bagAmount(int bagAmount) => _$this._bagAmount = bagAmount;
 
+  double _estimatedFee;
+  double get estimatedFee => _$this._estimatedFee;
+  set estimatedFee(double estimatedFee) => _$this._estimatedFee = estimatedFee;
+
   ListBuilder<RCartProducts> _cardProducts;
   ListBuilder<RCartProducts> get cardProducts =>
       _$this._cardProducts ??= new ListBuilder<RCartProducts>();
@@ -256,6 +277,7 @@ class CartResponseBuilder
       _deviceToken = _$v.deviceToken;
       _bagTotal = _$v.bagTotal;
       _bagAmount = _$v.bagAmount;
+      _estimatedFee = _$v.estimatedFee;
       _cardProducts = _$v.cardProducts?.toBuilder();
       _$v = null;
     }
@@ -288,6 +310,7 @@ class CartResponseBuilder
               deviceToken: deviceToken,
               bagTotal: bagTotal,
               bagAmount: bagAmount,
+              estimatedFee: estimatedFee,
               cardProducts: _cardProducts?.build());
     } catch (_) {
       String _$failedField;

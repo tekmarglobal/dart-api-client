@@ -67,6 +67,12 @@ class _$RCartProductsSerializer implements StructuredSerializer<RCartProducts> {
         ..add(serializers.serialize(object.productId,
             specifiedType: const FullType(int)));
     }
+    if (object.unitId != null) {
+      result
+        ..add('unitId')
+        ..add(serializers.serialize(object.unitId,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -114,6 +120,10 @@ class _$RCartProductsSerializer implements StructuredSerializer<RCartProducts> {
           result.productId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'unitId':
+          result.unitId = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -138,6 +148,8 @@ class _$RCartProducts extends RCartProducts {
   final String name;
   @override
   final int productId;
+  @override
+  final int unitId;
 
   factory _$RCartProducts([void Function(RCartProductsBuilder) updates]) =>
       (new RCartProductsBuilder()..update(updates)).build();
@@ -150,7 +162,8 @@ class _$RCartProducts extends RCartProducts {
       this.amount,
       this.discountAmount,
       this.name,
-      this.productId})
+      this.productId,
+      this.unitId})
       : super._();
 
   @override
@@ -171,7 +184,8 @@ class _$RCartProducts extends RCartProducts {
         amount == other.amount &&
         discountAmount == other.discountAmount &&
         name == other.name &&
-        productId == other.productId;
+        productId == other.productId &&
+        unitId == other.unitId;
   }
 
   @override
@@ -182,14 +196,16 @@ class _$RCartProducts extends RCartProducts {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc(0, regionProductId.hashCode),
-                                quantity.hashCode),
-                            listPrice.hashCode),
-                        price.hashCode),
-                    amount.hashCode),
-                discountAmount.hashCode),
-            name.hashCode),
-        productId.hashCode));
+                            $jc(
+                                $jc($jc(0, regionProductId.hashCode),
+                                    quantity.hashCode),
+                                listPrice.hashCode),
+                            price.hashCode),
+                        amount.hashCode),
+                    discountAmount.hashCode),
+                name.hashCode),
+            productId.hashCode),
+        unitId.hashCode));
   }
 
   @override
@@ -202,7 +218,8 @@ class _$RCartProducts extends RCartProducts {
           ..add('amount', amount)
           ..add('discountAmount', discountAmount)
           ..add('name', name)
-          ..add('productId', productId))
+          ..add('productId', productId)
+          ..add('unitId', unitId))
         .toString();
   }
 }
@@ -245,6 +262,10 @@ class RCartProductsBuilder
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
 
+  int _unitId;
+  int get unitId => _$this._unitId;
+  set unitId(int unitId) => _$this._unitId = unitId;
+
   RCartProductsBuilder();
 
   RCartProductsBuilder get _$this {
@@ -257,6 +278,7 @@ class RCartProductsBuilder
       _discountAmount = _$v.discountAmount;
       _name = _$v.name;
       _productId = _$v.productId;
+      _unitId = _$v.unitId;
       _$v = null;
     }
     return this;
@@ -286,7 +308,8 @@ class RCartProductsBuilder
             amount: amount,
             discountAmount: discountAmount,
             name: name,
-            productId: productId);
+            productId: productId,
+            unitId: unitId);
     replace(_$result);
     return _$result;
   }
