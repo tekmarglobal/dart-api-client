@@ -213,7 +213,7 @@ class AdminApi {
         /// 
         ///
         /// 
-        Future<Response<RegionResponseListRestResult>>apiAdminRegionPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<RegionResponseListRestResult>>apiAdminRegionPost({ int regionId,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Admin/Region";
 
@@ -221,6 +221,7 @@ class AdminApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'regionId'] = regionId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 

@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminRegionPost**
-> RegionResponseListRestResult apiAdminRegionPost()
+> RegionResponseListRestResult apiAdminRegionPost(regionId)
 
 
 
@@ -199,9 +199,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
+var regionId = 56; // int | 
 
 try { 
-    var result = api_instance.apiAdminRegionPost();
+    var result = api_instance.apiAdminRegionPost(regionId);
     print(result);
 } catch (e) {
     print("Exception when calling AdminApi->apiAdminRegionPost: $e\n");
@@ -209,7 +210,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int**|  | [optional] [default to null]
 
 ### Return type
 
