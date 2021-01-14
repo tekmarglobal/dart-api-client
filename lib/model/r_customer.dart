@@ -71,6 +71,14 @@ abstract class RCustomer implements Built<RCustomer, RCustomerBuilder> {
         @nullable
     @BuiltValueField(wireName: r'identificationNumber')
     String get identificationNumber;
+    
+        @nullable
+    @BuiltValueField(wireName: r'defaultAddress')
+    BuiltList<RAddress> get defaultAddress;
+    
+        @nullable
+    @BuiltValueField(wireName: r'invoiceAddress')
+    BuiltList<RAddress> get invoiceAddress;
 
     // Boilerplate code needed to wire-up generated code
     RCustomer._();

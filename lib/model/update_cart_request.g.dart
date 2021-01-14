@@ -50,12 +50,6 @@ class _$UpdateCartRequestSerializer
         ..add(serializers.serialize(object.productNote,
             specifiedType: const FullType(String)));
     }
-    if (object.timeStotId != null) {
-      result
-        ..add('timeStotId')
-        ..add(serializers.serialize(object.timeStotId,
-            specifiedType: const FullType(int)));
-    }
     return result;
   }
 
@@ -91,10 +85,6 @@ class _$UpdateCartRequestSerializer
           result.productNote = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'timeStotId':
-          result.timeStotId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
       }
     }
 
@@ -113,8 +103,6 @@ class _$UpdateCartRequest extends UpdateCartRequest {
   final String cartNote;
   @override
   final String productNote;
-  @override
-  final int timeStotId;
 
   factory _$UpdateCartRequest(
           [void Function(UpdateCartRequestBuilder) updates]) =>
@@ -125,8 +113,7 @@ class _$UpdateCartRequest extends UpdateCartRequest {
       this.productId,
       this.quantity,
       this.cartNote,
-      this.productNote,
-      this.timeStotId})
+      this.productNote})
       : super._();
 
   @override
@@ -145,20 +132,17 @@ class _$UpdateCartRequest extends UpdateCartRequest {
         productId == other.productId &&
         quantity == other.quantity &&
         cartNote == other.cartNote &&
-        productNote == other.productNote &&
-        timeStotId == other.timeStotId;
+        productNote == other.productNote;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc(
-                $jc($jc($jc(0, region.hashCode), productId.hashCode),
-                    quantity.hashCode),
-                cartNote.hashCode),
-            productNote.hashCode),
-        timeStotId.hashCode));
+            $jc($jc($jc(0, region.hashCode), productId.hashCode),
+                quantity.hashCode),
+            cartNote.hashCode),
+        productNote.hashCode));
   }
 
   @override
@@ -168,8 +152,7 @@ class _$UpdateCartRequest extends UpdateCartRequest {
           ..add('productId', productId)
           ..add('quantity', quantity)
           ..add('cartNote', cartNote)
-          ..add('productNote', productNote)
-          ..add('timeStotId', timeStotId))
+          ..add('productNote', productNote))
         .toString();
   }
 }
@@ -198,10 +181,6 @@ class UpdateCartRequestBuilder
   String get productNote => _$this._productNote;
   set productNote(String productNote) => _$this._productNote = productNote;
 
-  int _timeStotId;
-  int get timeStotId => _$this._timeStotId;
-  set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
-
   UpdateCartRequestBuilder();
 
   UpdateCartRequestBuilder get _$this {
@@ -211,7 +190,6 @@ class UpdateCartRequestBuilder
       _quantity = _$v.quantity;
       _cartNote = _$v.cartNote;
       _productNote = _$v.productNote;
-      _timeStotId = _$v.timeStotId;
       _$v = null;
     }
     return this;
@@ -238,8 +216,7 @@ class UpdateCartRequestBuilder
             productId: productId,
             quantity: quantity,
             cartNote: cartNote,
-            productNote: productNote,
-            timeStotId: timeStotId);
+            productNote: productNote);
     replace(_$result);
     return _$result;
   }

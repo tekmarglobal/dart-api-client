@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**apiCartGetTimeSlotsPost**](CartApi.md#apiCartGetTimeSlotsPost) | **post** /api/Cart/GetTimeSlots | 
 [**apiCartPost**](CartApi.md#apiCartPost) | **post** /api/Cart | 
 [**apiCartUpdateCartPost**](CartApi.md#apiCartUpdateCartPost) | **post** /api/Cart/UpdateCart | 
+[**apiCartUpdateTimeslotPost**](CartApi.md#apiCartUpdateTimeslotPost) | **post** /api/Cart/UpdateTimeslot | 
 
 
 # **apiCartCreateCartPost**
@@ -213,6 +214,51 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **updateCartRequest** | [**UpdateCartRequest**](UpdateCartRequest.md)|  | [optional] 
+
+### Return type
+
+[**CartResponseRestResult**](CartResponseRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCartUpdateTimeslotPost**
+> CartResponseRestResult apiCartUpdateTimeslotPost(updateTimeslotRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CartApi();
+var updateTimeslotRequest = new UpdateTimeslotRequest(); // UpdateTimeslotRequest | 
+
+try { 
+    var result = api_instance.apiCartUpdateTimeslotPost(updateTimeslotRequest);
+    print(result);
+} catch (e) {
+    print("Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateTimeslotRequest** | [**UpdateTimeslotRequest**](UpdateTimeslotRequest.md)|  | [optional] 
 
 ### Return type
 

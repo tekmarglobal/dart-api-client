@@ -91,12 +91,28 @@ abstract class Address implements Built<Address, AddressBuilder> {
     int get optimisticLockField;
     
         @nullable
+    @BuiltValueField(wireName: r'isindividual')
+    bool get isindividual;
+    
+        @nullable
+    @BuiltValueField(wireName: r'phoneNumber')
+    String get phoneNumber;
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     Customer get customerNavigation;
     
         @nullable
     @BuiltValueField(wireName: r'neighborhoodNavigation')
     Neighborhood get neighborhoodNavigation;
+    
+        @nullable
+    @BuiltValueField(wireName: r'customerDefaultAddressNavigation')
+    BuiltList<Customer> get customerDefaultAddressNavigation;
+    
+        @nullable
+    @BuiltValueField(wireName: r'customerInvoiceAddressNavigation')
+    BuiltList<Customer> get customerInvoiceAddressNavigation;
     
         @nullable
     @BuiltValueField(wireName: r'orderBillingAddressNavigation')

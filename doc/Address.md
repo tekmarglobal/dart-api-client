@@ -28,8 +28,12 @@ Name | Type | Description | Notes
 **longitude** | **double** |  | [optional] [default to null]
 **latitude** | **double** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**isindividual** | **bool** |  | [optional] [default to null]
+**phoneNumber** | **String** |  | [optional] [default to null]
 **customerNavigation** | [**Customer**](Customer.md) |  | [optional] [default to null]
 **neighborhoodNavigation** | [**Neighborhood**](Neighborhood.md) |  | [optional] [default to null]
+**customerDefaultAddressNavigation** | [**BuiltList&lt;Customer&gt;**](Customer.md) |  | [optional] [default to const []]
+**customerInvoiceAddressNavigation** | [**BuiltList&lt;Customer&gt;**](Customer.md) |  | [optional] [default to const []]
 **orderBillingAddressNavigation** | [**BuiltList&lt;Order&gt;**](Order.md) |  | [optional] [default to const []]
 **orderDeliveryAddressNavigation** | [**BuiltList&lt;Order&gt;**](Order.md) |  | [optional] [default to const []]
 

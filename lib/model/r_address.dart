@@ -77,6 +77,26 @@ abstract class RAddress implements Built<RAddress, RAddressBuilder> {
         @nullable
     @BuiltValueField(wireName: r'customerSurname')
     String get customerSurname;
+    
+        @nullable
+    @BuiltValueField(wireName: r'isindividual')
+    bool get isindividual;
+    
+        @nullable
+    @BuiltValueField(wireName: r'companyName')
+    String get companyName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'taxOffice')
+    String get taxOffice;
+    
+        @nullable
+    @BuiltValueField(wireName: r'taxNumber')
+    String get taxNumber;
+    
+        @nullable
+    @BuiltValueField(wireName: r'phoneNumber')
+    String get phoneNumber;
 
     // Boilerplate code needed to wire-up generated code
     RAddress._();

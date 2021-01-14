@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCatalogImportCategoriesFromOlimposPost**
-> apiCatalogImportCategoriesFromOlimposPost()
+> apiCatalogImportCategoriesFromOlimposPost(region)
 
 
 
@@ -168,16 +168,20 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CatalogApi();
+var region = 56; // int | 
 
 try { 
-    api_instance.apiCatalogImportCategoriesFromOlimposPost();
+    api_instance.apiCatalogImportCategoriesFromOlimposPost(region);
 } catch (e) {
     print("Exception when calling CatalogApi->apiCatalogImportCategoriesFromOlimposPost: $e\n");
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 

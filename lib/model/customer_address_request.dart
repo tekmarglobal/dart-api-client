@@ -51,6 +51,22 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
     String get customerSurname;
     
         @nullable
+    @BuiltValueField(wireName: r'latitude')
+    double get latitude;
+    
+        @nullable
+    @BuiltValueField(wireName: r'longitude')
+    double get longitude;
+    
+        @nullable
+    @BuiltValueField(wireName: r'street')
+    String get street;
+    
+        @nullable
+    @BuiltValueField(wireName: r'isindividual')
+    bool get isindividual;
+    
+        @nullable
     @BuiltValueField(wireName: r'companyName')
     String get companyName;
     
@@ -63,16 +79,8 @@ abstract class CustomerAddressRequest implements Built<CustomerAddressRequest, C
     String get taxNumber;
     
         @nullable
-    @BuiltValueField(wireName: r'latitude')
-    double get latitude;
-    
-        @nullable
-    @BuiltValueField(wireName: r'longitude')
-    double get longitude;
-    
-        @nullable
-    @BuiltValueField(wireName: r'street')
-    String get street;
+    @BuiltValueField(wireName: r'phoneNumber')
+    String get phoneNumber;
 
     // Boilerplate code needed to wire-up generated code
     CustomerAddressRequest._();

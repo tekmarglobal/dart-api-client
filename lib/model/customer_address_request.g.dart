@@ -90,6 +90,30 @@ class _$CustomerAddressRequestSerializer
         ..add(serializers.serialize(object.customerSurname,
             specifiedType: const FullType(String)));
     }
+    if (object.latitude != null) {
+      result
+        ..add('latitude')
+        ..add(serializers.serialize(object.latitude,
+            specifiedType: const FullType(double)));
+    }
+    if (object.longitude != null) {
+      result
+        ..add('longitude')
+        ..add(serializers.serialize(object.longitude,
+            specifiedType: const FullType(double)));
+    }
+    if (object.street != null) {
+      result
+        ..add('street')
+        ..add(serializers.serialize(object.street,
+            specifiedType: const FullType(String)));
+    }
+    if (object.isindividual != null) {
+      result
+        ..add('isindividual')
+        ..add(serializers.serialize(object.isindividual,
+            specifiedType: const FullType(bool)));
+    }
     if (object.companyName != null) {
       result
         ..add('companyName')
@@ -108,22 +132,10 @@ class _$CustomerAddressRequestSerializer
         ..add(serializers.serialize(object.taxNumber,
             specifiedType: const FullType(String)));
     }
-    if (object.latitude != null) {
+    if (object.phoneNumber != null) {
       result
-        ..add('latitude')
-        ..add(serializers.serialize(object.latitude,
-            specifiedType: const FullType(double)));
-    }
-    if (object.longitude != null) {
-      result
-        ..add('longitude')
-        ..add(serializers.serialize(object.longitude,
-            specifiedType: const FullType(double)));
-    }
-    if (object.street != null) {
-      result
-        ..add('street')
-        ..add(serializers.serialize(object.street,
+        ..add('phoneNumber')
+        ..add(serializers.serialize(object.phoneNumber,
             specifiedType: const FullType(String)));
     }
     return result;
@@ -185,6 +197,22 @@ class _$CustomerAddressRequestSerializer
           result.customerSurname = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'latitude':
+          result.latitude = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
+        case 'longitude':
+          result.longitude = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
+        case 'street':
+          result.street = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'isindividual':
+          result.isindividual = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'companyName':
           result.companyName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -197,16 +225,8 @@ class _$CustomerAddressRequestSerializer
           result.taxNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'latitude':
-          result.latitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'longitude':
-          result.longitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'street':
-          result.street = serializers.deserialize(value,
+        case 'phoneNumber':
+          result.phoneNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -240,17 +260,21 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
   @override
   final String customerSurname;
   @override
+  final double latitude;
+  @override
+  final double longitude;
+  @override
+  final String street;
+  @override
+  final bool isindividual;
+  @override
   final String companyName;
   @override
   final String taxOffice;
   @override
   final String taxNumber;
   @override
-  final double latitude;
-  @override
-  final double longitude;
-  @override
-  final String street;
+  final String phoneNumber;
 
   factory _$CustomerAddressRequest(
           [void Function(CustomerAddressRequestBuilder) updates]) =>
@@ -268,12 +292,14 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
       this.description,
       this.customerName,
       this.customerSurname,
+      this.latitude,
+      this.longitude,
+      this.street,
+      this.isindividual,
       this.companyName,
       this.taxOffice,
       this.taxNumber,
-      this.latitude,
-      this.longitude,
-      this.street})
+      this.phoneNumber})
       : super._();
 
   @override
@@ -300,12 +326,14 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
         description == other.description &&
         customerName == other.customerName &&
         customerSurname == other.customerSurname &&
+        latitude == other.latitude &&
+        longitude == other.longitude &&
+        street == other.street &&
+        isindividual == other.isindividual &&
         companyName == other.companyName &&
         taxOffice == other.taxOffice &&
         taxNumber == other.taxNumber &&
-        latitude == other.latitude &&
-        longitude == other.longitude &&
-        street == other.street;
+        phoneNumber == other.phoneNumber;
   }
 
   @override
@@ -327,28 +355,33 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        adressId
+                                                                        $jc(
+                                                                            $jc(
+                                                                                0,
+                                                                                adressId
+                                                                                    .hashCode),
+                                                                            name
+                                                                                .hashCode),
+                                                                        active
                                                                             .hashCode),
-                                                                    name
+                                                                    neighborhood
                                                                         .hashCode),
-                                                                active
+                                                                building
                                                                     .hashCode),
-                                                            neighborhood
-                                                                .hashCode),
-                                                        building.hashCode),
-                                                    floor.hashCode),
-                                                door.hashCode),
-                                            postalCode.hashCode),
-                                        description.hashCode),
-                                    customerName.hashCode),
-                                customerSurname.hashCode),
-                            companyName.hashCode),
-                        taxOffice.hashCode),
-                    taxNumber.hashCode),
-                latitude.hashCode),
-            longitude.hashCode),
-        street.hashCode));
+                                                            floor.hashCode),
+                                                        door.hashCode),
+                                                    postalCode.hashCode),
+                                                description.hashCode),
+                                            customerName.hashCode),
+                                        customerSurname.hashCode),
+                                    latitude.hashCode),
+                                longitude.hashCode),
+                            street.hashCode),
+                        isindividual.hashCode),
+                    companyName.hashCode),
+                taxOffice.hashCode),
+            taxNumber.hashCode),
+        phoneNumber.hashCode));
   }
 
   @override
@@ -365,12 +398,14 @@ class _$CustomerAddressRequest extends CustomerAddressRequest {
           ..add('description', description)
           ..add('customerName', customerName)
           ..add('customerSurname', customerSurname)
+          ..add('latitude', latitude)
+          ..add('longitude', longitude)
+          ..add('street', street)
+          ..add('isindividual', isindividual)
           ..add('companyName', companyName)
           ..add('taxOffice', taxOffice)
           ..add('taxNumber', taxNumber)
-          ..add('latitude', latitude)
-          ..add('longitude', longitude)
-          ..add('street', street))
+          ..add('phoneNumber', phoneNumber))
         .toString();
   }
 }
@@ -424,6 +459,22 @@ class CustomerAddressRequestBuilder
   set customerSurname(String customerSurname) =>
       _$this._customerSurname = customerSurname;
 
+  double _latitude;
+  double get latitude => _$this._latitude;
+  set latitude(double latitude) => _$this._latitude = latitude;
+
+  double _longitude;
+  double get longitude => _$this._longitude;
+  set longitude(double longitude) => _$this._longitude = longitude;
+
+  String _street;
+  String get street => _$this._street;
+  set street(String street) => _$this._street = street;
+
+  bool _isindividual;
+  bool get isindividual => _$this._isindividual;
+  set isindividual(bool isindividual) => _$this._isindividual = isindividual;
+
   String _companyName;
   String get companyName => _$this._companyName;
   set companyName(String companyName) => _$this._companyName = companyName;
@@ -436,17 +487,9 @@ class CustomerAddressRequestBuilder
   String get taxNumber => _$this._taxNumber;
   set taxNumber(String taxNumber) => _$this._taxNumber = taxNumber;
 
-  double _latitude;
-  double get latitude => _$this._latitude;
-  set latitude(double latitude) => _$this._latitude = latitude;
-
-  double _longitude;
-  double get longitude => _$this._longitude;
-  set longitude(double longitude) => _$this._longitude = longitude;
-
-  String _street;
-  String get street => _$this._street;
-  set street(String street) => _$this._street = street;
+  String _phoneNumber;
+  String get phoneNumber => _$this._phoneNumber;
+  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
   CustomerAddressRequestBuilder();
 
@@ -463,12 +506,14 @@ class CustomerAddressRequestBuilder
       _description = _$v.description;
       _customerName = _$v.customerName;
       _customerSurname = _$v.customerSurname;
-      _companyName = _$v.companyName;
-      _taxOffice = _$v.taxOffice;
-      _taxNumber = _$v.taxNumber;
       _latitude = _$v.latitude;
       _longitude = _$v.longitude;
       _street = _$v.street;
+      _isindividual = _$v.isindividual;
+      _companyName = _$v.companyName;
+      _taxOffice = _$v.taxOffice;
+      _taxNumber = _$v.taxNumber;
+      _phoneNumber = _$v.phoneNumber;
       _$v = null;
     }
     return this;
@@ -502,12 +547,14 @@ class CustomerAddressRequestBuilder
             description: description,
             customerName: customerName,
             customerSurname: customerSurname,
+            latitude: latitude,
+            longitude: longitude,
+            street: street,
+            isindividual: isindividual,
             companyName: companyName,
             taxOffice: taxOffice,
             taxNumber: taxNumber,
-            latitude: latitude,
-            longitude: longitude,
-            street: street);
+            phoneNumber: phoneNumber);
     replace(_$result);
     return _$result;
   }

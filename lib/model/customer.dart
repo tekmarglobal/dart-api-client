@@ -92,6 +92,22 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
     String get identificationNumber;
     
         @nullable
+    @BuiltValueField(wireName: r'defaultAddress')
+    int get defaultAddress;
+    
+        @nullable
+    @BuiltValueField(wireName: r'invoiceAddress')
+    int get invoiceAddress;
+    
+        @nullable
+    @BuiltValueField(wireName: r'defaultAddressNavigation')
+    Address get defaultAddressNavigation;
+    
+        @nullable
+    @BuiltValueField(wireName: r'invoiceAddressNavigation')
+    Address get invoiceAddressNavigation;
+    
+        @nullable
     @BuiltValueField(wireName: r'address')
     BuiltList<Address> get address;
     

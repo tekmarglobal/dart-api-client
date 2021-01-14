@@ -138,6 +138,18 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
+    if (object.isindividual != null) {
+      result
+        ..add('isindividual')
+        ..add(serializers.serialize(object.isindividual,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.phoneNumber != null) {
+      result
+        ..add('phoneNumber')
+        ..add(serializers.serialize(object.phoneNumber,
+            specifiedType: const FullType(String)));
+    }
     if (object.customerNavigation != null) {
       result
         ..add('customerNavigation')
@@ -149,6 +161,20 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
         ..add('neighborhoodNavigation')
         ..add(serializers.serialize(object.neighborhoodNavigation,
             specifiedType: const FullType(Neighborhood)));
+    }
+    if (object.customerDefaultAddressNavigation != null) {
+      result
+        ..add('customerDefaultAddressNavigation')
+        ..add(serializers.serialize(object.customerDefaultAddressNavigation,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(Customer)])));
+    }
+    if (object.customerInvoiceAddressNavigation != null) {
+      result
+        ..add('customerInvoiceAddressNavigation')
+        ..add(serializers.serialize(object.customerInvoiceAddressNavigation,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(Customer)])));
     }
     if (object.orderBillingAddressNavigation != null) {
       result
@@ -258,6 +284,14 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'isindividual':
+          result.isindividual = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'phoneNumber':
+          result.phoneNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'customerNavigation':
           result.customerNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Customer)) as Customer);
@@ -265,6 +299,20 @@ class _$AddressSerializer implements StructuredSerializer<Address> {
         case 'neighborhoodNavigation':
           result.neighborhoodNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Neighborhood)) as Neighborhood);
+          break;
+        case 'customerDefaultAddressNavigation':
+          result.customerDefaultAddressNavigation.replace(
+              serializers.deserialize(value,
+                      specifiedType: const FullType(
+                          BuiltList, const [const FullType(Customer)]))
+                  as BuiltList<Object>);
+          break;
+        case 'customerInvoiceAddressNavigation':
+          result.customerInvoiceAddressNavigation.replace(
+              serializers.deserialize(value,
+                      specifiedType: const FullType(
+                          BuiltList, const [const FullType(Customer)]))
+                  as BuiltList<Object>);
           break;
         case 'orderBillingAddressNavigation':
           result.orderBillingAddressNavigation.replace(serializers.deserialize(
@@ -329,9 +377,17 @@ class _$Address extends Address {
   @override
   final int optimisticLockField;
   @override
+  final bool isindividual;
+  @override
+  final String phoneNumber;
+  @override
   final Customer customerNavigation;
   @override
   final Neighborhood neighborhoodNavigation;
+  @override
+  final BuiltList<Customer> customerDefaultAddressNavigation;
+  @override
+  final BuiltList<Customer> customerInvoiceAddressNavigation;
   @override
   final BuiltList<Order> orderBillingAddressNavigation;
   @override
@@ -361,8 +417,12 @@ class _$Address extends Address {
       this.longitude,
       this.latitude,
       this.optimisticLockField,
+      this.isindividual,
+      this.phoneNumber,
       this.customerNavigation,
       this.neighborhoodNavigation,
+      this.customerDefaultAddressNavigation,
+      this.customerInvoiceAddressNavigation,
       this.orderBillingAddressNavigation,
       this.orderDeliveryAddressNavigation})
       : super._();
@@ -398,8 +458,14 @@ class _$Address extends Address {
         longitude == other.longitude &&
         latitude == other.latitude &&
         optimisticLockField == other.optimisticLockField &&
+        isindividual == other.isindividual &&
+        phoneNumber == other.phoneNumber &&
         customerNavigation == other.customerNavigation &&
         neighborhoodNavigation == other.neighborhoodNavigation &&
+        customerDefaultAddressNavigation ==
+            other.customerDefaultAddressNavigation &&
+        customerInvoiceAddressNavigation ==
+            other.customerInvoiceAddressNavigation &&
         orderBillingAddressNavigation == other.orderBillingAddressNavigation &&
         orderDeliveryAddressNavigation == other.orderDeliveryAddressNavigation;
   }
@@ -424,24 +490,24 @@ class _$Address extends Address {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), customer.hashCode), active.hashCode), neighborhood.hashCode),
-                                                                                fullAddress.hashCode),
-                                                                            street.hashCode),
-                                                                        building.hashCode),
-                                                                    floor.hashCode),
-                                                                door.hashCode),
-                                                            postalCode.hashCode),
-                                                        description.hashCode),
-                                                    customerName.hashCode),
-                                                customerSurname.hashCode),
-                                            companyName.hashCode),
-                                        taxOffice.hashCode),
-                                    taxNumber.hashCode),
-                                longitude.hashCode),
-                            latitude.hashCode),
-                        optimisticLockField.hashCode),
-                    customerNavigation.hashCode),
-                neighborhoodNavigation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), customer.hashCode), active.hashCode), neighborhood.hashCode), fullAddress.hashCode), street.hashCode), building.hashCode), floor.hashCode),
+                                                                                door.hashCode),
+                                                                            postalCode.hashCode),
+                                                                        description.hashCode),
+                                                                    customerName.hashCode),
+                                                                customerSurname.hashCode),
+                                                            companyName.hashCode),
+                                                        taxOffice.hashCode),
+                                                    taxNumber.hashCode),
+                                                longitude.hashCode),
+                                            latitude.hashCode),
+                                        optimisticLockField.hashCode),
+                                    isindividual.hashCode),
+                                phoneNumber.hashCode),
+                            customerNavigation.hashCode),
+                        neighborhoodNavigation.hashCode),
+                    customerDefaultAddressNavigation.hashCode),
+                customerInvoiceAddressNavigation.hashCode),
             orderBillingAddressNavigation.hashCode),
         orderDeliveryAddressNavigation.hashCode));
   }
@@ -469,8 +535,14 @@ class _$Address extends Address {
           ..add('longitude', longitude)
           ..add('latitude', latitude)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('isindividual', isindividual)
+          ..add('phoneNumber', phoneNumber)
           ..add('customerNavigation', customerNavigation)
           ..add('neighborhoodNavigation', neighborhoodNavigation)
+          ..add('customerDefaultAddressNavigation',
+              customerDefaultAddressNavigation)
+          ..add('customerInvoiceAddressNavigation',
+              customerInvoiceAddressNavigation)
           ..add('orderBillingAddressNavigation', orderBillingAddressNavigation)
           ..add(
               'orderDeliveryAddressNavigation', orderDeliveryAddressNavigation))
@@ -563,6 +635,14 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
+  bool _isindividual;
+  bool get isindividual => _$this._isindividual;
+  set isindividual(bool isindividual) => _$this._isindividual = isindividual;
+
+  String _phoneNumber;
+  String get phoneNumber => _$this._phoneNumber;
+  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
+
   CustomerBuilder _customerNavigation;
   CustomerBuilder get customerNavigation =>
       _$this._customerNavigation ??= new CustomerBuilder();
@@ -574,6 +654,22 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
       _$this._neighborhoodNavigation ??= new NeighborhoodBuilder();
   set neighborhoodNavigation(NeighborhoodBuilder neighborhoodNavigation) =>
       _$this._neighborhoodNavigation = neighborhoodNavigation;
+
+  ListBuilder<Customer> _customerDefaultAddressNavigation;
+  ListBuilder<Customer> get customerDefaultAddressNavigation =>
+      _$this._customerDefaultAddressNavigation ??= new ListBuilder<Customer>();
+  set customerDefaultAddressNavigation(
+          ListBuilder<Customer> customerDefaultAddressNavigation) =>
+      _$this._customerDefaultAddressNavigation =
+          customerDefaultAddressNavigation;
+
+  ListBuilder<Customer> _customerInvoiceAddressNavigation;
+  ListBuilder<Customer> get customerInvoiceAddressNavigation =>
+      _$this._customerInvoiceAddressNavigation ??= new ListBuilder<Customer>();
+  set customerInvoiceAddressNavigation(
+          ListBuilder<Customer> customerInvoiceAddressNavigation) =>
+      _$this._customerInvoiceAddressNavigation =
+          customerInvoiceAddressNavigation;
 
   ListBuilder<Order> _orderBillingAddressNavigation;
   ListBuilder<Order> get orderBillingAddressNavigation =>
@@ -613,8 +709,14 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
       _longitude = _$v.longitude;
       _latitude = _$v.latitude;
       _optimisticLockField = _$v.optimisticLockField;
+      _isindividual = _$v.isindividual;
+      _phoneNumber = _$v.phoneNumber;
       _customerNavigation = _$v.customerNavigation?.toBuilder();
       _neighborhoodNavigation = _$v.neighborhoodNavigation?.toBuilder();
+      _customerDefaultAddressNavigation =
+          _$v.customerDefaultAddressNavigation?.toBuilder();
+      _customerInvoiceAddressNavigation =
+          _$v.customerInvoiceAddressNavigation?.toBuilder();
       _orderBillingAddressNavigation =
           _$v.orderBillingAddressNavigation?.toBuilder();
       _orderDeliveryAddressNavigation =
@@ -663,8 +765,14 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
               longitude: longitude,
               latitude: latitude,
               optimisticLockField: optimisticLockField,
+              isindividual: isindividual,
+              phoneNumber: phoneNumber,
               customerNavigation: _customerNavigation?.build(),
               neighborhoodNavigation: _neighborhoodNavigation?.build(),
+              customerDefaultAddressNavigation:
+                  _customerDefaultAddressNavigation?.build(),
+              customerInvoiceAddressNavigation:
+                  _customerInvoiceAddressNavigation?.build(),
               orderBillingAddressNavigation:
                   _orderBillingAddressNavigation?.build(),
               orderDeliveryAddressNavigation:
@@ -676,6 +784,10 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
         _customerNavigation?.build();
         _$failedField = 'neighborhoodNavigation';
         _neighborhoodNavigation?.build();
+        _$failedField = 'customerDefaultAddressNavigation';
+        _customerDefaultAddressNavigation?.build();
+        _$failedField = 'customerInvoiceAddressNavigation';
+        _customerInvoiceAddressNavigation?.build();
         _$failedField = 'orderBillingAddressNavigation';
         _orderBillingAddressNavigation?.build();
         _$failedField = 'orderDeliveryAddressNavigation';

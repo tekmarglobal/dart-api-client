@@ -132,6 +132,30 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
         ..add(serializers.serialize(object.identificationNumber,
             specifiedType: const FullType(String)));
     }
+    if (object.defaultAddress != null) {
+      result
+        ..add('defaultAddress')
+        ..add(serializers.serialize(object.defaultAddress,
+            specifiedType: const FullType(int)));
+    }
+    if (object.invoiceAddress != null) {
+      result
+        ..add('invoiceAddress')
+        ..add(serializers.serialize(object.invoiceAddress,
+            specifiedType: const FullType(int)));
+    }
+    if (object.defaultAddressNavigation != null) {
+      result
+        ..add('defaultAddressNavigation')
+        ..add(serializers.serialize(object.defaultAddressNavigation,
+            specifiedType: const FullType(Address)));
+    }
+    if (object.invoiceAddressNavigation != null) {
+      result
+        ..add('invoiceAddressNavigation')
+        ..add(serializers.serialize(object.invoiceAddressNavigation,
+            specifiedType: const FullType(Address)));
+    }
     if (object.address != null) {
       result
         ..add('address')
@@ -278,6 +302,22 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
           result.identificationNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'defaultAddress':
+          result.defaultAddress = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'invoiceAddress':
+          result.invoiceAddress = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'defaultAddressNavigation':
+          result.defaultAddressNavigation.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Address)) as Address);
+          break;
+        case 'invoiceAddressNavigation':
+          result.invoiceAddressNavigation.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Address)) as Address);
+          break;
         case 'address':
           result.address.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -373,6 +413,14 @@ class _$Customer extends Customer {
   @override
   final String identificationNumber;
   @override
+  final int defaultAddress;
+  @override
+  final int invoiceAddress;
+  @override
+  final Address defaultAddressNavigation;
+  @override
+  final Address invoiceAddressNavigation;
+  @override
   final BuiltList<Address> address;
   @override
   final BuiltList<AgreementLog> agreementLog;
@@ -412,6 +460,10 @@ class _$Customer extends Customer {
       this.companyTaxName,
       this.companyTaxNumber,
       this.identificationNumber,
+      this.defaultAddress,
+      this.invoiceAddress,
+      this.defaultAddressNavigation,
+      this.invoiceAddressNavigation,
       this.address,
       this.agreementLog,
       this.cart,
@@ -452,6 +504,10 @@ class _$Customer extends Customer {
         companyTaxName == other.companyTaxName &&
         companyTaxNumber == other.companyTaxNumber &&
         identificationNumber == other.identificationNumber &&
+        defaultAddress == other.defaultAddress &&
+        invoiceAddress == other.invoiceAddress &&
+        defaultAddressNavigation == other.defaultAddressNavigation &&
+        invoiceAddressNavigation == other.invoiceAddressNavigation &&
         address == other.address &&
         agreementLog == other.agreementLog &&
         cart == other.cart &&
@@ -482,18 +538,18 @@ class _$Customer extends Customer {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode),
-                                                                                gender.hashCode),
-                                                                            password.hashCode),
-                                                                        smsVerificationCode.hashCode),
-                                                                    smsVerificationSendDate.hashCode),
-                                                                anonymous.hashCode),
-                                                            optimisticLockField.hashCode),
-                                                        allowCampaign.hashCode),
-                                                    companyName.hashCode),
-                                                companyTaxName.hashCode),
-                                            companyTaxNumber.hashCode),
-                                        identificationNumber.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode),
+                                                                                anonymous.hashCode),
+                                                                            optimisticLockField.hashCode),
+                                                                        allowCampaign.hashCode),
+                                                                    companyName.hashCode),
+                                                                companyTaxName.hashCode),
+                                                            companyTaxNumber.hashCode),
+                                                        identificationNumber.hashCode),
+                                                    defaultAddress.hashCode),
+                                                invoiceAddress.hashCode),
+                                            defaultAddressNavigation.hashCode),
+                                        invoiceAddressNavigation.hashCode),
                                     address.hashCode),
                                 agreementLog.hashCode),
                             cart.hashCode),
@@ -526,6 +582,10 @@ class _$Customer extends Customer {
           ..add('companyTaxName', companyTaxName)
           ..add('companyTaxNumber', companyTaxNumber)
           ..add('identificationNumber', identificationNumber)
+          ..add('defaultAddress', defaultAddress)
+          ..add('invoiceAddress', invoiceAddress)
+          ..add('defaultAddressNavigation', defaultAddressNavigation)
+          ..add('invoiceAddressNavigation', invoiceAddressNavigation)
           ..add('address', address)
           ..add('agreementLog', agreementLog)
           ..add('cart', cart)
@@ -624,6 +684,28 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
   set identificationNumber(String identificationNumber) =>
       _$this._identificationNumber = identificationNumber;
 
+  int _defaultAddress;
+  int get defaultAddress => _$this._defaultAddress;
+  set defaultAddress(int defaultAddress) =>
+      _$this._defaultAddress = defaultAddress;
+
+  int _invoiceAddress;
+  int get invoiceAddress => _$this._invoiceAddress;
+  set invoiceAddress(int invoiceAddress) =>
+      _$this._invoiceAddress = invoiceAddress;
+
+  AddressBuilder _defaultAddressNavigation;
+  AddressBuilder get defaultAddressNavigation =>
+      _$this._defaultAddressNavigation ??= new AddressBuilder();
+  set defaultAddressNavigation(AddressBuilder defaultAddressNavigation) =>
+      _$this._defaultAddressNavigation = defaultAddressNavigation;
+
+  AddressBuilder _invoiceAddressNavigation;
+  AddressBuilder get invoiceAddressNavigation =>
+      _$this._invoiceAddressNavigation ??= new AddressBuilder();
+  set invoiceAddressNavigation(AddressBuilder invoiceAddressNavigation) =>
+      _$this._invoiceAddressNavigation = invoiceAddressNavigation;
+
   ListBuilder<Address> _address;
   ListBuilder<Address> get address =>
       _$this._address ??= new ListBuilder<Address>();
@@ -690,6 +772,10 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _companyTaxName = _$v.companyTaxName;
       _companyTaxNumber = _$v.companyTaxNumber;
       _identificationNumber = _$v.identificationNumber;
+      _defaultAddress = _$v.defaultAddress;
+      _invoiceAddress = _$v.invoiceAddress;
+      _defaultAddressNavigation = _$v.defaultAddressNavigation?.toBuilder();
+      _invoiceAddressNavigation = _$v.invoiceAddressNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
       _agreementLog = _$v.agreementLog?.toBuilder();
       _cart = _$v.cart?.toBuilder();
@@ -741,6 +827,10 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               companyTaxName: companyTaxName,
               companyTaxNumber: companyTaxNumber,
               identificationNumber: identificationNumber,
+              defaultAddress: defaultAddress,
+              invoiceAddress: invoiceAddress,
+              defaultAddressNavigation: _defaultAddressNavigation?.build(),
+              invoiceAddressNavigation: _invoiceAddressNavigation?.build(),
               address: _address?.build(),
               agreementLog: _agreementLog?.build(),
               cart: _cart?.build(),
@@ -752,6 +842,10 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'defaultAddressNavigation';
+        _defaultAddressNavigation?.build();
+        _$failedField = 'invoiceAddressNavigation';
+        _invoiceAddressNavigation?.build();
         _$failedField = 'address';
         _address?.build();
         _$failedField = 'agreementLog';

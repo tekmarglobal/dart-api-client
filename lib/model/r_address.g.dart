@@ -126,6 +126,36 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
         ..add(serializers.serialize(object.customerSurname,
             specifiedType: const FullType(String)));
     }
+    if (object.isindividual != null) {
+      result
+        ..add('isindividual')
+        ..add(serializers.serialize(object.isindividual,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.companyName != null) {
+      result
+        ..add('companyName')
+        ..add(serializers.serialize(object.companyName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.taxOffice != null) {
+      result
+        ..add('taxOffice')
+        ..add(serializers.serialize(object.taxOffice,
+            specifiedType: const FullType(String)));
+    }
+    if (object.taxNumber != null) {
+      result
+        ..add('taxNumber')
+        ..add(serializers.serialize(object.taxNumber,
+            specifiedType: const FullType(String)));
+    }
+    if (object.phoneNumber != null) {
+      result
+        ..add('phoneNumber')
+        ..add(serializers.serialize(object.phoneNumber,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -212,6 +242,26 @@ class _$RAddressSerializer implements StructuredSerializer<RAddress> {
           result.customerSurname = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'isindividual':
+          result.isindividual = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'companyName':
+          result.companyName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'taxOffice':
+          result.taxOffice = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'taxNumber':
+          result.taxNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'phoneNumber':
+          result.phoneNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -256,6 +306,16 @@ class _$RAddress extends RAddress {
   final String customerName;
   @override
   final String customerSurname;
+  @override
+  final bool isindividual;
+  @override
+  final String companyName;
+  @override
+  final String taxOffice;
+  @override
+  final String taxNumber;
+  @override
+  final String phoneNumber;
 
   factory _$RAddress([void Function(RAddressBuilder) updates]) =>
       (new RAddressBuilder()..update(updates)).build();
@@ -278,7 +338,12 @@ class _$RAddress extends RAddress {
       this.name,
       this.street,
       this.customerName,
-      this.customerSurname})
+      this.customerSurname,
+      this.isindividual,
+      this.companyName,
+      this.taxOffice,
+      this.taxNumber,
+      this.phoneNumber})
       : super._();
 
   @override
@@ -309,7 +374,12 @@ class _$RAddress extends RAddress {
         name == other.name &&
         street == other.street &&
         customerName == other.customerName &&
-        customerSurname == other.customerSurname;
+        customerSurname == other.customerSurname &&
+        isindividual == other.isindividual &&
+        companyName == other.companyName &&
+        taxOffice == other.taxOffice &&
+        taxNumber == other.taxNumber &&
+        phoneNumber == other.phoneNumber;
   }
 
   @override
@@ -332,29 +402,26 @@ class _$RAddress extends RAddress {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            adressId
-                                                                                .hashCode),
-                                                                        customerId
-                                                                            .hashCode),
-                                                                    fullAddress
-                                                                        .hashCode),
-                                                                building
-                                                                    .hashCode),
-                                                            floor.hashCode),
-                                                        door.hashCode),
-                                                    postalCode.hashCode),
-                                                description.hashCode),
-                                            neighborhoodId.hashCode),
-                                        neighborhoodName.hashCode),
-                                    cityId.hashCode),
-                                cityName.hashCode),
-                            countyId.hashCode),
-                        countyName.hashCode),
-                    name.hashCode),
-                street.hashCode),
-            customerName.hashCode),
-        customerSurname.hashCode));
+                                                                            $jc($jc($jc($jc($jc(0, adressId.hashCode), customerId.hashCode), fullAddress.hashCode), building.hashCode),
+                                                                                floor.hashCode),
+                                                                            door.hashCode),
+                                                                        postalCode.hashCode),
+                                                                    description.hashCode),
+                                                                neighborhoodId.hashCode),
+                                                            neighborhoodName.hashCode),
+                                                        cityId.hashCode),
+                                                    cityName.hashCode),
+                                                countyId.hashCode),
+                                            countyName.hashCode),
+                                        name.hashCode),
+                                    street.hashCode),
+                                customerName.hashCode),
+                            customerSurname.hashCode),
+                        isindividual.hashCode),
+                    companyName.hashCode),
+                taxOffice.hashCode),
+            taxNumber.hashCode),
+        phoneNumber.hashCode));
   }
 
   @override
@@ -377,7 +444,12 @@ class _$RAddress extends RAddress {
           ..add('name', name)
           ..add('street', street)
           ..add('customerName', customerName)
-          ..add('customerSurname', customerSurname))
+          ..add('customerSurname', customerSurname)
+          ..add('isindividual', isindividual)
+          ..add('companyName', companyName)
+          ..add('taxOffice', taxOffice)
+          ..add('taxNumber', taxNumber)
+          ..add('phoneNumber', phoneNumber))
         .toString();
   }
 }
@@ -460,6 +532,26 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
   set customerSurname(String customerSurname) =>
       _$this._customerSurname = customerSurname;
 
+  bool _isindividual;
+  bool get isindividual => _$this._isindividual;
+  set isindividual(bool isindividual) => _$this._isindividual = isindividual;
+
+  String _companyName;
+  String get companyName => _$this._companyName;
+  set companyName(String companyName) => _$this._companyName = companyName;
+
+  String _taxOffice;
+  String get taxOffice => _$this._taxOffice;
+  set taxOffice(String taxOffice) => _$this._taxOffice = taxOffice;
+
+  String _taxNumber;
+  String get taxNumber => _$this._taxNumber;
+  set taxNumber(String taxNumber) => _$this._taxNumber = taxNumber;
+
+  String _phoneNumber;
+  String get phoneNumber => _$this._phoneNumber;
+  set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
+
   RAddressBuilder();
 
   RAddressBuilder get _$this {
@@ -482,6 +574,11 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
       _street = _$v.street;
       _customerName = _$v.customerName;
       _customerSurname = _$v.customerSurname;
+      _isindividual = _$v.isindividual;
+      _companyName = _$v.companyName;
+      _taxOffice = _$v.taxOffice;
+      _taxNumber = _$v.taxNumber;
+      _phoneNumber = _$v.phoneNumber;
       _$v = null;
     }
     return this;
@@ -521,7 +618,12 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
             name: name,
             street: street,
             customerName: customerName,
-            customerSurname: customerSurname);
+            customerSurname: customerSurname,
+            isindividual: isindividual,
+            companyName: companyName,
+            taxOffice: taxOffice,
+            taxNumber: taxNumber,
+            phoneNumber: phoneNumber);
     replace(_$result);
     return _$result;
   }

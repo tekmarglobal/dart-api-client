@@ -115,6 +115,20 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
         ..add(serializers.serialize(object.identificationNumber,
             specifiedType: const FullType(String)));
     }
+    if (object.defaultAddress != null) {
+      result
+        ..add('defaultAddress')
+        ..add(serializers.serialize(object.defaultAddress,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(RAddress)])));
+    }
+    if (object.invoiceAddress != null) {
+      result
+        ..add('invoiceAddress')
+        ..add(serializers.serialize(object.invoiceAddress,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(RAddress)])));
+    }
     return result;
   }
 
@@ -195,6 +209,18 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
           result.identificationNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'defaultAddress':
+          result.defaultAddress.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(RAddress)]))
+              as BuiltList<Object>);
+          break;
+        case 'invoiceAddress':
+          result.invoiceAddress.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(RAddress)]))
+              as BuiltList<Object>);
+          break;
       }
     }
 
@@ -235,6 +261,10 @@ class _$RCustomer extends RCustomer {
   final String companyTaxNumber;
   @override
   final String identificationNumber;
+  @override
+  final BuiltList<RAddress> defaultAddress;
+  @override
+  final BuiltList<RAddress> invoiceAddress;
 
   factory _$RCustomer([void Function(RCustomerBuilder) updates]) =>
       (new RCustomerBuilder()..update(updates)).build();
@@ -255,7 +285,9 @@ class _$RCustomer extends RCustomer {
       this.companyName,
       this.companyTaxName,
       this.companyTaxNumber,
-      this.identificationNumber})
+      this.identificationNumber,
+      this.defaultAddress,
+      this.invoiceAddress})
       : super._();
 
   @override
@@ -284,7 +316,9 @@ class _$RCustomer extends RCustomer {
         companyName == other.companyName &&
         companyTaxName == other.companyTaxName &&
         companyTaxNumber == other.companyTaxNumber &&
-        identificationNumber == other.identificationNumber;
+        identificationNumber == other.identificationNumber &&
+        defaultAddress == other.defaultAddress &&
+        invoiceAddress == other.invoiceAddress;
   }
 
   @override
@@ -305,26 +339,31 @@ class _$RCustomer extends RCustomer {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    id
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            id
+                                                                                .hashCode),
+                                                                        customerName
+                                                                            .hashCode),
+                                                                    customerSurname
                                                                         .hashCode),
-                                                                customerName
+                                                                birthDate
                                                                     .hashCode),
-                                                            customerSurname
-                                                                .hashCode),
-                                                        birthDate.hashCode),
-                                                    phone.hashCode),
-                                                email.hashCode),
-                                            gender.hashCode),
-                                        allowSms.hashCode),
-                                    allowEmail.hashCode),
-                                address.hashCode),
-                            registered.hashCode),
-                        lastOrder.hashCode),
-                    companyName.hashCode),
-                companyTaxName.hashCode),
-            companyTaxNumber.hashCode),
-        identificationNumber.hashCode));
+                                                            phone.hashCode),
+                                                        email.hashCode),
+                                                    gender.hashCode),
+                                                allowSms.hashCode),
+                                            allowEmail.hashCode),
+                                        address.hashCode),
+                                    registered.hashCode),
+                                lastOrder.hashCode),
+                            companyName.hashCode),
+                        companyTaxName.hashCode),
+                    companyTaxNumber.hashCode),
+                identificationNumber.hashCode),
+            defaultAddress.hashCode),
+        invoiceAddress.hashCode));
   }
 
   @override
@@ -345,7 +384,9 @@ class _$RCustomer extends RCustomer {
           ..add('companyName', companyName)
           ..add('companyTaxName', companyTaxName)
           ..add('companyTaxNumber', companyTaxNumber)
-          ..add('identificationNumber', identificationNumber))
+          ..add('identificationNumber', identificationNumber)
+          ..add('defaultAddress', defaultAddress)
+          ..add('invoiceAddress', invoiceAddress))
         .toString();
   }
 }
@@ -422,6 +463,18 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
   set identificationNumber(String identificationNumber) =>
       _$this._identificationNumber = identificationNumber;
 
+  ListBuilder<RAddress> _defaultAddress;
+  ListBuilder<RAddress> get defaultAddress =>
+      _$this._defaultAddress ??= new ListBuilder<RAddress>();
+  set defaultAddress(ListBuilder<RAddress> defaultAddress) =>
+      _$this._defaultAddress = defaultAddress;
+
+  ListBuilder<RAddress> _invoiceAddress;
+  ListBuilder<RAddress> get invoiceAddress =>
+      _$this._invoiceAddress ??= new ListBuilder<RAddress>();
+  set invoiceAddress(ListBuilder<RAddress> invoiceAddress) =>
+      _$this._invoiceAddress = invoiceAddress;
+
   RCustomerBuilder();
 
   RCustomerBuilder get _$this {
@@ -442,6 +495,8 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _companyTaxName = _$v.companyTaxName;
       _companyTaxNumber = _$v.companyTaxNumber;
       _identificationNumber = _$v.identificationNumber;
+      _defaultAddress = _$v.defaultAddress?.toBuilder();
+      _invoiceAddress = _$v.invoiceAddress?.toBuilder();
       _$v = null;
     }
     return this;
@@ -481,12 +536,19 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
               companyName: companyName,
               companyTaxName: companyTaxName,
               companyTaxNumber: companyTaxNumber,
-              identificationNumber: identificationNumber);
+              identificationNumber: identificationNumber,
+              defaultAddress: _defaultAddress?.build(),
+              invoiceAddress: _invoiceAddress?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'address';
         _address?.build();
+
+        _$failedField = 'defaultAddress';
+        _defaultAddress?.build();
+        _$failedField = 'invoiceAddress';
+        _invoiceAddress?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'RCustomer', _$failedField, e.toString());

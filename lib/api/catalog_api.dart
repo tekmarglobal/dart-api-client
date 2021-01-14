@@ -162,7 +162,7 @@ class CatalogApi {
         /// 
         ///
         /// 
-        Future<Response>apiCatalogImportCategoriesFromOlimposPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response>apiCatalogImportCategoriesFromOlimposPost({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Catalog/ImportCategoriesFromOlimpos";
 
@@ -170,6 +170,7 @@ class CatalogApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 

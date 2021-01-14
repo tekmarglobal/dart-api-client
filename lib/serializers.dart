@@ -72,6 +72,7 @@ import 'package:openapi/model/neighbor_response.dart';
 import 'package:openapi/model/neighbor_response_list_rest_result.dart';
 import 'package:openapi/model/neighbor_response_rest_result.dart';
 import 'package:openapi/model/neighborhood.dart';
+import 'package:openapi/model/new_customer_default_address.dart';
 import 'package:openapi/model/new_customer_request.dart';
 import 'package:openapi/model/object_rest_result.dart';
 import 'package:openapi/model/operating_system.dart';
@@ -133,6 +134,7 @@ import 'package:openapi/model/update_agreement_request.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/update_order_request.dart';
 import 'package:openapi/model/update_region_neighborhood_request.dart';
+import 'package:openapi/model/update_timeslot_request.dart';
 import 'package:openapi/model/verify_request.dart';
 
 
@@ -205,6 +207,7 @@ NeighborResponse,
 NeighborResponseListRestResult,
 NeighborResponseRestResult,
 Neighborhood,
+NewCustomerDefaultAddress,
 NewCustomerRequest,
 ObjectRestResult,
 OperatingSystem,
@@ -266,6 +269,7 @@ UpdateAgreementRequest,
 UpdateCartRequest,
 UpdateOrderRequest,
 UpdateRegionNeighborhoodRequest,
+UpdateTimeslotRequest,
 VerifyRequest,
 
 ])
@@ -471,6 +475,9 @@ const FullType(BuiltList, const [const FullType(NeighborResponseRestResult)]),
 const FullType(BuiltList, const [const FullType(Neighborhood)]),
 () => new ListBuilder<Neighborhood>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(NewCustomerDefaultAddress)]),
+() => new ListBuilder<NewCustomerDefaultAddress>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(NewCustomerRequest)]),
 () => new ListBuilder<NewCustomerRequest>())
 ..addBuilderFactory(
@@ -653,6 +660,9 @@ const FullType(BuiltList, const [const FullType(UpdateOrderRequest)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateRegionNeighborhoodRequest)]),
 () => new ListBuilder<UpdateRegionNeighborhoodRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateTimeslotRequest)]),
+() => new ListBuilder<UpdateTimeslotRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(VerifyRequest)]),
 () => new ListBuilder<VerifyRequest>())

@@ -76,6 +76,7 @@ Class | Method | HTTP request | Description
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc//CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc//CartApi.md#apicartpost) | **post** /api/Cart | 
 *CartApi* | [**apiCartUpdateCartPost**](doc//CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
+*CartApi* | [**apiCartUpdateTimeslotPost**](doc//CartApi.md#apicartupdatetimeslotpost) | **post** /api/Cart/UpdateTimeslot | 
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
 *CatalogApi* | [**apiCatalogDeleteCategoryDelete**](doc//CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
@@ -86,6 +87,7 @@ Class | Method | HTTP request | Description
 *CustomerApi* | [**apiCustomerGetCustomerAdressesPost**](doc//CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
 *CustomerApi* | [**apiCustomerPost**](doc//CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 *CustomerApi* | [**apiCustomerUpdateAddressPost**](doc//CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
+*CustomerApi* | [**apiCustomerUpdateCustomerDefultAddressPost**](doc//CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
 *CustomerApi* | [**apiCustomerUpdateCustomerPost**](doc//CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
 *DefinitionApi* | [**apiDefinitionAgreementGet**](doc//DefinitionApi.md#apidefinitionagreementget) | **get** /api/Definition/Agreement | 
 *DefinitionApi* | [**apiDefinitionCitiesPost**](doc//DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
@@ -188,6 +190,7 @@ Class | Method | HTTP request | Description
  - [NeighborResponseListRestResult](doc//NeighborResponseListRestResult.md)
  - [NeighborResponseRestResult](doc//NeighborResponseRestResult.md)
  - [Neighborhood](doc//Neighborhood.md)
+ - [NewCustomerDefaultAddress](doc//NewCustomerDefaultAddress.md)
  - [NewCustomerRequest](doc//NewCustomerRequest.md)
  - [ObjectRestResult](doc//ObjectRestResult.md)
  - [OperatingSystem](doc//OperatingSystem.md)
@@ -249,6 +252,7 @@ Class | Method | HTTP request | Description
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
  - [UpdateRegionNeighborhoodRequest](doc//UpdateRegionNeighborhoodRequest.md)
+ - [UpdateTimeslotRequest](doc//UpdateTimeslotRequest.md)
  - [VerifyRequest](doc//VerifyRequest.md)
 
 

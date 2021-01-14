@@ -19,12 +19,14 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] [default to null]
 **customerName** | **String** |  | [optional] [default to null]
 **customerSurname** | **String** |  | [optional] [default to null]
-**companyName** | **String** |  | [optional] [default to null]
-**taxOffice** | **String** |  | [optional] [default to null]
-**taxNumber** | **String** |  | [optional] [default to null]
 **latitude** | **double** |  | [optional] [default to null]
 **longitude** | **double** |  | [optional] [default to null]
 **street** | **String** |  | [optional] [default to null]
+**isindividual** | **bool** |  | [optional] [default to null]
+**companyName** | **String** |  | [optional] [default to null]
+**taxOffice** | **String** |  | [optional] [default to null]
+**taxNumber** | **String** |  | [optional] [default to null]
+**phoneNumber** | **String** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
