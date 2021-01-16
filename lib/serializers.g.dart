@@ -375,12 +375,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(RAddress)]),
           () => new ListBuilder<RAddress>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RAddress)]),
-          () => new ListBuilder<RAddress>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RAddress)]),
-          () => new ListBuilder<RAddress>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(RBanner)]),
           () => new ListBuilder<RBanner>())
       ..addBuilderFactory(

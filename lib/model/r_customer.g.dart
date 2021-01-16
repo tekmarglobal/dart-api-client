@@ -119,15 +119,13 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
       result
         ..add('defaultAddress')
         ..add(serializers.serialize(object.defaultAddress,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(RAddress)])));
+            specifiedType: const FullType(int)));
     }
     if (object.invoiceAddress != null) {
       result
         ..add('invoiceAddress')
         ..add(serializers.serialize(object.invoiceAddress,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(RAddress)])));
+            specifiedType: const FullType(int)));
     }
     return result;
   }
@@ -210,16 +208,12 @@ class _$RCustomerSerializer implements StructuredSerializer<RCustomer> {
               specifiedType: const FullType(String)) as String;
           break;
         case 'defaultAddress':
-          result.defaultAddress.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(RAddress)]))
-              as BuiltList<Object>);
+          result.defaultAddress = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'invoiceAddress':
-          result.invoiceAddress.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(RAddress)]))
-              as BuiltList<Object>);
+          result.invoiceAddress = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
       }
     }
@@ -262,9 +256,9 @@ class _$RCustomer extends RCustomer {
   @override
   final String identificationNumber;
   @override
-  final BuiltList<RAddress> defaultAddress;
+  final int defaultAddress;
   @override
-  final BuiltList<RAddress> invoiceAddress;
+  final int invoiceAddress;
 
   factory _$RCustomer([void Function(RCustomerBuilder) updates]) =>
       (new RCustomerBuilder()..update(updates)).build();
@@ -463,16 +457,14 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
   set identificationNumber(String identificationNumber) =>
       _$this._identificationNumber = identificationNumber;
 
-  ListBuilder<RAddress> _defaultAddress;
-  ListBuilder<RAddress> get defaultAddress =>
-      _$this._defaultAddress ??= new ListBuilder<RAddress>();
-  set defaultAddress(ListBuilder<RAddress> defaultAddress) =>
+  int _defaultAddress;
+  int get defaultAddress => _$this._defaultAddress;
+  set defaultAddress(int defaultAddress) =>
       _$this._defaultAddress = defaultAddress;
 
-  ListBuilder<RAddress> _invoiceAddress;
-  ListBuilder<RAddress> get invoiceAddress =>
-      _$this._invoiceAddress ??= new ListBuilder<RAddress>();
-  set invoiceAddress(ListBuilder<RAddress> invoiceAddress) =>
+  int _invoiceAddress;
+  int get invoiceAddress => _$this._invoiceAddress;
+  set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
   RCustomerBuilder();
@@ -495,8 +487,8 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
       _companyTaxName = _$v.companyTaxName;
       _companyTaxNumber = _$v.companyTaxNumber;
       _identificationNumber = _$v.identificationNumber;
-      _defaultAddress = _$v.defaultAddress?.toBuilder();
-      _invoiceAddress = _$v.invoiceAddress?.toBuilder();
+      _defaultAddress = _$v.defaultAddress;
+      _invoiceAddress = _$v.invoiceAddress;
       _$v = null;
     }
     return this;
@@ -537,18 +529,13 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
               companyTaxName: companyTaxName,
               companyTaxNumber: companyTaxNumber,
               identificationNumber: identificationNumber,
-              defaultAddress: _defaultAddress?.build(),
-              invoiceAddress: _invoiceAddress?.build());
+              defaultAddress: defaultAddress,
+              invoiceAddress: invoiceAddress);
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'address';
         _address?.build();
-
-        _$failedField = 'defaultAddress';
-        _defaultAddress?.build();
-        _$failedField = 'invoiceAddress';
-        _invoiceAddress?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'RCustomer', _$failedField, e.toString());

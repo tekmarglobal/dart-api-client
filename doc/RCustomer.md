@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **companyTaxName** | **String** |  | [optional] [default to null]
 **companyTaxNumber** | **String** |  | [optional] [default to null]
 **identificationNumber** | **String** |  | [optional] [default to null]
-**defaultAddress** | [**BuiltList&lt;RAddress&gt;**](RAddress.md) |  | [optional] [default to const []]
-**invoiceAddress** | [**BuiltList&lt;RAddress&gt;**](RAddress.md) |  | [optional] [default to const []]
+**defaultAddress** | **int** |  | [optional] [default to null]
+**invoiceAddress** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
