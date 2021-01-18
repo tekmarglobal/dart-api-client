@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **apiAdminGenerateTimeSlotsGet**
-> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsGet()
+> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsGet(region)
 
 
 
@@ -31,9 +31,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
+var region = 56; // int | 
 
 try { 
-    var result = api_instance.apiAdminGenerateTimeSlotsGet();
+    var result = api_instance.apiAdminGenerateTimeSlotsGet(region);
     print(result);
 } catch (e) {
     print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n");
@@ -41,7 +42,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -59,7 +63,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGenerateTimeSlotsPost**
-> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsPost()
+> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsPost(region)
 
 
 
@@ -72,9 +76,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
+var region = 56; // int | 
 
 try { 
-    var result = api_instance.apiAdminGenerateTimeSlotsPost();
+    var result = api_instance.apiAdminGenerateTimeSlotsPost(region);
     print(result);
 } catch (e) {
     print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n");
@@ -82,7 +87,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 

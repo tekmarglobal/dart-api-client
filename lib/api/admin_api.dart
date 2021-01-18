@@ -22,7 +22,7 @@ class AdminApi {
         /// 
         ///
         /// 
-        Future<Response<TimeSlotResponseListRestResult>>apiAdminGenerateTimeSlotsGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<TimeSlotResponseListRestResult>>apiAdminGenerateTimeSlotsGet({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Admin/GenerateTimeSlots";
 
@@ -30,6 +30,7 @@ class AdminApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
@@ -69,7 +70,7 @@ class AdminApi {
         /// 
         ///
         /// 
-        Future<Response<TimeSlotResponseListRestResult>>apiAdminGenerateTimeSlotsPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<TimeSlotResponseListRestResult>>apiAdminGenerateTimeSlotsPost({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Admin/GenerateTimeSlots";
 
@@ -77,6 +78,7 @@ class AdminApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
