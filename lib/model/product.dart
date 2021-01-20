@@ -1,6 +1,7 @@
             import 'package:openapi/model/order_product.dart';
             import 'package:openapi/model/brand.dart';
             import 'package:openapi/model/region_product.dart';
+            import 'package:openapi/model/product_import_detail.dart';
             import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/product_image.dart';
             import 'package:openapi/model/supplier.dart';
@@ -130,6 +131,10 @@ abstract class Product implements Built<Product, ProductBuilder> {
         @nullable
     @BuiltValueField(wireName: r'productImage')
     BuiltList<ProductImage> get productImage;
+    
+        @nullable
+    @BuiltValueField(wireName: r'productImportDetail')
+    BuiltList<ProductImportDetail> get productImportDetail;
     
         @nullable
     @BuiltValueField(wireName: r'regionProduct')

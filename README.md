@@ -214,6 +214,8 @@ Class | Method | HTTP request | Description
  - [Platform](doc//Platform.md)
  - [Product](doc//Product.md)
  - [ProductImage](doc//ProductImage.md)
+ - [ProductImport](doc//ProductImport.md)
+ - [ProductImportDetail](doc//ProductImportDetail.md)
  - [ProductPrice](doc//ProductPrice.md)
  - [ProductRequest](doc//ProductRequest.md)
  - [RAddress](doc//RAddress.md)

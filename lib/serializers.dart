@@ -96,6 +96,8 @@ import 'package:openapi/model/personel_department.dart';
 import 'package:openapi/model/platform.dart';
 import 'package:openapi/model/product.dart';
 import 'package:openapi/model/product_image.dart';
+import 'package:openapi/model/product_import.dart';
+import 'package:openapi/model/product_import_detail.dart';
 import 'package:openapi/model/product_price.dart';
 import 'package:openapi/model/product_request.dart';
 import 'package:openapi/model/r_address.dart';
@@ -231,6 +233,8 @@ PersonelDepartment,
 Platform,
 Product,
 ProductImage,
+ProductImport,
+ProductImportDetail,
 ProductPrice,
 ProductRequest,
 RAddress,
@@ -546,6 +550,12 @@ const FullType(BuiltList, const [const FullType(Product)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ProductImage)]),
 () => new ListBuilder<ProductImage>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(ProductImport)]),
+() => new ListBuilder<ProductImport>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(ProductImportDetail)]),
+() => new ListBuilder<ProductImportDetail>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(ProductPrice)]),
 () => new ListBuilder<ProductPrice>())

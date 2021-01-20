@@ -199,6 +199,13 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
             specifiedType: const FullType(
                 BuiltList, const [const FullType(ProductImage)])));
     }
+    if (object.productImportDetail != null) {
+      result
+        ..add('productImportDetail')
+        ..add(serializers.serialize(object.productImportDetail,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(ProductImportDetail)])));
+    }
     if (object.regionProduct != null) {
       result
         ..add('regionProduct')
@@ -350,6 +357,12 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
                       BuiltList, const [const FullType(ProductImage)]))
               as BuiltList<Object>);
           break;
+        case 'productImportDetail':
+          result.productImportDetail.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(ProductImportDetail)]))
+              as BuiltList<Object>);
+          break;
         case 'regionProduct':
           result.regionProduct.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -423,6 +436,8 @@ class _$Product extends Product {
   @override
   final BuiltList<ProductImage> productImage;
   @override
+  final BuiltList<ProductImportDetail> productImportDetail;
+  @override
   final BuiltList<RegionProduct> regionProduct;
 
   factory _$Product([void Function(ProductBuilder) updates]) =>
@@ -458,6 +473,7 @@ class _$Product extends Product {
       this.customerFavoriteList,
       this.orderProduct,
       this.productImage,
+      this.productImportDetail,
       this.regionProduct})
       : super._();
 
@@ -503,6 +519,7 @@ class _$Product extends Product {
         customerFavoriteList == other.customerFavoriteList &&
         orderProduct == other.orderProduct &&
         productImage == other.productImage &&
+        productImportDetail == other.productImportDetail &&
         regionProduct == other.regionProduct;
   }
 
@@ -526,25 +543,25 @@ class _$Product extends Product {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode),
-                                                                                sku.hashCode),
-                                                                            desi.hashCode),
-                                                                        maxQuantity.hashCode),
-                                                                    minQuantity.hashCode),
-                                                                initalQuantity.hashCode),
-                                                            quantityStep.hashCode),
-                                                        erpId.hashCode),
-                                                    optimisticLockField.hashCode),
-                                                productUnit.hashCode),
-                                            vat.hashCode),
-                                        brandNavigation.hashCode),
-                                    supplierNavigation.hashCode),
-                                categoryProduct.hashCode),
-                            configurationBagProductNavigation.hashCode),
-                        configurationDeliveryProductNavigation.hashCode),
-                    customerFavoriteList.hashCode),
-                orderProduct.hashCode),
-            productImage.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode),
+                                                                                desi.hashCode),
+                                                                            maxQuantity.hashCode),
+                                                                        minQuantity.hashCode),
+                                                                    initalQuantity.hashCode),
+                                                                quantityStep.hashCode),
+                                                            erpId.hashCode),
+                                                        optimisticLockField.hashCode),
+                                                    productUnit.hashCode),
+                                                vat.hashCode),
+                                            brandNavigation.hashCode),
+                                        supplierNavigation.hashCode),
+                                    categoryProduct.hashCode),
+                                configurationBagProductNavigation.hashCode),
+                            configurationDeliveryProductNavigation.hashCode),
+                        customerFavoriteList.hashCode),
+                    orderProduct.hashCode),
+                productImage.hashCode),
+            productImportDetail.hashCode),
         regionProduct.hashCode));
   }
 
@@ -582,6 +599,7 @@ class _$Product extends Product {
           ..add('customerFavoriteList', customerFavoriteList)
           ..add('orderProduct', orderProduct)
           ..add('productImage', productImage)
+          ..add('productImportDetail', productImportDetail)
           ..add('regionProduct', regionProduct))
         .toString();
   }
@@ -734,6 +752,13 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   set productImage(ListBuilder<ProductImage> productImage) =>
       _$this._productImage = productImage;
 
+  ListBuilder<ProductImportDetail> _productImportDetail;
+  ListBuilder<ProductImportDetail> get productImportDetail =>
+      _$this._productImportDetail ??= new ListBuilder<ProductImportDetail>();
+  set productImportDetail(
+          ListBuilder<ProductImportDetail> productImportDetail) =>
+      _$this._productImportDetail = productImportDetail;
+
   ListBuilder<RegionProduct> _regionProduct;
   ListBuilder<RegionProduct> get regionProduct =>
       _$this._regionProduct ??= new ListBuilder<RegionProduct>();
@@ -775,6 +800,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
       _customerFavoriteList = _$v.customerFavoriteList?.toBuilder();
       _orderProduct = _$v.orderProduct?.toBuilder();
       _productImage = _$v.productImage?.toBuilder();
+      _productImportDetail = _$v.productImportDetail?.toBuilder();
       _regionProduct = _$v.regionProduct?.toBuilder();
       _$v = null;
     }
@@ -831,6 +857,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
               customerFavoriteList: _customerFavoriteList?.build(),
               orderProduct: _orderProduct?.build(),
               productImage: _productImage?.build(),
+              productImportDetail: _productImportDetail?.build(),
               regionProduct: _regionProduct?.build());
     } catch (_) {
       String _$failedField;
@@ -851,6 +878,8 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
         _orderProduct?.build();
         _$failedField = 'productImage';
         _productImage?.build();
+        _$failedField = 'productImportDetail';
+        _productImportDetail?.build();
         _$failedField = 'regionProduct';
         _regionProduct?.build();
       } catch (e) {

@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **customerFavoriteList** | [**BuiltList&lt;CustomerFavoriteList&gt;**](CustomerFavoriteList.md) |  | [optional] [default to const []]
 **orderProduct** | [**BuiltList&lt;OrderProduct&gt;**](OrderProduct.md) |  | [optional] [default to const []]
 **productImage** | [**BuiltList&lt;ProductImage&gt;**](ProductImage.md) |  | [optional] [default to const []]
+**productImportDetail** | [**BuiltList&lt;ProductImportDetail&gt;**](ProductImportDetail.md) |  | [optional] [default to const []]
 **regionProduct** | [**BuiltList&lt;RegionProduct&gt;**](RegionProduct.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
