@@ -203,7 +203,9 @@ class OrderStatusBuilder implements Builder<OrderStatus, OrderStatusBuilder> {
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
 
-  OrderStatusBuilder();
+  OrderStatusBuilder() {
+    OrderStatus._initializeBuilder(this);
+  }
 
   OrderStatusBuilder get _$this {
     if (_$v != null) {

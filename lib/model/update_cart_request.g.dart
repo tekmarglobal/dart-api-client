@@ -181,7 +181,9 @@ class UpdateCartRequestBuilder
   String get productNote => _$this._productNote;
   set productNote(String productNote) => _$this._productNote = productNote;
 
-  UpdateCartRequestBuilder();
+  UpdateCartRequestBuilder() {
+    UpdateCartRequest._initializeBuilder(this);
+  }
 
   UpdateCartRequestBuilder get _$this {
     if (_$v != null) {

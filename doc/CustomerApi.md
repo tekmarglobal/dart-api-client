@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiCustomerDeleteAddressPost(deleteAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n');
 }
 ```
 
@@ -81,7 +81,7 @@ try {
     var result = api_instance.apiCustomerGetCustomerAdressesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n');
 }
 ```
 
@@ -122,7 +122,7 @@ try {
     var result = api_instance.apiCustomerPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerPost: $e\n');
 }
 ```
 
@@ -164,7 +164,7 @@ try {
     var result = api_instance.apiCustomerUpdateAddressPost(customerAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n');
 }
 ```
 
@@ -209,7 +209,7 @@ try {
     var result = api_instance.apiCustomerUpdateCustomerDefultAddressPost(newCustomerDefaultAddress);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n');
 }
 ```
 
@@ -254,7 +254,7 @@ try {
     var result = api_instance.apiCustomerUpdateCustomerPost(newCustomerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n');
 }
 ```
 

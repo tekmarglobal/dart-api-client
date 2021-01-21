@@ -265,7 +265,9 @@ class TimeSlotBuilder implements Builder<TimeSlot, TimeSlotBuilder> {
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
 
-  TimeSlotBuilder();
+  TimeSlotBuilder() {
+    TimeSlot._initializeBuilder(this);
+  }
 
   TimeSlotBuilder get _$this {
     if (_$v != null) {

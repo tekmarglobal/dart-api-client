@@ -130,7 +130,9 @@ class RCartProductBuilder
   double get quantity => _$this._quantity;
   set quantity(double quantity) => _$this._quantity = quantity;
 
-  RCartProductBuilder();
+  RCartProductBuilder() {
+    RCartProduct._initializeBuilder(this);
+  }
 
   RCartProductBuilder get _$this {
     if (_$v != null) {

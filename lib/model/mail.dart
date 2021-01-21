@@ -1,60 +1,60 @@
-        import 'package:built_value/built_value.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'mail.g.dart';
 
 abstract class Mail implements Built<Mail, MailBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailDate')
     DateTime get mailDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailSubject')
     String get mailSubject;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailBody')
     String get mailBody;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailReceiver')
     String get mailReceiver;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailCc')
     String get mailCc;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'status')
     bool get status;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'statusText')
     String get statusText;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailPeriod')
     int get mailPeriod;
 
     // Boilerplate code needed to wire-up generated code
     Mail._();
 
+    static void _initializeBuilder(MailBuilder b) => b;
+
     factory Mail([updates(MailBuilder b)]) = _$Mail;
     static Serializer<Mail> get serializer => _$mailSerializer;
-
 }
 

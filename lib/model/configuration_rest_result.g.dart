@@ -142,7 +142,9 @@ class ConfigurationRestResultBuilder
   ConfigurationBuilder get data => _$this._data ??= new ConfigurationBuilder();
   set data(ConfigurationBuilder data) => _$this._data = data;
 
-  ConfigurationRestResultBuilder();
+  ConfigurationRestResultBuilder() {
+    ConfigurationRestResult._initializeBuilder(this);
+  }
 
   ConfigurationRestResultBuilder get _$this {
     if (_$v != null) {

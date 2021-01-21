@@ -1,58 +1,58 @@
-            import 'package:openapi/model/product_import.dart';
-            import 'package:openapi/model/product.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/product_import.dart';
+import 'package:openapi/model/product.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'product_import_detail.g.dart';
 
 abstract class ProductImportDetail implements Built<ProductImportDetail, ProductImportDetailBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'product')
     int get product;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'fieldName')
     String get fieldName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'oldValue')
     String get oldValue;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'newValue')
     String get newValue;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productImport')
     int get productImport;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'operationType')
     String get operationType;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productImportNavigation')
     ProductImport get productImportNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productNavigation')
     Product get productNavigation;
 
     // Boilerplate code needed to wire-up generated code
     ProductImportDetail._();
 
+    static void _initializeBuilder(ProductImportDetailBuilder b) => b;
+
     factory ProductImportDetail([updates(ProductImportDetailBuilder b)]) = _$ProductImportDetail;
     static Serializer<ProductImportDetail> get serializer => _$productImportDetailSerializer;
-
 }
 

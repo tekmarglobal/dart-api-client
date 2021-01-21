@@ -124,7 +124,9 @@ class NewCustomerDefaultAddressBuilder
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  NewCustomerDefaultAddressBuilder();
+  NewCustomerDefaultAddressBuilder() {
+    NewCustomerDefaultAddress._initializeBuilder(this);
+  }
 
   NewCustomerDefaultAddressBuilder get _$this {
     if (_$v != null) {

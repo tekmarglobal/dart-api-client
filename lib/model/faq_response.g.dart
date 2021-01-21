@@ -110,7 +110,9 @@ class FaqResponseBuilder implements Builder<FaqResponse, FaqResponseBuilder> {
   String get title => _$this._title;
   set title(String title) => _$this._title = title;
 
-  FaqResponseBuilder();
+  FaqResponseBuilder() {
+    FaqResponse._initializeBuilder(this);
+  }
 
   FaqResponseBuilder get _$this {
     if (_$v != null) {

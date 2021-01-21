@@ -275,7 +275,9 @@ class CustomerLoginAttemptBuilder
   set platformNavigation(PlatformBuilder platformNavigation) =>
       _$this._platformNavigation = platformNavigation;
 
-  CustomerLoginAttemptBuilder();
+  CustomerLoginAttemptBuilder() {
+    CustomerLoginAttempt._initializeBuilder(this);
+  }
 
   CustomerLoginAttemptBuilder get _$this {
     if (_$v != null) {

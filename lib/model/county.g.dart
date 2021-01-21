@@ -246,7 +246,9 @@ class CountyBuilder implements Builder<County, CountyBuilder> {
   set neighborhood(ListBuilder<Neighborhood> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  CountyBuilder();
+  CountyBuilder() {
+    County._initializeBuilder(this);
+  }
 
   CountyBuilder get _$this {
     if (_$v != null) {

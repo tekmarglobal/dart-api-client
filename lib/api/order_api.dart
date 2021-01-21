@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/order_response_rest_result.dart';
@@ -11,6 +9,7 @@ import 'package:openapi/model/get_order_request.dart';
 import 'package:openapi/model/order_request.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
 import 'package:openapi/model/update_order_request.dart';
+import 'package:built_collection/built_collection.dart';
 
 class OrderApi {
     final Dio _dio;
@@ -18,44 +17,66 @@ class OrderApi {
 
     OrderApi(this._dio, this._serializers);
 
-        /// 
-        ///
-        /// 
-        Future<Response<OrderResponseRestResult>>apiOrderCreateOrderPost({ OrderRequest orderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+    /// 
+    ///
+    /// 
+    Future<Response<OrderResponseRestResult>> apiOrderCreateOrderPost({ 
+        OrderRequest orderRequest,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/CreateOrder';
 
-        String _path = "/api/Order/CreateOrder";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        final List<String> contentTypes = [
+            'application/json',
+            'text/json',
+            'application/_*+json',
+        ];
 
+        final serializedBody = _serializers.serialize(orderRequest);
+        final jsonorderRequest = json.encode(serializedBody);
+        bodyData = jsonorderRequest;
 
-            var serializedBody = _serializers.serialize(orderRequest);
-            var jsonorderRequest = json.encode(serializedBody);
-            bodyData = jsonorderRequest;
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(OrderResponseRestResult);
-        var data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(OrderResponseRestResult);
+            final data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<OrderResponseRestResult>(
                 data: data,
@@ -66,47 +87,65 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<List<Mail>>>apiOrderGenerateOrderMailPost({ int orderId,CancelToken cancelToken, Map<String, String> headers,}) async {
+        });
+    }
 
-        String _path = "/api/Order/GenerateOrderMail";
+    /// 
+    ///
+    /// 
+    Future<Response<BuiltList<Mail>>> apiOrderGenerateOrderMailPost({ 
+        int orderId,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/GenerateOrderMail';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
-                queryParams[r'orderId'] = orderId;
+        queryParams[r'orderId'] = orderId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = [];
+        final List<String> contentTypes = [];
 
-
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            const collectionType = BuiltList;
+            const type = FullType(collectionType, [FullType(Mail)]);
+            final BuiltList<Mail> data = _serializers.deserialize(response.data is String ? jsonDecode(response.data) : response.data, specifiedType: type);
 
-                final FullType type = const FullType(BuiltList, const [const FullType(Mail)]);
-                BuiltList<Mail> dataList = _serializers.deserialize(response.data is String ? jsonDecode(response.data) : response.data, specifiedType: type);
-                var data = dataList.toList();
-
-            return Response<List<Mail>>(
+            return Response<BuiltList<Mail>>(
                 data: data,
                 headers: response.headers,
                 request: response.request,
@@ -115,43 +154,60 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<GetOrderListResponseRestResult>>apiOrderGetOrderListPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        });
+    }
 
-        String _path = "/api/Order/GetOrderList";
+    /// 
+    ///
+    /// 
+    Future<Response<GetOrderListResponseRestResult>> apiOrderGetOrderListPost({ 
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/GetOrderList';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = [];
+        final List<String> contentTypes = [];
 
-
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(GetOrderListResponseRestResult);
-        var data = _serializers.deserializeWith<GetOrderListResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(GetOrderListResponseRestResult);
+            final data = _serializers.deserializeWith<GetOrderListResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<GetOrderListResponseRestResult>(
                 data: data,
@@ -162,46 +218,69 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<OrderResponseRestResult>>apiOrderGetOrderPost({ GetOrderRequest getOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        });
+    }
 
-        String _path = "/api/Order/GetOrder";
+    /// 
+    ///
+    /// 
+    Future<Response<OrderResponseRestResult>> apiOrderGetOrderPost({ 
+        GetOrderRequest getOrderRequest,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/GetOrder';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        final List<String> contentTypes = [
+            'application/json',
+            'text/json',
+            'application/_*+json',
+        ];
 
+        final serializedBody = _serializers.serialize(getOrderRequest);
+        final jsongetOrderRequest = json.encode(serializedBody);
+        bodyData = jsongetOrderRequest;
 
-            var serializedBody = _serializers.serialize(getOrderRequest);
-            var jsongetOrderRequest = json.encode(serializedBody);
-            bodyData = jsongetOrderRequest;
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(OrderResponseRestResult);
-        var data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(OrderResponseRestResult);
+            final data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<OrderResponseRestResult>(
                 data: data,
@@ -212,76 +291,110 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response>apiOrderSendToOlimposPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        });
+    }
 
-        String _path = "/api/Order/SendToOlimpos";
+    /// 
+    ///
+    /// 
+    Future<Response<void>> apiOrderSendToOlimposPost({ 
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/SendToOlimpos';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = [];
+        final List<String> contentTypes = [];
 
-
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            );
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<String>>apiOrderSendmailPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        );
+    }
 
-        String _path = "/api/Order/sendmail";
+    /// 
+    ///
+    /// 
+    Future<Response<String>> apiOrderSendmailPost({ 
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/sendmail';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = [];
+        final List<String> contentTypes = [];
 
-
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(String);
-        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final data = response.data as String;
 
             return Response<String>(
                 data: data,
@@ -292,46 +405,69 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        /// 
-        ///
-        /// 
-        Future<Response<OrderResponseRestResult>>apiOrderUpdateStatusPost({ UpdateOrderRequest updateOrderRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        });
+    }
 
-        String _path = "/api/Order/UpdateStatus";
+    /// 
+    ///
+    /// 
+    Future<Response<OrderResponseRestResult>> apiOrderUpdateStatusPost({ 
+        UpdateOrderRequest updateOrderRequest,
+        CancelToken cancelToken,
+        Map<String, dynamic> headers,
+        Map<String, dynamic> extra,
+        ValidateStatus validateStatus,
+        ProgressCallback onSendProgress,
+        ProgressCallback onReceiveProgress,
+    }) async {
+        final String _path = '/api/Order/UpdateStatus';
 
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
+        final Map<String, dynamic> queryParams = {};
+        final Map<String, dynamic> headerParams = {
+            if (headers != null) ...headers,
+        };
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+        final List<String> contentTypes = [
+            'application/json',
+            'text/json',
+            'application/_*+json',
+        ];
 
+        final serializedBody = _serializers.serialize(updateOrderRequest);
+        final jsonupdateOrderRequest = json.encode(serializedBody);
+        bodyData = jsonupdateOrderRequest;
 
-            var serializedBody = _serializers.serialize(updateOrderRequest);
-            var jsonupdateOrderRequest = json.encode(serializedBody);
-            bodyData = jsonupdateOrderRequest;
-
-            return _dio.request(
+        return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
-            },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+                method: 'post'.toUpperCase(),
+                headers: headerParams,
+                extra: {
+                    'secure': [
+                        {
+                            'type': 'apiKey',
+                            'name': 'Bearer',
+                            'keyName': 'Authorization',
+                            'where': 'header',
+                        },
+                    ],
+                    if (extra != null) ...extra,
+                },
+                validateStatus: validateStatus,
+                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
             ),
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(OrderResponseRestResult);
-        var data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+        ).then((response) {
+            final serializer = _serializers.serializerForType(OrderResponseRestResult);
+            final data = _serializers.deserializeWith<OrderResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<OrderResponseRestResult>(
                 data: data,
@@ -342,6 +478,7 @@ class OrderApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-            });
-            }
-        }
+        });
+    }
+
+}

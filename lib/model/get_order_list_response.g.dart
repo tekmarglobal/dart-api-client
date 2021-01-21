@@ -106,7 +106,9 @@ class GetOrderListResponseBuilder
       _$this._orderList ??= new ListBuilder<Orders>();
   set orderList(ListBuilder<Orders> orderList) => _$this._orderList = orderList;
 
-  GetOrderListResponseBuilder();
+  GetOrderListResponseBuilder() {
+    GetOrderListResponse._initializeBuilder(this);
+  }
 
   GetOrderListResponseBuilder get _$this {
     if (_$v != null) {

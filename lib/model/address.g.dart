@@ -685,7 +685,9 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
           ListBuilder<Order> orderDeliveryAddressNavigation) =>
       _$this._orderDeliveryAddressNavigation = orderDeliveryAddressNavigation;
 
-  AddressBuilder();
+  AddressBuilder() {
+    Address._initializeBuilder(this);
+  }
 
   AddressBuilder get _$this {
     if (_$v != null) {

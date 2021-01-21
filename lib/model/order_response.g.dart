@@ -472,7 +472,9 @@ class OrderResponseBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  OrderResponseBuilder();
+  OrderResponseBuilder() {
+    OrderResponse._initializeBuilder(this);
+  }
 
   OrderResponseBuilder get _$this {
     if (_$v != null) {

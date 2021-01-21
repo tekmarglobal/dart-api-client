@@ -265,7 +265,9 @@ class PersonelBuilder implements Builder<Personel, PersonelBuilder> {
   set personelDepartment(ListBuilder<PersonelDepartment> personelDepartment) =>
       _$this._personelDepartment = personelDepartment;
 
-  PersonelBuilder();
+  PersonelBuilder() {
+    Personel._initializeBuilder(this);
+  }
 
   PersonelBuilder get _$this {
     if (_$v != null) {

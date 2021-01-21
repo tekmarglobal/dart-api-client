@@ -145,7 +145,9 @@ class DeleteAddressResponseRestResultBuilder
   JsonObject get data => _$this._data;
   set data(JsonObject data) => _$this._data = data;
 
-  DeleteAddressResponseRestResultBuilder();
+  DeleteAddressResponseRestResultBuilder() {
+    DeleteAddressResponseRestResult._initializeBuilder(this);
+  }
 
   DeleteAddressResponseRestResultBuilder get _$this {
     if (_$v != null) {

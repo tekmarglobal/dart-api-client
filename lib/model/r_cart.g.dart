@@ -96,7 +96,9 @@ class RCartBuilder implements Builder<RCart, RCartBuilder> {
   set cartProducts(ListBuilder<RCartProduct> cartProducts) =>
       _$this._cartProducts = cartProducts;
 
-  RCartBuilder();
+  RCartBuilder() {
+    RCart._initializeBuilder(this);
+  }
 
   RCartBuilder get _$this {
     if (_$v != null) {

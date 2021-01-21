@@ -271,7 +271,9 @@ class CityBuilder implements Builder<City, CityBuilder> {
   set neighborhood(ListBuilder<Neighborhood> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  CityBuilder();
+  CityBuilder() {
+    City._initializeBuilder(this);
+  }
 
   CityBuilder get _$this {
     if (_$v != null) {

@@ -277,7 +277,9 @@ class RegionProductBuilder
   set productPrice(ListBuilder<ProductPrice> productPrice) =>
       _$this._productPrice = productPrice;
 
-  RegionProductBuilder();
+  RegionProductBuilder() {
+    RegionProduct._initializeBuilder(this);
+  }
 
   RegionProductBuilder get _$this {
     if (_$v != null) {

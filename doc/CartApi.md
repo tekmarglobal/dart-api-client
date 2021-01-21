@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiCartCreateCartPost(createCartRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartCreateCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartCreateCartPost: $e\n');
 }
 ```
 
@@ -81,7 +81,7 @@ try {
     var result = api_instance.apiCartDeleteCardDelete();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartDeleteCardDelete: $e\n");
+    print('Exception when calling CartApi->apiCartDeleteCardDelete: $e\n');
 }
 ```
 
@@ -122,7 +122,7 @@ try {
     var result = api_instance.apiCartGetTimeSlotsPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartGetTimeSlotsPost: $e\n");
+    print('Exception when calling CartApi->apiCartGetTimeSlotsPost: $e\n');
 }
 ```
 
@@ -163,7 +163,7 @@ try {
     var result = api_instance.apiCartPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartPost: $e\n');
 }
 ```
 
@@ -205,7 +205,7 @@ try {
     var result = api_instance.apiCartUpdateCartPost(updateCartRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartUpdateCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartUpdateCartPost: $e\n');
 }
 ```
 
@@ -250,7 +250,7 @@ try {
     var result = api_instance.apiCartUpdateTimeslotPost(updateTimeslotRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n");
+    print('Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n');
 }
 ```
 

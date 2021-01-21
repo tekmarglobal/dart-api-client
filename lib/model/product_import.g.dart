@@ -227,7 +227,9 @@ class ProductImportBuilder
           ListBuilder<ProductImportDetail> productImportDetail) =>
       _$this._productImportDetail = productImportDetail;
 
-  ProductImportBuilder();
+  ProductImportBuilder() {
+    ProductImport._initializeBuilder(this);
+  }
 
   ProductImportBuilder get _$this {
     if (_$v != null) {

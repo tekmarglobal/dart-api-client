@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiBannerGetBannersPost();
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerGetBannersPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerGetBannersPost: $e\n');
 }
 ```
 
@@ -74,7 +74,7 @@ try {
     var result = api_instance.apiBannerUpdateBannerPost(bannerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n');
 }
 ```
 

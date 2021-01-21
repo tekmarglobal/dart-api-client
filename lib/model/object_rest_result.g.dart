@@ -135,7 +135,9 @@ class ObjectRestResultBuilder
   JsonObject get data => _$this._data;
   set data(JsonObject data) => _$this._data = data;
 
-  ObjectRestResultBuilder();
+  ObjectRestResultBuilder() {
+    ObjectRestResult._initializeBuilder(this);
+  }
 
   ObjectRestResultBuilder get _$this {
     if (_$v != null) {

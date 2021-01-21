@@ -90,7 +90,9 @@ class SmsResponseBuilder implements Builder<SmsResponse, SmsResponseBuilder> {
   String get phone => _$this._phone;
   set phone(String phone) => _$this._phone = phone;
 
-  SmsResponseBuilder();
+  SmsResponseBuilder() {
+    SmsResponse._initializeBuilder(this);
+  }
 
   SmsResponseBuilder get _$this {
     if (_$v != null) {

@@ -1,50 +1,50 @@
-            import 'package:openapi/model/branch_response.dart';
-            import 'package:built_collection/built_collection.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/branch_response.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'neighbor_response.g.dart';
 
 abstract class NeighborResponse implements Built<NeighborResponse, NeighborResponseBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'id')
     int get id;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cityName')
     String get cityName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'countyName')
     String get countyName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'regionName')
     String get regionName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'gpsId')
     int get gpsId;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'branch')
     BuiltList<BranchResponse> get branch;
 
     // Boilerplate code needed to wire-up generated code
     NeighborResponse._();
 
+    static void _initializeBuilder(NeighborResponseBuilder b) => b;
+
     factory NeighborResponse([updates(NeighborResponseBuilder b)]) = _$NeighborResponse;
     static Serializer<NeighborResponse> get serializer => _$neighborResponseSerializer;
-
 }
 

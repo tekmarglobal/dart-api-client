@@ -102,7 +102,9 @@ class DeleteAddressRequestBuilder
   int get addressId => _$this._addressId;
   set addressId(int addressId) => _$this._addressId = addressId;
 
-  DeleteAddressRequestBuilder();
+  DeleteAddressRequestBuilder() {
+    DeleteAddressRequest._initializeBuilder(this);
+  }
 
   DeleteAddressRequestBuilder get _$this {
     if (_$v != null) {

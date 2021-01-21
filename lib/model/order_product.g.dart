@@ -310,7 +310,9 @@ class OrderProductBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  OrderProductBuilder();
+  OrderProductBuilder() {
+    OrderProduct._initializeBuilder(this);
+  }
 
   OrderProductBuilder get _$this {
     if (_$v != null) {

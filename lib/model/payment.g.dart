@@ -467,7 +467,9 @@ class PaymentBuilder implements Builder<Payment, PaymentBuilder> {
   set paymentTypeNavigation(PaymentTypeBuilder paymentTypeNavigation) =>
       _$this._paymentTypeNavigation = paymentTypeNavigation;
 
-  PaymentBuilder();
+  PaymentBuilder() {
+    Payment._initializeBuilder(this);
+  }
 
   PaymentBuilder get _$this {
     if (_$v != null) {

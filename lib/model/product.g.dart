@@ -765,7 +765,9 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   set regionProduct(ListBuilder<RegionProduct> regionProduct) =>
       _$this._regionProduct = regionProduct;
 
-  ProductBuilder();
+  ProductBuilder() {
+    Product._initializeBuilder(this);
+  }
 
   ProductBuilder get _$this {
     if (_$v != null) {

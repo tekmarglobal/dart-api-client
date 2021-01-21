@@ -177,7 +177,9 @@ class PaymentStatusBuilder
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
-  PaymentStatusBuilder();
+  PaymentStatusBuilder() {
+    PaymentStatus._initializeBuilder(this);
+  }
 
   PaymentStatusBuilder get _$this {
     if (_$v != null) {

@@ -493,7 +493,9 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
   set inverseParentNavigation(ListBuilder<Category> inverseParentNavigation) =>
       _$this._inverseParentNavigation = inverseParentNavigation;
 
-  CategoryBuilder();
+  CategoryBuilder() {
+    Category._initializeBuilder(this);
+  }
 
   CategoryBuilder get _$this {
     if (_$v != null) {

@@ -220,7 +220,9 @@ class RegionRegionsNeighborhoodNeighborhoodsBuilder
   set regionsNavigation(RegionBuilder regionsNavigation) =>
       _$this._regionsNavigation = regionsNavigation;
 
-  RegionRegionsNeighborhoodNeighborhoodsBuilder();
+  RegionRegionsNeighborhoodNeighborhoodsBuilder() {
+    RegionRegionsNeighborhoodNeighborhoods._initializeBuilder(this);
+  }
 
   RegionRegionsNeighborhoodNeighborhoodsBuilder get _$this {
     if (_$v != null) {

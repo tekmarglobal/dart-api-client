@@ -96,7 +96,9 @@ class NeighborRequestBuilder
   int get county => _$this._county;
   set county(int county) => _$this._county = county;
 
-  NeighborRequestBuilder();
+  NeighborRequestBuilder() {
+    NeighborRequest._initializeBuilder(this);
+  }
 
   NeighborRequestBuilder get _$this {
     if (_$v != null) {

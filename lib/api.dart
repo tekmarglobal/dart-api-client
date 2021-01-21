@@ -27,7 +27,7 @@ class Openapi {
 
     Dio dio;
     Serializers serializers;
-    String basePath = "http://localhost";
+    String basePath = 'http://localhost';
 
     Openapi({this.dio, Serializers serializers, String basePathOverride, List<Interceptor> interceptors}) {
         if (dio == null) {

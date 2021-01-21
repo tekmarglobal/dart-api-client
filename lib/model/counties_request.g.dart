@@ -95,7 +95,9 @@ class CountiesRequestBuilder
   int get city => _$this._city;
   set city(int city) => _$this._city = city;
 
-  CountiesRequestBuilder();
+  CountiesRequestBuilder() {
+    CountiesRequest._initializeBuilder(this);
+  }
 
   CountiesRequestBuilder get _$this {
     if (_$v != null) {

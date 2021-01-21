@@ -161,7 +161,9 @@ class OperatingSystemBuilder
       _$this._platform ??= new ListBuilder<Platform>();
   set platform(ListBuilder<Platform> platform) => _$this._platform = platform;
 
-  OperatingSystemBuilder();
+  OperatingSystemBuilder() {
+    OperatingSystem._initializeBuilder(this);
+  }
 
   OperatingSystemBuilder get _$this {
     if (_$v != null) {

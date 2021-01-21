@@ -149,7 +149,9 @@ class TimeSlotsResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<TimeSlotsResponse>();
   set data(ListBuilder<TimeSlotsResponse> data) => _$this._data = data;
 
-  TimeSlotsResponseListRestResultBuilder();
+  TimeSlotsResponseListRestResultBuilder() {
+    TimeSlotsResponseListRestResult._initializeBuilder(this);
+  }
 
   TimeSlotsResponseListRestResultBuilder get _$this {
     if (_$v != null) {

@@ -1,48 +1,48 @@
-        import 'package:built_value/built_value.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'payment_request.g.dart';
 
 abstract class PaymentRequest implements Built<PaymentRequest, PaymentRequestBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'cartNumber')
     String get cartNumber;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'expiryDate')
     String get expiryDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cartCvv')
     String get cartCvv;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'posId')
     int get posId;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'amount')
     double get amount;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'use3dSecure')
     bool get use3dSecure;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'transactionUid')
     String get transactionUid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cardType')
     int get cardType;
 
     // Boilerplate code needed to wire-up generated code
     PaymentRequest._();
 
+    static void _initializeBuilder(PaymentRequestBuilder b) => b;
+
     factory PaymentRequest([updates(PaymentRequestBuilder b)]) = _$PaymentRequest;
     static Serializer<PaymentRequest> get serializer => _$paymentRequestSerializer;
-
 }
 

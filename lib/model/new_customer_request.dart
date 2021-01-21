@@ -1,68 +1,68 @@
-        import 'package:built_value/built_value.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'new_customer_request.g.dart';
 
 abstract class NewCustomerRequest implements Built<NewCustomerRequest, NewCustomerRequestBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'surname')
     String get surname;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'birthDate')
     DateTime get birthDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'phone')
     String get phone;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'email')
     String get email;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'allowSms')
     bool get allowSms;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'allowEmail')
     bool get allowEmail;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'gender')
     int get gender;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'allowCampaign')
     bool get allowCampaign;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'companyName')
     String get companyName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'companyTaxName')
     String get companyTaxName;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'companyTaxNumber')
     String get companyTaxNumber;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'identificationNumber')
     String get identificationNumber;
 
     // Boilerplate code needed to wire-up generated code
     NewCustomerRequest._();
 
+    static void _initializeBuilder(NewCustomerRequestBuilder b) => b;
+
     factory NewCustomerRequest([updates(NewCustomerRequestBuilder b)]) = _$NewCustomerRequest;
     static Serializer<NewCustomerRequest> get serializer => _$newCustomerRequestSerializer;
-
 }
 

@@ -181,7 +181,9 @@ class MailTypeBuilder implements Builder<MailType, MailTypeBuilder> {
   set mailTemplate(ListBuilder<MailTemplate> mailTemplate) =>
       _$this._mailTemplate = mailTemplate;
 
-  MailTypeBuilder();
+  MailTypeBuilder() {
+    MailType._initializeBuilder(this);
+  }
 
   MailTypeBuilder get _$this {
     if (_$v != null) {

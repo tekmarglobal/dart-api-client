@@ -93,7 +93,9 @@ class LoginRequestBuilder
   String get sessionId => _$this._sessionId;
   set sessionId(String sessionId) => _$this._sessionId = sessionId;
 
-  LoginRequestBuilder();
+  LoginRequestBuilder() {
+    LoginRequest._initializeBuilder(this);
+  }
 
   LoginRequestBuilder get _$this {
     if (_$v != null) {

@@ -229,7 +229,9 @@ class BrandBuilder implements Builder<Brand, BrandBuilder> {
       _$this._product ??= new ListBuilder<Product>();
   set product(ListBuilder<Product> product) => _$this._product = product;
 
-  BrandBuilder();
+  BrandBuilder() {
+    Brand._initializeBuilder(this);
+  }
 
   BrandBuilder get _$this {
     if (_$v != null) {

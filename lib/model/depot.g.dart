@@ -241,7 +241,9 @@ class DepotBuilder implements Builder<Depot, DepotBuilder> {
   set regionNavigation(RegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
-  DepotBuilder();
+  DepotBuilder() {
+    Depot._initializeBuilder(this);
+  }
 
   DepotBuilder get _$this {
     if (_$v != null) {

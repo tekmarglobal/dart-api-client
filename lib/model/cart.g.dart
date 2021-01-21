@@ -527,7 +527,9 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
 
-  CartBuilder();
+  CartBuilder() {
+    Cart._initializeBuilder(this);
+  }
 
   CartBuilder get _$this {
     if (_$v != null) {

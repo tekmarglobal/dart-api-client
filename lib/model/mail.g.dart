@@ -304,7 +304,9 @@ class MailBuilder implements Builder<Mail, MailBuilder> {
   int get mailPeriod => _$this._mailPeriod;
   set mailPeriod(int mailPeriod) => _$this._mailPeriod = mailPeriod;
 
-  MailBuilder();
+  MailBuilder() {
+    Mail._initializeBuilder(this);
+  }
 
   MailBuilder get _$this {
     if (_$v != null) {

@@ -107,7 +107,9 @@ class CustomerAddressResponseBuilder
       _$this._address ??= new ListBuilder<RAddress>();
   set address(ListBuilder<RAddress> address) => _$this._address = address;
 
-  CustomerAddressResponseBuilder();
+  CustomerAddressResponseBuilder() {
+    CustomerAddressResponse._initializeBuilder(this);
+  }
 
   CustomerAddressResponseBuilder get _$this {
     if (_$v != null) {

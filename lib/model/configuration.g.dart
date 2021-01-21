@@ -359,7 +359,9 @@ class ConfigurationBuilder
   set deliveryProductNavigation(ProductBuilder deliveryProductNavigation) =>
       _$this._deliveryProductNavigation = deliveryProductNavigation;
 
-  ConfigurationBuilder();
+  ConfigurationBuilder() {
+    Configuration._initializeBuilder(this);
+  }
 
   ConfigurationBuilder get _$this {
     if (_$v != null) {

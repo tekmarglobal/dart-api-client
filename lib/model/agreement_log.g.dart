@@ -267,7 +267,9 @@ class AgreementLogBuilder
   set customerNavigation(CustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  AgreementLogBuilder();
+  AgreementLogBuilder() {
+    AgreementLog._initializeBuilder(this);
+  }
 
   AgreementLogBuilder get _$this {
     if (_$v != null) {

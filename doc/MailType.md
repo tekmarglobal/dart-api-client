@@ -8,11 +8,11 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] [default to null]
-**name** | **String** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
-**code** | **int** |  | [optional] [default to null]
-**mailTemplate** | [**BuiltList&lt;MailTemplate&gt;**](MailTemplate.md) |  | [optional] [default to const []]
+**oid** | **int** |  | [optional] 
+**name** | **String** |  | [optional] 
+**optimisticLockField** | **int** |  | [optional] 
+**code** | **int** |  | [optional] 
+**mailTemplate** | [**BuiltList<MailTemplate>**](MailTemplate.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

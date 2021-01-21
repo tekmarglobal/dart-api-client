@@ -131,7 +131,9 @@ class UpdateRegionNeighborhoodRequestBuilder
   set neighborhood(ListBuilder<int> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  UpdateRegionNeighborhoodRequestBuilder();
+  UpdateRegionNeighborhoodRequestBuilder() {
+    UpdateRegionNeighborhoodRequest._initializeBuilder(this);
+  }
 
   UpdateRegionNeighborhoodRequestBuilder get _$this {
     if (_$v != null) {

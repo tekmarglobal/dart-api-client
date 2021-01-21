@@ -33,7 +33,7 @@ try {
     var result = api_instance.apiCartProductPut(rCartProduct);
     print(result);
 } catch (e) {
-    print("Exception when calling ApiApi->apiCartProductPut: $e\n");
+    print('Exception when calling ApiApi->apiCartProductPut: $e\n');
 }
 ```
 
@@ -77,7 +77,7 @@ try {
     var result = api_instance.apiProductAllGet();
     print(result);
 } catch (e) {
-    print("Exception when calling ApiApi->apiProductAllGet: $e\n");
+    print('Exception when calling ApiApi->apiProductAllGet: $e\n');
 }
 ```
 

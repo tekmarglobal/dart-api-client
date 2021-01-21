@@ -8,16 +8,16 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] [default to null]
-**name** | **String** |  | [optional] [default to null]
-**surname** | **String** |  | [optional] [default to null]
-**phone** | **String** |  | [optional] [default to null]
-**email** | **String** |  | [optional] [default to null]
-**title** | **String** |  | [optional] [default to null]
-**manufacturer** | **int** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
-**manufacturerNavigation** | [**Manufacturer**](Manufacturer.md) |  | [optional] [default to null]
-**brandManagerBrand** | [**BuiltList&lt;BrandManagerBrand&gt;**](BrandManagerBrand.md) |  | [optional] [default to const []]
+**oid** | **int** |  | [optional] 
+**name** | **String** |  | [optional] 
+**surname** | **String** |  | [optional] 
+**phone** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**manufacturer** | **int** |  | [optional] 
+**optimisticLockField** | **int** |  | [optional] 
+**manufacturerNavigation** | [**Manufacturer**](Manufacturer.md) |  | [optional] 
+**brandManagerBrand** | [**BuiltList<BrandManagerBrand>**](BrandManagerBrand.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

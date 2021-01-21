@@ -1,167 +1,167 @@
-            import 'package:openapi/model/order_product.dart';
-            import 'package:openapi/model/payment.dart';
-            import 'package:openapi/model/payment_type.dart';
-            import 'package:openapi/model/address.dart';
-            import 'package:openapi/model/customer.dart';
-            import 'package:openapi/model/order_status.dart';
-            import 'package:built_collection/built_collection.dart';
-            import 'package:openapi/model/region.dart';
-            import 'package:openapi/model/cart.dart';
-            import 'package:openapi/model/device.dart';
-            import 'package:openapi/model/time_slot.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/order_product.dart';
+import 'package:openapi/model/payment.dart';
+import 'package:openapi/model/payment_type.dart';
+import 'package:openapi/model/address.dart';
+import 'package:openapi/model/customer.dart';
+import 'package:openapi/model/order_status.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:openapi/model/region.dart';
+import 'package:openapi/model/cart.dart';
+import 'package:openapi/model/device.dart';
+import 'package:openapi/model/time_slot.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'order.g.dart';
 
 abstract class Order implements Built<Order, OrderBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cart')
     int get cart;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderDate')
     DateTime get orderDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productDiscountsTotal')
     double get productDiscountsTotal;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'campaignDiscountsTotal')
     double get campaignDiscountsTotal;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'deliveryAddress')
     int get deliveryAddress;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'billingAddress')
     int get billingAddress;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderStatus')
     int get orderStatus;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productTotal')
     double get productTotal;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderTotal')
     double get orderTotal;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'completedFrom')
     int get completedFrom;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'note')
     String get note;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'bagAmount')
     int get bagAmount;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'bagTotal')
     double get bagTotal;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'timeSlot')
     int get timeSlot;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'paymentType')
     int get paymentType;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'sent')
     bool get sent;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'uuid')
     String get uuid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'isProcessed')
     bool get isProcessed;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'billingAddressNavigation')
     Address get billingAddressNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cartNavigation')
     Cart get cartNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'completedFromNavigation')
     Device get completedFromNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     Customer get customerNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'deliveryAddressNavigation')
     Address get deliveryAddressNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderStatusNavigation')
     OrderStatus get orderStatusNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'paymentTypeNavigation')
     PaymentType get paymentTypeNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'regionNavigation')
     Region get regionNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'timeSlotNavigation')
     TimeSlot get timeSlotNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderProduct')
     BuiltList<OrderProduct> get orderProduct;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<Payment> get payment;
 
     // Boilerplate code needed to wire-up generated code
     Order._();
 
+    static void _initializeBuilder(OrderBuilder b) => b;
+
     factory Order([updates(OrderBuilder b)]) = _$Order;
     static Serializer<Order> get serializer => _$orderSerializer;
-
 }
 

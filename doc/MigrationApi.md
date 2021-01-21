@@ -35,7 +35,7 @@ try {
     var result = api_instance.apiMigrationCreateregionpriceGet();
     print(result);
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n');
 }
 ```
 
@@ -75,7 +75,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationMatchCitiesGet();
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationMatchCitiesGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationMatchCitiesGet: $e\n');
 }
 ```
 
@@ -115,7 +115,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationMatchCountiesGet();
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationMatchCountiesGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationMatchCountiesGet: $e\n');
 }
 ```
 
@@ -155,7 +155,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationMatchNeighborhoodGet();
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationMatchNeighborhoodGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationMatchNeighborhoodGet: $e\n');
 }
 ```
 
@@ -195,7 +195,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationUpdateCitiesFromRestGet();
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n');
 }
 ```
 

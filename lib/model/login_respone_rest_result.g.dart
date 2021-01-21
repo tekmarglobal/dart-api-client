@@ -141,7 +141,9 @@ class LoginResponeRestResultBuilder
   LoginResponeBuilder get data => _$this._data ??= new LoginResponeBuilder();
   set data(LoginResponeBuilder data) => _$this._data = data;
 
-  LoginResponeRestResultBuilder();
+  LoginResponeRestResultBuilder() {
+    LoginResponeRestResult._initializeBuilder(this);
+  }
 
   LoginResponeRestResultBuilder get _$this {
     if (_$v != null) {

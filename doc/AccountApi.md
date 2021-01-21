@@ -34,7 +34,7 @@ try {
     var result = api_instance.apiAccountLoginPost(loginRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLoginPost: $e\n");
+    print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
 }
 ```
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiAccountLogoutGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLogoutGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountLogoutGet: $e\n');
 }
 ```
 
@@ -119,7 +119,7 @@ try {
     var result = api_instance.apiAccountWhoAmIGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n');
 }
 ```
 

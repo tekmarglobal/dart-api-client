@@ -266,7 +266,9 @@ class MailTemplateBuilder
   set orderStatusNavigation(OrderStatusBuilder orderStatusNavigation) =>
       _$this._orderStatusNavigation = orderStatusNavigation;
 
-  MailTemplateBuilder();
+  MailTemplateBuilder() {
+    MailTemplate._initializeBuilder(this);
+  }
 
   MailTemplateBuilder get _$this {
     if (_$v != null) {

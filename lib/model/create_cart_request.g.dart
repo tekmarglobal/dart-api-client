@@ -98,7 +98,9 @@ class CreateCartRequestBuilder
   set neighborhoodId(int neighborhoodId) =>
       _$this._neighborhoodId = neighborhoodId;
 
-  CreateCartRequestBuilder();
+  CreateCartRequestBuilder() {
+    CreateCartRequest._initializeBuilder(this);
+  }
 
   CreateCartRequestBuilder get _$this {
     if (_$v != null) {

@@ -1,54 +1,54 @@
-            import 'package:openapi/model/order_status.dart';
-            import 'package:openapi/model/mail_type.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/order_status.dart';
+import 'package:openapi/model/mail_type.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'mail_template.g.dart';
 
 abstract class MailTemplate implements Built<MailTemplate, MailTemplateBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'template')
     String get template;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'language')
     String get language;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailType')
     int get mailType;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderStatus')
     int get orderStatus;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'mailTypeNavigation')
     MailType get mailTypeNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderStatusNavigation')
     OrderStatus get orderStatusNavigation;
 
     // Boilerplate code needed to wire-up generated code
     MailTemplate._();
 
+    static void _initializeBuilder(MailTemplateBuilder b) => b;
+
     factory MailTemplate([updates(MailTemplateBuilder b)]) = _$MailTemplate;
     static Serializer<MailTemplate> get serializer => _$mailTemplateSerializer;
-
 }
 

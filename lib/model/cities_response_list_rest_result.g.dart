@@ -148,7 +148,9 @@ class CitiesResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<CitiesResponse>();
   set data(ListBuilder<CitiesResponse> data) => _$this._data = data;
 
-  CitiesResponseListRestResultBuilder();
+  CitiesResponseListRestResultBuilder() {
+    CitiesResponseListRestResult._initializeBuilder(this);
+  }
 
   CitiesResponseListRestResultBuilder get _$this {
     if (_$v != null) {

@@ -206,7 +206,9 @@ class DepartmentBuilder implements Builder<Department, DepartmentBuilder> {
   set personelDepartment(ListBuilder<PersonelDepartment> personelDepartment) =>
       _$this._personelDepartment = personelDepartment;
 
-  DepartmentBuilder();
+  DepartmentBuilder() {
+    Department._initializeBuilder(this);
+  }
 
   DepartmentBuilder get _$this {
     if (_$v != null) {

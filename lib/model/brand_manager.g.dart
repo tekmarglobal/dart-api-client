@@ -290,7 +290,9 @@ class BrandManagerBuilder
   set brandManagerBrand(ListBuilder<BrandManagerBrand> brandManagerBrand) =>
       _$this._brandManagerBrand = brandManagerBrand;
 
-  BrandManagerBuilder();
+  BrandManagerBuilder() {
+    BrandManager._initializeBuilder(this);
+  }
 
   BrandManagerBuilder get _$this {
     if (_$v != null) {

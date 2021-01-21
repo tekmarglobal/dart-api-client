@@ -246,7 +246,9 @@ class PaymentRequestBuilder
   int get cardType => _$this._cardType;
   set cardType(int cardType) => _$this._cardType = cardType;
 
-  PaymentRequestBuilder();
+  PaymentRequestBuilder() {
+    PaymentRequest._initializeBuilder(this);
+  }
 
   PaymentRequestBuilder get _$this {
     if (_$v != null) {

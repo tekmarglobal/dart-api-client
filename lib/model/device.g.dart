@@ -397,7 +397,9 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
 
-  DeviceBuilder();
+  DeviceBuilder() {
+    Device._initializeBuilder(this);
+  }
 
   DeviceBuilder get _$this {
     if (_$v != null) {

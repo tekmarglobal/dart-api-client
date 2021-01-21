@@ -749,7 +749,9 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
-  CustomerBuilder();
+  CustomerBuilder() {
+    Customer._initializeBuilder(this);
+  }
 
   CustomerBuilder get _$this {
     if (_$v != null) {

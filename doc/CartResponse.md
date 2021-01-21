@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cartId** | **int** |  | [optional] [default to null]
-**customer** | **int** |  | [optional] [default to null]
-**cartTotal** | **double** |  | [optional] [default to null]
-**regionId** | **int** |  | [optional] [default to null]
-**deviceToken** | **String** |  | [optional] [default to null]
-**bagTotal** | **double** |  | [optional] [default to null]
-**bagAmount** | **int** |  | [optional] [default to null]
-**estimatedFee** | **double** |  | [optional] [default to null]
-**cardProducts** | [**BuiltList&lt;RCartProducts&gt;**](RCartProducts.md) |  | [optional] [default to const []]
+**cartId** | **int** |  | [optional] 
+**customer** | **int** |  | [optional] 
+**cartTotal** | **double** |  | [optional] 
+**regionId** | **int** |  | [optional] 
+**deviceToken** | **String** |  | [optional] 
+**bagTotal** | **double** |  | [optional] 
+**bagAmount** | **int** |  | [optional] 
+**estimatedFee** | **double** |  | [optional] 
+**cardProducts** | [**BuiltList<RCartProducts>**](RCartProducts.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

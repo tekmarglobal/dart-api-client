@@ -95,7 +95,9 @@ class GetOrderRequestBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  GetOrderRequestBuilder();
+  GetOrderRequestBuilder() {
+    GetOrderRequest._initializeBuilder(this);
+  }
 
   GetOrderRequestBuilder get _$this {
     if (_$v != null) {

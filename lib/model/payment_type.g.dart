@@ -202,7 +202,9 @@ class PaymentTypeBuilder implements Builder<PaymentType, PaymentTypeBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
-  PaymentTypeBuilder();
+  PaymentTypeBuilder() {
+    PaymentType._initializeBuilder(this);
+  }
 
   PaymentTypeBuilder get _$this {
     if (_$v != null) {

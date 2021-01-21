@@ -1,46 +1,46 @@
-            import 'package:openapi/model/category.dart';
-            import 'package:openapi/model/product.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/category.dart';
+import 'package:openapi/model/product.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'category_product.g.dart';
 
 abstract class CategoryProduct implements Built<CategoryProduct, CategoryProductBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'category')
     int get category;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'product')
     int get product;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'main')
     bool get main;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'categoryNavigation')
     Category get categoryNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productNavigation')
     Product get productNavigation;
 
     // Boilerplate code needed to wire-up generated code
     CategoryProduct._();
 
+    static void _initializeBuilder(CategoryProductBuilder b) => b;
+
     factory CategoryProduct([updates(CategoryProductBuilder b)]) = _$CategoryProduct;
     static Serializer<CategoryProduct> get serializer => _$categoryProductSerializer;
-
 }
 

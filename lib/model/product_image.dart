@@ -1,53 +1,53 @@
-            import 'package:openapi/model/product.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/product.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'product_image.g.dart';
 
 abstract class ProductImage implements Built<ProductImage, ProductImageBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'product')
     int get product;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'image')
     String get image;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'path')
     String get path;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'imageType')
     String get imageType;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'cdn')
     bool get cdn;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'productNavigation')
     Product get productNavigation;
 
     // Boilerplate code needed to wire-up generated code
     ProductImage._();
 
+    static void _initializeBuilder(ProductImageBuilder b) => b;
+
     factory ProductImage([updates(ProductImageBuilder b)]) = _$ProductImage;
     static Serializer<ProductImage> get serializer => _$productImageSerializer;
-
 }
 

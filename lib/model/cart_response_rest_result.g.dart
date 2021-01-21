@@ -141,7 +141,9 @@ class CartResponseRestResultBuilder
   CartResponseBuilder get data => _$this._data ??= new CartResponseBuilder();
   set data(CartResponseBuilder data) => _$this._data = data;
 
-  CartResponseRestResultBuilder();
+  CartResponseRestResultBuilder() {
+    CartResponseRestResult._initializeBuilder(this);
+  }
 
   CartResponseRestResultBuilder get _$this {
     if (_$v != null) {

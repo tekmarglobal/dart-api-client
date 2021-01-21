@@ -182,7 +182,9 @@ class AgreementTypeBuilder
   set agreement(ListBuilder<Agreement> agreement) =>
       _$this._agreement = agreement;
 
-  AgreementTypeBuilder();
+  AgreementTypeBuilder() {
+    AgreementType._initializeBuilder(this);
+  }
 
   AgreementTypeBuilder get _$this {
     if (_$v != null) {

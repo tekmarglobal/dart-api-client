@@ -38,7 +38,7 @@ try {
     var result = api_instance.apiOrderCreateOrderPost(orderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
 }
 ```
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderGenerateOrderMailPost**
-> List<Mail> apiOrderGenerateOrderMailPost(orderId)
+> BuiltList<Mail> apiOrderGenerateOrderMailPost(orderId)
 
 
 
@@ -83,7 +83,7 @@ try {
     var result = api_instance.apiOrderGenerateOrderMailPost(orderId);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderGenerateOrderMailPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderGenerateOrderMailPost: $e\n');
 }
 ```
 
@@ -91,11 +91,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **int**|  | [optional] [default to null]
+ **orderId** | **int**|  | [optional] 
 
 ### Return type
 
-[**List<Mail>**](Mail.md)
+[**BuiltList<Mail>**](Mail.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ try {
     var result = api_instance.apiOrderGetOrderListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n');
 }
 ```
 
@@ -169,7 +169,7 @@ try {
     var result = api_instance.apiOrderGetOrderPost(getOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderGetOrderPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
 }
 ```
 
@@ -212,7 +212,7 @@ var api_instance = new OrderApi();
 try { 
     api_instance.apiOrderSendToOlimposPost();
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderSendToOlimposPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderSendToOlimposPost: $e\n');
 }
 ```
 
@@ -253,7 +253,7 @@ try {
     var result = api_instance.apiOrderSendmailPost();
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderSendmailPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderSendmailPost: $e\n');
 }
 ```
 
@@ -295,7 +295,7 @@ try {
     var result = api_instance.apiOrderUpdateStatusPost(updateOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
 }
 ```
 

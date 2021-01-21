@@ -103,7 +103,9 @@ class RegionNeighborhoodRequestBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  RegionNeighborhoodRequestBuilder();
+  RegionNeighborhoodRequestBuilder() {
+    RegionNeighborhoodRequest._initializeBuilder(this);
+  }
 
   RegionNeighborhoodRequestBuilder get _$this {
     if (_$v != null) {

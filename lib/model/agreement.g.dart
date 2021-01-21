@@ -311,7 +311,9 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
   set agreementLog(ListBuilder<AgreementLog> agreementLog) =>
       _$this._agreementLog = agreementLog;
 
-  AgreementBuilder();
+  AgreementBuilder() {
+    Agreement._initializeBuilder(this);
+  }
 
   AgreementBuilder get _$this {
     if (_$v != null) {

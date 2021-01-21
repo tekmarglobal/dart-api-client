@@ -810,7 +810,9 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
-  OrderBuilder();
+  OrderBuilder() {
+    Order._initializeBuilder(this);
+  }
 
   OrderBuilder get _$this {
     if (_$v != null) {

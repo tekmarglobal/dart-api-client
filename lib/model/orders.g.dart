@@ -418,7 +418,9 @@ class OrdersBuilder implements Builder<Orders, OrdersBuilder> {
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  OrdersBuilder();
+  OrdersBuilder() {
+    Orders._initializeBuilder(this);
+  }
 
   OrdersBuilder get _$this {
     if (_$v != null) {

@@ -113,7 +113,9 @@ class RProductPriceBuilder
   double get listPrice => _$this._listPrice;
   set listPrice(double listPrice) => _$this._listPrice = listPrice;
 
-  RProductPriceBuilder();
+  RProductPriceBuilder() {
+    RProductPrice._initializeBuilder(this);
+  }
 
   RProductPriceBuilder get _$this {
     if (_$v != null) {

@@ -121,7 +121,9 @@ class UpdateAgreementRequestBuilder
   bool get accept => _$this._accept;
   set accept(bool accept) => _$this._accept = accept;
 
-  UpdateAgreementRequestBuilder();
+  UpdateAgreementRequestBuilder() {
+    UpdateAgreementRequest._initializeBuilder(this);
+  }
 
   UpdateAgreementRequestBuilder get _$this {
     if (_$v != null) {

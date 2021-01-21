@@ -297,7 +297,9 @@ class ProductImportDetailBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  ProductImportDetailBuilder();
+  ProductImportDetailBuilder() {
+    ProductImportDetail._initializeBuilder(this);
+  }
 
   ProductImportDetailBuilder get _$this {
     if (_$v != null) {

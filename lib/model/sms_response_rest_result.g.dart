@@ -141,7 +141,9 @@ class SmsResponseRestResultBuilder
   SmsResponseBuilder get data => _$this._data ??= new SmsResponseBuilder();
   set data(SmsResponseBuilder data) => _$this._data = data;
 
-  SmsResponseRestResultBuilder();
+  SmsResponseRestResultBuilder() {
+    SmsResponseRestResult._initializeBuilder(this);
+  }
 
   SmsResponseRestResultBuilder get _$this {
     if (_$v != null) {

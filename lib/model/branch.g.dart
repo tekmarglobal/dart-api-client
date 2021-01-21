@@ -220,7 +220,9 @@ class BranchBuilder implements Builder<Branch, BranchBuilder> {
   set neighborhoodNavigation(NeighborhoodBuilder neighborhoodNavigation) =>
       _$this._neighborhoodNavigation = neighborhoodNavigation;
 
-  BranchBuilder();
+  BranchBuilder() {
+    Branch._initializeBuilder(this);
+  }
 
   BranchBuilder get _$this {
     if (_$v != null) {

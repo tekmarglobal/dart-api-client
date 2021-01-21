@@ -175,7 +175,9 @@ class AgreementResponseBuilder
   bool get required_ => _$this._required_;
   set required_(bool required_) => _$this._required_ = required_;
 
-  AgreementResponseBuilder();
+  AgreementResponseBuilder() {
+    AgreementResponse._initializeBuilder(this);
+  }
 
   AgreementResponseBuilder get _$this {
     if (_$v != null) {

@@ -1,63 +1,63 @@
-            import 'package:openapi/model/agreement_log.dart';
-            import 'package:openapi/model/agreement_type.dart';
-            import 'package:built_collection/built_collection.dart';
-        import 'package:built_value/built_value.dart';
+import 'package:openapi/model/agreement_log.dart';
+import 'package:openapi/model/agreement_type.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'agreement.g.dart';
 
 abstract class Agreement implements Built<Agreement, AgreementBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'agreementType')
     int get agreementType;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'startDate')
     DateTime get startDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'endDate')
     DateTime get endDate;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'content')
     String get content;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'type')
     String get type;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'isRequired')
     bool get isRequired;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'agreementTypeNavigation')
     AgreementType get agreementTypeNavigation;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'agreementLog')
     BuiltList<AgreementLog> get agreementLog;
 
     // Boilerplate code needed to wire-up generated code
     Agreement._();
 
+    static void _initializeBuilder(AgreementBuilder b) => b;
+
     factory Agreement([updates(AgreementBuilder b)]) = _$Agreement;
     static Serializer<Agreement> get serializer => _$agreementSerializer;
-
 }
 

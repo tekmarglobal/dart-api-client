@@ -149,7 +149,9 @@ class AgreementResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<AgreementResponse>();
   set data(ListBuilder<AgreementResponse> data) => _$this._data = data;
 
-  AgreementResponseListRestResultBuilder();
+  AgreementResponseListRestResultBuilder() {
+    AgreementResponseListRestResult._initializeBuilder(this);
+  }
 
   AgreementResponseListRestResultBuilder get _$this {
     if (_$v != null) {

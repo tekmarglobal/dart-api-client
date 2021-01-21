@@ -8,17 +8,17 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] [default to null]
-**order** | **int** |  | [optional] [default to null]
-**product** | **int** |  | [optional] [default to null]
-**listPrice** | **double** |  | [optional] [default to null]
-**price** | **double** |  | [optional] [default to null]
-**discount** | **double** |  | [optional] [default to null]
-**quantity** | **double** |  | [optional] [default to null]
-**productNotes** | **String** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
-**orderNavigation** | [**Order**](Order.md) |  | [optional] [default to null]
-**productNavigation** | [**Product**](Product.md) |  | [optional] [default to null]
+**oid** | **int** |  | [optional] 
+**order** | **int** |  | [optional] 
+**product** | **int** |  | [optional] 
+**listPrice** | **double** |  | [optional] 
+**price** | **double** |  | [optional] 
+**discount** | **double** |  | [optional] 
+**quantity** | **double** |  | [optional] 
+**productNotes** | **String** |  | [optional] 
+**optimisticLockField** | **int** |  | [optional] 
+**orderNavigation** | [**Order**](Order.md) |  | [optional] 
+**productNavigation** | [**Product**](Product.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

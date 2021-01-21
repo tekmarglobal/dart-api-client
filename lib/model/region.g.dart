@@ -483,7 +483,9 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
   set timeSlotTemplate(ListBuilder<TimeSlotTemplate> timeSlotTemplate) =>
       _$this._timeSlotTemplate = timeSlotTemplate;
 
-  RegionBuilder();
+  RegionBuilder() {
+    Region._initializeBuilder(this);
+  }
 
   RegionBuilder get _$this {
     if (_$v != null) {

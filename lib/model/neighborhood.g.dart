@@ -356,7 +356,9 @@ class NeighborhoodBuilder
       _$this._regionRegionsNeighborhoodNeighborhoods =
           regionRegionsNeighborhoodNeighborhoods;
 
-  NeighborhoodBuilder();
+  NeighborhoodBuilder() {
+    Neighborhood._initializeBuilder(this);
+  }
 
   NeighborhoodBuilder get _$this {
     if (_$v != null) {

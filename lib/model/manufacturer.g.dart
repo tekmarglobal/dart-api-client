@@ -207,7 +207,9 @@ class ManufacturerBuilder
   set brandManager(ListBuilder<BrandManager> brandManager) =>
       _$this._brandManager = brandManager;
 
-  ManufacturerBuilder();
+  ManufacturerBuilder() {
+    Manufacturer._initializeBuilder(this);
+  }
 
   ManufacturerBuilder get _$this {
     if (_$v != null) {

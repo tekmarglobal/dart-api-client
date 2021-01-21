@@ -146,7 +146,9 @@ class FaqResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<FaqResponse>();
   set data(ListBuilder<FaqResponse> data) => _$this._data = data;
 
-  FaqResponseListRestResultBuilder();
+  FaqResponseListRestResultBuilder() {
+    FaqResponseListRestResult._initializeBuilder(this);
+  }
 
   FaqResponseListRestResultBuilder get _$this {
     if (_$v != null) {

@@ -287,7 +287,9 @@ class ROrderProductsBuilder
   String get barcode => _$this._barcode;
   set barcode(String barcode) => _$this._barcode = barcode;
 
-  ROrderProductsBuilder();
+  ROrderProductsBuilder() {
+    ROrderProducts._initializeBuilder(this);
+  }
 
   ROrderProductsBuilder get _$this {
     if (_$v != null) {
