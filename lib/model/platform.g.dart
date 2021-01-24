@@ -234,9 +234,7 @@ class PlatformBuilder implements Builder<Platform, PlatformBuilder> {
       _$this._device ??= new ListBuilder<Device>();
   set device(ListBuilder<Device> device) => _$this._device = device;
 
-  PlatformBuilder() {
-    Platform._initializeBuilder(this);
-  }
+  PlatformBuilder();
 
   PlatformBuilder get _$this {
     if (_$v != null) {

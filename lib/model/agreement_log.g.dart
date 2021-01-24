@@ -31,12 +31,6 @@ class _$AgreementLogSerializer implements StructuredSerializer<AgreementLog> {
         ..add(serializers.serialize(object.phone,
             specifiedType: const FullType(String)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.recordDateTime != null) {
       result
         ..add('recordDateTime')
@@ -60,6 +54,12 @@ class _$AgreementLogSerializer implements StructuredSerializer<AgreementLog> {
         ..add('accept')
         ..add(serializers.serialize(object.accept,
             specifiedType: const FullType(bool)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
     }
     if (object.agreementNavigation != null) {
       result
@@ -95,10 +95,6 @@ class _$AgreementLogSerializer implements StructuredSerializer<AgreementLog> {
           result.phone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'recordDateTime':
           result.recordDateTime = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -114,6 +110,10 @@ class _$AgreementLogSerializer implements StructuredSerializer<AgreementLog> {
         case 'accept':
           result.accept = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'agreementNavigation':
           result.agreementNavigation.replace(serializers.deserialize(value,
@@ -136,8 +136,6 @@ class _$AgreementLog extends AgreementLog {
   @override
   final String phone;
   @override
-  final int optimisticLockField;
-  @override
   final DateTime recordDateTime;
   @override
   final int customer;
@@ -145,6 +143,8 @@ class _$AgreementLog extends AgreementLog {
   final int agreement;
   @override
   final bool accept;
+  @override
+  final int optimisticLockField;
   @override
   final Agreement agreementNavigation;
   @override
@@ -156,11 +156,11 @@ class _$AgreementLog extends AgreementLog {
   _$AgreementLog._(
       {this.oid,
       this.phone,
-      this.optimisticLockField,
       this.recordDateTime,
       this.customer,
       this.agreement,
       this.accept,
+      this.optimisticLockField,
       this.agreementNavigation,
       this.customerNavigation})
       : super._();
@@ -178,11 +178,11 @@ class _$AgreementLog extends AgreementLog {
     return other is AgreementLog &&
         oid == other.oid &&
         phone == other.phone &&
-        optimisticLockField == other.optimisticLockField &&
         recordDateTime == other.recordDateTime &&
         customer == other.customer &&
         agreement == other.agreement &&
         accept == other.accept &&
+        optimisticLockField == other.optimisticLockField &&
         agreementNavigation == other.agreementNavigation &&
         customerNavigation == other.customerNavigation;
   }
@@ -196,11 +196,11 @@ class _$AgreementLog extends AgreementLog {
                     $jc(
                         $jc(
                             $jc($jc($jc(0, oid.hashCode), phone.hashCode),
-                                optimisticLockField.hashCode),
-                            recordDateTime.hashCode),
-                        customer.hashCode),
-                    agreement.hashCode),
-                accept.hashCode),
+                                recordDateTime.hashCode),
+                            customer.hashCode),
+                        agreement.hashCode),
+                    accept.hashCode),
+                optimisticLockField.hashCode),
             agreementNavigation.hashCode),
         customerNavigation.hashCode));
   }
@@ -210,11 +210,11 @@ class _$AgreementLog extends AgreementLog {
     return (newBuiltValueToStringHelper('AgreementLog')
           ..add('oid', oid)
           ..add('phone', phone)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('recordDateTime', recordDateTime)
           ..add('customer', customer)
           ..add('agreement', agreement)
           ..add('accept', accept)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('agreementNavigation', agreementNavigation)
           ..add('customerNavigation', customerNavigation))
         .toString();
@@ -233,11 +233,6 @@ class AgreementLogBuilder
   String get phone => _$this._phone;
   set phone(String phone) => _$this._phone = phone;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   DateTime _recordDateTime;
   DateTime get recordDateTime => _$this._recordDateTime;
   set recordDateTime(DateTime recordDateTime) =>
@@ -255,6 +250,11 @@ class AgreementLogBuilder
   bool get accept => _$this._accept;
   set accept(bool accept) => _$this._accept = accept;
 
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
+
   AgreementBuilder _agreementNavigation;
   AgreementBuilder get agreementNavigation =>
       _$this._agreementNavigation ??= new AgreementBuilder();
@@ -267,19 +267,17 @@ class AgreementLogBuilder
   set customerNavigation(CustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  AgreementLogBuilder() {
-    AgreementLog._initializeBuilder(this);
-  }
+  AgreementLogBuilder();
 
   AgreementLogBuilder get _$this {
     if (_$v != null) {
       _oid = _$v.oid;
       _phone = _$v.phone;
-      _optimisticLockField = _$v.optimisticLockField;
       _recordDateTime = _$v.recordDateTime;
       _customer = _$v.customer;
       _agreement = _$v.agreement;
       _accept = _$v.accept;
+      _optimisticLockField = _$v.optimisticLockField;
       _agreementNavigation = _$v.agreementNavigation?.toBuilder();
       _customerNavigation = _$v.customerNavigation?.toBuilder();
       _$v = null;
@@ -308,11 +306,11 @@ class AgreementLogBuilder
           new _$AgreementLog._(
               oid: oid,
               phone: phone,
-              optimisticLockField: optimisticLockField,
               recordDateTime: recordDateTime,
               customer: customer,
               agreement: agreement,
               accept: accept,
+              optimisticLockField: optimisticLockField,
               agreementNavigation: _agreementNavigation?.build(),
               customerNavigation: _customerNavigation?.build());
     } catch (_) {

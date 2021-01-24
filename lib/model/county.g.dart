@@ -42,16 +42,16 @@ class _$CountySerializer implements StructuredSerializer<County> {
         ..add(serializers.serialize(object.formalCode,
             specifiedType: const FullType(int)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.gpsId != null) {
       result
         ..add('gpsId')
         ..add(serializers.serialize(object.gpsId,
+            specifiedType: const FullType(int)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
     if (object.cityNavigation != null) {
@@ -97,12 +97,12 @@ class _$CountySerializer implements StructuredSerializer<County> {
           result.formalCode = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'gpsId':
           result.gpsId = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'cityNavigation':
@@ -132,9 +132,9 @@ class _$County extends County {
   @override
   final int formalCode;
   @override
-  final int optimisticLockField;
-  @override
   final int gpsId;
+  @override
+  final int optimisticLockField;
   @override
   final City cityNavigation;
   @override
@@ -148,8 +148,8 @@ class _$County extends County {
       this.name,
       this.city,
       this.formalCode,
-      this.optimisticLockField,
       this.gpsId,
+      this.optimisticLockField,
       this.cityNavigation,
       this.neighborhood})
       : super._();
@@ -169,8 +169,8 @@ class _$County extends County {
         name == other.name &&
         city == other.city &&
         formalCode == other.formalCode &&
-        optimisticLockField == other.optimisticLockField &&
         gpsId == other.gpsId &&
+        optimisticLockField == other.optimisticLockField &&
         cityNavigation == other.cityNavigation &&
         neighborhood == other.neighborhood;
   }
@@ -185,8 +185,8 @@ class _$County extends County {
                         $jc($jc($jc(0, oid.hashCode), name.hashCode),
                             city.hashCode),
                         formalCode.hashCode),
-                    optimisticLockField.hashCode),
-                gpsId.hashCode),
+                    gpsId.hashCode),
+                optimisticLockField.hashCode),
             cityNavigation.hashCode),
         neighborhood.hashCode));
   }
@@ -198,8 +198,8 @@ class _$County extends County {
           ..add('name', name)
           ..add('city', city)
           ..add('formalCode', formalCode)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('gpsId', gpsId)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('cityNavigation', cityNavigation)
           ..add('neighborhood', neighborhood))
         .toString();
@@ -225,14 +225,14 @@ class CountyBuilder implements Builder<County, CountyBuilder> {
   int get formalCode => _$this._formalCode;
   set formalCode(int formalCode) => _$this._formalCode = formalCode;
 
+  int _gpsId;
+  int get gpsId => _$this._gpsId;
+  set gpsId(int gpsId) => _$this._gpsId = gpsId;
+
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
-
-  int _gpsId;
-  int get gpsId => _$this._gpsId;
-  set gpsId(int gpsId) => _$this._gpsId = gpsId;
 
   CityBuilder _cityNavigation;
   CityBuilder get cityNavigation =>
@@ -246,9 +246,7 @@ class CountyBuilder implements Builder<County, CountyBuilder> {
   set neighborhood(ListBuilder<Neighborhood> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  CountyBuilder() {
-    County._initializeBuilder(this);
-  }
+  CountyBuilder();
 
   CountyBuilder get _$this {
     if (_$v != null) {
@@ -256,8 +254,8 @@ class CountyBuilder implements Builder<County, CountyBuilder> {
       _name = _$v.name;
       _city = _$v.city;
       _formalCode = _$v.formalCode;
-      _optimisticLockField = _$v.optimisticLockField;
       _gpsId = _$v.gpsId;
+      _optimisticLockField = _$v.optimisticLockField;
       _cityNavigation = _$v.cityNavigation?.toBuilder();
       _neighborhood = _$v.neighborhood?.toBuilder();
       _$v = null;
@@ -288,8 +286,8 @@ class CountyBuilder implements Builder<County, CountyBuilder> {
               name: name,
               city: city,
               formalCode: formalCode,
-              optimisticLockField: optimisticLockField,
               gpsId: gpsId,
+              optimisticLockField: optimisticLockField,
               cityNavigation: _cityNavigation?.build(),
               neighborhood: _neighborhood?.build());
     } catch (_) {

@@ -1,28 +1,28 @@
-import 'package:built_value/built_value.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'branch_response.g.dart';
 
 abstract class BranchResponse implements Built<BranchResponse, BranchResponseBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'latitude')
     double get latitude;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'longitude')
     double get longitude;
 
     // Boilerplate code needed to wire-up generated code
     BranchResponse._();
 
-    static void _initializeBuilder(BranchResponseBuilder b) => b;
-
     factory BranchResponse([updates(BranchResponseBuilder b)]) = _$BranchResponse;
     static Serializer<BranchResponse> get serializer => _$branchResponseSerializer;
+
 }
 

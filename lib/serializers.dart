@@ -25,6 +25,8 @@ import 'package:openapi/model/cart_product.dart';
 import 'package:openapi/model/cart_response.dart';
 import 'package:openapi/model/cart_response_rest_result.dart';
 import 'package:openapi/model/category.dart';
+import 'package:openapi/model/category_import.dart';
+import 'package:openapi/model/category_import_detail.dart';
 import 'package:openapi/model/category_product.dart';
 import 'package:openapi/model/cities_response.dart';
 import 'package:openapi/model/cities_response_list_rest_result.dart';
@@ -52,6 +54,7 @@ import 'package:openapi/model/delete_address_response_rest_result.dart';
 import 'package:openapi/model/department.dart';
 import 'package:openapi/model/depot.dart';
 import 'package:openapi/model/device.dart';
+import 'package:openapi/model/device_login.dart';
 import 'package:openapi/model/faq_response.dart';
 import 'package:openapi/model/faq_response_list_rest_result.dart';
 import 'package:openapi/model/favorite_list_response.dart';
@@ -63,9 +66,6 @@ import 'package:openapi/model/get_order_request.dart';
 import 'package:openapi/model/login_request.dart';
 import 'package:openapi/model/login_respone.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
-import 'package:openapi/model/mail.dart';
-import 'package:openapi/model/mail_template.dart';
-import 'package:openapi/model/mail_type.dart';
 import 'package:openapi/model/manufacturer.dart';
 import 'package:openapi/model/neighbor_request.dart';
 import 'package:openapi/model/neighbor_response.dart';
@@ -162,6 +162,8 @@ CartProduct,
 CartResponse,
 CartResponseRestResult,
 Category,
+CategoryImport,
+CategoryImportDetail,
 CategoryProduct,
 CitiesResponse,
 CitiesResponseListRestResult,
@@ -189,6 +191,7 @@ DeleteAddressResponseRestResult,
 Department,
 Depot,
 Device,
+DeviceLogin,
 FaqResponse,
 FaqResponseListRestResult,
 FavoriteListResponse,
@@ -200,9 +203,6 @@ GetOrderRequest,
 LoginRequest,
 LoginRespone,
 LoginResponeRestResult,
-Mail,
-MailTemplate,
-MailType,
 Manufacturer,
 NeighborRequest,
 NeighborResponse,
@@ -338,6 +338,12 @@ const FullType(BuiltList, const [const FullType(CartResponseRestResult)]),
 const FullType(BuiltList, const [const FullType(Category)]),
 () => new ListBuilder<Category>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(CategoryImport)]),
+() => new ListBuilder<CategoryImport>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(CategoryImportDetail)]),
+() => new ListBuilder<CategoryImportDetail>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(CategoryProduct)]),
 () => new ListBuilder<CategoryProduct>())
 ..addBuilderFactory(
@@ -419,6 +425,9 @@ const FullType(BuiltList, const [const FullType(Depot)]),
 const FullType(BuiltList, const [const FullType(Device)]),
 () => new ListBuilder<Device>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(DeviceLogin)]),
+() => new ListBuilder<DeviceLogin>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(FaqResponse)]),
 () => new ListBuilder<FaqResponse>())
 ..addBuilderFactory(
@@ -451,15 +460,6 @@ const FullType(BuiltList, const [const FullType(LoginRespone)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginResponeRestResult)]),
 () => new ListBuilder<LoginResponeRestResult>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(Mail)]),
-() => new ListBuilder<Mail>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(MailTemplate)]),
-() => new ListBuilder<MailTemplate>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(MailType)]),
-() => new ListBuilder<MailType>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Manufacturer)]),
 () => new ListBuilder<Manufacturer>())

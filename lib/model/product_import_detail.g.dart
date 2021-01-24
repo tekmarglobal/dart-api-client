@@ -36,12 +36,6 @@ class _$ProductImportDetailSerializer
         ..add(serializers.serialize(object.product,
             specifiedType: const FullType(int)));
     }
-    if (object.fieldName != null) {
-      result
-        ..add('fieldName')
-        ..add(serializers.serialize(object.fieldName,
-            specifiedType: const FullType(String)));
-    }
     if (object.oldValue != null) {
       result
         ..add('oldValue')
@@ -60,17 +54,17 @@ class _$ProductImportDetailSerializer
         ..add(serializers.serialize(object.productImport,
             specifiedType: const FullType(int)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.operationType != null) {
       result
         ..add('operationType')
         ..add(serializers.serialize(object.operationType,
             specifiedType: const FullType(String)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
     }
     if (object.productImportNavigation != null) {
       result
@@ -107,10 +101,6 @@ class _$ProductImportDetailSerializer
           result.product = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'fieldName':
-          result.fieldName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'oldValue':
           result.oldValue = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -123,13 +113,13 @@ class _$ProductImportDetailSerializer
           result.productImport = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'operationType':
           result.operationType = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'productImportNavigation':
           result.productImportNavigation.replace(serializers.deserialize(value,
@@ -152,17 +142,15 @@ class _$ProductImportDetail extends ProductImportDetail {
   @override
   final int product;
   @override
-  final String fieldName;
-  @override
   final String oldValue;
   @override
   final String newValue;
   @override
   final int productImport;
   @override
-  final int optimisticLockField;
-  @override
   final String operationType;
+  @override
+  final int optimisticLockField;
   @override
   final ProductImport productImportNavigation;
   @override
@@ -175,12 +163,11 @@ class _$ProductImportDetail extends ProductImportDetail {
   _$ProductImportDetail._(
       {this.oid,
       this.product,
-      this.fieldName,
       this.oldValue,
       this.newValue,
       this.productImport,
-      this.optimisticLockField,
       this.operationType,
+      this.optimisticLockField,
       this.productImportNavigation,
       this.productNavigation})
       : super._();
@@ -200,12 +187,11 @@ class _$ProductImportDetail extends ProductImportDetail {
     return other is ProductImportDetail &&
         oid == other.oid &&
         product == other.product &&
-        fieldName == other.fieldName &&
         oldValue == other.oldValue &&
         newValue == other.newValue &&
         productImport == other.productImport &&
-        optimisticLockField == other.optimisticLockField &&
         operationType == other.operationType &&
+        optimisticLockField == other.optimisticLockField &&
         productImportNavigation == other.productImportNavigation &&
         productNavigation == other.productNavigation;
   }
@@ -218,14 +204,12 @@ class _$ProductImportDetail extends ProductImportDetail {
                 $jc(
                     $jc(
                         $jc(
-                            $jc(
-                                $jc($jc($jc(0, oid.hashCode), product.hashCode),
-                                    fieldName.hashCode),
+                            $jc($jc($jc(0, oid.hashCode), product.hashCode),
                                 oldValue.hashCode),
                             newValue.hashCode),
                         productImport.hashCode),
-                    optimisticLockField.hashCode),
-                operationType.hashCode),
+                    operationType.hashCode),
+                optimisticLockField.hashCode),
             productImportNavigation.hashCode),
         productNavigation.hashCode));
   }
@@ -235,12 +219,11 @@ class _$ProductImportDetail extends ProductImportDetail {
     return (newBuiltValueToStringHelper('ProductImportDetail')
           ..add('oid', oid)
           ..add('product', product)
-          ..add('fieldName', fieldName)
           ..add('oldValue', oldValue)
           ..add('newValue', newValue)
           ..add('productImport', productImport)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('operationType', operationType)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('productImportNavigation', productImportNavigation)
           ..add('productNavigation', productNavigation))
         .toString();
@@ -259,10 +242,6 @@ class ProductImportDetailBuilder
   int get product => _$this._product;
   set product(int product) => _$this._product = product;
 
-  String _fieldName;
-  String get fieldName => _$this._fieldName;
-  set fieldName(String fieldName) => _$this._fieldName = fieldName;
-
   String _oldValue;
   String get oldValue => _$this._oldValue;
   set oldValue(String oldValue) => _$this._oldValue = oldValue;
@@ -275,15 +254,15 @@ class ProductImportDetailBuilder
   int get productImport => _$this._productImport;
   set productImport(int productImport) => _$this._productImport = productImport;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   String _operationType;
   String get operationType => _$this._operationType;
   set operationType(String operationType) =>
       _$this._operationType = operationType;
+
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
 
   ProductImportBuilder _productImportNavigation;
   ProductImportBuilder get productImportNavigation =>
@@ -297,20 +276,17 @@ class ProductImportDetailBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  ProductImportDetailBuilder() {
-    ProductImportDetail._initializeBuilder(this);
-  }
+  ProductImportDetailBuilder();
 
   ProductImportDetailBuilder get _$this {
     if (_$v != null) {
       _oid = _$v.oid;
       _product = _$v.product;
-      _fieldName = _$v.fieldName;
       _oldValue = _$v.oldValue;
       _newValue = _$v.newValue;
       _productImport = _$v.productImport;
-      _optimisticLockField = _$v.optimisticLockField;
       _operationType = _$v.operationType;
+      _optimisticLockField = _$v.optimisticLockField;
       _productImportNavigation = _$v.productImportNavigation?.toBuilder();
       _productNavigation = _$v.productNavigation?.toBuilder();
       _$v = null;
@@ -339,12 +315,11 @@ class ProductImportDetailBuilder
           new _$ProductImportDetail._(
               oid: oid,
               product: product,
-              fieldName: fieldName,
               oldValue: oldValue,
               newValue: newValue,
               productImport: productImport,
-              optimisticLockField: optimisticLockField,
               operationType: operationType,
+              optimisticLockField: optimisticLockField,
               productImportNavigation: _productImportNavigation?.build(),
               productNavigation: _productNavigation?.build());
     } catch (_) {

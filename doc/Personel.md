@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
-**surname** | **String** |  | [optional] 
-**phone** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
-**userName** | **String** |  | [optional] 
-**password** | **String** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**personelDepartment** | [**BuiltList<PersonelDepartment>**](PersonelDepartment.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**name** | **String** |  | [optional] [default to null]
+**surname** | **String** |  | [optional] [default to null]
+**phone** | **String** |  | [optional] [default to null]
+**email** | **String** |  | [optional] [default to null]
+**userName** | **String** |  | [optional] [default to null]
+**password** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**personelDepartment** | [**BuiltList&lt;PersonelDepartment&gt;**](PersonelDepartment.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

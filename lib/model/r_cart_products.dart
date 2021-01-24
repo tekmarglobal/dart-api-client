@@ -1,52 +1,52 @@
-import 'package:built_value/built_value.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'r_cart_products.g.dart';
 
 abstract class RCartProducts implements Built<RCartProducts, RCartProductsBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'regionProductId')
     int get regionProductId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'quantity')
     double get quantity;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'listPrice')
     double get listPrice;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'price')
     double get price;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'amount')
     double get amount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'discountAmount')
     double get discountAmount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'productId')
     int get productId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'unitId')
     int get unitId;
 
     // Boilerplate code needed to wire-up generated code
     RCartProducts._();
 
-    static void _initializeBuilder(RCartProductsBuilder b) => b;
-
     factory RCartProducts([updates(RCartProductsBuilder b)]) = _$RCartProducts;
     static Serializer<RCartProducts> get serializer => _$rCartProductsSerializer;
+
 }
 

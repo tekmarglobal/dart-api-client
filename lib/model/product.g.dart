@@ -126,12 +126,6 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
         ..add(serializers.serialize(object.erpId,
             specifiedType: const FullType(int)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.productUnit != null) {
       result
         ..add('productUnit')
@@ -143,6 +137,12 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
         ..add('vat')
         ..add(serializers.serialize(object.vat,
             specifiedType: const FullType(double)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
     }
     if (object.brandNavigation != null) {
       result
@@ -299,10 +299,6 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
           result.erpId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'productUnit':
           result.productUnit = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -310,6 +306,10 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
         case 'vat':
           result.vat = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'brandNavigation':
           result.brandNavigation.replace(serializers.deserialize(value,
@@ -414,11 +414,11 @@ class _$Product extends Product {
   @override
   final int erpId;
   @override
-  final int optimisticLockField;
-  @override
   final int productUnit;
   @override
   final double vat;
+  @override
+  final int optimisticLockField;
   @override
   final Brand brandNavigation;
   @override
@@ -462,9 +462,9 @@ class _$Product extends Product {
       this.initalQuantity,
       this.quantityStep,
       this.erpId,
-      this.optimisticLockField,
       this.productUnit,
       this.vat,
+      this.optimisticLockField,
       this.brandNavigation,
       this.supplierNavigation,
       this.categoryProduct,
@@ -506,9 +506,9 @@ class _$Product extends Product {
         initalQuantity == other.initalQuantity &&
         quantityStep == other.quantityStep &&
         erpId == other.erpId &&
-        optimisticLockField == other.optimisticLockField &&
         productUnit == other.productUnit &&
         vat == other.vat &&
+        optimisticLockField == other.optimisticLockField &&
         brandNavigation == other.brandNavigation &&
         supplierNavigation == other.supplierNavigation &&
         categoryProduct == other.categoryProduct &&
@@ -550,9 +550,9 @@ class _$Product extends Product {
                                                                     initalQuantity.hashCode),
                                                                 quantityStep.hashCode),
                                                             erpId.hashCode),
-                                                        optimisticLockField.hashCode),
-                                                    productUnit.hashCode),
-                                                vat.hashCode),
+                                                        productUnit.hashCode),
+                                                    vat.hashCode),
+                                                optimisticLockField.hashCode),
                                             brandNavigation.hashCode),
                                         supplierNavigation.hashCode),
                                     categoryProduct.hashCode),
@@ -586,9 +586,9 @@ class _$Product extends Product {
           ..add('initalQuantity', initalQuantity)
           ..add('quantityStep', quantityStep)
           ..add('erpId', erpId)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('productUnit', productUnit)
           ..add('vat', vat)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('brandNavigation', brandNavigation)
           ..add('supplierNavigation', supplierNavigation)
           ..add('categoryProduct', categoryProduct)
@@ -684,11 +684,6 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   int get erpId => _$this._erpId;
   set erpId(int erpId) => _$this._erpId = erpId;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   int _productUnit;
   int get productUnit => _$this._productUnit;
   set productUnit(int productUnit) => _$this._productUnit = productUnit;
@@ -696,6 +691,11 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   double _vat;
   double get vat => _$this._vat;
   set vat(double vat) => _$this._vat = vat;
+
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
 
   BrandBuilder _brandNavigation;
   BrandBuilder get brandNavigation =>
@@ -765,9 +765,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   set regionProduct(ListBuilder<RegionProduct> regionProduct) =>
       _$this._regionProduct = regionProduct;
 
-  ProductBuilder() {
-    Product._initializeBuilder(this);
-  }
+  ProductBuilder();
 
   ProductBuilder get _$this {
     if (_$v != null) {
@@ -789,9 +787,9 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
       _initalQuantity = _$v.initalQuantity;
       _quantityStep = _$v.quantityStep;
       _erpId = _$v.erpId;
-      _optimisticLockField = _$v.optimisticLockField;
       _productUnit = _$v.productUnit;
       _vat = _$v.vat;
+      _optimisticLockField = _$v.optimisticLockField;
       _brandNavigation = _$v.brandNavigation?.toBuilder();
       _supplierNavigation = _$v.supplierNavigation?.toBuilder();
       _categoryProduct = _$v.categoryProduct?.toBuilder();
@@ -846,9 +844,9 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
               initalQuantity: initalQuantity,
               quantityStep: quantityStep,
               erpId: erpId,
-              optimisticLockField: optimisticLockField,
               productUnit: productUnit,
               vat: vat,
+              optimisticLockField: optimisticLockField,
               brandNavigation: _brandNavigation?.build(),
               supplierNavigation: _supplierNavigation?.build(),
               categoryProduct: _categoryProduct?.build(),

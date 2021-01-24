@@ -264,9 +264,7 @@ class ProductImageBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  ProductImageBuilder() {
-    ProductImage._initializeBuilder(this);
-  }
+  ProductImageBuilder();
 
   ProductImageBuilder get _$this {
     if (_$v != null) {

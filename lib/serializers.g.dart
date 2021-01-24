@@ -26,6 +26,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CartResponse.serializer)
       ..add(CartResponseRestResult.serializer)
       ..add(Category.serializer)
+      ..add(CategoryImport.serializer)
+      ..add(CategoryImportDetail.serializer)
       ..add(CategoryProduct.serializer)
       ..add(CitiesResponse.serializer)
       ..add(CitiesResponseListRestResult.serializer)
@@ -53,6 +55,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Department.serializer)
       ..add(Depot.serializer)
       ..add(Device.serializer)
+      ..add(DeviceLogin.serializer)
       ..add(FaqResponse.serializer)
       ..add(FaqResponseListRestResult.serializer)
       ..add(FavoriteListResponse.serializer)
@@ -64,9 +67,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(LoginRequest.serializer)
       ..add(LoginRespone.serializer)
       ..add(LoginResponeRestResult.serializer)
-      ..add(Mail.serializer)
-      ..add(MailTemplate.serializer)
-      ..add(MailType.serializer)
       ..add(Manufacturer.serializer)
       ..add(NeighborRequest.serializer)
       ..add(NeighborResponse.serializer)
@@ -157,8 +157,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(CustomerLoginAttempt)]),
           () => new ListBuilder<CustomerLoginAttempt>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Device)]),
-          () => new ListBuilder<Device>())
+          const FullType(BuiltList, const [const FullType(DeviceLogin)]),
+          () => new ListBuilder<DeviceLogin>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Order)]),
           () => new ListBuilder<Order>())
@@ -212,6 +212,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(CartProduct)]),
           () => new ListBuilder<CartProduct>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(DeviceLogin)]),
+          () => new ListBuilder<DeviceLogin>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Order)]),
           () => new ListBuilder<Order>())
       ..addBuilderFactory(
@@ -254,6 +257,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(PersonelDepartment)]),
           () => new ListBuilder<PersonelDepartment>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(CategoryImportDetail)]),
+          () => new ListBuilder<CategoryImportDetail>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(CategoryImportDetail)]),
+          () => new ListBuilder<CategoryImportDetail>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CategoryProduct)]),
           () => new ListBuilder<CategoryProduct>())
@@ -327,15 +338,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(FaqResponse)]),
           () => new ListBuilder<FaqResponse>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(MailTemplate)]),
-          () => new ListBuilder<MailTemplate>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(MailTemplate)]),
-          () => new ListBuilder<MailTemplate>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Order)]),
-          () => new ListBuilder<Order>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(NeighborResponse)]),
           () => new ListBuilder<NeighborResponse>())
       ..addBuilderFactory(
@@ -344,6 +346,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Neighborhood)]),
           () => new ListBuilder<Neighborhood>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Order)]),
+          () => new ListBuilder<Order>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Order)]),
           () => new ListBuilder<Order>())
@@ -388,41 +393,18 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(RBanner)]),
           () => new ListBuilder<RBanner>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RCartProduct)]),
-          () => new ListBuilder<RCartProduct>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RCartProducts)]),
-          () => new ListBuilder<RCartProducts>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ROrderProducts)]),
-          () => new ListBuilder<ROrderProducts>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RPaymentType)]),
-          () => new ListBuilder<RPaymentType>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RProduct)]),
-          () => new ListBuilder<RProduct>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RProduct)]),
-          () => new ListBuilder<RProduct>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RProduct)]),
-          () => new ListBuilder<RProduct>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RCategory)]),
-          () => new ListBuilder<RCategory>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RProductPrice)]),
-          () => new ListBuilder<RProductPrice>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RegionResponse)]),
-          () => new ListBuilder<RegionResponse>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(TimeSlotResponse)]),
-          () => new ListBuilder<TimeSlotResponse>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
-          () => new ListBuilder<TimeSlotsResponse>())
+          const FullType(BuiltList, const [const FullType(RCartProduct)]), () => new ListBuilder<RCartProduct>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartProducts)]), () => new ListBuilder<RCartProducts>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(ROrderProducts)]), () => new ListBuilder<ROrderProducts>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RPaymentType)]), () => new ListBuilder<RPaymentType>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RProduct)]), () => new ListBuilder<RProduct>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RProduct)]), () => new ListBuilder<RProduct>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RProduct)]), () => new ListBuilder<RProduct>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCategory)]), () => new ListBuilder<RCategory>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RProductPrice)]), () => new ListBuilder<RProductPrice>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RegionResponse)]), () => new ListBuilder<RegionResponse>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotResponse)]), () => new ListBuilder<TimeSlotResponse>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]), () => new ListBuilder<TimeSlotsResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(int)]), () => new ListBuilder<int>()))
     .build();
 

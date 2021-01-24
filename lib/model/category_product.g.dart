@@ -227,9 +227,7 @@ class CategoryProductBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  CategoryProductBuilder() {
-    CategoryProduct._initializeBuilder(this);
-  }
+  CategoryProductBuilder();
 
   CategoryProductBuilder get _$this {
     if (_$v != null) {

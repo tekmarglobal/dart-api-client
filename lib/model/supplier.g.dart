@@ -155,9 +155,7 @@ class SupplierBuilder implements Builder<Supplier, SupplierBuilder> {
       _$this._product ??= new ListBuilder<Product>();
   set product(ListBuilder<Product> product) => _$this._product = product;
 
-  SupplierBuilder() {
-    Supplier._initializeBuilder(this);
-  }
+  SupplierBuilder();
 
   SupplierBuilder get _$this {
     if (_$v != null) {

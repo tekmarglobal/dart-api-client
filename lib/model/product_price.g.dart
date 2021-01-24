@@ -243,9 +243,7 @@ class ProductPriceBuilder
   set regionProductNavigation(RegionProductBuilder regionProductNavigation) =>
       _$this._regionProductNavigation = regionProductNavigation;
 
-  ProductPriceBuilder() {
-    ProductPrice._initializeBuilder(this);
-  }
+  ProductPriceBuilder();
 
   ProductPriceBuilder get _$this {
     if (_$v != null) {

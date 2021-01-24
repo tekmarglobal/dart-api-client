@@ -233,9 +233,7 @@ class CustomerFavoriteListBuilder
   set productNavigation(ProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  CustomerFavoriteListBuilder() {
-    CustomerFavoriteList._initializeBuilder(this);
-  }
+  CustomerFavoriteListBuilder();
 
   CustomerFavoriteListBuilder get _$this {
     if (_$v != null) {

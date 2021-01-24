@@ -154,9 +154,7 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
   ListBuilder<City> get city => _$this._city ??= new ListBuilder<City>();
   set city(ListBuilder<City> city) => _$this._city = city;
 
-  CountryBuilder() {
-    Country._initializeBuilder(this);
-  }
+  CountryBuilder();
 
   CountryBuilder get _$this {
     if (_$v != null) {

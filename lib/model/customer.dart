@@ -1,149 +1,149 @@
-import 'package:openapi/model/agreement_log.dart';
-import 'package:openapi/model/payment.dart';
-import 'package:openapi/model/address.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/customer_login_attempt.dart';
-import 'package:openapi/model/cart.dart';
-import 'package:openapi/model/device.dart';
-import 'package:openapi/model/customer_favorite_list.dart';
-import 'package:openapi/model/order.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/agreement_log.dart';
+            import 'package:openapi/model/payment.dart';
+            import 'package:openapi/model/address.dart';
+            import 'package:openapi/model/device_login.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/customer_login_attempt.dart';
+            import 'package:openapi/model/cart.dart';
+            import 'package:openapi/model/customer_favorite_list.dart';
+            import 'package:openapi/model/order.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'customer.g.dart';
 
 abstract class Customer implements Built<Customer, CustomerBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'surname')
     String get surname;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'birthdate')
     DateTime get birthdate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phone')
     String get phone;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'email')
     String get email;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'allowSms')
     bool get allowSms;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'allowEmail')
     bool get allowEmail;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'gender')
     int get gender;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'password')
     String get password;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'smsVerificationCode')
     String get smsVerificationCode;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'smsVerificationSendDate')
     DateTime get smsVerificationSendDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'anonymous')
     bool get anonymous;
-
-    @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'allowCampaign')
     bool get allowCampaign;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'companyName')
     String get companyName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'companyTaxName')
     String get companyTaxName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'companyTaxNumber')
     String get companyTaxNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'identificationNumber')
     String get identificationNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'defaultAddress')
     int get defaultAddress;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'invoiceAddress')
     int get invoiceAddress;
-
-    @nullable
+    
+        @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'defaultAddressNavigation')
     Address get defaultAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'invoiceAddressNavigation')
     Address get invoiceAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'address')
     BuiltList<Address> get address;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'agreementLog')
     BuiltList<AgreementLog> get agreementLog;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cart')
     BuiltList<Cart> get cart;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerFavoriteList')
     BuiltList<CustomerFavoriteList> get customerFavoriteList;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerLoginAttempt')
     BuiltList<CustomerLoginAttempt> get customerLoginAttempt;
-
-    @nullable
-    @BuiltValueField(wireName: r'device')
-    BuiltList<Device> get device;
-
-    @nullable
+    
+        @nullable
+    @BuiltValueField(wireName: r'deviceLogin')
+    BuiltList<DeviceLogin> get deviceLogin;
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     BuiltList<Order> get order;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<Payment> get payment;
 
     // Boilerplate code needed to wire-up generated code
     Customer._();
 
-    static void _initializeBuilder(CustomerBuilder b) => b;
-
     factory Customer([updates(CustomerBuilder b)]) = _$Customer;
     static Serializer<Customer> get serializer => _$customerSerializer;
+
 }
 

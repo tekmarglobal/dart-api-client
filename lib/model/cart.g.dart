@@ -24,6 +24,12 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
         ..add(serializers.serialize(object.oid,
             specifiedType: const FullType(int)));
     }
+    if (object.dateDeleted != null) {
+      result
+        ..add('dateDeleted')
+        ..add(serializers.serialize(object.dateDeleted,
+            specifiedType: const FullType(DateTime)));
+    }
     if (object.dateCreated != null) {
       result
         ..add('dateCreated')
@@ -47,12 +53,6 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
         ..add('cartTotal')
         ..add(serializers.serialize(object.cartTotal,
             specifiedType: const FullType(double)));
-    }
-    if (object.sessionId != null) {
-      result
-        ..add('sessionId')
-        ..add(serializers.serialize(object.sessionId,
-            specifiedType: const FullType(String)));
     }
     if (object.createdFrom != null) {
       result
@@ -96,23 +96,17 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
         ..add(serializers.serialize(object.deleted,
             specifiedType: const FullType(bool)));
     }
-    if (object.deleteDate != null) {
+    if (object.estimatedFee != null) {
       result
-        ..add('deleteDate')
-        ..add(serializers.serialize(object.deleteDate,
-            specifiedType: const FullType(DateTime)));
+        ..add('estimatedFee')
+        ..add(serializers.serialize(object.estimatedFee,
+            specifiedType: const FullType(double)));
     }
     if (object.optimisticLockField != null) {
       result
         ..add('optimisticLockField')
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
-    }
-    if (object.estimatedFee != null) {
-      result
-        ..add('estimatedFee')
-        ..add(serializers.serialize(object.estimatedFee,
-            specifiedType: const FullType(double)));
     }
     if (object.createdFromNavigation != null) {
       result
@@ -164,6 +158,10 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
           result.oid = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'dateDeleted':
+          result.dateDeleted = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
         case 'dateCreated':
           result.dateCreated = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -179,10 +177,6 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
         case 'cartTotal':
           result.cartTotal = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
-          break;
-        case 'sessionId':
-          result.sessionId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
           break;
         case 'createdFrom':
           result.createdFrom = serializers.deserialize(value,
@@ -212,17 +206,13 @@ class _$CartSerializer implements StructuredSerializer<Cart> {
           result.deleted = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
-        case 'deleteDate':
-          result.deleteDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
+        case 'estimatedFee':
+          result.estimatedFee = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'optimisticLockField':
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
-          break;
-        case 'estimatedFee':
-          result.estimatedFee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
           break;
         case 'createdFromNavigation':
           result.createdFromNavigation.replace(serializers.deserialize(value,
@@ -259,6 +249,8 @@ class _$Cart extends Cart {
   @override
   final int oid;
   @override
+  final DateTime dateDeleted;
+  @override
   final DateTime dateCreated;
   @override
   final int customer;
@@ -266,8 +258,6 @@ class _$Cart extends Cart {
   final int region;
   @override
   final double cartTotal;
-  @override
-  final String sessionId;
   @override
   final int createdFrom;
   @override
@@ -283,11 +273,9 @@ class _$Cart extends Cart {
   @override
   final bool deleted;
   @override
-  final DateTime deleteDate;
+  final double estimatedFee;
   @override
   final int optimisticLockField;
-  @override
-  final double estimatedFee;
   @override
   final Device createdFromNavigation;
   @override
@@ -304,11 +292,11 @@ class _$Cart extends Cart {
 
   _$Cart._(
       {this.oid,
+      this.dateDeleted,
       this.dateCreated,
       this.customer,
       this.region,
       this.cartTotal,
-      this.sessionId,
       this.createdFrom,
       this.productDiscountsTotal,
       this.note,
@@ -316,9 +304,8 @@ class _$Cart extends Cart {
       this.bagTotal,
       this.active,
       this.deleted,
-      this.deleteDate,
-      this.optimisticLockField,
       this.estimatedFee,
+      this.optimisticLockField,
       this.createdFromNavigation,
       this.customerNavigation,
       this.regionNavigation,
@@ -338,11 +325,11 @@ class _$Cart extends Cart {
     if (identical(other, this)) return true;
     return other is Cart &&
         oid == other.oid &&
+        dateDeleted == other.dateDeleted &&
         dateCreated == other.dateCreated &&
         customer == other.customer &&
         region == other.region &&
         cartTotal == other.cartTotal &&
-        sessionId == other.sessionId &&
         createdFrom == other.createdFrom &&
         productDiscountsTotal == other.productDiscountsTotal &&
         note == other.note &&
@@ -350,9 +337,8 @@ class _$Cart extends Cart {
         bagTotal == other.bagTotal &&
         active == other.active &&
         deleted == other.deleted &&
-        deleteDate == other.deleteDate &&
-        optimisticLockField == other.optimisticLockField &&
         estimatedFee == other.estimatedFee &&
+        optimisticLockField == other.optimisticLockField &&
         createdFromNavigation == other.createdFromNavigation &&
         customerNavigation == other.customerNavigation &&
         regionNavigation == other.regionNavigation &&
@@ -380,21 +366,32 @@ class _$Cart extends Cart {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc(0, oid.hashCode), dateCreated.hashCode),
-                                                                                customer.hashCode),
-                                                                            region.hashCode),
-                                                                        cartTotal.hashCode),
-                                                                    sessionId.hashCode),
-                                                                createdFrom.hashCode),
-                                                            productDiscountsTotal.hashCode),
-                                                        note.hashCode),
-                                                    bagAmount.hashCode),
-                                                bagTotal.hashCode),
-                                            active.hashCode),
-                                        deleted.hashCode),
-                                    deleteDate.hashCode),
-                                optimisticLockField.hashCode),
-                            estimatedFee.hashCode),
+                                                                            $jc(
+                                                                                $jc(
+                                                                                    0,
+                                                                                    oid
+                                                                                        .hashCode),
+                                                                                dateDeleted
+                                                                                    .hashCode),
+                                                                            dateCreated
+                                                                                .hashCode),
+                                                                        customer
+                                                                            .hashCode),
+                                                                    region
+                                                                        .hashCode),
+                                                                cartTotal
+                                                                    .hashCode),
+                                                            createdFrom
+                                                                .hashCode),
+                                                        productDiscountsTotal
+                                                            .hashCode),
+                                                    note.hashCode),
+                                                bagAmount.hashCode),
+                                            bagTotal.hashCode),
+                                        active.hashCode),
+                                    deleted.hashCode),
+                                estimatedFee.hashCode),
+                            optimisticLockField.hashCode),
                         createdFromNavigation.hashCode),
                     customerNavigation.hashCode),
                 regionNavigation.hashCode),
@@ -406,11 +403,11 @@ class _$Cart extends Cart {
   String toString() {
     return (newBuiltValueToStringHelper('Cart')
           ..add('oid', oid)
+          ..add('dateDeleted', dateDeleted)
           ..add('dateCreated', dateCreated)
           ..add('customer', customer)
           ..add('region', region)
           ..add('cartTotal', cartTotal)
-          ..add('sessionId', sessionId)
           ..add('createdFrom', createdFrom)
           ..add('productDiscountsTotal', productDiscountsTotal)
           ..add('note', note)
@@ -418,9 +415,8 @@ class _$Cart extends Cart {
           ..add('bagTotal', bagTotal)
           ..add('active', active)
           ..add('deleted', deleted)
-          ..add('deleteDate', deleteDate)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('estimatedFee', estimatedFee)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('createdFromNavigation', createdFromNavigation)
           ..add('customerNavigation', customerNavigation)
           ..add('regionNavigation', regionNavigation)
@@ -437,6 +433,10 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
   int get oid => _$this._oid;
   set oid(int oid) => _$this._oid = oid;
 
+  DateTime _dateDeleted;
+  DateTime get dateDeleted => _$this._dateDeleted;
+  set dateDeleted(DateTime dateDeleted) => _$this._dateDeleted = dateDeleted;
+
   DateTime _dateCreated;
   DateTime get dateCreated => _$this._dateCreated;
   set dateCreated(DateTime dateCreated) => _$this._dateCreated = dateCreated;
@@ -452,10 +452,6 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
   double _cartTotal;
   double get cartTotal => _$this._cartTotal;
   set cartTotal(double cartTotal) => _$this._cartTotal = cartTotal;
-
-  String _sessionId;
-  String get sessionId => _$this._sessionId;
-  set sessionId(String sessionId) => _$this._sessionId = sessionId;
 
   int _createdFrom;
   int get createdFrom => _$this._createdFrom;
@@ -486,18 +482,14 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
   bool get deleted => _$this._deleted;
   set deleted(bool deleted) => _$this._deleted = deleted;
 
-  DateTime _deleteDate;
-  DateTime get deleteDate => _$this._deleteDate;
-  set deleteDate(DateTime deleteDate) => _$this._deleteDate = deleteDate;
+  double _estimatedFee;
+  double get estimatedFee => _$this._estimatedFee;
+  set estimatedFee(double estimatedFee) => _$this._estimatedFee = estimatedFee;
 
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
-
-  double _estimatedFee;
-  double get estimatedFee => _$this._estimatedFee;
-  set estimatedFee(double estimatedFee) => _$this._estimatedFee = estimatedFee;
 
   DeviceBuilder _createdFromNavigation;
   DeviceBuilder get createdFromNavigation =>
@@ -527,18 +519,16 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
 
-  CartBuilder() {
-    Cart._initializeBuilder(this);
-  }
+  CartBuilder();
 
   CartBuilder get _$this {
     if (_$v != null) {
       _oid = _$v.oid;
+      _dateDeleted = _$v.dateDeleted;
       _dateCreated = _$v.dateCreated;
       _customer = _$v.customer;
       _region = _$v.region;
       _cartTotal = _$v.cartTotal;
-      _sessionId = _$v.sessionId;
       _createdFrom = _$v.createdFrom;
       _productDiscountsTotal = _$v.productDiscountsTotal;
       _note = _$v.note;
@@ -546,9 +536,8 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
       _bagTotal = _$v.bagTotal;
       _active = _$v.active;
       _deleted = _$v.deleted;
-      _deleteDate = _$v.deleteDate;
-      _optimisticLockField = _$v.optimisticLockField;
       _estimatedFee = _$v.estimatedFee;
+      _optimisticLockField = _$v.optimisticLockField;
       _createdFromNavigation = _$v.createdFromNavigation?.toBuilder();
       _customerNavigation = _$v.customerNavigation?.toBuilder();
       _regionNavigation = _$v.regionNavigation?.toBuilder();
@@ -579,11 +568,11 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
       _$result = _$v ??
           new _$Cart._(
               oid: oid,
+              dateDeleted: dateDeleted,
               dateCreated: dateCreated,
               customer: customer,
               region: region,
               cartTotal: cartTotal,
-              sessionId: sessionId,
               createdFrom: createdFrom,
               productDiscountsTotal: productDiscountsTotal,
               note: note,
@@ -591,9 +580,8 @@ class CartBuilder implements Builder<Cart, CartBuilder> {
               bagTotal: bagTotal,
               active: active,
               deleted: deleted,
-              deleteDate: deleteDate,
-              optimisticLockField: optimisticLockField,
               estimatedFee: estimatedFee,
+              optimisticLockField: optimisticLockField,
               createdFromNavigation: _createdFromNavigation?.build(),
               customerNavigation: _customerNavigation?.build(),
               regionNavigation: _regionNavigation?.build(),

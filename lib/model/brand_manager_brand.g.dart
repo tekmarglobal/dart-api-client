@@ -207,9 +207,7 @@ class BrandManagerBrandBuilder
   set brandNavigation(BrandBuilder brandNavigation) =>
       _$this._brandNavigation = brandNavigation;
 
-  BrandManagerBrandBuilder() {
-    BrandManagerBrand._initializeBuilder(this);
-  }
+  BrandManagerBrandBuilder();
 
   BrandManagerBrandBuilder get _$this {
     if (_$v != null) {

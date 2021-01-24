@@ -467,9 +467,7 @@ class CartProductBuilder implements Builder<CartProduct, CartProductBuilder> {
   set removedFromNavigation(DeviceBuilder removedFromNavigation) =>
       _$this._removedFromNavigation = removedFromNavigation;
 
-  CartProductBuilder() {
-    CartProduct._initializeBuilder(this);
-  }
+  CartProductBuilder();
 
   CartProductBuilder get _$this {
     if (_$v != null) {

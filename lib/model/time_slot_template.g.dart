@@ -268,9 +268,7 @@ class TimeSlotTemplateBuilder
   set regionNavigation(RegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
-  TimeSlotTemplateBuilder() {
-    TimeSlotTemplate._initializeBuilder(this);
-  }
+  TimeSlotTemplateBuilder();
 
   TimeSlotTemplateBuilder get _$this {
     if (_$v != null) {

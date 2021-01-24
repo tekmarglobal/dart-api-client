@@ -54,23 +54,17 @@ class _$AgreementSerializer implements StructuredSerializer<Agreement> {
         ..add(serializers.serialize(object.content,
             specifiedType: const FullType(String)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.type != null) {
-      result
-        ..add('type')
-        ..add(serializers.serialize(object.type,
-            specifiedType: const FullType(String)));
-    }
     if (object.isRequired != null) {
       result
         ..add('isRequired')
         ..add(serializers.serialize(object.isRequired,
             specifiedType: const FullType(bool)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
     }
     if (object.agreementTypeNavigation != null) {
       result
@@ -123,17 +117,13 @@ class _$AgreementSerializer implements StructuredSerializer<Agreement> {
           result.content = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'type':
-          result.type = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'isRequired':
           result.isRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'agreementTypeNavigation':
           result.agreementTypeNavigation.replace(serializers.deserialize(value,
@@ -166,11 +156,9 @@ class _$Agreement extends Agreement {
   @override
   final String content;
   @override
-  final int optimisticLockField;
-  @override
-  final String type;
-  @override
   final bool isRequired;
+  @override
+  final int optimisticLockField;
   @override
   final AgreementType agreementTypeNavigation;
   @override
@@ -186,9 +174,8 @@ class _$Agreement extends Agreement {
       this.startDate,
       this.endDate,
       this.content,
-      this.optimisticLockField,
-      this.type,
       this.isRequired,
+      this.optimisticLockField,
       this.agreementTypeNavigation,
       this.agreementLog})
       : super._();
@@ -210,9 +197,8 @@ class _$Agreement extends Agreement {
         startDate == other.startDate &&
         endDate == other.endDate &&
         content == other.content &&
-        optimisticLockField == other.optimisticLockField &&
-        type == other.type &&
         isRequired == other.isRequired &&
+        optimisticLockField == other.optimisticLockField &&
         agreementTypeNavigation == other.agreementTypeNavigation &&
         agreementLog == other.agreementLog;
   }
@@ -226,17 +212,13 @@ class _$Agreement extends Agreement {
                     $jc(
                         $jc(
                             $jc(
-                                $jc(
-                                    $jc(
-                                        $jc($jc(0, oid.hashCode),
-                                            name.hashCode),
-                                        agreementType.hashCode),
-                                    startDate.hashCode),
-                                endDate.hashCode),
-                            content.hashCode),
-                        optimisticLockField.hashCode),
-                    type.hashCode),
-                isRequired.hashCode),
+                                $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                                    agreementType.hashCode),
+                                startDate.hashCode),
+                            endDate.hashCode),
+                        content.hashCode),
+                    isRequired.hashCode),
+                optimisticLockField.hashCode),
             agreementTypeNavigation.hashCode),
         agreementLog.hashCode));
   }
@@ -250,9 +232,8 @@ class _$Agreement extends Agreement {
           ..add('startDate', startDate)
           ..add('endDate', endDate)
           ..add('content', content)
-          ..add('optimisticLockField', optimisticLockField)
-          ..add('type', type)
           ..add('isRequired', isRequired)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('agreementTypeNavigation', agreementTypeNavigation)
           ..add('agreementLog', agreementLog))
         .toString();
@@ -286,18 +267,14 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
   String get content => _$this._content;
   set content(String content) => _$this._content = content;
 
+  bool _isRequired;
+  bool get isRequired => _$this._isRequired;
+  set isRequired(bool isRequired) => _$this._isRequired = isRequired;
+
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
-
-  String _type;
-  String get type => _$this._type;
-  set type(String type) => _$this._type = type;
-
-  bool _isRequired;
-  bool get isRequired => _$this._isRequired;
-  set isRequired(bool isRequired) => _$this._isRequired = isRequired;
 
   AgreementTypeBuilder _agreementTypeNavigation;
   AgreementTypeBuilder get agreementTypeNavigation =>
@@ -311,9 +288,7 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
   set agreementLog(ListBuilder<AgreementLog> agreementLog) =>
       _$this._agreementLog = agreementLog;
 
-  AgreementBuilder() {
-    Agreement._initializeBuilder(this);
-  }
+  AgreementBuilder();
 
   AgreementBuilder get _$this {
     if (_$v != null) {
@@ -323,9 +298,8 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
       _startDate = _$v.startDate;
       _endDate = _$v.endDate;
       _content = _$v.content;
-      _optimisticLockField = _$v.optimisticLockField;
-      _type = _$v.type;
       _isRequired = _$v.isRequired;
+      _optimisticLockField = _$v.optimisticLockField;
       _agreementTypeNavigation = _$v.agreementTypeNavigation?.toBuilder();
       _agreementLog = _$v.agreementLog?.toBuilder();
       _$v = null;
@@ -358,9 +332,8 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
               startDate: startDate,
               endDate: endDate,
               content: content,
-              optimisticLockField: optimisticLockField,
-              type: type,
               isRequired: isRequired,
+              optimisticLockField: optimisticLockField,
               agreementTypeNavigation: _agreementTypeNavigation?.build(),
               agreementLog: _agreementLog?.build());
     } catch (_) {

@@ -49,12 +49,6 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
         ..add(serializers.serialize(object.s3keySecret,
             specifiedType: const FullType(String)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.defaultCategory != null) {
       result
         ..add('defaultCategory')
@@ -71,6 +65,12 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
       result
         ..add('deliveryProduct')
         ..add(serializers.serialize(object.deliveryProduct,
+            specifiedType: const FullType(int)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
     if (object.gcrecord != null) {
@@ -132,10 +132,6 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
           result.s3keySecret = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'defaultCategory':
           result.defaultCategory = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -146,6 +142,10 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
           break;
         case 'deliveryProduct':
           result.deliveryProduct = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'gcrecord':
@@ -185,13 +185,13 @@ class _$Configuration extends Configuration {
   @override
   final String s3keySecret;
   @override
-  final int optimisticLockField;
-  @override
   final int defaultCategory;
   @override
   final int bagProduct;
   @override
   final int deliveryProduct;
+  @override
+  final int optimisticLockField;
   @override
   final int gcrecord;
   @override
@@ -210,10 +210,10 @@ class _$Configuration extends Configuration {
       this.active,
       this.s3keyId,
       this.s3keySecret,
-      this.optimisticLockField,
       this.defaultCategory,
       this.bagProduct,
       this.deliveryProduct,
+      this.optimisticLockField,
       this.gcrecord,
       this.bagProductNavigation,
       this.defaultCategoryNavigation,
@@ -236,10 +236,10 @@ class _$Configuration extends Configuration {
         active == other.active &&
         s3keyId == other.s3keyId &&
         s3keySecret == other.s3keySecret &&
-        optimisticLockField == other.optimisticLockField &&
         defaultCategory == other.defaultCategory &&
         bagProduct == other.bagProduct &&
         deliveryProduct == other.deliveryProduct &&
+        optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
         bagProductNavigation == other.bagProductNavigation &&
         defaultCategoryNavigation == other.defaultCategoryNavigation &&
@@ -264,10 +264,10 @@ class _$Configuration extends Configuration {
                                                 active.hashCode),
                                             s3keyId.hashCode),
                                         s3keySecret.hashCode),
-                                    optimisticLockField.hashCode),
-                                defaultCategory.hashCode),
-                            bagProduct.hashCode),
-                        deliveryProduct.hashCode),
+                                    defaultCategory.hashCode),
+                                bagProduct.hashCode),
+                            deliveryProduct.hashCode),
+                        optimisticLockField.hashCode),
                     gcrecord.hashCode),
                 bagProductNavigation.hashCode),
             defaultCategoryNavigation.hashCode),
@@ -282,10 +282,10 @@ class _$Configuration extends Configuration {
           ..add('active', active)
           ..add('s3keyId', s3keyId)
           ..add('s3keySecret', s3keySecret)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('defaultCategory', defaultCategory)
           ..add('bagProduct', bagProduct)
           ..add('deliveryProduct', deliveryProduct)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
           ..add('bagProductNavigation', bagProductNavigation)
           ..add('defaultCategoryNavigation', defaultCategoryNavigation)
@@ -318,11 +318,6 @@ class ConfigurationBuilder
   String get s3keySecret => _$this._s3keySecret;
   set s3keySecret(String s3keySecret) => _$this._s3keySecret = s3keySecret;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   int _defaultCategory;
   int get defaultCategory => _$this._defaultCategory;
   set defaultCategory(int defaultCategory) =>
@@ -336,6 +331,11 @@ class ConfigurationBuilder
   int get deliveryProduct => _$this._deliveryProduct;
   set deliveryProduct(int deliveryProduct) =>
       _$this._deliveryProduct = deliveryProduct;
+
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
 
   int _gcrecord;
   int get gcrecord => _$this._gcrecord;
@@ -359,9 +359,7 @@ class ConfigurationBuilder
   set deliveryProductNavigation(ProductBuilder deliveryProductNavigation) =>
       _$this._deliveryProductNavigation = deliveryProductNavigation;
 
-  ConfigurationBuilder() {
-    Configuration._initializeBuilder(this);
-  }
+  ConfigurationBuilder();
 
   ConfigurationBuilder get _$this {
     if (_$v != null) {
@@ -370,10 +368,10 @@ class ConfigurationBuilder
       _active = _$v.active;
       _s3keyId = _$v.s3keyId;
       _s3keySecret = _$v.s3keySecret;
-      _optimisticLockField = _$v.optimisticLockField;
       _defaultCategory = _$v.defaultCategory;
       _bagProduct = _$v.bagProduct;
       _deliveryProduct = _$v.deliveryProduct;
+      _optimisticLockField = _$v.optimisticLockField;
       _gcrecord = _$v.gcrecord;
       _bagProductNavigation = _$v.bagProductNavigation?.toBuilder();
       _defaultCategoryNavigation = _$v.defaultCategoryNavigation?.toBuilder();
@@ -407,10 +405,10 @@ class ConfigurationBuilder
               active: active,
               s3keyId: s3keyId,
               s3keySecret: s3keySecret,
-              optimisticLockField: optimisticLockField,
               defaultCategory: defaultCategory,
               bagProduct: bagProduct,
               deliveryProduct: deliveryProduct,
+              optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
               bagProductNavigation: _bagProductNavigation?.build(),
               defaultCategoryNavigation: _defaultCategoryNavigation?.build(),

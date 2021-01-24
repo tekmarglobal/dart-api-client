@@ -10,7 +10,6 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiOrderCreateOrderPost**](OrderApi.md#apiOrderCreateOrderPost) | **post** /api/Order/CreateOrder | 
-[**apiOrderGenerateOrderMailPost**](OrderApi.md#apiOrderGenerateOrderMailPost) | **post** /api/Order/GenerateOrderMail | 
 [**apiOrderGetOrderListPost**](OrderApi.md#apiOrderGetOrderListPost) | **post** /api/Order/GetOrderList | 
 [**apiOrderGetOrderPost**](OrderApi.md#apiOrderGetOrderPost) | **post** /api/Order/GetOrder | 
 [**apiOrderSendToOlimposPost**](OrderApi.md#apiOrderSendToOlimposPost) | **post** /api/Order/SendToOlimpos | 
@@ -38,7 +37,7 @@ try {
     var result = api_instance.apiOrderCreateOrderPost(orderRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n");
 }
 ```
 
@@ -63,51 +62,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiOrderGenerateOrderMailPost**
-> BuiltList<Mail> apiOrderGenerateOrderMailPost(orderId)
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new OrderApi();
-var orderId = 56; // int | 
-
-try { 
-    var result = api_instance.apiOrderGenerateOrderMailPost(orderId);
-    print(result);
-} catch (e) {
-    print('Exception when calling OrderApi->apiOrderGenerateOrderMailPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **int**|  | [optional] 
-
-### Return type
-
-[**BuiltList<Mail>**](Mail.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **apiOrderGetOrderListPost**
 > GetOrderListResponseRestResult apiOrderGetOrderListPost()
 
@@ -127,7 +81,7 @@ try {
     var result = api_instance.apiOrderGetOrderListPost();
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n");
 }
 ```
 
@@ -169,7 +123,7 @@ try {
     var result = api_instance.apiOrderGetOrderPost(getOrderRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderGetOrderPost: $e\n");
 }
 ```
 
@@ -212,7 +166,7 @@ var api_instance = new OrderApi();
 try { 
     api_instance.apiOrderSendToOlimposPost();
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderSendToOlimposPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderSendToOlimposPost: $e\n");
 }
 ```
 
@@ -253,7 +207,7 @@ try {
     var result = api_instance.apiOrderSendmailPost();
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderSendmailPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderSendmailPost: $e\n");
 }
 ```
 
@@ -295,7 +249,7 @@ try {
     var result = api_instance.apiOrderUpdateStatusPost(updateOrderRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
+    print("Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n");
 }
 ```
 

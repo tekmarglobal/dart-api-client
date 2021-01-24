@@ -35,5 +35,3 @@ pubspec.lock
 *.iws         
 .idea/        
 .DS_Store     
-
-test

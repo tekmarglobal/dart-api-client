@@ -1,92 +1,92 @@
-import 'package:openapi/model/payment_type.dart';
-import 'package:openapi/model/customer.dart';
-import 'package:openapi/model/payment_status.dart';
-import 'package:openapi/model/order.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/payment_type.dart';
+            import 'package:openapi/model/customer.dart';
+            import 'package:openapi/model/payment_status.dart';
+            import 'package:openapi/model/order.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'payment.g.dart';
 
 abstract class Payment implements Built<Payment, PaymentBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'success')
     bool get success;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentDate')
     DateTime get paymentDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'amount')
     double get amount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'description')
     String get description;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentType')
     int get paymentType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentStatus')
     int get paymentStatus;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'chargeType')
     int get chargeType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'transactionCode')
     String get transactionCode;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'uuId')
     String get uuId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     Customer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderNavigation')
     Order get orderNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentStatusNavigation')
     PaymentStatus get paymentStatusNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentTypeNavigation')
     PaymentType get paymentTypeNavigation;
 
     // Boilerplate code needed to wire-up generated code
     Payment._();
 
-    static void _initializeBuilder(PaymentBuilder b) => b;
-
     factory Payment([updates(PaymentBuilder b)]) = _$Payment;
     static Serializer<Payment> get serializer => _$paymentSerializer;
+
 }
 

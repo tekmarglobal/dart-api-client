@@ -1,42 +1,42 @@
-import 'package:openapi/model/r_product.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/r_product.dart';
+            import 'package:built_collection/built_collection.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'r_category.g.dart';
 
 abstract class RCategory implements Built<RCategory, RCategoryBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'id')
     int get id;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'parentId')
     int get parentId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'products')
     BuiltList<RProduct> get products;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'subCategories')
     BuiltList<RCategory> get subCategories;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
 
     // Boilerplate code needed to wire-up generated code
     RCategory._();
 
-    static void _initializeBuilder(RCategoryBuilder b) => b;
-
     factory RCategory([updates(RCategoryBuilder b)]) = _$RCategory;
     static Serializer<RCategory> get serializer => _$rCategorySerializer;
+
 }
 

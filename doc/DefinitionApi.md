@@ -36,7 +36,7 @@ try {
     var result = api_instance.apiDefinitionAgreementGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n");
 }
 ```
 
@@ -77,7 +77,7 @@ try {
     var result = api_instance.apiDefinitionCitiesPost();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n");
 }
 ```
 
@@ -119,7 +119,7 @@ try {
     var result = api_instance.apiDefinitionCountiesPost(countiesRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n");
 }
 ```
 
@@ -163,7 +163,7 @@ try {
     var result = api_instance.apiDefinitionFaqGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n");
 }
 ```
 
@@ -205,7 +205,7 @@ try {
     var result = api_instance.apiDefinitionNeighborhoodPost(neighborRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n");
 }
 ```
 
@@ -249,7 +249,7 @@ var updateAgreementRequest = new UpdateAgreementRequest(); // UpdateAgreementReq
 try { 
     api_instance.apiDefinitionUpdateAgreementLogPost(updateAgreementRequest);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
 }
 ```
 

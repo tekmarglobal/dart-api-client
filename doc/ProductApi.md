@@ -39,7 +39,7 @@ try {
     var result = api_instance.apiProductAddToFavoriteListPost(favoriteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n");
 }
 ```
 
@@ -84,7 +84,7 @@ try {
     var result = api_instance.apiProductDeleteFavoriteDelete(favoriteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
+    print("Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n");
 }
 ```
 
@@ -128,7 +128,7 @@ try {
     var result = api_instance.apiProductGetFavoriteListPost();
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n");
 }
 ```
 
@@ -171,7 +171,7 @@ var client = client_example; // String |
 try { 
     api_instance.apiProductInsertimagesPost(i, shopid, client);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductInsertimagesPost: $e\n');
+    print("Exception when calling ProductApi->apiProductInsertimagesPost: $e\n");
 }
 ```
 
@@ -179,9 +179,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **i** | **int**|  | [optional] 
- **shopid** | **String**|  | [optional] 
- **client** | **String**|  | [optional] 
+ **i** | **int**|  | [optional] [default to null]
+ **shopid** | **String**|  | [optional] [default to null]
+ **client** | **String**|  | [optional] [default to null]
 
 ### Return type
 
@@ -218,7 +218,7 @@ try {
     var result = api_instance.apiProductPost(productRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductPost: $e\n');
+    print("Exception when calling ProductApi->apiProductPost: $e\n");
 }
 ```
 
@@ -262,7 +262,7 @@ try {
     var result = api_instance.apiProductProductListPost();
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductProductListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductProductListPost: $e\n");
 }
 ```
 
@@ -304,7 +304,7 @@ try {
     var result = api_instance.apiProductProductSearchPost(searchProductRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
+    print("Exception when calling ProductApi->apiProductProductSearchPost: $e\n");
 }
 ```
 
@@ -348,7 +348,7 @@ var region = 56; // int |
 try { 
     api_instance.apiProductUpdateProductFromOlimposPost(region);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n');
+    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
 }
 ```
 
@@ -356,7 +356,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] 
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 

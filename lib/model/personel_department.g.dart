@@ -208,9 +208,7 @@ class PersonelDepartmentBuilder
   set personelNavigation(PersonelBuilder personelNavigation) =>
       _$this._personelNavigation = personelNavigation;
 
-  PersonelDepartmentBuilder() {
-    PersonelDepartment._initializeBuilder(this);
-  }
+  PersonelDepartmentBuilder();
 
   PersonelDepartmentBuilder get _$this {
     if (_$v != null) {

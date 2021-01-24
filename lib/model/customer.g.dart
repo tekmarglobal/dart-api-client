@@ -96,12 +96,6 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
         ..add(serializers.serialize(object.anonymous,
             specifiedType: const FullType(bool)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.allowCampaign != null) {
       result
         ..add('allowCampaign')
@@ -142,6 +136,12 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
       result
         ..add('invoiceAddress')
         ..add(serializers.serialize(object.invoiceAddress,
+            specifiedType: const FullType(int)));
+    }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
     if (object.defaultAddressNavigation != null) {
@@ -191,12 +191,12 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
             specifiedType: const FullType(
                 BuiltList, const [const FullType(CustomerLoginAttempt)])));
     }
-    if (object.device != null) {
+    if (object.deviceLogin != null) {
       result
-        ..add('device')
-        ..add(serializers.serialize(object.device,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(Device)])));
+        ..add('deviceLogin')
+        ..add(serializers.serialize(object.deviceLogin,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(DeviceLogin)])));
     }
     if (object.order != null) {
       result
@@ -278,10 +278,6 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
           result.anonymous = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'allowCampaign':
           result.allowCampaign = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -308,6 +304,10 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
           break;
         case 'invoiceAddress':
           result.invoiceAddress = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'defaultAddressNavigation':
@@ -348,10 +348,10 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
                       BuiltList, const [const FullType(CustomerLoginAttempt)]))
               as BuiltList<Object>);
           break;
-        case 'device':
-          result.device.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(Device)]))
+        case 'deviceLogin':
+          result.deviceLogin.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(DeviceLogin)]))
               as BuiltList<Object>);
           break;
         case 'order':
@@ -401,8 +401,6 @@ class _$Customer extends Customer {
   @override
   final bool anonymous;
   @override
-  final int optimisticLockField;
-  @override
   final bool allowCampaign;
   @override
   final String companyName;
@@ -416,6 +414,8 @@ class _$Customer extends Customer {
   final int defaultAddress;
   @override
   final int invoiceAddress;
+  @override
+  final int optimisticLockField;
   @override
   final Address defaultAddressNavigation;
   @override
@@ -431,7 +431,7 @@ class _$Customer extends Customer {
   @override
   final BuiltList<CustomerLoginAttempt> customerLoginAttempt;
   @override
-  final BuiltList<Device> device;
+  final BuiltList<DeviceLogin> deviceLogin;
   @override
   final BuiltList<Order> order;
   @override
@@ -454,7 +454,6 @@ class _$Customer extends Customer {
       this.smsVerificationCode,
       this.smsVerificationSendDate,
       this.anonymous,
-      this.optimisticLockField,
       this.allowCampaign,
       this.companyName,
       this.companyTaxName,
@@ -462,6 +461,7 @@ class _$Customer extends Customer {
       this.identificationNumber,
       this.defaultAddress,
       this.invoiceAddress,
+      this.optimisticLockField,
       this.defaultAddressNavigation,
       this.invoiceAddressNavigation,
       this.address,
@@ -469,7 +469,7 @@ class _$Customer extends Customer {
       this.cart,
       this.customerFavoriteList,
       this.customerLoginAttempt,
-      this.device,
+      this.deviceLogin,
       this.order,
       this.payment})
       : super._();
@@ -498,7 +498,6 @@ class _$Customer extends Customer {
         smsVerificationCode == other.smsVerificationCode &&
         smsVerificationSendDate == other.smsVerificationSendDate &&
         anonymous == other.anonymous &&
-        optimisticLockField == other.optimisticLockField &&
         allowCampaign == other.allowCampaign &&
         companyName == other.companyName &&
         companyTaxName == other.companyTaxName &&
@@ -506,6 +505,7 @@ class _$Customer extends Customer {
         identificationNumber == other.identificationNumber &&
         defaultAddress == other.defaultAddress &&
         invoiceAddress == other.invoiceAddress &&
+        optimisticLockField == other.optimisticLockField &&
         defaultAddressNavigation == other.defaultAddressNavigation &&
         invoiceAddressNavigation == other.invoiceAddressNavigation &&
         address == other.address &&
@@ -513,7 +513,7 @@ class _$Customer extends Customer {
         cart == other.cart &&
         customerFavoriteList == other.customerFavoriteList &&
         customerLoginAttempt == other.customerLoginAttempt &&
-        device == other.device &&
+        deviceLogin == other.deviceLogin &&
         order == other.order &&
         payment == other.payment;
   }
@@ -540,14 +540,14 @@ class _$Customer extends Customer {
                                                                         $jc(
                                                                             $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode),
                                                                                 anonymous.hashCode),
-                                                                            optimisticLockField.hashCode),
-                                                                        allowCampaign.hashCode),
-                                                                    companyName.hashCode),
-                                                                companyTaxName.hashCode),
-                                                            companyTaxNumber.hashCode),
-                                                        identificationNumber.hashCode),
-                                                    defaultAddress.hashCode),
-                                                invoiceAddress.hashCode),
+                                                                            allowCampaign.hashCode),
+                                                                        companyName.hashCode),
+                                                                    companyTaxName.hashCode),
+                                                                companyTaxNumber.hashCode),
+                                                            identificationNumber.hashCode),
+                                                        defaultAddress.hashCode),
+                                                    invoiceAddress.hashCode),
+                                                optimisticLockField.hashCode),
                                             defaultAddressNavigation.hashCode),
                                         invoiceAddressNavigation.hashCode),
                                     address.hashCode),
@@ -555,7 +555,7 @@ class _$Customer extends Customer {
                             cart.hashCode),
                         customerFavoriteList.hashCode),
                     customerLoginAttempt.hashCode),
-                device.hashCode),
+                deviceLogin.hashCode),
             order.hashCode),
         payment.hashCode));
   }
@@ -576,7 +576,6 @@ class _$Customer extends Customer {
           ..add('smsVerificationCode', smsVerificationCode)
           ..add('smsVerificationSendDate', smsVerificationSendDate)
           ..add('anonymous', anonymous)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('allowCampaign', allowCampaign)
           ..add('companyName', companyName)
           ..add('companyTaxName', companyTaxName)
@@ -584,6 +583,7 @@ class _$Customer extends Customer {
           ..add('identificationNumber', identificationNumber)
           ..add('defaultAddress', defaultAddress)
           ..add('invoiceAddress', invoiceAddress)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('defaultAddressNavigation', defaultAddressNavigation)
           ..add('invoiceAddressNavigation', invoiceAddressNavigation)
           ..add('address', address)
@@ -591,7 +591,7 @@ class _$Customer extends Customer {
           ..add('cart', cart)
           ..add('customerFavoriteList', customerFavoriteList)
           ..add('customerLoginAttempt', customerLoginAttempt)
-          ..add('device', device)
+          ..add('deviceLogin', deviceLogin)
           ..add('order', order)
           ..add('payment', payment))
         .toString();
@@ -655,11 +655,6 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
   bool get anonymous => _$this._anonymous;
   set anonymous(bool anonymous) => _$this._anonymous = anonymous;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   bool _allowCampaign;
   bool get allowCampaign => _$this._allowCampaign;
   set allowCampaign(bool allowCampaign) =>
@@ -693,6 +688,11 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
   int get invoiceAddress => _$this._invoiceAddress;
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
+
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
 
   AddressBuilder _defaultAddressNavigation;
   AddressBuilder get defaultAddressNavigation =>
@@ -735,10 +735,11 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
           ListBuilder<CustomerLoginAttempt> customerLoginAttempt) =>
       _$this._customerLoginAttempt = customerLoginAttempt;
 
-  ListBuilder<Device> _device;
-  ListBuilder<Device> get device =>
-      _$this._device ??= new ListBuilder<Device>();
-  set device(ListBuilder<Device> device) => _$this._device = device;
+  ListBuilder<DeviceLogin> _deviceLogin;
+  ListBuilder<DeviceLogin> get deviceLogin =>
+      _$this._deviceLogin ??= new ListBuilder<DeviceLogin>();
+  set deviceLogin(ListBuilder<DeviceLogin> deviceLogin) =>
+      _$this._deviceLogin = deviceLogin;
 
   ListBuilder<Order> _order;
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
@@ -749,9 +750,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
-  CustomerBuilder() {
-    Customer._initializeBuilder(this);
-  }
+  CustomerBuilder();
 
   CustomerBuilder get _$this {
     if (_$v != null) {
@@ -768,7 +767,6 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _smsVerificationCode = _$v.smsVerificationCode;
       _smsVerificationSendDate = _$v.smsVerificationSendDate;
       _anonymous = _$v.anonymous;
-      _optimisticLockField = _$v.optimisticLockField;
       _allowCampaign = _$v.allowCampaign;
       _companyName = _$v.companyName;
       _companyTaxName = _$v.companyTaxName;
@@ -776,6 +774,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _identificationNumber = _$v.identificationNumber;
       _defaultAddress = _$v.defaultAddress;
       _invoiceAddress = _$v.invoiceAddress;
+      _optimisticLockField = _$v.optimisticLockField;
       _defaultAddressNavigation = _$v.defaultAddressNavigation?.toBuilder();
       _invoiceAddressNavigation = _$v.invoiceAddressNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
@@ -783,7 +782,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _cart = _$v.cart?.toBuilder();
       _customerFavoriteList = _$v.customerFavoriteList?.toBuilder();
       _customerLoginAttempt = _$v.customerLoginAttempt?.toBuilder();
-      _device = _$v.device?.toBuilder();
+      _deviceLogin = _$v.deviceLogin?.toBuilder();
       _order = _$v.order?.toBuilder();
       _payment = _$v.payment?.toBuilder();
       _$v = null;
@@ -823,7 +822,6 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               smsVerificationCode: smsVerificationCode,
               smsVerificationSendDate: smsVerificationSendDate,
               anonymous: anonymous,
-              optimisticLockField: optimisticLockField,
               allowCampaign: allowCampaign,
               companyName: companyName,
               companyTaxName: companyTaxName,
@@ -831,6 +829,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               identificationNumber: identificationNumber,
               defaultAddress: defaultAddress,
               invoiceAddress: invoiceAddress,
+              optimisticLockField: optimisticLockField,
               defaultAddressNavigation: _defaultAddressNavigation?.build(),
               invoiceAddressNavigation: _invoiceAddressNavigation?.build(),
               address: _address?.build(),
@@ -838,7 +837,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               cart: _cart?.build(),
               customerFavoriteList: _customerFavoriteList?.build(),
               customerLoginAttempt: _customerLoginAttempt?.build(),
-              device: _device?.build(),
+              deviceLogin: _deviceLogin?.build(),
               order: _order?.build(),
               payment: _payment?.build());
     } catch (_) {
@@ -858,8 +857,8 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
         _customerFavoriteList?.build();
         _$failedField = 'customerLoginAttempt';
         _customerLoginAttempt?.build();
-        _$failedField = 'device';
-        _device?.build();
+        _$failedField = 'deviceLogin';
+        _deviceLogin?.build();
         _$failedField = 'order';
         _order?.build();
         _$failedField = 'payment';

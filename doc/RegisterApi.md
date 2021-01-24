@@ -33,7 +33,7 @@ try {
     var result = api_instance.apiRegisterSendSmsPost(smsRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
+    print("Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n");
 }
 ```
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiRegisterVerifySmsPost(verifyRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
+    print("Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n");
 }
 ```
 

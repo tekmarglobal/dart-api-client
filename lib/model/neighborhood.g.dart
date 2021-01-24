@@ -43,10 +43,10 @@ class _$NeighborhoodSerializer implements StructuredSerializer<Neighborhood> {
         ..add(serializers.serialize(object.city,
             specifiedType: const FullType(int)));
     }
-    if (object.optimisticLockField != null) {
+    if (object.formalCode != null) {
       result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
+        ..add('formalCode')
+        ..add(serializers.serialize(object.formalCode,
             specifiedType: const FullType(int)));
     }
     if (object.gpsId != null) {
@@ -55,10 +55,10 @@ class _$NeighborhoodSerializer implements StructuredSerializer<Neighborhood> {
         ..add(serializers.serialize(object.gpsId,
             specifiedType: const FullType(int)));
     }
-    if (object.formalCode != null) {
+    if (object.optimisticLockField != null) {
       result
-        ..add('formalCode')
-        ..add(serializers.serialize(object.formalCode,
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
     if (object.cityNavigation != null) {
@@ -126,16 +126,16 @@ class _$NeighborhoodSerializer implements StructuredSerializer<Neighborhood> {
           result.city = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
+        case 'formalCode':
+          result.formalCode = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'gpsId':
           result.gpsId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'formalCode':
-          result.formalCode = serializers.deserialize(value,
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'cityNavigation':
@@ -182,11 +182,11 @@ class _$Neighborhood extends Neighborhood {
   @override
   final int city;
   @override
-  final int optimisticLockField;
+  final int formalCode;
   @override
   final int gpsId;
   @override
-  final int formalCode;
+  final int optimisticLockField;
   @override
   final City cityNavigation;
   @override
@@ -207,9 +207,9 @@ class _$Neighborhood extends Neighborhood {
       this.name,
       this.county,
       this.city,
-      this.optimisticLockField,
-      this.gpsId,
       this.formalCode,
+      this.gpsId,
+      this.optimisticLockField,
       this.cityNavigation,
       this.countyNavigation,
       this.address,
@@ -232,9 +232,9 @@ class _$Neighborhood extends Neighborhood {
         name == other.name &&
         county == other.county &&
         city == other.city &&
-        optimisticLockField == other.optimisticLockField &&
-        gpsId == other.gpsId &&
         formalCode == other.formalCode &&
+        gpsId == other.gpsId &&
+        optimisticLockField == other.optimisticLockField &&
         cityNavigation == other.cityNavigation &&
         countyNavigation == other.countyNavigation &&
         address == other.address &&
@@ -259,9 +259,9 @@ class _$Neighborhood extends Neighborhood {
                                                 name.hashCode),
                                             county.hashCode),
                                         city.hashCode),
-                                    optimisticLockField.hashCode),
+                                    formalCode.hashCode),
                                 gpsId.hashCode),
-                            formalCode.hashCode),
+                            optimisticLockField.hashCode),
                         cityNavigation.hashCode),
                     countyNavigation.hashCode),
                 address.hashCode),
@@ -276,9 +276,9 @@ class _$Neighborhood extends Neighborhood {
           ..add('name', name)
           ..add('county', county)
           ..add('city', city)
-          ..add('optimisticLockField', optimisticLockField)
-          ..add('gpsId', gpsId)
           ..add('formalCode', formalCode)
+          ..add('gpsId', gpsId)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('cityNavigation', cityNavigation)
           ..add('countyNavigation', countyNavigation)
           ..add('address', address)
@@ -309,18 +309,18 @@ class NeighborhoodBuilder
   int get city => _$this._city;
   set city(int city) => _$this._city = city;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
+  int _formalCode;
+  int get formalCode => _$this._formalCode;
+  set formalCode(int formalCode) => _$this._formalCode = formalCode;
 
   int _gpsId;
   int get gpsId => _$this._gpsId;
   set gpsId(int gpsId) => _$this._gpsId = gpsId;
 
-  int _formalCode;
-  int get formalCode => _$this._formalCode;
-  set formalCode(int formalCode) => _$this._formalCode = formalCode;
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
 
   CityBuilder _cityNavigation;
   CityBuilder get cityNavigation =>
@@ -356,9 +356,7 @@ class NeighborhoodBuilder
       _$this._regionRegionsNeighborhoodNeighborhoods =
           regionRegionsNeighborhoodNeighborhoods;
 
-  NeighborhoodBuilder() {
-    Neighborhood._initializeBuilder(this);
-  }
+  NeighborhoodBuilder();
 
   NeighborhoodBuilder get _$this {
     if (_$v != null) {
@@ -366,9 +364,9 @@ class NeighborhoodBuilder
       _name = _$v.name;
       _county = _$v.county;
       _city = _$v.city;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gpsId = _$v.gpsId;
       _formalCode = _$v.formalCode;
+      _gpsId = _$v.gpsId;
+      _optimisticLockField = _$v.optimisticLockField;
       _cityNavigation = _$v.cityNavigation?.toBuilder();
       _countyNavigation = _$v.countyNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
@@ -403,9 +401,9 @@ class NeighborhoodBuilder
               name: name,
               county: county,
               city: city,
-              optimisticLockField: optimisticLockField,
-              gpsId: gpsId,
               formalCode: formalCode,
+              gpsId: gpsId,
+              optimisticLockField: optimisticLockField,
               cityNavigation: _cityNavigation?.build(),
               countyNavigation: _countyNavigation?.build(),
               address: _address?.build(),
