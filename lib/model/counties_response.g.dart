@@ -134,9 +134,7 @@ class CountiesResponseBuilder
   String get cityName => _$this._cityName;
   set cityName(String cityName) => _$this._cityName = cityName;
 
-  CountiesResponseBuilder() {
-    CountiesResponse._initializeBuilder(this);
-  }
+  CountiesResponseBuilder();
 
   CountiesResponseBuilder get _$this {
     if (_$v != null) {

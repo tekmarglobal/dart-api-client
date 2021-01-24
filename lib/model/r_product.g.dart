@@ -371,9 +371,7 @@ class RProductBuilder implements Builder<RProduct, RProductBuilder> {
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
-  RProductBuilder() {
-    RProduct._initializeBuilder(this);
-  }
+  RProductBuilder();
 
   RProductBuilder get _$this {
     if (_$v != null) {

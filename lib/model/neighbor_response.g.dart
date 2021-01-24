@@ -248,9 +248,7 @@ class NeighborResponseBuilder
       _$this._branch ??= new ListBuilder<BranchResponse>();
   set branch(ListBuilder<BranchResponse> branch) => _$this._branch = branch;
 
-  NeighborResponseBuilder() {
-    NeighborResponse._initializeBuilder(this);
-  }
+  NeighborResponseBuilder();
 
   NeighborResponseBuilder get _$this {
     if (_$v != null) {

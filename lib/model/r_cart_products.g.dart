@@ -266,9 +266,7 @@ class RCartProductsBuilder
   int get unitId => _$this._unitId;
   set unitId(int unitId) => _$this._unitId = unitId;
 
-  RCartProductsBuilder() {
-    RCartProducts._initializeBuilder(this);
-  }
+  RCartProductsBuilder();
 
   RCartProductsBuilder get _$this {
     if (_$v != null) {

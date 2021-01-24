@@ -101,9 +101,7 @@ class BannerResponseBuilder
   set bannerList(ListBuilder<RBanner> bannerList) =>
       _$this._bannerList = bannerList;
 
-  BannerResponseBuilder() {
-    BannerResponse._initializeBuilder(this);
-  }
+  BannerResponseBuilder();
 
   BannerResponseBuilder get _$this {
     if (_$v != null) {

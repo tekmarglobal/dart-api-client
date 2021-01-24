@@ -552,9 +552,7 @@ class RAddressBuilder implements Builder<RAddress, RAddressBuilder> {
   String get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  RAddressBuilder() {
-    RAddress._initializeBuilder(this);
-  }
+  RAddressBuilder();
 
   RAddressBuilder get _$this {
     if (_$v != null) {

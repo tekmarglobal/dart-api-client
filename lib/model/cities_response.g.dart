@@ -133,9 +133,7 @@ class CitiesResponseBuilder
   String get country => _$this._country;
   set country(String country) => _$this._country = country;
 
-  CitiesResponseBuilder() {
-    CitiesResponse._initializeBuilder(this);
-  }
+  CitiesResponseBuilder();
 
   CitiesResponseBuilder get _$this {
     if (_$v != null) {

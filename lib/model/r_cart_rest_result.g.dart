@@ -134,9 +134,7 @@ class RCartRestResultBuilder
   RCartBuilder get data => _$this._data ??= new RCartBuilder();
   set data(RCartBuilder data) => _$this._data = data;
 
-  RCartRestResultBuilder() {
-    RCartRestResult._initializeBuilder(this);
-  }
+  RCartRestResultBuilder();
 
   RCartRestResultBuilder get _$this {
     if (_$v != null) {

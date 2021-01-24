@@ -106,9 +106,7 @@ class FavoriteListResponseBuilder
       _$this._products ??= new ListBuilder<RProduct>();
   set products(ListBuilder<RProduct> products) => _$this._products = products;
 
-  FavoriteListResponseBuilder() {
-    FavoriteListResponse._initializeBuilder(this);
-  }
+  FavoriteListResponseBuilder();
 
   FavoriteListResponseBuilder get _$this {
     if (_$v != null) {

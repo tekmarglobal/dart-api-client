@@ -110,9 +110,7 @@ class RPaymentTypeBuilder
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
-  RPaymentTypeBuilder() {
-    RPaymentType._initializeBuilder(this);
-  }
+  RPaymentTypeBuilder();
 
   RPaymentTypeBuilder get _$this {
     if (_$v != null) {

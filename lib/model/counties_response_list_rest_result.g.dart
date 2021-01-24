@@ -148,9 +148,7 @@ class CountiesResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<CountiesResponse>();
   set data(ListBuilder<CountiesResponse> data) => _$this._data = data;
 
-  CountiesResponseListRestResultBuilder() {
-    CountiesResponseListRestResult._initializeBuilder(this);
-  }
+  CountiesResponseListRestResultBuilder();
 
   CountiesResponseListRestResultBuilder get _$this {
     if (_$v != null) {

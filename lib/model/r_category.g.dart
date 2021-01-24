@@ -203,9 +203,7 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
   int get order => _$this._order;
   set order(int order) => _$this._order = order;
 
-  RCategoryBuilder() {
-    RCategory._initializeBuilder(this);
-  }
+  RCategoryBuilder();
 
   RCategoryBuilder get _$this {
     if (_$v != null) {

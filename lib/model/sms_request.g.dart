@@ -90,9 +90,7 @@ class SmsRequestBuilder implements Builder<SmsRequest, SmsRequestBuilder> {
   String get phone => _$this._phone;
   set phone(String phone) => _$this._phone = phone;
 
-  SmsRequestBuilder() {
-    SmsRequest._initializeBuilder(this);
-  }
+  SmsRequestBuilder();
 
   SmsRequestBuilder get _$this {
     if (_$v != null) {

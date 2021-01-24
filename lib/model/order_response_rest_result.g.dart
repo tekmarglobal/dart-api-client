@@ -142,9 +142,7 @@ class OrderResponseRestResultBuilder
   OrderResponseBuilder get data => _$this._data ??= new OrderResponseBuilder();
   set data(OrderResponseBuilder data) => _$this._data = data;
 
-  OrderResponseRestResultBuilder() {
-    OrderResponseRestResult._initializeBuilder(this);
-  }
+  OrderResponseRestResultBuilder();
 
   OrderResponseRestResultBuilder get _$this {
     if (_$v != null) {

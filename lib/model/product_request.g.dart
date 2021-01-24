@@ -95,9 +95,7 @@ class ProductRequestBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  ProductRequestBuilder() {
-    ProductRequest._initializeBuilder(this);
-  }
+  ProductRequestBuilder();
 
   ProductRequestBuilder get _$this {
     if (_$v != null) {

@@ -148,9 +148,7 @@ class RegionResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<RegionResponse>();
   set data(ListBuilder<RegionResponse> data) => _$this._data = data;
 
-  RegionResponseListRestResultBuilder() {
-    RegionResponseListRestResult._initializeBuilder(this);
-  }
+  RegionResponseListRestResultBuilder();
 
   RegionResponseListRestResultBuilder get _$this {
     if (_$v != null) {

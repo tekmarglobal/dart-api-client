@@ -175,9 +175,7 @@ class TimeSlotResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
-  TimeSlotResponseBuilder() {
-    TimeSlotResponse._initializeBuilder(this);
-  }
+  TimeSlotResponseBuilder();
 
   TimeSlotResponseBuilder get _$this {
     if (_$v != null) {

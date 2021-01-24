@@ -145,9 +145,7 @@ class RProductListRestResultBuilder
       _$this._data ??= new ListBuilder<RProduct>();
   set data(ListBuilder<RProduct> data) => _$this._data = data;
 
-  RProductListRestResultBuilder() {
-    RProductListRestResult._initializeBuilder(this);
-  }
+  RProductListRestResultBuilder();
 
   RProductListRestResultBuilder get _$this {
     if (_$v != null) {

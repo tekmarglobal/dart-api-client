@@ -467,9 +467,7 @@ class RCustomerBuilder implements Builder<RCustomer, RCustomerBuilder> {
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  RCustomerBuilder() {
-    RCustomer._initializeBuilder(this);
-  }
+  RCustomerBuilder();
 
   RCustomerBuilder get _$this {
     if (_$v != null) {

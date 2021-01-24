@@ -117,9 +117,7 @@ class UpdateOrderRequestBuilder
   int get orderStatusId => _$this._orderStatusId;
   set orderStatusId(int orderStatusId) => _$this._orderStatusId = orderStatusId;
 
-  UpdateOrderRequestBuilder() {
-    UpdateOrderRequest._initializeBuilder(this);
-  }
+  UpdateOrderRequestBuilder();
 
   UpdateOrderRequestBuilder get _$this {
     if (_$v != null) {

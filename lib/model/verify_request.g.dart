@@ -113,9 +113,7 @@ class VerifyRequestBuilder
   String get smsCode => _$this._smsCode;
   set smsCode(String smsCode) => _$this._smsCode = smsCode;
 
-  VerifyRequestBuilder() {
-    VerifyRequest._initializeBuilder(this);
-  }
+  VerifyRequestBuilder();
 
   VerifyRequestBuilder get _$this {
     if (_$v != null) {

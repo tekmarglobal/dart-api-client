@@ -147,9 +147,7 @@ class CustomerAddressResponseRestResultBuilder
       _$this._data ??= new CustomerAddressResponseBuilder();
   set data(CustomerAddressResponseBuilder data) => _$this._data = data;
 
-  CustomerAddressResponseRestResultBuilder() {
-    CustomerAddressResponseRestResult._initializeBuilder(this);
-  }
+  CustomerAddressResponseRestResultBuilder();
 
   CustomerAddressResponseRestResultBuilder get _$this {
     if (_$v != null) {

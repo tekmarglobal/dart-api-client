@@ -266,9 +266,7 @@ class CartResponseBuilder
   set cardProducts(ListBuilder<RCartProducts> cardProducts) =>
       _$this._cardProducts = cardProducts;
 
-  CartResponseBuilder() {
-    CartResponse._initializeBuilder(this);
-  }
+  CartResponseBuilder();
 
   CartResponseBuilder get _$this {
     if (_$v != null) {

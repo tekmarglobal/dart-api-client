@@ -146,9 +146,7 @@ class FavoriteListResponseRestResultBuilder
       _$this._data ??= new FavoriteListResponseBuilder();
   set data(FavoriteListResponseBuilder data) => _$this._data = data;
 
-  FavoriteListResponseRestResultBuilder() {
-    FavoriteListResponseRestResult._initializeBuilder(this);
-  }
+  FavoriteListResponseRestResultBuilder();
 
   FavoriteListResponseRestResultBuilder get _$this {
     if (_$v != null) {

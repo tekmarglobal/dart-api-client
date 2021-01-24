@@ -102,9 +102,7 @@ class UpdateTimeslotRequestBuilder
   int get timeStotId => _$this._timeStotId;
   set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
 
-  UpdateTimeslotRequestBuilder() {
-    UpdateTimeslotRequest._initializeBuilder(this);
-  }
+  UpdateTimeslotRequestBuilder();
 
   UpdateTimeslotRequestBuilder get _$this {
     if (_$v != null) {

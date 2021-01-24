@@ -97,9 +97,7 @@ class CustomerResponseBuilder
   RCustomerBuilder get customer => _$this._customer ??= new RCustomerBuilder();
   set customer(RCustomerBuilder customer) => _$this._customer = customer;
 
-  CustomerResponseBuilder() {
-    CustomerResponse._initializeBuilder(this);
-  }
+  CustomerResponseBuilder();
 
   CustomerResponseBuilder get _$this {
     if (_$v != null) {

@@ -168,9 +168,7 @@ class RBannerBuilder implements Builder<RBanner, RBannerBuilder> {
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  RBannerBuilder() {
-    RBanner._initializeBuilder(this);
-  }
+  RBannerBuilder();
 
   RBannerBuilder get _$this {
     if (_$v != null) {

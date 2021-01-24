@@ -140,9 +140,7 @@ class RCategoryRestResultBuilder
   RCategoryBuilder get data => _$this._data ??= new RCategoryBuilder();
   set data(RCategoryBuilder data) => _$this._data = data;
 
-  RCategoryRestResultBuilder() {
-    RCategoryRestResult._initializeBuilder(this);
-  }
+  RCategoryRestResultBuilder();
 
   RCategoryRestResultBuilder get _$this {
     if (_$v != null) {

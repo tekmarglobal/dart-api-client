@@ -134,9 +134,7 @@ class BranchResponseBuilder
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
 
-  BranchResponseBuilder() {
-    BranchResponse._initializeBuilder(this);
-  }
+  BranchResponseBuilder();
 
   BranchResponseBuilder get _$this {
     if (_$v != null) {

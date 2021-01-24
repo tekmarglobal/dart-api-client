@@ -146,9 +146,7 @@ class GetOrderListResponseRestResultBuilder
       _$this._data ??= new GetOrderListResponseBuilder();
   set data(GetOrderListResponseBuilder data) => _$this._data = data;
 
-  GetOrderListResponseRestResultBuilder() {
-    GetOrderListResponseRestResult._initializeBuilder(this);
-  }
+  GetOrderListResponseRestResultBuilder();
 
   GetOrderListResponseRestResultBuilder get _$this {
     if (_$v != null) {

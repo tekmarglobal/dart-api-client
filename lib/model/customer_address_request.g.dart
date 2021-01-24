@@ -491,9 +491,7 @@ class CustomerAddressRequestBuilder
   String get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  CustomerAddressRequestBuilder() {
-    CustomerAddressRequest._initializeBuilder(this);
-  }
+  CustomerAddressRequestBuilder();
 
   CustomerAddressRequestBuilder get _$this {
     if (_$v != null) {

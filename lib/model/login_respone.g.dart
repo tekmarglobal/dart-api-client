@@ -131,9 +131,7 @@ class LoginResponeBuilder
   bool get registered => _$this._registered;
   set registered(bool registered) => _$this._registered = registered;
 
-  LoginResponeBuilder() {
-    LoginRespone._initializeBuilder(this);
-  }
+  LoginResponeBuilder();
 
   LoginResponeBuilder get _$this {
     if (_$v != null) {

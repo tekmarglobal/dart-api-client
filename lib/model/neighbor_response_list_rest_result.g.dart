@@ -148,9 +148,7 @@ class NeighborResponseListRestResultBuilder
       _$this._data ??= new ListBuilder<NeighborResponse>();
   set data(ListBuilder<NeighborResponse> data) => _$this._data = data;
 
-  NeighborResponseListRestResultBuilder() {
-    NeighborResponseListRestResult._initializeBuilder(this);
-  }
+  NeighborResponseListRestResultBuilder();
 
   NeighborResponseListRestResultBuilder get _$this {
     if (_$v != null) {

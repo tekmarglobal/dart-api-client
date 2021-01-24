@@ -108,9 +108,7 @@ class PaymentTypeResponseBuilder
   set paymentTypeList(ListBuilder<RPaymentType> paymentTypeList) =>
       _$this._paymentTypeList = paymentTypeList;
 
-  PaymentTypeResponseBuilder() {
-    PaymentTypeResponse._initializeBuilder(this);
-  }
+  PaymentTypeResponseBuilder();
 
   PaymentTypeResponseBuilder get _$this {
     if (_$v != null) {

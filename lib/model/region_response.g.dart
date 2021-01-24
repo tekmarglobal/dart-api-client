@@ -294,9 +294,7 @@ class RegionResponseBuilder
   set neighborhoods(ListBuilder<NeighborResponse> neighborhoods) =>
       _$this._neighborhoods = neighborhoods;
 
-  RegionResponseBuilder() {
-    RegionResponse._initializeBuilder(this);
-  }
+  RegionResponseBuilder();
 
   RegionResponseBuilder get _$this {
     if (_$v != null) {

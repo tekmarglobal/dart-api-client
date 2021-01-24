@@ -203,9 +203,7 @@ class OrderRequestBuilder
   set paymentTypeCode(String paymentTypeCode) =>
       _$this._paymentTypeCode = paymentTypeCode;
 
-  OrderRequestBuilder() {
-    OrderRequest._initializeBuilder(this);
-  }
+  OrderRequestBuilder();
 
   OrderRequestBuilder get _$this {
     if (_$v != null) {
