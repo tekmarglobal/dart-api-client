@@ -78,6 +78,12 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
         ..add(serializers.serialize(object.imagePath,
             specifiedType: const FullType(String)));
     }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
     if (object.department != null) {
       result
         ..add('department')
@@ -94,12 +100,6 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
       result
         ..add('order')
         ..add(serializers.serialize(object.order,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
     if (object.departmentNavigation != null) {
@@ -196,6 +196,10 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
           result.imagePath = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'department':
           result.department = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -206,10 +210,6 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
           break;
         case 'order':
           result.order = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'departmentNavigation':
@@ -273,13 +273,13 @@ class _$Category extends Category {
   @override
   final String imagePath;
   @override
+  final int optimisticLockField;
+  @override
   final int department;
   @override
   final int erpId;
   @override
   final int order;
-  @override
-  final int optimisticLockField;
   @override
   final Department departmentNavigation;
   @override
@@ -307,10 +307,10 @@ class _$Category extends Category {
       this.nright,
       this.refId,
       this.imagePath,
+      this.optimisticLockField,
       this.department,
       this.erpId,
       this.order,
-      this.optimisticLockField,
       this.departmentNavigation,
       this.parentNavigation,
       this.categoryImportDetail,
@@ -340,10 +340,10 @@ class _$Category extends Category {
         nright == other.nright &&
         refId == other.refId &&
         imagePath == other.imagePath &&
+        optimisticLockField == other.optimisticLockField &&
         department == other.department &&
         erpId == other.erpId &&
         order == other.order &&
-        optimisticLockField == other.optimisticLockField &&
         departmentNavigation == other.departmentNavigation &&
         parentNavigation == other.parentNavigation &&
         categoryImportDetail == other.categoryImportDetail &&
@@ -382,10 +382,10 @@ class _$Category extends Category {
                                                         nright.hashCode),
                                                     refId.hashCode),
                                                 imagePath.hashCode),
-                                            department.hashCode),
-                                        erpId.hashCode),
-                                    order.hashCode),
-                                optimisticLockField.hashCode),
+                                            optimisticLockField.hashCode),
+                                        department.hashCode),
+                                    erpId.hashCode),
+                                order.hashCode),
                             departmentNavigation.hashCode),
                         parentNavigation.hashCode),
                     categoryImportDetail.hashCode),
@@ -407,10 +407,10 @@ class _$Category extends Category {
           ..add('nright', nright)
           ..add('refId', refId)
           ..add('imagePath', imagePath)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('department', department)
           ..add('erpId', erpId)
           ..add('order', order)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('departmentNavigation', departmentNavigation)
           ..add('parentNavigation', parentNavigation)
           ..add('categoryImportDetail', categoryImportDetail)
@@ -464,6 +464,11 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
   String get imagePath => _$this._imagePath;
   set imagePath(String imagePath) => _$this._imagePath = imagePath;
 
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
+
   int _department;
   int get department => _$this._department;
   set department(int department) => _$this._department = department;
@@ -475,11 +480,6 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
   int _order;
   int get order => _$this._order;
   set order(int order) => _$this._order = order;
-
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
 
   DepartmentBuilder _departmentNavigation;
   DepartmentBuilder get departmentNavigation =>
@@ -532,10 +532,10 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
       _nright = _$v.nright;
       _refId = _$v.refId;
       _imagePath = _$v.imagePath;
+      _optimisticLockField = _$v.optimisticLockField;
       _department = _$v.department;
       _erpId = _$v.erpId;
       _order = _$v.order;
-      _optimisticLockField = _$v.optimisticLockField;
       _departmentNavigation = _$v.departmentNavigation?.toBuilder();
       _parentNavigation = _$v.parentNavigation?.toBuilder();
       _categoryImportDetail = _$v.categoryImportDetail?.toBuilder();
@@ -576,10 +576,10 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
               nright: nright,
               refId: refId,
               imagePath: imagePath,
+              optimisticLockField: optimisticLockField,
               department: department,
               erpId: erpId,
               order: order,
-              optimisticLockField: optimisticLockField,
               departmentNavigation: _departmentNavigation?.build(),
               parentNavigation: _parentNavigation?.build(),
               categoryImportDetail: _categoryImportDetail?.build(),

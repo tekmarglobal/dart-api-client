@@ -27,12 +27,12 @@ abstract class City implements Built<City, CityBuilder> {
     int get formalCode;
     
         @nullable
-    @BuiltValueField(wireName: r'gpsId')
-    int get gpsId;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'gpsId')
+    int get gpsId;
     
         @nullable
     @BuiltValueField(wireName: r'countryNavigation')

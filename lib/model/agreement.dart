@@ -34,12 +34,16 @@ abstract class Agreement implements Built<Agreement, AgreementBuilder> {
     String get content;
     
         @nullable
-    @BuiltValueField(wireName: r'isRequired')
-    bool get isRequired;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'type')
+    String get type;
+    
+        @nullable
+    @BuiltValueField(wireName: r'isRequired')
+    bool get isRequired;
     
         @nullable
     @BuiltValueField(wireName: r'agreementTypeNavigation')

@@ -64,9 +64,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetOrderListResponse.serializer)
       ..add(GetOrderListResponseRestResult.serializer)
       ..add(GetOrderRequest.serializer)
+      ..add(InlineObject.serializer)
       ..add(LoginRequest.serializer)
       ..add(LoginRespone.serializer)
       ..add(LoginResponeRestResult.serializer)
+      ..add(MailTemplate.serializer)
+      ..add(MailType.serializer)
       ..add(Manufacturer.serializer)
       ..add(NeighborRequest.serializer)
       ..add(NeighborResponse.serializer)
@@ -103,10 +106,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ProductRequest.serializer)
       ..add(RAddress.serializer)
       ..add(RBanner.serializer)
-      ..add(RCart.serializer)
-      ..add(RCartProduct.serializer)
+      ..add(RCartItemImpact.serializer)
       ..add(RCartProducts.serializer)
-      ..add(RCartRestResult.serializer)
       ..add(RCategory.serializer)
       ..add(RCategoryRestResult.serializer)
       ..add(RCustomer.serializer)
@@ -133,11 +134,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TimeSlotTemplate.serializer)
       ..add(TimeSlotsResponse.serializer)
       ..add(TimeSlotsResponseListRestResult.serializer)
+      ..add(UpdateAgreementLogResponseRestResult.serializer)
       ..add(UpdateAgreementRequest.serializer)
+      ..add(UpdateCartRegionRequest.serializer)
+      ..add(UpdateCartRegionResponse.serializer)
+      ..add(UpdateCartRegionResponseRestResult.serializer)
       ..add(UpdateCartRequest.serializer)
       ..add(UpdateOrderRequest.serializer)
       ..add(UpdateRegionNeighborhoodRequest.serializer)
       ..add(UpdateTimeslotRequest.serializer)
+      ..add(UploadImageResponse.serializer)
+      ..add(UploadImageResponseRestResult.serializer)
       ..add(VerifyRequest.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Address)]),
@@ -156,6 +163,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(CustomerLoginAttempt)]),
           () => new ListBuilder<CustomerLoginAttempt>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Device)]),
+          () => new ListBuilder<Device>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DeviceLogin)]),
           () => new ListBuilder<DeviceLogin>())
@@ -338,6 +348,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(FaqResponse)]),
           () => new ListBuilder<FaqResponse>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(MailTemplate)]),
+          () => new ListBuilder<MailTemplate>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(MailTemplate)]),
+          () => new ListBuilder<MailTemplate>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Order)]),
+          () => new ListBuilder<Order>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(NeighborResponse)]),
           () => new ListBuilder<NeighborResponse>())
       ..addBuilderFactory(
@@ -346,9 +365,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Neighborhood)]),
           () => new ListBuilder<Neighborhood>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Order)]),
-          () => new ListBuilder<Order>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Order)]),
           () => new ListBuilder<Order>())
@@ -387,13 +403,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(RAddress)]),
           () => new ListBuilder<RAddress>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RAddress)]),
-          () => new ListBuilder<RAddress>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RBanner)]),
-          () => new ListBuilder<RBanner>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RCartProduct)]), () => new ListBuilder<RCartProduct>())
+          const FullType(BuiltList, const [const FullType(RAddress)]), () => new ListBuilder<RAddress>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RBanner)]), () => new ListBuilder<RBanner>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartItemImpact)]), () => new ListBuilder<RCartItemImpact>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartProducts)]), () => new ListBuilder<RCartProducts>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(ROrderProducts)]), () => new ListBuilder<ROrderProducts>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RPaymentType)]), () => new ListBuilder<RPaymentType>())

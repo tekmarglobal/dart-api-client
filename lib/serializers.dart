@@ -63,9 +63,12 @@ import 'package:openapi/model/favorite_request.dart';
 import 'package:openapi/model/get_order_list_response.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
+import 'package:openapi/model/inline_object.dart';
 import 'package:openapi/model/login_request.dart';
 import 'package:openapi/model/login_respone.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
+import 'package:openapi/model/mail_template.dart';
+import 'package:openapi/model/mail_type.dart';
 import 'package:openapi/model/manufacturer.dart';
 import 'package:openapi/model/neighbor_request.dart';
 import 'package:openapi/model/neighbor_response.dart';
@@ -102,10 +105,8 @@ import 'package:openapi/model/product_price.dart';
 import 'package:openapi/model/product_request.dart';
 import 'package:openapi/model/r_address.dart';
 import 'package:openapi/model/r_banner.dart';
-import 'package:openapi/model/r_cart.dart';
-import 'package:openapi/model/r_cart_product.dart';
+import 'package:openapi/model/r_cart_item_impact.dart';
 import 'package:openapi/model/r_cart_products.dart';
-import 'package:openapi/model/r_cart_rest_result.dart';
 import 'package:openapi/model/r_category.dart';
 import 'package:openapi/model/r_category_rest_result.dart';
 import 'package:openapi/model/r_customer.dart';
@@ -132,11 +133,17 @@ import 'package:openapi/model/time_slot_response_list_rest_result.dart';
 import 'package:openapi/model/time_slot_template.dart';
 import 'package:openapi/model/time_slots_response.dart';
 import 'package:openapi/model/time_slots_response_list_rest_result.dart';
+import 'package:openapi/model/update_agreement_log_response_rest_result.dart';
 import 'package:openapi/model/update_agreement_request.dart';
+import 'package:openapi/model/update_cart_region_request.dart';
+import 'package:openapi/model/update_cart_region_response.dart';
+import 'package:openapi/model/update_cart_region_response_rest_result.dart';
 import 'package:openapi/model/update_cart_request.dart';
 import 'package:openapi/model/update_order_request.dart';
 import 'package:openapi/model/update_region_neighborhood_request.dart';
 import 'package:openapi/model/update_timeslot_request.dart';
+import 'package:openapi/model/upload_image_response.dart';
+import 'package:openapi/model/upload_image_response_rest_result.dart';
 import 'package:openapi/model/verify_request.dart';
 
 
@@ -200,9 +207,12 @@ FavoriteRequest,
 GetOrderListResponse,
 GetOrderListResponseRestResult,
 GetOrderRequest,
+InlineObject,
 LoginRequest,
 LoginRespone,
 LoginResponeRestResult,
+MailTemplate,
+MailType,
 Manufacturer,
 NeighborRequest,
 NeighborResponse,
@@ -239,10 +249,8 @@ ProductPrice,
 ProductRequest,
 RAddress,
 RBanner,
-RCart,
-RCartProduct,
+RCartItemImpact,
 RCartProducts,
-RCartRestResult,
 RCategory,
 RCategoryRestResult,
 RCustomer,
@@ -269,11 +277,17 @@ TimeSlotResponseListRestResult,
 TimeSlotTemplate,
 TimeSlotsResponse,
 TimeSlotsResponseListRestResult,
+UpdateAgreementLogResponseRestResult,
 UpdateAgreementRequest,
+UpdateCartRegionRequest,
+UpdateCartRegionResponse,
+UpdateCartRegionResponseRestResult,
 UpdateCartRequest,
 UpdateOrderRequest,
 UpdateRegionNeighborhoodRequest,
 UpdateTimeslotRequest,
+UploadImageResponse,
+UploadImageResponseRestResult,
 VerifyRequest,
 
 ])
@@ -452,6 +466,9 @@ const FullType(BuiltList, const [const FullType(GetOrderListResponseRestResult)]
 const FullType(BuiltList, const [const FullType(GetOrderRequest)]),
 () => new ListBuilder<GetOrderRequest>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(InlineObject)]),
+() => new ListBuilder<InlineObject>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginRequest)]),
 () => new ListBuilder<LoginRequest>())
 ..addBuilderFactory(
@@ -460,6 +477,12 @@ const FullType(BuiltList, const [const FullType(LoginRespone)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginResponeRestResult)]),
 () => new ListBuilder<LoginResponeRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(MailTemplate)]),
+() => new ListBuilder<MailTemplate>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(MailType)]),
+() => new ListBuilder<MailType>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Manufacturer)]),
 () => new ListBuilder<Manufacturer>())
@@ -569,17 +592,11 @@ const FullType(BuiltList, const [const FullType(RAddress)]),
 const FullType(BuiltList, const [const FullType(RBanner)]),
 () => new ListBuilder<RBanner>())
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(RCart)]),
-() => new ListBuilder<RCart>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(RCartProduct)]),
-() => new ListBuilder<RCartProduct>())
+const FullType(BuiltList, const [const FullType(RCartItemImpact)]),
+() => new ListBuilder<RCartItemImpact>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RCartProducts)]),
 () => new ListBuilder<RCartProducts>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(RCartRestResult)]),
-() => new ListBuilder<RCartRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RCategory)]),
 () => new ListBuilder<RCategory>())
@@ -659,8 +676,20 @@ const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]),
 const FullType(BuiltList, const [const FullType(TimeSlotsResponseListRestResult)]),
 () => new ListBuilder<TimeSlotsResponseListRestResult>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateAgreementLogResponseRestResult)]),
+() => new ListBuilder<UpdateAgreementLogResponseRestResult>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateAgreementRequest)]),
 () => new ListBuilder<UpdateAgreementRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateCartRegionRequest)]),
+() => new ListBuilder<UpdateCartRegionRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateCartRegionResponse)]),
+() => new ListBuilder<UpdateCartRegionResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UpdateCartRegionResponseRestResult)]),
+() => new ListBuilder<UpdateCartRegionResponseRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateCartRequest)]),
 () => new ListBuilder<UpdateCartRequest>())
@@ -673,6 +702,12 @@ const FullType(BuiltList, const [const FullType(UpdateRegionNeighborhoodRequest)
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(UpdateTimeslotRequest)]),
 () => new ListBuilder<UpdateTimeslotRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UploadImageResponse)]),
+() => new ListBuilder<UploadImageResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(UploadImageResponseRestResult)]),
+() => new ListBuilder<UploadImageResponseRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(VerifyRequest)]),
 () => new ListBuilder<VerifyRequest>())

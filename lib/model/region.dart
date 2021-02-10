@@ -47,12 +47,16 @@ abstract class Region implements Built<Region, RegionBuilder> {
     double get minimumCartAmount;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'regionMail')
     String get regionMail;
     
         @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
+    @BuiltValueField(wireName: r'erpId')
+    String get erpId;
     
         @nullable
     @BuiltValueField(wireName: r'cart')

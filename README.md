@@ -64,18 +64,20 @@ Class | Method | HTTP request | Description
 *AdminApi* | [**apiAdminGenerateTimeSlotsGet**](doc//AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGetConfigurationGet**](doc//AdminApi.md#apiadmingetconfigurationget) | **get** /api/Admin/GetConfiguration | 
+*AdminApi* | [**apiAdminGetProductGet**](doc//AdminApi.md#apiadmingetproductget) | **get** /api/Admin/GetProduct | 
 *AdminApi* | [**apiAdminRegionNeighborhoodPost**](doc//AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
 *AdminApi* | [**apiAdminRegionPost**](doc//AdminApi.md#apiadminregionpost) | **post** /api/Admin/Region | 
 *AdminApi* | [**apiAdminUpdateRegionNeighborhoodPost**](doc//AdminApi.md#apiadminupdateregionneighborhoodpost) | **post** /api/Admin/UpdateRegionNeighborhood | 
-*ApiApi* | [**apiCartProductPut**](doc//ApiApi.md#apicartproductput) | **put** /api/cart/product | 
-*ApiApi* | [**apiProductAllGet**](doc//ApiApi.md#apiproductallget) | **get** /api/product/all | 
+*AdminApi* | [**apiAdminUploadProductImagePost**](doc//AdminApi.md#apiadminuploadproductimagepost) | **post** /api/Admin/UploadProductImage | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc//BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
 *CartApi* | [**apiCartCreateCartPost**](doc//CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 *CartApi* | [**apiCartDeleteCardDelete**](doc//CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
+*CartApi* | [**apiCartDeleteCartDelete**](doc//CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc//CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc//CartApi.md#apicartpost) | **post** /api/Cart | 
 *CartApi* | [**apiCartUpdateCartPost**](doc//CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
+*CartApi* | [**apiCartUpdateCartRegionPost**](doc//CartApi.md#apicartupdatecartregionpost) | **post** /api/Cart/UpdateCartRegion | 
 *CartApi* | [**apiCartUpdateTimeslotPost**](doc//CartApi.md#apicartupdatetimeslotpost) | **post** /api/Cart/UpdateTimeslot | 
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
@@ -109,13 +111,14 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc//ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductDeleteFavoriteDelete**](doc//ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc//ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
-*ProductApi* | [**apiProductInsertimagesPost**](doc//ProductApi.md#apiproductinsertimagespost) | **post** /api/Product/insertimages | 
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductListPost**](doc//ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
 *ProductApi* | [**apiProductUpdateProductFromOlimposPost**](doc//ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc//RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc//RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
+*ShareApi* | [**apiShareDetailProductidGet**](doc//ShareApi.md#apisharedetailproductidget) | **get** /api/Share/detail/{productid} | 
+*ShareApi* | [**apiShareDetailProductidProductnameSharedidGet**](doc//ShareApi.md#apisharedetailproductidproductnamesharedidget) | **get** /api/Share/detail/{productid}/{productname}/{sharedid} | 
 
 
 ## Documentation For Models
@@ -177,9 +180,12 @@ Class | Method | HTTP request | Description
  - [GetOrderListResponse](doc//GetOrderListResponse.md)
  - [GetOrderListResponseRestResult](doc//GetOrderListResponseRestResult.md)
  - [GetOrderRequest](doc//GetOrderRequest.md)
+ - [InlineObject](doc//InlineObject.md)
  - [LoginRequest](doc//LoginRequest.md)
  - [LoginRespone](doc//LoginRespone.md)
  - [LoginResponeRestResult](doc//LoginResponeRestResult.md)
+ - [MailTemplate](doc//MailTemplate.md)
+ - [MailType](doc//MailType.md)
  - [Manufacturer](doc//Manufacturer.md)
  - [NeighborRequest](doc//NeighborRequest.md)
  - [NeighborResponse](doc//NeighborResponse.md)
@@ -216,10 +222,8 @@ Class | Method | HTTP request | Description
  - [ProductRequest](doc//ProductRequest.md)
  - [RAddress](doc//RAddress.md)
  - [RBanner](doc//RBanner.md)
- - [RCart](doc//RCart.md)
- - [RCartProduct](doc//RCartProduct.md)
+ - [RCartItemImpact](doc//RCartItemImpact.md)
  - [RCartProducts](doc//RCartProducts.md)
- - [RCartRestResult](doc//RCartRestResult.md)
  - [RCategory](doc//RCategory.md)
  - [RCategoryRestResult](doc//RCategoryRestResult.md)
  - [RCustomer](doc//RCustomer.md)
@@ -246,11 +250,17 @@ Class | Method | HTTP request | Description
  - [TimeSlotTemplate](doc//TimeSlotTemplate.md)
  - [TimeSlotsResponse](doc//TimeSlotsResponse.md)
  - [TimeSlotsResponseListRestResult](doc//TimeSlotsResponseListRestResult.md)
+ - [UpdateAgreementLogResponseRestResult](doc//UpdateAgreementLogResponseRestResult.md)
  - [UpdateAgreementRequest](doc//UpdateAgreementRequest.md)
+ - [UpdateCartRegionRequest](doc//UpdateCartRegionRequest.md)
+ - [UpdateCartRegionResponse](doc//UpdateCartRegionResponse.md)
+ - [UpdateCartRegionResponseRestResult](doc//UpdateCartRegionResponseRestResult.md)
  - [UpdateCartRequest](doc//UpdateCartRequest.md)
  - [UpdateOrderRequest](doc//UpdateOrderRequest.md)
  - [UpdateRegionNeighborhoodRequest](doc//UpdateRegionNeighborhoodRequest.md)
  - [UpdateTimeslotRequest](doc//UpdateTimeslotRequest.md)
+ - [UploadImageResponse](doc//UploadImageResponse.md)
+ - [UploadImageResponseRestResult](doc//UploadImageResponseRestResult.md)
  - [VerifyRequest](doc//VerifyRequest.md)
 
 

@@ -9,8 +9,6 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **oid** | **int** |  | [optional] [default to null]
-**dateDeleted** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
-**dateCreated** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **customer** | **int** |  | [optional] [default to null]
 **region** | **int** |  | [optional] [default to null]
 **cartTotal** | **double** |  | [optional] [default to null]
@@ -21,8 +19,12 @@ Name | Type | Description | Notes
 **bagTotal** | **double** |  | [optional] [default to null]
 **active** | **bool** |  | [optional] [default to null]
 **deleted** | **bool** |  | [optional] [default to null]
-**estimatedFee** | **double** |  | [optional] [default to null]
+**deleteDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**estimatedFee** | **double** |  | [optional] [default to null]
+**dateDeleted** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**dateCreated** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**sessionId** | **String** |  | [optional] [default to null]
 **createdFromNavigation** | [**Device**](Device.md) |  | [optional] [default to null]
 **customerNavigation** | [**Customer**](Customer.md) |  | [optional] [default to null]
 **regionNavigation** | [**Region**](Region.md) |  | [optional] [default to null]

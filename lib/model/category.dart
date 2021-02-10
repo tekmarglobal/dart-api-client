@@ -52,6 +52,10 @@ abstract class Category implements Built<Category, CategoryBuilder> {
     String get imagePath;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'department')
     int get department;
     
@@ -62,10 +66,6 @@ abstract class Category implements Built<Category, CategoryBuilder> {
         @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'departmentNavigation')

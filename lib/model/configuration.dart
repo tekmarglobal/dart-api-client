@@ -29,6 +29,10 @@ abstract class Configuration implements Built<Configuration, ConfigurationBuilde
     String get s3keySecret;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'defaultCategory')
     int get defaultCategory;
     
@@ -41,12 +45,12 @@ abstract class Configuration implements Built<Configuration, ConfigurationBuilde
     int get deliveryProduct;
     
         @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
-    
-        @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
+    
+        @nullable
+    @BuiltValueField(wireName: r'timeZone')
+    int get timeZone;
     
         @nullable
     @BuiltValueField(wireName: r'bagProductNavigation')

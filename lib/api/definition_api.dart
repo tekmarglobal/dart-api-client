@@ -7,6 +7,7 @@ import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/cities_response_list_rest_result.dart';
 import 'package:openapi/model/counties_request.dart';
+import 'package:openapi/model/update_agreement_log_response_rest_result.dart';
 import 'package:openapi/model/faq_response_list_rest_result.dart';
 import 'package:openapi/model/neighbor_request.dart';
 import 'package:openapi/model/agreement_response_list_rest_result.dart';
@@ -264,7 +265,7 @@ class DefinitionApi {
         /// 
         ///
         /// 
-        Future<Response>apiDefinitionUpdateAgreementLogPost({ UpdateAgreementRequest updateAgreementRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<UpdateAgreementLogResponseRestResult>>apiDefinitionUpdateAgreementLogPost({ UpdateAgreementRequest updateAgreementRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Definition/UpdateAgreementLog";
 
@@ -295,6 +296,20 @@ class DefinitionApi {
             contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(UpdateAgreementLogResponseRestResult);
+        var data = _serializers.deserializeWith<UpdateAgreementLogResponseRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<UpdateAgreementLogResponseRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
             );
+            });
             }
         }

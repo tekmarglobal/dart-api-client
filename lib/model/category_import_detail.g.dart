@@ -66,6 +66,12 @@ class _$CategoryImportDetailSerializer
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
+    if (object.gcrecord != null) {
+      result
+        ..add('gcrecord')
+        ..add(serializers.serialize(object.gcrecord,
+            specifiedType: const FullType(int)));
+    }
     if (object.categoryImportNavigation != null) {
       result
         ..add('categoryImportNavigation')
@@ -121,6 +127,10 @@ class _$CategoryImportDetailSerializer
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'gcrecord':
+          result.gcrecord = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'categoryImportNavigation':
           result.categoryImportNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(CategoryImport)) as CategoryImport);
@@ -152,6 +162,8 @@ class _$CategoryImportDetail extends CategoryImportDetail {
   @override
   final int optimisticLockField;
   @override
+  final int gcrecord;
+  @override
   final CategoryImport categoryImportNavigation;
   @override
   final Category categoryNavigation;
@@ -168,6 +180,7 @@ class _$CategoryImportDetail extends CategoryImportDetail {
       this.categoryImport,
       this.operationType,
       this.optimisticLockField,
+      this.gcrecord,
       this.categoryImportNavigation,
       this.categoryNavigation})
       : super._();
@@ -192,6 +205,7 @@ class _$CategoryImportDetail extends CategoryImportDetail {
         categoryImport == other.categoryImport &&
         operationType == other.operationType &&
         optimisticLockField == other.optimisticLockField &&
+        gcrecord == other.gcrecord &&
         categoryImportNavigation == other.categoryImportNavigation &&
         categoryNavigation == other.categoryNavigation;
   }
@@ -204,12 +218,16 @@ class _$CategoryImportDetail extends CategoryImportDetail {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, oid.hashCode), category.hashCode),
-                                oldValue.hashCode),
-                            newValue.hashCode),
-                        categoryImport.hashCode),
-                    operationType.hashCode),
-                optimisticLockField.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, oid.hashCode),
+                                        category.hashCode),
+                                    oldValue.hashCode),
+                                newValue.hashCode),
+                            categoryImport.hashCode),
+                        operationType.hashCode),
+                    optimisticLockField.hashCode),
+                gcrecord.hashCode),
             categoryImportNavigation.hashCode),
         categoryNavigation.hashCode));
   }
@@ -224,6 +242,7 @@ class _$CategoryImportDetail extends CategoryImportDetail {
           ..add('categoryImport', categoryImport)
           ..add('operationType', operationType)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('gcrecord', gcrecord)
           ..add('categoryImportNavigation', categoryImportNavigation)
           ..add('categoryNavigation', categoryNavigation))
         .toString();
@@ -265,6 +284,10 @@ class CategoryImportDetailBuilder
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
+  int _gcrecord;
+  int get gcrecord => _$this._gcrecord;
+  set gcrecord(int gcrecord) => _$this._gcrecord = gcrecord;
+
   CategoryImportBuilder _categoryImportNavigation;
   CategoryImportBuilder get categoryImportNavigation =>
       _$this._categoryImportNavigation ??= new CategoryImportBuilder();
@@ -289,6 +312,7 @@ class CategoryImportDetailBuilder
       _categoryImport = _$v.categoryImport;
       _operationType = _$v.operationType;
       _optimisticLockField = _$v.optimisticLockField;
+      _gcrecord = _$v.gcrecord;
       _categoryImportNavigation = _$v.categoryImportNavigation?.toBuilder();
       _categoryNavigation = _$v.categoryNavigation?.toBuilder();
       _$v = null;
@@ -322,6 +346,7 @@ class CategoryImportDetailBuilder
               categoryImport: categoryImport,
               operationType: operationType,
               optimisticLockField: optimisticLockField,
+              gcrecord: gcrecord,
               categoryImportNavigation: _categoryImportNavigation?.build(),
               categoryNavigation: _categoryNavigation?.build());
     } catch (_) {

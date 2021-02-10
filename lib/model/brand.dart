@@ -19,12 +19,12 @@ abstract class Brand implements Built<Brand, BrandBuilder> {
     String get name;
     
         @nullable
-    @BuiltValueField(wireName: r'manufacturer')
-    int get manufacturer;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'manufacturer')
+    int get manufacturer;
     
         @nullable
     @BuiltValueField(wireName: r'manufacturerNavigation')

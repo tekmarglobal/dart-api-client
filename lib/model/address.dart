@@ -87,16 +87,16 @@ abstract class Address implements Built<Address, AddressBuilder> {
     double get latitude;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'isindividual')
     bool get isindividual;
     
         @nullable
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'customerNavigation')

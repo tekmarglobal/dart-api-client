@@ -26,10 +26,6 @@ abstract class Order implements Built<Order, OrderBuilder> {
     int get cart;
     
         @nullable
-    @BuiltValueField(wireName: r'region')
-    int get region;
-    
-        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
     
@@ -66,12 +62,12 @@ abstract class Order implements Built<Order, OrderBuilder> {
     double get orderTotal;
     
         @nullable
-    @BuiltValueField(wireName: r'note')
-    String get note;
-    
-        @nullable
     @BuiltValueField(wireName: r'completedFrom')
     int get completedFrom;
+    
+        @nullable
+    @BuiltValueField(wireName: r'note')
+    String get note;
     
         @nullable
     @BuiltValueField(wireName: r'bagAmount')
@@ -98,6 +94,14 @@ abstract class Order implements Built<Order, OrderBuilder> {
     bool get sent;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'region')
+    int get region;
+    
+        @nullable
     @BuiltValueField(wireName: r'uuid')
     String get uuid;
     
@@ -108,10 +112,6 @@ abstract class Order implements Built<Order, OrderBuilder> {
         @nullable
     @BuiltValueField(wireName: r'isProcessed')
     bool get isProcessed;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'billingAddressNavigation')

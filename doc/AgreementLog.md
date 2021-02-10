@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **oid** | **int** |  | [optional] [default to null]
 **phone** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
 **recordDateTime** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **customer** | **int** |  | [optional] [default to null]
 **agreement** | **int** |  | [optional] [default to null]
 **accept** | **bool** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
 **agreementNavigation** | [**Agreement**](Agreement.md) |  | [optional] [default to null]
 **customerNavigation** | [**Customer**](Customer.md) |  | [optional] [default to null]
 

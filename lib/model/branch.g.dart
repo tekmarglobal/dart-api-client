@@ -36,6 +36,12 @@ class _$BranchSerializer implements StructuredSerializer<Branch> {
         ..add(serializers.serialize(object.neighborhood,
             specifiedType: const FullType(int)));
     }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
     if (object.latitude != null) {
       result
         ..add('latitude')
@@ -47,12 +53,6 @@ class _$BranchSerializer implements StructuredSerializer<Branch> {
         ..add('longitude')
         ..add(serializers.serialize(object.longitude,
             specifiedType: const FullType(double)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
     }
     if (object.neighborhoodNavigation != null) {
       result
@@ -86,6 +86,10 @@ class _$BranchSerializer implements StructuredSerializer<Branch> {
           result.neighborhood = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'latitude':
           result.latitude = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
@@ -93,10 +97,6 @@ class _$BranchSerializer implements StructuredSerializer<Branch> {
         case 'longitude':
           result.longitude = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
           break;
         case 'neighborhoodNavigation':
           result.neighborhoodNavigation.replace(serializers.deserialize(value,
@@ -117,11 +117,11 @@ class _$Branch extends Branch {
   @override
   final int neighborhood;
   @override
+  final int optimisticLockField;
+  @override
   final double latitude;
   @override
   final double longitude;
-  @override
-  final int optimisticLockField;
   @override
   final Neighborhood neighborhoodNavigation;
 
@@ -132,9 +132,9 @@ class _$Branch extends Branch {
       {this.oid,
       this.name,
       this.neighborhood,
+      this.optimisticLockField,
       this.latitude,
       this.longitude,
-      this.optimisticLockField,
       this.neighborhoodNavigation})
       : super._();
 
@@ -152,9 +152,9 @@ class _$Branch extends Branch {
         oid == other.oid &&
         name == other.name &&
         neighborhood == other.neighborhood &&
+        optimisticLockField == other.optimisticLockField &&
         latitude == other.latitude &&
         longitude == other.longitude &&
-        optimisticLockField == other.optimisticLockField &&
         neighborhoodNavigation == other.neighborhoodNavigation;
   }
 
@@ -166,9 +166,9 @@ class _$Branch extends Branch {
                 $jc(
                     $jc($jc($jc(0, oid.hashCode), name.hashCode),
                         neighborhood.hashCode),
-                    latitude.hashCode),
-                longitude.hashCode),
-            optimisticLockField.hashCode),
+                    optimisticLockField.hashCode),
+                latitude.hashCode),
+            longitude.hashCode),
         neighborhoodNavigation.hashCode));
   }
 
@@ -178,9 +178,9 @@ class _$Branch extends Branch {
           ..add('oid', oid)
           ..add('name', name)
           ..add('neighborhood', neighborhood)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('latitude', latitude)
           ..add('longitude', longitude)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('neighborhoodNavigation', neighborhoodNavigation))
         .toString();
   }
@@ -201,6 +201,11 @@ class BranchBuilder implements Builder<Branch, BranchBuilder> {
   int get neighborhood => _$this._neighborhood;
   set neighborhood(int neighborhood) => _$this._neighborhood = neighborhood;
 
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
+
   double _latitude;
   double get latitude => _$this._latitude;
   set latitude(double latitude) => _$this._latitude = latitude;
@@ -208,11 +213,6 @@ class BranchBuilder implements Builder<Branch, BranchBuilder> {
   double _longitude;
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
-
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
 
   NeighborhoodBuilder _neighborhoodNavigation;
   NeighborhoodBuilder get neighborhoodNavigation =>
@@ -227,9 +227,9 @@ class BranchBuilder implements Builder<Branch, BranchBuilder> {
       _oid = _$v.oid;
       _name = _$v.name;
       _neighborhood = _$v.neighborhood;
+      _optimisticLockField = _$v.optimisticLockField;
       _latitude = _$v.latitude;
       _longitude = _$v.longitude;
-      _optimisticLockField = _$v.optimisticLockField;
       _neighborhoodNavigation = _$v.neighborhoodNavigation?.toBuilder();
       _$v = null;
     }
@@ -258,9 +258,9 @@ class BranchBuilder implements Builder<Branch, BranchBuilder> {
               oid: oid,
               name: name,
               neighborhood: neighborhood,
+              optimisticLockField: optimisticLockField,
               latitude: latitude,
               longitude: longitude,
-              optimisticLockField: optimisticLockField,
               neighborhoodNavigation: _neighborhoodNavigation?.build());
     } catch (_) {
       String _$failedField;

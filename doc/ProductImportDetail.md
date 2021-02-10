@@ -10,11 +10,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **oid** | **int** |  | [optional] [default to null]
 **product** | **int** |  | [optional] [default to null]
+**fieldName** | **String** |  | [optional] [default to null]
 **oldValue** | **String** |  | [optional] [default to null]
 **newValue** | **String** |  | [optional] [default to null]
 **productImport** | **int** |  | [optional] [default to null]
-**operationType** | **String** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**operationType** | **String** |  | [optional] [default to null]
 **productImportNavigation** | [**ProductImport**](ProductImport.md) |  | [optional] [default to null]
 **productNavigation** | [**Product**](Product.md) |  | [optional] [default to null]
 

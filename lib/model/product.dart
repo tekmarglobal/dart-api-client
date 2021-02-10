@@ -86,7 +86,11 @@ abstract class Product implements Built<Product, ProductBuilder> {
     
         @nullable
     @BuiltValueField(wireName: r'erpId')
-    int get erpId;
+    String get erpId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'productUnit')
@@ -95,10 +99,6 @@ abstract class Product implements Built<Product, ProductBuilder> {
         @nullable
     @BuiltValueField(wireName: r'vat')
     double get vat;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'brandNavigation')

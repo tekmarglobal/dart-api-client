@@ -17,6 +17,10 @@ abstract class ProductImportDetail implements Built<ProductImportDetail, Product
     int get product;
     
         @nullable
+    @BuiltValueField(wireName: r'fieldName')
+    String get fieldName;
+    
+        @nullable
     @BuiltValueField(wireName: r'oldValue')
     String get oldValue;
     
@@ -29,12 +33,12 @@ abstract class ProductImportDetail implements Built<ProductImportDetail, Product
     int get productImport;
     
         @nullable
-    @BuiltValueField(wireName: r'operationType')
-    String get operationType;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'operationType')
+    String get operationType;
     
         @nullable
     @BuiltValueField(wireName: r'productImportNavigation')

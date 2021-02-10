@@ -49,6 +49,12 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
         ..add(serializers.serialize(object.s3keySecret,
             specifiedType: const FullType(String)));
     }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
     if (object.defaultCategory != null) {
       result
         ..add('defaultCategory')
@@ -67,16 +73,16 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
         ..add(serializers.serialize(object.deliveryProduct,
             specifiedType: const FullType(int)));
     }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
     if (object.gcrecord != null) {
       result
         ..add('gcrecord')
         ..add(serializers.serialize(object.gcrecord,
+            specifiedType: const FullType(int)));
+    }
+    if (object.timeZone != null) {
+      result
+        ..add('timeZone')
+        ..add(serializers.serialize(object.timeZone,
             specifiedType: const FullType(int)));
     }
     if (object.bagProductNavigation != null) {
@@ -132,6 +138,10 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
           result.s3keySecret = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'defaultCategory':
           result.defaultCategory = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -144,12 +154,12 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
           result.deliveryProduct = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'gcrecord':
           result.gcrecord = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'timeZone':
+          result.timeZone = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'bagProductNavigation':
@@ -185,15 +195,17 @@ class _$Configuration extends Configuration {
   @override
   final String s3keySecret;
   @override
+  final int optimisticLockField;
+  @override
   final int defaultCategory;
   @override
   final int bagProduct;
   @override
   final int deliveryProduct;
   @override
-  final int optimisticLockField;
-  @override
   final int gcrecord;
+  @override
+  final int timeZone;
   @override
   final Product bagProductNavigation;
   @override
@@ -210,11 +222,12 @@ class _$Configuration extends Configuration {
       this.active,
       this.s3keyId,
       this.s3keySecret,
+      this.optimisticLockField,
       this.defaultCategory,
       this.bagProduct,
       this.deliveryProduct,
-      this.optimisticLockField,
       this.gcrecord,
+      this.timeZone,
       this.bagProductNavigation,
       this.defaultCategoryNavigation,
       this.deliveryProductNavigation})
@@ -236,11 +249,12 @@ class _$Configuration extends Configuration {
         active == other.active &&
         s3keyId == other.s3keyId &&
         s3keySecret == other.s3keySecret &&
+        optimisticLockField == other.optimisticLockField &&
         defaultCategory == other.defaultCategory &&
         bagProduct == other.bagProduct &&
         deliveryProduct == other.deliveryProduct &&
-        optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
+        timeZone == other.timeZone &&
         bagProductNavigation == other.bagProductNavigation &&
         defaultCategoryNavigation == other.defaultCategoryNavigation &&
         deliveryProductNavigation == other.deliveryProductNavigation;
@@ -259,16 +273,18 @@ class _$Configuration extends Configuration {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, oid.hashCode),
-                                                    name.hashCode),
-                                                active.hashCode),
-                                            s3keyId.hashCode),
-                                        s3keySecret.hashCode),
+                                                $jc(
+                                                    $jc($jc(0, oid.hashCode),
+                                                        name.hashCode),
+                                                    active.hashCode),
+                                                s3keyId.hashCode),
+                                            s3keySecret.hashCode),
+                                        optimisticLockField.hashCode),
                                     defaultCategory.hashCode),
                                 bagProduct.hashCode),
                             deliveryProduct.hashCode),
-                        optimisticLockField.hashCode),
-                    gcrecord.hashCode),
+                        gcrecord.hashCode),
+                    timeZone.hashCode),
                 bagProductNavigation.hashCode),
             defaultCategoryNavigation.hashCode),
         deliveryProductNavigation.hashCode));
@@ -282,11 +298,12 @@ class _$Configuration extends Configuration {
           ..add('active', active)
           ..add('s3keyId', s3keyId)
           ..add('s3keySecret', s3keySecret)
+          ..add('optimisticLockField', optimisticLockField)
           ..add('defaultCategory', defaultCategory)
           ..add('bagProduct', bagProduct)
           ..add('deliveryProduct', deliveryProduct)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
+          ..add('timeZone', timeZone)
           ..add('bagProductNavigation', bagProductNavigation)
           ..add('defaultCategoryNavigation', defaultCategoryNavigation)
           ..add('deliveryProductNavigation', deliveryProductNavigation))
@@ -318,6 +335,11 @@ class ConfigurationBuilder
   String get s3keySecret => _$this._s3keySecret;
   set s3keySecret(String s3keySecret) => _$this._s3keySecret = s3keySecret;
 
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
+
   int _defaultCategory;
   int get defaultCategory => _$this._defaultCategory;
   set defaultCategory(int defaultCategory) =>
@@ -332,14 +354,13 @@ class ConfigurationBuilder
   set deliveryProduct(int deliveryProduct) =>
       _$this._deliveryProduct = deliveryProduct;
 
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
-
   int _gcrecord;
   int get gcrecord => _$this._gcrecord;
   set gcrecord(int gcrecord) => _$this._gcrecord = gcrecord;
+
+  int _timeZone;
+  int get timeZone => _$this._timeZone;
+  set timeZone(int timeZone) => _$this._timeZone = timeZone;
 
   ProductBuilder _bagProductNavigation;
   ProductBuilder get bagProductNavigation =>
@@ -368,11 +389,12 @@ class ConfigurationBuilder
       _active = _$v.active;
       _s3keyId = _$v.s3keyId;
       _s3keySecret = _$v.s3keySecret;
+      _optimisticLockField = _$v.optimisticLockField;
       _defaultCategory = _$v.defaultCategory;
       _bagProduct = _$v.bagProduct;
       _deliveryProduct = _$v.deliveryProduct;
-      _optimisticLockField = _$v.optimisticLockField;
       _gcrecord = _$v.gcrecord;
+      _timeZone = _$v.timeZone;
       _bagProductNavigation = _$v.bagProductNavigation?.toBuilder();
       _defaultCategoryNavigation = _$v.defaultCategoryNavigation?.toBuilder();
       _deliveryProductNavigation = _$v.deliveryProductNavigation?.toBuilder();
@@ -405,11 +427,12 @@ class ConfigurationBuilder
               active: active,
               s3keyId: s3keyId,
               s3keySecret: s3keySecret,
+              optimisticLockField: optimisticLockField,
               defaultCategory: defaultCategory,
               bagProduct: bagProduct,
               deliveryProduct: deliveryProduct,
-              optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
+              timeZone: timeZone,
               bagProductNavigation: _bagProductNavigation?.build(),
               defaultCategoryNavigation: _defaultCategoryNavigation?.build(),
               deliveryProductNavigation: _deliveryProductNavigation?.build());

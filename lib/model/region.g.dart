@@ -66,17 +66,23 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
         ..add(serializers.serialize(object.minimumCartAmount,
             specifiedType: const FullType(double)));
     }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
     if (object.regionMail != null) {
       result
         ..add('regionMail')
         ..add(serializers.serialize(object.regionMail,
             specifiedType: const FullType(String)));
     }
-    if (object.optimisticLockField != null) {
+    if (object.erpId != null) {
       result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
+        ..add('erpId')
+        ..add(serializers.serialize(object.erpId,
+            specifiedType: const FullType(String)));
     }
     if (object.cart != null) {
       result
@@ -175,13 +181,17 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
           result.minimumCartAmount = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'regionMail':
           result.regionMail = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
+        case 'erpId':
+          result.erpId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'cart':
           result.cart.replace(serializers.deserialize(value,
@@ -251,9 +261,11 @@ class _$Region extends Region {
   @override
   final double minimumCartAmount;
   @override
+  final int optimisticLockField;
+  @override
   final String regionMail;
   @override
-  final int optimisticLockField;
+  final String erpId;
   @override
   final BuiltList<Cart> cart;
   @override
@@ -282,8 +294,9 @@ class _$Region extends Region {
       this.timeSlotGenerationWindow,
       this.lastTimeSlotGeneratedDate,
       this.minimumCartAmount,
-      this.regionMail,
       this.optimisticLockField,
+      this.regionMail,
+      this.erpId,
       this.cart,
       this.depot,
       this.order,
@@ -312,8 +325,9 @@ class _$Region extends Region {
         timeSlotGenerationWindow == other.timeSlotGenerationWindow &&
         lastTimeSlotGeneratedDate == other.lastTimeSlotGeneratedDate &&
         minimumCartAmount == other.minimumCartAmount &&
-        regionMail == other.regionMail &&
         optimisticLockField == other.optimisticLockField &&
+        regionMail == other.regionMail &&
+        erpId == other.erpId &&
         cart == other.cart &&
         depot == other.depot &&
         order == other.order &&
@@ -343,23 +357,26 @@ class _$Region extends Region {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        oid
+                                                                        $jc(
+                                                                            0,
+                                                                            oid
+                                                                                .hashCode),
+                                                                        name
                                                                             .hashCode),
-                                                                    name
+                                                                    code
                                                                         .hashCode),
-                                                                code.hashCode),
-                                                            freeDelivery
+                                                                freeDelivery
+                                                                    .hashCode),
+                                                            freeDeliveryAmount
                                                                 .hashCode),
-                                                        freeDeliveryAmount
+                                                        timeSlotGenerationWindow
                                                             .hashCode),
-                                                    timeSlotGenerationWindow
+                                                    lastTimeSlotGeneratedDate
                                                         .hashCode),
-                                                lastTimeSlotGeneratedDate
-                                                    .hashCode),
-                                            minimumCartAmount.hashCode),
+                                                minimumCartAmount.hashCode),
+                                            optimisticLockField.hashCode),
                                         regionMail.hashCode),
-                                    optimisticLockField.hashCode),
+                                    erpId.hashCode),
                                 cart.hashCode),
                             depot.hashCode),
                         order.hashCode),
@@ -380,8 +397,9 @@ class _$Region extends Region {
           ..add('timeSlotGenerationWindow', timeSlotGenerationWindow)
           ..add('lastTimeSlotGeneratedDate', lastTimeSlotGeneratedDate)
           ..add('minimumCartAmount', minimumCartAmount)
-          ..add('regionMail', regionMail)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('regionMail', regionMail)
+          ..add('erpId', erpId)
           ..add('cart', cart)
           ..add('depot', depot)
           ..add('order', order)
@@ -433,14 +451,18 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
   set minimumCartAmount(double minimumCartAmount) =>
       _$this._minimumCartAmount = minimumCartAmount;
 
-  String _regionMail;
-  String get regionMail => _$this._regionMail;
-  set regionMail(String regionMail) => _$this._regionMail = regionMail;
-
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
+
+  String _regionMail;
+  String get regionMail => _$this._regionMail;
+  set regionMail(String regionMail) => _$this._regionMail = regionMail;
+
+  String _erpId;
+  String get erpId => _$this._erpId;
+  set erpId(String erpId) => _$this._erpId = erpId;
 
   ListBuilder<Cart> _cart;
   ListBuilder<Cart> get cart => _$this._cart ??= new ListBuilder<Cart>();
@@ -495,8 +517,9 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
       _timeSlotGenerationWindow = _$v.timeSlotGenerationWindow;
       _lastTimeSlotGeneratedDate = _$v.lastTimeSlotGeneratedDate;
       _minimumCartAmount = _$v.minimumCartAmount;
-      _regionMail = _$v.regionMail;
       _optimisticLockField = _$v.optimisticLockField;
+      _regionMail = _$v.regionMail;
+      _erpId = _$v.erpId;
       _cart = _$v.cart?.toBuilder();
       _depot = _$v.depot?.toBuilder();
       _order = _$v.order?.toBuilder();
@@ -537,8 +560,9 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
               timeSlotGenerationWindow: timeSlotGenerationWindow,
               lastTimeSlotGeneratedDate: lastTimeSlotGeneratedDate,
               minimumCartAmount: minimumCartAmount,
-              regionMail: regionMail,
               optimisticLockField: optimisticLockField,
+              regionMail: regionMail,
+              erpId: erpId,
               cart: _cart?.build(),
               depot: _depot?.build(),
               order: _order?.build(),

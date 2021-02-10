@@ -43,18 +43,6 @@ abstract class NewCustomerRequest implements Built<NewCustomerRequest, NewCustom
     bool get allowCampaign;
     
         @nullable
-    @BuiltValueField(wireName: r'companyName')
-    String get companyName;
-    
-        @nullable
-    @BuiltValueField(wireName: r'companyTaxName')
-    String get companyTaxName;
-    
-        @nullable
-    @BuiltValueField(wireName: r'companyTaxNumber')
-    String get companyTaxNumber;
-    
-        @nullable
     @BuiltValueField(wireName: r'identificationNumber')
     String get identificationNumber;
 

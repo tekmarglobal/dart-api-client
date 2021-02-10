@@ -14,8 +14,9 @@ Name | Type | Description | Notes
 **startDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **content** | **String** |  | [optional] [default to null]
-**isRequired** | **bool** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**type** | **String** |  | [optional] [default to null]
+**isRequired** | **bool** |  | [optional] [default to null]
 **agreementTypeNavigation** | [**AgreementType**](AgreementType.md) |  | [optional] [default to null]
 **agreementLog** | [**BuiltList&lt;AgreementLog&gt;**](AgreementLog.md) |  | [optional] [default to const []]
 

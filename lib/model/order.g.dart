@@ -30,12 +30,6 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
         ..add(serializers.serialize(object.cart,
             specifiedType: const FullType(int)));
     }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
     if (object.customer != null) {
       result
         ..add('customer')
@@ -90,17 +84,17 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
         ..add(serializers.serialize(object.orderTotal,
             specifiedType: const FullType(double)));
     }
-    if (object.note != null) {
-      result
-        ..add('note')
-        ..add(serializers.serialize(object.note,
-            specifiedType: const FullType(String)));
-    }
     if (object.completedFrom != null) {
       result
         ..add('completedFrom')
         ..add(serializers.serialize(object.completedFrom,
             specifiedType: const FullType(int)));
+    }
+    if (object.note != null) {
+      result
+        ..add('note')
+        ..add(serializers.serialize(object.note,
+            specifiedType: const FullType(String)));
     }
     if (object.bagAmount != null) {
       result
@@ -138,6 +132,18 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
         ..add(serializers.serialize(object.sent,
             specifiedType: const FullType(bool)));
     }
+    if (object.optimisticLockField != null) {
+      result
+        ..add('optimisticLockField')
+        ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
+    if (object.region != null) {
+      result
+        ..add('region')
+        ..add(serializers.serialize(object.region,
+            specifiedType: const FullType(int)));
+    }
     if (object.uuid != null) {
       result
         ..add('uuid')
@@ -155,12 +161,6 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
         ..add('isProcessed')
         ..add(serializers.serialize(object.isProcessed,
             specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
     }
     if (object.billingAddressNavigation != null) {
       result
@@ -252,10 +252,6 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
           result.cart = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'customer':
           result.customer = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -292,13 +288,13 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
           result.orderTotal = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
-        case 'note':
-          result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'completedFrom':
           result.completedFrom = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
+          break;
+        case 'note':
+          result.note = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'bagAmount':
           result.bagAmount = serializers.deserialize(value,
@@ -324,6 +320,14 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
           result.sent = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'optimisticLockField':
+          result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'region':
+          result.region = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'uuid':
           result.uuid = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -335,10 +339,6 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
         case 'isProcessed':
           result.isProcessed = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
           break;
         case 'billingAddressNavigation':
           result.billingAddressNavigation.replace(serializers.deserialize(value,
@@ -402,8 +402,6 @@ class _$Order extends Order {
   @override
   final int cart;
   @override
-  final int region;
-  @override
   final int customer;
   @override
   final DateTime orderDate;
@@ -422,9 +420,9 @@ class _$Order extends Order {
   @override
   final double orderTotal;
   @override
-  final String note;
-  @override
   final int completedFrom;
+  @override
+  final String note;
   @override
   final int bagAmount;
   @override
@@ -438,13 +436,15 @@ class _$Order extends Order {
   @override
   final bool sent;
   @override
+  final int optimisticLockField;
+  @override
+  final int region;
+  @override
   final String uuid;
   @override
   final double fee;
   @override
   final bool isProcessed;
-  @override
-  final int optimisticLockField;
   @override
   final Address billingAddressNavigation;
   @override
@@ -474,7 +474,6 @@ class _$Order extends Order {
   _$Order._(
       {this.oid,
       this.cart,
-      this.region,
       this.customer,
       this.orderDate,
       this.productDiscountsTotal,
@@ -484,18 +483,19 @@ class _$Order extends Order {
       this.orderStatus,
       this.productTotal,
       this.orderTotal,
-      this.note,
       this.completedFrom,
+      this.note,
       this.bagAmount,
       this.bagTotal,
       this.active,
       this.timeSlot,
       this.paymentType,
       this.sent,
+      this.optimisticLockField,
+      this.region,
       this.uuid,
       this.fee,
       this.isProcessed,
-      this.optimisticLockField,
       this.billingAddressNavigation,
       this.cartNavigation,
       this.completedFromNavigation,
@@ -522,7 +522,6 @@ class _$Order extends Order {
     return other is Order &&
         oid == other.oid &&
         cart == other.cart &&
-        region == other.region &&
         customer == other.customer &&
         orderDate == other.orderDate &&
         productDiscountsTotal == other.productDiscountsTotal &&
@@ -532,18 +531,19 @@ class _$Order extends Order {
         orderStatus == other.orderStatus &&
         productTotal == other.productTotal &&
         orderTotal == other.orderTotal &&
-        note == other.note &&
         completedFrom == other.completedFrom &&
+        note == other.note &&
         bagAmount == other.bagAmount &&
         bagTotal == other.bagTotal &&
         active == other.active &&
         timeSlot == other.timeSlot &&
         paymentType == other.paymentType &&
         sent == other.sent &&
+        optimisticLockField == other.optimisticLockField &&
+        region == other.region &&
         uuid == other.uuid &&
         fee == other.fee &&
         isProcessed == other.isProcessed &&
-        optimisticLockField == other.optimisticLockField &&
         billingAddressNavigation == other.billingAddressNavigation &&
         cartNavigation == other.cartNavigation &&
         completedFromNavigation == other.completedFromNavigation &&
@@ -577,15 +577,15 @@ class _$Order extends Order {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), region.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), note.hashCode), completedFrom.hashCode), bagAmount.hashCode), bagTotal.hashCode),
-                                                                                active.hashCode),
-                                                                            timeSlot.hashCode),
-                                                                        paymentType.hashCode),
-                                                                    sent.hashCode),
-                                                                uuid.hashCode),
-                                                            fee.hashCode),
-                                                        isProcessed.hashCode),
-                                                    optimisticLockField.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode),
+                                                                                timeSlot.hashCode),
+                                                                            paymentType.hashCode),
+                                                                        sent.hashCode),
+                                                                    optimisticLockField.hashCode),
+                                                                region.hashCode),
+                                                            uuid.hashCode),
+                                                        fee.hashCode),
+                                                    isProcessed.hashCode),
                                                 billingAddressNavigation.hashCode),
                                             cartNavigation.hashCode),
                                         completedFromNavigation.hashCode),
@@ -604,7 +604,6 @@ class _$Order extends Order {
     return (newBuiltValueToStringHelper('Order')
           ..add('oid', oid)
           ..add('cart', cart)
-          ..add('region', region)
           ..add('customer', customer)
           ..add('orderDate', orderDate)
           ..add('productDiscountsTotal', productDiscountsTotal)
@@ -614,18 +613,19 @@ class _$Order extends Order {
           ..add('orderStatus', orderStatus)
           ..add('productTotal', productTotal)
           ..add('orderTotal', orderTotal)
-          ..add('note', note)
           ..add('completedFrom', completedFrom)
+          ..add('note', note)
           ..add('bagAmount', bagAmount)
           ..add('bagTotal', bagTotal)
           ..add('active', active)
           ..add('timeSlot', timeSlot)
           ..add('paymentType', paymentType)
           ..add('sent', sent)
+          ..add('optimisticLockField', optimisticLockField)
+          ..add('region', region)
           ..add('uuid', uuid)
           ..add('fee', fee)
           ..add('isProcessed', isProcessed)
-          ..add('optimisticLockField', optimisticLockField)
           ..add('billingAddressNavigation', billingAddressNavigation)
           ..add('cartNavigation', cartNavigation)
           ..add('completedFromNavigation', completedFromNavigation)
@@ -651,10 +651,6 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
   int _cart;
   int get cart => _$this._cart;
   set cart(int cart) => _$this._cart = cart;
-
-  int _region;
-  int get region => _$this._region;
-  set region(int region) => _$this._region = region;
 
   int _customer;
   int get customer => _$this._customer;
@@ -696,13 +692,13 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
   double get orderTotal => _$this._orderTotal;
   set orderTotal(double orderTotal) => _$this._orderTotal = orderTotal;
 
-  String _note;
-  String get note => _$this._note;
-  set note(String note) => _$this._note = note;
-
   int _completedFrom;
   int get completedFrom => _$this._completedFrom;
   set completedFrom(int completedFrom) => _$this._completedFrom = completedFrom;
+
+  String _note;
+  String get note => _$this._note;
+  set note(String note) => _$this._note = note;
 
   int _bagAmount;
   int get bagAmount => _$this._bagAmount;
@@ -728,6 +724,15 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
   bool get sent => _$this._sent;
   set sent(bool sent) => _$this._sent = sent;
 
+  int _optimisticLockField;
+  int get optimisticLockField => _$this._optimisticLockField;
+  set optimisticLockField(int optimisticLockField) =>
+      _$this._optimisticLockField = optimisticLockField;
+
+  int _region;
+  int get region => _$this._region;
+  set region(int region) => _$this._region = region;
+
   String _uuid;
   String get uuid => _$this._uuid;
   set uuid(String uuid) => _$this._uuid = uuid;
@@ -739,11 +744,6 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
   bool _isProcessed;
   bool get isProcessed => _$this._isProcessed;
   set isProcessed(bool isProcessed) => _$this._isProcessed = isProcessed;
-
-  int _optimisticLockField;
-  int get optimisticLockField => _$this._optimisticLockField;
-  set optimisticLockField(int optimisticLockField) =>
-      _$this._optimisticLockField = optimisticLockField;
 
   AddressBuilder _billingAddressNavigation;
   AddressBuilder get billingAddressNavigation =>
@@ -816,7 +816,6 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
     if (_$v != null) {
       _oid = _$v.oid;
       _cart = _$v.cart;
-      _region = _$v.region;
       _customer = _$v.customer;
       _orderDate = _$v.orderDate;
       _productDiscountsTotal = _$v.productDiscountsTotal;
@@ -826,18 +825,19 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
       _orderStatus = _$v.orderStatus;
       _productTotal = _$v.productTotal;
       _orderTotal = _$v.orderTotal;
-      _note = _$v.note;
       _completedFrom = _$v.completedFrom;
+      _note = _$v.note;
       _bagAmount = _$v.bagAmount;
       _bagTotal = _$v.bagTotal;
       _active = _$v.active;
       _timeSlot = _$v.timeSlot;
       _paymentType = _$v.paymentType;
       _sent = _$v.sent;
+      _optimisticLockField = _$v.optimisticLockField;
+      _region = _$v.region;
       _uuid = _$v.uuid;
       _fee = _$v.fee;
       _isProcessed = _$v.isProcessed;
-      _optimisticLockField = _$v.optimisticLockField;
       _billingAddressNavigation = _$v.billingAddressNavigation?.toBuilder();
       _cartNavigation = _$v.cartNavigation?.toBuilder();
       _completedFromNavigation = _$v.completedFromNavigation?.toBuilder();
@@ -875,7 +875,6 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
           new _$Order._(
               oid: oid,
               cart: cart,
-              region: region,
               customer: customer,
               orderDate: orderDate,
               productDiscountsTotal: productDiscountsTotal,
@@ -885,18 +884,19 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
               orderStatus: orderStatus,
               productTotal: productTotal,
               orderTotal: orderTotal,
-              note: note,
               completedFrom: completedFrom,
+              note: note,
               bagAmount: bagAmount,
               bagTotal: bagTotal,
               active: active,
               timeSlot: timeSlot,
               paymentType: paymentType,
               sent: sent,
+              optimisticLockField: optimisticLockField,
+              region: region,
               uuid: uuid,
               fee: fee,
               isProcessed: isProcessed,
-              optimisticLockField: optimisticLockField,
               billingAddressNavigation: _billingAddressNavigation?.build(),
               cartNavigation: _cartNavigation?.build(),
               completedFromNavigation: _completedFromNavigation?.build(),

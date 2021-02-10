@@ -30,16 +30,16 @@ class _$BrandSerializer implements StructuredSerializer<Brand> {
         ..add(serializers.serialize(object.name,
             specifiedType: const FullType(String)));
     }
-    if (object.manufacturer != null) {
-      result
-        ..add('manufacturer')
-        ..add(serializers.serialize(object.manufacturer,
-            specifiedType: const FullType(int)));
-    }
     if (object.optimisticLockField != null) {
       result
         ..add('optimisticLockField')
         ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
+    if (object.manufacturer != null) {
+      result
+        ..add('manufacturer')
+        ..add(serializers.serialize(object.manufacturer,
             specifiedType: const FullType(int)));
     }
     if (object.manufacturerNavigation != null) {
@@ -84,12 +84,12 @@ class _$BrandSerializer implements StructuredSerializer<Brand> {
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'manufacturer':
-          result.manufacturer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'optimisticLockField':
           result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'manufacturer':
+          result.manufacturer = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'manufacturerNavigation':
@@ -121,9 +121,9 @@ class _$Brand extends Brand {
   @override
   final String name;
   @override
-  final int manufacturer;
-  @override
   final int optimisticLockField;
+  @override
+  final int manufacturer;
   @override
   final Manufacturer manufacturerNavigation;
   @override
@@ -137,8 +137,8 @@ class _$Brand extends Brand {
   _$Brand._(
       {this.oid,
       this.name,
-      this.manufacturer,
       this.optimisticLockField,
+      this.manufacturer,
       this.manufacturerNavigation,
       this.brandManagerBrand,
       this.product})
@@ -157,8 +157,8 @@ class _$Brand extends Brand {
     return other is Brand &&
         oid == other.oid &&
         name == other.name &&
-        manufacturer == other.manufacturer &&
         optimisticLockField == other.optimisticLockField &&
+        manufacturer == other.manufacturer &&
         manufacturerNavigation == other.manufacturerNavigation &&
         brandManagerBrand == other.brandManagerBrand &&
         product == other.product;
@@ -171,8 +171,8 @@ class _$Brand extends Brand {
             $jc(
                 $jc(
                     $jc($jc($jc(0, oid.hashCode), name.hashCode),
-                        manufacturer.hashCode),
-                    optimisticLockField.hashCode),
+                        optimisticLockField.hashCode),
+                    manufacturer.hashCode),
                 manufacturerNavigation.hashCode),
             brandManagerBrand.hashCode),
         product.hashCode));
@@ -183,8 +183,8 @@ class _$Brand extends Brand {
     return (newBuiltValueToStringHelper('Brand')
           ..add('oid', oid)
           ..add('name', name)
-          ..add('manufacturer', manufacturer)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('manufacturer', manufacturer)
           ..add('manufacturerNavigation', manufacturerNavigation)
           ..add('brandManagerBrand', brandManagerBrand)
           ..add('product', product))
@@ -203,14 +203,14 @@ class BrandBuilder implements Builder<Brand, BrandBuilder> {
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
-  int _manufacturer;
-  int get manufacturer => _$this._manufacturer;
-  set manufacturer(int manufacturer) => _$this._manufacturer = manufacturer;
-
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
+
+  int _manufacturer;
+  int get manufacturer => _$this._manufacturer;
+  set manufacturer(int manufacturer) => _$this._manufacturer = manufacturer;
 
   ManufacturerBuilder _manufacturerNavigation;
   ManufacturerBuilder get manufacturerNavigation =>
@@ -235,8 +235,8 @@ class BrandBuilder implements Builder<Brand, BrandBuilder> {
     if (_$v != null) {
       _oid = _$v.oid;
       _name = _$v.name;
-      _manufacturer = _$v.manufacturer;
       _optimisticLockField = _$v.optimisticLockField;
+      _manufacturer = _$v.manufacturer;
       _manufacturerNavigation = _$v.manufacturerNavigation?.toBuilder();
       _brandManagerBrand = _$v.brandManagerBrand?.toBuilder();
       _product = _$v.product?.toBuilder();
@@ -266,8 +266,8 @@ class BrandBuilder implements Builder<Brand, BrandBuilder> {
           new _$Brand._(
               oid: oid,
               name: name,
-              manufacturer: manufacturer,
               optimisticLockField: optimisticLockField,
+              manufacturer: manufacturer,
               manufacturerNavigation: _manufacturerNavigation?.build(),
               brandManagerBrand: _brandManagerBrand?.build(),
               product: _product?.build());

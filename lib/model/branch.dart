@@ -20,16 +20,16 @@ abstract class Branch implements Built<Branch, BranchBuilder> {
     int get neighborhood;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'latitude')
     double get latitude;
     
         @nullable
     @BuiltValueField(wireName: r'longitude')
     double get longitude;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'neighborhoodNavigation')

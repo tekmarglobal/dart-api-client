@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionUpdateAgreementLogPost**
-> apiDefinitionUpdateAgreementLogPost(updateAgreementRequest)
+> UpdateAgreementLogResponseRestResult apiDefinitionUpdateAgreementLogPost(updateAgreementRequest)
 
 
 
@@ -247,7 +247,8 @@ var api_instance = new DefinitionApi();
 var updateAgreementRequest = new UpdateAgreementRequest(); // UpdateAgreementRequest | 
 
 try { 
-    api_instance.apiDefinitionUpdateAgreementLogPost(updateAgreementRequest);
+    var result = api_instance.apiDefinitionUpdateAgreementLogPost(updateAgreementRequest);
+    print(result);
 } catch (e) {
     print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
 }
@@ -261,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UpdateAgreementLogResponseRestResult**](UpdateAgreementLogResponseRestResult.md)
 
 ### Authorization
 
@@ -270,7 +271,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

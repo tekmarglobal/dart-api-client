@@ -17,14 +17,6 @@ abstract class Cart implements Built<Cart, CartBuilder> {
     int get oid;
     
         @nullable
-    @BuiltValueField(wireName: r'dateDeleted')
-    DateTime get dateDeleted;
-    
-        @nullable
-    @BuiltValueField(wireName: r'dateCreated')
-    DateTime get dateCreated;
-    
-        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
     
@@ -65,12 +57,28 @@ abstract class Cart implements Built<Cart, CartBuilder> {
     bool get deleted;
     
         @nullable
-    @BuiltValueField(wireName: r'estimatedFee')
-    double get estimatedFee;
+    @BuiltValueField(wireName: r'deleteDate')
+    DateTime get deleteDate;
     
         @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'estimatedFee')
+    double get estimatedFee;
+    
+        @nullable
+    @BuiltValueField(wireName: r'dateDeleted')
+    DateTime get dateDeleted;
+    
+        @nullable
+    @BuiltValueField(wireName: r'dateCreated')
+    DateTime get dateCreated;
+    
+        @nullable
+    @BuiltValueField(wireName: r'sessionId')
+    String get sessionId;
     
         @nullable
     @BuiltValueField(wireName: r'createdFromNavigation')

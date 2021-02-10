@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] [default to null]
 **city** | **int** |  | [optional] [default to null]
 **formalCode** | **int** |  | [optional] [default to null]
-**gpsId** | **int** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**gpsId** | **int** |  | [optional] [default to null]
 **cityNavigation** | [**City**](City.md) |  | [optional] [default to null]
 **neighborhood** | [**BuiltList&lt;Neighborhood&gt;**](Neighborhood.md) |  | [optional] [default to const []]
 

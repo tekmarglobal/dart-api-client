@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**apiProductAddToFavoriteListPost**](ProductApi.md#apiProductAddToFavoriteListPost) | **post** /api/Product/AddToFavoriteList | 
 [**apiProductDeleteFavoriteDelete**](ProductApi.md#apiProductDeleteFavoriteDelete) | **delete** /api/Product/DeleteFavorite | 
 [**apiProductGetFavoriteListPost**](ProductApi.md#apiProductGetFavoriteListPost) | **post** /api/Product/GetFavoriteList | 
-[**apiProductInsertimagesPost**](ProductApi.md#apiProductInsertimagesPost) | **post** /api/Product/insertimages | 
 [**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
 [**apiProductProductListPost**](ProductApi.md#apiProductProductListPost) | **post** /api/Product/ProductList | 
 [**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
@@ -150,54 +149,6 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiProductInsertimagesPost**
-> apiProductInsertimagesPost(i, shopid, client)
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new ProductApi();
-var i = 56; // int | 
-var shopid = shopid_example; // String | 
-var client = client_example; // String | 
-
-try { 
-    api_instance.apiProductInsertimagesPost(i, shopid, client);
-} catch (e) {
-    print("Exception when calling ProductApi->apiProductInsertimagesPost: $e\n");
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **i** | **int**|  | [optional] [default to null]
- **shopid** | **String**|  | [optional] [default to null]
- **client** | **String**|  | [optional] [default to null]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **apiProductPost**
 > RProductRestResult apiProductPost(productRequest)
 
@@ -330,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductUpdateProductFromOlimposPost**
-> apiProductUpdateProductFromOlimposPost(region)
+> String apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log)
 
 
 
@@ -343,10 +294,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var region = 56; // int | 
+var regionErpId = regionErpId_example; // String | 
+var productErpId = productErpId_example; // String | 
+var log = true; // bool | 
 
 try { 
-    api_instance.apiProductUpdateProductFromOlimposPost(region);
+    var result = api_instance.apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log);
+    print(result);
 } catch (e) {
     print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
 }
@@ -356,11 +310,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] [default to null]
+ **regionErpId** | **String**|  | [optional] [default to null]
+ **productErpId** | **String**|  | [optional] [default to null]
+ **log** | **bool**|  | [optional] [default to false]
 
 ### Return type
 
-void (empty response body)
+**String**
 
 ### Authorization
 
@@ -369,7 +325,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

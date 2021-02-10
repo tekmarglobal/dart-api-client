@@ -26,12 +26,12 @@ abstract class County implements Built<County, CountyBuilder> {
     int get formalCode;
     
         @nullable
-    @BuiltValueField(wireName: r'gpsId')
-    int get gpsId;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
+    
+        @nullable
+    @BuiltValueField(wireName: r'gpsId')
+    int get gpsId;
     
         @nullable
     @BuiltValueField(wireName: r'cityNavigation')

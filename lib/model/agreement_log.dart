@@ -17,6 +17,10 @@ abstract class AgreementLog implements Built<AgreementLog, AgreementLogBuilder> 
     String get phone;
     
         @nullable
+    @BuiltValueField(wireName: r'optimisticLockField')
+    int get optimisticLockField;
+    
+        @nullable
     @BuiltValueField(wireName: r'recordDateTime')
     DateTime get recordDateTime;
     
@@ -31,10 +35,6 @@ abstract class AgreementLog implements Built<AgreementLog, AgreementLogBuilder> 
         @nullable
     @BuiltValueField(wireName: r'accept')
     bool get accept;
-    
-        @nullable
-    @BuiltValueField(wireName: r'optimisticLockField')
-    int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'agreementNavigation')

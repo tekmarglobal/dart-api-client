@@ -42,16 +42,16 @@ class _$CitySerializer implements StructuredSerializer<City> {
         ..add(serializers.serialize(object.formalCode,
             specifiedType: const FullType(int)));
     }
-    if (object.gpsId != null) {
-      result
-        ..add('gpsId')
-        ..add(serializers.serialize(object.gpsId,
-            specifiedType: const FullType(int)));
-    }
     if (object.optimisticLockField != null) {
       result
         ..add('optimisticLockField')
         ..add(serializers.serialize(object.optimisticLockField,
+            specifiedType: const FullType(int)));
+    }
+    if (object.gpsId != null) {
+      result
+        ..add('gpsId')
+        ..add(serializers.serialize(object.gpsId,
             specifiedType: const FullType(int)));
     }
     if (object.countryNavigation != null) {
@@ -104,12 +104,12 @@ class _$CitySerializer implements StructuredSerializer<City> {
           result.formalCode = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'gpsId':
-          result.gpsId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'optimisticLockField':
           result.optimisticLockField = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'gpsId':
+          result.gpsId = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'countryNavigation':
@@ -145,9 +145,9 @@ class _$City extends City {
   @override
   final int formalCode;
   @override
-  final int gpsId;
-  @override
   final int optimisticLockField;
+  @override
+  final int gpsId;
   @override
   final Country countryNavigation;
   @override
@@ -163,8 +163,8 @@ class _$City extends City {
       this.name,
       this.country,
       this.formalCode,
-      this.gpsId,
       this.optimisticLockField,
+      this.gpsId,
       this.countryNavigation,
       this.county,
       this.neighborhood})
@@ -185,8 +185,8 @@ class _$City extends City {
         name == other.name &&
         country == other.country &&
         formalCode == other.formalCode &&
-        gpsId == other.gpsId &&
         optimisticLockField == other.optimisticLockField &&
+        gpsId == other.gpsId &&
         countryNavigation == other.countryNavigation &&
         county == other.county &&
         neighborhood == other.neighborhood;
@@ -203,8 +203,8 @@ class _$City extends City {
                             $jc($jc($jc(0, oid.hashCode), name.hashCode),
                                 country.hashCode),
                             formalCode.hashCode),
-                        gpsId.hashCode),
-                    optimisticLockField.hashCode),
+                        optimisticLockField.hashCode),
+                    gpsId.hashCode),
                 countryNavigation.hashCode),
             county.hashCode),
         neighborhood.hashCode));
@@ -217,8 +217,8 @@ class _$City extends City {
           ..add('name', name)
           ..add('country', country)
           ..add('formalCode', formalCode)
-          ..add('gpsId', gpsId)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('gpsId', gpsId)
           ..add('countryNavigation', countryNavigation)
           ..add('county', county)
           ..add('neighborhood', neighborhood))
@@ -245,14 +245,14 @@ class CityBuilder implements Builder<City, CityBuilder> {
   int get formalCode => _$this._formalCode;
   set formalCode(int formalCode) => _$this._formalCode = formalCode;
 
-  int _gpsId;
-  int get gpsId => _$this._gpsId;
-  set gpsId(int gpsId) => _$this._gpsId = gpsId;
-
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
+
+  int _gpsId;
+  int get gpsId => _$this._gpsId;
+  set gpsId(int gpsId) => _$this._gpsId = gpsId;
 
   CountryBuilder _countryNavigation;
   CountryBuilder get countryNavigation =>
@@ -279,8 +279,8 @@ class CityBuilder implements Builder<City, CityBuilder> {
       _name = _$v.name;
       _country = _$v.country;
       _formalCode = _$v.formalCode;
-      _gpsId = _$v.gpsId;
       _optimisticLockField = _$v.optimisticLockField;
+      _gpsId = _$v.gpsId;
       _countryNavigation = _$v.countryNavigation?.toBuilder();
       _county = _$v.county?.toBuilder();
       _neighborhood = _$v.neighborhood?.toBuilder();
@@ -312,8 +312,8 @@ class CityBuilder implements Builder<City, CityBuilder> {
               name: name,
               country: country,
               formalCode: formalCode,
-              gpsId: gpsId,
               optimisticLockField: optimisticLockField,
+              gpsId: gpsId,
               countryNavigation: _countryNavigation?.build(),
               county: _county?.build(),
               neighborhood: _neighborhood?.build());
