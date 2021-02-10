@@ -74,24 +74,6 @@ class _$NewCustomerRequestSerializer
         ..add(serializers.serialize(object.allowCampaign,
             specifiedType: const FullType(bool)));
     }
-    if (object.companyName != null) {
-      result
-        ..add('companyName')
-        ..add(serializers.serialize(object.companyName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.companyTaxName != null) {
-      result
-        ..add('companyTaxName')
-        ..add(serializers.serialize(object.companyTaxName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.companyTaxNumber != null) {
-      result
-        ..add('companyTaxNumber')
-        ..add(serializers.serialize(object.companyTaxNumber,
-            specifiedType: const FullType(String)));
-    }
     if (object.identificationNumber != null) {
       result
         ..add('identificationNumber')
@@ -149,18 +131,6 @@ class _$NewCustomerRequestSerializer
           result.allowCampaign = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
-        case 'companyName':
-          result.companyName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'companyTaxName':
-          result.companyTaxName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'companyTaxNumber':
-          result.companyTaxNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'identificationNumber':
           result.identificationNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -192,12 +162,6 @@ class _$NewCustomerRequest extends NewCustomerRequest {
   @override
   final bool allowCampaign;
   @override
-  final String companyName;
-  @override
-  final String companyTaxName;
-  @override
-  final String companyTaxNumber;
-  @override
   final String identificationNumber;
 
   factory _$NewCustomerRequest(
@@ -214,9 +178,6 @@ class _$NewCustomerRequest extends NewCustomerRequest {
       this.allowEmail,
       this.gender,
       this.allowCampaign,
-      this.companyName,
-      this.companyTaxName,
-      this.companyTaxNumber,
       this.identificationNumber})
       : super._();
 
@@ -242,9 +203,6 @@ class _$NewCustomerRequest extends NewCustomerRequest {
         allowEmail == other.allowEmail &&
         gender == other.gender &&
         allowCampaign == other.allowCampaign &&
-        companyName == other.companyName &&
-        companyTaxName == other.companyTaxName &&
-        companyTaxNumber == other.companyTaxNumber &&
         identificationNumber == other.identificationNumber;
   }
 
@@ -258,21 +216,15 @@ class _$NewCustomerRequest extends NewCustomerRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc($jc(0, name.hashCode),
-                                                    surname.hashCode),
-                                                birthDate.hashCode),
-                                            phone.hashCode),
-                                        email.hashCode),
-                                    allowSms.hashCode),
-                                allowEmail.hashCode),
-                            gender.hashCode),
-                        allowCampaign.hashCode),
-                    companyName.hashCode),
-                companyTaxName.hashCode),
-            companyTaxNumber.hashCode),
+                                    $jc($jc(0, name.hashCode),
+                                        surname.hashCode),
+                                    birthDate.hashCode),
+                                phone.hashCode),
+                            email.hashCode),
+                        allowSms.hashCode),
+                    allowEmail.hashCode),
+                gender.hashCode),
+            allowCampaign.hashCode),
         identificationNumber.hashCode));
   }
 
@@ -288,9 +240,6 @@ class _$NewCustomerRequest extends NewCustomerRequest {
           ..add('allowEmail', allowEmail)
           ..add('gender', gender)
           ..add('allowCampaign', allowCampaign)
-          ..add('companyName', companyName)
-          ..add('companyTaxName', companyTaxName)
-          ..add('companyTaxNumber', companyTaxNumber)
           ..add('identificationNumber', identificationNumber))
         .toString();
   }
@@ -337,20 +286,6 @@ class NewCustomerRequestBuilder
   set allowCampaign(bool allowCampaign) =>
       _$this._allowCampaign = allowCampaign;
 
-  String _companyName;
-  String get companyName => _$this._companyName;
-  set companyName(String companyName) => _$this._companyName = companyName;
-
-  String _companyTaxName;
-  String get companyTaxName => _$this._companyTaxName;
-  set companyTaxName(String companyTaxName) =>
-      _$this._companyTaxName = companyTaxName;
-
-  String _companyTaxNumber;
-  String get companyTaxNumber => _$this._companyTaxNumber;
-  set companyTaxNumber(String companyTaxNumber) =>
-      _$this._companyTaxNumber = companyTaxNumber;
-
   String _identificationNumber;
   String get identificationNumber => _$this._identificationNumber;
   set identificationNumber(String identificationNumber) =>
@@ -369,9 +304,6 @@ class NewCustomerRequestBuilder
       _allowEmail = _$v.allowEmail;
       _gender = _$v.gender;
       _allowCampaign = _$v.allowCampaign;
-      _companyName = _$v.companyName;
-      _companyTaxName = _$v.companyTaxName;
-      _companyTaxNumber = _$v.companyTaxNumber;
       _identificationNumber = _$v.identificationNumber;
       _$v = null;
     }
@@ -404,9 +336,6 @@ class NewCustomerRequestBuilder
             allowEmail: allowEmail,
             gender: gender,
             allowCampaign: allowCampaign,
-            companyName: companyName,
-            companyTaxName: companyTaxName,
-            companyTaxNumber: companyTaxNumber,
             identificationNumber: identificationNumber);
     replace(_$result);
     return _$result;
