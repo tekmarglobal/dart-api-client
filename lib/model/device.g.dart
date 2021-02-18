@@ -48,36 +48,6 @@ class _$DeviceSerializer implements StructuredSerializer<Device> {
         ..add(serializers.serialize(object.deviceId,
             specifiedType: const FullType(String)));
     }
-    if (object.token != null) {
-      result
-        ..add('token')
-        ..add(serializers.serialize(object.token,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.logoutDate != null) {
-      result
-        ..add('logoutDate')
-        ..add(serializers.serialize(object.logoutDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.loginDate != null) {
-      result
-        ..add('loginDate')
-        ..add(serializers.serialize(object.loginDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(Customer)));
-    }
     if (object.platformNavigation != null) {
       result
         ..add('platformNavigation')
@@ -153,26 +123,6 @@ class _$DeviceSerializer implements StructuredSerializer<Device> {
           result.deviceId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'token':
-          result.token = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'logoutDate':
-          result.logoutDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'loginDate':
-          result.loginDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Customer)) as Customer);
-          break;
         case 'platformNavigation':
           result.platformNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Platform)) as Platform);
@@ -228,16 +178,6 @@ class _$Device extends Device {
   @override
   final String deviceId;
   @override
-  final String token;
-  @override
-  final int customer;
-  @override
-  final DateTime logoutDate;
-  @override
-  final DateTime loginDate;
-  @override
-  final Customer customerNavigation;
-  @override
   final Platform platformNavigation;
   @override
   final BuiltList<Cart> cart;
@@ -259,11 +199,6 @@ class _$Device extends Device {
       this.platform,
       this.optimisticLockField,
       this.deviceId,
-      this.token,
-      this.customer,
-      this.logoutDate,
-      this.loginDate,
-      this.customerNavigation,
       this.platformNavigation,
       this.cart,
       this.cartProductAddedFromNavigation,
@@ -288,11 +223,6 @@ class _$Device extends Device {
         platform == other.platform &&
         optimisticLockField == other.optimisticLockField &&
         deviceId == other.deviceId &&
-        token == other.token &&
-        customer == other.customer &&
-        logoutDate == other.logoutDate &&
-        loginDate == other.loginDate &&
-        customerNavigation == other.customerNavigation &&
         platformNavigation == other.platformNavigation &&
         cart == other.cart &&
         cartProductAddedFromNavigation ==
@@ -314,26 +244,11 @@ class _$Device extends Device {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    0,
-                                                                    oid
-                                                                        .hashCode),
-                                                                name.hashCode),
-                                                            platform.hashCode),
-                                                        optimisticLockField
-                                                            .hashCode),
-                                                    deviceId.hashCode),
-                                                token.hashCode),
-                                            customer.hashCode),
-                                        logoutDate.hashCode),
-                                    loginDate.hashCode),
-                                customerNavigation.hashCode),
+                                        $jc($jc(0, oid.hashCode),
+                                            name.hashCode),
+                                        platform.hashCode),
+                                    optimisticLockField.hashCode),
+                                deviceId.hashCode),
                             platformNavigation.hashCode),
                         cart.hashCode),
                     cartProductAddedFromNavigation.hashCode),
@@ -350,11 +265,6 @@ class _$Device extends Device {
           ..add('platform', platform)
           ..add('optimisticLockField', optimisticLockField)
           ..add('deviceId', deviceId)
-          ..add('token', token)
-          ..add('customer', customer)
-          ..add('logoutDate', logoutDate)
-          ..add('loginDate', loginDate)
-          ..add('customerNavigation', customerNavigation)
           ..add('platformNavigation', platformNavigation)
           ..add('cart', cart)
           ..add(
@@ -390,28 +300,6 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
   String _deviceId;
   String get deviceId => _$this._deviceId;
   set deviceId(String deviceId) => _$this._deviceId = deviceId;
-
-  String _token;
-  String get token => _$this._token;
-  set token(String token) => _$this._token = token;
-
-  int _customer;
-  int get customer => _$this._customer;
-  set customer(int customer) => _$this._customer = customer;
-
-  DateTime _logoutDate;
-  DateTime get logoutDate => _$this._logoutDate;
-  set logoutDate(DateTime logoutDate) => _$this._logoutDate = logoutDate;
-
-  DateTime _loginDate;
-  DateTime get loginDate => _$this._loginDate;
-  set loginDate(DateTime loginDate) => _$this._loginDate = loginDate;
-
-  CustomerBuilder _customerNavigation;
-  CustomerBuilder get customerNavigation =>
-      _$this._customerNavigation ??= new CustomerBuilder();
-  set customerNavigation(CustomerBuilder customerNavigation) =>
-      _$this._customerNavigation = customerNavigation;
 
   PlatformBuilder _platformNavigation;
   PlatformBuilder get platformNavigation =>
@@ -458,11 +346,6 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
       _platform = _$v.platform;
       _optimisticLockField = _$v.optimisticLockField;
       _deviceId = _$v.deviceId;
-      _token = _$v.token;
-      _customer = _$v.customer;
-      _logoutDate = _$v.logoutDate;
-      _loginDate = _$v.loginDate;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
       _platformNavigation = _$v.platformNavigation?.toBuilder();
       _cart = _$v.cart?.toBuilder();
       _cartProductAddedFromNavigation =
@@ -500,11 +383,6 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
               platform: platform,
               optimisticLockField: optimisticLockField,
               deviceId: deviceId,
-              token: token,
-              customer: customer,
-              logoutDate: logoutDate,
-              loginDate: loginDate,
-              customerNavigation: _customerNavigation?.build(),
               platformNavigation: _platformNavigation?.build(),
               cart: _cart?.build(),
               cartProductAddedFromNavigation:
@@ -516,8 +394,6 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
     } catch (_) {
       String _$failedField;
       try {
-        _$failedField = 'customerNavigation';
-        _customerNavigation?.build();
         _$failedField = 'platformNavigation';
         _platformNavigation?.build();
         _$failedField = 'cart';

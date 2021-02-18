@@ -33,6 +33,10 @@ abstract class ProductImport implements Built<ProductImport, ProductImportBuilde
     int get optimisticLockField;
     
         @nullable
+    @BuiltValueField(wireName: r'regionId')
+    String get regionId;
+    
+        @nullable
     @BuiltValueField(wireName: r'productImportDetail')
     BuiltList<ProductImportDetail> get productImportDetail;
 

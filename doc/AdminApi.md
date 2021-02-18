@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiAdminBranchPost**](AdminApi.md#apiAdminBranchPost) | **post** /api/Admin/Branch | 
 [**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiAdminGenerateTimeSlotsGet) | **get** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiAdminGenerateTimeSlotsPost) | **post** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGetConfigurationGet**](AdminApi.md#apiAdminGetConfigurationGet) | **get** /api/Admin/GetConfiguration | 
@@ -18,6 +19,47 @@ Method | HTTP request | Description
 [**apiAdminUpdateRegionNeighborhoodPost**](AdminApi.md#apiAdminUpdateRegionNeighborhoodPost) | **post** /api/Admin/UpdateRegionNeighborhood | 
 [**apiAdminUploadProductImagePost**](AdminApi.md#apiAdminUploadProductImagePost) | **post** /api/Admin/UploadProductImage | 
 
+
+# **apiAdminBranchPost**
+> BranchResponseListRestResult apiAdminBranchPost()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AdminApi();
+
+try { 
+    var result = api_instance.apiAdminBranchPost();
+    print(result);
+} catch (e) {
+    print("Exception when calling AdminApi->apiAdminBranchPost: $e\n");
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BranchResponseListRestResult**](BranchResponseListRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGenerateTimeSlotsGet**
 > TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsGet(region)

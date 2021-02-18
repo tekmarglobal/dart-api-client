@@ -15,7 +15,6 @@ Name | Type | Description | Notes
 **categoryImport** | **int** |  | [optional] [default to null]
 **operationType** | **String** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
-**gcrecord** | **int** |  | [optional] [default to null]
 **categoryImportNavigation** | [**CategoryImport**](CategoryImport.md) |  | [optional] [default to null]
 **categoryNavigation** | [**Category**](Category.md) |  | [optional] [default to null]
 

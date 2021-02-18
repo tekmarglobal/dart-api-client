@@ -5,7 +5,6 @@
             import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/customer_login_attempt.dart';
             import 'package:openapi/model/cart.dart';
-            import 'package:openapi/model/device.dart';
             import 'package:openapi/model/customer_favorite_list.dart';
             import 'package:openapi/model/order.dart';
         import 'package:built_value/built_value.dart';
@@ -89,18 +88,6 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
     int get invoiceAddress;
     
         @nullable
-    @BuiltValueField(wireName: r'companyName')
-    String get companyName;
-    
-        @nullable
-    @BuiltValueField(wireName: r'companyTaxName')
-    String get companyTaxName;
-    
-        @nullable
-    @BuiltValueField(wireName: r'companyTaxNumber')
-    String get companyTaxNumber;
-    
-        @nullable
     @BuiltValueField(wireName: r'defaultAddressNavigation')
     Address get defaultAddressNavigation;
     
@@ -127,10 +114,6 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
         @nullable
     @BuiltValueField(wireName: r'customerLoginAttempt')
     BuiltList<CustomerLoginAttempt> get customerLoginAttempt;
-    
-        @nullable
-    @BuiltValueField(wireName: r'device')
-    BuiltList<Device> get device;
     
         @nullable
     @BuiltValueField(wireName: r'deviceLogin')

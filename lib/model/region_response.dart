@@ -45,6 +45,10 @@ abstract class RegionResponse implements Built<RegionResponse, RegionResponseBui
     String get regionMail;
     
         @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
+    
+        @nullable
     @BuiltValueField(wireName: r'neighborhoods')
     BuiltList<NeighborResponse> get neighborhoods;
 

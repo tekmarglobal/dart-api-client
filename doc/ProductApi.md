@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
 [**apiProductProductListPost**](ProductApi.md#apiProductProductListPost) | **post** /api/Product/ProductList | 
 [**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
+[**apiProductUpdateProductFromOlimposGet**](ProductApi.md#apiProductUpdateProductFromOlimposGet) | **get** /api/Product/UpdateProductFromOlimpos | 
 [**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiProductUpdateProductFromOlimposPost) | **post** /api/Product/UpdateProductFromOlimpos | 
 
 
@@ -276,6 +277,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiProductUpdateProductFromOlimposGet**
+> String apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+var regionErpId = regionErpId_example; // String | 
+var productErpId = productErpId_example; // String | 
+var log = true; // bool | 
+
+try { 
+    var result = api_instance.apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log);
+    print(result);
+} catch (e) {
+    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionErpId** | **String**|  | [optional] [default to null]
+ **productErpId** | **String**|  | [optional] [default to null]
+ **log** | **bool**|  | [optional] [default to false]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

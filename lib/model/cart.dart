@@ -57,10 +57,6 @@ abstract class Cart implements Built<Cart, CartBuilder> {
     bool get deleted;
     
         @nullable
-    @BuiltValueField(wireName: r'deleteDate')
-    DateTime get deleteDate;
-    
-        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
     
@@ -75,10 +71,6 @@ abstract class Cart implements Built<Cart, CartBuilder> {
         @nullable
     @BuiltValueField(wireName: r'dateCreated')
     DateTime get dateCreated;
-    
-        @nullable
-    @BuiltValueField(wireName: r'sessionId')
-    String get sessionId;
     
         @nullable
     @BuiltValueField(wireName: r'createdFromNavigation')

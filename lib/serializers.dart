@@ -17,6 +17,7 @@ import 'package:openapi/model/banner_response.dart';
 import 'package:openapi/model/banner_response_rest_result.dart';
 import 'package:openapi/model/branch.dart';
 import 'package:openapi/model/branch_response.dart';
+import 'package:openapi/model/branch_response_list_rest_result.dart';
 import 'package:openapi/model/brand.dart';
 import 'package:openapi/model/brand_manager.dart';
 import 'package:openapi/model/brand_manager_brand.dart';
@@ -67,8 +68,6 @@ import 'package:openapi/model/inline_object.dart';
 import 'package:openapi/model/login_request.dart';
 import 'package:openapi/model/login_respone.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
-import 'package:openapi/model/mail_template.dart';
-import 'package:openapi/model/mail_type.dart';
 import 'package:openapi/model/manufacturer.dart';
 import 'package:openapi/model/neighbor_request.dart';
 import 'package:openapi/model/neighbor_response.dart';
@@ -126,6 +125,7 @@ import 'package:openapi/model/search_product_request.dart';
 import 'package:openapi/model/sms_request.dart';
 import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
+import 'package:openapi/model/string_list_rest_result.dart';
 import 'package:openapi/model/supplier.dart';
 import 'package:openapi/model/time_slot.dart';
 import 'package:openapi/model/time_slot_response.dart';
@@ -161,6 +161,7 @@ BannerResponse,
 BannerResponseRestResult,
 Branch,
 BranchResponse,
+BranchResponseListRestResult,
 Brand,
 BrandManager,
 BrandManagerBrand,
@@ -211,8 +212,6 @@ InlineObject,
 LoginRequest,
 LoginRespone,
 LoginResponeRestResult,
-MailTemplate,
-MailType,
 Manufacturer,
 NeighborRequest,
 NeighborResponse,
@@ -270,6 +269,7 @@ SearchProductRequest,
 SmsRequest,
 SmsResponse,
 SmsResponseRestResult,
+StringListRestResult,
 Supplier,
 TimeSlot,
 TimeSlotResponse,
@@ -327,6 +327,9 @@ const FullType(BuiltList, const [const FullType(Branch)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(BranchResponse)]),
 () => new ListBuilder<BranchResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(BranchResponseListRestResult)]),
+() => new ListBuilder<BranchResponseListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Brand)]),
 () => new ListBuilder<Brand>())
@@ -477,12 +480,6 @@ const FullType(BuiltList, const [const FullType(LoginRespone)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginResponeRestResult)]),
 () => new ListBuilder<LoginResponeRestResult>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(MailTemplate)]),
-() => new ListBuilder<MailTemplate>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(MailType)]),
-() => new ListBuilder<MailType>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Manufacturer)]),
 () => new ListBuilder<Manufacturer>())
@@ -654,6 +651,9 @@ const FullType(BuiltList, const [const FullType(SmsResponse)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(SmsResponseRestResult)]),
 () => new ListBuilder<SmsResponseRestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(StringListRestResult)]),
+() => new ListBuilder<StringListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Supplier)]),
 () => new ListBuilder<Supplier>())

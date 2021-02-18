@@ -1,4 +1,3 @@
-            import 'package:openapi/model/customer.dart';
             import 'package:openapi/model/device_login.dart';
             import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/cart_product.dart';
@@ -32,26 +31,6 @@ abstract class Device implements Built<Device, DeviceBuilder> {
         @nullable
     @BuiltValueField(wireName: r'deviceId')
     String get deviceId;
-    
-        @nullable
-    @BuiltValueField(wireName: r'token')
-    String get token;
-    
-        @nullable
-    @BuiltValueField(wireName: r'customer')
-    int get customer;
-    
-        @nullable
-    @BuiltValueField(wireName: r'logoutDate')
-    DateTime get logoutDate;
-    
-        @nullable
-    @BuiltValueField(wireName: r'loginDate')
-    DateTime get loginDate;
-    
-        @nullable
-    @BuiltValueField(wireName: r'customerNavigation')
-    Customer get customerNavigation;
     
         @nullable
     @BuiltValueField(wireName: r'platformNavigation')

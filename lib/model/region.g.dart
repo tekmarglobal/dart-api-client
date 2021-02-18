@@ -84,6 +84,12 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
         ..add(serializers.serialize(object.erpId,
             specifiedType: const FullType(String)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     if (object.cart != null) {
       result
         ..add('cart')
@@ -193,6 +199,10 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
           result.erpId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'cart':
           result.cart.replace(serializers.deserialize(value,
                   specifiedType:
@@ -267,6 +277,8 @@ class _$Region extends Region {
   @override
   final String erpId;
   @override
+  final bool active;
+  @override
   final BuiltList<Cart> cart;
   @override
   final BuiltList<Depot> depot;
@@ -297,6 +309,7 @@ class _$Region extends Region {
       this.optimisticLockField,
       this.regionMail,
       this.erpId,
+      this.active,
       this.cart,
       this.depot,
       this.order,
@@ -328,6 +341,7 @@ class _$Region extends Region {
         optimisticLockField == other.optimisticLockField &&
         regionMail == other.regionMail &&
         erpId == other.erpId &&
+        active == other.active &&
         cart == other.cart &&
         depot == other.depot &&
         order == other.order &&
@@ -358,25 +372,27 @@ class _$Region extends Region {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            oid
+                                                                            $jc(
+                                                                                0,
+                                                                                oid
+                                                                                    .hashCode),
+                                                                            name
                                                                                 .hashCode),
-                                                                        name
+                                                                        code
                                                                             .hashCode),
-                                                                    code
+                                                                    freeDelivery
                                                                         .hashCode),
-                                                                freeDelivery
+                                                                freeDeliveryAmount
                                                                     .hashCode),
-                                                            freeDeliveryAmount
+                                                            timeSlotGenerationWindow
                                                                 .hashCode),
-                                                        timeSlotGenerationWindow
+                                                        lastTimeSlotGeneratedDate
                                                             .hashCode),
-                                                    lastTimeSlotGeneratedDate
-                                                        .hashCode),
-                                                minimumCartAmount.hashCode),
-                                            optimisticLockField.hashCode),
-                                        regionMail.hashCode),
-                                    erpId.hashCode),
+                                                    minimumCartAmount.hashCode),
+                                                optimisticLockField.hashCode),
+                                            regionMail.hashCode),
+                                        erpId.hashCode),
+                                    active.hashCode),
                                 cart.hashCode),
                             depot.hashCode),
                         order.hashCode),
@@ -400,6 +416,7 @@ class _$Region extends Region {
           ..add('optimisticLockField', optimisticLockField)
           ..add('regionMail', regionMail)
           ..add('erpId', erpId)
+          ..add('active', active)
           ..add('cart', cart)
           ..add('depot', depot)
           ..add('order', order)
@@ -464,6 +481,10 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
   String get erpId => _$this._erpId;
   set erpId(String erpId) => _$this._erpId = erpId;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   ListBuilder<Cart> _cart;
   ListBuilder<Cart> get cart => _$this._cart ??= new ListBuilder<Cart>();
   set cart(ListBuilder<Cart> cart) => _$this._cart = cart;
@@ -520,6 +541,7 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
       _optimisticLockField = _$v.optimisticLockField;
       _regionMail = _$v.regionMail;
       _erpId = _$v.erpId;
+      _active = _$v.active;
       _cart = _$v.cart?.toBuilder();
       _depot = _$v.depot?.toBuilder();
       _order = _$v.order?.toBuilder();
@@ -563,6 +585,7 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
               optimisticLockField: optimisticLockField,
               regionMail: regionMail,
               erpId: erpId,
+              active: active,
               cart: _cart?.build(),
               depot: _depot?.build(),
               order: _order?.build(),

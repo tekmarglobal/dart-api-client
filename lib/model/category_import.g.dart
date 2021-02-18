@@ -56,12 +56,6 @@ class _$CategoryImportSerializer
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
     if (object.categoryImportDetail != null) {
       result
         ..add('categoryImportDetail')
@@ -108,10 +102,6 @@ class _$CategoryImportSerializer
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
         case 'categoryImportDetail':
           result.categoryImportDetail.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -139,8 +129,6 @@ class _$CategoryImport extends CategoryImport {
   @override
   final int optimisticLockField;
   @override
-  final int gcrecord;
-  @override
   final BuiltList<CategoryImportDetail> categoryImportDetail;
 
   factory _$CategoryImport([void Function(CategoryImportBuilder) updates]) =>
@@ -153,7 +141,6 @@ class _$CategoryImport extends CategoryImport {
       this.ipAddress,
       this.payLoad,
       this.optimisticLockField,
-      this.gcrecord,
       this.categoryImportDetail})
       : super._();
 
@@ -175,7 +162,6 @@ class _$CategoryImport extends CategoryImport {
         ipAddress == other.ipAddress &&
         payLoad == other.payLoad &&
         optimisticLockField == other.optimisticLockField &&
-        gcrecord == other.gcrecord &&
         categoryImportDetail == other.categoryImportDetail;
   }
 
@@ -185,13 +171,11 @@ class _$CategoryImport extends CategoryImport {
         $jc(
             $jc(
                 $jc(
-                    $jc(
-                        $jc($jc($jc(0, oid.hashCode), name.hashCode),
-                            importDate.hashCode),
-                        ipAddress.hashCode),
-                    payLoad.hashCode),
-                optimisticLockField.hashCode),
-            gcrecord.hashCode),
+                    $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                        importDate.hashCode),
+                    ipAddress.hashCode),
+                payLoad.hashCode),
+            optimisticLockField.hashCode),
         categoryImportDetail.hashCode));
   }
 
@@ -204,7 +188,6 @@ class _$CategoryImport extends CategoryImport {
           ..add('ipAddress', ipAddress)
           ..add('payLoad', payLoad)
           ..add('optimisticLockField', optimisticLockField)
-          ..add('gcrecord', gcrecord)
           ..add('categoryImportDetail', categoryImportDetail))
         .toString();
   }
@@ -239,10 +222,6 @@ class CategoryImportBuilder
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
-  int _gcrecord;
-  int get gcrecord => _$this._gcrecord;
-  set gcrecord(int gcrecord) => _$this._gcrecord = gcrecord;
-
   ListBuilder<CategoryImportDetail> _categoryImportDetail;
   ListBuilder<CategoryImportDetail> get categoryImportDetail =>
       _$this._categoryImportDetail ??= new ListBuilder<CategoryImportDetail>();
@@ -260,7 +239,6 @@ class CategoryImportBuilder
       _ipAddress = _$v.ipAddress;
       _payLoad = _$v.payLoad;
       _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
       _categoryImportDetail = _$v.categoryImportDetail?.toBuilder();
       _$v = null;
     }
@@ -292,7 +270,6 @@ class CategoryImportBuilder
               ipAddress: ipAddress,
               payLoad: payLoad,
               optimisticLockField: optimisticLockField,
-              gcrecord: gcrecord,
               categoryImportDetail: _categoryImportDetail?.build());
     } catch (_) {
       String _$failedField;

@@ -36,12 +36,6 @@ class _$ProductImportDetailSerializer
         ..add(serializers.serialize(object.product,
             specifiedType: const FullType(int)));
     }
-    if (object.fieldName != null) {
-      result
-        ..add('fieldName')
-        ..add(serializers.serialize(object.fieldName,
-            specifiedType: const FullType(String)));
-    }
     if (object.oldValue != null) {
       result
         ..add('oldValue')
@@ -107,10 +101,6 @@ class _$ProductImportDetailSerializer
           result.product = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'fieldName':
-          result.fieldName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'oldValue':
           result.oldValue = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -152,8 +142,6 @@ class _$ProductImportDetail extends ProductImportDetail {
   @override
   final int product;
   @override
-  final String fieldName;
-  @override
   final String oldValue;
   @override
   final String newValue;
@@ -175,7 +163,6 @@ class _$ProductImportDetail extends ProductImportDetail {
   _$ProductImportDetail._(
       {this.oid,
       this.product,
-      this.fieldName,
       this.oldValue,
       this.newValue,
       this.productImport,
@@ -200,7 +187,6 @@ class _$ProductImportDetail extends ProductImportDetail {
     return other is ProductImportDetail &&
         oid == other.oid &&
         product == other.product &&
-        fieldName == other.fieldName &&
         oldValue == other.oldValue &&
         newValue == other.newValue &&
         productImport == other.productImport &&
@@ -218,9 +204,7 @@ class _$ProductImportDetail extends ProductImportDetail {
                 $jc(
                     $jc(
                         $jc(
-                            $jc(
-                                $jc($jc($jc(0, oid.hashCode), product.hashCode),
-                                    fieldName.hashCode),
+                            $jc($jc($jc(0, oid.hashCode), product.hashCode),
                                 oldValue.hashCode),
                             newValue.hashCode),
                         productImport.hashCode),
@@ -235,7 +219,6 @@ class _$ProductImportDetail extends ProductImportDetail {
     return (newBuiltValueToStringHelper('ProductImportDetail')
           ..add('oid', oid)
           ..add('product', product)
-          ..add('fieldName', fieldName)
           ..add('oldValue', oldValue)
           ..add('newValue', newValue)
           ..add('productImport', productImport)
@@ -258,10 +241,6 @@ class ProductImportDetailBuilder
   int _product;
   int get product => _$this._product;
   set product(int product) => _$this._product = product;
-
-  String _fieldName;
-  String get fieldName => _$this._fieldName;
-  set fieldName(String fieldName) => _$this._fieldName = fieldName;
 
   String _oldValue;
   String get oldValue => _$this._oldValue;
@@ -303,7 +282,6 @@ class ProductImportDetailBuilder
     if (_$v != null) {
       _oid = _$v.oid;
       _product = _$v.product;
-      _fieldName = _$v.fieldName;
       _oldValue = _$v.oldValue;
       _newValue = _$v.newValue;
       _productImport = _$v.productImport;
@@ -337,7 +315,6 @@ class ProductImportDetailBuilder
           new _$ProductImportDetail._(
               oid: oid,
               product: product,
-              fieldName: fieldName,
               oldValue: oldValue,
               newValue: newValue,
               productImport: productImport,

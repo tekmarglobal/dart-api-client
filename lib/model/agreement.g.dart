@@ -60,12 +60,6 @@ class _$AgreementSerializer implements StructuredSerializer<Agreement> {
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
-    if (object.type != null) {
-      result
-        ..add('type')
-        ..add(serializers.serialize(object.type,
-            specifiedType: const FullType(String)));
-    }
     if (object.isRequired != null) {
       result
         ..add('isRequired')
@@ -127,10 +121,6 @@ class _$AgreementSerializer implements StructuredSerializer<Agreement> {
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'type':
-          result.type = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'isRequired':
           result.isRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -168,8 +158,6 @@ class _$Agreement extends Agreement {
   @override
   final int optimisticLockField;
   @override
-  final String type;
-  @override
   final bool isRequired;
   @override
   final AgreementType agreementTypeNavigation;
@@ -187,7 +175,6 @@ class _$Agreement extends Agreement {
       this.endDate,
       this.content,
       this.optimisticLockField,
-      this.type,
       this.isRequired,
       this.agreementTypeNavigation,
       this.agreementLog})
@@ -211,7 +198,6 @@ class _$Agreement extends Agreement {
         endDate == other.endDate &&
         content == other.content &&
         optimisticLockField == other.optimisticLockField &&
-        type == other.type &&
         isRequired == other.isRequired &&
         agreementTypeNavigation == other.agreementTypeNavigation &&
         agreementLog == other.agreementLog;
@@ -226,16 +212,12 @@ class _$Agreement extends Agreement {
                     $jc(
                         $jc(
                             $jc(
-                                $jc(
-                                    $jc(
-                                        $jc($jc(0, oid.hashCode),
-                                            name.hashCode),
-                                        agreementType.hashCode),
-                                    startDate.hashCode),
-                                endDate.hashCode),
-                            content.hashCode),
-                        optimisticLockField.hashCode),
-                    type.hashCode),
+                                $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                                    agreementType.hashCode),
+                                startDate.hashCode),
+                            endDate.hashCode),
+                        content.hashCode),
+                    optimisticLockField.hashCode),
                 isRequired.hashCode),
             agreementTypeNavigation.hashCode),
         agreementLog.hashCode));
@@ -251,7 +233,6 @@ class _$Agreement extends Agreement {
           ..add('endDate', endDate)
           ..add('content', content)
           ..add('optimisticLockField', optimisticLockField)
-          ..add('type', type)
           ..add('isRequired', isRequired)
           ..add('agreementTypeNavigation', agreementTypeNavigation)
           ..add('agreementLog', agreementLog))
@@ -291,10 +272,6 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
-  String _type;
-  String get type => _$this._type;
-  set type(String type) => _$this._type = type;
-
   bool _isRequired;
   bool get isRequired => _$this._isRequired;
   set isRequired(bool isRequired) => _$this._isRequired = isRequired;
@@ -322,7 +299,6 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
       _endDate = _$v.endDate;
       _content = _$v.content;
       _optimisticLockField = _$v.optimisticLockField;
-      _type = _$v.type;
       _isRequired = _$v.isRequired;
       _agreementTypeNavigation = _$v.agreementTypeNavigation?.toBuilder();
       _agreementLog = _$v.agreementLog?.toBuilder();
@@ -357,7 +333,6 @@ class AgreementBuilder implements Builder<Agreement, AgreementBuilder> {
               endDate: endDate,
               content: content,
               optimisticLockField: optimisticLockField,
-              type: type,
               isRequired: isRequired,
               agreementTypeNavigation: _agreementTypeNavigation?.build(),
               agreementLog: _agreementLog?.build());

@@ -59,6 +59,10 @@ abstract class Region implements Built<Region, RegionBuilder> {
     String get erpId;
     
         @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
+    
+        @nullable
     @BuiltValueField(wireName: r'cart')
     BuiltList<Cart> get cart;
     

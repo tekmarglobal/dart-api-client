@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **lastTimeSlotGeneratedDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
 **minimunCartAmount** | **double** |  | [optional] [default to null]
 **regionMail** | **String** |  | [optional] [default to null]
+**active** | **bool** |  | [optional] [default to null]
 **neighborhoods** | [**BuiltList&lt;NeighborResponse&gt;**](NeighborResponse.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -61,6 +61,7 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**apiAccountLoginPost**](doc//AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
 *AccountApi* | [**apiAccountLogoutGet**](doc//AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
 *AccountApi* | [**apiAccountWhoAmIGet**](doc//AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
+*AdminApi* | [**apiAdminBranchPost**](doc//AdminApi.md#apiadminbranchpost) | **post** /api/Admin/Branch | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsGet**](doc//AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGetConfigurationGet**](doc//AdminApi.md#apiadmingetconfigurationget) | **get** /api/Admin/GetConfiguration | 
@@ -114,9 +115,11 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductPost**](doc//ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductListPost**](doc//ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 *ProductApi* | [**apiProductProductSearchPost**](doc//ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
+*ProductApi* | [**apiProductUpdateProductFromOlimposGet**](doc//ProductApi.md#apiproductupdateproductfromolimposget) | **get** /api/Product/UpdateProductFromOlimpos | 
 *ProductApi* | [**apiProductUpdateProductFromOlimposPost**](doc//ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc//RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc//RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
+*SanityApi* | [**apiSanityCheckGet**](doc//SanityApi.md#apisanitycheckget) | **get** /api/Sanity/check | 
 *ShareApi* | [**apiShareDetailProductidGet**](doc//ShareApi.md#apisharedetailproductidget) | **get** /api/Share/detail/{productid} | 
 *ShareApi* | [**apiShareDetailProductidProductnameSharedidGet**](doc//ShareApi.md#apisharedetailproductidproductnamesharedidget) | **get** /api/Share/detail/{productid}/{productname}/{sharedid} | 
 
@@ -134,6 +137,7 @@ Class | Method | HTTP request | Description
  - [BannerResponseRestResult](doc//BannerResponseRestResult.md)
  - [Branch](doc//Branch.md)
  - [BranchResponse](doc//BranchResponse.md)
+ - [BranchResponseListRestResult](doc//BranchResponseListRestResult.md)
  - [Brand](doc//Brand.md)
  - [BrandManager](doc//BrandManager.md)
  - [BrandManagerBrand](doc//BrandManagerBrand.md)
@@ -184,8 +188,6 @@ Class | Method | HTTP request | Description
  - [LoginRequest](doc//LoginRequest.md)
  - [LoginRespone](doc//LoginRespone.md)
  - [LoginResponeRestResult](doc//LoginResponeRestResult.md)
- - [MailTemplate](doc//MailTemplate.md)
- - [MailType](doc//MailType.md)
  - [Manufacturer](doc//Manufacturer.md)
  - [NeighborRequest](doc//NeighborRequest.md)
  - [NeighborResponse](doc//NeighborResponse.md)
@@ -243,6 +245,7 @@ Class | Method | HTTP request | Description
  - [SmsRequest](doc//SmsRequest.md)
  - [SmsResponse](doc//SmsResponse.md)
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
+ - [StringListRestResult](doc//StringListRestResult.md)
  - [Supplier](doc//Supplier.md)
  - [TimeSlot](doc//TimeSlot.md)
  - [TimeSlotResponse](doc//TimeSlotResponse.md)

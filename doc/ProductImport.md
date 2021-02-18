@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **payload** | **String** |  | [optional] [default to null]
 **ipAddress** | **String** |  | [optional] [default to null]
 **optimisticLockField** | **int** |  | [optional] [default to null]
+**regionId** | **String** |  | [optional] [default to null]
 **productImportDetail** | [**BuiltList&lt;ProductImportDetail&gt;**](ProductImportDetail.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

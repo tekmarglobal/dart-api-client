@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **optimisticLockField** | **int** |  | [optional] [default to null]
 **regionMail** | **String** |  | [optional] [default to null]
 **erpId** | **String** |  | [optional] [default to null]
+**active** | **bool** |  | [optional] [default to null]
 **cart** | [**BuiltList&lt;Cart&gt;**](Cart.md) |  | [optional] [default to const []]
 **depot** | [**BuiltList&lt;Depot&gt;**](Depot.md) |  | [optional] [default to const []]
 **order** | [**BuiltList&lt;Order&gt;**](Order.md) |  | [optional] [default to const []]

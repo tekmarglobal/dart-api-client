@@ -42,13 +42,6 @@ class _$OrderStatusSerializer implements StructuredSerializer<OrderStatus> {
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
-    if (object.mailTemplate != null) {
-      result
-        ..add('mailTemplate')
-        ..add(serializers.serialize(object.mailTemplate,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(MailTemplate)])));
-    }
     if (object.order != null) {
       result
         ..add('order')
@@ -86,12 +79,6 @@ class _$OrderStatusSerializer implements StructuredSerializer<OrderStatus> {
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'mailTemplate':
-          result.mailTemplate.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(MailTemplate)]))
-              as BuiltList<Object>);
-          break;
         case 'order':
           result.order.replace(serializers.deserialize(value,
                   specifiedType:
@@ -115,20 +102,13 @@ class _$OrderStatus extends OrderStatus {
   @override
   final int optimisticLockField;
   @override
-  final BuiltList<MailTemplate> mailTemplate;
-  @override
   final BuiltList<Order> order;
 
   factory _$OrderStatus([void Function(OrderStatusBuilder) updates]) =>
       (new OrderStatusBuilder()..update(updates)).build();
 
   _$OrderStatus._(
-      {this.oid,
-      this.name,
-      this.code,
-      this.optimisticLockField,
-      this.mailTemplate,
-      this.order})
+      {this.oid, this.name, this.code, this.optimisticLockField, this.order})
       : super._();
 
   @override
@@ -146,17 +126,14 @@ class _$OrderStatus extends OrderStatus {
         name == other.name &&
         code == other.code &&
         optimisticLockField == other.optimisticLockField &&
-        mailTemplate == other.mailTemplate &&
         order == other.order;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc(
-            $jc($jc($jc($jc(0, oid.hashCode), name.hashCode), code.hashCode),
-                optimisticLockField.hashCode),
-            mailTemplate.hashCode),
+        $jc($jc($jc($jc(0, oid.hashCode), name.hashCode), code.hashCode),
+            optimisticLockField.hashCode),
         order.hashCode));
   }
 
@@ -167,7 +144,6 @@ class _$OrderStatus extends OrderStatus {
           ..add('name', name)
           ..add('code', code)
           ..add('optimisticLockField', optimisticLockField)
-          ..add('mailTemplate', mailTemplate)
           ..add('order', order))
         .toString();
   }
@@ -193,12 +169,6 @@ class OrderStatusBuilder implements Builder<OrderStatus, OrderStatusBuilder> {
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
-  ListBuilder<MailTemplate> _mailTemplate;
-  ListBuilder<MailTemplate> get mailTemplate =>
-      _$this._mailTemplate ??= new ListBuilder<MailTemplate>();
-  set mailTemplate(ListBuilder<MailTemplate> mailTemplate) =>
-      _$this._mailTemplate = mailTemplate;
-
   ListBuilder<Order> _order;
   ListBuilder<Order> get order => _$this._order ??= new ListBuilder<Order>();
   set order(ListBuilder<Order> order) => _$this._order = order;
@@ -211,7 +181,6 @@ class OrderStatusBuilder implements Builder<OrderStatus, OrderStatusBuilder> {
       _name = _$v.name;
       _code = _$v.code;
       _optimisticLockField = _$v.optimisticLockField;
-      _mailTemplate = _$v.mailTemplate?.toBuilder();
       _order = _$v.order?.toBuilder();
       _$v = null;
     }
@@ -241,13 +210,10 @@ class OrderStatusBuilder implements Builder<OrderStatus, OrderStatusBuilder> {
               name: name,
               code: code,
               optimisticLockField: optimisticLockField,
-              mailTemplate: _mailTemplate?.build(),
               order: _order?.build());
     } catch (_) {
       String _$failedField;
       try {
-        _$failedField = 'mailTemplate';
-        _mailTemplate?.build();
         _$failedField = 'order';
         _order?.build();
       } catch (e) {

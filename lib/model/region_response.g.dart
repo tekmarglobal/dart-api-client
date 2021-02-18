@@ -74,6 +74,12 @@ class _$RegionResponseSerializer
         ..add(serializers.serialize(object.regionMail,
             specifiedType: const FullType(String)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     if (object.neighborhoods != null) {
       result
         ..add('neighborhoods')
@@ -132,6 +138,10 @@ class _$RegionResponseSerializer
           result.regionMail = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'neighborhoods':
           result.neighborhoods.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -165,6 +175,8 @@ class _$RegionResponse extends RegionResponse {
   @override
   final String regionMail;
   @override
+  final bool active;
+  @override
   final BuiltList<NeighborResponse> neighborhoods;
 
   factory _$RegionResponse([void Function(RegionResponseBuilder) updates]) =>
@@ -180,6 +192,7 @@ class _$RegionResponse extends RegionResponse {
       this.lastTimeSlotGeneratedDate,
       this.minimunCartAmount,
       this.regionMail,
+      this.active,
       this.neighborhoods})
       : super._();
 
@@ -204,6 +217,7 @@ class _$RegionResponse extends RegionResponse {
         lastTimeSlotGeneratedDate == other.lastTimeSlotGeneratedDate &&
         minimunCartAmount == other.minimunCartAmount &&
         regionMail == other.regionMail &&
+        active == other.active &&
         neighborhoods == other.neighborhoods;
   }
 
@@ -216,14 +230,16 @@ class _$RegionResponse extends RegionResponse {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc($jc(0, id.hashCode), name.hashCode),
-                                    code.hashCode),
-                                freeDelivery.hashCode),
-                            freeDeliveryAmount.hashCode),
-                        timeSlotGenerationWindow.hashCode),
-                    lastTimeSlotGeneratedDate.hashCode),
-                minimunCartAmount.hashCode),
-            regionMail.hashCode),
+                                $jc(
+                                    $jc($jc($jc(0, id.hashCode), name.hashCode),
+                                        code.hashCode),
+                                    freeDelivery.hashCode),
+                                freeDeliveryAmount.hashCode),
+                            timeSlotGenerationWindow.hashCode),
+                        lastTimeSlotGeneratedDate.hashCode),
+                    minimunCartAmount.hashCode),
+                regionMail.hashCode),
+            active.hashCode),
         neighborhoods.hashCode));
   }
 
@@ -239,6 +255,7 @@ class _$RegionResponse extends RegionResponse {
           ..add('lastTimeSlotGeneratedDate', lastTimeSlotGeneratedDate)
           ..add('minimunCartAmount', minimunCartAmount)
           ..add('regionMail', regionMail)
+          ..add('active', active)
           ..add('neighborhoods', neighborhoods))
         .toString();
   }
@@ -288,6 +305,10 @@ class RegionResponseBuilder
   String get regionMail => _$this._regionMail;
   set regionMail(String regionMail) => _$this._regionMail = regionMail;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   ListBuilder<NeighborResponse> _neighborhoods;
   ListBuilder<NeighborResponse> get neighborhoods =>
       _$this._neighborhoods ??= new ListBuilder<NeighborResponse>();
@@ -307,6 +328,7 @@ class RegionResponseBuilder
       _lastTimeSlotGeneratedDate = _$v.lastTimeSlotGeneratedDate;
       _minimunCartAmount = _$v.minimunCartAmount;
       _regionMail = _$v.regionMail;
+      _active = _$v.active;
       _neighborhoods = _$v.neighborhoods?.toBuilder();
       _$v = null;
     }
@@ -341,6 +363,7 @@ class RegionResponseBuilder
               lastTimeSlotGeneratedDate: lastTimeSlotGeneratedDate,
               minimunCartAmount: minimunCartAmount,
               regionMail: regionMail,
+              active: active,
               neighborhoods: _neighborhoods?.build());
     } catch (_) {
       String _$failedField;

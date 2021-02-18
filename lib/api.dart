@@ -18,6 +18,7 @@ import 'package:openapi/api/order_api.dart';
 import 'package:openapi/api/payment_api.dart';
 import 'package:openapi/api/product_api.dart';
 import 'package:openapi/api/register_api.dart';
+import 'package:openapi/api/sanity_api.dart';
 import 'package:openapi/api/share_api.dart';
 
 
@@ -166,6 +167,15 @@ class Openapi {
     */
     RegisterApi getRegisterApi() {
     return RegisterApi(dio, serializers);
+    }
+
+
+    /**
+    * Get SanityApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    SanityApi getSanityApi() {
+    return SanityApi(dio, serializers);
     }
 
 

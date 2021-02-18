@@ -33,10 +33,6 @@ abstract class CategoryImport implements Built<CategoryImport, CategoryImportBui
     int get optimisticLockField;
     
         @nullable
-    @BuiltValueField(wireName: r'gcrecord')
-    int get gcrecord;
-    
-        @nullable
     @BuiltValueField(wireName: r'categoryImportDetail')
     BuiltList<CategoryImportDetail> get categoryImportDetail;
 

@@ -17,10 +17,6 @@ abstract class ProductImportDetail implements Built<ProductImportDetail, Product
     int get product;
     
         @nullable
-    @BuiltValueField(wireName: r'fieldName')
-    String get fieldName;
-    
-        @nullable
     @BuiltValueField(wireName: r'oldValue')
     String get oldValue;
     

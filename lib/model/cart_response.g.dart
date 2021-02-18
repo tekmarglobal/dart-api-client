@@ -67,6 +67,13 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
         ..add(serializers.serialize(object.estimatedFee,
             specifiedType: const FullType(double)));
     }
+    if (object.cartProducts != null) {
+      result
+        ..add('cartProducts')
+        ..add(serializers.serialize(object.cartProducts,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(RCartProducts)])));
+    }
     if (object.cardProducts != null) {
       result
         ..add('cardProducts')
@@ -120,6 +127,12 @@ class _$CartResponseSerializer implements StructuredSerializer<CartResponse> {
           result.estimatedFee = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'cartProducts':
+          result.cartProducts.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(RCartProducts)]))
+              as BuiltList<Object>);
+          break;
         case 'cardProducts':
           result.cardProducts.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -151,6 +164,8 @@ class _$CartResponse extends CartResponse {
   @override
   final double estimatedFee;
   @override
+  final BuiltList<RCartProducts> cartProducts;
+  @override
   final BuiltList<RCartProducts> cardProducts;
 
   factory _$CartResponse([void Function(CartResponseBuilder) updates]) =>
@@ -165,6 +180,7 @@ class _$CartResponse extends CartResponse {
       this.bagTotal,
       this.bagAmount,
       this.estimatedFee,
+      this.cartProducts,
       this.cardProducts})
       : super._();
 
@@ -187,6 +203,7 @@ class _$CartResponse extends CartResponse {
         bagTotal == other.bagTotal &&
         bagAmount == other.bagAmount &&
         estimatedFee == other.estimatedFee &&
+        cartProducts == other.cartProducts &&
         cardProducts == other.cardProducts;
   }
 
@@ -198,13 +215,17 @@ class _$CartResponse extends CartResponse {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, cartId.hashCode), customer.hashCode),
-                                cartTotal.hashCode),
-                            regionId.hashCode),
-                        deviceToken.hashCode),
-                    bagTotal.hashCode),
-                bagAmount.hashCode),
-            estimatedFee.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, cartId.hashCode),
+                                        customer.hashCode),
+                                    cartTotal.hashCode),
+                                regionId.hashCode),
+                            deviceToken.hashCode),
+                        bagTotal.hashCode),
+                    bagAmount.hashCode),
+                estimatedFee.hashCode),
+            cartProducts.hashCode),
         cardProducts.hashCode));
   }
 
@@ -219,6 +240,7 @@ class _$CartResponse extends CartResponse {
           ..add('bagTotal', bagTotal)
           ..add('bagAmount', bagAmount)
           ..add('estimatedFee', estimatedFee)
+          ..add('cartProducts', cartProducts)
           ..add('cardProducts', cardProducts))
         .toString();
   }
@@ -260,6 +282,12 @@ class CartResponseBuilder
   double get estimatedFee => _$this._estimatedFee;
   set estimatedFee(double estimatedFee) => _$this._estimatedFee = estimatedFee;
 
+  ListBuilder<RCartProducts> _cartProducts;
+  ListBuilder<RCartProducts> get cartProducts =>
+      _$this._cartProducts ??= new ListBuilder<RCartProducts>();
+  set cartProducts(ListBuilder<RCartProducts> cartProducts) =>
+      _$this._cartProducts = cartProducts;
+
   ListBuilder<RCartProducts> _cardProducts;
   ListBuilder<RCartProducts> get cardProducts =>
       _$this._cardProducts ??= new ListBuilder<RCartProducts>();
@@ -278,6 +306,7 @@ class CartResponseBuilder
       _bagTotal = _$v.bagTotal;
       _bagAmount = _$v.bagAmount;
       _estimatedFee = _$v.estimatedFee;
+      _cartProducts = _$v.cartProducts?.toBuilder();
       _cardProducts = _$v.cardProducts?.toBuilder();
       _$v = null;
     }
@@ -311,10 +340,13 @@ class CartResponseBuilder
               bagTotal: bagTotal,
               bagAmount: bagAmount,
               estimatedFee: estimatedFee,
+              cartProducts: _cartProducts?.build(),
               cardProducts: _cardProducts?.build());
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'cartProducts';
+        _cartProducts?.build();
         _$failedField = 'cardProducts';
         _cardProducts?.build();
       } catch (e) {

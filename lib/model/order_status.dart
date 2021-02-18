@@ -1,5 +1,4 @@
             import 'package:built_collection/built_collection.dart';
-            import 'package:openapi/model/mail_template.dart';
             import 'package:openapi/model/order.dart';
         import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -24,10 +23,6 @@ abstract class OrderStatus implements Built<OrderStatus, OrderStatusBuilder> {
         @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-    
-        @nullable
-    @BuiltValueField(wireName: r'mailTemplate')
-    BuiltList<MailTemplate> get mailTemplate;
     
         @nullable
     @BuiltValueField(wireName: r'order')

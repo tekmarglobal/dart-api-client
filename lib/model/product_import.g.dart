@@ -55,6 +55,12 @@ class _$ProductImportSerializer implements StructuredSerializer<ProductImport> {
         ..add(serializers.serialize(object.optimisticLockField,
             specifiedType: const FullType(int)));
     }
+    if (object.regionId != null) {
+      result
+        ..add('regionId')
+        ..add(serializers.serialize(object.regionId,
+            specifiedType: const FullType(String)));
+    }
     if (object.productImportDetail != null) {
       result
         ..add('productImportDetail')
@@ -101,6 +107,10 @@ class _$ProductImportSerializer implements StructuredSerializer<ProductImport> {
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'regionId':
+          result.regionId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'productImportDetail':
           result.productImportDetail.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -128,6 +138,8 @@ class _$ProductImport extends ProductImport {
   @override
   final int optimisticLockField;
   @override
+  final String regionId;
+  @override
   final BuiltList<ProductImportDetail> productImportDetail;
 
   factory _$ProductImport([void Function(ProductImportBuilder) updates]) =>
@@ -140,6 +152,7 @@ class _$ProductImport extends ProductImport {
       this.payload,
       this.ipAddress,
       this.optimisticLockField,
+      this.regionId,
       this.productImportDetail})
       : super._();
 
@@ -160,6 +173,7 @@ class _$ProductImport extends ProductImport {
         payload == other.payload &&
         ipAddress == other.ipAddress &&
         optimisticLockField == other.optimisticLockField &&
+        regionId == other.regionId &&
         productImportDetail == other.productImportDetail;
   }
 
@@ -169,11 +183,13 @@ class _$ProductImport extends ProductImport {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, oid.hashCode), name.hashCode),
-                        importDate.hashCode),
-                    payload.hashCode),
-                ipAddress.hashCode),
-            optimisticLockField.hashCode),
+                    $jc(
+                        $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                            importDate.hashCode),
+                        payload.hashCode),
+                    ipAddress.hashCode),
+                optimisticLockField.hashCode),
+            regionId.hashCode),
         productImportDetail.hashCode));
   }
 
@@ -186,6 +202,7 @@ class _$ProductImport extends ProductImport {
           ..add('payload', payload)
           ..add('ipAddress', ipAddress)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('regionId', regionId)
           ..add('productImportDetail', productImportDetail))
         .toString();
   }
@@ -220,6 +237,10 @@ class ProductImportBuilder
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
+  String _regionId;
+  String get regionId => _$this._regionId;
+  set regionId(String regionId) => _$this._regionId = regionId;
+
   ListBuilder<ProductImportDetail> _productImportDetail;
   ListBuilder<ProductImportDetail> get productImportDetail =>
       _$this._productImportDetail ??= new ListBuilder<ProductImportDetail>();
@@ -237,6 +258,7 @@ class ProductImportBuilder
       _payload = _$v.payload;
       _ipAddress = _$v.ipAddress;
       _optimisticLockField = _$v.optimisticLockField;
+      _regionId = _$v.regionId;
       _productImportDetail = _$v.productImportDetail?.toBuilder();
       _$v = null;
     }
@@ -268,6 +290,7 @@ class ProductImportBuilder
               payload: payload,
               ipAddress: ipAddress,
               optimisticLockField: optimisticLockField,
+              regionId: regionId,
               productImportDetail: _productImportDetail?.build());
     } catch (_) {
       String _$failedField;

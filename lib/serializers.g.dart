@@ -18,6 +18,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BannerResponseRestResult.serializer)
       ..add(Branch.serializer)
       ..add(BranchResponse.serializer)
+      ..add(BranchResponseListRestResult.serializer)
       ..add(Brand.serializer)
       ..add(BrandManager.serializer)
       ..add(BrandManagerBrand.serializer)
@@ -68,8 +69,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(LoginRequest.serializer)
       ..add(LoginRespone.serializer)
       ..add(LoginResponeRestResult.serializer)
-      ..add(MailTemplate.serializer)
-      ..add(MailType.serializer)
       ..add(Manufacturer.serializer)
       ..add(NeighborRequest.serializer)
       ..add(NeighborResponse.serializer)
@@ -127,6 +126,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SmsRequest.serializer)
       ..add(SmsResponse.serializer)
       ..add(SmsResponseRestResult.serializer)
+      ..add(StringListRestResult.serializer)
       ..add(Supplier.serializer)
       ..add(TimeSlot.serializer)
       ..add(TimeSlotResponse.serializer)
@@ -164,9 +164,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(CustomerLoginAttempt)]),
           () => new ListBuilder<CustomerLoginAttempt>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Device)]),
-          () => new ListBuilder<Device>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DeviceLogin)]),
           () => new ListBuilder<DeviceLogin>())
       ..addBuilderFactory(
@@ -194,6 +191,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AgreementResponse)]),
           () => new ListBuilder<AgreementResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(BranchResponse)]),
+          () => new ListBuilder<BranchResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BranchResponse)]),
           () => new ListBuilder<BranchResponse>())
@@ -348,15 +348,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(FaqResponse)]),
           () => new ListBuilder<FaqResponse>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(MailTemplate)]),
-          () => new ListBuilder<MailTemplate>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(MailTemplate)]),
-          () => new ListBuilder<MailTemplate>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Order)]),
-          () => new ListBuilder<Order>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(NeighborResponse)]),
           () => new ListBuilder<NeighborResponse>())
       ..addBuilderFactory(
@@ -365,6 +356,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Neighborhood)]),
           () => new ListBuilder<Neighborhood>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Order)]),
+          () => new ListBuilder<Order>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Order)]),
           () => new ListBuilder<Order>())
@@ -403,9 +397,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(RAddress)]),
           () => new ListBuilder<RAddress>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RAddress)]), () => new ListBuilder<RAddress>())
-      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RBanner)]), () => new ListBuilder<RBanner>())
+          const FullType(BuiltList, const [const FullType(RAddress)]),
+          () => new ListBuilder<RAddress>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(RBanner)]),
+          () => new ListBuilder<RBanner>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartItemImpact)]), () => new ListBuilder<RCartItemImpact>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartProducts)]), () => new ListBuilder<RCartProducts>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartProducts)]), () => new ListBuilder<RCartProducts>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(ROrderProducts)]), () => new ListBuilder<ROrderProducts>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RPaymentType)]), () => new ListBuilder<RPaymentType>())
@@ -415,6 +413,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCategory)]), () => new ListBuilder<RCategory>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RProductPrice)]), () => new ListBuilder<RProductPrice>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RegionResponse)]), () => new ListBuilder<RegionResponse>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotResponse)]), () => new ListBuilder<TimeSlotResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]), () => new ListBuilder<TimeSlotsResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(int)]), () => new ListBuilder<int>()))
