@@ -69,6 +69,12 @@ class _$NeighborResponseSerializer
             specifiedType: const FullType(
                 BuiltList, const [const FullType(BranchResponse)])));
     }
+    if (object.population != null) {
+      result
+        ..add('population')
+        ..add(serializers.serialize(object.population,
+            specifiedType: const FullType(int)));
+    }
     return result;
   }
 
@@ -118,6 +124,10 @@ class _$NeighborResponseSerializer
                       BuiltList, const [const FullType(BranchResponse)]))
               as BuiltList<Object>);
           break;
+        case 'population':
+          result.population = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -142,6 +152,8 @@ class _$NeighborResponse extends NeighborResponse {
   final int gpsId;
   @override
   final BuiltList<BranchResponse> branch;
+  @override
+  final int population;
 
   factory _$NeighborResponse(
           [void Function(NeighborResponseBuilder) updates]) =>
@@ -155,7 +167,8 @@ class _$NeighborResponse extends NeighborResponse {
       this.region,
       this.regionName,
       this.gpsId,
-      this.branch})
+      this.branch,
+      this.population})
       : super._();
 
   @override
@@ -177,7 +190,8 @@ class _$NeighborResponse extends NeighborResponse {
         region == other.region &&
         regionName == other.regionName &&
         gpsId == other.gpsId &&
-        branch == other.branch;
+        branch == other.branch &&
+        population == other.population;
   }
 
   @override
@@ -187,13 +201,15 @@ class _$NeighborResponse extends NeighborResponse {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), name.hashCode),
-                            cityName.hashCode),
-                        countyName.hashCode),
-                    region.hashCode),
-                regionName.hashCode),
-            gpsId.hashCode),
-        branch.hashCode));
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), name.hashCode),
+                                cityName.hashCode),
+                            countyName.hashCode),
+                        region.hashCode),
+                    regionName.hashCode),
+                gpsId.hashCode),
+            branch.hashCode),
+        population.hashCode));
   }
 
   @override
@@ -206,7 +222,8 @@ class _$NeighborResponse extends NeighborResponse {
           ..add('region', region)
           ..add('regionName', regionName)
           ..add('gpsId', gpsId)
-          ..add('branch', branch))
+          ..add('branch', branch)
+          ..add('population', population))
         .toString();
   }
 }
@@ -248,6 +265,10 @@ class NeighborResponseBuilder
       _$this._branch ??= new ListBuilder<BranchResponse>();
   set branch(ListBuilder<BranchResponse> branch) => _$this._branch = branch;
 
+  int _population;
+  int get population => _$this._population;
+  set population(int population) => _$this._population = population;
+
   NeighborResponseBuilder();
 
   NeighborResponseBuilder get _$this {
@@ -260,6 +281,7 @@ class NeighborResponseBuilder
       _regionName = _$v.regionName;
       _gpsId = _$v.gpsId;
       _branch = _$v.branch?.toBuilder();
+      _population = _$v.population;
       _$v = null;
     }
     return this;
@@ -291,7 +313,8 @@ class NeighborResponseBuilder
               region: region,
               regionName: regionName,
               gpsId: gpsId,
-              branch: _branch?.build());
+              branch: _branch?.build(),
+              population: population);
     } catch (_) {
       String _$failedField;
       try {

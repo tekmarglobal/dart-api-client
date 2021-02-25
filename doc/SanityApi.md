@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **apiSanityCheckGet**
-> StringListRestResult apiSanityCheckGet()
+> StringListRestResult apiSanityCheckGet(fix)
 
 
 
@@ -26,9 +26,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new SanityApi();
+var fix = true; // bool | 
 
 try { 
-    var result = api_instance.apiSanityCheckGet();
+    var result = api_instance.apiSanityCheckGet(fix);
     print(result);
 } catch (e) {
     print("Exception when calling SanityApi->apiSanityCheckGet: $e\n");
@@ -36,7 +37,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fix** | **bool**|  | [optional] [default to false]
 
 ### Return type
 

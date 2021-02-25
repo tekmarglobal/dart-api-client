@@ -53,6 +53,10 @@ abstract class Configuration implements Built<Configuration, ConfigurationBuilde
     int get timeZone;
     
         @nullable
+    @BuiltValueField(wireName: r'affiliateLinkDomain')
+    String get affiliateLinkDomain;
+    
+        @nullable
     @BuiltValueField(wireName: r'bagProductNavigation')
     Product get bagProductNavigation;
     

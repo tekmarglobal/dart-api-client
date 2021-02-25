@@ -1,8 +1,11 @@
             import 'package:openapi/model/agreement_log.dart';
             import 'package:openapi/model/payment.dart';
+            import 'package:openapi/model/ticket.dart';
             import 'package:openapi/model/address.dart';
+            import 'package:openapi/model/affiliate_link.dart';
             import 'package:openapi/model/device_login.dart';
             import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/call.dart';
             import 'package:openapi/model/customer_login_attempt.dart';
             import 'package:openapi/model/cart.dart';
             import 'package:openapi/model/customer_favorite_list.dart';
@@ -88,6 +91,10 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
     int get invoiceAddress;
     
         @nullable
+    @BuiltValueField(wireName: r'uid')
+    String get uid;
+    
+        @nullable
     @BuiltValueField(wireName: r'defaultAddressNavigation')
     Address get defaultAddressNavigation;
     
@@ -100,8 +107,16 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
     BuiltList<Address> get address;
     
         @nullable
+    @BuiltValueField(wireName: r'affiliateLink')
+    BuiltList<AffiliateLink> get affiliateLink;
+    
+        @nullable
     @BuiltValueField(wireName: r'agreementLog')
     BuiltList<AgreementLog> get agreementLog;
+    
+        @nullable
+    @BuiltValueField(wireName: r'call')
+    BuiltList<Call> get call;
     
         @nullable
     @BuiltValueField(wireName: r'cart')
@@ -126,6 +141,10 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
         @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<Payment> get payment;
+    
+        @nullable
+    @BuiltValueField(wireName: r'ticket')
+    BuiltList<Ticket> get ticket;
 
     // Boilerplate code needed to wire-up generated code
     Customer._();

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **optimisticLockField** | **int** |  | [optional] [default to null]
 **productUnit** | **int** |  | [optional] [default to null]
 **vat** | **double** |  | [optional] [default to null]
+**menuName** | **String** |  | [optional] [default to null]
 **brandNavigation** | [**Brand**](Brand.md) |  | [optional] [default to null]
 **supplierNavigation** | [**Supplier**](Supplier.md) |  | [optional] [default to null]
 **categoryProduct** | [**BuiltList&lt;CategoryProduct&gt;**](CategoryProduct.md) |  | [optional] [default to const []]

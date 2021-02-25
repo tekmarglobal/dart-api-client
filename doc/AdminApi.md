@@ -10,11 +10,14 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiAdminBranchPost**](AdminApi.md#apiAdminBranchPost) | **post** /api/Admin/Branch | 
+[**apiAdminCompaniesPost**](AdminApi.md#apiAdminCompaniesPost) | **post** /api/Admin/Companies | 
 [**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiAdminGenerateTimeSlotsGet) | **get** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiAdminGenerateTimeSlotsPost) | **post** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGetConfigurationGet**](AdminApi.md#apiAdminGetConfigurationGet) | **get** /api/Admin/GetConfiguration | 
 [**apiAdminGetProductGet**](AdminApi.md#apiAdminGetProductGet) | **get** /api/Admin/GetProduct | 
+[**apiAdminGetShareLinkPost**](AdminApi.md#apiAdminGetShareLinkPost) | **post** /api/Admin/GetShareLink | 
 [**apiAdminRegionNeighborhoodPost**](AdminApi.md#apiAdminRegionNeighborhoodPost) | **post** /api/Admin/RegionNeighborhood | 
+[**apiAdminRegionPopulationGet**](AdminApi.md#apiAdminRegionPopulationGet) | **get** /api/Admin/RegionPopulation | 
 [**apiAdminRegionPost**](AdminApi.md#apiAdminRegionPost) | **post** /api/Admin/Region | 
 [**apiAdminUpdateRegionNeighborhoodPost**](AdminApi.md#apiAdminUpdateRegionNeighborhoodPost) | **post** /api/Admin/UpdateRegionNeighborhood | 
 [**apiAdminUploadProductImagePost**](AdminApi.md#apiAdminUploadProductImagePost) | **post** /api/Admin/UploadProductImage | 
@@ -49,6 +52,47 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**BranchResponseListRestResult**](BranchResponseListRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiAdminCompaniesPost**
+> CompanyResponseListRestResult apiAdminCompaniesPost()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AdminApi();
+
+try { 
+    var result = api_instance.apiAdminCompaniesPost();
+    print(result);
+} catch (e) {
+    print("Exception when calling AdminApi->apiAdminCompaniesPost: $e\n");
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CompanyResponseListRestResult**](CompanyResponseListRestResult.md)
 
 ### Authorization
 
@@ -237,6 +281,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **apiAdminGetShareLinkPost**
+> String apiAdminGetShareLinkPost(linkRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AdminApi();
+var linkRequest = new LinkRequest(); // LinkRequest | 
+
+try { 
+    var result = api_instance.apiAdminGetShareLinkPost(linkRequest);
+    print(result);
+} catch (e) {
+    print("Exception when calling AdminApi->apiAdminGetShareLinkPost: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **linkRequest** | [**LinkRequest**](LinkRequest.md)|  | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **apiAdminRegionNeighborhoodPost**
 > NeighborResponseListRestResult apiAdminRegionNeighborhoodPost(regionNeighborhoodRequest)
 
@@ -278,6 +367,51 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiAdminRegionPopulationGet**
+> Int32RestResult apiAdminRegionPopulationGet(gpsId)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AdminApi();
+var gpsId = 56; // int | 
+
+try { 
+    var result = api_instance.apiAdminRegionPopulationGet(gpsId);
+    print(result);
+} catch (e) {
+    print("Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gpsId** | **int**|  | [optional] [default to null]
+
+### Return type
+
+[**Int32RestResult**](Int32RestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

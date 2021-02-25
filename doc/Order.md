@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **timeSlotNavigation** | [**TimeSlot**](TimeSlot.md) |  | [optional] [default to null]
 **orderProduct** | [**BuiltList&lt;OrderProduct&gt;**](OrderProduct.md) |  | [optional] [default to const []]
 **payment** | [**BuiltList&lt;Payment&gt;**](Payment.md) |  | [optional] [default to const []]
+**ticket** | [**BuiltList&lt;Ticket&gt;**](Ticket.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

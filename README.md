@@ -62,11 +62,14 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**apiAccountLogoutGet**](doc//AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
 *AccountApi* | [**apiAccountWhoAmIGet**](doc//AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
 *AdminApi* | [**apiAdminBranchPost**](doc//AdminApi.md#apiadminbranchpost) | **post** /api/Admin/Branch | 
+*AdminApi* | [**apiAdminCompaniesPost**](doc//AdminApi.md#apiadmincompaniespost) | **post** /api/Admin/Companies | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsGet**](doc//AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGetConfigurationGet**](doc//AdminApi.md#apiadmingetconfigurationget) | **get** /api/Admin/GetConfiguration | 
 *AdminApi* | [**apiAdminGetProductGet**](doc//AdminApi.md#apiadmingetproductget) | **get** /api/Admin/GetProduct | 
+*AdminApi* | [**apiAdminGetShareLinkPost**](doc//AdminApi.md#apiadmingetsharelinkpost) | **post** /api/Admin/GetShareLink | 
 *AdminApi* | [**apiAdminRegionNeighborhoodPost**](doc//AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
+*AdminApi* | [**apiAdminRegionPopulationGet**](doc//AdminApi.md#apiadminregionpopulationget) | **get** /api/Admin/RegionPopulation | 
 *AdminApi* | [**apiAdminRegionPost**](doc//AdminApi.md#apiadminregionpost) | **post** /api/Admin/Region | 
 *AdminApi* | [**apiAdminUpdateRegionNeighborhoodPost**](doc//AdminApi.md#apiadminupdateregionneighborhoodpost) | **post** /api/Admin/UpdateRegionNeighborhood | 
 *AdminApi* | [**apiAdminUploadProductImagePost**](doc//AdminApi.md#apiadminuploadproductimagepost) | **post** /api/Admin/UploadProductImage | 
@@ -86,6 +89,8 @@ Class | Method | HTTP request | Description
 *CatalogApi* | [**apiCatalogImportCategoriesFromOlimposPost**](doc//CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
 *CatalogApi* | [**apiCatalogPost**](doc//CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
 *CatalogApi* | [**apiCatalogUpdateCategoryPut**](doc//CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
+*CrmApi* | [**apiCrmFindCustomerIVRGet**](doc//CrmApi.md#apicrmfindcustomerivrget) | **get** /api/Crm/FindCustomerIVR | 
+*CrmApi* | [**apiCrmFindOrderIVRGet**](doc//CrmApi.md#apicrmfindorderivrget) | **get** /api/Crm/FindOrderIVR | 
 *CustomerApi* | [**apiCustomerDeleteAddressPost**](doc//CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
 *CustomerApi* | [**apiCustomerGetCustomerAdressesPost**](doc//CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
 *CustomerApi* | [**apiCustomerPost**](doc//CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
@@ -127,6 +132,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Address](doc//Address.md)
+ - [AffiliateLink](doc//AffiliateLink.md)
+ - [AffiliateType](doc//AffiliateType.md)
  - [Agreement](doc//Agreement.md)
  - [AgreementLog](doc//AgreementLog.md)
  - [AgreementResponse](doc//AgreementResponse.md)
@@ -141,6 +148,7 @@ Class | Method | HTTP request | Description
  - [Brand](doc//Brand.md)
  - [BrandManager](doc//BrandManager.md)
  - [BrandManagerBrand](doc//BrandManagerBrand.md)
+ - [Call](doc//Call.md)
  - [Cart](doc//Cart.md)
  - [CartProduct](doc//CartProduct.md)
  - [CartResponse](doc//CartResponse.md)
@@ -152,6 +160,9 @@ Class | Method | HTTP request | Description
  - [CitiesResponse](doc//CitiesResponse.md)
  - [CitiesResponseListRestResult](doc//CitiesResponseListRestResult.md)
  - [City](doc//City.md)
+ - [Company](doc//Company.md)
+ - [CompanyResponse](doc//CompanyResponse.md)
+ - [CompanyResponseListRestResult](doc//CompanyResponseListRestResult.md)
  - [Configuration](doc//Configuration.md)
  - [ConfigurationRestResult](doc//ConfigurationRestResult.md)
  - [CountiesRequest](doc//CountiesRequest.md)
@@ -185,6 +196,8 @@ Class | Method | HTTP request | Description
  - [GetOrderListResponseRestResult](doc//GetOrderListResponseRestResult.md)
  - [GetOrderRequest](doc//GetOrderRequest.md)
  - [InlineObject](doc//InlineObject.md)
+ - [Int32RestResult](doc//Int32RestResult.md)
+ - [LinkRequest](doc//LinkRequest.md)
  - [LoginRequest](doc//LoginRequest.md)
  - [LoginRespone](doc//LoginRespone.md)
  - [LoginResponeRestResult](doc//LoginResponeRestResult.md)
@@ -247,6 +260,8 @@ Class | Method | HTTP request | Description
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
  - [StringListRestResult](doc//StringListRestResult.md)
  - [Supplier](doc//Supplier.md)
+ - [Ticket](doc//Ticket.md)
+ - [TicketCategory](doc//TicketCategory.md)
  - [TimeSlot](doc//TimeSlot.md)
  - [TimeSlotResponse](doc//TimeSlotResponse.md)
  - [TimeSlotResponseListRestResult](doc//TimeSlotResponseListRestResult.md)

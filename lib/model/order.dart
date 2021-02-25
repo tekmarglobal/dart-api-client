@@ -1,6 +1,7 @@
             import 'package:openapi/model/order_product.dart';
             import 'package:openapi/model/payment.dart';
             import 'package:openapi/model/payment_type.dart';
+            import 'package:openapi/model/ticket.dart';
             import 'package:openapi/model/address.dart';
             import 'package:openapi/model/customer.dart';
             import 'package:openapi/model/order_status.dart';
@@ -156,6 +157,10 @@ abstract class Order implements Built<Order, OrderBuilder> {
         @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<Payment> get payment;
+    
+        @nullable
+    @BuiltValueField(wireName: r'ticket')
+    BuiltList<Ticket> get ticket;
 
     // Boilerplate code needed to wire-up generated code
     Order._();

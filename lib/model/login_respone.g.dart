@@ -37,6 +37,12 @@ class _$LoginResponeSerializer implements StructuredSerializer<LoginRespone> {
         ..add(serializers.serialize(object.registered,
             specifiedType: const FullType(bool)));
     }
+    if (object.firebaseToken != null) {
+      result
+        ..add('firebaseToken')
+        ..add(serializers.serialize(object.firebaseToken,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -63,6 +69,10 @@ class _$LoginResponeSerializer implements StructuredSerializer<LoginRespone> {
           result.registered = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'firebaseToken':
+          result.firebaseToken = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -77,11 +87,15 @@ class _$LoginRespone extends LoginRespone {
   final int customerId;
   @override
   final bool registered;
+  @override
+  final String firebaseToken;
 
   factory _$LoginRespone([void Function(LoginResponeBuilder) updates]) =>
       (new LoginResponeBuilder()..update(updates)).build();
 
-  _$LoginRespone._({this.token, this.customerId, this.registered}) : super._();
+  _$LoginRespone._(
+      {this.token, this.customerId, this.registered, this.firebaseToken})
+      : super._();
 
   @override
   LoginRespone rebuild(void Function(LoginResponeBuilder) updates) =>
@@ -96,13 +110,16 @@ class _$LoginRespone extends LoginRespone {
     return other is LoginRespone &&
         token == other.token &&
         customerId == other.customerId &&
-        registered == other.registered;
+        registered == other.registered &&
+        firebaseToken == other.firebaseToken;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc(0, token.hashCode), customerId.hashCode), registered.hashCode));
+        $jc($jc($jc(0, token.hashCode), customerId.hashCode),
+            registered.hashCode),
+        firebaseToken.hashCode));
   }
 
   @override
@@ -110,7 +127,8 @@ class _$LoginRespone extends LoginRespone {
     return (newBuiltValueToStringHelper('LoginRespone')
           ..add('token', token)
           ..add('customerId', customerId)
-          ..add('registered', registered))
+          ..add('registered', registered)
+          ..add('firebaseToken', firebaseToken))
         .toString();
   }
 }
@@ -131,6 +149,11 @@ class LoginResponeBuilder
   bool get registered => _$this._registered;
   set registered(bool registered) => _$this._registered = registered;
 
+  String _firebaseToken;
+  String get firebaseToken => _$this._firebaseToken;
+  set firebaseToken(String firebaseToken) =>
+      _$this._firebaseToken = firebaseToken;
+
   LoginResponeBuilder();
 
   LoginResponeBuilder get _$this {
@@ -138,6 +161,7 @@ class LoginResponeBuilder
       _token = _$v.token;
       _customerId = _$v.customerId;
       _registered = _$v.registered;
+      _firebaseToken = _$v.firebaseToken;
       _$v = null;
     }
     return this;
@@ -160,7 +184,10 @@ class LoginResponeBuilder
   _$LoginRespone build() {
     final _$result = _$v ??
         new _$LoginRespone._(
-            token: token, customerId: customerId, registered: registered);
+            token: token,
+            customerId: customerId,
+            registered: registered,
+            firebaseToken: firebaseToken);
     replace(_$result);
     return _$result;
   }

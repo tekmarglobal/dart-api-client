@@ -101,6 +101,10 @@ abstract class Product implements Built<Product, ProductBuilder> {
     double get vat;
     
         @nullable
+    @BuiltValueField(wireName: r'menuName')
+    String get menuName;
+    
+        @nullable
     @BuiltValueField(wireName: r'brandNavigation')
     Brand get brandNavigation;
     

@@ -39,6 +39,10 @@ abstract class NeighborResponse implements Built<NeighborResponse, NeighborRespo
         @nullable
     @BuiltValueField(wireName: r'branch')
     BuiltList<BranchResponse> get branch;
+    
+        @nullable
+    @BuiltValueField(wireName: r'population')
+    int get population;
 
     // Boilerplate code needed to wire-up generated code
     NeighborResponse._();

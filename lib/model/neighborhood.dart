@@ -41,6 +41,10 @@ abstract class Neighborhood implements Built<Neighborhood, NeighborhoodBuilder> 
     int get formalCode;
     
         @nullable
+    @BuiltValueField(wireName: r'population')
+    int get population;
+    
+        @nullable
     @BuiltValueField(wireName: r'cityNavigation')
     City get cityNavigation;
     

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **regionName** | **String** |  | [optional] [default to null]
 **gpsId** | **int** |  | [optional] [default to null]
 **branch** | [**BuiltList&lt;BranchResponse&gt;**](BranchResponse.md) |  | [optional] [default to const []]
+**population** | **int** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

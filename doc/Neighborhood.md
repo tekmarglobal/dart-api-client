@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **optimisticLockField** | **int** |  | [optional] [default to null]
 **gpsId** | **int** |  | [optional] [default to null]
 **formalCode** | **int** |  | [optional] [default to null]
+**population** | **int** |  | [optional] [default to null]
 **cityNavigation** | [**City**](City.md) |  | [optional] [default to null]
 **countyNavigation** | [**County**](County.md) |  | [optional] [default to null]
 **address** | [**BuiltList&lt;Address&gt;**](Address.md) |  | [optional] [default to const []]

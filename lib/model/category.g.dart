@@ -102,6 +102,12 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
         ..add(serializers.serialize(object.order,
             specifiedType: const FullType(int)));
     }
+    if (object.menuName != null) {
+      result
+        ..add('menuName')
+        ..add(serializers.serialize(object.menuName,
+            specifiedType: const FullType(String)));
+    }
     if (object.departmentNavigation != null) {
       result
         ..add('departmentNavigation')
@@ -212,6 +218,10 @@ class _$CategorySerializer implements StructuredSerializer<Category> {
           result.order = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'menuName':
+          result.menuName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'departmentNavigation':
           result.departmentNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Department)) as Department);
@@ -281,6 +291,8 @@ class _$Category extends Category {
   @override
   final int order;
   @override
+  final String menuName;
+  @override
   final Department departmentNavigation;
   @override
   final Category parentNavigation;
@@ -311,6 +323,7 @@ class _$Category extends Category {
       this.department,
       this.erpId,
       this.order,
+      this.menuName,
       this.departmentNavigation,
       this.parentNavigation,
       this.categoryImportDetail,
@@ -344,6 +357,7 @@ class _$Category extends Category {
         department == other.department &&
         erpId == other.erpId &&
         order == other.order &&
+        menuName == other.menuName &&
         departmentNavigation == other.departmentNavigation &&
         parentNavigation == other.parentNavigation &&
         categoryImportDetail == other.categoryImportDetail &&
@@ -372,20 +386,20 @@ class _$Category extends Category {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc(0, oid.hashCode),
-                                                                                name.hashCode),
-                                                                            level.hashCode),
-                                                                        parent.hashCode),
-                                                                    image.hashCode),
-                                                                showInMenu.hashCode),
-                                                            nleft.hashCode),
-                                                        nright.hashCode),
-                                                    refId.hashCode),
-                                                imagePath.hashCode),
-                                            optimisticLockField.hashCode),
-                                        department.hashCode),
-                                    erpId.hashCode),
-                                order.hashCode),
+                                                                            $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                                                                                level.hashCode),
+                                                                            parent.hashCode),
+                                                                        image.hashCode),
+                                                                    showInMenu.hashCode),
+                                                                nleft.hashCode),
+                                                            nright.hashCode),
+                                                        refId.hashCode),
+                                                    imagePath.hashCode),
+                                                optimisticLockField.hashCode),
+                                            department.hashCode),
+                                        erpId.hashCode),
+                                    order.hashCode),
+                                menuName.hashCode),
                             departmentNavigation.hashCode),
                         parentNavigation.hashCode),
                     categoryImportDetail.hashCode),
@@ -411,6 +425,7 @@ class _$Category extends Category {
           ..add('department', department)
           ..add('erpId', erpId)
           ..add('order', order)
+          ..add('menuName', menuName)
           ..add('departmentNavigation', departmentNavigation)
           ..add('parentNavigation', parentNavigation)
           ..add('categoryImportDetail', categoryImportDetail)
@@ -481,6 +496,10 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
   int get order => _$this._order;
   set order(int order) => _$this._order = order;
 
+  String _menuName;
+  String get menuName => _$this._menuName;
+  set menuName(String menuName) => _$this._menuName = menuName;
+
   DepartmentBuilder _departmentNavigation;
   DepartmentBuilder get departmentNavigation =>
       _$this._departmentNavigation ??= new DepartmentBuilder();
@@ -536,6 +555,7 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
       _department = _$v.department;
       _erpId = _$v.erpId;
       _order = _$v.order;
+      _menuName = _$v.menuName;
       _departmentNavigation = _$v.departmentNavigation?.toBuilder();
       _parentNavigation = _$v.parentNavigation?.toBuilder();
       _categoryImportDetail = _$v.categoryImportDetail?.toBuilder();
@@ -580,6 +600,7 @@ class CategoryBuilder implements Builder<Category, CategoryBuilder> {
               department: department,
               erpId: erpId,
               order: order,
+              menuName: menuName,
               departmentNavigation: _departmentNavigation?.build(),
               parentNavigation: _parentNavigation?.build(),
               categoryImportDetail: _categoryImportDetail?.build(),

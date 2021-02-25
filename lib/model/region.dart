@@ -1,6 +1,7 @@
             import 'package:openapi/model/region_product.dart';
             import 'package:openapi/model/region_regions_neighborhood_neighborhoods.dart';
             import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/company.dart';
             import 'package:openapi/model/time_slot_template.dart';
             import 'package:openapi/model/cart.dart';
             import 'package:openapi/model/time_slot.dart';
@@ -61,6 +62,14 @@ abstract class Region implements Built<Region, RegionBuilder> {
         @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
+    
+        @nullable
+    @BuiltValueField(wireName: r'company')
+    int get company;
+    
+        @nullable
+    @BuiltValueField(wireName: r'companyNavigation')
+    Company get companyNavigation;
     
         @nullable
     @BuiltValueField(wireName: r'cart')

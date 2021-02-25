@@ -85,6 +85,12 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
         ..add(serializers.serialize(object.timeZone,
             specifiedType: const FullType(int)));
     }
+    if (object.affiliateLinkDomain != null) {
+      result
+        ..add('affiliateLinkDomain')
+        ..add(serializers.serialize(object.affiliateLinkDomain,
+            specifiedType: const FullType(String)));
+    }
     if (object.bagProductNavigation != null) {
       result
         ..add('bagProductNavigation')
@@ -162,6 +168,10 @@ class _$ConfigurationSerializer implements StructuredSerializer<Configuration> {
           result.timeZone = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'affiliateLinkDomain':
+          result.affiliateLinkDomain = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'bagProductNavigation':
           result.bagProductNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Product)) as Product);
@@ -207,6 +217,8 @@ class _$Configuration extends Configuration {
   @override
   final int timeZone;
   @override
+  final String affiliateLinkDomain;
+  @override
   final Product bagProductNavigation;
   @override
   final Category defaultCategoryNavigation;
@@ -228,6 +240,7 @@ class _$Configuration extends Configuration {
       this.deliveryProduct,
       this.gcrecord,
       this.timeZone,
+      this.affiliateLinkDomain,
       this.bagProductNavigation,
       this.defaultCategoryNavigation,
       this.deliveryProductNavigation})
@@ -255,6 +268,7 @@ class _$Configuration extends Configuration {
         deliveryProduct == other.deliveryProduct &&
         gcrecord == other.gcrecord &&
         timeZone == other.timeZone &&
+        affiliateLinkDomain == other.affiliateLinkDomain &&
         bagProductNavigation == other.bagProductNavigation &&
         defaultCategoryNavigation == other.defaultCategoryNavigation &&
         deliveryProductNavigation == other.deliveryProductNavigation;
@@ -274,17 +288,21 @@ class _$Configuration extends Configuration {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc($jc(0, oid.hashCode),
-                                                        name.hashCode),
-                                                    active.hashCode),
-                                                s3keyId.hashCode),
-                                            s3keySecret.hashCode),
-                                        optimisticLockField.hashCode),
-                                    defaultCategory.hashCode),
-                                bagProduct.hashCode),
-                            deliveryProduct.hashCode),
-                        gcrecord.hashCode),
-                    timeZone.hashCode),
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(0,
+                                                                oid.hashCode),
+                                                            name.hashCode),
+                                                        active.hashCode),
+                                                    s3keyId.hashCode),
+                                                s3keySecret.hashCode),
+                                            optimisticLockField.hashCode),
+                                        defaultCategory.hashCode),
+                                    bagProduct.hashCode),
+                                deliveryProduct.hashCode),
+                            gcrecord.hashCode),
+                        timeZone.hashCode),
+                    affiliateLinkDomain.hashCode),
                 bagProductNavigation.hashCode),
             defaultCategoryNavigation.hashCode),
         deliveryProductNavigation.hashCode));
@@ -304,6 +322,7 @@ class _$Configuration extends Configuration {
           ..add('deliveryProduct', deliveryProduct)
           ..add('gcrecord', gcrecord)
           ..add('timeZone', timeZone)
+          ..add('affiliateLinkDomain', affiliateLinkDomain)
           ..add('bagProductNavigation', bagProductNavigation)
           ..add('defaultCategoryNavigation', defaultCategoryNavigation)
           ..add('deliveryProductNavigation', deliveryProductNavigation))
@@ -362,6 +381,11 @@ class ConfigurationBuilder
   int get timeZone => _$this._timeZone;
   set timeZone(int timeZone) => _$this._timeZone = timeZone;
 
+  String _affiliateLinkDomain;
+  String get affiliateLinkDomain => _$this._affiliateLinkDomain;
+  set affiliateLinkDomain(String affiliateLinkDomain) =>
+      _$this._affiliateLinkDomain = affiliateLinkDomain;
+
   ProductBuilder _bagProductNavigation;
   ProductBuilder get bagProductNavigation =>
       _$this._bagProductNavigation ??= new ProductBuilder();
@@ -395,6 +419,7 @@ class ConfigurationBuilder
       _deliveryProduct = _$v.deliveryProduct;
       _gcrecord = _$v.gcrecord;
       _timeZone = _$v.timeZone;
+      _affiliateLinkDomain = _$v.affiliateLinkDomain;
       _bagProductNavigation = _$v.bagProductNavigation?.toBuilder();
       _defaultCategoryNavigation = _$v.defaultCategoryNavigation?.toBuilder();
       _deliveryProductNavigation = _$v.deliveryProductNavigation?.toBuilder();
@@ -433,6 +458,7 @@ class ConfigurationBuilder
               deliveryProduct: deliveryProduct,
               gcrecord: gcrecord,
               timeZone: timeZone,
+              affiliateLinkDomain: affiliateLinkDomain,
               bagProductNavigation: _bagProductNavigation?.build(),
               defaultCategoryNavigation: _defaultCategoryNavigation?.build(),
               deliveryProductNavigation: _deliveryProductNavigation?.build());

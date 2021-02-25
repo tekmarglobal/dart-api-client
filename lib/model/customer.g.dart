@@ -126,6 +126,12 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
         ..add(serializers.serialize(object.invoiceAddress,
             specifiedType: const FullType(int)));
     }
+    if (object.uid != null) {
+      result
+        ..add('uid')
+        ..add(serializers.serialize(object.uid,
+            specifiedType: const FullType(String)));
+    }
     if (object.defaultAddressNavigation != null) {
       result
         ..add('defaultAddressNavigation')
@@ -145,12 +151,26 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(Address)])));
     }
+    if (object.affiliateLink != null) {
+      result
+        ..add('affiliateLink')
+        ..add(serializers.serialize(object.affiliateLink,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AffiliateLink)])));
+    }
     if (object.agreementLog != null) {
       result
         ..add('agreementLog')
         ..add(serializers.serialize(object.agreementLog,
             specifiedType: const FullType(
                 BuiltList, const [const FullType(AgreementLog)])));
+    }
+    if (object.call != null) {
+      result
+        ..add('call')
+        ..add(serializers.serialize(object.call,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(Call)])));
     }
     if (object.cart != null) {
       result
@@ -193,6 +213,13 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
         ..add(serializers.serialize(object.payment,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(Payment)])));
+    }
+    if (object.ticket != null) {
+      result
+        ..add('ticket')
+        ..add(serializers.serialize(object.ticket,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(Ticket)])));
     }
     return result;
   }
@@ -280,6 +307,10 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
           result.invoiceAddress = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'uid':
+          result.uid = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'defaultAddressNavigation':
           result.defaultAddressNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Address)) as Address);
@@ -294,10 +325,22 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
                       BuiltList, const [const FullType(Address)]))
               as BuiltList<Object>);
           break;
+        case 'affiliateLink':
+          result.affiliateLink.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AffiliateLink)]))
+              as BuiltList<Object>);
+          break;
         case 'agreementLog':
           result.agreementLog.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(AgreementLog)]))
+              as BuiltList<Object>);
+          break;
+        case 'call':
+          result.call.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Call)]))
               as BuiltList<Object>);
           break;
         case 'cart':
@@ -334,6 +377,12 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
           result.payment.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
                       BuiltList, const [const FullType(Payment)]))
+              as BuiltList<Object>);
+          break;
+        case 'ticket':
+          result.ticket.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Ticket)]))
               as BuiltList<Object>);
           break;
       }
@@ -381,13 +430,19 @@ class _$Customer extends Customer {
   @override
   final int invoiceAddress;
   @override
+  final String uid;
+  @override
   final Address defaultAddressNavigation;
   @override
   final Address invoiceAddressNavigation;
   @override
   final BuiltList<Address> address;
   @override
+  final BuiltList<AffiliateLink> affiliateLink;
+  @override
   final BuiltList<AgreementLog> agreementLog;
+  @override
+  final BuiltList<Call> call;
   @override
   final BuiltList<Cart> cart;
   @override
@@ -400,6 +455,8 @@ class _$Customer extends Customer {
   final BuiltList<Order> order;
   @override
   final BuiltList<Payment> payment;
+  @override
+  final BuiltList<Ticket> ticket;
 
   factory _$Customer([void Function(CustomerBuilder) updates]) =>
       (new CustomerBuilder()..update(updates)).build();
@@ -423,16 +480,20 @@ class _$Customer extends Customer {
       this.identificationNumber,
       this.defaultAddress,
       this.invoiceAddress,
+      this.uid,
       this.defaultAddressNavigation,
       this.invoiceAddressNavigation,
       this.address,
+      this.affiliateLink,
       this.agreementLog,
+      this.call,
       this.cart,
       this.customerFavoriteList,
       this.customerLoginAttempt,
       this.deviceLogin,
       this.order,
-      this.payment})
+      this.payment,
+      this.ticket})
       : super._();
 
   @override
@@ -464,16 +525,20 @@ class _$Customer extends Customer {
         identificationNumber == other.identificationNumber &&
         defaultAddress == other.defaultAddress &&
         invoiceAddress == other.invoiceAddress &&
+        uid == other.uid &&
         defaultAddressNavigation == other.defaultAddressNavigation &&
         invoiceAddressNavigation == other.invoiceAddressNavigation &&
         address == other.address &&
+        affiliateLink == other.affiliateLink &&
         agreementLog == other.agreementLog &&
+        call == other.call &&
         cart == other.cart &&
         customerFavoriteList == other.customerFavoriteList &&
         customerLoginAttempt == other.customerLoginAttempt &&
         deviceLogin == other.deviceLogin &&
         order == other.order &&
-        payment == other.payment;
+        payment == other.payment &&
+        ticket == other.ticket;
   }
 
   @override
@@ -496,26 +561,26 @@ class _$Customer extends Customer {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode),
-                                                                                password.hashCode),
-                                                                            smsVerificationCode.hashCode),
-                                                                        smsVerificationSendDate.hashCode),
-                                                                    anonymous.hashCode),
-                                                                optimisticLockField.hashCode),
-                                                            allowCampaign.hashCode),
-                                                        identificationNumber.hashCode),
-                                                    defaultAddress.hashCode),
-                                                invoiceAddress.hashCode),
-                                            defaultAddressNavigation.hashCode),
-                                        invoiceAddressNavigation.hashCode),
-                                    address.hashCode),
-                                agreementLog.hashCode),
-                            cart.hashCode),
-                        customerFavoriteList.hashCode),
-                    customerLoginAttempt.hashCode),
-                deviceLogin.hashCode),
-            order.hashCode),
-        payment.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode), anonymous.hashCode),
+                                                                                optimisticLockField.hashCode),
+                                                                            allowCampaign.hashCode),
+                                                                        identificationNumber.hashCode),
+                                                                    defaultAddress.hashCode),
+                                                                invoiceAddress.hashCode),
+                                                            uid.hashCode),
+                                                        defaultAddressNavigation.hashCode),
+                                                    invoiceAddressNavigation.hashCode),
+                                                address.hashCode),
+                                            affiliateLink.hashCode),
+                                        agreementLog.hashCode),
+                                    call.hashCode),
+                                cart.hashCode),
+                            customerFavoriteList.hashCode),
+                        customerLoginAttempt.hashCode),
+                    deviceLogin.hashCode),
+                order.hashCode),
+            payment.hashCode),
+        ticket.hashCode));
   }
 
   @override
@@ -539,16 +604,20 @@ class _$Customer extends Customer {
           ..add('identificationNumber', identificationNumber)
           ..add('defaultAddress', defaultAddress)
           ..add('invoiceAddress', invoiceAddress)
+          ..add('uid', uid)
           ..add('defaultAddressNavigation', defaultAddressNavigation)
           ..add('invoiceAddressNavigation', invoiceAddressNavigation)
           ..add('address', address)
+          ..add('affiliateLink', affiliateLink)
           ..add('agreementLog', agreementLog)
+          ..add('call', call)
           ..add('cart', cart)
           ..add('customerFavoriteList', customerFavoriteList)
           ..add('customerLoginAttempt', customerLoginAttempt)
           ..add('deviceLogin', deviceLogin)
           ..add('order', order)
-          ..add('payment', payment))
+          ..add('payment', payment)
+          ..add('ticket', ticket))
         .toString();
   }
 }
@@ -635,6 +704,10 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
+  String _uid;
+  String get uid => _$this._uid;
+  set uid(String uid) => _$this._uid = uid;
+
   AddressBuilder _defaultAddressNavigation;
   AddressBuilder get defaultAddressNavigation =>
       _$this._defaultAddressNavigation ??= new AddressBuilder();
@@ -652,11 +725,21 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _$this._address ??= new ListBuilder<Address>();
   set address(ListBuilder<Address> address) => _$this._address = address;
 
+  ListBuilder<AffiliateLink> _affiliateLink;
+  ListBuilder<AffiliateLink> get affiliateLink =>
+      _$this._affiliateLink ??= new ListBuilder<AffiliateLink>();
+  set affiliateLink(ListBuilder<AffiliateLink> affiliateLink) =>
+      _$this._affiliateLink = affiliateLink;
+
   ListBuilder<AgreementLog> _agreementLog;
   ListBuilder<AgreementLog> get agreementLog =>
       _$this._agreementLog ??= new ListBuilder<AgreementLog>();
   set agreementLog(ListBuilder<AgreementLog> agreementLog) =>
       _$this._agreementLog = agreementLog;
+
+  ListBuilder<Call> _call;
+  ListBuilder<Call> get call => _$this._call ??= new ListBuilder<Call>();
+  set call(ListBuilder<Call> call) => _$this._call = call;
 
   ListBuilder<Cart> _cart;
   ListBuilder<Cart> get cart => _$this._cart ??= new ListBuilder<Cart>();
@@ -691,6 +774,11 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
+  ListBuilder<Ticket> _ticket;
+  ListBuilder<Ticket> get ticket =>
+      _$this._ticket ??= new ListBuilder<Ticket>();
+  set ticket(ListBuilder<Ticket> ticket) => _$this._ticket = ticket;
+
   CustomerBuilder();
 
   CustomerBuilder get _$this {
@@ -713,16 +801,20 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _identificationNumber = _$v.identificationNumber;
       _defaultAddress = _$v.defaultAddress;
       _invoiceAddress = _$v.invoiceAddress;
+      _uid = _$v.uid;
       _defaultAddressNavigation = _$v.defaultAddressNavigation?.toBuilder();
       _invoiceAddressNavigation = _$v.invoiceAddressNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
+      _affiliateLink = _$v.affiliateLink?.toBuilder();
       _agreementLog = _$v.agreementLog?.toBuilder();
+      _call = _$v.call?.toBuilder();
       _cart = _$v.cart?.toBuilder();
       _customerFavoriteList = _$v.customerFavoriteList?.toBuilder();
       _customerLoginAttempt = _$v.customerLoginAttempt?.toBuilder();
       _deviceLogin = _$v.deviceLogin?.toBuilder();
       _order = _$v.order?.toBuilder();
       _payment = _$v.payment?.toBuilder();
+      _ticket = _$v.ticket?.toBuilder();
       _$v = null;
     }
     return this;
@@ -765,16 +857,20 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               identificationNumber: identificationNumber,
               defaultAddress: defaultAddress,
               invoiceAddress: invoiceAddress,
+              uid: uid,
               defaultAddressNavigation: _defaultAddressNavigation?.build(),
               invoiceAddressNavigation: _invoiceAddressNavigation?.build(),
               address: _address?.build(),
+              affiliateLink: _affiliateLink?.build(),
               agreementLog: _agreementLog?.build(),
+              call: _call?.build(),
               cart: _cart?.build(),
               customerFavoriteList: _customerFavoriteList?.build(),
               customerLoginAttempt: _customerLoginAttempt?.build(),
               deviceLogin: _deviceLogin?.build(),
               order: _order?.build(),
-              payment: _payment?.build());
+              payment: _payment?.build(),
+              ticket: _ticket?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -784,8 +880,12 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
         _invoiceAddressNavigation?.build();
         _$failedField = 'address';
         _address?.build();
+        _$failedField = 'affiliateLink';
+        _affiliateLink?.build();
         _$failedField = 'agreementLog';
         _agreementLog?.build();
+        _$failedField = 'call';
+        _call?.build();
         _$failedField = 'cart';
         _cart?.build();
         _$failedField = 'customerFavoriteList';
@@ -798,6 +898,8 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
         _order?.build();
         _$failedField = 'payment';
         _payment?.build();
+        _$failedField = 'ticket';
+        _ticket?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Customer', _$failedField, e.toString());

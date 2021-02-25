@@ -144,6 +144,12 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
         ..add(serializers.serialize(object.vat,
             specifiedType: const FullType(double)));
     }
+    if (object.menuName != null) {
+      result
+        ..add('menuName')
+        ..add(serializers.serialize(object.menuName,
+            specifiedType: const FullType(String)));
+    }
     if (object.brandNavigation != null) {
       result
         ..add('brandNavigation')
@@ -311,6 +317,10 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
           result.vat = serializers.deserialize(value,
               specifiedType: const FullType(double)) as double;
           break;
+        case 'menuName':
+          result.menuName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'brandNavigation':
           result.brandNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Brand)) as Brand);
@@ -420,6 +430,8 @@ class _$Product extends Product {
   @override
   final double vat;
   @override
+  final String menuName;
+  @override
   final Brand brandNavigation;
   @override
   final Supplier supplierNavigation;
@@ -465,6 +477,7 @@ class _$Product extends Product {
       this.optimisticLockField,
       this.productUnit,
       this.vat,
+      this.menuName,
       this.brandNavigation,
       this.supplierNavigation,
       this.categoryProduct,
@@ -509,6 +522,7 @@ class _$Product extends Product {
         optimisticLockField == other.optimisticLockField &&
         productUnit == other.productUnit &&
         vat == other.vat &&
+        menuName == other.menuName &&
         brandNavigation == other.brandNavigation &&
         supplierNavigation == other.supplierNavigation &&
         categoryProduct == other.categoryProduct &&
@@ -543,16 +557,16 @@ class _$Product extends Product {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode),
-                                                                                desi.hashCode),
-                                                                            maxQuantity.hashCode),
-                                                                        minQuantity.hashCode),
-                                                                    initalQuantity.hashCode),
-                                                                quantityStep.hashCode),
-                                                            erpId.hashCode),
-                                                        optimisticLockField.hashCode),
-                                                    productUnit.hashCode),
-                                                vat.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode),
+                                                                                maxQuantity.hashCode),
+                                                                            minQuantity.hashCode),
+                                                                        initalQuantity.hashCode),
+                                                                    quantityStep.hashCode),
+                                                                erpId.hashCode),
+                                                            optimisticLockField.hashCode),
+                                                        productUnit.hashCode),
+                                                    vat.hashCode),
+                                                menuName.hashCode),
                                             brandNavigation.hashCode),
                                         supplierNavigation.hashCode),
                                     categoryProduct.hashCode),
@@ -589,6 +603,7 @@ class _$Product extends Product {
           ..add('optimisticLockField', optimisticLockField)
           ..add('productUnit', productUnit)
           ..add('vat', vat)
+          ..add('menuName', menuName)
           ..add('brandNavigation', brandNavigation)
           ..add('supplierNavigation', supplierNavigation)
           ..add('categoryProduct', categoryProduct)
@@ -697,6 +712,10 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   double get vat => _$this._vat;
   set vat(double vat) => _$this._vat = vat;
 
+  String _menuName;
+  String get menuName => _$this._menuName;
+  set menuName(String menuName) => _$this._menuName = menuName;
+
   BrandBuilder _brandNavigation;
   BrandBuilder get brandNavigation =>
       _$this._brandNavigation ??= new BrandBuilder();
@@ -790,6 +809,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
       _optimisticLockField = _$v.optimisticLockField;
       _productUnit = _$v.productUnit;
       _vat = _$v.vat;
+      _menuName = _$v.menuName;
       _brandNavigation = _$v.brandNavigation?.toBuilder();
       _supplierNavigation = _$v.supplierNavigation?.toBuilder();
       _categoryProduct = _$v.categoryProduct?.toBuilder();
@@ -847,6 +867,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
               optimisticLockField: optimisticLockField,
               productUnit: productUnit,
               vat: vat,
+              menuName: menuName,
               brandNavigation: _brandNavigation?.build(),
               supplierNavigation: _supplierNavigation?.build(),
               categoryProduct: _categoryProduct?.build(),

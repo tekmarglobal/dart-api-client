@@ -56,6 +56,12 @@ class _$RCategorySerializer implements StructuredSerializer<RCategory> {
         ..add(serializers.serialize(object.order,
             specifiedType: const FullType(int)));
     }
+    if (object.menuName != null) {
+      result
+        ..add('menuName')
+        ..add(serializers.serialize(object.menuName,
+            specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -98,6 +104,10 @@ class _$RCategorySerializer implements StructuredSerializer<RCategory> {
           result.order = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'menuName':
+          result.menuName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -118,6 +128,8 @@ class _$RCategory extends RCategory {
   final BuiltList<RCategory> subCategories;
   @override
   final int order;
+  @override
+  final String menuName;
 
   factory _$RCategory([void Function(RCategoryBuilder) updates]) =>
       (new RCategoryBuilder()..update(updates)).build();
@@ -128,7 +140,8 @@ class _$RCategory extends RCategory {
       this.name,
       this.products,
       this.subCategories,
-      this.order})
+      this.order,
+      this.menuName})
       : super._();
 
   @override
@@ -147,17 +160,22 @@ class _$RCategory extends RCategory {
         name == other.name &&
         products == other.products &&
         subCategories == other.subCategories &&
-        order == other.order;
+        order == other.order &&
+        menuName == other.menuName;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc($jc(0, id.hashCode), parentId.hashCode), name.hashCode),
-                products.hashCode),
-            subCategories.hashCode),
-        order.hashCode));
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, id.hashCode), parentId.hashCode),
+                        name.hashCode),
+                    products.hashCode),
+                subCategories.hashCode),
+            order.hashCode),
+        menuName.hashCode));
   }
 
   @override
@@ -168,7 +186,8 @@ class _$RCategory extends RCategory {
           ..add('name', name)
           ..add('products', products)
           ..add('subCategories', subCategories)
-          ..add('order', order))
+          ..add('order', order)
+          ..add('menuName', menuName))
         .toString();
   }
 }
@@ -203,6 +222,10 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
   int get order => _$this._order;
   set order(int order) => _$this._order = order;
 
+  String _menuName;
+  String get menuName => _$this._menuName;
+  set menuName(String menuName) => _$this._menuName = menuName;
+
   RCategoryBuilder();
 
   RCategoryBuilder get _$this {
@@ -213,6 +236,7 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
       _products = _$v.products?.toBuilder();
       _subCategories = _$v.subCategories?.toBuilder();
       _order = _$v.order;
+      _menuName = _$v.menuName;
       _$v = null;
     }
     return this;
@@ -242,7 +266,8 @@ class RCategoryBuilder implements Builder<RCategory, RCategoryBuilder> {
               name: name,
               products: _products?.build(),
               subCategories: _subCategories?.build(),
-              order: order);
+              order: order,
+              menuName: menuName);
     } catch (_) {
       String _$failedField;
       try {

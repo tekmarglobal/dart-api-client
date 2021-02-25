@@ -17,6 +17,10 @@ abstract class LoginRespone implements Built<LoginRespone, LoginResponeBuilder> 
         @nullable
     @BuiltValueField(wireName: r'registered')
     bool get registered;
+    
+        @nullable
+    @BuiltValueField(wireName: r'firebaseToken')
+    String get firebaseToken;
 
     // Boilerplate code needed to wire-up generated code
     LoginRespone._();

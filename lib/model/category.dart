@@ -68,6 +68,10 @@ abstract class Category implements Built<Category, CategoryBuilder> {
     int get order;
     
         @nullable
+    @BuiltValueField(wireName: r'menuName')
+    String get menuName;
+    
+        @nullable
     @BuiltValueField(wireName: r'departmentNavigation')
     Department get departmentNavigation;
     

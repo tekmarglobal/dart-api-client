@@ -8,11 +8,14 @@ import 'package:built_value/serializer.dart';
 import 'package:openapi/model/configuration_rest_result.dart';
 import 'package:openapi/model/neighbor_response_rest_result.dart';
 import 'package:openapi/model/upload_image_response_rest_result.dart';
+import 'package:openapi/model/company_response_list_rest_result.dart';
 import 'package:openapi/model/region_response_list_rest_result.dart';
 import 'package:openapi/model/branch_response_list_rest_result.dart';
 import 'package:openapi/model/time_slot_response_list_rest_result.dart';
 import 'package:openapi/model/region_neighborhood_request.dart';
+import 'package:openapi/model/int32_rest_result.dart';
 import 'package:openapi/model/update_region_neighborhood_request.dart';
+import 'package:openapi/model/link_request.dart';
 import 'package:openapi/model/neighbor_response_list_rest_result.dart';
 import 'dart:typed_data';
 import 'package:openapi/api_util.dart';
@@ -60,6 +63,53 @@ class AdminApi {
         var data = _serializers.deserializeWith<BranchResponseListRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<BranchResponseListRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<CompanyResponseListRestResult>>apiAdminCompaniesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Admin/Companies";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(CompanyResponseListRestResult);
+        var data = _serializers.deserializeWith<CompanyResponseListRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<CompanyResponseListRestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,
@@ -264,6 +314,56 @@ class AdminApi {
         /// 
         ///
         /// 
+        Future<Response<String>>apiAdminGetShareLinkPost({ LinkRequest linkRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Admin/GetShareLink";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
+
+
+            var serializedBody = _serializers.serialize(linkRequest);
+            var jsonlinkRequest = json.encode(serializedBody);
+            bodyData = jsonlinkRequest;
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(String);
+        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<String>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
         Future<Response<NeighborResponseListRestResult>>apiAdminRegionNeighborhoodPost({ RegionNeighborhoodRequest regionNeighborhoodRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Admin/RegionNeighborhood";
@@ -301,6 +401,54 @@ class AdminApi {
         var data = _serializers.deserializeWith<NeighborResponseListRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<NeighborResponseListRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<Int32RestResult>>apiAdminRegionPopulationGet({ int gpsId,CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Admin/RegionPopulation";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+                queryParams[r'gpsId'] = gpsId;
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(Int32RestResult);
+        var data = _serializers.deserializeWith<Int32RestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<Int32RestResult>(
                 data: data,
                 headers: response.headers,
                 request: response.request,

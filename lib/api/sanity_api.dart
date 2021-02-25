@@ -16,7 +16,7 @@ class SanityApi {
         /// 
         ///
         /// 
-        Future<Response<StringListRestResult>>apiSanityCheckGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
+        Future<Response<StringListRestResult>>apiSanityCheckGet({ bool fix,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Sanity/check";
 
@@ -24,6 +24,7 @@ class SanityApi {
         Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
+                queryParams[r'fix'] = fix;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 

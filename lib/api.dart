@@ -11,6 +11,7 @@ import 'package:openapi/api/admin_api.dart';
 import 'package:openapi/api/banner_api.dart';
 import 'package:openapi/api/cart_api.dart';
 import 'package:openapi/api/catalog_api.dart';
+import 'package:openapi/api/crm_api.dart';
 import 'package:openapi/api/customer_api.dart';
 import 'package:openapi/api/definition_api.dart';
 import 'package:openapi/api/migration_api.dart';
@@ -104,6 +105,15 @@ class Openapi {
     */
     CatalogApi getCatalogApi() {
     return CatalogApi(dio, serializers);
+    }
+
+
+    /**
+    * Get CrmApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    CrmApi getCrmApi() {
+    return CrmApi(dio, serializers);
     }
 
 

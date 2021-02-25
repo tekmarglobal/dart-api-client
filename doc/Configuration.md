@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **deliveryProduct** | **int** |  | [optional] [default to null]
 **gcrecord** | **int** |  | [optional] [default to null]
 **timeZone** | **int** |  | [optional] [default to null]
+**affiliateLinkDomain** | **String** |  | [optional] [default to null]
 **bagProductNavigation** | [**Product**](Product.md) |  | [optional] [default to null]
 **defaultCategoryNavigation** | [**Category**](Category.md) |  | [optional] [default to null]
 **deliveryProductNavigation** | [**Product**](Product.md) |  | [optional] [default to null]

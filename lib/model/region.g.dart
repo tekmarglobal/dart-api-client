@@ -90,6 +90,18 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
+    if (object.company != null) {
+      result
+        ..add('company')
+        ..add(serializers.serialize(object.company,
+            specifiedType: const FullType(int)));
+    }
+    if (object.companyNavigation != null) {
+      result
+        ..add('companyNavigation')
+        ..add(serializers.serialize(object.companyNavigation,
+            specifiedType: const FullType(Company)));
+    }
     if (object.cart != null) {
       result
         ..add('cart')
@@ -203,6 +215,14 @@ class _$RegionSerializer implements StructuredSerializer<Region> {
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'company':
+          result.company = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'companyNavigation':
+          result.companyNavigation.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Company)) as Company);
+          break;
         case 'cart':
           result.cart.replace(serializers.deserialize(value,
                   specifiedType:
@@ -279,6 +299,10 @@ class _$Region extends Region {
   @override
   final bool active;
   @override
+  final int company;
+  @override
+  final Company companyNavigation;
+  @override
   final BuiltList<Cart> cart;
   @override
   final BuiltList<Depot> depot;
@@ -310,6 +334,8 @@ class _$Region extends Region {
       this.regionMail,
       this.erpId,
       this.active,
+      this.company,
+      this.companyNavigation,
       this.cart,
       this.depot,
       this.order,
@@ -342,6 +368,8 @@ class _$Region extends Region {
         regionMail == other.regionMail &&
         erpId == other.erpId &&
         active == other.active &&
+        company == other.company &&
+        companyNavigation == other.companyNavigation &&
         cart == other.cart &&
         depot == other.depot &&
         order == other.order &&
@@ -372,27 +400,19 @@ class _$Region extends Region {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                0,
-                                                                                oid
-                                                                                    .hashCode),
-                                                                            name
-                                                                                .hashCode),
-                                                                        code
-                                                                            .hashCode),
-                                                                    freeDelivery
-                                                                        .hashCode),
-                                                                freeDeliveryAmount
-                                                                    .hashCode),
-                                                            timeSlotGenerationWindow
-                                                                .hashCode),
-                                                        lastTimeSlotGeneratedDate
-                                                            .hashCode),
-                                                    minimumCartAmount.hashCode),
-                                                optimisticLockField.hashCode),
-                                            regionMail.hashCode),
-                                        erpId.hashCode),
-                                    active.hashCode),
+                                                                            $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                                                                                code.hashCode),
+                                                                            freeDelivery.hashCode),
+                                                                        freeDeliveryAmount.hashCode),
+                                                                    timeSlotGenerationWindow.hashCode),
+                                                                lastTimeSlotGeneratedDate.hashCode),
+                                                            minimumCartAmount.hashCode),
+                                                        optimisticLockField.hashCode),
+                                                    regionMail.hashCode),
+                                                erpId.hashCode),
+                                            active.hashCode),
+                                        company.hashCode),
+                                    companyNavigation.hashCode),
                                 cart.hashCode),
                             depot.hashCode),
                         order.hashCode),
@@ -417,6 +437,8 @@ class _$Region extends Region {
           ..add('regionMail', regionMail)
           ..add('erpId', erpId)
           ..add('active', active)
+          ..add('company', company)
+          ..add('companyNavigation', companyNavigation)
           ..add('cart', cart)
           ..add('depot', depot)
           ..add('order', order)
@@ -485,6 +507,16 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  int _company;
+  int get company => _$this._company;
+  set company(int company) => _$this._company = company;
+
+  CompanyBuilder _companyNavigation;
+  CompanyBuilder get companyNavigation =>
+      _$this._companyNavigation ??= new CompanyBuilder();
+  set companyNavigation(CompanyBuilder companyNavigation) =>
+      _$this._companyNavigation = companyNavigation;
+
   ListBuilder<Cart> _cart;
   ListBuilder<Cart> get cart => _$this._cart ??= new ListBuilder<Cart>();
   set cart(ListBuilder<Cart> cart) => _$this._cart = cart;
@@ -542,6 +574,8 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
       _regionMail = _$v.regionMail;
       _erpId = _$v.erpId;
       _active = _$v.active;
+      _company = _$v.company;
+      _companyNavigation = _$v.companyNavigation?.toBuilder();
       _cart = _$v.cart?.toBuilder();
       _depot = _$v.depot?.toBuilder();
       _order = _$v.order?.toBuilder();
@@ -586,6 +620,8 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
               regionMail: regionMail,
               erpId: erpId,
               active: active,
+              company: company,
+              companyNavigation: _companyNavigation?.build(),
               cart: _cart?.build(),
               depot: _depot?.build(),
               order: _order?.build(),
@@ -597,6 +633,8 @@ class RegionBuilder implements Builder<Region, RegionBuilder> {
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'companyNavigation';
+        _companyNavigation?.build();
         _$failedField = 'cart';
         _cart?.build();
         _$failedField = 'depot';

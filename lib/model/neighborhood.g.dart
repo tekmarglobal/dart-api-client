@@ -61,6 +61,12 @@ class _$NeighborhoodSerializer implements StructuredSerializer<Neighborhood> {
         ..add(serializers.serialize(object.formalCode,
             specifiedType: const FullType(int)));
     }
+    if (object.population != null) {
+      result
+        ..add('population')
+        ..add(serializers.serialize(object.population,
+            specifiedType: const FullType(int)));
+    }
     if (object.cityNavigation != null) {
       result
         ..add('cityNavigation')
@@ -138,6 +144,10 @@ class _$NeighborhoodSerializer implements StructuredSerializer<Neighborhood> {
           result.formalCode = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'population':
+          result.population = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'cityNavigation':
           result.cityNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(City)) as City);
@@ -188,6 +198,8 @@ class _$Neighborhood extends Neighborhood {
   @override
   final int formalCode;
   @override
+  final int population;
+  @override
   final City cityNavigation;
   @override
   final County countyNavigation;
@@ -210,6 +222,7 @@ class _$Neighborhood extends Neighborhood {
       this.optimisticLockField,
       this.gpsId,
       this.formalCode,
+      this.population,
       this.cityNavigation,
       this.countyNavigation,
       this.address,
@@ -235,6 +248,7 @@ class _$Neighborhood extends Neighborhood {
         optimisticLockField == other.optimisticLockField &&
         gpsId == other.gpsId &&
         formalCode == other.formalCode &&
+        population == other.population &&
         cityNavigation == other.cityNavigation &&
         countyNavigation == other.countyNavigation &&
         address == other.address &&
@@ -255,13 +269,15 @@ class _$Neighborhood extends Neighborhood {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, oid.hashCode),
-                                                name.hashCode),
-                                            county.hashCode),
-                                        city.hashCode),
-                                    optimisticLockField.hashCode),
-                                gpsId.hashCode),
-                            formalCode.hashCode),
+                                            $jc(
+                                                $jc($jc(0, oid.hashCode),
+                                                    name.hashCode),
+                                                county.hashCode),
+                                            city.hashCode),
+                                        optimisticLockField.hashCode),
+                                    gpsId.hashCode),
+                                formalCode.hashCode),
+                            population.hashCode),
                         cityNavigation.hashCode),
                     countyNavigation.hashCode),
                 address.hashCode),
@@ -279,6 +295,7 @@ class _$Neighborhood extends Neighborhood {
           ..add('optimisticLockField', optimisticLockField)
           ..add('gpsId', gpsId)
           ..add('formalCode', formalCode)
+          ..add('population', population)
           ..add('cityNavigation', cityNavigation)
           ..add('countyNavigation', countyNavigation)
           ..add('address', address)
@@ -321,6 +338,10 @@ class NeighborhoodBuilder
   int _formalCode;
   int get formalCode => _$this._formalCode;
   set formalCode(int formalCode) => _$this._formalCode = formalCode;
+
+  int _population;
+  int get population => _$this._population;
+  set population(int population) => _$this._population = population;
 
   CityBuilder _cityNavigation;
   CityBuilder get cityNavigation =>
@@ -367,6 +388,7 @@ class NeighborhoodBuilder
       _optimisticLockField = _$v.optimisticLockField;
       _gpsId = _$v.gpsId;
       _formalCode = _$v.formalCode;
+      _population = _$v.population;
       _cityNavigation = _$v.cityNavigation?.toBuilder();
       _countyNavigation = _$v.countyNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
@@ -404,6 +426,7 @@ class NeighborhoodBuilder
               optimisticLockField: optimisticLockField,
               gpsId: gpsId,
               formalCode: formalCode,
+              population: population,
               cityNavigation: _cityNavigation?.build(),
               countyNavigation: _countyNavigation?.build(),
               address: _address?.build(),

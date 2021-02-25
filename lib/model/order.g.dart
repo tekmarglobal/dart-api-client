@@ -230,6 +230,13 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(Payment)])));
     }
+    if (object.ticket != null) {
+      result
+        ..add('ticket')
+        ..add(serializers.serialize(object.ticket,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(Ticket)])));
+    }
     return result;
   }
 
@@ -389,6 +396,12 @@ class _$OrderSerializer implements StructuredSerializer<Order> {
                       BuiltList, const [const FullType(Payment)]))
               as BuiltList<Object>);
           break;
+        case 'ticket':
+          result.ticket.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Ticket)]))
+              as BuiltList<Object>);
+          break;
       }
     }
 
@@ -467,6 +480,8 @@ class _$Order extends Order {
   final BuiltList<OrderProduct> orderProduct;
   @override
   final BuiltList<Payment> payment;
+  @override
+  final BuiltList<Ticket> ticket;
 
   factory _$Order([void Function(OrderBuilder) updates]) =>
       (new OrderBuilder()..update(updates)).build();
@@ -506,7 +521,8 @@ class _$Order extends Order {
       this.regionNavigation,
       this.timeSlotNavigation,
       this.orderProduct,
-      this.payment})
+      this.payment,
+      this.ticket})
       : super._();
 
   @override
@@ -554,7 +570,8 @@ class _$Order extends Order {
         regionNavigation == other.regionNavigation &&
         timeSlotNavigation == other.timeSlotNavigation &&
         orderProduct == other.orderProduct &&
-        payment == other.payment;
+        payment == other.payment &&
+        ticket == other.ticket;
   }
 
   @override
@@ -577,26 +594,26 @@ class _$Order extends Order {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode),
-                                                                                timeSlot.hashCode),
-                                                                            paymentType.hashCode),
-                                                                        sent.hashCode),
-                                                                    optimisticLockField.hashCode),
-                                                                region.hashCode),
-                                                            uuid.hashCode),
-                                                        fee.hashCode),
-                                                    isProcessed.hashCode),
-                                                billingAddressNavigation.hashCode),
-                                            cartNavigation.hashCode),
-                                        completedFromNavigation.hashCode),
-                                    customerNavigation.hashCode),
-                                deliveryAddressNavigation.hashCode),
-                            orderStatusNavigation.hashCode),
-                        paymentTypeNavigation.hashCode),
-                    regionNavigation.hashCode),
-                timeSlotNavigation.hashCode),
-            orderProduct.hashCode),
-        payment.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode), timeSlot.hashCode),
+                                                                                paymentType.hashCode),
+                                                                            sent.hashCode),
+                                                                        optimisticLockField.hashCode),
+                                                                    region.hashCode),
+                                                                uuid.hashCode),
+                                                            fee.hashCode),
+                                                        isProcessed.hashCode),
+                                                    billingAddressNavigation.hashCode),
+                                                cartNavigation.hashCode),
+                                            completedFromNavigation.hashCode),
+                                        customerNavigation.hashCode),
+                                    deliveryAddressNavigation.hashCode),
+                                orderStatusNavigation.hashCode),
+                            paymentTypeNavigation.hashCode),
+                        regionNavigation.hashCode),
+                    timeSlotNavigation.hashCode),
+                orderProduct.hashCode),
+            payment.hashCode),
+        ticket.hashCode));
   }
 
   @override
@@ -636,7 +653,8 @@ class _$Order extends Order {
           ..add('regionNavigation', regionNavigation)
           ..add('timeSlotNavigation', timeSlotNavigation)
           ..add('orderProduct', orderProduct)
-          ..add('payment', payment))
+          ..add('payment', payment)
+          ..add('ticket', ticket))
         .toString();
   }
 }
@@ -810,6 +828,11 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
       _$this._payment ??= new ListBuilder<Payment>();
   set payment(ListBuilder<Payment> payment) => _$this._payment = payment;
 
+  ListBuilder<Ticket> _ticket;
+  ListBuilder<Ticket> get ticket =>
+      _$this._ticket ??= new ListBuilder<Ticket>();
+  set ticket(ListBuilder<Ticket> ticket) => _$this._ticket = ticket;
+
   OrderBuilder();
 
   OrderBuilder get _$this {
@@ -849,6 +872,7 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
       _timeSlotNavigation = _$v.timeSlotNavigation?.toBuilder();
       _orderProduct = _$v.orderProduct?.toBuilder();
       _payment = _$v.payment?.toBuilder();
+      _ticket = _$v.ticket?.toBuilder();
       _$v = null;
     }
     return this;
@@ -907,7 +931,8 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
               regionNavigation: _regionNavigation?.build(),
               timeSlotNavigation: _timeSlotNavigation?.build(),
               orderProduct: _orderProduct?.build(),
-              payment: _payment?.build());
+              payment: _payment?.build(),
+              ticket: _ticket?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -933,6 +958,8 @@ class OrderBuilder implements Builder<Order, OrderBuilder> {
         _orderProduct?.build();
         _$failedField = 'payment';
         _payment?.build();
+        _$failedField = 'ticket';
+        _ticket?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Order', _$failedField, e.toString());

@@ -7,6 +7,8 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/standard_json_plugin.dart';
 
 import 'package:openapi/model/address.dart';
+import 'package:openapi/model/affiliate_link.dart';
+import 'package:openapi/model/affiliate_type.dart';
 import 'package:openapi/model/agreement.dart';
 import 'package:openapi/model/agreement_log.dart';
 import 'package:openapi/model/agreement_response.dart';
@@ -21,6 +23,7 @@ import 'package:openapi/model/branch_response_list_rest_result.dart';
 import 'package:openapi/model/brand.dart';
 import 'package:openapi/model/brand_manager.dart';
 import 'package:openapi/model/brand_manager_brand.dart';
+import 'package:openapi/model/call.dart';
 import 'package:openapi/model/cart.dart';
 import 'package:openapi/model/cart_product.dart';
 import 'package:openapi/model/cart_response.dart';
@@ -32,6 +35,9 @@ import 'package:openapi/model/category_product.dart';
 import 'package:openapi/model/cities_response.dart';
 import 'package:openapi/model/cities_response_list_rest_result.dart';
 import 'package:openapi/model/city.dart';
+import 'package:openapi/model/company.dart';
+import 'package:openapi/model/company_response.dart';
+import 'package:openapi/model/company_response_list_rest_result.dart';
 import 'package:openapi/model/configuration.dart';
 import 'package:openapi/model/configuration_rest_result.dart';
 import 'package:openapi/model/counties_request.dart';
@@ -65,6 +71,8 @@ import 'package:openapi/model/get_order_list_response.dart';
 import 'package:openapi/model/get_order_list_response_rest_result.dart';
 import 'package:openapi/model/get_order_request.dart';
 import 'package:openapi/model/inline_object.dart';
+import 'package:openapi/model/int32_rest_result.dart';
+import 'package:openapi/model/link_request.dart';
 import 'package:openapi/model/login_request.dart';
 import 'package:openapi/model/login_respone.dart';
 import 'package:openapi/model/login_respone_rest_result.dart';
@@ -127,6 +135,8 @@ import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
 import 'package:openapi/model/string_list_rest_result.dart';
 import 'package:openapi/model/supplier.dart';
+import 'package:openapi/model/ticket.dart';
+import 'package:openapi/model/ticket_category.dart';
 import 'package:openapi/model/time_slot.dart';
 import 'package:openapi/model/time_slot_response.dart';
 import 'package:openapi/model/time_slot_response_list_rest_result.dart';
@@ -151,6 +161,8 @@ part 'serializers.g.dart';
 
 @SerializersFor(const [
 Address,
+AffiliateLink,
+AffiliateType,
 Agreement,
 AgreementLog,
 AgreementResponse,
@@ -165,6 +177,7 @@ BranchResponseListRestResult,
 Brand,
 BrandManager,
 BrandManagerBrand,
+Call,
 Cart,
 CartProduct,
 CartResponse,
@@ -176,6 +189,9 @@ CategoryProduct,
 CitiesResponse,
 CitiesResponseListRestResult,
 City,
+Company,
+CompanyResponse,
+CompanyResponseListRestResult,
 Configuration,
 ConfigurationRestResult,
 CountiesRequest,
@@ -209,6 +225,8 @@ GetOrderListResponse,
 GetOrderListResponseRestResult,
 GetOrderRequest,
 InlineObject,
+Int32RestResult,
+LinkRequest,
 LoginRequest,
 LoginRespone,
 LoginResponeRestResult,
@@ -271,6 +289,8 @@ SmsResponse,
 SmsResponseRestResult,
 StringListRestResult,
 Supplier,
+Ticket,
+TicketCategory,
 TimeSlot,
 TimeSlotResponse,
 TimeSlotResponseListRestResult,
@@ -297,6 +317,12 @@ Serializers serializers = (_$serializers.toBuilder()
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Address)]),
 () => new ListBuilder<Address>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(AffiliateLink)]),
+() => new ListBuilder<AffiliateLink>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(AffiliateType)]),
+() => new ListBuilder<AffiliateType>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Agreement)]),
 () => new ListBuilder<Agreement>())
@@ -340,6 +366,9 @@ const FullType(BuiltList, const [const FullType(BrandManager)]),
 const FullType(BuiltList, const [const FullType(BrandManagerBrand)]),
 () => new ListBuilder<BrandManagerBrand>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Call)]),
+() => new ListBuilder<Call>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Cart)]),
 () => new ListBuilder<Cart>())
 ..addBuilderFactory(
@@ -372,6 +401,15 @@ const FullType(BuiltList, const [const FullType(CitiesResponseListRestResult)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(City)]),
 () => new ListBuilder<City>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Company)]),
+() => new ListBuilder<Company>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(CompanyResponse)]),
+() => new ListBuilder<CompanyResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(CompanyResponseListRestResult)]),
+() => new ListBuilder<CompanyResponseListRestResult>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Configuration)]),
 () => new ListBuilder<Configuration>())
@@ -471,6 +509,12 @@ const FullType(BuiltList, const [const FullType(GetOrderRequest)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(InlineObject)]),
 () => new ListBuilder<InlineObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Int32RestResult)]),
+() => new ListBuilder<Int32RestResult>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(LinkRequest)]),
+() => new ListBuilder<LinkRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(LoginRequest)]),
 () => new ListBuilder<LoginRequest>())
@@ -657,6 +701,12 @@ const FullType(BuiltList, const [const FullType(StringListRestResult)]),
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Supplier)]),
 () => new ListBuilder<Supplier>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Ticket)]),
+() => new ListBuilder<Ticket>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(TicketCategory)]),
+() => new ListBuilder<TicketCategory>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(TimeSlot)]),
 () => new ListBuilder<TimeSlot>())
