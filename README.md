@@ -67,12 +67,14 @@ Class | Method | HTTP request | Description
 *AdminApi* | [**apiAdminGenerateTimeSlotsPost**](doc//AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**apiAdminGetConfigurationGet**](doc//AdminApi.md#apiadmingetconfigurationget) | **get** /api/Admin/GetConfiguration | 
 *AdminApi* | [**apiAdminGetProductGet**](doc//AdminApi.md#apiadmingetproductget) | **get** /api/Admin/GetProduct | 
-*AdminApi* | [**apiAdminGetShareLinkPost**](doc//AdminApi.md#apiadmingetsharelinkpost) | **post** /api/Admin/GetShareLink | 
 *AdminApi* | [**apiAdminRegionNeighborhoodPost**](doc//AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
 *AdminApi* | [**apiAdminRegionPopulationGet**](doc//AdminApi.md#apiadminregionpopulationget) | **get** /api/Admin/RegionPopulation | 
 *AdminApi* | [**apiAdminRegionPost**](doc//AdminApi.md#apiadminregionpost) | **post** /api/Admin/Region | 
 *AdminApi* | [**apiAdminUpdateRegionNeighborhoodPost**](doc//AdminApi.md#apiadminupdateregionneighborhoodpost) | **post** /api/Admin/UpdateRegionNeighborhood | 
 *AdminApi* | [**apiAdminUploadProductImagePost**](doc//AdminApi.md#apiadminuploadproductimagepost) | **post** /api/Admin/UploadProductImage | 
+*AffiliateApi* | [**apiAffiliateDetailUrllinkGet**](doc//AffiliateApi.md#apiaffiliatedetailurllinkget) | **get** /api/Affiliate/detail/{urllink} | 
+*AffiliateApi* | [**apiAffiliateGetShareLinkPost**](doc//AffiliateApi.md#apiaffiliategetsharelinkpost) | **post** /api/Affiliate/GetShareLink | 
+*AffiliateApi* | [**apiAffiliateShareLinkClickedPost**](doc//AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **post** /api/Affiliate/ShareLinkClicked | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc//BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc//BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
 *CartApi* | [**apiCartCreateCartPost**](doc//CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
@@ -84,6 +86,7 @@ Class | Method | HTTP request | Description
 *CartApi* | [**apiCartUpdateCartRegionPost**](doc//CartApi.md#apicartupdatecartregionpost) | **post** /api/Cart/UpdateCartRegion | 
 *CartApi* | [**apiCartUpdateTimeslotPost**](doc//CartApi.md#apicartupdatetimeslotpost) | **post** /api/Cart/UpdateTimeslot | 
 *CatalogApi* | [**apiCatalogAllCategoriesGet**](doc//CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
+*CatalogApi* | [**apiCatalogAllCategoriesRegionGet**](doc//CatalogApi.md#apicatalogallcategoriesregionget) | **get** /api/Catalog/allCategoriesRegion | 
 *CatalogApi* | [**apiCatalogCreateCategoryPost**](doc//CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
 *CatalogApi* | [**apiCatalogDeleteCategoryDelete**](doc//CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
 *CatalogApi* | [**apiCatalogImportCategoriesFromOlimposPost**](doc//CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
@@ -125,13 +128,12 @@ Class | Method | HTTP request | Description
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc//RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc//RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
 *SanityApi* | [**apiSanityCheckGet**](doc//SanityApi.md#apisanitycheckget) | **get** /api/Sanity/check | 
-*ShareApi* | [**apiShareDetailProductidGet**](doc//ShareApi.md#apisharedetailproductidget) | **get** /api/Share/detail/{productid} | 
-*ShareApi* | [**apiShareDetailProductidProductnameSharedidGet**](doc//ShareApi.md#apisharedetailproductidproductnamesharedidget) | **get** /api/Share/detail/{productid}/{productname}/{sharedid} | 
 
 
 ## Documentation For Models
 
  - [Address](doc//Address.md)
+ - [AffiliateClick](doc//AffiliateClick.md)
  - [AffiliateLink](doc//AffiliateLink.md)
  - [AffiliateType](doc//AffiliateType.md)
  - [Agreement](doc//Agreement.md)
@@ -226,6 +228,14 @@ Class | Method | HTTP request | Description
  - [PaymentType](doc//PaymentType.md)
  - [PaymentTypeResponse](doc//PaymentTypeResponse.md)
  - [PaymentTypeResponseRestResult](doc//PaymentTypeResponseRestResult.md)
+ - [PermissionPolicyActionPermissionObject](doc//PermissionPolicyActionPermissionObject.md)
+ - [PermissionPolicyMemberPermissionsObject](doc//PermissionPolicyMemberPermissionsObject.md)
+ - [PermissionPolicyNavigationPermissionsObject](doc//PermissionPolicyNavigationPermissionsObject.md)
+ - [PermissionPolicyObjectPermissionsObject](doc//PermissionPolicyObjectPermissionsObject.md)
+ - [PermissionPolicyRole](doc//PermissionPolicyRole.md)
+ - [PermissionPolicyTypePermissionsObject](doc//PermissionPolicyTypePermissionsObject.md)
+ - [PermissionPolicyUser](doc//PermissionPolicyUser.md)
+ - [PermissionPolicyUserUsersPermissionPolicyRoleRoles](doc//PermissionPolicyUserUsersPermissionPolicyRoleRoles.md)
  - [Personel](doc//Personel.md)
  - [PersonelDepartment](doc//PersonelDepartment.md)
  - [Platform](doc//Platform.md)
@@ -260,6 +270,10 @@ Class | Method | HTTP request | Description
  - [SmsResponseRestResult](doc//SmsResponseRestResult.md)
  - [StringListRestResult](doc//StringListRestResult.md)
  - [Supplier](doc//Supplier.md)
+ - [Survey](doc//Survey.md)
+ - [SurveyAnswer](doc//SurveyAnswer.md)
+ - [SurveyQuestion](doc//SurveyQuestion.md)
+ - [SurveyTemplate](doc//SurveyTemplate.md)
  - [Ticket](doc//Ticket.md)
  - [TicketCategory](doc//TicketCategory.md)
  - [TimeSlot](doc//TimeSlot.md)
@@ -280,6 +294,7 @@ Class | Method | HTTP request | Description
  - [UploadImageResponse](doc//UploadImageResponse.md)
  - [UploadImageResponseRestResult](doc//UploadImageResponseRestResult.md)
  - [VerifyRequest](doc//VerifyRequest.md)
+ - [XpobjectType](doc//XpobjectType.md)
 
 
 ## Documentation For Authorization

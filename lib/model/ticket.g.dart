@@ -72,6 +72,12 @@ class _$TicketSerializer implements StructuredSerializer<Ticket> {
         ..add(serializers.serialize(object.createdAt,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.order != null) {
+      result
+        ..add('order')
+        ..add(serializers.serialize(object.order,
+            specifiedType: const FullType(int)));
+    }
     if (object.optimisticLockField != null) {
       result
         ..add('optimisticLockField')
@@ -82,12 +88,6 @@ class _$TicketSerializer implements StructuredSerializer<Ticket> {
       result
         ..add('gcrecord')
         ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
             specifiedType: const FullType(int)));
     }
     if (object.customerNavigation != null) {
@@ -158,16 +158,16 @@ class _$TicketSerializer implements StructuredSerializer<Ticket> {
           result.createdAt = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'order':
+          result.order = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'optimisticLockField':
           result.optimisticLockField = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'gcrecord':
           result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'order':
-          result.order = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
         case 'customerNavigation':
@@ -209,11 +209,11 @@ class _$Ticket extends Ticket {
   @override
   final DateTime createdAt;
   @override
+  final int order;
+  @override
   final int optimisticLockField;
   @override
   final int gcrecord;
-  @override
-  final int order;
   @override
   final Customer customerNavigation;
   @override
@@ -234,9 +234,9 @@ class _$Ticket extends Ticket {
       this.status,
       this.phoneNumber,
       this.createdAt,
+      this.order,
       this.optimisticLockField,
       this.gcrecord,
-      this.order,
       this.customerNavigation,
       this.orderNavigation,
       this.ticketCategoryNavigation})
@@ -262,9 +262,9 @@ class _$Ticket extends Ticket {
         status == other.status &&
         phoneNumber == other.phoneNumber &&
         createdAt == other.createdAt &&
+        order == other.order &&
         optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
-        order == other.order &&
         customerNavigation == other.customerNavigation &&
         orderNavigation == other.orderNavigation &&
         ticketCategoryNavigation == other.ticketCategoryNavigation;
@@ -296,9 +296,9 @@ class _$Ticket extends Ticket {
                                         status.hashCode),
                                     phoneNumber.hashCode),
                                 createdAt.hashCode),
-                            optimisticLockField.hashCode),
-                        gcrecord.hashCode),
-                    order.hashCode),
+                            order.hashCode),
+                        optimisticLockField.hashCode),
+                    gcrecord.hashCode),
                 customerNavigation.hashCode),
             orderNavigation.hashCode),
         ticketCategoryNavigation.hashCode));
@@ -316,9 +316,9 @@ class _$Ticket extends Ticket {
           ..add('status', status)
           ..add('phoneNumber', phoneNumber)
           ..add('createdAt', createdAt)
+          ..add('order', order)
           ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
-          ..add('order', order)
           ..add('customerNavigation', customerNavigation)
           ..add('orderNavigation', orderNavigation)
           ..add('ticketCategoryNavigation', ticketCategoryNavigation))
@@ -366,6 +366,10 @@ class TicketBuilder implements Builder<Ticket, TicketBuilder> {
   DateTime get createdAt => _$this._createdAt;
   set createdAt(DateTime createdAt) => _$this._createdAt = createdAt;
 
+  int _order;
+  int get order => _$this._order;
+  set order(int order) => _$this._order = order;
+
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
@@ -374,10 +378,6 @@ class TicketBuilder implements Builder<Ticket, TicketBuilder> {
   int _gcrecord;
   int get gcrecord => _$this._gcrecord;
   set gcrecord(int gcrecord) => _$this._gcrecord = gcrecord;
-
-  int _order;
-  int get order => _$this._order;
-  set order(int order) => _$this._order = order;
 
   CustomerBuilder _customerNavigation;
   CustomerBuilder get customerNavigation =>
@@ -411,9 +411,9 @@ class TicketBuilder implements Builder<Ticket, TicketBuilder> {
       _status = _$v.status;
       _phoneNumber = _$v.phoneNumber;
       _createdAt = _$v.createdAt;
+      _order = _$v.order;
       _optimisticLockField = _$v.optimisticLockField;
       _gcrecord = _$v.gcrecord;
-      _order = _$v.order;
       _customerNavigation = _$v.customerNavigation?.toBuilder();
       _orderNavigation = _$v.orderNavigation?.toBuilder();
       _ticketCategoryNavigation = _$v.ticketCategoryNavigation?.toBuilder();
@@ -450,9 +450,9 @@ class TicketBuilder implements Builder<Ticket, TicketBuilder> {
               status: status,
               phoneNumber: phoneNumber,
               createdAt: createdAt,
+              order: order,
               optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
-              order: order,
               customerNavigation: _customerNavigation?.build(),
               orderNavigation: _orderNavigation?.build(),
               ticketCategoryNavigation: _ticketCategoryNavigation?.build());

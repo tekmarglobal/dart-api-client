@@ -1,15 +1,16 @@
             import 'package:openapi/model/agreement_log.dart';
             import 'package:openapi/model/payment.dart';
             import 'package:openapi/model/ticket.dart';
-            import 'package:openapi/model/address.dart';
             import 'package:openapi/model/affiliate_link.dart';
             import 'package:openapi/model/device_login.dart';
-            import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/call.dart';
             import 'package:openapi/model/customer_login_attempt.dart';
             import 'package:openapi/model/cart.dart';
             import 'package:openapi/model/customer_favorite_list.dart';
             import 'package:openapi/model/order.dart';
+            import 'package:openapi/model/address.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/affiliate_click.dart';
         import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -105,6 +106,10 @@ abstract class Customer implements Built<Customer, CustomerBuilder> {
         @nullable
     @BuiltValueField(wireName: r'address')
     BuiltList<Address> get address;
+    
+        @nullable
+    @BuiltValueField(wireName: r'affiliateClick')
+    BuiltList<AffiliateClick> get affiliateClick;
     
         @nullable
     @BuiltValueField(wireName: r'affiliateLink')

@@ -7,6 +7,7 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/standard_json_plugin.dart';
 
 import 'package:openapi/model/address.dart';
+import 'package:openapi/model/affiliate_click.dart';
 import 'package:openapi/model/affiliate_link.dart';
 import 'package:openapi/model/affiliate_type.dart';
 import 'package:openapi/model/agreement.dart';
@@ -101,6 +102,14 @@ import 'package:openapi/model/payment_status.dart';
 import 'package:openapi/model/payment_type.dart';
 import 'package:openapi/model/payment_type_response.dart';
 import 'package:openapi/model/payment_type_response_rest_result.dart';
+import 'package:openapi/model/permission_policy_action_permission_object.dart';
+import 'package:openapi/model/permission_policy_member_permissions_object.dart';
+import 'package:openapi/model/permission_policy_navigation_permissions_object.dart';
+import 'package:openapi/model/permission_policy_object_permissions_object.dart';
+import 'package:openapi/model/permission_policy_role.dart';
+import 'package:openapi/model/permission_policy_type_permissions_object.dart';
+import 'package:openapi/model/permission_policy_user.dart';
+import 'package:openapi/model/permission_policy_user_users_permission_policy_role_roles.dart';
 import 'package:openapi/model/personel.dart';
 import 'package:openapi/model/personel_department.dart';
 import 'package:openapi/model/platform.dart';
@@ -135,6 +144,10 @@ import 'package:openapi/model/sms_response.dart';
 import 'package:openapi/model/sms_response_rest_result.dart';
 import 'package:openapi/model/string_list_rest_result.dart';
 import 'package:openapi/model/supplier.dart';
+import 'package:openapi/model/survey.dart';
+import 'package:openapi/model/survey_answer.dart';
+import 'package:openapi/model/survey_question.dart';
+import 'package:openapi/model/survey_template.dart';
 import 'package:openapi/model/ticket.dart';
 import 'package:openapi/model/ticket_category.dart';
 import 'package:openapi/model/time_slot.dart';
@@ -155,12 +168,14 @@ import 'package:openapi/model/update_timeslot_request.dart';
 import 'package:openapi/model/upload_image_response.dart';
 import 'package:openapi/model/upload_image_response_rest_result.dart';
 import 'package:openapi/model/verify_request.dart';
+import 'package:openapi/model/xpobject_type.dart';
 
 
 part 'serializers.g.dart';
 
 @SerializersFor(const [
 Address,
+AffiliateClick,
 AffiliateLink,
 AffiliateType,
 Agreement,
@@ -255,6 +270,14 @@ PaymentStatus,
 PaymentType,
 PaymentTypeResponse,
 PaymentTypeResponseRestResult,
+PermissionPolicyActionPermissionObject,
+PermissionPolicyMemberPermissionsObject,
+PermissionPolicyNavigationPermissionsObject,
+PermissionPolicyObjectPermissionsObject,
+PermissionPolicyRole,
+PermissionPolicyTypePermissionsObject,
+PermissionPolicyUser,
+PermissionPolicyUserUsersPermissionPolicyRoleRoles,
 Personel,
 PersonelDepartment,
 Platform,
@@ -289,6 +312,10 @@ SmsResponse,
 SmsResponseRestResult,
 StringListRestResult,
 Supplier,
+Survey,
+SurveyAnswer,
+SurveyQuestion,
+SurveyTemplate,
 Ticket,
 TicketCategory,
 TimeSlot,
@@ -309,6 +336,7 @@ UpdateTimeslotRequest,
 UploadImageResponse,
 UploadImageResponseRestResult,
 VerifyRequest,
+XpobjectType,
 
 ])
 
@@ -317,6 +345,9 @@ Serializers serializers = (_$serializers.toBuilder()
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Address)]),
 () => new ListBuilder<Address>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(AffiliateClick)]),
+() => new ListBuilder<AffiliateClick>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(AffiliateLink)]),
 () => new ListBuilder<AffiliateLink>())
@@ -600,6 +631,30 @@ const FullType(BuiltList, const [const FullType(PaymentTypeResponse)]),
 const FullType(BuiltList, const [const FullType(PaymentTypeResponseRestResult)]),
 () => new ListBuilder<PaymentTypeResponseRestResult>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyActionPermissionObject)]),
+() => new ListBuilder<PermissionPolicyActionPermissionObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyMemberPermissionsObject)]),
+() => new ListBuilder<PermissionPolicyMemberPermissionsObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyNavigationPermissionsObject)]),
+() => new ListBuilder<PermissionPolicyNavigationPermissionsObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyObjectPermissionsObject)]),
+() => new ListBuilder<PermissionPolicyObjectPermissionsObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyRole)]),
+() => new ListBuilder<PermissionPolicyRole>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyTypePermissionsObject)]),
+() => new ListBuilder<PermissionPolicyTypePermissionsObject>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyUser)]),
+() => new ListBuilder<PermissionPolicyUser>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(PermissionPolicyUserUsersPermissionPolicyRoleRoles)]),
+() => new ListBuilder<PermissionPolicyUserUsersPermissionPolicyRoleRoles>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Personel)]),
 () => new ListBuilder<Personel>())
 ..addBuilderFactory(
@@ -702,6 +757,18 @@ const FullType(BuiltList, const [const FullType(StringListRestResult)]),
 const FullType(BuiltList, const [const FullType(Supplier)]),
 () => new ListBuilder<Supplier>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(Survey)]),
+() => new ListBuilder<Survey>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SurveyAnswer)]),
+() => new ListBuilder<SurveyAnswer>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SurveyQuestion)]),
+() => new ListBuilder<SurveyQuestion>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(SurveyTemplate)]),
+() => new ListBuilder<SurveyTemplate>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(Ticket)]),
 () => new ListBuilder<Ticket>())
 ..addBuilderFactory(
@@ -761,6 +828,9 @@ const FullType(BuiltList, const [const FullType(UploadImageResponseRestResult)])
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(VerifyRequest)]),
 () => new ListBuilder<VerifyRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(XpobjectType)]),
+() => new ListBuilder<XpobjectType>())
 
 ..add(Iso8601DateTimeSerializer())
 ).build();

@@ -1,13 +1,14 @@
             import 'package:openapi/model/order_product.dart';
             import 'package:openapi/model/payment.dart';
-            import 'package:openapi/model/payment_type.dart';
             import 'package:openapi/model/ticket.dart';
-            import 'package:openapi/model/address.dart';
             import 'package:openapi/model/customer.dart';
             import 'package:openapi/model/order_status.dart';
-            import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/region.dart';
             import 'package:openapi/model/cart.dart';
+            import 'package:openapi/model/payment_type.dart';
+            import 'package:openapi/model/address.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/survey.dart';
             import 'package:openapi/model/device.dart';
             import 'package:openapi/model/time_slot.dart';
         import 'package:built_value/built_value.dart';
@@ -157,6 +158,10 @@ abstract class Order implements Built<Order, OrderBuilder> {
         @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<Payment> get payment;
+    
+        @nullable
+    @BuiltValueField(wireName: r'survey')
+    BuiltList<Survey> get survey;
     
         @nullable
     @BuiltValueField(wireName: r'ticket')

@@ -8,6 +8,7 @@ part of serializers;
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Address.serializer)
+      ..add(AffiliateClick.serializer)
       ..add(AffiliateLink.serializer)
       ..add(AffiliateType.serializer)
       ..add(Agreement.serializer)
@@ -102,6 +103,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PaymentType.serializer)
       ..add(PaymentTypeResponse.serializer)
       ..add(PaymentTypeResponseRestResult.serializer)
+      ..add(PermissionPolicyActionPermissionObject.serializer)
+      ..add(PermissionPolicyMemberPermissionsObject.serializer)
+      ..add(PermissionPolicyNavigationPermissionsObject.serializer)
+      ..add(PermissionPolicyObjectPermissionsObject.serializer)
+      ..add(PermissionPolicyRole.serializer)
+      ..add(PermissionPolicyTypePermissionsObject.serializer)
+      ..add(PermissionPolicyUser.serializer)
+      ..add(PermissionPolicyUserUsersPermissionPolicyRoleRoles.serializer)
       ..add(Personel.serializer)
       ..add(PersonelDepartment.serializer)
       ..add(Platform.serializer)
@@ -136,6 +145,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SmsResponseRestResult.serializer)
       ..add(StringListRestResult.serializer)
       ..add(Supplier.serializer)
+      ..add(Survey.serializer)
+      ..add(SurveyAnswer.serializer)
+      ..add(SurveyQuestion.serializer)
+      ..add(SurveyTemplate.serializer)
       ..add(Ticket.serializer)
       ..add(TicketCategory.serializer)
       ..add(TimeSlot.serializer)
@@ -156,9 +169,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UploadImageResponse.serializer)
       ..add(UploadImageResponseRestResult.serializer)
       ..add(VerifyRequest.serializer)
+      ..add(XpobjectType.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Address)]),
           () => new ListBuilder<Address>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AffiliateClick)]),
+          () => new ListBuilder<AffiliateClick>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AffiliateLink)]),
           () => new ListBuilder<AffiliateLink>())
@@ -201,6 +218,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(RegionRegionsNeighborhoodNeighborhoods)]),
           () => new ListBuilder<RegionRegionsNeighborhoodNeighborhoods>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(AffiliateClick)]),
+          () => new ListBuilder<AffiliateClick>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AffiliateLink)]),
           () => new ListBuilder<AffiliateLink>())
@@ -400,6 +420,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(Payment)]),
           () => new ListBuilder<Payment>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Survey)]),
+          () => new ListBuilder<Survey>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Ticket)]),
           () => new ListBuilder<Ticket>())
       ..addBuilderFactory(
@@ -409,21 +432,26 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(Payment)]),
           () => new ListBuilder<Payment>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(PersonelDepartment)]),
-          () => new ListBuilder<PersonelDepartment>())
+          const FullType(BuiltList,
+              const [const FullType(PermissionPolicyActionPermissionObject)]),
+          () => new ListBuilder<PermissionPolicyActionPermissionObject>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Platform)]),
-          () => new ListBuilder<Platform>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Product)]),
-          () => new ListBuilder<Product>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductImportDetail)]),
-          () => new ListBuilder<ProductImportDetail>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(RAddress)]),
-          () => new ListBuilder<RAddress>())
+          const FullType(BuiltList, const [
+            const FullType(PermissionPolicyNavigationPermissionsObject)
+          ]),
+          () => new ListBuilder<PermissionPolicyNavigationPermissionsObject>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyTypePermissionsObject)]), () => new ListBuilder<PermissionPolicyTypePermissionsObject>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyUserUsersPermissionPolicyRoleRoles)]), () => new ListBuilder<PermissionPolicyUserUsersPermissionPolicyRoleRoles>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyMemberPermissionsObject)]), () => new ListBuilder<PermissionPolicyMemberPermissionsObject>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyObjectPermissionsObject)]), () => new ListBuilder<PermissionPolicyObjectPermissionsObject>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyRole)]), () => new ListBuilder<PermissionPolicyRole>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Survey)]), () => new ListBuilder<Survey>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PermissionPolicyUserUsersPermissionPolicyRoleRoles)]), () => new ListBuilder<PermissionPolicyUserUsersPermissionPolicyRoleRoles>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(PersonelDepartment)]), () => new ListBuilder<PersonelDepartment>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Platform)]), () => new ListBuilder<Platform>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Product)]), () => new ListBuilder<Product>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(ProductImportDetail)]), () => new ListBuilder<ProductImportDetail>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RAddress)]), () => new ListBuilder<RAddress>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RAddress)]), () => new ListBuilder<RAddress>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RBanner)]), () => new ListBuilder<RBanner>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RCartItemImpact)]), () => new ListBuilder<RCartItemImpact>())
@@ -440,6 +468,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RegionResponse)]), () => new ListBuilder<RegionResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(RegionResponse)]), () => new ListBuilder<RegionResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(String)]), () => new ListBuilder<String>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Survey)]), () => new ListBuilder<Survey>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(SurveyQuestion)]), () => new ListBuilder<SurveyQuestion>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(SurveyAnswer)]), () => new ListBuilder<SurveyAnswer>())
+      ..addBuilderFactory(const FullType(BuiltList, const [const FullType(SurveyAnswer)]), () => new ListBuilder<SurveyAnswer>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(Ticket)]), () => new ListBuilder<Ticket>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotResponse)]), () => new ListBuilder<TimeSlotResponse>())
       ..addBuilderFactory(const FullType(BuiltList, const [const FullType(TimeSlotsResponse)]), () => new ListBuilder<TimeSlotsResponse>())

@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **defaultAddressNavigation** | [**Address**](Address.md) |  | [optional] [default to null]
 **invoiceAddressNavigation** | [**Address**](Address.md) |  | [optional] [default to null]
 **address** | [**BuiltList&lt;Address&gt;**](Address.md) |  | [optional] [default to const []]
+**affiliateClick** | [**BuiltList&lt;AffiliateClick&gt;**](AffiliateClick.md) |  | [optional] [default to const []]
 **affiliateLink** | [**BuiltList&lt;AffiliateLink&gt;**](AffiliateLink.md) |  | [optional] [default to const []]
 **agreementLog** | [**BuiltList&lt;AgreementLog&gt;**](AgreementLog.md) |  | [optional] [default to const []]
 **call** | [**BuiltList&lt;Call&gt;**](Call.md) |  | [optional] [default to const []]

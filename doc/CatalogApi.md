@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiCatalogAllCategoriesGet**](CatalogApi.md#apiCatalogAllCategoriesGet) | **get** /api/Catalog/allCategories | 
+[**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apiCatalogAllCategoriesRegionGet) | **get** /api/Catalog/allCategoriesRegion | 
 [**apiCatalogCreateCategoryPost**](CatalogApi.md#apiCatalogCreateCategoryPost) | **post** /api/Catalog/createCategory | 
 [**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apiCatalogDeleteCategoryDelete) | **delete** /api/Catalog/deleteCategory | 
 [**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apiCatalogImportCategoriesFromOlimposPost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
@@ -42,6 +43,51 @@ try {
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+[**RCategoryRestResult**](RCategoryRestResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCatalogAllCategoriesRegionGet**
+> RCategoryRestResult apiCatalogAllCategoriesRegionGet(neighborhood)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CatalogApi();
+var neighborhood = 56; // int | 
+
+try { 
+    var result = api_instance.apiCatalogAllCategoriesRegionGet(neighborhood);
+    print(result);
+} catch (e) {
+    print("Exception when calling CatalogApi->apiCatalogAllCategoriesRegionGet: $e\n");
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **neighborhood** | **int**|  | [optional] [default to null]
 
 ### Return type
 

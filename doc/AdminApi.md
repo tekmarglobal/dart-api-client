@@ -15,7 +15,6 @@ Method | HTTP request | Description
 [**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiAdminGenerateTimeSlotsPost) | **post** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGetConfigurationGet**](AdminApi.md#apiAdminGetConfigurationGet) | **get** /api/Admin/GetConfiguration | 
 [**apiAdminGetProductGet**](AdminApi.md#apiAdminGetProductGet) | **get** /api/Admin/GetProduct | 
-[**apiAdminGetShareLinkPost**](AdminApi.md#apiAdminGetShareLinkPost) | **post** /api/Admin/GetShareLink | 
 [**apiAdminRegionNeighborhoodPost**](AdminApi.md#apiAdminRegionNeighborhoodPost) | **post** /api/Admin/RegionNeighborhood | 
 [**apiAdminRegionPopulationGet**](AdminApi.md#apiAdminRegionPopulationGet) | **get** /api/Admin/RegionPopulation | 
 [**apiAdminRegionPost**](AdminApi.md#apiAdminRegionPost) | **post** /api/Admin/Region | 
@@ -237,7 +236,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGetProductGet**
-> int apiAdminGetProductGet(erpId)
+> String apiAdminGetProductGet(erpId, productId)
 
 
 
@@ -251,9 +250,10 @@ import 'package:openapi/api.dart';
 
 var api_instance = new AdminApi();
 var erpId = erpId_example; // String | 
+var productId = 56; // int | 
 
 try { 
-    var result = api_instance.apiAdminGetProductGet(erpId);
+    var result = api_instance.apiAdminGetProductGet(erpId, productId);
     print(result);
 } catch (e) {
     print("Exception when calling AdminApi->apiAdminGetProductGet: $e\n");
@@ -265,51 +265,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **erpId** | **String**|  | [optional] [default to null]
-
-### Return type
-
-**int**
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **apiAdminGetShareLinkPost**
-> String apiAdminGetShareLinkPost(linkRequest)
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new AdminApi();
-var linkRequest = new LinkRequest(); // LinkRequest | 
-
-try { 
-    var result = api_instance.apiAdminGetShareLinkPost(linkRequest);
-    print(result);
-} catch (e) {
-    print("Exception when calling AdminApi->apiAdminGetShareLinkPost: $e\n");
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **linkRequest** | [**LinkRequest**](LinkRequest.md)|  | [optional] 
+ **productId** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -321,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

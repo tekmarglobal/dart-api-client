@@ -63,6 +63,54 @@ class CatalogApi {
         /// 
         ///
         /// 
+        Future<Response<RCategoryRestResult>>apiCatalogAllCategoriesRegionGet({ int neighborhood,CancelToken cancelToken, Map<String, String> headers,}) async {
+
+        String _path = "/api/Catalog/allCategoriesRegion";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
+        dynamic bodyData;
+
+                queryParams[r'Neighborhood'] = neighborhood;
+        queryParams.removeWhere((key, value) => value == null);
+        headerParams.removeWhere((key, value) => value == null);
+
+        List<String> contentTypes = [];
+
+
+
+            return _dio.request(
+            _path,
+            queryParameters: queryParams,
+            data: bodyData,
+            options: Options(
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
+            ),
+            cancelToken: cancelToken,
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RCategoryRestResult);
+        var data = _serializers.deserializeWith<RCategoryRestResult>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<RCategoryRestResult>(
+                data: data,
+                headers: response.headers,
+                request: response.request,
+                redirects: response.redirects,
+                statusCode: response.statusCode,
+                statusMessage: response.statusMessage,
+                extra: response.extra,
+            );
+            });
+            }
+        /// 
+        ///
+        /// 
         Future<Response<RCategoryRestResult>>apiCatalogCreateCategoryPost({ String name,int parent,int level,bool showInMenu,CancelToken cancelToken, Map<String, String> headers,}) async {
 
         String _path = "/api/Catalog/createCategory";

@@ -151,6 +151,13 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
             specifiedType:
                 const FullType(BuiltList, const [const FullType(Address)])));
     }
+    if (object.affiliateClick != null) {
+      result
+        ..add('affiliateClick')
+        ..add(serializers.serialize(object.affiliateClick,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AffiliateClick)])));
+    }
     if (object.affiliateLink != null) {
       result
         ..add('affiliateLink')
@@ -325,6 +332,12 @@ class _$CustomerSerializer implements StructuredSerializer<Customer> {
                       BuiltList, const [const FullType(Address)]))
               as BuiltList<Object>);
           break;
+        case 'affiliateClick':
+          result.affiliateClick.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AffiliateClick)]))
+              as BuiltList<Object>);
+          break;
         case 'affiliateLink':
           result.affiliateLink.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -438,6 +451,8 @@ class _$Customer extends Customer {
   @override
   final BuiltList<Address> address;
   @override
+  final BuiltList<AffiliateClick> affiliateClick;
+  @override
   final BuiltList<AffiliateLink> affiliateLink;
   @override
   final BuiltList<AgreementLog> agreementLog;
@@ -484,6 +499,7 @@ class _$Customer extends Customer {
       this.defaultAddressNavigation,
       this.invoiceAddressNavigation,
       this.address,
+      this.affiliateClick,
       this.affiliateLink,
       this.agreementLog,
       this.call,
@@ -529,6 +545,7 @@ class _$Customer extends Customer {
         defaultAddressNavigation == other.defaultAddressNavigation &&
         invoiceAddressNavigation == other.invoiceAddressNavigation &&
         address == other.address &&
+        affiliateClick == other.affiliateClick &&
         affiliateLink == other.affiliateLink &&
         agreementLog == other.agreementLog &&
         call == other.call &&
@@ -561,16 +578,16 @@ class _$Customer extends Customer {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode), anonymous.hashCode),
-                                                                                optimisticLockField.hashCode),
-                                                                            allowCampaign.hashCode),
-                                                                        identificationNumber.hashCode),
-                                                                    defaultAddress.hashCode),
-                                                                invoiceAddress.hashCode),
-                                                            uid.hashCode),
-                                                        defaultAddressNavigation.hashCode),
-                                                    invoiceAddressNavigation.hashCode),
-                                                address.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode), anonymous.hashCode), optimisticLockField.hashCode),
+                                                                                allowCampaign.hashCode),
+                                                                            identificationNumber.hashCode),
+                                                                        defaultAddress.hashCode),
+                                                                    invoiceAddress.hashCode),
+                                                                uid.hashCode),
+                                                            defaultAddressNavigation.hashCode),
+                                                        invoiceAddressNavigation.hashCode),
+                                                    address.hashCode),
+                                                affiliateClick.hashCode),
                                             affiliateLink.hashCode),
                                         agreementLog.hashCode),
                                     call.hashCode),
@@ -608,6 +625,7 @@ class _$Customer extends Customer {
           ..add('defaultAddressNavigation', defaultAddressNavigation)
           ..add('invoiceAddressNavigation', invoiceAddressNavigation)
           ..add('address', address)
+          ..add('affiliateClick', affiliateClick)
           ..add('affiliateLink', affiliateLink)
           ..add('agreementLog', agreementLog)
           ..add('call', call)
@@ -725,6 +743,12 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _$this._address ??= new ListBuilder<Address>();
   set address(ListBuilder<Address> address) => _$this._address = address;
 
+  ListBuilder<AffiliateClick> _affiliateClick;
+  ListBuilder<AffiliateClick> get affiliateClick =>
+      _$this._affiliateClick ??= new ListBuilder<AffiliateClick>();
+  set affiliateClick(ListBuilder<AffiliateClick> affiliateClick) =>
+      _$this._affiliateClick = affiliateClick;
+
   ListBuilder<AffiliateLink> _affiliateLink;
   ListBuilder<AffiliateLink> get affiliateLink =>
       _$this._affiliateLink ??= new ListBuilder<AffiliateLink>();
@@ -805,6 +829,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
       _defaultAddressNavigation = _$v.defaultAddressNavigation?.toBuilder();
       _invoiceAddressNavigation = _$v.invoiceAddressNavigation?.toBuilder();
       _address = _$v.address?.toBuilder();
+      _affiliateClick = _$v.affiliateClick?.toBuilder();
       _affiliateLink = _$v.affiliateLink?.toBuilder();
       _agreementLog = _$v.agreementLog?.toBuilder();
       _call = _$v.call?.toBuilder();
@@ -861,6 +886,7 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
               defaultAddressNavigation: _defaultAddressNavigation?.build(),
               invoiceAddressNavigation: _invoiceAddressNavigation?.build(),
               address: _address?.build(),
+              affiliateClick: _affiliateClick?.build(),
               affiliateLink: _affiliateLink?.build(),
               agreementLog: _agreementLog?.build(),
               call: _call?.build(),
@@ -880,6 +906,8 @@ class CustomerBuilder implements Builder<Customer, CustomerBuilder> {
         _invoiceAddressNavigation?.build();
         _$failedField = 'address';
         _address?.build();
+        _$failedField = 'affiliateClick';
+        _affiliateClick?.build();
         _$failedField = 'affiliateLink';
         _affiliateLink?.build();
         _$failedField = 'agreementLog';

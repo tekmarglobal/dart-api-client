@@ -1,5 +1,7 @@
             import 'package:openapi/model/customer.dart';
+            import 'package:built_collection/built_collection.dart';
             import 'package:openapi/model/affiliate_type.dart';
+            import 'package:openapi/model/affiliate_click.dart';
         import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -47,6 +49,10 @@ abstract class AffiliateLink implements Built<AffiliateLink, AffiliateLinkBuilde
         @nullable
     @BuiltValueField(wireName: r'recordTypeNavigation')
     AffiliateType get recordTypeNavigation;
+    
+        @nullable
+    @BuiltValueField(wireName: r'affiliateClick')
+    BuiltList<AffiliateClick> get affiliateClick;
 
     // Boilerplate code needed to wire-up generated code
     AffiliateLink._();

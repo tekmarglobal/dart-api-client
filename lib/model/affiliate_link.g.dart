@@ -79,6 +79,13 @@ class _$AffiliateLinkSerializer implements StructuredSerializer<AffiliateLink> {
         ..add(serializers.serialize(object.recordTypeNavigation,
             specifiedType: const FullType(AffiliateType)));
     }
+    if (object.affiliateClick != null) {
+      result
+        ..add('affiliateClick')
+        ..add(serializers.serialize(object.affiliateClick,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AffiliateClick)])));
+    }
     return result;
   }
 
@@ -134,6 +141,12 @@ class _$AffiliateLinkSerializer implements StructuredSerializer<AffiliateLink> {
           result.recordTypeNavigation.replace(serializers.deserialize(value,
               specifiedType: const FullType(AffiliateType)) as AffiliateType);
           break;
+        case 'affiliateClick':
+          result.affiliateClick.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AffiliateClick)]))
+              as BuiltList<Object>);
+          break;
       }
     }
 
@@ -162,6 +175,8 @@ class _$AffiliateLink extends AffiliateLink {
   final Customer createdByNavigation;
   @override
   final AffiliateType recordTypeNavigation;
+  @override
+  final BuiltList<AffiliateClick> affiliateClick;
 
   factory _$AffiliateLink([void Function(AffiliateLinkBuilder) updates]) =>
       (new AffiliateLinkBuilder()..update(updates)).build();
@@ -176,7 +191,8 @@ class _$AffiliateLink extends AffiliateLink {
       this.recordType,
       this.optimisticLockField,
       this.createdByNavigation,
-      this.recordTypeNavigation})
+      this.recordTypeNavigation,
+      this.affiliateClick})
       : super._();
 
   @override
@@ -199,7 +215,8 @@ class _$AffiliateLink extends AffiliateLink {
         recordType == other.recordType &&
         optimisticLockField == other.optimisticLockField &&
         createdByNavigation == other.createdByNavigation &&
-        recordTypeNavigation == other.recordTypeNavigation;
+        recordTypeNavigation == other.recordTypeNavigation &&
+        affiliateClick == other.affiliateClick;
   }
 
   @override
@@ -212,16 +229,18 @@ class _$AffiliateLink extends AffiliateLink {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, oid.hashCode),
-                                        createdAt.hashCode),
-                                    lastClickedAt.hashCode),
-                                createdBy.hashCode),
-                            url.hashCode),
-                        recordId.hashCode),
-                    recordType.hashCode),
-                optimisticLockField.hashCode),
-            createdByNavigation.hashCode),
-        recordTypeNavigation.hashCode));
+                                    $jc(
+                                        $jc($jc(0, oid.hashCode),
+                                            createdAt.hashCode),
+                                        lastClickedAt.hashCode),
+                                    createdBy.hashCode),
+                                url.hashCode),
+                            recordId.hashCode),
+                        recordType.hashCode),
+                    optimisticLockField.hashCode),
+                createdByNavigation.hashCode),
+            recordTypeNavigation.hashCode),
+        affiliateClick.hashCode));
   }
 
   @override
@@ -236,7 +255,8 @@ class _$AffiliateLink extends AffiliateLink {
           ..add('recordType', recordType)
           ..add('optimisticLockField', optimisticLockField)
           ..add('createdByNavigation', createdByNavigation)
-          ..add('recordTypeNavigation', recordTypeNavigation))
+          ..add('recordTypeNavigation', recordTypeNavigation)
+          ..add('affiliateClick', affiliateClick))
         .toString();
   }
 }
@@ -291,6 +311,12 @@ class AffiliateLinkBuilder
   set recordTypeNavigation(AffiliateTypeBuilder recordTypeNavigation) =>
       _$this._recordTypeNavigation = recordTypeNavigation;
 
+  ListBuilder<AffiliateClick> _affiliateClick;
+  ListBuilder<AffiliateClick> get affiliateClick =>
+      _$this._affiliateClick ??= new ListBuilder<AffiliateClick>();
+  set affiliateClick(ListBuilder<AffiliateClick> affiliateClick) =>
+      _$this._affiliateClick = affiliateClick;
+
   AffiliateLinkBuilder();
 
   AffiliateLinkBuilder get _$this {
@@ -305,6 +331,7 @@ class AffiliateLinkBuilder
       _optimisticLockField = _$v.optimisticLockField;
       _createdByNavigation = _$v.createdByNavigation?.toBuilder();
       _recordTypeNavigation = _$v.recordTypeNavigation?.toBuilder();
+      _affiliateClick = _$v.affiliateClick?.toBuilder();
       _$v = null;
     }
     return this;
@@ -338,7 +365,8 @@ class AffiliateLinkBuilder
               recordType: recordType,
               optimisticLockField: optimisticLockField,
               createdByNavigation: _createdByNavigation?.build(),
-              recordTypeNavigation: _recordTypeNavigation?.build());
+              recordTypeNavigation: _recordTypeNavigation?.build(),
+              affiliateClick: _affiliateClick?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -346,6 +374,8 @@ class AffiliateLinkBuilder
         _createdByNavigation?.build();
         _$failedField = 'recordTypeNavigation';
         _recordTypeNavigation?.build();
+        _$failedField = 'affiliateClick';
+        _affiliateClick?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'AffiliateLink', _$failedField, e.toString());

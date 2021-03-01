@@ -46,16 +46,16 @@ abstract class Ticket implements Built<Ticket, TicketBuilder> {
     DateTime get createdAt;
     
         @nullable
+    @BuiltValueField(wireName: r'order')
+    int get order;
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
     
         @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
-    
-        @nullable
-    @BuiltValueField(wireName: r'order')
-    int get order;
     
         @nullable
     @BuiltValueField(wireName: r'customerNavigation')

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **optimisticLockField** | **int** |  | [optional] [default to null]
 **createdByNavigation** | [**Customer**](Customer.md) |  | [optional] [default to null]
 **recordTypeNavigation** | [**AffiliateType**](AffiliateType.md) |  | [optional] [default to null]
+**affiliateClick** | [**BuiltList&lt;AffiliateClick&gt;**](AffiliateClick.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
