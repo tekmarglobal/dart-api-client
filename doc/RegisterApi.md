@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **apiRegisterSendSmsPost**
-> SmsResponseRestResult apiRegisterSendSmsPost(smsRequest)
+> RestResultOfSmsResponseSmsResponse apiRegisterSendSmsPost(smsRequestSmsRequest)
 
 
 
@@ -27,13 +27,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new RegisterApi();
-var smsRequest = new SmsRequest(); // SmsRequest | 
+var smsRequestSmsRequest = new SmsRequestSmsRequest(); // SmsRequestSmsRequest | 
 
 try { 
-    var result = api_instance.apiRegisterSendSmsPost(smsRequest);
+    var result = api_instance.apiRegisterSendSmsPost(smsRequestSmsRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n");
+    print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
 }
 ```
 
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smsRequest** | [**SmsRequest**](SmsRequest.md)|  | [optional] 
+ **smsRequestSmsRequest** | [**SmsRequestSmsRequest**](SmsRequestSmsRequest.md)|  | [optional] 
 
 ### Return type
 
-[**SmsResponseRestResult**](SmsResponseRestResult.md)
+[**RestResultOfSmsResponseSmsResponse**](RestResultOfSmsResponseSmsResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiRegisterVerifySmsPost**
-> LoginResponeRestResult apiRegisterVerifySmsPost(verifyRequest)
+> RestResultOfRegisterServiceLoginResponse apiRegisterVerifySmsPost(verifyRequestVerifyRequest)
 
 
 
@@ -72,13 +72,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new RegisterApi();
-var verifyRequest = new VerifyRequest(); // VerifyRequest | 
+var verifyRequestVerifyRequest = new VerifyRequestVerifyRequest(); // VerifyRequestVerifyRequest | 
 
 try { 
-    var result = api_instance.apiRegisterVerifySmsPost(verifyRequest);
+    var result = api_instance.apiRegisterVerifySmsPost(verifyRequestVerifyRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n");
+    print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
 }
 ```
 
@@ -86,11 +86,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyRequest** | [**VerifyRequest**](VerifyRequest.md)|  | [optional] 
+ **verifyRequestVerifyRequest** | [**VerifyRequestVerifyRequest**](VerifyRequestVerifyRequest.md)|  | [optional] 
 
 ### Return type
 
-[**LoginResponeRestResult**](LoginResponeRestResult.md)
+[**RestResultOfRegisterServiceLoginResponse**](RestResultOfRegisterServiceLoginResponse.md)
 
 ### Authorization
 

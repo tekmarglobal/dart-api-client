@@ -13,12 +13,13 @@ Method | HTTP request | Description
 [**apiDefinitionCitiesPost**](DefinitionApi.md#apiDefinitionCitiesPost) | **post** /api/Definition/Cities | 
 [**apiDefinitionCountiesPost**](DefinitionApi.md#apiDefinitionCountiesPost) | **post** /api/Definition/Counties | 
 [**apiDefinitionFaqGet**](DefinitionApi.md#apiDefinitionFaqGet) | **get** /api/Definition/Faq | 
+[**apiDefinitionHelloGet**](DefinitionApi.md#apiDefinitionHelloGet) | **get** /api/Definition/Hello | 
 [**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apiDefinitionNeighborhoodPost) | **post** /api/Definition/Neighborhood | 
 [**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apiDefinitionUpdateAgreementLogPost) | **post** /api/Definition/UpdateAgreementLog | 
 
 
 # **apiDefinitionAgreementGet**
-> AgreementResponseListRestResult apiDefinitionAgreementGet()
+> RestResultOfListOfDefinitionServiceAgreementResponse apiDefinitionAgreementGet()
 
 
 
@@ -36,7 +37,7 @@ try {
     var result = api_instance.apiDefinitionAgreementGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
 }
 ```
 
@@ -45,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AgreementResponseListRestResult**](AgreementResponseListRestResult.md)
+[**RestResultOfListOfDefinitionServiceAgreementResponse**](RestResultOfListOfDefinitionServiceAgreementResponse.md)
 
 ### Authorization
 
@@ -59,7 +60,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionCitiesPost**
-> CitiesResponseListRestResult apiDefinitionCitiesPost()
+> RestResultOfListOfDefinitionServiceCitiesResponse apiDefinitionCitiesPost()
 
 
 
@@ -77,7 +78,7 @@ try {
     var result = api_instance.apiDefinitionCitiesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n');
 }
 ```
 
@@ -86,7 +87,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CitiesResponseListRestResult**](CitiesResponseListRestResult.md)
+[**RestResultOfListOfDefinitionServiceCitiesResponse**](RestResultOfListOfDefinitionServiceCitiesResponse.md)
 
 ### Authorization
 
@@ -100,7 +101,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionCountiesPost**
-> CountiesResponseListRestResult apiDefinitionCountiesPost(countiesRequest)
+> RestResultOfListOfDefinitionServiceCountiesResponse apiDefinitionCountiesPost(definitionServiceCountiesRequest)
 
 
 
@@ -113,13 +114,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var countiesRequest = new CountiesRequest(); // CountiesRequest | 
+var definitionServiceCountiesRequest = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionCountiesPost(countiesRequest);
+    var result = api_instance.apiDefinitionCountiesPost(definitionServiceCountiesRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
 }
 ```
 
@@ -127,11 +128,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **countiesRequest** | [**CountiesRequest**](CountiesRequest.md)|  | [optional] 
+ **definitionServiceCountiesRequest** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CountiesResponseListRestResult**](CountiesResponseListRestResult.md)
+[**RestResultOfListOfDefinitionServiceCountiesResponse**](RestResultOfListOfDefinitionServiceCountiesResponse.md)
 
 ### Authorization
 
@@ -145,7 +146,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionFaqGet**
-> FaqResponseListRestResult apiDefinitionFaqGet()
+> RestResultOfListOfDefinitionServiceFaqResponse apiDefinitionFaqGet()
 
 
 
@@ -163,7 +164,7 @@ try {
     var result = api_instance.apiDefinitionFaqGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n');
 }
 ```
 
@@ -172,7 +173,48 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FaqResponseListRestResult**](FaqResponseListRestResult.md)
+[**RestResultOfListOfDefinitionServiceFaqResponse**](RestResultOfListOfDefinitionServiceFaqResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiDefinitionHelloGet**
+> String apiDefinitionHelloGet()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new DefinitionApi();
+
+try { 
+    var result = api_instance.apiDefinitionHelloGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
 
 ### Authorization
 
@@ -186,7 +228,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionNeighborhoodPost**
-> NeighborResponseListRestResult apiDefinitionNeighborhoodPost(neighborRequest)
+> RestResultOfListOfDefinitionServiceNeighborResponse apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest)
 
 
 
@@ -199,13 +241,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var neighborRequest = new NeighborRequest(); // NeighborRequest | 
+var definitionServiceNeighborRequest = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionNeighborhoodPost(neighborRequest);
+    var result = api_instance.apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
 }
 ```
 
@@ -213,11 +255,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **neighborRequest** | [**NeighborRequest**](NeighborRequest.md)|  | [optional] 
+ **definitionServiceNeighborRequest** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
 
 ### Return type
 
-[**NeighborResponseListRestResult**](NeighborResponseListRestResult.md)
+[**RestResultOfListOfDefinitionServiceNeighborResponse**](RestResultOfListOfDefinitionServiceNeighborResponse.md)
 
 ### Authorization
 
@@ -231,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionUpdateAgreementLogPost**
-> UpdateAgreementLogResponseRestResult apiDefinitionUpdateAgreementLogPost(updateAgreementRequest)
+> RestResultOfDefinitionServiceUpdateAgreementLogResponse apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest)
 
 
 
@@ -244,13 +286,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var updateAgreementRequest = new UpdateAgreementRequest(); // UpdateAgreementRequest | 
+var definitionServiceUpdateAgreementRequest = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionUpdateAgreementLogPost(updateAgreementRequest);
+    var result = api_instance.apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
 }
 ```
 
@@ -258,11 +300,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateAgreementRequest** | [**UpdateAgreementRequest**](UpdateAgreementRequest.md)|  | [optional] 
+ **definitionServiceUpdateAgreementRequest** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
 
 ### Return type
 
-[**UpdateAgreementLogResponseRestResult**](UpdateAgreementLogResponseRestResult.md)
+[**RestResultOfDefinitionServiceUpdateAgreementLogResponse**](RestResultOfDefinitionServiceUpdateAgreementLogResponse.md)
 
 ### Authorization
 

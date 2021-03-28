@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **apiCustomerDeleteAddressPost**
-> DeleteAddressResponseRestResult apiCustomerDeleteAddressPost(deleteAddressRequest)
+> RestResultOfCustomerServiceDeleteAddressResponse apiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest)
 
 
 
@@ -31,13 +31,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var deleteAddressRequest = new DeleteAddressRequest(); // DeleteAddressRequest | 
+var customerServiceDeleteAddressRequest = new CustomerServiceDeleteAddressRequest(); // CustomerServiceDeleteAddressRequest | 
 
 try { 
-    var result = api_instance.apiCustomerDeleteAddressPost(deleteAddressRequest);
+    var result = api_instance.apiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n');
 }
 ```
 
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **deleteAddressRequest** | [**DeleteAddressRequest**](DeleteAddressRequest.md)|  | [optional] 
+ **customerServiceDeleteAddressRequest** | [**CustomerServiceDeleteAddressRequest**](CustomerServiceDeleteAddressRequest.md)|  | [optional] 
 
 ### Return type
 
-[**DeleteAddressResponseRestResult**](DeleteAddressResponseRestResult.md)
+[**RestResultOfCustomerServiceDeleteAddressResponse**](RestResultOfCustomerServiceDeleteAddressResponse.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerGetCustomerAdressesPost**
-> CustomerAddressResponseRestResult apiCustomerGetCustomerAdressesPost()
+> RestResultOfCustomerServiceCustomerAddressResponse apiCustomerGetCustomerAdressesPost()
 
 
 
@@ -81,7 +81,7 @@ try {
     var result = api_instance.apiCustomerGetCustomerAdressesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n');
 }
 ```
 
@@ -90,7 +90,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CustomerAddressResponseRestResult**](CustomerAddressResponseRestResult.md)
+[**RestResultOfCustomerServiceCustomerAddressResponse**](RestResultOfCustomerServiceCustomerAddressResponse.md)
 
 ### Authorization
 
@@ -104,7 +104,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerPost**
-> CustomerResponseRestResult apiCustomerPost()
+> RestResultOfCustomerServiceCustomerResponse apiCustomerPost()
 
 
 
@@ -122,7 +122,7 @@ try {
     var result = api_instance.apiCustomerPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerPost: $e\n');
 }
 ```
 
@@ -131,7 +131,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CustomerResponseRestResult**](CustomerResponseRestResult.md)
+[**RestResultOfCustomerServiceCustomerResponse**](RestResultOfCustomerServiceCustomerResponse.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateAddressPost**
-> CustomerAddressResponseRestResult apiCustomerUpdateAddressPost(customerAddressRequest)
+> RestResultOfCustomerServiceCustomerAddressResponse apiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest)
 
 
 
@@ -158,13 +158,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var customerAddressRequest = new CustomerAddressRequest(); // CustomerAddressRequest | 
+var customerServiceCustomerAddressRequest = new CustomerServiceCustomerAddressRequest(); // CustomerServiceCustomerAddressRequest | 
 
 try { 
-    var result = api_instance.apiCustomerUpdateAddressPost(customerAddressRequest);
+    var result = api_instance.apiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n');
 }
 ```
 
@@ -172,11 +172,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerAddressRequest** | [**CustomerAddressRequest**](CustomerAddressRequest.md)|  | [optional] 
+ **customerServiceCustomerAddressRequest** | [**CustomerServiceCustomerAddressRequest**](CustomerServiceCustomerAddressRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CustomerAddressResponseRestResult**](CustomerAddressResponseRestResult.md)
+[**RestResultOfCustomerServiceCustomerAddressResponse**](RestResultOfCustomerServiceCustomerAddressResponse.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateCustomerDefultAddressPost**
-> CustomerResponseRestResult apiCustomerUpdateCustomerDefultAddressPost(newCustomerDefaultAddress)
+> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress)
 
 
 
@@ -203,13 +203,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var newCustomerDefaultAddress = new NewCustomerDefaultAddress(); // NewCustomerDefaultAddress | 
+var customerServiceNewCustomerDefaultAddress = new CustomerServiceNewCustomerDefaultAddress(); // CustomerServiceNewCustomerDefaultAddress | 
 
 try { 
-    var result = api_instance.apiCustomerUpdateCustomerDefultAddressPost(newCustomerDefaultAddress);
+    var result = api_instance.apiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n');
 }
 ```
 
@@ -217,11 +217,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **newCustomerDefaultAddress** | [**NewCustomerDefaultAddress**](NewCustomerDefaultAddress.md)|  | [optional] 
+ **customerServiceNewCustomerDefaultAddress** | [**CustomerServiceNewCustomerDefaultAddress**](CustomerServiceNewCustomerDefaultAddress.md)|  | [optional] 
 
 ### Return type
 
-[**CustomerResponseRestResult**](CustomerResponseRestResult.md)
+[**RestResultOfCustomerServiceCustomerResponse**](RestResultOfCustomerServiceCustomerResponse.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateCustomerPost**
-> CustomerResponseRestResult apiCustomerUpdateCustomerPost(newCustomerRequest)
+> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest)
 
 
 
@@ -248,13 +248,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CustomerApi();
-var newCustomerRequest = new NewCustomerRequest(); // NewCustomerRequest | 
+var customerServiceNewCustomerRequest = new CustomerServiceNewCustomerRequest(); // CustomerServiceNewCustomerRequest | 
 
 try { 
-    var result = api_instance.apiCustomerUpdateCustomerPost(newCustomerRequest);
+    var result = api_instance.apiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n');
 }
 ```
 
@@ -262,11 +262,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **newCustomerRequest** | [**NewCustomerRequest**](NewCustomerRequest.md)|  | [optional] 
+ **customerServiceNewCustomerRequest** | [**CustomerServiceNewCustomerRequest**](CustomerServiceNewCustomerRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CustomerResponseRestResult**](CustomerResponseRestResult.md)
+[**RestResultOfCustomerServiceCustomerResponse**](RestResultOfCustomerServiceCustomerResponse.md)
 
 ### Authorization
 

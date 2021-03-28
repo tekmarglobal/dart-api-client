@@ -32,7 +32,7 @@ var api_instance = new PaymentApi();
 try { 
     api_instance.apiPaymentCardSuccessPost();
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentCardSuccessPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentCardSuccessPost: $e\n');
 }
 ```
 
@@ -55,7 +55,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiPaymentCreatePaymentPost**
-> PaymentResponseRestResult apiPaymentCreatePaymentPost(paymentRequest)
+> RestResultOfPaymentServicePaymentResponse apiPaymentCreatePaymentPost(paymentServicePaymentRequest)
 
 
 
@@ -68,13 +68,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new PaymentApi();
-var paymentRequest = new PaymentRequest(); // PaymentRequest | 
+var paymentServicePaymentRequest = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest | 
 
 try { 
-    var result = api_instance.apiPaymentCreatePaymentPost(paymentRequest);
+    var result = api_instance.apiPaymentCreatePaymentPost(paymentServicePaymentRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n');
 }
 ```
 
@@ -82,11 +82,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentRequest** | [**PaymentRequest**](PaymentRequest.md)|  | [optional] 
+ **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 
-[**PaymentResponseRestResult**](PaymentResponseRestResult.md)
+[**RestResultOfPaymentServicePaymentResponse**](RestResultOfPaymentServicePaymentResponse.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiPaymentGetPaymentTypesPost**
-> PaymentTypeResponseRestResult apiPaymentGetPaymentTypesPost()
+> RestResultOfPaymentServicePaymentTypeResponse apiPaymentGetPaymentTypesPost()
 
 
 
@@ -118,7 +118,7 @@ try {
     var result = api_instance.apiPaymentGetPaymentTypesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentGetPaymentTypesPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentGetPaymentTypesPost: $e\n');
 }
 ```
 
@@ -127,7 +127,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PaymentTypeResponseRestResult**](PaymentTypeResponseRestResult.md)
+[**RestResultOfPaymentServicePaymentTypeResponse**](RestResultOfPaymentServicePaymentTypeResponse.md)
 
 ### Authorization
 

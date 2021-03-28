@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **apiSanityCheckGet**
-> StringListRestResult apiSanityCheckGet(fix)
+> RestResultOfListOfSystemString apiSanityCheckGet(fix)
 
 
 
@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiSanityCheckGet(fix);
     print(result);
 } catch (e) {
-    print("Exception when calling SanityApi->apiSanityCheckGet: $e\n");
+    print('Exception when calling SanityApi->apiSanityCheckGet: $e\n');
 }
 ```
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StringListRestResult**](StringListRestResult.md)
+[**RestResultOfListOfSystemString**](RestResultOfListOfSystemString.md)
 
 ### Authorization
 

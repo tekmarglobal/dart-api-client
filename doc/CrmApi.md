@@ -33,7 +33,7 @@ try {
     var result = api_instance.apiCrmFindCustomerIVRGet(phoneNumber);
     print(result);
 } catch (e) {
-    print("Exception when calling CrmApi->apiCrmFindCustomerIVRGet: $e\n");
+    print('Exception when calling CrmApi->apiCrmFindCustomerIVRGet: $e\n');
 }
 ```
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phoneNumber** | **String**|  | [optional] [default to null]
+ **phoneNumber** | **String**|  | [optional] 
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiCrmFindOrderIVRGet(orderNo);
     print(result);
 } catch (e) {
-    print("Exception when calling CrmApi->apiCrmFindOrderIVRGet: $e\n");
+    print('Exception when calling CrmApi->apiCrmFindOrderIVRGet: $e\n');
 }
 ```
 
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderNo** | **String**|  | [optional] [default to null]
+ **orderNo** | **String**|  | [optional] 
 
 ### Return type
 

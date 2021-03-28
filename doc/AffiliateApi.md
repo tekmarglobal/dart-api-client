@@ -33,7 +33,7 @@ var urllink = urllink_example; // String |
 try { 
     api_instance.apiAffiliateDetailUrllinkGet(urllink);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
 }
 ```
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urllink** | **String**|  | [default to null]
+ **urllink** | **String**|  | 
 
 ### Return type
 
@@ -59,7 +59,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAffiliateGetShareLinkPost**
-> String apiAffiliateGetShareLinkPost(linkRequest)
+> String apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest)
 
 
 
@@ -72,13 +72,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AffiliateApi();
-var linkRequest = new LinkRequest(); // LinkRequest | 
+var affiliateServiceLinkRequest = new AffiliateServiceLinkRequest(); // AffiliateServiceLinkRequest | 
 
 try { 
-    var result = api_instance.apiAffiliateGetShareLinkPost(linkRequest);
+    var result = api_instance.apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n');
 }
 ```
 
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **linkRequest** | [**LinkRequest**](LinkRequest.md)|  | [optional] 
+ **affiliateServiceLinkRequest** | [**AffiliateServiceLinkRequest**](AffiliateServiceLinkRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -123,7 +123,7 @@ try {
     var result = api_instance.apiAffiliateShareLinkClickedPost(key);
     print(result);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n');
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **String**|  | [optional] [default to null]
+ **key** | **String**|  | [optional] 
 
 ### Return type
 

@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **apiAdminBranchPost**
-> BranchResponseListRestResult apiAdminBranchPost()
+> RestResultOfListOfAdminServiceBranchResponse apiAdminBranchPost()
 
 
 
@@ -41,7 +41,7 @@ try {
     var result = api_instance.apiAdminBranchPost();
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminBranchPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminBranchPost: $e\n');
 }
 ```
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BranchResponseListRestResult**](BranchResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceBranchResponse**](RestResultOfListOfAdminServiceBranchResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminCompaniesPost**
-> CompanyResponseListRestResult apiAdminCompaniesPost()
+> RestResultOfListOfAdminServiceCompanyResponse apiAdminCompaniesPost()
 
 
 
@@ -82,7 +82,7 @@ try {
     var result = api_instance.apiAdminCompaniesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminCompaniesPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminCompaniesPost: $e\n');
 }
 ```
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CompanyResponseListRestResult**](CompanyResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceCompanyResponse**](RestResultOfListOfAdminServiceCompanyResponse.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGenerateTimeSlotsGet**
-> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsGet(region)
+> RestResultOfListOfAdminServiceTimeSlotResponse apiAdminGenerateTimeSlotsGet(region)
 
 
 
@@ -124,7 +124,7 @@ try {
     var result = api_instance.apiAdminGenerateTimeSlotsGet(region);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n");
+    print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n');
 }
 ```
 
@@ -132,11 +132,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] [default to null]
+ **region** | **int**|  | [optional] 
 
 ### Return type
 
-[**TimeSlotResponseListRestResult**](TimeSlotResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceTimeSlotResponse**](RestResultOfListOfAdminServiceTimeSlotResponse.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGenerateTimeSlotsPost**
-> TimeSlotResponseListRestResult apiAdminGenerateTimeSlotsPost(region)
+> RestResultOfListOfAdminServiceTimeSlotResponse apiAdminGenerateTimeSlotsPost(region)
 
 
 
@@ -169,7 +169,7 @@ try {
     var result = api_instance.apiAdminGenerateTimeSlotsPost(region);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n');
 }
 ```
 
@@ -177,11 +177,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] [default to null]
+ **region** | **int**|  | [optional] 
 
 ### Return type
 
-[**TimeSlotResponseListRestResult**](TimeSlotResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceTimeSlotResponse**](RestResultOfListOfAdminServiceTimeSlotResponse.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminGetConfigurationGet**
-> ConfigurationRestResult apiAdminGetConfigurationGet()
+> RestResultOfKilerConfiguration apiAdminGetConfigurationGet()
 
 
 
@@ -213,7 +213,7 @@ try {
     var result = api_instance.apiAdminGetConfigurationGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminGetConfigurationGet: $e\n");
+    print('Exception when calling AdminApi->apiAdminGetConfigurationGet: $e\n');
 }
 ```
 
@@ -222,7 +222,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ConfigurationRestResult**](ConfigurationRestResult.md)
+[**RestResultOfKilerConfiguration**](RestResultOfKilerConfiguration.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ try {
     var result = api_instance.apiAdminGetProductGet(erpId, productId);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminGetProductGet: $e\n");
+    print('Exception when calling AdminApi->apiAdminGetProductGet: $e\n');
 }
 ```
 
@@ -264,8 +264,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **erpId** | **String**|  | [optional] [default to null]
- **productId** | **int**|  | [optional] [default to null]
+ **erpId** | **String**|  | [optional] 
+ **productId** | **int**|  | [optional] 
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminRegionNeighborhoodPost**
-> NeighborResponseListRestResult apiAdminRegionNeighborhoodPost(regionNeighborhoodRequest)
+> RestResultOfListOfAdminServiceAdminNeighborResponse apiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest)
 
 
 
@@ -296,13 +296,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
-var regionNeighborhoodRequest = new RegionNeighborhoodRequest(); // RegionNeighborhoodRequest | 
+var adminServiceRegionNeighborhoodRequest = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest | 
 
 try { 
-    var result = api_instance.apiAdminRegionNeighborhoodPost(regionNeighborhoodRequest);
+    var result = api_instance.apiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n');
 }
 ```
 
@@ -310,11 +310,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionNeighborhoodRequest** | [**RegionNeighborhoodRequest**](RegionNeighborhoodRequest.md)|  | [optional] 
+ **adminServiceRegionNeighborhoodRequest** | [**AdminServiceRegionNeighborhoodRequest**](AdminServiceRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 
-[**NeighborResponseListRestResult**](NeighborResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceAdminNeighborResponse**](RestResultOfListOfAdminServiceAdminNeighborResponse.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminRegionPopulationGet**
-> Int32RestResult apiAdminRegionPopulationGet(gpsId)
+> RestResultOfSystemInt32 apiAdminRegionPopulationGet(gpsId)
 
 
 
@@ -347,7 +347,7 @@ try {
     var result = api_instance.apiAdminRegionPopulationGet(gpsId);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n");
+    print('Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n');
 }
 ```
 
@@ -355,11 +355,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **gpsId** | **int**|  | [optional] [default to null]
+ **gpsId** | **int**|  | [optional] 
 
 ### Return type
 
-[**Int32RestResult**](Int32RestResult.md)
+[**RestResultOfSystemInt32**](RestResultOfSystemInt32.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminRegionPost**
-> RegionResponseListRestResult apiAdminRegionPost(regionId)
+> RestResultOfListOfAdminServiceRegionResponse apiAdminRegionPost(regionId)
 
 
 
@@ -392,7 +392,7 @@ try {
     var result = api_instance.apiAdminRegionPost(regionId);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminRegionPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminRegionPost: $e\n');
 }
 ```
 
@@ -400,11 +400,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionId** | **int**|  | [optional] [default to null]
+ **regionId** | **int**|  | [optional] 
 
 ### Return type
 
-[**RegionResponseListRestResult**](RegionResponseListRestResult.md)
+[**RestResultOfListOfAdminServiceRegionResponse**](RestResultOfListOfAdminServiceRegionResponse.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminUpdateRegionNeighborhoodPost**
-> NeighborResponseRestResult apiAdminUpdateRegionNeighborhoodPost(updateRegionNeighborhoodRequest)
+> RestResultOfAdminServiceAdminNeighborResponse apiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest)
 
 
 
@@ -431,13 +431,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
-var updateRegionNeighborhoodRequest = new UpdateRegionNeighborhoodRequest(); // UpdateRegionNeighborhoodRequest | 
+var adminServiceUpdateRegionNeighborhoodRequest = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest | 
 
 try { 
-    var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(updateRegionNeighborhoodRequest);
+    var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n");
+    print('Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n');
 }
 ```
 
@@ -445,11 +445,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateRegionNeighborhoodRequest** | [**UpdateRegionNeighborhoodRequest**](UpdateRegionNeighborhoodRequest.md)|  | [optional] 
+ **adminServiceUpdateRegionNeighborhoodRequest** | [**AdminServiceUpdateRegionNeighborhoodRequest**](AdminServiceUpdateRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 
-[**NeighborResponseRestResult**](NeighborResponseRestResult.md)
+[**RestResultOfAdminServiceAdminNeighborResponse**](RestResultOfAdminServiceAdminNeighborResponse.md)
 
 ### Authorization
 
@@ -463,7 +463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminUploadProductImagePost**
-> UploadImageResponseRestResult apiAdminUploadProductImagePost(file)
+> RestResultOfAdminServiceUploadImageResponse apiAdminUploadProductImagePost(file)
 
 
 
@@ -482,7 +482,7 @@ try {
     var result = api_instance.apiAdminUploadProductImagePost(file);
     print(result);
 } catch (e) {
-    print("Exception when calling AdminApi->apiAdminUploadProductImagePost: $e\n");
+    print('Exception when calling AdminApi->apiAdminUploadProductImagePost: $e\n');
 }
 ```
 
@@ -490,11 +490,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **Uint8List**|  | [optional] [default to null]
+ **file** | **Uint8List**|  | [optional] 
 
 ### Return type
 
-[**UploadImageResponseRestResult**](UploadImageResponseRestResult.md)
+[**RestResultOfAdminServiceUploadImageResponse**](RestResultOfAdminServiceUploadImageResponse.md)
 
 ### Authorization
 

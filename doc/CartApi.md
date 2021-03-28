@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **apiCartCreateCartPost**
-> CreateCartResponseRestResult apiCartCreateCartPost(createCartRequest)
+> RestResultOfCartServiceCreateCartResponse apiCartCreateCartPost(cartServiceCreateCartRequest)
 
 
 
@@ -33,13 +33,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var createCartRequest = new CreateCartRequest(); // CreateCartRequest | 
+var cartServiceCreateCartRequest = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest | 
 
 try { 
-    var result = api_instance.apiCartCreateCartPost(createCartRequest);
+    var result = api_instance.apiCartCreateCartPost(cartServiceCreateCartRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartCreateCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartCreateCartPost: $e\n');
 }
 ```
 
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCartRequest** | [**CreateCartRequest**](CreateCartRequest.md)|  | [optional] 
+ **cartServiceCreateCartRequest** | [**CartServiceCreateCartRequest**](CartServiceCreateCartRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CreateCartResponseRestResult**](CreateCartResponseRestResult.md)
+[**RestResultOfCartServiceCreateCartResponse**](RestResultOfCartServiceCreateCartResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartDeleteCardDelete**
-> CartResponseRestResult apiCartDeleteCardDelete()
+> RestResultOfCartServiceCartResponse apiCartDeleteCardDelete()
 
 
 
@@ -83,7 +83,7 @@ try {
     var result = api_instance.apiCartDeleteCardDelete();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartDeleteCardDelete: $e\n");
+    print('Exception when calling CartApi->apiCartDeleteCardDelete: $e\n');
 }
 ```
 
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CartResponseRestResult**](CartResponseRestResult.md)
+[**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartDeleteCartDelete**
-> CartResponseRestResult apiCartDeleteCartDelete()
+> RestResultOfCartServiceCartResponse apiCartDeleteCartDelete()
 
 
 
@@ -124,7 +124,7 @@ try {
     var result = api_instance.apiCartDeleteCartDelete();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartDeleteCartDelete: $e\n");
+    print('Exception when calling CartApi->apiCartDeleteCartDelete: $e\n');
 }
 ```
 
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CartResponseRestResult**](CartResponseRestResult.md)
+[**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartGetTimeSlotsPost**
-> TimeSlotsResponseListRestResult apiCartGetTimeSlotsPost()
+> RestResultOfListOfCartServiceTimeSlotsResponse apiCartGetTimeSlotsPost()
 
 
 
@@ -165,7 +165,7 @@ try {
     var result = api_instance.apiCartGetTimeSlotsPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartGetTimeSlotsPost: $e\n");
+    print('Exception when calling CartApi->apiCartGetTimeSlotsPost: $e\n');
 }
 ```
 
@@ -174,7 +174,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**TimeSlotsResponseListRestResult**](TimeSlotsResponseListRestResult.md)
+[**RestResultOfListOfCartServiceTimeSlotsResponse**](RestResultOfListOfCartServiceTimeSlotsResponse.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartPost**
-> CartResponseRestResult apiCartPost()
+> RestResultOfCartServiceCartResponse apiCartPost()
 
 
 
@@ -206,7 +206,7 @@ try {
     var result = api_instance.apiCartPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartPost: $e\n');
 }
 ```
 
@@ -215,7 +215,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CartResponseRestResult**](CartResponseRestResult.md)
+[**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateCartPost**
-> CartResponseRestResult apiCartUpdateCartPost(updateCartRequest)
+> RestResultOfCartServiceCartResponse apiCartUpdateCartPost(cartServiceUpdateCartRequest)
 
 
 
@@ -242,13 +242,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var updateCartRequest = new UpdateCartRequest(); // UpdateCartRequest | 
+var cartServiceUpdateCartRequest = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateCartPost(updateCartRequest);
+    var result = api_instance.apiCartUpdateCartPost(cartServiceUpdateCartRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartUpdateCartPost: $e\n");
+    print('Exception when calling CartApi->apiCartUpdateCartPost: $e\n');
 }
 ```
 
@@ -256,11 +256,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCartRequest** | [**UpdateCartRequest**](UpdateCartRequest.md)|  | [optional] 
+ **cartServiceUpdateCartRequest** | [**CartServiceUpdateCartRequest**](CartServiceUpdateCartRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CartResponseRestResult**](CartResponseRestResult.md)
+[**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateCartRegionPost**
-> UpdateCartRegionResponseRestResult apiCartUpdateCartRegionPost(updateCartRegionRequest)
+> RestResultOfCartServiceUpdateCartRegionResponse apiCartUpdateCartRegionPost(cartServiceUpdateCartRegionRequest)
 
 
 
@@ -287,13 +287,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var updateCartRegionRequest = new UpdateCartRegionRequest(); // UpdateCartRegionRequest | 
+var cartServiceUpdateCartRegionRequest = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateCartRegionPost(updateCartRegionRequest);
+    var result = api_instance.apiCartUpdateCartRegionPost(cartServiceUpdateCartRegionRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartUpdateCartRegionPost: $e\n");
+    print('Exception when calling CartApi->apiCartUpdateCartRegionPost: $e\n');
 }
 ```
 
@@ -301,11 +301,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateCartRegionRequest** | [**UpdateCartRegionRequest**](UpdateCartRegionRequest.md)|  | [optional] 
+ **cartServiceUpdateCartRegionRequest** | [**CartServiceUpdateCartRegionRequest**](CartServiceUpdateCartRegionRequest.md)|  | [optional] 
 
 ### Return type
 
-[**UpdateCartRegionResponseRestResult**](UpdateCartRegionResponseRestResult.md)
+[**RestResultOfCartServiceUpdateCartRegionResponse**](RestResultOfCartServiceUpdateCartRegionResponse.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateTimeslotPost**
-> CartResponseRestResult apiCartUpdateTimeslotPost(updateTimeslotRequest)
+> RestResultOfCartServiceCartResponse apiCartUpdateTimeslotPost(cartServiceUpdateTimeslotRequest)
 
 
 
@@ -332,13 +332,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var updateTimeslotRequest = new UpdateTimeslotRequest(); // UpdateTimeslotRequest | 
+var cartServiceUpdateTimeslotRequest = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateTimeslotPost(updateTimeslotRequest);
+    var result = api_instance.apiCartUpdateTimeslotPost(cartServiceUpdateTimeslotRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n");
+    print('Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n');
 }
 ```
 
@@ -346,11 +346,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateTimeslotRequest** | [**UpdateTimeslotRequest**](UpdateTimeslotRequest.md)|  | [optional] 
+ **cartServiceUpdateTimeslotRequest** | [**CartServiceUpdateTimeslotRequest**](CartServiceUpdateTimeslotRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CartResponseRestResult**](CartResponseRestResult.md)
+[**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
 
 ### Authorization
 

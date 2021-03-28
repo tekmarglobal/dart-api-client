@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **apiBannerGetBannersPost**
-> BannerResponseRestResult apiBannerGetBannersPost()
+> RestResultOfBannerServiceBannerResponse apiBannerGetBannersPost()
 
 
 
@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiBannerGetBannersPost();
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerGetBannersPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerGetBannersPost: $e\n');
 }
 ```
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BannerResponseRestResult**](BannerResponseRestResult.md)
+[**RestResultOfBannerServiceBannerResponse**](RestResultOfBannerServiceBannerResponse.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiBannerUpdateBannerPost**
-> BannerResponseRestResult apiBannerUpdateBannerPost(bannerRequest)
+> RestResultOfBannerServiceBannerResponse apiBannerUpdateBannerPost(bannerServiceBannerRequest)
 
 
 
@@ -68,13 +68,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new BannerApi();
-var bannerRequest = new BannerRequest(); // BannerRequest | 
+var bannerServiceBannerRequest = new BannerServiceBannerRequest(); // BannerServiceBannerRequest | 
 
 try { 
-    var result = api_instance.apiBannerUpdateBannerPost(bannerRequest);
+    var result = api_instance.apiBannerUpdateBannerPost(bannerServiceBannerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n');
 }
 ```
 
@@ -82,11 +82,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bannerRequest** | [**BannerRequest**](BannerRequest.md)|  | [optional] 
+ **bannerServiceBannerRequest** | [**BannerServiceBannerRequest**](BannerServiceBannerRequest.md)|  | [optional] 
 
 ### Return type
 
-[**BannerResponseRestResult**](BannerResponseRestResult.md)
+[**RestResultOfBannerServiceBannerResponse**](RestResultOfBannerServiceBannerResponse.md)
 
 ### Authorization
 

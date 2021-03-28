@@ -9,13 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiAccountFirebaseTokenGet**](AccountApi.md#apiAccountFirebaseTokenGet) | **get** /api/Account/FirebaseToken | 
 [**apiAccountLoginPost**](AccountApi.md#apiAccountLoginPost) | **post** /api/Account/login | 
 [**apiAccountLogoutGet**](AccountApi.md#apiAccountLogoutGet) | **get** /api/Account/Logout | 
 [**apiAccountWhoAmIGet**](AccountApi.md#apiAccountWhoAmIGet) | **get** /api/Account/WhoAmI | 
 
 
-# **apiAccountLoginPost**
-> LoginResponeRestResult apiAccountLoginPost(loginRequest)
+# **apiAccountFirebaseTokenGet**
+> String apiAccountFirebaseTokenGet()
 
 
 
@@ -28,13 +29,54 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AccountApi();
-var loginRequest = new LoginRequest(); // LoginRequest | 
 
 try { 
-    var result = api_instance.apiAccountLoginPost(loginRequest);
+    var result = api_instance.apiAccountFirebaseTokenGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLoginPost: $e\n");
+    print('Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiAccountLoginPost**
+> RestResultOfAccountServiceLoginResponse apiAccountLoginPost(accountServiceLoginRequest)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AccountApi();
+var accountServiceLoginRequest = new AccountServiceLoginRequest(); // AccountServiceLoginRequest | 
+
+try { 
+    var result = api_instance.apiAccountLoginPost(accountServiceLoginRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
 }
 ```
 
@@ -42,11 +84,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginRequest** | [**LoginRequest**](LoginRequest.md)|  | [optional] 
+ **accountServiceLoginRequest** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
 
 ### Return type
 
-[**LoginResponeRestResult**](LoginResponeRestResult.md)
+[**RestResultOfAccountServiceLoginResponse**](RestResultOfAccountServiceLoginResponse.md)
 
 ### Authorization
 
@@ -78,7 +120,7 @@ try {
     var result = api_instance.apiAccountLogoutGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLogoutGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountLogoutGet: $e\n');
 }
 ```
 
@@ -101,7 +143,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAccountWhoAmIGet**
-> ObjectRestResult apiAccountWhoAmIGet()
+> RestResultOfSystemObject apiAccountWhoAmIGet()
 
 
 
@@ -119,7 +161,7 @@ try {
     var result = api_instance.apiAccountWhoAmIGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n');
 }
 ```
 
@@ -128,7 +170,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ObjectRestResult**](ObjectRestResult.md)
+[**RestResultOfSystemObject**](RestResultOfSystemObject.md)
 
 ### Authorization
 

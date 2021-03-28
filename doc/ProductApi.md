@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **apiProductAddToFavoriteListPost**
-> FavoriteListResponseRestResult apiProductAddToFavoriteListPost(favoriteRequest)
+> RestResultOfProductServiceFavoriteListResponse apiProductAddToFavoriteListPost(productServiceFavoriteRequest)
 
 
 
@@ -33,13 +33,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var favoriteRequest = new FavoriteRequest(); // FavoriteRequest | 
+var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
 
 try { 
-    var result = api_instance.apiProductAddToFavoriteListPost(favoriteRequest);
+    var result = api_instance.apiProductAddToFavoriteListPost(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
 }
 ```
 
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **favoriteRequest** | [**FavoriteRequest**](FavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
-[**FavoriteListResponseRestResult**](FavoriteListResponseRestResult.md)
+[**RestResultOfProductServiceFavoriteListResponse**](RestResultOfProductServiceFavoriteListResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductDeleteFavoriteDelete**
-> FavoriteListResponseRestResult apiProductDeleteFavoriteDelete(favoriteRequest)
+> RestResultOfProductServiceFavoriteListResponse apiProductDeleteFavoriteDelete(productServiceFavoriteRequest)
 
 
 
@@ -78,13 +78,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var favoriteRequest = new FavoriteRequest(); // FavoriteRequest | 
+var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
 
 try { 
-    var result = api_instance.apiProductDeleteFavoriteDelete(favoriteRequest);
+    var result = api_instance.apiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n");
+    print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
 }
 ```
 
@@ -92,11 +92,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **favoriteRequest** | [**FavoriteRequest**](FavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
-[**FavoriteListResponseRestResult**](FavoriteListResponseRestResult.md)
+[**RestResultOfProductServiceFavoriteListResponse**](RestResultOfProductServiceFavoriteListResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductGetFavoriteListPost**
-> FavoriteListResponseRestResult apiProductGetFavoriteListPost()
+> RestResultOfProductServiceFavoriteListResponse apiProductGetFavoriteListPost()
 
 
 
@@ -128,7 +128,7 @@ try {
     var result = api_instance.apiProductGetFavoriteListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n');
 }
 ```
 
@@ -137,7 +137,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**FavoriteListResponseRestResult**](FavoriteListResponseRestResult.md)
+[**RestResultOfProductServiceFavoriteListResponse**](RestResultOfProductServiceFavoriteListResponse.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductPost**
-> RProductRestResult apiProductPost(productRequest)
+> RestResultOfProductServiceRProduct apiProductPost(productServiceProductRequest)
 
 
 
@@ -164,13 +164,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var productRequest = new ProductRequest(); // ProductRequest | 
+var productServiceProductRequest = new ProductServiceProductRequest(); // ProductServiceProductRequest | 
 
 try { 
-    var result = api_instance.apiProductPost(productRequest);
+    var result = api_instance.apiProductPost(productServiceProductRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductPost: $e\n");
+    print('Exception when calling ProductApi->apiProductPost: $e\n');
 }
 ```
 
@@ -178,11 +178,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productRequest** | [**ProductRequest**](ProductRequest.md)|  | [optional] 
+ **productServiceProductRequest** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
 
 ### Return type
 
-[**RProductRestResult**](RProductRestResult.md)
+[**RestResultOfProductServiceRProduct**](RestResultOfProductServiceRProduct.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductProductListPost**
-> RProductListRestResult apiProductProductListPost()
+> RestResultOfListOfProductServiceRProduct apiProductProductListPost()
 
 
 
@@ -214,7 +214,7 @@ try {
     var result = api_instance.apiProductProductListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductProductListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductProductListPost: $e\n');
 }
 ```
 
@@ -223,7 +223,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**RProductListRestResult**](RProductListRestResult.md)
+[**RestResultOfListOfProductServiceRProduct**](RestResultOfListOfProductServiceRProduct.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductProductSearchPost**
-> RProductListRestResult apiProductProductSearchPost(searchProductRequest)
+> RestResultOfListOfProductServiceRProduct apiProductProductSearchPost(productServiceSearchProductRequest)
 
 
 
@@ -250,13 +250,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var searchProductRequest = new SearchProductRequest(); // SearchProductRequest | 
+var productServiceSearchProductRequest = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest | 
 
 try { 
-    var result = api_instance.apiProductProductSearchPost(searchProductRequest);
+    var result = api_instance.apiProductProductSearchPost(productServiceSearchProductRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductProductSearchPost: $e\n");
+    print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
 }
 ```
 
@@ -264,11 +264,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **searchProductRequest** | [**SearchProductRequest**](SearchProductRequest.md)|  | [optional] 
+ **productServiceSearchProductRequest** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
 
 ### Return type
 
-[**RProductListRestResult**](RProductListRestResult.md)
+[**RestResultOfListOfProductServiceRProduct**](RestResultOfListOfProductServiceRProduct.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n");
+    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n');
 }
 ```
 
@@ -311,8 +311,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] [default to null]
- **productErpId** | **String**|  | [optional] [default to null]
+ **regionErpId** | **String**|  | [optional] 
+ **productErpId** | **String**|  | [optional] 
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type
@@ -352,7 +352,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
+    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n');
 }
 ```
 
@@ -360,8 +360,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] [default to null]
- **productErpId** | **String**|  | [optional] [default to null]
+ **regionErpId** | **String**|  | [optional] 
+ **productErpId** | **String**|  | [optional] 
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type
