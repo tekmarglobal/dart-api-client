@@ -162,10 +162,7 @@ class RestResultOfListOfDefinitionServiceCountiesResponseBuilder
   set data(ListBuilder<DefinitionServiceCountiesResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfDefinitionServiceCountiesResponseBuilder() {
-    RestResultOfListOfDefinitionServiceCountiesResponse._initializeBuilder(
-        this);
-  }
+  RestResultOfListOfDefinitionServiceCountiesResponseBuilder();
 
   RestResultOfListOfDefinitionServiceCountiesResponseBuilder get _$this {
     if (_$v != null) {

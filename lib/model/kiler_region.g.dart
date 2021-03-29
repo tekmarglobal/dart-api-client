@@ -562,9 +562,7 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
   set timeSlotTemplate(ListBuilder<KilerTimeSlotTemplate> timeSlotTemplate) =>
       _$this._timeSlotTemplate = timeSlotTemplate;
 
-  KilerRegionBuilder() {
-    KilerRegion._initializeBuilder(this);
-  }
+  KilerRegionBuilder();
 
   KilerRegionBuilder get _$this {
     if (_$v != null) {

@@ -41,7 +41,7 @@ try {
     var result = api_instance.apiAdminBranchPost();
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminBranchPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminBranchPost: $e\n");
 }
 ```
 
@@ -82,7 +82,7 @@ try {
     var result = api_instance.apiAdminCompaniesPost();
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminCompaniesPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminCompaniesPost: $e\n");
 }
 ```
 
@@ -124,7 +124,7 @@ try {
     var result = api_instance.apiAdminGenerateTimeSlotsGet(region);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n');
+    print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n");
 }
 ```
 
@@ -132,7 +132,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] 
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -169,7 +169,7 @@ try {
     var result = api_instance.apiAdminGenerateTimeSlotsPost(region);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n");
 }
 ```
 
@@ -177,7 +177,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] 
+ **region** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -213,7 +213,7 @@ try {
     var result = api_instance.apiAdminGetConfigurationGet();
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminGetConfigurationGet: $e\n');
+    print("Exception when calling AdminApi->apiAdminGetConfigurationGet: $e\n");
 }
 ```
 
@@ -256,7 +256,7 @@ try {
     var result = api_instance.apiAdminGetProductGet(erpId, productId);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminGetProductGet: $e\n');
+    print("Exception when calling AdminApi->apiAdminGetProductGet: $e\n");
 }
 ```
 
@@ -264,8 +264,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **erpId** | **String**|  | [optional] 
- **productId** | **int**|  | [optional] 
+ **erpId** | **String**|  | [optional] [default to null]
+ **productId** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -302,7 +302,7 @@ try {
     var result = api_instance.apiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n");
 }
 ```
 
@@ -347,7 +347,7 @@ try {
     var result = api_instance.apiAdminRegionPopulationGet(gpsId);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n');
+    print("Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n");
 }
 ```
 
@@ -355,7 +355,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **gpsId** | **int**|  | [optional] 
+ **gpsId** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -392,7 +392,7 @@ try {
     var result = api_instance.apiAdminRegionPost(regionId);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminRegionPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminRegionPost: $e\n");
 }
 ```
 
@@ -400,7 +400,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionId** | **int**|  | [optional] 
+ **regionId** | **int**|  | [optional] [default to null]
 
 ### Return type
 
@@ -437,7 +437,7 @@ try {
     var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n');
+    print("Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n");
 }
 ```
 
@@ -482,7 +482,7 @@ try {
     var result = api_instance.apiAdminUploadProductImagePost(file);
     print(result);
 } catch (e) {
-    print('Exception when calling AdminApi->apiAdminUploadProductImagePost: $e\n');
+    print("Exception when calling AdminApi->apiAdminUploadProductImagePost: $e\n");
 }
 ```
 
@@ -490,7 +490,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **Uint8List**|  | [optional] 
+ **file** | **Uint8List**|  | [optional] [default to null]
 
 ### Return type
 

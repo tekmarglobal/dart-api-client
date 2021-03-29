@@ -281,9 +281,7 @@ class KilerRegionProductBuilder
   set productPrice(ListBuilder<KilerProductPrice> productPrice) =>
       _$this._productPrice = productPrice;
 
-  KilerRegionProductBuilder() {
-    KilerRegionProduct._initializeBuilder(this);
-  }
+  KilerRegionProductBuilder();
 
   KilerRegionProductBuilder get _$this {
     if (_$v != null) {

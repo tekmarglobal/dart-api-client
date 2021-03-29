@@ -231,9 +231,7 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
       _$this._product ??= new ListBuilder<KilerProduct>();
   set product(ListBuilder<KilerProduct> product) => _$this._product = product;
 
-  KilerBrandBuilder() {
-    KilerBrand._initializeBuilder(this);
-  }
+  KilerBrandBuilder();
 
   KilerBrandBuilder get _$this {
     if (_$v != null) {

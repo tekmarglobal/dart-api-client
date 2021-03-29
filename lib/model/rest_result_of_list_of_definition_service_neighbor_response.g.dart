@@ -162,10 +162,7 @@ class RestResultOfListOfDefinitionServiceNeighborResponseBuilder
   set data(ListBuilder<DefinitionServiceNeighborResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfDefinitionServiceNeighborResponseBuilder() {
-    RestResultOfListOfDefinitionServiceNeighborResponse._initializeBuilder(
-        this);
-  }
+  RestResultOfListOfDefinitionServiceNeighborResponseBuilder();
 
   RestResultOfListOfDefinitionServiceNeighborResponseBuilder get _$this {
     if (_$v != null) {

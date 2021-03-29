@@ -186,9 +186,7 @@ class KilerAffiliateTypeBuilder
   set affiliateLink(ListBuilder<KilerAffiliateLink> affiliateLink) =>
       _$this._affiliateLink = affiliateLink;
 
-  KilerAffiliateTypeBuilder() {
-    KilerAffiliateType._initializeBuilder(this);
-  }
+  KilerAffiliateTypeBuilder();
 
   KilerAffiliateTypeBuilder get _$this {
     if (_$v != null) {

@@ -8,17 +8,17 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**date** | [**DateTime**](DateTime.md) |  | [optional] 
-**template** | **int** |  | [optional] 
-**additionalNote** | **String** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**objectType** | **int** |  | [optional] 
-**order** | **int** |  | [optional] 
-**objectTypeNavigation** | [**KilerXpobjectType**](KilerXpobjectType.md) |  | [optional] 
-**orderNavigation** | [**KilerOrder**](KilerOrder.md) |  | [optional] 
-**templateNavigation** | [**KilerSurveyTemplate**](KilerSurveyTemplate.md) |  | [optional] 
-**surveyAnswer** | [**BuiltList<KilerSurveyAnswer>**](KilerSurveyAnswer.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**date** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**template** | **int** |  | [optional] [default to null]
+**additionalNote** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**objectType** | **int** |  | [optional] [default to null]
+**order** | **int** |  | [optional] [default to null]
+**objectTypeNavigation** | [**KilerXpobjectType**](KilerXpobjectType.md) |  | [optional] [default to null]
+**orderNavigation** | [**KilerOrder**](KilerOrder.md) |  | [optional] [default to null]
+**templateNavigation** | [**KilerSurveyTemplate**](KilerSurveyTemplate.md) |  | [optional] [default to null]
+**surveyAnswer** | [**BuiltList&lt;KilerSurveyAnswer&gt;**](KilerSurveyAnswer.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

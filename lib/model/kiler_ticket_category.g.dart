@@ -191,9 +191,7 @@ class KilerTicketCategoryBuilder
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerTicketCategoryBuilder() {
-    KilerTicketCategory._initializeBuilder(this);
-  }
+  KilerTicketCategoryBuilder();
 
   KilerTicketCategoryBuilder get _$this {
     if (_$v != null) {

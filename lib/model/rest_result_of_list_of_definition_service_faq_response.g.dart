@@ -158,9 +158,7 @@ class RestResultOfListOfDefinitionServiceFaqResponseBuilder
   set data(ListBuilder<DefinitionServiceFaqResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfDefinitionServiceFaqResponseBuilder() {
-    RestResultOfListOfDefinitionServiceFaqResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfDefinitionServiceFaqResponseBuilder();
 
   RestResultOfListOfDefinitionServiceFaqResponseBuilder get _$this {
     if (_$v != null) {

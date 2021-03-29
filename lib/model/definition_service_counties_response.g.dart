@@ -144,9 +144,7 @@ class DefinitionServiceCountiesResponseBuilder
   String get cityName => _$this._cityName;
   set cityName(String cityName) => _$this._cityName = cityName;
 
-  DefinitionServiceCountiesResponseBuilder() {
-    DefinitionServiceCountiesResponse._initializeBuilder(this);
-  }
+  DefinitionServiceCountiesResponseBuilder();
 
   DefinitionServiceCountiesResponseBuilder get _$this {
     if (_$v != null) {

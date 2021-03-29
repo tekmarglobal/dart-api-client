@@ -106,9 +106,7 @@ class DefinitionServiceNeighborRequestBuilder
   int get county => _$this._county;
   set county(int county) => _$this._county = county;
 
-  DefinitionServiceNeighborRequestBuilder() {
-    DefinitionServiceNeighborRequest._initializeBuilder(this);
-  }
+  DefinitionServiceNeighborRequestBuilder();
 
   DefinitionServiceNeighborRequestBuilder get _$this {
     if (_$v != null) {

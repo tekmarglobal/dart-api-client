@@ -106,9 +106,7 @@ class DefinitionServiceCountiesRequestBuilder
   int get city => _$this._city;
   set city(int city) => _$this._city = city;
 
-  DefinitionServiceCountiesRequestBuilder() {
-    DefinitionServiceCountiesRequest._initializeBuilder(this);
-  }
+  DefinitionServiceCountiesRequestBuilder();
 
   DefinitionServiceCountiesRequestBuilder get _$this {
     if (_$v != null) {

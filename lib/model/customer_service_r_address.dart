@@ -1,108 +1,108 @@
-import 'package:built_value/built_value.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'customer_service_r_address.g.dart';
 
 abstract class CustomerServiceRAddress implements Built<CustomerServiceRAddress, CustomerServiceRAddressBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'adressId')
     int get adressId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerId')
     int get customerId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'fullAddress')
     String get fullAddress;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'building')
     String get building;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'floor')
     String get floor;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'door')
     String get door;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'postalCode')
     String get postalCode;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'description')
     String get description;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'neighborhoodId')
     int get neighborhoodId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'neighborhoodName')
     String get neighborhoodName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cityId')
     int get cityId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cityName')
     String get cityName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'countyId')
     int get countyId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'countyName')
     String get countyName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'street')
     String get street;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerName')
     String get customerName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerSurname')
     String get customerSurname;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'isindividual')
     bool get isindividual;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'companyName')
     String get companyName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'taxOffice')
     String get taxOffice;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'taxNumber')
     String get taxNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
 
     // Boilerplate code needed to wire-up generated code
     CustomerServiceRAddress._();
 
-    static void _initializeBuilder(CustomerServiceRAddressBuilder b) => b;
-
     factory CustomerServiceRAddress([updates(CustomerServiceRAddressBuilder b)]) = _$CustomerServiceRAddress;
     static Serializer<CustomerServiceRAddress> get serializer => _$customerServiceRAddressSerializer;
+
 }
 

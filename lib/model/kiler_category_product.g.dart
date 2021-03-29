@@ -233,9 +233,7 @@ class KilerCategoryProductBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerCategoryProductBuilder() {
-    KilerCategoryProduct._initializeBuilder(this);
-  }
+  KilerCategoryProductBuilder();
 
   KilerCategoryProductBuilder get _$this {
     if (_$v != null) {

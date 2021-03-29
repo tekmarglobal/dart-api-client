@@ -181,9 +181,7 @@ class BannerServiceBannerRequestBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  BannerServiceBannerRequestBuilder() {
-    BannerServiceBannerRequest._initializeBuilder(this);
-  }
+  BannerServiceBannerRequestBuilder();
 
   BannerServiceBannerRequestBuilder get _$this {
     if (_$v != null) {

@@ -213,9 +213,7 @@ class KilerBrandManagerBrandBuilder
   set brandNavigation(KilerBrandBuilder brandNavigation) =>
       _$this._brandNavigation = brandNavigation;
 
-  KilerBrandManagerBrandBuilder() {
-    KilerBrandManagerBrand._initializeBuilder(this);
-  }
+  KilerBrandManagerBrandBuilder();
 
   KilerBrandManagerBrandBuilder get _$this {
     if (_$v != null) {

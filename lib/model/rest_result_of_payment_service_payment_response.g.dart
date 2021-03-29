@@ -152,9 +152,7 @@ class RestResultOfPaymentServicePaymentResponseBuilder
       _$this._data ??= new PaymentServicePaymentResponseBuilder();
   set data(PaymentServicePaymentResponseBuilder data) => _$this._data = data;
 
-  RestResultOfPaymentServicePaymentResponseBuilder() {
-    RestResultOfPaymentServicePaymentResponse._initializeBuilder(this);
-  }
+  RestResultOfPaymentServicePaymentResponseBuilder();
 
   RestResultOfPaymentServicePaymentResponseBuilder get _$this {
     if (_$v != null) {

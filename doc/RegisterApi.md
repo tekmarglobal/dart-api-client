@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **apiRegisterSendSmsPost**
-> RestResultOfSmsResponseSmsResponse apiRegisterSendSmsPost(smsRequestSmsRequest)
+> RestResultOfRegisterServiceSmsResponse apiRegisterSendSmsPost(registerServiceSmsRequest)
 
 
 
@@ -27,13 +27,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new RegisterApi();
-var smsRequestSmsRequest = new SmsRequestSmsRequest(); // SmsRequestSmsRequest | 
+var registerServiceSmsRequest = new RegisterServiceSmsRequest(); // RegisterServiceSmsRequest | 
 
 try { 
-    var result = api_instance.apiRegisterSendSmsPost(smsRequestSmsRequest);
+    var result = api_instance.apiRegisterSendSmsPost(registerServiceSmsRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
+    print("Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n");
 }
 ```
 
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smsRequestSmsRequest** | [**SmsRequestSmsRequest**](SmsRequestSmsRequest.md)|  | [optional] 
+ **registerServiceSmsRequest** | [**RegisterServiceSmsRequest**](RegisterServiceSmsRequest.md)|  | [optional] 
 
 ### Return type
 
-[**RestResultOfSmsResponseSmsResponse**](RestResultOfSmsResponseSmsResponse.md)
+[**RestResultOfRegisterServiceSmsResponse**](RestResultOfRegisterServiceSmsResponse.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiRegisterVerifySmsPost**
-> RestResultOfRegisterServiceLoginResponse apiRegisterVerifySmsPost(verifyRequestVerifyRequest)
+> RestResultOfRegisterServiceLoginResponse apiRegisterVerifySmsPost(registerServiceVerifyRequest)
 
 
 
@@ -72,13 +72,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new RegisterApi();
-var verifyRequestVerifyRequest = new VerifyRequestVerifyRequest(); // VerifyRequestVerifyRequest | 
+var registerServiceVerifyRequest = new RegisterServiceVerifyRequest(); // RegisterServiceVerifyRequest | 
 
 try { 
-    var result = api_instance.apiRegisterVerifySmsPost(verifyRequestVerifyRequest);
+    var result = api_instance.apiRegisterVerifySmsPost(registerServiceVerifyRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
+    print("Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n");
 }
 ```
 
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyRequestVerifyRequest** | [**VerifyRequestVerifyRequest**](VerifyRequestVerifyRequest.md)|  | [optional] 
+ **registerServiceVerifyRequest** | [**RegisterServiceVerifyRequest**](RegisterServiceVerifyRequest.md)|  | [optional] 
 
 ### Return type
 

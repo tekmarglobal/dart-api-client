@@ -543,9 +543,7 @@ class KilerCategoryBuilder
           ListBuilder<KilerCategory> inverseParentNavigation) =>
       _$this._inverseParentNavigation = inverseParentNavigation;
 
-  KilerCategoryBuilder() {
-    KilerCategory._initializeBuilder(this);
-  }
+  KilerCategoryBuilder();
 
   KilerCategoryBuilder get _$this {
     if (_$v != null) {

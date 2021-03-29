@@ -253,9 +253,7 @@ class KilerProductImportBuilder
           ListBuilder<KilerProductImportDetail> productImportDetail) =>
       _$this._productImportDetail = productImportDetail;
 
-  KilerProductImportBuilder() {
-    KilerProductImport._initializeBuilder(this);
-  }
+  KilerProductImportBuilder();
 
   KilerProductImportBuilder get _$this {
     if (_$v != null) {

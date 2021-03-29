@@ -150,9 +150,7 @@ class RestResultOfCatalogServiceRCategoryBuilder
       _$this._data ??= new CatalogServiceRCategoryBuilder();
   set data(CatalogServiceRCategoryBuilder data) => _$this._data = data;
 
-  RestResultOfCatalogServiceRCategoryBuilder() {
-    RestResultOfCatalogServiceRCategory._initializeBuilder(this);
-  }
+  RestResultOfCatalogServiceRCategoryBuilder();
 
   RestResultOfCatalogServiceRCategoryBuilder get _$this {
     if (_$v != null) {

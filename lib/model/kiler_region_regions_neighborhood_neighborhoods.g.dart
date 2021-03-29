@@ -224,9 +224,7 @@ class KilerRegionRegionsNeighborhoodNeighborhoodsBuilder
   set regionsNavigation(KilerRegionBuilder regionsNavigation) =>
       _$this._regionsNavigation = regionsNavigation;
 
-  KilerRegionRegionsNeighborhoodNeighborhoodsBuilder() {
-    KilerRegionRegionsNeighborhoodNeighborhoods._initializeBuilder(this);
-  }
+  KilerRegionRegionsNeighborhoodNeighborhoodsBuilder();
 
   KilerRegionRegionsNeighborhoodNeighborhoodsBuilder get _$this {
     if (_$v != null) {

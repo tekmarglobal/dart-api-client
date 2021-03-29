@@ -158,10 +158,7 @@ class RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder
   JsonObject get data => _$this._data;
   set data(JsonObject data) => _$this._data = data;
 
-  RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder() {
-    RestResultOfDefinitionServiceUpdateAgreementLogResponse._initializeBuilder(
-        this);
-  }
+  RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder();
 
   RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder get _$this {
     if (_$v != null) {

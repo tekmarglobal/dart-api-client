@@ -299,9 +299,7 @@ class CustomerServiceNewCustomerRequestBuilder
   set identificationNumber(String identificationNumber) =>
       _$this._identificationNumber = identificationNumber;
 
-  CustomerServiceNewCustomerRequestBuilder() {
-    CustomerServiceNewCustomerRequest._initializeBuilder(this);
-  }
+  CustomerServiceNewCustomerRequestBuilder();
 
   CustomerServiceNewCustomerRequestBuilder get _$this {
     if (_$v != null) {

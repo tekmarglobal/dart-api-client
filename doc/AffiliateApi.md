@@ -33,7 +33,7 @@ var urllink = urllink_example; // String |
 try { 
     api_instance.apiAffiliateDetailUrllinkGet(urllink);
 } catch (e) {
-    print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
+    print("Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n");
 }
 ```
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urllink** | **String**|  | 
+ **urllink** | **String**|  | [default to null]
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n');
+    print("Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n");
 }
 ```
 
@@ -123,7 +123,7 @@ try {
     var result = api_instance.apiAffiliateShareLinkClickedPost(key);
     print(result);
 } catch (e) {
-    print('Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n');
+    print("Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n");
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **String**|  | [optional] 
+ **key** | **String**|  | [optional] [default to null]
 
 ### Return type
 

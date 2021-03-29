@@ -154,9 +154,7 @@ class RestResultOfListOfProductServiceRProductBuilder
       _$this._data ??= new ListBuilder<ProductServiceRProduct>();
   set data(ListBuilder<ProductServiceRProduct> data) => _$this._data = data;
 
-  RestResultOfListOfProductServiceRProductBuilder() {
-    RestResultOfListOfProductServiceRProduct._initializeBuilder(this);
-  }
+  RestResultOfListOfProductServiceRProductBuilder();
 
   RestResultOfListOfProductServiceRProductBuilder get _$this {
     if (_$v != null) {

@@ -185,9 +185,7 @@ class DefinitionServiceAgreementResponseBuilder
   bool get required_ => _$this._required_;
   set required_(bool required_) => _$this._required_ = required_;
 
-  DefinitionServiceAgreementResponseBuilder() {
-    DefinitionServiceAgreementResponse._initializeBuilder(this);
-  }
+  DefinitionServiceAgreementResponseBuilder();
 
   DefinitionServiceAgreementResponseBuilder get _$this {
     if (_$v != null) {

@@ -203,9 +203,7 @@ class CartServiceTimeSlotsResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
-  CartServiceTimeSlotsResponseBuilder() {
-    CartServiceTimeSlotsResponse._initializeBuilder(this);
-  }
+  CartServiceTimeSlotsResponseBuilder();
 
   CartServiceTimeSlotsResponseBuilder get _$this {
     if (_$v != null) {

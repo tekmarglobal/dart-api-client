@@ -127,9 +127,7 @@ class ProductServiceSearchProductRequestBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  ProductServiceSearchProductRequestBuilder() {
-    ProductServiceSearchProductRequest._initializeBuilder(this);
-  }
+  ProductServiceSearchProductRequestBuilder();
 
   ProductServiceSearchProductRequestBuilder get _$this {
     if (_$v != null) {

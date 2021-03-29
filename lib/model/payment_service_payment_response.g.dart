@@ -106,9 +106,7 @@ class PaymentServicePaymentResponseBuilder
   String get responseHtml => _$this._responseHtml;
   set responseHtml(String responseHtml) => _$this._responseHtml = responseHtml;
 
-  PaymentServicePaymentResponseBuilder() {
-    PaymentServicePaymentResponse._initializeBuilder(this);
-  }
+  PaymentServicePaymentResponseBuilder();
 
   PaymentServicePaymentResponseBuilder get _$this {
     if (_$v != null) {

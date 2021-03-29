@@ -234,9 +234,7 @@ class KilerCustomerFavoriteListBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerCustomerFavoriteListBuilder() {
-    KilerCustomerFavoriteList._initializeBuilder(this);
-  }
+  KilerCustomerFavoriteListBuilder();
 
   KilerCustomerFavoriteListBuilder get _$this {
     if (_$v != null) {

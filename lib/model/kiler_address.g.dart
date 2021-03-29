@@ -690,9 +690,7 @@ class KilerAddressBuilder
           ListBuilder<KilerOrder> orderDeliveryAddressNavigation) =>
       _$this._orderDeliveryAddressNavigation = orderDeliveryAddressNavigation;
 
-  KilerAddressBuilder() {
-    KilerAddress._initializeBuilder(this);
-  }
+  KilerAddressBuilder();
 
   KilerAddressBuilder get _$this {
     if (_$v != null) {

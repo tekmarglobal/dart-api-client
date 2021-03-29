@@ -228,10 +228,7 @@ class KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder
   set usersNavigation(KilerPermissionPolicyUserBuilder usersNavigation) =>
       _$this._usersNavigation = usersNavigation;
 
-  KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder() {
-    KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles._initializeBuilder(
-        this);
-  }
+  KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder();
 
   KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder get _$this {
     if (_$v != null) {

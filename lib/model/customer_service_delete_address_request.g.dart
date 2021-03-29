@@ -109,9 +109,7 @@ class CustomerServiceDeleteAddressRequestBuilder
   int get addressId => _$this._addressId;
   set addressId(int addressId) => _$this._addressId = addressId;
 
-  CustomerServiceDeleteAddressRequestBuilder() {
-    CustomerServiceDeleteAddressRequest._initializeBuilder(this);
-  }
+  CustomerServiceDeleteAddressRequestBuilder();
 
   CustomerServiceDeleteAddressRequestBuilder get _$this {
     if (_$v != null) {

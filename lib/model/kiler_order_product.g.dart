@@ -314,9 +314,7 @@ class KilerOrderProductBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerOrderProductBuilder() {
-    KilerOrderProduct._initializeBuilder(this);
-  }
+  KilerOrderProductBuilder();
 
   KilerOrderProductBuilder get _$this {
     if (_$v != null) {

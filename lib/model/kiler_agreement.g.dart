@@ -295,9 +295,7 @@ class KilerAgreementBuilder
   set agreementLog(ListBuilder<KilerAgreementLog> agreementLog) =>
       _$this._agreementLog = agreementLog;
 
-  KilerAgreementBuilder() {
-    KilerAgreement._initializeBuilder(this);
-  }
+  KilerAgreementBuilder();
 
   KilerAgreementBuilder get _$this {
     if (_$v != null) {

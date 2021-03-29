@@ -1,54 +1,54 @@
-import 'package:openapi/model/kiler_affiliate_link.dart';
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_affiliate_link.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_affiliate_click.g.dart';
 
 abstract class KilerAffiliateClick implements Built<KilerAffiliateClick, KilerAffiliateClickBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'clickedAt')
     DateTime get clickedAt;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'clickedBy')
     int get clickedBy;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'ip')
     String get ip;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'affiliateLink')
     int get affiliateLink;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'affiliateLinkNavigation')
     KilerAffiliateLink get affiliateLinkNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'clickedByNavigation')
     KilerCustomer get clickedByNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerAffiliateClick._();
 
-    static void _initializeBuilder(KilerAffiliateClickBuilder b) => b;
-
     factory KilerAffiliateClick([updates(KilerAffiliateClickBuilder b)]) = _$KilerAffiliateClick;
     static Serializer<KilerAffiliateClick> get serializer => _$kilerAffiliateClickSerializer;
+
 }
 

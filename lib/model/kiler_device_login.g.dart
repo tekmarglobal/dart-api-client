@@ -314,9 +314,7 @@ class KilerDeviceLoginBuilder
   set deviceNavigation(KilerDeviceBuilder deviceNavigation) =>
       _$this._deviceNavigation = deviceNavigation;
 
-  KilerDeviceLoginBuilder() {
-    KilerDeviceLogin._initializeBuilder(this);
-  }
+  KilerDeviceLoginBuilder();
 
   KilerDeviceLoginBuilder get _$this {
     if (_$v != null) {

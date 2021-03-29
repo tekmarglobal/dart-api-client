@@ -180,9 +180,7 @@ class KilerOrderStatusBuilder
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerOrderStatusBuilder() {
-    KilerOrderStatus._initializeBuilder(this);
-  }
+  KilerOrderStatusBuilder();
 
   KilerOrderStatusBuilder get _$this {
     if (_$v != null) {

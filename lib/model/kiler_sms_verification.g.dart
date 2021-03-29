@@ -273,9 +273,7 @@ class KilerSmsVerificationBuilder
   set customerNavigation(KilerCustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  KilerSmsVerificationBuilder() {
-    KilerSmsVerification._initializeBuilder(this);
-  }
+  KilerSmsVerificationBuilder();
 
   KilerSmsVerificationBuilder get _$this {
     if (_$v != null) {

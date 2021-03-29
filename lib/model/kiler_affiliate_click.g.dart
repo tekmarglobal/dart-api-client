@@ -277,9 +277,7 @@ class KilerAffiliateClickBuilder
   set clickedByNavigation(KilerCustomerBuilder clickedByNavigation) =>
       _$this._clickedByNavigation = clickedByNavigation;
 
-  KilerAffiliateClickBuilder() {
-    KilerAffiliateClick._initializeBuilder(this);
-  }
+  KilerAffiliateClickBuilder();
 
   KilerAffiliateClickBuilder get _$this {
     if (_$v != null) {

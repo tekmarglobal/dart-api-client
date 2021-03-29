@@ -163,10 +163,7 @@ class RestResultOfListOfDefinitionServiceAgreementResponseBuilder
   set data(ListBuilder<DefinitionServiceAgreementResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfDefinitionServiceAgreementResponseBuilder() {
-    RestResultOfListOfDefinitionServiceAgreementResponse._initializeBuilder(
-        this);
-  }
+  RestResultOfListOfDefinitionServiceAgreementResponseBuilder();
 
   RestResultOfListOfDefinitionServiceAgreementResponseBuilder get _$this {
     if (_$v != null) {

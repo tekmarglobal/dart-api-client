@@ -39,7 +39,7 @@ try {
     var result = api_instance.apiProductAddToFavoriteListPost(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n");
 }
 ```
 
@@ -84,7 +84,7 @@ try {
     var result = api_instance.apiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
+    print("Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n");
 }
 ```
 
@@ -128,7 +128,7 @@ try {
     var result = api_instance.apiProductGetFavoriteListPost();
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n");
 }
 ```
 
@@ -170,7 +170,7 @@ try {
     var result = api_instance.apiProductPost(productServiceProductRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductPost: $e\n');
+    print("Exception when calling ProductApi->apiProductPost: $e\n");
 }
 ```
 
@@ -214,7 +214,7 @@ try {
     var result = api_instance.apiProductProductListPost();
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductProductListPost: $e\n');
+    print("Exception when calling ProductApi->apiProductProductListPost: $e\n");
 }
 ```
 
@@ -256,7 +256,7 @@ try {
     var result = api_instance.apiProductProductSearchPost(productServiceSearchProductRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
+    print("Exception when calling ProductApi->apiProductProductSearchPost: $e\n");
 }
 ```
 
@@ -303,7 +303,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n');
+    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n");
 }
 ```
 
@@ -311,8 +311,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] 
- **productErpId** | **String**|  | [optional] 
+ **regionErpId** | **String**|  | [optional] [default to null]
+ **productErpId** | **String**|  | [optional] [default to null]
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type
@@ -352,7 +352,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n');
+    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
 }
 ```
 
@@ -360,8 +360,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] 
- **productErpId** | **String**|  | [optional] 
+ **regionErpId** | **String**|  | [optional] [default to null]
+ **productErpId** | **String**|  | [optional] [default to null]
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type

@@ -271,9 +271,7 @@ class KilerAgreementLogBuilder
   set customerNavigation(KilerCustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  KilerAgreementLogBuilder() {
-    KilerAgreementLog._initializeBuilder(this);
-  }
+  KilerAgreementLogBuilder();
 
   KilerAgreementLogBuilder get _$this {
     if (_$v != null) {

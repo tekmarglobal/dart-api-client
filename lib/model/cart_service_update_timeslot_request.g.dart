@@ -107,9 +107,7 @@ class CartServiceUpdateTimeslotRequestBuilder
   int get timeStotId => _$this._timeStotId;
   set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
 
-  CartServiceUpdateTimeslotRequestBuilder() {
-    CartServiceUpdateTimeslotRequest._initializeBuilder(this);
-  }
+  CartServiceUpdateTimeslotRequestBuilder();
 
   CartServiceUpdateTimeslotRequestBuilder get _$this {
     if (_$v != null) {

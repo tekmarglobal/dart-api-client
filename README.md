@@ -107,6 +107,11 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**apiDefinitionUpdateAgreementLogPost**](doc//DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc//MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc//MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
+*OrderApi* | [**apiOrderCreateOrderPost**](doc//OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
+*OrderApi* | [**apiOrderGetOrderListPost**](doc//OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
+*OrderApi* | [**apiOrderGetOrderPost**](doc//OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
+*OrderApi* | [**apiOrderSendmailPost**](doc//OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
+*OrderApi* | [**apiOrderUpdateStatusPost**](doc//OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
 *PaymentApi* | [**apiPaymentCardSuccessPost**](doc//PaymentApi.md#apipaymentcardsuccesspost) | **post** /api/Payment/CardSuccess | 
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc//PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc//PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
@@ -171,6 +176,7 @@ Class | Method | HTTP request | Description
  - [DefinitionServiceNeighborRequest](doc//DefinitionServiceNeighborRequest.md)
  - [DefinitionServiceNeighborResponse](doc//DefinitionServiceNeighborResponse.md)
  - [DefinitionServiceUpdateAgreementRequest](doc//DefinitionServiceUpdateAgreementRequest.md)
+ - [InlineObject](doc//InlineObject.md)
  - [KilerAddress](doc//KilerAddress.md)
  - [KilerAffiliateClick](doc//KilerAffiliateClick.md)
  - [KilerAffiliateLink](doc//KilerAffiliateLink.md)
@@ -241,6 +247,13 @@ Class | Method | HTTP request | Description
  - [KilerTimeSlot](doc//KilerTimeSlot.md)
  - [KilerTimeSlotTemplate](doc//KilerTimeSlotTemplate.md)
  - [KilerXpobjectType](doc//KilerXpobjectType.md)
+ - [OrderServiceGetOrderListResponse](doc//OrderServiceGetOrderListResponse.md)
+ - [OrderServiceGetOrderRequest](doc//OrderServiceGetOrderRequest.md)
+ - [OrderServiceOrderRequest](doc//OrderServiceOrderRequest.md)
+ - [OrderServiceOrderResponse](doc//OrderServiceOrderResponse.md)
+ - [OrderServiceOrders](doc//OrderServiceOrders.md)
+ - [OrderServiceROrderProducts](doc//OrderServiceROrderProducts.md)
+ - [OrderServiceUpdateOrderRequest](doc//OrderServiceUpdateOrderRequest.md)
  - [PaymentServicePaymentRequest](doc//PaymentServicePaymentRequest.md)
  - [PaymentServicePaymentResponse](doc//PaymentServicePaymentResponse.md)
  - [PaymentServicePaymentTypeResponse](doc//PaymentServicePaymentTypeResponse.md)
@@ -252,6 +265,9 @@ Class | Method | HTTP request | Description
  - [ProductServiceRProductPrice](doc//ProductServiceRProductPrice.md)
  - [ProductServiceSearchProductRequest](doc//ProductServiceSearchProductRequest.md)
  - [RegisterServiceLoginResponse](doc//RegisterServiceLoginResponse.md)
+ - [RegisterServiceSmsRequest](doc//RegisterServiceSmsRequest.md)
+ - [RegisterServiceSmsResponse](doc//RegisterServiceSmsResponse.md)
+ - [RegisterServiceVerifyRequest](doc//RegisterServiceVerifyRequest.md)
  - [RegisterServiceVersionResponse](doc//RegisterServiceVersionResponse.md)
  - [RestResultOfAccountServiceLoginResponse](doc//RestResultOfAccountServiceLoginResponse.md)
  - [RestResultOfAdminServiceAdminNeighborResponse](doc//RestResultOfAdminServiceAdminNeighborResponse.md)
@@ -279,17 +295,16 @@ Class | Method | HTTP request | Description
  - [RestResultOfListOfDefinitionServiceNeighborResponse](doc//RestResultOfListOfDefinitionServiceNeighborResponse.md)
  - [RestResultOfListOfProductServiceRProduct](doc//RestResultOfListOfProductServiceRProduct.md)
  - [RestResultOfListOfSystemString](doc//RestResultOfListOfSystemString.md)
+ - [RestResultOfOrderServiceGetOrderListResponse](doc//RestResultOfOrderServiceGetOrderListResponse.md)
+ - [RestResultOfOrderServiceOrderResponse](doc//RestResultOfOrderServiceOrderResponse.md)
  - [RestResultOfPaymentServicePaymentResponse](doc//RestResultOfPaymentServicePaymentResponse.md)
  - [RestResultOfPaymentServicePaymentTypeResponse](doc//RestResultOfPaymentServicePaymentTypeResponse.md)
  - [RestResultOfProductServiceFavoriteListResponse](doc//RestResultOfProductServiceFavoriteListResponse.md)
  - [RestResultOfProductServiceRProduct](doc//RestResultOfProductServiceRProduct.md)
  - [RestResultOfRegisterServiceLoginResponse](doc//RestResultOfRegisterServiceLoginResponse.md)
- - [RestResultOfSmsResponseSmsResponse](doc//RestResultOfSmsResponseSmsResponse.md)
+ - [RestResultOfRegisterServiceSmsResponse](doc//RestResultOfRegisterServiceSmsResponse.md)
  - [RestResultOfSystemInt32](doc//RestResultOfSystemInt32.md)
  - [RestResultOfSystemObject](doc//RestResultOfSystemObject.md)
- - [SmsRequestSmsRequest](doc//SmsRequestSmsRequest.md)
- - [SmsResponseSmsResponse](doc//SmsResponseSmsResponse.md)
- - [VerifyRequestVerifyRequest](doc//VerifyRequestVerifyRequest.md)
 
 
 ## Documentation For Authorization

@@ -1,53 +1,53 @@
-import 'package:openapi/model/kiler_permission_policy_type_permissions_object.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_permission_policy_type_permissions_object.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_permission_policy_member_permissions_object.g.dart';
 
 abstract class KilerPermissionPolicyMemberPermissionsObject implements Built<KilerPermissionPolicyMemberPermissionsObject, KilerPermissionPolicyMemberPermissionsObjectBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     String get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'members')
     String get members;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'readState')
     int get readState;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'writeState')
     int get writeState;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'criteria')
     String get criteria;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'typePermissionObject')
     String get typePermissionObject;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'typePermissionObjectNavigation')
     KilerPermissionPolicyTypePermissionsObject get typePermissionObjectNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerPermissionPolicyMemberPermissionsObject._();
 
-    static void _initializeBuilder(KilerPermissionPolicyMemberPermissionsObjectBuilder b) => b;
-
     factory KilerPermissionPolicyMemberPermissionsObject([updates(KilerPermissionPolicyMemberPermissionsObjectBuilder b)]) = _$KilerPermissionPolicyMemberPermissionsObject;
     static Serializer<KilerPermissionPolicyMemberPermissionsObject> get serializer => _$kilerPermissionPolicyMemberPermissionsObjectSerializer;
+
 }
 

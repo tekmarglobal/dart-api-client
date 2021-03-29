@@ -410,9 +410,7 @@ class KilerConfigurationBuilder
           KilerProductBuilder deliveryProductNavigation) =>
       _$this._deliveryProductNavigation = deliveryProductNavigation;
 
-  KilerConfigurationBuilder() {
-    KilerConfiguration._initializeBuilder(this);
-  }
+  KilerConfigurationBuilder();
 
   KilerConfigurationBuilder get _$this {
     if (_$v != null) {

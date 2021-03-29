@@ -196,9 +196,7 @@ class KilerSurveyTemplateBuilder
   set surveyQuestion(ListBuilder<KilerSurveyQuestion> surveyQuestion) =>
       _$this._surveyQuestion = surveyQuestion;
 
-  KilerSurveyTemplateBuilder() {
-    KilerSurveyTemplate._initializeBuilder(this);
-  }
+  KilerSurveyTemplateBuilder();
 
   KilerSurveyTemplateBuilder get _$this {
     if (_$v != null) {

@@ -142,9 +142,7 @@ class RestResultOfSystemInt32Builder
   int get data => _$this._data;
   set data(int data) => _$this._data = data;
 
-  RestResultOfSystemInt32Builder() {
-    RestResultOfSystemInt32._initializeBuilder(this);
-  }
+  RestResultOfSystemInt32Builder();
 
   RestResultOfSystemInt32Builder get _$this {
     if (_$v != null) {

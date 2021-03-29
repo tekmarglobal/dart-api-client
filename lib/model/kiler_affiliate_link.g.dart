@@ -322,9 +322,7 @@ class KilerAffiliateLinkBuilder
   set affiliateClick(ListBuilder<KilerAffiliateClick> affiliateClick) =>
       _$this._affiliateClick = affiliateClick;
 
-  KilerAffiliateLinkBuilder() {
-    KilerAffiliateLink._initializeBuilder(this);
-  }
+  KilerAffiliateLinkBuilder();
 
   KilerAffiliateLinkBuilder get _$this {
     if (_$v != null) {

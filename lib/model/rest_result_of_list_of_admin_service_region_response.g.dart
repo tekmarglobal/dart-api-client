@@ -156,9 +156,7 @@ class RestResultOfListOfAdminServiceRegionResponseBuilder
       _$this._data ??= new ListBuilder<AdminServiceRegionResponse>();
   set data(ListBuilder<AdminServiceRegionResponse> data) => _$this._data = data;
 
-  RestResultOfListOfAdminServiceRegionResponseBuilder() {
-    RestResultOfListOfAdminServiceRegionResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfAdminServiceRegionResponseBuilder();
 
   RestResultOfListOfAdminServiceRegionResponseBuilder get _$this {
     if (_$v != null) {

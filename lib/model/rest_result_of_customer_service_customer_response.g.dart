@@ -155,9 +155,7 @@ class RestResultOfCustomerServiceCustomerResponseBuilder
       _$this._data ??= new CustomerServiceCustomerResponseBuilder();
   set data(CustomerServiceCustomerResponseBuilder data) => _$this._data = data;
 
-  RestResultOfCustomerServiceCustomerResponseBuilder() {
-    RestResultOfCustomerServiceCustomerResponse._initializeBuilder(this);
-  }
+  RestResultOfCustomerServiceCustomerResponseBuilder();
 
   RestResultOfCustomerServiceCustomerResponseBuilder get _$this {
     if (_$v != null) {

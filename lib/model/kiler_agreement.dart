@@ -1,59 +1,59 @@
-import 'package:openapi/model/kiler_agreement_log.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/kiler_agreement_type.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_agreement_log.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/kiler_agreement_type.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_agreement.g.dart';
 
 abstract class KilerAgreement implements Built<KilerAgreement, KilerAgreementBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'agreementType')
     int get agreementType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'startDate')
     DateTime get startDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'endDate')
     DateTime get endDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'content')
     String get content;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'isRequired')
     bool get isRequired;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'agreementTypeNavigation')
     KilerAgreementType get agreementTypeNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'agreementLog')
     BuiltList<KilerAgreementLog> get agreementLog;
 
     // Boilerplate code needed to wire-up generated code
     KilerAgreement._();
 
-    static void _initializeBuilder(KilerAgreementBuilder b) => b;
-
     factory KilerAgreement([updates(KilerAgreementBuilder b)]) = _$KilerAgreement;
     static Serializer<KilerAgreement> get serializer => _$kilerAgreementSerializer;
+
 }
 

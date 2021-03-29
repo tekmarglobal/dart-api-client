@@ -52,6 +52,7 @@ import 'package:openapi/model/definition_service_faq_response.dart';
 import 'package:openapi/model/definition_service_neighbor_request.dart';
 import 'package:openapi/model/definition_service_neighbor_response.dart';
 import 'package:openapi/model/definition_service_update_agreement_request.dart';
+import 'package:openapi/model/inline_object.dart';
 import 'package:openapi/model/kiler_address.dart';
 import 'package:openapi/model/kiler_affiliate_click.dart';
 import 'package:openapi/model/kiler_affiliate_link.dart';
@@ -122,6 +123,13 @@ import 'package:openapi/model/kiler_ticket_category.dart';
 import 'package:openapi/model/kiler_time_slot.dart';
 import 'package:openapi/model/kiler_time_slot_template.dart';
 import 'package:openapi/model/kiler_xpobject_type.dart';
+import 'package:openapi/model/order_service_get_order_list_response.dart';
+import 'package:openapi/model/order_service_get_order_request.dart';
+import 'package:openapi/model/order_service_order_request.dart';
+import 'package:openapi/model/order_service_order_response.dart';
+import 'package:openapi/model/order_service_orders.dart';
+import 'package:openapi/model/order_service_r_order_products.dart';
+import 'package:openapi/model/order_service_update_order_request.dart';
 import 'package:openapi/model/payment_service_payment_request.dart';
 import 'package:openapi/model/payment_service_payment_response.dart';
 import 'package:openapi/model/payment_service_payment_type_response.dart';
@@ -133,6 +141,9 @@ import 'package:openapi/model/product_service_r_product.dart';
 import 'package:openapi/model/product_service_r_product_price.dart';
 import 'package:openapi/model/product_service_search_product_request.dart';
 import 'package:openapi/model/register_service_login_response.dart';
+import 'package:openapi/model/register_service_sms_request.dart';
+import 'package:openapi/model/register_service_sms_response.dart';
+import 'package:openapi/model/register_service_verify_request.dart';
 import 'package:openapi/model/register_service_version_response.dart';
 import 'package:openapi/model/rest_result_of_account_service_login_response.dart';
 import 'package:openapi/model/rest_result_of_admin_service_admin_neighbor_response.dart';
@@ -160,17 +171,16 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_faq_resp
 import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_product_service_r_product.dart';
 import 'package:openapi/model/rest_result_of_list_of_system_string.dart';
+import 'package:openapi/model/rest_result_of_order_service_get_order_list_response.dart';
+import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
 import 'package:openapi/model/rest_result_of_payment_service_payment_response.dart';
 import 'package:openapi/model/rest_result_of_payment_service_payment_type_response.dart';
 import 'package:openapi/model/rest_result_of_product_service_favorite_list_response.dart';
 import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
 import 'package:openapi/model/rest_result_of_register_service_login_response.dart';
-import 'package:openapi/model/rest_result_of_sms_response_sms_response.dart';
+import 'package:openapi/model/rest_result_of_register_service_sms_response.dart';
 import 'package:openapi/model/rest_result_of_system_int32.dart';
 import 'package:openapi/model/rest_result_of_system_object.dart';
-import 'package:openapi/model/sms_request_sms_request.dart';
-import 'package:openapi/model/sms_response_sms_response.dart';
-import 'package:openapi/model/verify_request_verify_request.dart';
 
 
 part 'serializers.g.dart';
@@ -222,6 +232,7 @@ DefinitionServiceFaqResponse,
 DefinitionServiceNeighborRequest,
 DefinitionServiceNeighborResponse,
 DefinitionServiceUpdateAgreementRequest,
+InlineObject,
 KilerAddress,
 KilerAffiliateClick,
 KilerAffiliateLink,
@@ -292,6 +303,13 @@ KilerTicketCategory,
 KilerTimeSlot,
 KilerTimeSlotTemplate,
 KilerXpobjectType,
+OrderServiceGetOrderListResponse,
+OrderServiceGetOrderRequest,
+OrderServiceOrderRequest,
+OrderServiceOrderResponse,
+OrderServiceOrders,
+OrderServiceROrderProducts,
+OrderServiceUpdateOrderRequest,
 PaymentServicePaymentRequest,
 PaymentServicePaymentResponse,
 PaymentServicePaymentTypeResponse,
@@ -303,6 +321,9 @@ ProductServiceRProduct,
 ProductServiceRProductPrice,
 ProductServiceSearchProductRequest,
 RegisterServiceLoginResponse,
+RegisterServiceSmsRequest,
+RegisterServiceSmsResponse,
+RegisterServiceVerifyRequest,
 RegisterServiceVersionResponse,
 RestResultOfAccountServiceLoginResponse,
 RestResultOfAdminServiceAdminNeighborResponse,
@@ -330,17 +351,16 @@ RestResultOfListOfDefinitionServiceFaqResponse,
 RestResultOfListOfDefinitionServiceNeighborResponse,
 RestResultOfListOfProductServiceRProduct,
 RestResultOfListOfSystemString,
+RestResultOfOrderServiceGetOrderListResponse,
+RestResultOfOrderServiceOrderResponse,
 RestResultOfPaymentServicePaymentResponse,
 RestResultOfPaymentServicePaymentTypeResponse,
 RestResultOfProductServiceFavoriteListResponse,
 RestResultOfProductServiceRProduct,
 RestResultOfRegisterServiceLoginResponse,
-RestResultOfSmsResponseSmsResponse,
+RestResultOfRegisterServiceSmsResponse,
 RestResultOfSystemInt32,
 RestResultOfSystemObject,
-SmsRequestSmsRequest,
-SmsResponseSmsResponse,
-VerifyRequestVerifyRequest,
 
 ])
 
@@ -484,6 +504,9 @@ const FullType(BuiltList, const [const FullType(DefinitionServiceNeighborRespons
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(DefinitionServiceUpdateAgreementRequest)]),
 () => new ListBuilder<DefinitionServiceUpdateAgreementRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(InlineObject)]),
+() => new ListBuilder<InlineObject>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(KilerAddress)]),
 () => new ListBuilder<KilerAddress>())
@@ -695,6 +718,27 @@ const FullType(BuiltList, const [const FullType(KilerTimeSlotTemplate)]),
 const FullType(BuiltList, const [const FullType(KilerXpobjectType)]),
 () => new ListBuilder<KilerXpobjectType>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceGetOrderListResponse)]),
+() => new ListBuilder<OrderServiceGetOrderListResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceGetOrderRequest)]),
+() => new ListBuilder<OrderServiceGetOrderRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceOrderRequest)]),
+() => new ListBuilder<OrderServiceOrderRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceOrderResponse)]),
+() => new ListBuilder<OrderServiceOrderResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceOrders)]),
+() => new ListBuilder<OrderServiceOrders>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceROrderProducts)]),
+() => new ListBuilder<OrderServiceROrderProducts>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(OrderServiceUpdateOrderRequest)]),
+() => new ListBuilder<OrderServiceUpdateOrderRequest>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(PaymentServicePaymentRequest)]),
 () => new ListBuilder<PaymentServicePaymentRequest>())
 ..addBuilderFactory(
@@ -727,6 +771,15 @@ const FullType(BuiltList, const [const FullType(ProductServiceSearchProductReque
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RegisterServiceLoginResponse)]),
 () => new ListBuilder<RegisterServiceLoginResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(RegisterServiceSmsRequest)]),
+() => new ListBuilder<RegisterServiceSmsRequest>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(RegisterServiceSmsResponse)]),
+() => new ListBuilder<RegisterServiceSmsResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(RegisterServiceVerifyRequest)]),
+() => new ListBuilder<RegisterServiceVerifyRequest>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RegisterServiceVersionResponse)]),
 () => new ListBuilder<RegisterServiceVersionResponse>())
@@ -809,6 +862,12 @@ const FullType(BuiltList, const [const FullType(RestResultOfListOfProductService
 const FullType(BuiltList, const [const FullType(RestResultOfListOfSystemString)]),
 () => new ListBuilder<RestResultOfListOfSystemString>())
 ..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(RestResultOfOrderServiceGetOrderListResponse)]),
+() => new ListBuilder<RestResultOfOrderServiceGetOrderListResponse>())
+..addBuilderFactory(
+const FullType(BuiltList, const [const FullType(RestResultOfOrderServiceOrderResponse)]),
+() => new ListBuilder<RestResultOfOrderServiceOrderResponse>())
+..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RestResultOfPaymentServicePaymentResponse)]),
 () => new ListBuilder<RestResultOfPaymentServicePaymentResponse>())
 ..addBuilderFactory(
@@ -824,23 +883,14 @@ const FullType(BuiltList, const [const FullType(RestResultOfProductServiceRProdu
 const FullType(BuiltList, const [const FullType(RestResultOfRegisterServiceLoginResponse)]),
 () => new ListBuilder<RestResultOfRegisterServiceLoginResponse>())
 ..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(RestResultOfSmsResponseSmsResponse)]),
-() => new ListBuilder<RestResultOfSmsResponseSmsResponse>())
+const FullType(BuiltList, const [const FullType(RestResultOfRegisterServiceSmsResponse)]),
+() => new ListBuilder<RestResultOfRegisterServiceSmsResponse>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RestResultOfSystemInt32)]),
 () => new ListBuilder<RestResultOfSystemInt32>())
 ..addBuilderFactory(
 const FullType(BuiltList, const [const FullType(RestResultOfSystemObject)]),
 () => new ListBuilder<RestResultOfSystemObject>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(SmsRequestSmsRequest)]),
-() => new ListBuilder<SmsRequestSmsRequest>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(SmsResponseSmsResponse)]),
-() => new ListBuilder<SmsResponseSmsResponse>())
-..addBuilderFactory(
-const FullType(BuiltList, const [const FullType(VerifyRequestVerifyRequest)]),
-() => new ListBuilder<VerifyRequestVerifyRequest>())
 
 ..add(Iso8601DateTimeSerializer())
 ).build();

@@ -1,0 +1,80 @@
+        import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'order_service_orders.g.dart';
+
+abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServiceOrdersBuilder> {
+
+    
+        @nullable
+    @BuiltValueField(wireName: r'orderId')
+    int get orderId;
+    
+        @nullable
+    @BuiltValueField(wireName: r'orderDate')
+    DateTime get orderDate;
+    
+        @nullable
+    @BuiltValueField(wireName: r'deliveryAddress')
+    String get deliveryAddress;
+    
+        @nullable
+    @BuiltValueField(wireName: r'billingAddress')
+    String get billingAddress;
+    
+        @nullable
+    @BuiltValueField(wireName: r'productTotal')
+    double get productTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'orderTotal')
+    double get orderTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'productDiscountsTotal')
+    double get productDiscountsTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'bagAmount')
+    int get bagAmount;
+    
+        @nullable
+    @BuiltValueField(wireName: r'bagTotal')
+    double get bagTotal;
+    
+        @nullable
+    @BuiltValueField(wireName: r'orderNote')
+    String get orderNote;
+    
+        @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
+    
+        @nullable
+    @BuiltValueField(wireName: r'cityName')
+    String get cityName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'countyName')
+    String get countyName;
+    
+        @nullable
+    @BuiltValueField(wireName: r'paymentType')
+    String get paymentType;
+    
+        @nullable
+    @BuiltValueField(wireName: r'fee')
+    double get fee;
+    
+        @nullable
+    @BuiltValueField(wireName: r'region')
+    int get region;
+
+    // Boilerplate code needed to wire-up generated code
+    OrderServiceOrders._();
+
+    factory OrderServiceOrders([updates(OrderServiceOrdersBuilder b)]) = _$OrderServiceOrders;
+    static Serializer<OrderServiceOrders> get serializer => _$orderServiceOrdersSerializer;
+
+}
+

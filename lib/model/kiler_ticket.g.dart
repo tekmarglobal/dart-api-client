@@ -471,9 +471,7 @@ class KilerTicketBuilder implements Builder<KilerTicket, KilerTicketBuilder> {
           KilerTicketCategoryBuilder ticketCategoryNavigation) =>
       _$this._ticketCategoryNavigation = ticketCategoryNavigation;
 
-  KilerTicketBuilder() {
-    KilerTicket._initializeBuilder(this);
-  }
+  KilerTicketBuilder();
 
   KilerTicketBuilder get _$this {
     if (_$v != null) {

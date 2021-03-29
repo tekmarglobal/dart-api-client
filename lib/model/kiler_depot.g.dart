@@ -241,9 +241,7 @@ class KilerDepotBuilder implements Builder<KilerDepot, KilerDepotBuilder> {
   set regionNavigation(KilerRegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
-  KilerDepotBuilder() {
-    KilerDepot._initializeBuilder(this);
-  }
+  KilerDepotBuilder();
 
   KilerDepotBuilder get _$this {
     if (_$v != null) {

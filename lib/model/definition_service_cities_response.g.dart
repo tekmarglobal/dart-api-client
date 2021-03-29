@@ -144,9 +144,7 @@ class DefinitionServiceCitiesResponseBuilder
   String get country => _$this._country;
   set country(String country) => _$this._country = country;
 
-  DefinitionServiceCitiesResponseBuilder() {
-    DefinitionServiceCitiesResponse._initializeBuilder(this);
-  }
+  DefinitionServiceCitiesResponseBuilder();
 
   DefinitionServiceCitiesResponseBuilder get _$this {
     if (_$v != null) {

@@ -1,92 +1,92 @@
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:openapi/model/kiler_order.dart';
-import 'package:openapi/model/kiler_payment_status.dart';
-import 'package:openapi/model/kiler_payment_type.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+            import 'package:openapi/model/kiler_order.dart';
+            import 'package:openapi/model/kiler_payment_status.dart';
+            import 'package:openapi/model/kiler_payment_type.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_payment.g.dart';
 
 abstract class KilerPayment implements Built<KilerPayment, KilerPaymentBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'success')
     bool get success;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentDate')
     DateTime get paymentDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'amount')
     double get amount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'description')
     String get description;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentType')
     int get paymentType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentStatus')
     int get paymentStatus;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'chargeType')
     int get chargeType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'transactionCode')
     String get transactionCode;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'uuId')
     String get uuId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderNavigation')
     KilerOrder get orderNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentStatusNavigation')
     KilerPaymentStatus get paymentStatusNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentTypeNavigation')
     KilerPaymentType get paymentTypeNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerPayment._();
 
-    static void _initializeBuilder(KilerPaymentBuilder b) => b;
-
     factory KilerPayment([updates(KilerPaymentBuilder b)]) = _$KilerPayment;
     static Serializer<KilerPayment> get serializer => _$kilerPaymentSerializer;
+
 }
 

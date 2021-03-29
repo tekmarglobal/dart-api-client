@@ -124,9 +124,7 @@ class DefinitionServiceFaqResponseBuilder
   String get title => _$this._title;
   set title(String title) => _$this._title = title;
 
-  DefinitionServiceFaqResponseBuilder() {
-    DefinitionServiceFaqResponse._initializeBuilder(this);
-  }
+  DefinitionServiceFaqResponseBuilder();
 
   DefinitionServiceFaqResponseBuilder get _$this {
     if (_$v != null) {

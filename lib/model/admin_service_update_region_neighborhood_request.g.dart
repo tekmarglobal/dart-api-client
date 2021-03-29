@@ -138,9 +138,7 @@ class AdminServiceUpdateRegionNeighborhoodRequestBuilder
   set neighborhood(ListBuilder<int> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  AdminServiceUpdateRegionNeighborhoodRequestBuilder() {
-    AdminServiceUpdateRegionNeighborhoodRequest._initializeBuilder(this);
-  }
+  AdminServiceUpdateRegionNeighborhoodRequestBuilder();
 
   AdminServiceUpdateRegionNeighborhoodRequestBuilder get _$this {
     if (_$v != null) {

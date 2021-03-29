@@ -1,69 +1,69 @@
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_call.g.dart';
 
 abstract class KilerCall implements Built<KilerCall, KilerCallBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'callDateTime')
     DateTime get callDateTime;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'duration')
     int get duration;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'extention')
     String get extention;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'direction')
     int get direction;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'status')
     int get status;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'recordingFile')
     String get recordingFile;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'uniqId')
     String get uniqId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerCall._();
 
-    static void _initializeBuilder(KilerCallBuilder b) => b;
-
     factory KilerCall([updates(KilerCallBuilder b)]) = _$KilerCall;
     static Serializer<KilerCall> get serializer => _$kilerCallSerializer;
+
 }
 

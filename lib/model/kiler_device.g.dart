@@ -340,9 +340,7 @@ class KilerDeviceBuilder implements Builder<KilerDevice, KilerDeviceBuilder> {
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerDeviceBuilder() {
-    KilerDevice._initializeBuilder(this);
-  }
+  KilerDeviceBuilder();
 
   KilerDeviceBuilder get _$this {
     if (_$v != null) {

@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiSanityCheckGet(fix);
     print(result);
 } catch (e) {
-    print('Exception when calling SanityApi->apiSanityCheckGet: $e\n');
+    print("Exception when calling SanityApi->apiSanityCheckGet: $e\n");
 }
 ```
 

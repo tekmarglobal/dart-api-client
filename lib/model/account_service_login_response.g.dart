@@ -193,9 +193,7 @@ class AccountServiceLoginResponseBuilder
   set versionResponse(AccountServiceVersionResponseBuilder versionResponse) =>
       _$this._versionResponse = versionResponse;
 
-  AccountServiceLoginResponseBuilder() {
-    AccountServiceLoginResponse._initializeBuilder(this);
-  }
+  AccountServiceLoginResponseBuilder();
 
   AccountServiceLoginResponseBuilder get _$this {
     if (_$v != null) {

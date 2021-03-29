@@ -239,9 +239,7 @@ class CatalogServiceRCategoryBuilder
   String get menuName => _$this._menuName;
   set menuName(String menuName) => _$this._menuName = menuName;
 
-  CatalogServiceRCategoryBuilder() {
-    CatalogServiceRCategory._initializeBuilder(this);
-  }
+  CatalogServiceRCategoryBuilder();
 
   CatalogServiceRCategoryBuilder get _$this {
     if (_$v != null) {

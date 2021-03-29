@@ -8,13 +8,13 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
-**product** | **int** |  | [optional] 
-**customer** | **int** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] 
-**productNavigation** | [**KilerProduct**](KilerProduct.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**name** | **String** |  | [optional] [default to null]
+**product** | **int** |  | [optional] [default to null]
+**customer** | **int** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] [default to null]
+**productNavigation** | [**KilerProduct**](KilerProduct.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

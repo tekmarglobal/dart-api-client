@@ -238,9 +238,7 @@ class KilerPlatformBuilder
       _$this._device ??= new ListBuilder<KilerDevice>();
   set device(ListBuilder<KilerDevice> device) => _$this._device = device;
 
-  KilerPlatformBuilder() {
-    KilerPlatform._initializeBuilder(this);
-  }
+  KilerPlatformBuilder();
 
   KilerPlatformBuilder get _$this {
     if (_$v != null) {

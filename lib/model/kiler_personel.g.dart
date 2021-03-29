@@ -269,9 +269,7 @@ class KilerPersonelBuilder
           ListBuilder<KilerPersonelDepartment> personelDepartment) =>
       _$this._personelDepartment = personelDepartment;
 
-  KilerPersonelBuilder() {
-    KilerPersonel._initializeBuilder(this);
-  }
+  KilerPersonelBuilder();
 
   KilerPersonelBuilder get _$this {
     if (_$v != null) {

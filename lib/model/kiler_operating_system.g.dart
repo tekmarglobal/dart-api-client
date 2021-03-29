@@ -168,9 +168,7 @@ class KilerOperatingSystemBuilder
   set platform(ListBuilder<KilerPlatform> platform) =>
       _$this._platform = platform;
 
-  KilerOperatingSystemBuilder() {
-    KilerOperatingSystem._initializeBuilder(this);
-  }
+  KilerOperatingSystemBuilder();
 
   KilerOperatingSystemBuilder get _$this {
     if (_$v != null) {

@@ -157,9 +157,7 @@ class RestResultOfProductServiceFavoriteListResponseBuilder
   set data(ProductServiceFavoriteListResponseBuilder data) =>
       _$this._data = data;
 
-  RestResultOfProductServiceFavoriteListResponseBuilder() {
-    RestResultOfProductServiceFavoriteListResponse._initializeBuilder(this);
-  }
+  RestResultOfProductServiceFavoriteListResponseBuilder();
 
   RestResultOfProductServiceFavoriteListResponseBuilder get _$this {
     if (_$v != null) {

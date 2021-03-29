@@ -381,9 +381,7 @@ class KilerNeighborhoodBuilder
       _$this._regionRegionsNeighborhoodNeighborhoods =
           regionRegionsNeighborhoodNeighborhoods;
 
-  KilerNeighborhoodBuilder() {
-    KilerNeighborhood._initializeBuilder(this);
-  }
+  KilerNeighborhoodBuilder();
 
   KilerNeighborhoodBuilder get _$this {
     if (_$v != null) {

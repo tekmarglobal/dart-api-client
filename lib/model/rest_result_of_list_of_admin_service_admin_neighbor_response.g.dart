@@ -162,10 +162,7 @@ class RestResultOfListOfAdminServiceAdminNeighborResponseBuilder
   set data(ListBuilder<AdminServiceAdminNeighborResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfAdminServiceAdminNeighborResponseBuilder() {
-    RestResultOfListOfAdminServiceAdminNeighborResponse._initializeBuilder(
-        this);
-  }
+  RestResultOfListOfAdminServiceAdminNeighborResponseBuilder();
 
   RestResultOfListOfAdminServiceAdminNeighborResponseBuilder get _$this {
     if (_$v != null) {

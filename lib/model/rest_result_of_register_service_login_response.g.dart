@@ -152,9 +152,7 @@ class RestResultOfRegisterServiceLoginResponseBuilder
       _$this._data ??= new RegisterServiceLoginResponseBuilder();
   set data(RegisterServiceLoginResponseBuilder data) => _$this._data = data;
 
-  RestResultOfRegisterServiceLoginResponseBuilder() {
-    RestResultOfRegisterServiceLoginResponse._initializeBuilder(this);
-  }
+  RestResultOfRegisterServiceLoginResponseBuilder();
 
   RestResultOfRegisterServiceLoginResponseBuilder get _$this {
     if (_$v != null) {

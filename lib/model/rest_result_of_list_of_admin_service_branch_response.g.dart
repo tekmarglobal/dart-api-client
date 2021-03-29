@@ -156,9 +156,7 @@ class RestResultOfListOfAdminServiceBranchResponseBuilder
       _$this._data ??= new ListBuilder<AdminServiceBranchResponse>();
   set data(ListBuilder<AdminServiceBranchResponse> data) => _$this._data = data;
 
-  RestResultOfListOfAdminServiceBranchResponseBuilder() {
-    RestResultOfListOfAdminServiceBranchResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfAdminServiceBranchResponseBuilder();
 
   RestResultOfListOfAdminServiceBranchResponseBuilder get _$this {
     if (_$v != null) {

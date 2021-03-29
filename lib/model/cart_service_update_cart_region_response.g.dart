@@ -115,9 +115,7 @@ class CartServiceUpdateCartRegionResponseBuilder
           ListBuilder<CartServiceRCartItemImpact> cartItemImpacts) =>
       _$this._cartItemImpacts = cartItemImpacts;
 
-  CartServiceUpdateCartRegionResponseBuilder() {
-    CartServiceUpdateCartRegionResponse._initializeBuilder(this);
-  }
+  CartServiceUpdateCartRegionResponseBuilder();
 
   CartServiceUpdateCartRegionResponseBuilder get _$this {
     if (_$v != null) {

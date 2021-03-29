@@ -157,9 +157,7 @@ class RestResultOfListOfAdminServiceCompanyResponseBuilder
   set data(ListBuilder<AdminServiceCompanyResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfAdminServiceCompanyResponseBuilder() {
-    RestResultOfListOfAdminServiceCompanyResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfAdminServiceCompanyResponseBuilder();
 
   RestResultOfListOfAdminServiceCompanyResponseBuilder get _$this {
     if (_$v != null) {

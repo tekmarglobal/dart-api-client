@@ -435,9 +435,7 @@ class KilerPermissionPolicyRoleBuilder
       _$this._permissionPolicyUserUsersPermissionPolicyRoleRoles =
           permissionPolicyUserUsersPermissionPolicyRoleRoles;
 
-  KilerPermissionPolicyRoleBuilder() {
-    KilerPermissionPolicyRole._initializeBuilder(this);
-  }
+  KilerPermissionPolicyRoleBuilder();
 
   KilerPermissionPolicyRoleBuilder get _$this {
     if (_$v != null) {

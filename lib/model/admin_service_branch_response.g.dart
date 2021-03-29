@@ -142,9 +142,7 @@ class AdminServiceBranchResponseBuilder
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
 
-  AdminServiceBranchResponseBuilder() {
-    AdminServiceBranchResponse._initializeBuilder(this);
-  }
+  AdminServiceBranchResponseBuilder();
 
   AdminServiceBranchResponseBuilder get _$this {
     if (_$v != null) {

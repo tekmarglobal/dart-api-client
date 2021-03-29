@@ -1,177 +1,177 @@
-import 'package:openapi/model/kiler_order_product.dart';
-import 'package:openapi/model/kiler_survey.dart';
-import 'package:openapi/model/kiler_time_slot.dart';
-import 'package:openapi/model/kiler_order_status.dart';
-import 'package:openapi/model/kiler_address.dart';
-import 'package:openapi/model/kiler_region.dart';
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:openapi/model/kiler_cart.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/kiler_ticket.dart';
-import 'package:openapi/model/kiler_device.dart';
-import 'package:openapi/model/kiler_payment_type.dart';
-import 'package:openapi/model/kiler_payment.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_order_product.dart';
+            import 'package:openapi/model/kiler_survey.dart';
+            import 'package:openapi/model/kiler_time_slot.dart';
+            import 'package:openapi/model/kiler_order_status.dart';
+            import 'package:openapi/model/kiler_address.dart';
+            import 'package:openapi/model/kiler_region.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+            import 'package:openapi/model/kiler_cart.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/kiler_ticket.dart';
+            import 'package:openapi/model/kiler_device.dart';
+            import 'package:openapi/model/kiler_payment_type.dart';
+            import 'package:openapi/model/kiler_payment.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_order.g.dart';
 
 abstract class KilerOrder implements Built<KilerOrder, KilerOrderBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cart')
     int get cart;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderDate')
     DateTime get orderDate;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'productDiscountsTotal')
     double get productDiscountsTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'campaignDiscountsTotal')
     double get campaignDiscountsTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'deliveryAddress')
     int get deliveryAddress;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'billingAddress')
     int get billingAddress;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderStatus')
     int get orderStatus;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'productTotal')
     double get productTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderTotal')
     double get orderTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'completedFrom')
     int get completedFrom;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'note')
     String get note;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'bagAmount')
     int get bagAmount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'bagTotal')
     double get bagTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'timeSlot')
     int get timeSlot;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentType')
     int get paymentType;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'sent')
     bool get sent;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'uuid')
     String get uuid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'isProcessed')
     bool get isProcessed;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'billingAddressNavigation')
     KilerAddress get billingAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cartNavigation')
     KilerCart get cartNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'completedFromNavigation')
     KilerDevice get completedFromNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'deliveryAddressNavigation')
     KilerAddress get deliveryAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderStatusNavigation')
     KilerOrderStatus get orderStatusNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'paymentTypeNavigation')
     KilerPaymentType get paymentTypeNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'regionNavigation')
     KilerRegion get regionNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'timeSlotNavigation')
     KilerTimeSlot get timeSlotNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderProduct')
     BuiltList<KilerOrderProduct> get orderProduct;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<KilerPayment> get payment;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'survey')
     BuiltList<KilerSurvey> get survey;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'ticket')
     BuiltList<KilerTicket> get ticket;
 
     // Boilerplate code needed to wire-up generated code
     KilerOrder._();
 
-    static void _initializeBuilder(KilerOrderBuilder b) => b;
-
     factory KilerOrder([updates(KilerOrderBuilder b)]) = _$KilerOrder;
     static Serializer<KilerOrder> get serializer => _$kilerOrderSerializer;
+
 }
 

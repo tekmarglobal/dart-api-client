@@ -124,9 +124,7 @@ class AccountServiceVersionRequestBuilder
   String get platform => _$this._platform;
   set platform(String platform) => _$this._platform = platform;
 
-  AccountServiceVersionRequestBuilder() {
-    AccountServiceVersionRequest._initializeBuilder(this);
-  }
+  AccountServiceVersionRequestBuilder();
 
   AccountServiceVersionRequestBuilder get _$this {
     if (_$v != null) {

@@ -113,9 +113,7 @@ class ProductServiceFavoriteListResponseBuilder
   set products(ListBuilder<ProductServiceRProduct> products) =>
       _$this._products = products;
 
-  ProductServiceFavoriteListResponseBuilder() {
-    ProductServiceFavoriteListResponse._initializeBuilder(this);
-  }
+  ProductServiceFavoriteListResponseBuilder();
 
   ProductServiceFavoriteListResponseBuilder get _$this {
     if (_$v != null) {
