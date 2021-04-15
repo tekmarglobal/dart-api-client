@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **apiProductAddToFavoriteListPost**
-> RestResultOfProductServiceFavoriteListResponse apiProductAddToFavoriteListPost(productServiceFavoriteRequest)
+> RestResultOfProductServiceFavoriteListResponse apiProductAddToFavoriteListPost(body)
 
 
 
@@ -33,10 +33,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
+var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
 
 try { 
-    var result = api_instance.apiProductAddToFavoriteListPost(productServiceFavoriteRequest);
+    var result = api_instance.apiProductAddToFavoriteListPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductDeleteFavoriteDelete**
-> RestResultOfProductServiceFavoriteListResponse apiProductDeleteFavoriteDelete(productServiceFavoriteRequest)
+> RestResultOfProductServiceFavoriteListResponse apiProductDeleteFavoriteDelete(body)
 
 
 
@@ -78,10 +78,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
+var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
 
 try { 
-    var result = api_instance.apiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
+    var result = api_instance.apiProductDeleteFavoriteDelete(body);
     print(result);
 } catch (e) {
     print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
@@ -92,7 +92,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -151,7 +151,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductPost**
-> RestResultOfProductServiceRProduct apiProductPost(productServiceProductRequest)
+> RestResultOfProductServiceRProduct apiProductPost(body)
 
 
 
@@ -164,10 +164,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var productServiceProductRequest = new ProductServiceProductRequest(); // ProductServiceProductRequest | 
+var body = new ProductServiceProductRequest(); // ProductServiceProductRequest | 
 
 try { 
-    var result = api_instance.apiProductPost(productServiceProductRequest);
+    var result = api_instance.apiProductPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling ProductApi->apiProductPost: $e\n');
@@ -178,7 +178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productServiceProductRequest** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
+ **body** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -237,7 +237,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductProductSearchPost**
-> RestResultOfListOfProductServiceRProduct apiProductProductSearchPost(productServiceSearchProductRequest)
+> RestResultOfListOfProductServiceRProduct apiProductProductSearchPost(body)
 
 
 
@@ -250,10 +250,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var productServiceSearchProductRequest = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest | 
+var body = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest | 
 
 try { 
-    var result = api_instance.apiProductProductSearchPost(productServiceSearchProductRequest);
+    var result = api_instance.apiProductProductSearchPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
@@ -264,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productServiceSearchProductRequest** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
+ **body** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
 
 ### Return type
 

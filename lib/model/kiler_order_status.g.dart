@@ -1,99 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_order_status.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerOrderStatus> _$kilerOrderStatusSerializer =
-    new _$KilerOrderStatusSerializer();
-
-class _$KilerOrderStatusSerializer
-    implements StructuredSerializer<KilerOrderStatus> {
-  @override
-  final Iterable<Type> types = const [KilerOrderStatus, _$KilerOrderStatus];
-  @override
-  final String wireName = 'KilerOrderStatus';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerOrderStatus object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerOrderStatus deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerOrderStatusBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'order':
-          result.order.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerOrderStatus extends KilerOrderStatus {
   @override
@@ -180,15 +92,18 @@ class KilerOrderStatusBuilder
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerOrderStatusBuilder();
+  KilerOrderStatusBuilder() {
+    KilerOrderStatus._initializeBuilder(this);
+  }
 
   KilerOrderStatusBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _code = _$v.code;
-      _optimisticLockField = _$v.optimisticLockField;
-      _order = _$v.order?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _code = $v.code;
+      _optimisticLockField = $v.optimisticLockField;
+      _order = $v.order?.toBuilder();
       _$v = null;
     }
     return this;
@@ -196,9 +111,7 @@ class KilerOrderStatusBuilder
 
   @override
   void replace(KilerOrderStatus other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerOrderStatus;
   }
 

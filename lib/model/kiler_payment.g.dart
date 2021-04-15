@@ -1,226 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_payment.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPayment> _$kilerPaymentSerializer =
-    new _$KilerPaymentSerializer();
-
-class _$KilerPaymentSerializer implements StructuredSerializer<KilerPayment> {
-  @override
-  final Iterable<Type> types = const [KilerPayment, _$KilerPayment];
-  @override
-  final String wireName = 'KilerPayment';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerPayment object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.paymentDate != null) {
-      result
-        ..add('paymentDate')
-        ..add(serializers.serialize(object.paymentDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.amount != null) {
-      result
-        ..add('amount')
-        ..add(serializers.serialize(object.amount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.paymentType != null) {
-      result
-        ..add('paymentType')
-        ..add(serializers.serialize(object.paymentType,
-            specifiedType: const FullType(int)));
-    }
-    if (object.paymentStatus != null) {
-      result
-        ..add('paymentStatus')
-        ..add(serializers.serialize(object.paymentStatus,
-            specifiedType: const FullType(int)));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType: const FullType(int)));
-    }
-    if (object.chargeType != null) {
-      result
-        ..add('chargeType')
-        ..add(serializers.serialize(object.chargeType,
-            specifiedType: const FullType(int)));
-    }
-    if (object.transactionCode != null) {
-      result
-        ..add('transactionCode')
-        ..add(serializers.serialize(object.transactionCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.uuId != null) {
-      result
-        ..add('uuId')
-        ..add(serializers.serialize(object.uuId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.orderNavigation != null) {
-      result
-        ..add('orderNavigation')
-        ..add(serializers.serialize(object.orderNavigation,
-            specifiedType: const FullType(KilerOrder)));
-    }
-    if (object.paymentStatusNavigation != null) {
-      result
-        ..add('paymentStatusNavigation')
-        ..add(serializers.serialize(object.paymentStatusNavigation,
-            specifiedType: const FullType(KilerPaymentStatus)));
-    }
-    if (object.paymentTypeNavigation != null) {
-      result
-        ..add('paymentTypeNavigation')
-        ..add(serializers.serialize(object.paymentTypeNavigation,
-            specifiedType: const FullType(KilerPaymentType)));
-    }
-    return result;
-  }
-
-  @override
-  KilerPayment deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPaymentBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'paymentDate':
-          result.paymentDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'amount':
-          result.amount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'paymentType':
-          result.paymentType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'paymentStatus':
-          result.paymentStatus = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'order':
-          result.order = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'chargeType':
-          result.chargeType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'transactionCode':
-          result.transactionCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'uuId':
-          result.uuId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'orderNavigation':
-          result.orderNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerOrder)) as KilerOrder);
-          break;
-        case 'paymentStatusNavigation':
-          result.paymentStatusNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerPaymentStatus))
-              as KilerPaymentStatus);
-          break;
-        case 'paymentTypeNavigation':
-          result.paymentTypeNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerPaymentType))
-              as KilerPaymentType);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPayment extends KilerPayment {
   @override
@@ -472,28 +257,31 @@ class KilerPaymentBuilder
   set paymentTypeNavigation(KilerPaymentTypeBuilder paymentTypeNavigation) =>
       _$this._paymentTypeNavigation = paymentTypeNavigation;
 
-  KilerPaymentBuilder();
+  KilerPaymentBuilder() {
+    KilerPayment._initializeBuilder(this);
+  }
 
   KilerPaymentBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _success = _$v.success;
-      _paymentDate = _$v.paymentDate;
-      _amount = _$v.amount;
-      _description = _$v.description;
-      _paymentType = _$v.paymentType;
-      _paymentStatus = _$v.paymentStatus;
-      _order = _$v.order;
-      _chargeType = _$v.chargeType;
-      _transactionCode = _$v.transactionCode;
-      _uuId = _$v.uuId;
-      _customer = _$v.customer;
-      _optimisticLockField = _$v.optimisticLockField;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _orderNavigation = _$v.orderNavigation?.toBuilder();
-      _paymentStatusNavigation = _$v.paymentStatusNavigation?.toBuilder();
-      _paymentTypeNavigation = _$v.paymentTypeNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _success = $v.success;
+      _paymentDate = $v.paymentDate;
+      _amount = $v.amount;
+      _description = $v.description;
+      _paymentType = $v.paymentType;
+      _paymentStatus = $v.paymentStatus;
+      _order = $v.order;
+      _chargeType = $v.chargeType;
+      _transactionCode = $v.transactionCode;
+      _uuId = $v.uuId;
+      _customer = $v.customer;
+      _optimisticLockField = $v.optimisticLockField;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _orderNavigation = $v.orderNavigation?.toBuilder();
+      _paymentStatusNavigation = $v.paymentStatusNavigation?.toBuilder();
+      _paymentTypeNavigation = $v.paymentTypeNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -501,9 +289,7 @@ class KilerPaymentBuilder
 
   @override
   void replace(KilerPayment other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPayment;
   }
 

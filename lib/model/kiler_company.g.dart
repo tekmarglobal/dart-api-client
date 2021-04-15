@@ -1,107 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_company.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCompany> _$kilerCompanySerializer =
-    new _$KilerCompanySerializer();
-
-class _$KilerCompanySerializer implements StructuredSerializer<KilerCompany> {
-  @override
-  final Iterable<Type> types = const [KilerCompany, _$KilerCompany];
-  @override
-  final String wireName = 'KilerCompany';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCompany object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.color != null) {
-      result
-        ..add('color')
-        ..add(serializers.serialize(object.color,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerRegion)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerCompany deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCompanyBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'color':
-          result.color = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerRegion)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCompany extends KilerCompany {
   @override
@@ -201,16 +105,19 @@ class KilerCompanyBuilder
       _$this._region ??= new ListBuilder<KilerRegion>();
   set region(ListBuilder<KilerRegion> region) => _$this._region = region;
 
-  KilerCompanyBuilder();
+  KilerCompanyBuilder() {
+    KilerCompany._initializeBuilder(this);
+  }
 
   KilerCompanyBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _color = _$v.color;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _region = _$v.region?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _color = $v.color;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _region = $v.region?.toBuilder();
       _$v = null;
     }
     return this;
@@ -218,9 +125,7 @@ class KilerCompanyBuilder
 
   @override
   void replace(KilerCompany other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCompany;
   }
 

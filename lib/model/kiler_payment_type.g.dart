@@ -1,112 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_payment_type.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPaymentType> _$kilerPaymentTypeSerializer =
-    new _$KilerPaymentTypeSerializer();
-
-class _$KilerPaymentTypeSerializer
-    implements StructuredSerializer<KilerPaymentType> {
-  @override
-  final Iterable<Type> types = const [KilerPaymentType, _$KilerPaymentType];
-  @override
-  final String wireName = 'KilerPaymentType';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerPaymentType object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    if (object.payment != null) {
-      result
-        ..add('payment')
-        ..add(serializers.serialize(object.payment,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPayment)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerPaymentType deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPaymentTypeBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'order':
-          result.order.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-        case 'payment':
-          result.payment.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerPayment)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPaymentType extends KilerPaymentType {
   @override
@@ -209,16 +108,19 @@ class KilerPaymentTypeBuilder
       _$this._payment ??= new ListBuilder<KilerPayment>();
   set payment(ListBuilder<KilerPayment> payment) => _$this._payment = payment;
 
-  KilerPaymentTypeBuilder();
+  KilerPaymentTypeBuilder() {
+    KilerPaymentType._initializeBuilder(this);
+  }
 
   KilerPaymentTypeBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _code = _$v.code;
-      _optimisticLockField = _$v.optimisticLockField;
-      _order = _$v.order?.toBuilder();
-      _payment = _$v.payment?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _code = $v.code;
+      _optimisticLockField = $v.optimisticLockField;
+      _order = $v.order?.toBuilder();
+      _payment = $v.payment?.toBuilder();
       _$v = null;
     }
     return this;
@@ -226,9 +128,7 @@ class KilerPaymentTypeBuilder
 
   @override
   void replace(KilerPaymentType other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPaymentType;
   }
 

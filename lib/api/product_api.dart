@@ -25,7 +25,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         ///
         /// 
         Future<Response<RestResultOfProductServiceFavoriteListResponse>> apiProductAddToFavoriteListPost({ 
-            ProductServiceFavoriteRequest productServiceFavoriteRequest,
+            ProductServiceFavoriteRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -88,7 +88,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             dynamic _bodyData;
 
                         const _type = FullType(ProductServiceFavoriteRequest);
-                        _bodyData = _serializers.serialize(productServiceFavoriteRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Product/AddToFavoriteList',
@@ -121,7 +121,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         ///
         /// 
         Future<Response<RestResultOfProductServiceFavoriteListResponse>> apiProductDeleteFavoriteDelete({ 
-            ProductServiceFavoriteRequest productServiceFavoriteRequest,
+            ProductServiceFavoriteRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -184,7 +184,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             dynamic _bodyData;
 
                         const _type = FullType(ProductServiceFavoriteRequest);
-                        _bodyData = _serializers.serialize(productServiceFavoriteRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Product/DeleteFavorite',
@@ -305,7 +305,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         ///
         /// 
         Future<Response<RestResultOfProductServiceRProduct>> apiProductPost({ 
-            ProductServiceProductRequest productServiceProductRequest,
+            ProductServiceProductRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -368,7 +368,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             dynamic _bodyData;
 
                         const _type = FullType(ProductServiceProductRequest);
-                        _bodyData = _serializers.serialize(productServiceProductRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Product',
@@ -489,7 +489,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         ///
         /// 
         Future<Response<RestResultOfListOfProductServiceRProduct>> apiProductProductSearchPost({ 
-            ProductServiceSearchProductRequest productServiceSearchProductRequest,
+            ProductServiceSearchProductRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -552,7 +552,7 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             dynamic _bodyData;
 
                         const _type = FullType(ProductServiceSearchProductRequest);
-                        _bodyData = _serializers.serialize(productServiceSearchProductRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Product/ProductSearch',

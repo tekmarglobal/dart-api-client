@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_update_cart_region_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceUpdateCartRegionResponse>
-    _$cartServiceUpdateCartRegionResponseSerializer =
-    new _$CartServiceUpdateCartRegionResponseSerializer();
-
-class _$CartServiceUpdateCartRegionResponseSerializer
-    implements StructuredSerializer<CartServiceUpdateCartRegionResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceUpdateCartRegionResponse,
-    _$CartServiceUpdateCartRegionResponse
-  ];
-  @override
-  final String wireName = 'CartServiceUpdateCartRegionResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceUpdateCartRegionResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.cartItemImpacts != null) {
-      result
-        ..add('cartItemImpacts')
-        ..add(serializers.serialize(object.cartItemImpacts,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(CartServiceRCartItemImpact)])));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceUpdateCartRegionResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceUpdateCartRegionResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'cartItemImpacts':
-          result.cartItemImpacts.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CartServiceRCartItemImpact)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceUpdateCartRegionResponse
     extends CartServiceUpdateCartRegionResponse {
@@ -115,11 +62,14 @@ class CartServiceUpdateCartRegionResponseBuilder
           ListBuilder<CartServiceRCartItemImpact> cartItemImpacts) =>
       _$this._cartItemImpacts = cartItemImpacts;
 
-  CartServiceUpdateCartRegionResponseBuilder();
+  CartServiceUpdateCartRegionResponseBuilder() {
+    CartServiceUpdateCartRegionResponse._initializeBuilder(this);
+  }
 
   CartServiceUpdateCartRegionResponseBuilder get _$this {
-    if (_$v != null) {
-      _cartItemImpacts = _$v.cartItemImpacts?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _cartItemImpacts = $v.cartItemImpacts?.toBuilder();
       _$v = null;
     }
     return this;
@@ -127,9 +77,7 @@ class CartServiceUpdateCartRegionResponseBuilder
 
   @override
   void replace(CartServiceUpdateCartRegionResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceUpdateCartRegionResponse;
   }
 

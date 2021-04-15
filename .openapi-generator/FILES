@@ -87,6 +87,7 @@ doc/KilerDevice.md
 doc/KilerDeviceLogin.md
 doc/KilerManufacturer.md
 doc/KilerNeighborhood.md
+doc/KilerOlimposLog.md
 doc/KilerOperatingSystem.md
 doc/KilerOrder.md
 doc/KilerOrderProduct.md
@@ -110,6 +111,7 @@ doc/KilerProductImage.md
 doc/KilerProductImport.md
 doc/KilerProductImportDetail.md
 doc/KilerProductPrice.md
+doc/KilerProductTag.md
 doc/KilerRegion.md
 doc/KilerRegionProduct.md
 doc/KilerRegionRegionsNeighborhoodNeighborhoods.md
@@ -287,6 +289,7 @@ lib/model/kiler_device.dart
 lib/model/kiler_device_login.dart
 lib/model/kiler_manufacturer.dart
 lib/model/kiler_neighborhood.dart
+lib/model/kiler_olimpos_log.dart
 lib/model/kiler_operating_system.dart
 lib/model/kiler_order.dart
 lib/model/kiler_order_product.dart
@@ -310,6 +313,7 @@ lib/model/kiler_product_image.dart
 lib/model/kiler_product_import.dart
 lib/model/kiler_product_import_detail.dart
 lib/model/kiler_product_price.dart
+lib/model/kiler_product_tag.dart
 lib/model/kiler_region.dart
 lib/model/kiler_region_product.dart
 lib/model/kiler_region_regions_neighborhood_neighborhoods.dart
@@ -385,16 +389,5 @@ lib/model/rest_result_of_system_int32.dart
 lib/model/rest_result_of_system_object.dart
 lib/serializers.dart
 pubspec.yaml
-test/order_service_get_order_list_response_test.dart
-test/order_service_get_order_request_test.dart
-test/order_service_order_request_test.dart
-test/order_service_order_response_test.dart
-test/order_service_orders_test.dart
-test/order_service_r_order_products_test.dart
-test/order_service_update_order_request_test.dart
-test/register_service_sms_request_test.dart
-test/register_service_sms_response_test.dart
-test/register_service_verify_request_test.dart
-test/rest_result_of_order_service_get_order_list_response_test.dart
-test/rest_result_of_order_service_order_response_test.dart
-test/rest_result_of_register_service_sms_response_test.dart
+test/kiler_olimpos_log_test.dart
+test/kiler_product_tag_test.dart

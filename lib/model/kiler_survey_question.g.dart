@@ -1,114 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_survey_question.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerSurveyQuestion> _$kilerSurveyQuestionSerializer =
-    new _$KilerSurveyQuestionSerializer();
-
-class _$KilerSurveyQuestionSerializer
-    implements StructuredSerializer<KilerSurveyQuestion> {
-  @override
-  final Iterable<Type> types = const [
-    KilerSurveyQuestion,
-    _$KilerSurveyQuestion
-  ];
-  @override
-  final String wireName = 'KilerSurveyQuestion';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerSurveyQuestion object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.template != null) {
-      result
-        ..add('template')
-        ..add(serializers.serialize(object.template,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.templateNavigation != null) {
-      result
-        ..add('templateNavigation')
-        ..add(serializers.serialize(object.templateNavigation,
-            specifiedType: const FullType(KilerSurveyTemplate)));
-    }
-    if (object.surveyAnswer != null) {
-      result
-        ..add('surveyAnswer')
-        ..add(serializers.serialize(object.surveyAnswer,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerSurveyAnswer)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerSurveyQuestion deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerSurveyQuestionBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'template':
-          result.template = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'templateNavigation':
-          result.templateNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerSurveyTemplate))
-              as KilerSurveyTemplate);
-          break;
-        case 'surveyAnswer':
-          result.surveyAnswer.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerSurveyAnswer)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerSurveyQuestion extends KilerSurveyQuestion {
   @override
@@ -216,16 +113,19 @@ class KilerSurveyQuestionBuilder
   set surveyAnswer(ListBuilder<KilerSurveyAnswer> surveyAnswer) =>
       _$this._surveyAnswer = surveyAnswer;
 
-  KilerSurveyQuestionBuilder();
+  KilerSurveyQuestionBuilder() {
+    KilerSurveyQuestion._initializeBuilder(this);
+  }
 
   KilerSurveyQuestionBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _template = _$v.template;
-      _optimisticLockField = _$v.optimisticLockField;
-      _templateNavigation = _$v.templateNavigation?.toBuilder();
-      _surveyAnswer = _$v.surveyAnswer?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _template = $v.template;
+      _optimisticLockField = $v.optimisticLockField;
+      _templateNavigation = $v.templateNavigation?.toBuilder();
+      _surveyAnswer = $v.surveyAnswer?.toBuilder();
       _$v = null;
     }
     return this;
@@ -233,9 +133,7 @@ class KilerSurveyQuestionBuilder
 
   @override
   void replace(KilerSurveyQuestion other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerSurveyQuestion;
   }
 

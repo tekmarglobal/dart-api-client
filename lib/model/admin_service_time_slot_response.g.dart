@@ -1,101 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_time_slot_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceTimeSlotResponse>
-    _$adminServiceTimeSlotResponseSerializer =
-    new _$AdminServiceTimeSlotResponseSerializer();
-
-class _$AdminServiceTimeSlotResponseSerializer
-    implements StructuredSerializer<AdminServiceTimeSlotResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceTimeSlotResponse,
-    _$AdminServiceTimeSlotResponse
-  ];
-  @override
-  final String wireName = 'AdminServiceTimeSlotResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceTimeSlotResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.start != null) {
-      result
-        ..add('start')
-        ..add(serializers.serialize(object.start,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.end != null) {
-      result
-        ..add('end')
-        ..add(serializers.serialize(object.end,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.quota != null) {
-      result
-        ..add('quota')
-        ..add(serializers.serialize(object.quota,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.fee != null) {
-      result
-        ..add('fee')
-        ..add(serializers.serialize(object.fee,
-            specifiedType: const FullType(double)));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceTimeSlotResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceTimeSlotResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'start':
-          result.start = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'end':
-          result.end = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'quota':
-          result.quota = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'fee':
-          result.fee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceTimeSlotResponse extends AdminServiceTimeSlotResponse {
   @override
@@ -183,15 +93,18 @@ class AdminServiceTimeSlotResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
-  AdminServiceTimeSlotResponseBuilder();
+  AdminServiceTimeSlotResponseBuilder() {
+    AdminServiceTimeSlotResponse._initializeBuilder(this);
+  }
 
   AdminServiceTimeSlotResponseBuilder get _$this {
-    if (_$v != null) {
-      _start = _$v.start;
-      _end = _$v.end;
-      _quota = _$v.quota;
-      _region = _$v.region;
-      _fee = _$v.fee;
+    final $v = _$v;
+    if ($v != null) {
+      _start = $v.start;
+      _end = $v.end;
+      _quota = $v.quota;
+      _region = $v.region;
+      _fee = $v.fee;
       _$v = null;
     }
     return this;
@@ -199,9 +112,7 @@ class AdminServiceTimeSlotResponseBuilder
 
   @override
   void replace(AdminServiceTimeSlotResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceTimeSlotResponse;
   }
 

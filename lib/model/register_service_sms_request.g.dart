@@ -1,60 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'register_service_sms_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RegisterServiceSmsRequest> _$registerServiceSmsRequestSerializer =
-    new _$RegisterServiceSmsRequestSerializer();
-
-class _$RegisterServiceSmsRequestSerializer
-    implements StructuredSerializer<RegisterServiceSmsRequest> {
-  @override
-  final Iterable<Type> types = const [
-    RegisterServiceSmsRequest,
-    _$RegisterServiceSmsRequest
-  ];
-  @override
-  final String wireName = 'RegisterServiceSmsRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, RegisterServiceSmsRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  RegisterServiceSmsRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RegisterServiceSmsRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RegisterServiceSmsRequest extends RegisterServiceSmsRequest {
   @override
@@ -103,11 +54,14 @@ class RegisterServiceSmsRequestBuilder
   String get phone => _$this._phone;
   set phone(String phone) => _$this._phone = phone;
 
-  RegisterServiceSmsRequestBuilder();
+  RegisterServiceSmsRequestBuilder() {
+    RegisterServiceSmsRequest._initializeBuilder(this);
+  }
 
   RegisterServiceSmsRequestBuilder get _$this {
-    if (_$v != null) {
-      _phone = _$v.phone;
+    final $v = _$v;
+    if ($v != null) {
+      _phone = $v.phone;
       _$v = null;
     }
     return this;
@@ -115,9 +69,7 @@ class RegisterServiceSmsRequestBuilder
 
   @override
   void replace(RegisterServiceSmsRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RegisterServiceSmsRequest;
   }
 

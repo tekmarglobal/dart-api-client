@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'account_service_version_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AccountServiceVersionResponse>
-    _$accountServiceVersionResponseSerializer =
-    new _$AccountServiceVersionResponseSerializer();
-
-class _$AccountServiceVersionResponseSerializer
-    implements StructuredSerializer<AccountServiceVersionResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AccountServiceVersionResponse,
-    _$AccountServiceVersionResponse
-  ];
-  @override
-  final String wireName = 'AccountServiceVersionResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AccountServiceVersionResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.latestCode != null) {
-      result
-        ..add('latestCode')
-        ..add(serializers.serialize(object.latestCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.isMandatory != null) {
-      result
-        ..add('isMandatory')
-        ..add(serializers.serialize(object.isMandatory,
-            specifiedType: const FullType(bool)));
-    }
-    return result;
-  }
-
-  @override
-  AccountServiceVersionResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AccountServiceVersionResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'latestCode':
-          result.latestCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'isMandatory':
-          result.isMandatory = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AccountServiceVersionResponse extends AccountServiceVersionResponse {
   @override
@@ -125,12 +65,15 @@ class AccountServiceVersionResponseBuilder
   bool get isMandatory => _$this._isMandatory;
   set isMandatory(bool isMandatory) => _$this._isMandatory = isMandatory;
 
-  AccountServiceVersionResponseBuilder();
+  AccountServiceVersionResponseBuilder() {
+    AccountServiceVersionResponse._initializeBuilder(this);
+  }
 
   AccountServiceVersionResponseBuilder get _$this {
-    if (_$v != null) {
-      _latestCode = _$v.latestCode;
-      _isMandatory = _$v.isMandatory;
+    final $v = _$v;
+    if ($v != null) {
+      _latestCode = $v.latestCode;
+      _isMandatory = $v.isMandatory;
       _$v = null;
     }
     return this;
@@ -138,9 +81,7 @@ class AccountServiceVersionResponseBuilder
 
   @override
   void replace(AccountServiceVersionResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AccountServiceVersionResponse;
   }
 

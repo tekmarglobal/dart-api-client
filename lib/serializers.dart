@@ -91,6 +91,7 @@ import 'package:openapi/model/kiler_device.dart';
 import 'package:openapi/model/kiler_device_login.dart';
 import 'package:openapi/model/kiler_manufacturer.dart';
 import 'package:openapi/model/kiler_neighborhood.dart';
+import 'package:openapi/model/kiler_olimpos_log.dart';
 import 'package:openapi/model/kiler_operating_system.dart';
 import 'package:openapi/model/kiler_order.dart';
 import 'package:openapi/model/kiler_order_product.dart';
@@ -114,6 +115,7 @@ import 'package:openapi/model/kiler_product_image.dart';
 import 'package:openapi/model/kiler_product_import.dart';
 import 'package:openapi/model/kiler_product_import_detail.dart';
 import 'package:openapi/model/kiler_product_price.dart';
+import 'package:openapi/model/kiler_product_tag.dart';
 import 'package:openapi/model/kiler_region.dart';
 import 'package:openapi/model/kiler_region_product.dart';
 import 'package:openapi/model/kiler_region_regions_neighborhood_neighborhoods.dart';
@@ -269,6 +271,7 @@ part 'serializers.g.dart';
   KilerDeviceLogin,
   KilerManufacturer,
   KilerNeighborhood,
+  KilerOlimposLog,
   KilerOperatingSystem,
   KilerOrder,
   KilerOrderProduct,
@@ -292,6 +295,7 @@ part 'serializers.g.dart';
   KilerProductImport,
   KilerProductImportDetail,
   KilerProductPrice,
+  KilerProductTag,
   KilerRegion,
   KilerRegionProduct,
   KilerRegionRegionsNeighborhoodNeighborhoods,

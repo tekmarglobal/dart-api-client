@@ -109,7 +109,7 @@ import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart
         ///
         /// 
         Future<Response<RestResultOfBannerServiceBannerResponse>> apiBannerUpdateBannerPost({ 
-            BannerServiceBannerRequest bannerServiceBannerRequest,
+            BannerServiceBannerRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -172,7 +172,7 @@ import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart
             dynamic _bodyData;
 
                         const _type = FullType(BannerServiceBannerRequest);
-                        _bodyData = _serializers.serialize(bannerServiceBannerRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Banner/UpdateBanner',

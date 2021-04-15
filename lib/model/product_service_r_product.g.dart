@@ -1,203 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'product_service_r_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<ProductServiceRProduct> _$productServiceRProductSerializer =
-    new _$ProductServiceRProductSerializer();
-
-class _$ProductServiceRProductSerializer
-    implements StructuredSerializer<ProductServiceRProduct> {
-  @override
-  final Iterable<Type> types = const [
-    ProductServiceRProduct,
-    _$ProductServiceRProduct
-  ];
-  @override
-  final String wireName = 'ProductServiceRProduct';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, ProductServiceRProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.brandName != null) {
-      result
-        ..add('brandName')
-        ..add(serializers.serialize(object.brandName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.maxQuantity != null) {
-      result
-        ..add('maxQuantity')
-        ..add(serializers.serialize(object.maxQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.minQuantity != null) {
-      result
-        ..add('minQuantity')
-        ..add(serializers.serialize(object.minQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.quantityStep != null) {
-      result
-        ..add('quantityStep')
-        ..add(serializers.serialize(object.quantityStep,
-            specifiedType: const FullType(double)));
-    }
-    if (object.initalQuantity != null) {
-      result
-        ..add('initalQuantity')
-        ..add(serializers.serialize(object.initalQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.prices != null) {
-      result
-        ..add('prices')
-        ..add(serializers.serialize(object.prices,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(ProductServiceRProductPrice)])));
-    }
-    if (object.eId != null) {
-      result
-        ..add('eId')
-        ..add(serializers.serialize(object.eId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.barcode != null) {
-      result
-        ..add('barcode')
-        ..add(serializers.serialize(object.barcode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.unitId != null) {
-      result
-        ..add('unitId')
-        ..add(serializers.serialize(object.unitId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.unitName != null) {
-      result
-        ..add('unitName')
-        ..add(serializers.serialize(object.unitName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.menuName != null) {
-      result
-        ..add('menuName')
-        ..add(serializers.serialize(object.menuName,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  ProductServiceRProduct deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new ProductServiceRProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'brandName':
-          result.brandName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'maxQuantity':
-          result.maxQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'minQuantity':
-          result.minQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'quantityStep':
-          result.quantityStep = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'initalQuantity':
-          result.initalQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'prices':
-          result.prices.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(ProductServiceRProductPrice)
-              ])) as BuiltList<Object>);
-          break;
-        case 'eId':
-          result.eId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'barcode':
-          result.barcode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'unitId':
-          result.unitId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'unitName':
-          result.unitName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'menuName':
-          result.menuName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$ProductServiceRProduct extends ProductServiceRProduct {
   @override
@@ -404,25 +212,28 @@ class ProductServiceRProductBuilder
   String get menuName => _$this._menuName;
   set menuName(String menuName) => _$this._menuName = menuName;
 
-  ProductServiceRProductBuilder();
+  ProductServiceRProductBuilder() {
+    ProductServiceRProduct._initializeBuilder(this);
+  }
 
   ProductServiceRProductBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _description = _$v.description;
-      _brandName = _$v.brandName;
-      _maxQuantity = _$v.maxQuantity;
-      _minQuantity = _$v.minQuantity;
-      _quantityStep = _$v.quantityStep;
-      _initalQuantity = _$v.initalQuantity;
-      _prices = _$v.prices?.toBuilder();
-      _eId = _$v.eId;
-      _barcode = _$v.barcode;
-      _unitId = _$v.unitId;
-      _unitName = _$v.unitName;
-      _active = _$v.active;
-      _menuName = _$v.menuName;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
+      _description = $v.description;
+      _brandName = $v.brandName;
+      _maxQuantity = $v.maxQuantity;
+      _minQuantity = $v.minQuantity;
+      _quantityStep = $v.quantityStep;
+      _initalQuantity = $v.initalQuantity;
+      _prices = $v.prices?.toBuilder();
+      _eId = $v.eId;
+      _barcode = $v.barcode;
+      _unitId = $v.unitId;
+      _unitName = $v.unitName;
+      _active = $v.active;
+      _menuName = $v.menuName;
       _$v = null;
     }
     return this;
@@ -430,9 +241,7 @@ class ProductServiceRProductBuilder
 
   @override
   void replace(ProductServiceRProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ProductServiceRProduct;
   }
 

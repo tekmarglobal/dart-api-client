@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAccountLoginPost**
-> RestResultOfAccountServiceLoginResponse apiAccountLoginPost(accountServiceLoginRequest)
+> RestResultOfAccountServiceLoginResponse apiAccountLoginPost(body)
 
 
 
@@ -70,10 +70,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AccountApi();
-var accountServiceLoginRequest = new AccountServiceLoginRequest(); // AccountServiceLoginRequest | 
+var body = new AccountServiceLoginRequest(); // AccountServiceLoginRequest | 
 
 try { 
-    var result = api_instance.apiAccountLoginPost(accountServiceLoginRequest);
+    var result = api_instance.apiAccountLoginPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
@@ -84,7 +84,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountServiceLoginRequest** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
+ **body** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
 
 ### Return type
 

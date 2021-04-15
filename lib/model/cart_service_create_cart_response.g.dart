@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_create_cart_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceCreateCartResponse>
-    _$cartServiceCreateCartResponseSerializer =
-    new _$CartServiceCreateCartResponseSerializer();
-
-class _$CartServiceCreateCartResponseSerializer
-    implements StructuredSerializer<CartServiceCreateCartResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceCreateCartResponse,
-    _$CartServiceCreateCartResponse
-  ];
-  @override
-  final String wireName = 'CartServiceCreateCartResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceCreateCartResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.messages != null) {
-      result
-        ..add('messages')
-        ..add(serializers.serialize(object.messages,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceCreateCartResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceCreateCartResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'messages':
-          result.messages = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceCreateCartResponse extends CartServiceCreateCartResponse {
   @override
@@ -105,11 +55,14 @@ class CartServiceCreateCartResponseBuilder
   String get messages => _$this._messages;
   set messages(String messages) => _$this._messages = messages;
 
-  CartServiceCreateCartResponseBuilder();
+  CartServiceCreateCartResponseBuilder() {
+    CartServiceCreateCartResponse._initializeBuilder(this);
+  }
 
   CartServiceCreateCartResponseBuilder get _$this {
-    if (_$v != null) {
-      _messages = _$v.messages;
+    final $v = _$v;
+    if ($v != null) {
+      _messages = $v.messages;
       _$v = null;
     }
     return this;
@@ -117,9 +70,7 @@ class CartServiceCreateCartResponseBuilder
 
   @override
   void replace(CartServiceCreateCartResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceCreateCartResponse;
   }
 

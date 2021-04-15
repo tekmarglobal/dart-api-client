@@ -1,150 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_r_order_products.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceROrderProducts> _$orderServiceROrderProductsSerializer =
-    new _$OrderServiceROrderProductsSerializer();
-
-class _$OrderServiceROrderProductsSerializer
-    implements StructuredSerializer<OrderServiceROrderProducts> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceROrderProducts,
-    _$OrderServiceROrderProducts
-  ];
-  @override
-  final String wireName = 'OrderServiceROrderProducts';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceROrderProducts object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.listPrice != null) {
-      result
-        ..add('listPrice')
-        ..add(serializers.serialize(object.listPrice,
-            specifiedType: const FullType(double)));
-    }
-    if (object.price != null) {
-      result
-        ..add('price')
-        ..add(serializers.serialize(object.price,
-            specifiedType: const FullType(double)));
-    }
-    if (object.discount != null) {
-      result
-        ..add('discount')
-        ..add(serializers.serialize(object.discount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.quantity != null) {
-      result
-        ..add('quantity')
-        ..add(serializers.serialize(object.quantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.brandName != null) {
-      result
-        ..add('brandName')
-        ..add(serializers.serialize(object.brandName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.unitId != null) {
-      result
-        ..add('unitId')
-        ..add(serializers.serialize(object.unitId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.barcode != null) {
-      result
-        ..add('barcode')
-        ..add(serializers.serialize(object.barcode,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceROrderProducts deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceROrderProductsBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'listPrice':
-          result.listPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'price':
-          result.price = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'discount':
-          result.discount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'quantity':
-          result.quantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'brandName':
-          result.brandName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'unitId':
-          result.unitId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'barcode':
-          result.barcode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceROrderProducts extends OrderServiceROrderProducts {
   @override
@@ -294,20 +155,23 @@ class OrderServiceROrderProductsBuilder
   String get barcode => _$this._barcode;
   set barcode(String barcode) => _$this._barcode = barcode;
 
-  OrderServiceROrderProductsBuilder();
+  OrderServiceROrderProductsBuilder() {
+    OrderServiceROrderProducts._initializeBuilder(this);
+  }
 
   OrderServiceROrderProductsBuilder get _$this {
-    if (_$v != null) {
-      _productId = _$v.productId;
-      _name = _$v.name;
-      _listPrice = _$v.listPrice;
-      _price = _$v.price;
-      _discount = _$v.discount;
-      _quantity = _$v.quantity;
-      _brandName = _$v.brandName;
-      _unitId = _$v.unitId;
-      _active = _$v.active;
-      _barcode = _$v.barcode;
+    final $v = _$v;
+    if ($v != null) {
+      _productId = $v.productId;
+      _name = $v.name;
+      _listPrice = $v.listPrice;
+      _price = $v.price;
+      _discount = $v.discount;
+      _quantity = $v.quantity;
+      _brandName = $v.brandName;
+      _unitId = $v.unitId;
+      _active = $v.active;
+      _barcode = $v.barcode;
       _$v = null;
     }
     return this;
@@ -315,9 +179,7 @@ class OrderServiceROrderProductsBuilder
 
   @override
   void replace(OrderServiceROrderProducts other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceROrderProducts;
   }
 

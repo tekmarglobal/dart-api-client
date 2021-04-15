@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **status** | **int** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
 **recordingFile** | **String** |  | [optional] 
-**uniqId** | **String** |  | [optional] 
+**uniqueId** | **String** |  | [optional] 
 **optimisticLockField** | **int** |  | [optional] 
 **gcrecord** | **int** |  | [optional] 
 **customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] 

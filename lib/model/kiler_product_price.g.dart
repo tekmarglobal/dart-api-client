@@ -1,127 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_product_price.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerProductPrice> _$kilerProductPriceSerializer =
-    new _$KilerProductPriceSerializer();
-
-class _$KilerProductPriceSerializer
-    implements StructuredSerializer<KilerProductPrice> {
-  @override
-  final Iterable<Type> types = const [KilerProductPrice, _$KilerProductPrice];
-  @override
-  final String wireName = 'KilerProductPrice';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerProductPrice object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.dateStart != null) {
-      result
-        ..add('dateStart')
-        ..add(serializers.serialize(object.dateStart,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.dateEnd != null) {
-      result
-        ..add('dateEnd')
-        ..add(serializers.serialize(object.dateEnd,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.price != null) {
-      result
-        ..add('price')
-        ..add(serializers.serialize(object.price,
-            specifiedType: const FullType(double)));
-    }
-    if (object.regionProduct != null) {
-      result
-        ..add('regionProduct')
-        ..add(serializers.serialize(object.regionProduct,
-            specifiedType: const FullType(int)));
-    }
-    if (object.listPrice != null) {
-      result
-        ..add('listPrice')
-        ..add(serializers.serialize(object.listPrice,
-            specifiedType: const FullType(double)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regionProductNavigation != null) {
-      result
-        ..add('regionProductNavigation')
-        ..add(serializers.serialize(object.regionProductNavigation,
-            specifiedType: const FullType(KilerRegionProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerProductPrice deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerProductPriceBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'dateStart':
-          result.dateStart = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'dateEnd':
-          result.dateEnd = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'price':
-          result.price = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'regionProduct':
-          result.regionProduct = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'listPrice':
-          result.listPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regionProductNavigation':
-          result.regionProductNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerRegionProduct))
-              as KilerRegionProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerProductPrice extends KilerProductPrice {
   @override
@@ -249,18 +133,21 @@ class KilerProductPriceBuilder
           KilerRegionProductBuilder regionProductNavigation) =>
       _$this._regionProductNavigation = regionProductNavigation;
 
-  KilerProductPriceBuilder();
+  KilerProductPriceBuilder() {
+    KilerProductPrice._initializeBuilder(this);
+  }
 
   KilerProductPriceBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _dateStart = _$v.dateStart;
-      _dateEnd = _$v.dateEnd;
-      _price = _$v.price;
-      _regionProduct = _$v.regionProduct;
-      _listPrice = _$v.listPrice;
-      _optimisticLockField = _$v.optimisticLockField;
-      _regionProductNavigation = _$v.regionProductNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _dateStart = $v.dateStart;
+      _dateEnd = $v.dateEnd;
+      _price = $v.price;
+      _regionProduct = $v.regionProduct;
+      _listPrice = $v.listPrice;
+      _optimisticLockField = $v.optimisticLockField;
+      _regionProductNavigation = $v.regionProductNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -268,9 +155,7 @@ class KilerProductPriceBuilder
 
   @override
   void replace(KilerProductPrice other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerProductPrice;
   }
 

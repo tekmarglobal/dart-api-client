@@ -1,203 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_r_customer.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceRCustomer> _$customerServiceRCustomerSerializer =
-    new _$CustomerServiceRCustomerSerializer();
-
-class _$CustomerServiceRCustomerSerializer
-    implements StructuredSerializer<CustomerServiceRCustomer> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceRCustomer,
-    _$CustomerServiceRCustomer
-  ];
-  @override
-  final String wireName = 'CustomerServiceRCustomer';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceRCustomer object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerName != null) {
-      result
-        ..add('customerName')
-        ..add(serializers.serialize(object.customerName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerSurname != null) {
-      result
-        ..add('customerSurname')
-        ..add(serializers.serialize(object.customerSurname,
-            specifiedType: const FullType(String)));
-    }
-    if (object.birthDate != null) {
-      result
-        ..add('birthDate')
-        ..add(serializers.serialize(object.birthDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.email != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(object.email,
-            specifiedType: const FullType(String)));
-    }
-    if (object.gender != null) {
-      result
-        ..add('gender')
-        ..add(serializers.serialize(object.gender,
-            specifiedType: const FullType(int)));
-    }
-    if (object.allowSms != null) {
-      result
-        ..add('allowSms')
-        ..add(serializers.serialize(object.allowSms,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.allowEmail != null) {
-      result
-        ..add('allowEmail')
-        ..add(serializers.serialize(object.allowEmail,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.address != null) {
-      result
-        ..add('address')
-        ..add(serializers.serialize(object.address,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CustomerServiceRAddress)])));
-    }
-    if (object.registered != null) {
-      result
-        ..add('registered')
-        ..add(serializers.serialize(object.registered,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.lastOrder != null) {
-      result
-        ..add('lastOrder')
-        ..add(serializers.serialize(object.lastOrder,
-            specifiedType: const FullType(int)));
-    }
-    if (object.identificationNumber != null) {
-      result
-        ..add('identificationNumber')
-        ..add(serializers.serialize(object.identificationNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.defaultAddress != null) {
-      result
-        ..add('defaultAddress')
-        ..add(serializers.serialize(object.defaultAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.invoiceAddress != null) {
-      result
-        ..add('invoiceAddress')
-        ..add(serializers.serialize(object.invoiceAddress,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceRCustomer deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceRCustomerBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerName':
-          result.customerName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerSurname':
-          result.customerSurname = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'birthDate':
-          result.birthDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'gender':
-          result.gender = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'allowSms':
-          result.allowSms = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'allowEmail':
-          result.allowEmail = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'address':
-          result.address.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CustomerServiceRAddress)
-              ])) as BuiltList<Object>);
-          break;
-        case 'registered':
-          result.registered = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'lastOrder':
-          result.lastOrder = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'identificationNumber':
-          result.identificationNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'defaultAddress':
-          result.defaultAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'invoiceAddress':
-          result.invoiceAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceRCustomer extends CustomerServiceRCustomer {
   @override
@@ -411,25 +219,28 @@ class CustomerServiceRCustomerBuilder
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  CustomerServiceRCustomerBuilder();
+  CustomerServiceRCustomerBuilder() {
+    CustomerServiceRCustomer._initializeBuilder(this);
+  }
 
   CustomerServiceRCustomerBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _customerName = _$v.customerName;
-      _customerSurname = _$v.customerSurname;
-      _birthDate = _$v.birthDate;
-      _phone = _$v.phone;
-      _email = _$v.email;
-      _gender = _$v.gender;
-      _allowSms = _$v.allowSms;
-      _allowEmail = _$v.allowEmail;
-      _address = _$v.address?.toBuilder();
-      _registered = _$v.registered;
-      _lastOrder = _$v.lastOrder;
-      _identificationNumber = _$v.identificationNumber;
-      _defaultAddress = _$v.defaultAddress;
-      _invoiceAddress = _$v.invoiceAddress;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _customerName = $v.customerName;
+      _customerSurname = $v.customerSurname;
+      _birthDate = $v.birthDate;
+      _phone = $v.phone;
+      _email = $v.email;
+      _gender = $v.gender;
+      _allowSms = $v.allowSms;
+      _allowEmail = $v.allowEmail;
+      _address = $v.address?.toBuilder();
+      _registered = $v.registered;
+      _lastOrder = $v.lastOrder;
+      _identificationNumber = $v.identificationNumber;
+      _defaultAddress = $v.defaultAddress;
+      _invoiceAddress = $v.invoiceAddress;
       _$v = null;
     }
     return this;
@@ -437,9 +248,7 @@ class CustomerServiceRCustomerBuilder
 
   @override
   void replace(CustomerServiceRCustomer other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceRCustomer;
   }
 

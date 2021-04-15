@@ -1,112 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_department.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerDepartment> _$kilerDepartmentSerializer =
-    new _$KilerDepartmentSerializer();
-
-class _$KilerDepartmentSerializer
-    implements StructuredSerializer<KilerDepartment> {
-  @override
-  final Iterable<Type> types = const [KilerDepartment, _$KilerDepartment];
-  @override
-  final String wireName = 'KilerDepartment';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerDepartment object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.category != null) {
-      result
-        ..add('category')
-        ..add(serializers.serialize(object.category,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCategory)])));
-    }
-    if (object.personelDepartment != null) {
-      result
-        ..add('personelDepartment')
-        ..add(serializers.serialize(object.personelDepartment,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPersonelDepartment)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerDepartment deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerDepartmentBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'category':
-          result.category.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCategory)]))
-              as BuiltList<Object>);
-          break;
-        case 'personelDepartment':
-          result.personelDepartment.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerPersonelDepartment)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerDepartment extends KilerDepartment {
   @override
@@ -213,16 +112,19 @@ class KilerDepartmentBuilder
           ListBuilder<KilerPersonelDepartment> personelDepartment) =>
       _$this._personelDepartment = personelDepartment;
 
-  KilerDepartmentBuilder();
+  KilerDepartmentBuilder() {
+    KilerDepartment._initializeBuilder(this);
+  }
 
   KilerDepartmentBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _description = _$v.description;
-      _optimisticLockField = _$v.optimisticLockField;
-      _category = _$v.category?.toBuilder();
-      _personelDepartment = _$v.personelDepartment?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _description = $v.description;
+      _optimisticLockField = $v.optimisticLockField;
+      _category = $v.category?.toBuilder();
+      _personelDepartment = $v.personelDepartment?.toBuilder();
       _$v = null;
     }
     return this;
@@ -230,9 +132,7 @@ class KilerDepartmentBuilder
 
   @override
   void replace(KilerDepartment other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerDepartment;
   }
 

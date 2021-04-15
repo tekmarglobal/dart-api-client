@@ -1,102 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_xpobject_type.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerXpobjectType> _$kilerXpobjectTypeSerializer =
-    new _$KilerXpobjectTypeSerializer();
-
-class _$KilerXpobjectTypeSerializer
-    implements StructuredSerializer<KilerXpobjectType> {
-  @override
-  final Iterable<Type> types = const [KilerXpobjectType, _$KilerXpobjectType];
-  @override
-  final String wireName = 'KilerXpobjectType';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerXpobjectType object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.typeName != null) {
-      result
-        ..add('typeName')
-        ..add(serializers.serialize(object.typeName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.assemblyName != null) {
-      result
-        ..add('assemblyName')
-        ..add(serializers.serialize(object.assemblyName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.permissionPolicyRole != null) {
-      result
-        ..add('permissionPolicyRole')
-        ..add(serializers.serialize(object.permissionPolicyRole,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPermissionPolicyRole)])));
-    }
-    if (object.survey != null) {
-      result
-        ..add('survey')
-        ..add(serializers.serialize(object.survey,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerSurvey)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerXpobjectType deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerXpobjectTypeBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'typeName':
-          result.typeName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'assemblyName':
-          result.assemblyName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'permissionPolicyRole':
-          result.permissionPolicyRole.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerPermissionPolicyRole)
-              ])) as BuiltList<Object>);
-          break;
-        case 'survey':
-          result.survey.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerSurvey)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerXpobjectType extends KilerXpobjectType {
   @override
@@ -192,15 +101,18 @@ class KilerXpobjectTypeBuilder
       _$this._survey ??= new ListBuilder<KilerSurvey>();
   set survey(ListBuilder<KilerSurvey> survey) => _$this._survey = survey;
 
-  KilerXpobjectTypeBuilder();
+  KilerXpobjectTypeBuilder() {
+    KilerXpobjectType._initializeBuilder(this);
+  }
 
   KilerXpobjectTypeBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _typeName = _$v.typeName;
-      _assemblyName = _$v.assemblyName;
-      _permissionPolicyRole = _$v.permissionPolicyRole?.toBuilder();
-      _survey = _$v.survey?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _typeName = $v.typeName;
+      _assemblyName = $v.assemblyName;
+      _permissionPolicyRole = $v.permissionPolicyRole?.toBuilder();
+      _survey = $v.survey?.toBuilder();
       _$v = null;
     }
     return this;
@@ -208,9 +120,7 @@ class KilerXpobjectTypeBuilder
 
   @override
   void replace(KilerXpobjectType other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerXpobjectType;
   }
 

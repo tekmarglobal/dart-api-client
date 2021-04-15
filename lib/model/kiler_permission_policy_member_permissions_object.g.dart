@@ -1,146 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_permission_policy_member_permissions_object.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPermissionPolicyMemberPermissionsObject>
-    _$kilerPermissionPolicyMemberPermissionsObjectSerializer =
-    new _$KilerPermissionPolicyMemberPermissionsObjectSerializer();
-
-class _$KilerPermissionPolicyMemberPermissionsObjectSerializer
-    implements
-        StructuredSerializer<KilerPermissionPolicyMemberPermissionsObject> {
-  @override
-  final Iterable<Type> types = const [
-    KilerPermissionPolicyMemberPermissionsObject,
-    _$KilerPermissionPolicyMemberPermissionsObject
-  ];
-  @override
-  final String wireName = 'KilerPermissionPolicyMemberPermissionsObject';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      KilerPermissionPolicyMemberPermissionsObject object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.members != null) {
-      result
-        ..add('members')
-        ..add(serializers.serialize(object.members,
-            specifiedType: const FullType(String)));
-    }
-    if (object.readState != null) {
-      result
-        ..add('readState')
-        ..add(serializers.serialize(object.readState,
-            specifiedType: const FullType(int)));
-    }
-    if (object.writeState != null) {
-      result
-        ..add('writeState')
-        ..add(serializers.serialize(object.writeState,
-            specifiedType: const FullType(int)));
-    }
-    if (object.criteria != null) {
-      result
-        ..add('criteria')
-        ..add(serializers.serialize(object.criteria,
-            specifiedType: const FullType(String)));
-    }
-    if (object.typePermissionObject != null) {
-      result
-        ..add('typePermissionObject')
-        ..add(serializers.serialize(object.typePermissionObject,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.typePermissionObjectNavigation != null) {
-      result
-        ..add('typePermissionObjectNavigation')
-        ..add(serializers.serialize(object.typePermissionObjectNavigation,
-            specifiedType:
-                const FullType(KilerPermissionPolicyTypePermissionsObject)));
-    }
-    return result;
-  }
-
-  @override
-  KilerPermissionPolicyMemberPermissionsObject deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPermissionPolicyMemberPermissionsObjectBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'members':
-          result.members = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'readState':
-          result.readState = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'writeState':
-          result.writeState = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'criteria':
-          result.criteria = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'typePermissionObject':
-          result.typePermissionObject = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'typePermissionObjectNavigation':
-          result.typePermissionObjectNavigation.replace(serializers.deserialize(
-                  value,
-                  specifiedType: const FullType(
-                      KilerPermissionPolicyTypePermissionsObject))
-              as KilerPermissionPolicyTypePermissionsObject);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPermissionPolicyMemberPermissionsObject
     extends KilerPermissionPolicyMemberPermissionsObject {
@@ -295,20 +160,23 @@ class KilerPermissionPolicyMemberPermissionsObjectBuilder
               typePermissionObjectNavigation) =>
       _$this._typePermissionObjectNavigation = typePermissionObjectNavigation;
 
-  KilerPermissionPolicyMemberPermissionsObjectBuilder();
+  KilerPermissionPolicyMemberPermissionsObjectBuilder() {
+    KilerPermissionPolicyMemberPermissionsObject._initializeBuilder(this);
+  }
 
   KilerPermissionPolicyMemberPermissionsObjectBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _members = _$v.members;
-      _readState = _$v.readState;
-      _writeState = _$v.writeState;
-      _criteria = _$v.criteria;
-      _typePermissionObject = _$v.typePermissionObject;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _members = $v.members;
+      _readState = $v.readState;
+      _writeState = $v.writeState;
+      _criteria = $v.criteria;
+      _typePermissionObject = $v.typePermissionObject;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
       _typePermissionObjectNavigation =
-          _$v.typePermissionObjectNavigation?.toBuilder();
+          $v.typePermissionObjectNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -316,9 +184,7 @@ class KilerPermissionPolicyMemberPermissionsObjectBuilder
 
   @override
   void replace(KilerPermissionPolicyMemberPermissionsObject other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPermissionPolicyMemberPermissionsObject;
   }
 

@@ -1,117 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_permission_policy_user_users_permission_policy_role_roles.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles>
-    _$kilerPermissionPolicyUserUsersPermissionPolicyRoleRolesSerializer =
-    new _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesSerializer();
-
-class _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesSerializer
-    implements
-        StructuredSerializer<
-            KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles> {
-  @override
-  final Iterable<Type> types = const [
-    KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles,
-    _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles
-  ];
-  @override
-  final String wireName =
-      'KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.roles != null) {
-      result
-        ..add('roles')
-        ..add(serializers.serialize(object.roles,
-            specifiedType: const FullType(String)));
-    }
-    if (object.users != null) {
-      result
-        ..add('users')
-        ..add(serializers.serialize(object.users,
-            specifiedType: const FullType(String)));
-    }
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.rolesNavigation != null) {
-      result
-        ..add('rolesNavigation')
-        ..add(serializers.serialize(object.rolesNavigation,
-            specifiedType: const FullType(KilerPermissionPolicyRole)));
-    }
-    if (object.usersNavigation != null) {
-      result
-        ..add('usersNavigation')
-        ..add(serializers.serialize(object.usersNavigation,
-            specifiedType: const FullType(KilerPermissionPolicyUser)));
-    }
-    return result;
-  }
-
-  @override
-  KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result =
-        new KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'roles':
-          result.roles = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'users':
-          result.users = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'rolesNavigation':
-          result.rolesNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerPermissionPolicyRole))
-              as KilerPermissionPolicyRole);
-          break;
-        case 'usersNavigation':
-          result.usersNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerPermissionPolicyUser))
-              as KilerPermissionPolicyUser);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles
     extends KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles {
@@ -228,16 +122,20 @@ class KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder
   set usersNavigation(KilerPermissionPolicyUserBuilder usersNavigation) =>
       _$this._usersNavigation = usersNavigation;
 
-  KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder();
+  KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder() {
+    KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles._initializeBuilder(
+        this);
+  }
 
   KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder get _$this {
-    if (_$v != null) {
-      _roles = _$v.roles;
-      _users = _$v.users;
-      _oid = _$v.oid;
-      _optimisticLockField = _$v.optimisticLockField;
-      _rolesNavigation = _$v.rolesNavigation?.toBuilder();
-      _usersNavigation = _$v.usersNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _roles = $v.roles;
+      _users = $v.users;
+      _oid = $v.oid;
+      _optimisticLockField = $v.optimisticLockField;
+      _rolesNavigation = $v.rolesNavigation?.toBuilder();
+      _usersNavigation = $v.usersNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -245,9 +143,7 @@ class KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder
 
   @override
   void replace(KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles;
   }
 

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **apiCartCreateCartPost**
-> RestResultOfCartServiceCreateCartResponse apiCartCreateCartPost(cartServiceCreateCartRequest)
+> RestResultOfCartServiceCreateCartResponse apiCartCreateCartPost(body)
 
 
 
@@ -33,10 +33,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var cartServiceCreateCartRequest = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest | 
+var body = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest | 
 
 try { 
-    var result = api_instance.apiCartCreateCartPost(cartServiceCreateCartRequest);
+    var result = api_instance.apiCartCreateCartPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling CartApi->apiCartCreateCartPost: $e\n');
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartServiceCreateCartRequest** | [**CartServiceCreateCartRequest**](CartServiceCreateCartRequest.md)|  | [optional] 
+ **body** | [**CartServiceCreateCartRequest**](CartServiceCreateCartRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -229,7 +229,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateCartPost**
-> RestResultOfCartServiceCartResponse apiCartUpdateCartPost(cartServiceUpdateCartRequest)
+> RestResultOfCartServiceCartResponse apiCartUpdateCartPost(body)
 
 
 
@@ -242,10 +242,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var cartServiceUpdateCartRequest = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest | 
+var body = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateCartPost(cartServiceUpdateCartRequest);
+    var result = api_instance.apiCartUpdateCartPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling CartApi->apiCartUpdateCartPost: $e\n');
@@ -256,7 +256,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartServiceUpdateCartRequest** | [**CartServiceUpdateCartRequest**](CartServiceUpdateCartRequest.md)|  | [optional] 
+ **body** | [**CartServiceUpdateCartRequest**](CartServiceUpdateCartRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateCartRegionPost**
-> RestResultOfCartServiceUpdateCartRegionResponse apiCartUpdateCartRegionPost(cartServiceUpdateCartRegionRequest)
+> RestResultOfCartServiceUpdateCartRegionResponse apiCartUpdateCartRegionPost(body)
 
 
 
@@ -287,10 +287,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var cartServiceUpdateCartRegionRequest = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest | 
+var body = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateCartRegionPost(cartServiceUpdateCartRegionRequest);
+    var result = api_instance.apiCartUpdateCartRegionPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling CartApi->apiCartUpdateCartRegionPost: $e\n');
@@ -301,7 +301,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartServiceUpdateCartRegionRequest** | [**CartServiceUpdateCartRegionRequest**](CartServiceUpdateCartRegionRequest.md)|  | [optional] 
+ **body** | [**CartServiceUpdateCartRegionRequest**](CartServiceUpdateCartRegionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartUpdateTimeslotPost**
-> RestResultOfCartServiceCartResponse apiCartUpdateTimeslotPost(cartServiceUpdateTimeslotRequest)
+> RestResultOfCartServiceCartResponse apiCartUpdateTimeslotPost(body)
 
 
 
@@ -332,10 +332,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new CartApi();
-var cartServiceUpdateTimeslotRequest = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest | 
+var body = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest | 
 
 try { 
-    var result = api_instance.apiCartUpdateTimeslotPost(cartServiceUpdateTimeslotRequest);
+    var result = api_instance.apiCartUpdateTimeslotPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n');
@@ -346,7 +346,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cartServiceUpdateTimeslotRequest** | [**CartServiceUpdateTimeslotRequest**](CartServiceUpdateTimeslotRequest.md)|  | [optional] 
+ **body** | [**CartServiceUpdateTimeslotRequest**](CartServiceUpdateTimeslotRequest.md)|  | [optional] 
 
 ### Return type
 

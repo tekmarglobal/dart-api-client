@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'product_service_favorite_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<ProductServiceFavoriteRequest>
-    _$productServiceFavoriteRequestSerializer =
-    new _$ProductServiceFavoriteRequestSerializer();
-
-class _$ProductServiceFavoriteRequestSerializer
-    implements StructuredSerializer<ProductServiceFavoriteRequest> {
-  @override
-  final Iterable<Type> types = const [
-    ProductServiceFavoriteRequest,
-    _$ProductServiceFavoriteRequest
-  ];
-  @override
-  final String wireName = 'ProductServiceFavoriteRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, ProductServiceFavoriteRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  ProductServiceFavoriteRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new ProductServiceFavoriteRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$ProductServiceFavoriteRequest extends ProductServiceFavoriteRequest {
   @override
@@ -106,11 +56,14 @@ class ProductServiceFavoriteRequestBuilder
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
 
-  ProductServiceFavoriteRequestBuilder();
+  ProductServiceFavoriteRequestBuilder() {
+    ProductServiceFavoriteRequest._initializeBuilder(this);
+  }
 
   ProductServiceFavoriteRequestBuilder get _$this {
-    if (_$v != null) {
-      _productId = _$v.productId;
+    final $v = _$v;
+    if ($v != null) {
+      _productId = $v.productId;
       _$v = null;
     }
     return this;
@@ -118,9 +71,7 @@ class ProductServiceFavoriteRequestBuilder
 
   @override
   void replace(ProductServiceFavoriteRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ProductServiceFavoriteRequest;
   }
 

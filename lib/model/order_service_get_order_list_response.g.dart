@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_get_order_list_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceGetOrderListResponse>
-    _$orderServiceGetOrderListResponseSerializer =
-    new _$OrderServiceGetOrderListResponseSerializer();
-
-class _$OrderServiceGetOrderListResponseSerializer
-    implements StructuredSerializer<OrderServiceGetOrderListResponse> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceGetOrderListResponse,
-    _$OrderServiceGetOrderListResponse
-  ];
-  @override
-  final String wireName = 'OrderServiceGetOrderListResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceGetOrderListResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.orderList != null) {
-      result
-        ..add('orderList')
-        ..add(serializers.serialize(object.orderList,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(OrderServiceOrders)])));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceGetOrderListResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceGetOrderListResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'orderList':
-          result.orderList.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(OrderServiceOrders)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceGetOrderListResponse
     extends OrderServiceGetOrderListResponse {
@@ -112,11 +59,14 @@ class OrderServiceGetOrderListResponseBuilder
   set orderList(ListBuilder<OrderServiceOrders> orderList) =>
       _$this._orderList = orderList;
 
-  OrderServiceGetOrderListResponseBuilder();
+  OrderServiceGetOrderListResponseBuilder() {
+    OrderServiceGetOrderListResponse._initializeBuilder(this);
+  }
 
   OrderServiceGetOrderListResponseBuilder get _$this {
-    if (_$v != null) {
-      _orderList = _$v.orderList?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _orderList = $v.orderList?.toBuilder();
       _$v = null;
     }
     return this;
@@ -124,9 +74,7 @@ class OrderServiceGetOrderListResponseBuilder
 
   @override
   void replace(OrderServiceGetOrderListResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceGetOrderListResponse;
   }
 

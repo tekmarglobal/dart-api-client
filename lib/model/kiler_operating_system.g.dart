@@ -1,93 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_operating_system.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerOperatingSystem> _$kilerOperatingSystemSerializer =
-    new _$KilerOperatingSystemSerializer();
-
-class _$KilerOperatingSystemSerializer
-    implements StructuredSerializer<KilerOperatingSystem> {
-  @override
-  final Iterable<Type> types = const [
-    KilerOperatingSystem,
-    _$KilerOperatingSystem
-  ];
-  @override
-  final String wireName = 'KilerOperatingSystem';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerOperatingSystem object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.platform != null) {
-      result
-        ..add('platform')
-        ..add(serializers.serialize(object.platform,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPlatform)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerOperatingSystem deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerOperatingSystemBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'platform':
-          result.platform.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerPlatform)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerOperatingSystem extends KilerOperatingSystem {
   @override
@@ -168,14 +86,17 @@ class KilerOperatingSystemBuilder
   set platform(ListBuilder<KilerPlatform> platform) =>
       _$this._platform = platform;
 
-  KilerOperatingSystemBuilder();
+  KilerOperatingSystemBuilder() {
+    KilerOperatingSystem._initializeBuilder(this);
+  }
 
   KilerOperatingSystemBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _optimisticLockField = _$v.optimisticLockField;
-      _platform = _$v.platform?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _optimisticLockField = $v.optimisticLockField;
+      _platform = $v.platform?.toBuilder();
       _$v = null;
     }
     return this;
@@ -183,9 +104,7 @@ class KilerOperatingSystemBuilder
 
   @override
   void replace(KilerOperatingSystem other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerOperatingSystem;
   }
 

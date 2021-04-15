@@ -1,103 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_ticket_category.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerTicketCategory> _$kilerTicketCategorySerializer =
-    new _$KilerTicketCategorySerializer();
-
-class _$KilerTicketCategorySerializer
-    implements StructuredSerializer<KilerTicketCategory> {
-  @override
-  final Iterable<Type> types = const [
-    KilerTicketCategory,
-    _$KilerTicketCategory
-  ];
-  @override
-  final String wireName = 'KilerTicketCategory';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerTicketCategory object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.ticket != null) {
-      result
-        ..add('ticket')
-        ..add(serializers.serialize(object.ticket,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerTicket)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerTicketCategory deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerTicketCategoryBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'ticket':
-          result.ticket.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerTicket)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerTicketCategory extends KilerTicketCategory {
   @override
@@ -191,15 +99,18 @@ class KilerTicketCategoryBuilder
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerTicketCategoryBuilder();
+  KilerTicketCategoryBuilder() {
+    KilerTicketCategory._initializeBuilder(this);
+  }
 
   KilerTicketCategoryBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _ticket = _$v.ticket?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _ticket = $v.ticket?.toBuilder();
       _$v = null;
     }
     return this;
@@ -207,9 +118,7 @@ class KilerTicketCategoryBuilder
 
   @override
   void replace(KilerTicketCategory other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerTicketCategory;
   }
 

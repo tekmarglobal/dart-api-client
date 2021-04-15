@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'payment_service_payment_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<PaymentServicePaymentResponse>
-    _$paymentServicePaymentResponseSerializer =
-    new _$PaymentServicePaymentResponseSerializer();
-
-class _$PaymentServicePaymentResponseSerializer
-    implements StructuredSerializer<PaymentServicePaymentResponse> {
-  @override
-  final Iterable<Type> types = const [
-    PaymentServicePaymentResponse,
-    _$PaymentServicePaymentResponse
-  ];
-  @override
-  final String wireName = 'PaymentServicePaymentResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, PaymentServicePaymentResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.responseHtml != null) {
-      result
-        ..add('responseHtml')
-        ..add(serializers.serialize(object.responseHtml,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  PaymentServicePaymentResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new PaymentServicePaymentResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'responseHtml':
-          result.responseHtml = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$PaymentServicePaymentResponse extends PaymentServicePaymentResponse {
   @override
@@ -106,11 +56,14 @@ class PaymentServicePaymentResponseBuilder
   String get responseHtml => _$this._responseHtml;
   set responseHtml(String responseHtml) => _$this._responseHtml = responseHtml;
 
-  PaymentServicePaymentResponseBuilder();
+  PaymentServicePaymentResponseBuilder() {
+    PaymentServicePaymentResponse._initializeBuilder(this);
+  }
 
   PaymentServicePaymentResponseBuilder get _$this {
-    if (_$v != null) {
-      _responseHtml = _$v.responseHtml;
+    final $v = _$v;
+    if ($v != null) {
+      _responseHtml = $v.responseHtml;
       _$v = null;
     }
     return this;
@@ -118,9 +71,7 @@ class PaymentServicePaymentResponseBuilder
 
   @override
   void replace(PaymentServicePaymentResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaymentServicePaymentResponse;
   }
 

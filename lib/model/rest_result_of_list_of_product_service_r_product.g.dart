@@ -1,84 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'rest_result_of_list_of_product_service_r_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RestResultOfListOfProductServiceRProduct>
-    _$restResultOfListOfProductServiceRProductSerializer =
-    new _$RestResultOfListOfProductServiceRProductSerializer();
-
-class _$RestResultOfListOfProductServiceRProductSerializer
-    implements StructuredSerializer<RestResultOfListOfProductServiceRProduct> {
-  @override
-  final Iterable<Type> types = const [
-    RestResultOfListOfProductServiceRProduct,
-    _$RestResultOfListOfProductServiceRProduct
-  ];
-  @override
-  final String wireName = 'RestResultOfListOfProductServiceRProduct';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, RestResultOfListOfProductServiceRProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.message != null) {
-      result
-        ..add('message')
-        ..add(serializers.serialize(object.message,
-            specifiedType: const FullType(String)));
-    }
-    if (object.data != null) {
-      result
-        ..add('data')
-        ..add(serializers.serialize(object.data,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(ProductServiceRProduct)])));
-    }
-    return result;
-  }
-
-  @override
-  RestResultOfListOfProductServiceRProduct deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RestResultOfListOfProductServiceRProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'data':
-          result.data.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(ProductServiceRProduct)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RestResultOfListOfProductServiceRProduct
     extends RestResultOfListOfProductServiceRProduct {
@@ -154,13 +81,16 @@ class RestResultOfListOfProductServiceRProductBuilder
       _$this._data ??= new ListBuilder<ProductServiceRProduct>();
   set data(ListBuilder<ProductServiceRProduct> data) => _$this._data = data;
 
-  RestResultOfListOfProductServiceRProductBuilder();
+  RestResultOfListOfProductServiceRProductBuilder() {
+    RestResultOfListOfProductServiceRProduct._initializeBuilder(this);
+  }
 
   RestResultOfListOfProductServiceRProductBuilder get _$this {
-    if (_$v != null) {
-      _success = _$v.success;
-      _message = _$v.message;
-      _data = _$v.data?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _success = $v.success;
+      _message = $v.message;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -168,9 +98,7 @@ class RestResultOfListOfProductServiceRProductBuilder
 
   @override
   void replace(RestResultOfListOfProductServiceRProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RestResultOfListOfProductServiceRProduct;
   }
 

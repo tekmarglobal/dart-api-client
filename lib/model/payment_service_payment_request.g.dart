@@ -1,131 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'payment_service_payment_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<PaymentServicePaymentRequest>
-    _$paymentServicePaymentRequestSerializer =
-    new _$PaymentServicePaymentRequestSerializer();
-
-class _$PaymentServicePaymentRequestSerializer
-    implements StructuredSerializer<PaymentServicePaymentRequest> {
-  @override
-  final Iterable<Type> types = const [
-    PaymentServicePaymentRequest,
-    _$PaymentServicePaymentRequest
-  ];
-  @override
-  final String wireName = 'PaymentServicePaymentRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, PaymentServicePaymentRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.cartNumber != null) {
-      result
-        ..add('cartNumber')
-        ..add(serializers.serialize(object.cartNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.expiryDate != null) {
-      result
-        ..add('expiryDate')
-        ..add(serializers.serialize(object.expiryDate,
-            specifiedType: const FullType(String)));
-    }
-    if (object.cartCvv != null) {
-      result
-        ..add('cartCvv')
-        ..add(serializers.serialize(object.cartCvv,
-            specifiedType: const FullType(String)));
-    }
-    if (object.posId != null) {
-      result
-        ..add('posId')
-        ..add(serializers.serialize(object.posId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.amount != null) {
-      result
-        ..add('amount')
-        ..add(serializers.serialize(object.amount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.use3dSecure != null) {
-      result
-        ..add('use3dSecure')
-        ..add(serializers.serialize(object.use3dSecure,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.transactionUid != null) {
-      result
-        ..add('transactionUid')
-        ..add(serializers.serialize(object.transactionUid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.cardType != null) {
-      result
-        ..add('cardType')
-        ..add(serializers.serialize(object.cardType,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  PaymentServicePaymentRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new PaymentServicePaymentRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'cartNumber':
-          result.cartNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'expiryDate':
-          result.expiryDate = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'cartCvv':
-          result.cartCvv = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'posId':
-          result.posId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'amount':
-          result.amount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'use3dSecure':
-          result.use3dSecure = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'transactionUid':
-          result.transactionUid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'cardType':
-          result.cardType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$PaymentServicePaymentRequest extends PaymentServicePaymentRequest {
   @override
@@ -255,18 +135,21 @@ class PaymentServicePaymentRequestBuilder
   int get cardType => _$this._cardType;
   set cardType(int cardType) => _$this._cardType = cardType;
 
-  PaymentServicePaymentRequestBuilder();
+  PaymentServicePaymentRequestBuilder() {
+    PaymentServicePaymentRequest._initializeBuilder(this);
+  }
 
   PaymentServicePaymentRequestBuilder get _$this {
-    if (_$v != null) {
-      _cartNumber = _$v.cartNumber;
-      _expiryDate = _$v.expiryDate;
-      _cartCvv = _$v.cartCvv;
-      _posId = _$v.posId;
-      _amount = _$v.amount;
-      _use3dSecure = _$v.use3dSecure;
-      _transactionUid = _$v.transactionUid;
-      _cardType = _$v.cardType;
+    final $v = _$v;
+    if ($v != null) {
+      _cartNumber = $v.cartNumber;
+      _expiryDate = $v.expiryDate;
+      _cartCvv = $v.cartCvv;
+      _posId = $v.posId;
+      _amount = $v.amount;
+      _use3dSecure = $v.use3dSecure;
+      _transactionUid = $v.transactionUid;
+      _cardType = $v.cardType;
       _$v = null;
     }
     return this;
@@ -274,9 +157,7 @@ class PaymentServicePaymentRequestBuilder
 
   @override
   void replace(PaymentServicePaymentRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaymentServicePaymentRequest;
   }
 

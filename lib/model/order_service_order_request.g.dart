@@ -1,110 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_order_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceOrderRequest> _$orderServiceOrderRequestSerializer =
-    new _$OrderServiceOrderRequestSerializer();
-
-class _$OrderServiceOrderRequestSerializer
-    implements StructuredSerializer<OrderServiceOrderRequest> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceOrderRequest,
-    _$OrderServiceOrderRequest
-  ];
-  @override
-  final String wireName = 'OrderServiceOrderRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceOrderRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.deliveryAddressId != null) {
-      result
-        ..add('deliveryAddressId')
-        ..add(serializers.serialize(object.deliveryAddressId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.billingAddressId != null) {
-      result
-        ..add('billingAddressId')
-        ..add(serializers.serialize(object.billingAddressId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.timeStotId != null) {
-      result
-        ..add('timeStotId')
-        ..add(serializers.serialize(object.timeStotId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.paymentCode != null) {
-      result
-        ..add('paymentCode')
-        ..add(serializers.serialize(object.paymentCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.orderNote != null) {
-      result
-        ..add('orderNote')
-        ..add(serializers.serialize(object.orderNote,
-            specifiedType: const FullType(String)));
-    }
-    if (object.paymentTypeCode != null) {
-      result
-        ..add('paymentTypeCode')
-        ..add(serializers.serialize(object.paymentTypeCode,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceOrderRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceOrderRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'deliveryAddressId':
-          result.deliveryAddressId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'billingAddressId':
-          result.billingAddressId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'timeStotId':
-          result.timeStotId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'paymentCode':
-          result.paymentCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'orderNote':
-          result.orderNote = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'paymentTypeCode':
-          result.paymentTypeCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
   @override
@@ -213,16 +114,19 @@ class OrderServiceOrderRequestBuilder
   set paymentTypeCode(String paymentTypeCode) =>
       _$this._paymentTypeCode = paymentTypeCode;
 
-  OrderServiceOrderRequestBuilder();
+  OrderServiceOrderRequestBuilder() {
+    OrderServiceOrderRequest._initializeBuilder(this);
+  }
 
   OrderServiceOrderRequestBuilder get _$this {
-    if (_$v != null) {
-      _deliveryAddressId = _$v.deliveryAddressId;
-      _billingAddressId = _$v.billingAddressId;
-      _timeStotId = _$v.timeStotId;
-      _paymentCode = _$v.paymentCode;
-      _orderNote = _$v.orderNote;
-      _paymentTypeCode = _$v.paymentTypeCode;
+    final $v = _$v;
+    if ($v != null) {
+      _deliveryAddressId = $v.deliveryAddressId;
+      _billingAddressId = $v.billingAddressId;
+      _timeStotId = $v.timeStotId;
+      _paymentCode = $v.paymentCode;
+      _orderNote = $v.orderNote;
+      _paymentTypeCode = $v.paymentTypeCode;
       _$v = null;
     }
     return this;
@@ -230,9 +134,7 @@ class OrderServiceOrderRequestBuilder
 
   @override
   void replace(OrderServiceOrderRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceOrderRequest;
   }
 

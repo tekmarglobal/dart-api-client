@@ -26,7 +26,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
         ///
         /// 
         Future<Response<RestResultOfCustomerServiceDeleteAddressResponse>> apiCustomerDeleteAddressPost({ 
-            CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest,
+            CustomerServiceDeleteAddressRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -89,7 +89,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
             dynamic _bodyData;
 
                         const _type = FullType(CustomerServiceDeleteAddressRequest);
-                        _bodyData = _serializers.serialize(customerServiceDeleteAddressRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Customer/DeleteAddress',
@@ -298,7 +298,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
         ///
         /// 
         Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>> apiCustomerUpdateAddressPost({ 
-            CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest,
+            CustomerServiceCustomerAddressRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -361,7 +361,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
             dynamic _bodyData;
 
                         const _type = FullType(CustomerServiceCustomerAddressRequest);
-                        _bodyData = _serializers.serialize(customerServiceCustomerAddressRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Customer/UpdateAddress',
@@ -394,7 +394,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
         ///
         /// 
         Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerDefultAddressPost({ 
-            CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress,
+            CustomerServiceNewCustomerDefaultAddress body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -457,7 +457,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
             dynamic _bodyData;
 
                         const _type = FullType(CustomerServiceNewCustomerDefaultAddress);
-                        _bodyData = _serializers.serialize(customerServiceNewCustomerDefaultAddress, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Customer/UpdateCustomerDefultAddress',
@@ -490,7 +490,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
         ///
         /// 
         Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerPost({ 
-            CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest,
+            CustomerServiceNewCustomerRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -553,7 +553,7 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
             dynamic _bodyData;
 
                         const _type = FullType(CustomerServiceNewCustomerRequest);
-                        _bodyData = _serializers.serialize(customerServiceNewCustomerRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Customer/UpdateCustomer',

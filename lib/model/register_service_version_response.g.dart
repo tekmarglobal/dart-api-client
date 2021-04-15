@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'register_service_version_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RegisterServiceVersionResponse>
-    _$registerServiceVersionResponseSerializer =
-    new _$RegisterServiceVersionResponseSerializer();
-
-class _$RegisterServiceVersionResponseSerializer
-    implements StructuredSerializer<RegisterServiceVersionResponse> {
-  @override
-  final Iterable<Type> types = const [
-    RegisterServiceVersionResponse,
-    _$RegisterServiceVersionResponse
-  ];
-  @override
-  final String wireName = 'RegisterServiceVersionResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, RegisterServiceVersionResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.latestCode != null) {
-      result
-        ..add('latestCode')
-        ..add(serializers.serialize(object.latestCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.isMandatory != null) {
-      result
-        ..add('isMandatory')
-        ..add(serializers.serialize(object.isMandatory,
-            specifiedType: const FullType(bool)));
-    }
-    return result;
-  }
-
-  @override
-  RegisterServiceVersionResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RegisterServiceVersionResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'latestCode':
-          result.latestCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'isMandatory':
-          result.isMandatory = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RegisterServiceVersionResponse extends RegisterServiceVersionResponse {
   @override
@@ -125,12 +65,15 @@ class RegisterServiceVersionResponseBuilder
   bool get isMandatory => _$this._isMandatory;
   set isMandatory(bool isMandatory) => _$this._isMandatory = isMandatory;
 
-  RegisterServiceVersionResponseBuilder();
+  RegisterServiceVersionResponseBuilder() {
+    RegisterServiceVersionResponse._initializeBuilder(this);
+  }
 
   RegisterServiceVersionResponseBuilder get _$this {
-    if (_$v != null) {
-      _latestCode = _$v.latestCode;
-      _isMandatory = _$v.isMandatory;
+    final $v = _$v;
+    if ($v != null) {
+      _latestCode = $v.latestCode;
+      _isMandatory = $v.isMandatory;
       _$v = null;
     }
     return this;
@@ -138,9 +81,7 @@ class RegisterServiceVersionResponseBuilder
 
   @override
   void replace(RegisterServiceVersionResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RegisterServiceVersionResponse;
   }
 

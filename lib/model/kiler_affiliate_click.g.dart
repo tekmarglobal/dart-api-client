@@ -1,141 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_affiliate_click.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerAffiliateClick> _$kilerAffiliateClickSerializer =
-    new _$KilerAffiliateClickSerializer();
-
-class _$KilerAffiliateClickSerializer
-    implements StructuredSerializer<KilerAffiliateClick> {
-  @override
-  final Iterable<Type> types = const [
-    KilerAffiliateClick,
-    _$KilerAffiliateClick
-  ];
-  @override
-  final String wireName = 'KilerAffiliateClick';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerAffiliateClick object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.clickedAt != null) {
-      result
-        ..add('clickedAt')
-        ..add(serializers.serialize(object.clickedAt,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.clickedBy != null) {
-      result
-        ..add('clickedBy')
-        ..add(serializers.serialize(object.clickedBy,
-            specifiedType: const FullType(int)));
-    }
-    if (object.ip != null) {
-      result
-        ..add('ip')
-        ..add(serializers.serialize(object.ip,
-            specifiedType: const FullType(String)));
-    }
-    if (object.affiliateLink != null) {
-      result
-        ..add('affiliateLink')
-        ..add(serializers.serialize(object.affiliateLink,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.affiliateLinkNavigation != null) {
-      result
-        ..add('affiliateLinkNavigation')
-        ..add(serializers.serialize(object.affiliateLinkNavigation,
-            specifiedType: const FullType(KilerAffiliateLink)));
-    }
-    if (object.clickedByNavigation != null) {
-      result
-        ..add('clickedByNavigation')
-        ..add(serializers.serialize(object.clickedByNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    return result;
-  }
-
-  @override
-  KilerAffiliateClick deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerAffiliateClickBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'clickedAt':
-          result.clickedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'clickedBy':
-          result.clickedBy = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'ip':
-          result.ip = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'affiliateLink':
-          result.affiliateLink = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'affiliateLinkNavigation':
-          result.affiliateLinkNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerAffiliateLink))
-              as KilerAffiliateLink);
-          break;
-        case 'clickedByNavigation':
-          result.clickedByNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerAffiliateClick extends KilerAffiliateClick {
   @override
@@ -277,19 +147,22 @@ class KilerAffiliateClickBuilder
   set clickedByNavigation(KilerCustomerBuilder clickedByNavigation) =>
       _$this._clickedByNavigation = clickedByNavigation;
 
-  KilerAffiliateClickBuilder();
+  KilerAffiliateClickBuilder() {
+    KilerAffiliateClick._initializeBuilder(this);
+  }
 
   KilerAffiliateClickBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _clickedAt = _$v.clickedAt;
-      _clickedBy = _$v.clickedBy;
-      _ip = _$v.ip;
-      _affiliateLink = _$v.affiliateLink;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _affiliateLinkNavigation = _$v.affiliateLinkNavigation?.toBuilder();
-      _clickedByNavigation = _$v.clickedByNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _clickedAt = $v.clickedAt;
+      _clickedBy = $v.clickedBy;
+      _ip = $v.ip;
+      _affiliateLink = $v.affiliateLink;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _affiliateLinkNavigation = $v.affiliateLinkNavigation?.toBuilder();
+      _clickedByNavigation = $v.clickedByNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -297,9 +170,7 @@ class KilerAffiliateClickBuilder
 
   @override
   void replace(KilerAffiliateClick other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerAffiliateClick;
   }
 

@@ -1,233 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_order_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceOrderResponse> _$orderServiceOrderResponseSerializer =
-    new _$OrderServiceOrderResponseSerializer();
-
-class _$OrderServiceOrderResponseSerializer
-    implements StructuredSerializer<OrderServiceOrderResponse> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceOrderResponse,
-    _$OrderServiceOrderResponse
-  ];
-  @override
-  final String wireName = 'OrderServiceOrderResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceOrderResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.uuid != null) {
-      result
-        ..add('uuid')
-        ..add(serializers.serialize(object.uuid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.orderDate != null) {
-      result
-        ..add('orderDate')
-        ..add(serializers.serialize(object.orderDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.deliveryAddress != null) {
-      result
-        ..add('deliveryAddress')
-        ..add(serializers.serialize(object.deliveryAddress,
-            specifiedType: const FullType(String)));
-    }
-    if (object.billingAdrress != null) {
-      result
-        ..add('billingAdrress')
-        ..add(serializers.serialize(object.billingAdrress,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productTotal != null) {
-      result
-        ..add('productTotal')
-        ..add(serializers.serialize(object.productTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.orderTotal != null) {
-      result
-        ..add('orderTotal')
-        ..add(serializers.serialize(object.orderTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.orderProducts != null) {
-      result
-        ..add('orderProducts')
-        ..add(serializers.serialize(object.orderProducts,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(OrderServiceROrderProducts)])));
-    }
-    if (object.orderNote != null) {
-      result
-        ..add('orderNote')
-        ..add(serializers.serialize(object.orderNote,
-            specifiedType: const FullType(String)));
-    }
-    if (object.paymentType != null) {
-      result
-        ..add('paymentType')
-        ..add(serializers.serialize(object.paymentType,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productDiscountsTotal != null) {
-      result
-        ..add('productDiscountsTotal')
-        ..add(serializers.serialize(object.productDiscountsTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.fee != null) {
-      result
-        ..add('fee')
-        ..add(serializers.serialize(object.fee,
-            specifiedType: const FullType(double)));
-    }
-    if (object.bagAmount != null) {
-      result
-        ..add('bagAmount')
-        ..add(serializers.serialize(object.bagAmount,
-            specifiedType: const FullType(int)));
-    }
-    if (object.bagTotal != null) {
-      result
-        ..add('bagTotal')
-        ..add(serializers.serialize(object.bagTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.deliveryTimeStart != null) {
-      result
-        ..add('deliveryTimeStart')
-        ..add(serializers.serialize(object.deliveryTimeStart,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.deliveryTimeEnd != null) {
-      result
-        ..add('deliveryTimeEnd')
-        ..add(serializers.serialize(object.deliveryTimeEnd,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceOrderResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceOrderResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'uuid':
-          result.uuid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'orderDate':
-          result.orderDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'deliveryAddress':
-          result.deliveryAddress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'billingAdrress':
-          result.billingAdrress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productTotal':
-          result.productTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'orderTotal':
-          result.orderTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'orderProducts':
-          result.orderProducts.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(OrderServiceROrderProducts)
-              ])) as BuiltList<Object>);
-          break;
-        case 'orderNote':
-          result.orderNote = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'paymentType':
-          result.paymentType = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productDiscountsTotal':
-          result.productDiscountsTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'fee':
-          result.fee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'bagAmount':
-          result.bagAmount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'bagTotal':
-          result.bagTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'deliveryTimeStart':
-          result.deliveryTimeStart = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'deliveryTimeEnd':
-          result.deliveryTimeEnd = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
   @override
@@ -481,28 +259,31 @@ class OrderServiceOrderResponseBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  OrderServiceOrderResponseBuilder();
+  OrderServiceOrderResponseBuilder() {
+    OrderServiceOrderResponse._initializeBuilder(this);
+  }
 
   OrderServiceOrderResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _uuid = _$v.uuid;
-      _customer = _$v.customer;
-      _orderDate = _$v.orderDate;
-      _deliveryAddress = _$v.deliveryAddress;
-      _billingAdrress = _$v.billingAdrress;
-      _productTotal = _$v.productTotal;
-      _orderTotal = _$v.orderTotal;
-      _orderProducts = _$v.orderProducts?.toBuilder();
-      _orderNote = _$v.orderNote;
-      _paymentType = _$v.paymentType;
-      _productDiscountsTotal = _$v.productDiscountsTotal;
-      _fee = _$v.fee;
-      _bagAmount = _$v.bagAmount;
-      _bagTotal = _$v.bagTotal;
-      _deliveryTimeStart = _$v.deliveryTimeStart;
-      _deliveryTimeEnd = _$v.deliveryTimeEnd;
-      _region = _$v.region;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _uuid = $v.uuid;
+      _customer = $v.customer;
+      _orderDate = $v.orderDate;
+      _deliveryAddress = $v.deliveryAddress;
+      _billingAdrress = $v.billingAdrress;
+      _productTotal = $v.productTotal;
+      _orderTotal = $v.orderTotal;
+      _orderProducts = $v.orderProducts?.toBuilder();
+      _orderNote = $v.orderNote;
+      _paymentType = $v.paymentType;
+      _productDiscountsTotal = $v.productDiscountsTotal;
+      _fee = $v.fee;
+      _bagAmount = $v.bagAmount;
+      _bagTotal = $v.bagTotal;
+      _deliveryTimeStart = $v.deliveryTimeStart;
+      _deliveryTimeEnd = $v.deliveryTimeEnd;
+      _region = $v.region;
       _$v = null;
     }
     return this;
@@ -510,9 +291,7 @@ class OrderServiceOrderResponseBuilder
 
   @override
   void replace(OrderServiceOrderResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceOrderResponse;
   }
 

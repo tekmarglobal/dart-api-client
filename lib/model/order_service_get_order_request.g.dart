@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_get_order_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceGetOrderRequest>
-    _$orderServiceGetOrderRequestSerializer =
-    new _$OrderServiceGetOrderRequestSerializer();
-
-class _$OrderServiceGetOrderRequestSerializer
-    implements StructuredSerializer<OrderServiceGetOrderRequest> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceGetOrderRequest,
-    _$OrderServiceGetOrderRequest
-  ];
-  @override
-  final String wireName = 'OrderServiceGetOrderRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceGetOrderRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceGetOrderRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceGetOrderRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceGetOrderRequest extends OrderServiceGetOrderRequest {
   @override
@@ -105,11 +55,14 @@ class OrderServiceGetOrderRequestBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  OrderServiceGetOrderRequestBuilder();
+  OrderServiceGetOrderRequestBuilder() {
+    OrderServiceGetOrderRequest._initializeBuilder(this);
+  }
 
   OrderServiceGetOrderRequestBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
       _$v = null;
     }
     return this;
@@ -117,9 +70,7 @@ class OrderServiceGetOrderRequestBuilder
 
   @override
   void replace(OrderServiceGetOrderRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceGetOrderRequest;
   }
 

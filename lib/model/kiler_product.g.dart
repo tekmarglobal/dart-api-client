@@ -1,391 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerProduct> _$kilerProductSerializer =
-    new _$KilerProductSerializer();
-
-class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
-  @override
-  final Iterable<Type> types = const [KilerProduct, _$KilerProduct];
-  @override
-  final String wireName = 'KilerProduct';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.supplier != null) {
-      result
-        ..add('supplier')
-        ..add(serializers.serialize(object.supplier,
-            specifiedType: const FullType(int)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.lowStockLimit != null) {
-      result
-        ..add('lowStockLimit')
-        ..add(serializers.serialize(object.lowStockLimit,
-            specifiedType: const FullType(int)));
-    }
-    if (object.outOfStockLimit != null) {
-      result
-        ..add('outOfStockLimit')
-        ..add(serializers.serialize(object.outOfStockLimit,
-            specifiedType: const FullType(int)));
-    }
-    if (object.outOfStockDisplayBehavior != null) {
-      result
-        ..add('outOfStockDisplayBehavior')
-        ..add(serializers.serialize(object.outOfStockDisplayBehavior,
-            specifiedType: const FullType(int)));
-    }
-    if (object.lowStockDisplayBehavior != null) {
-      result
-        ..add('lowStockDisplayBehavior')
-        ..add(serializers.serialize(object.lowStockDisplayBehavior,
-            specifiedType: const FullType(int)));
-    }
-    if (object.brand != null) {
-      result
-        ..add('brand')
-        ..add(serializers.serialize(object.brand,
-            specifiedType: const FullType(int)));
-    }
-    if (object.barcode != null) {
-      result
-        ..add('barcode')
-        ..add(serializers.serialize(object.barcode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.sku != null) {
-      result
-        ..add('sku')
-        ..add(serializers.serialize(object.sku,
-            specifiedType: const FullType(String)));
-    }
-    if (object.desi != null) {
-      result
-        ..add('desi')
-        ..add(serializers.serialize(object.desi,
-            specifiedType: const FullType(double)));
-    }
-    if (object.maxQuantity != null) {
-      result
-        ..add('maxQuantity')
-        ..add(serializers.serialize(object.maxQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.minQuantity != null) {
-      result
-        ..add('minQuantity')
-        ..add(serializers.serialize(object.minQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.initalQuantity != null) {
-      result
-        ..add('initalQuantity')
-        ..add(serializers.serialize(object.initalQuantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.quantityStep != null) {
-      result
-        ..add('quantityStep')
-        ..add(serializers.serialize(object.quantityStep,
-            specifiedType: const FullType(double)));
-    }
-    if (object.erpId != null) {
-      result
-        ..add('erpId')
-        ..add(serializers.serialize(object.erpId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productUnit != null) {
-      result
-        ..add('productUnit')
-        ..add(serializers.serialize(object.productUnit,
-            specifiedType: const FullType(int)));
-    }
-    if (object.vat != null) {
-      result
-        ..add('vat')
-        ..add(serializers.serialize(object.vat,
-            specifiedType: const FullType(double)));
-    }
-    if (object.menuName != null) {
-      result
-        ..add('menuName')
-        ..add(serializers.serialize(object.menuName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.brandNavigation != null) {
-      result
-        ..add('brandNavigation')
-        ..add(serializers.serialize(object.brandNavigation,
-            specifiedType: const FullType(KilerBrand)));
-    }
-    if (object.supplierNavigation != null) {
-      result
-        ..add('supplierNavigation')
-        ..add(serializers.serialize(object.supplierNavigation,
-            specifiedType: const FullType(KilerSupplier)));
-    }
-    if (object.categoryProduct != null) {
-      result
-        ..add('categoryProduct')
-        ..add(serializers.serialize(object.categoryProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCategoryProduct)])));
-    }
-    if (object.configurationBagProductNavigation != null) {
-      result
-        ..add('configurationBagProductNavigation')
-        ..add(serializers.serialize(object.configurationBagProductNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerConfiguration)])));
-    }
-    if (object.configurationDeliveryProductNavigation != null) {
-      result
-        ..add('configurationDeliveryProductNavigation')
-        ..add(serializers.serialize(
-            object.configurationDeliveryProductNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerConfiguration)])));
-    }
-    if (object.customerFavoriteList != null) {
-      result
-        ..add('customerFavoriteList')
-        ..add(serializers.serialize(object.customerFavoriteList,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomerFavoriteList)])));
-    }
-    if (object.orderProduct != null) {
-      result
-        ..add('orderProduct')
-        ..add(serializers.serialize(object.orderProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerOrderProduct)])));
-    }
-    if (object.productImage != null) {
-      result
-        ..add('productImage')
-        ..add(serializers.serialize(object.productImage,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProductImage)])));
-    }
-    if (object.productImportDetail != null) {
-      result
-        ..add('productImportDetail')
-        ..add(serializers.serialize(object.productImportDetail,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProductImportDetail)])));
-    }
-    if (object.regionProduct != null) {
-      result
-        ..add('regionProduct')
-        ..add(serializers.serialize(object.regionProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerRegionProduct)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerProduct deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'supplier':
-          result.supplier = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'lowStockLimit':
-          result.lowStockLimit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'outOfStockLimit':
-          result.outOfStockLimit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'outOfStockDisplayBehavior':
-          result.outOfStockDisplayBehavior = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'lowStockDisplayBehavior':
-          result.lowStockDisplayBehavior = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'brand':
-          result.brand = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'barcode':
-          result.barcode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'sku':
-          result.sku = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'desi':
-          result.desi = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'maxQuantity':
-          result.maxQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'minQuantity':
-          result.minQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'initalQuantity':
-          result.initalQuantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'quantityStep':
-          result.quantityStep = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'erpId':
-          result.erpId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productUnit':
-          result.productUnit = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'vat':
-          result.vat = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'menuName':
-          result.menuName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'brandNavigation':
-          result.brandNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerBrand)) as KilerBrand);
-          break;
-        case 'supplierNavigation':
-          result.supplierNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerSupplier)) as KilerSupplier);
-          break;
-        case 'categoryProduct':
-          result.categoryProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCategoryProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'configurationBagProductNavigation':
-          result.configurationBagProductNavigation.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(KilerConfiguration)
-                  ])) as BuiltList<Object>);
-          break;
-        case 'configurationDeliveryProductNavigation':
-          result.configurationDeliveryProductNavigation.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(KilerConfiguration)
-                  ])) as BuiltList<Object>);
-          break;
-        case 'customerFavoriteList':
-          result.customerFavoriteList.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerCustomerFavoriteList)
-              ])) as BuiltList<Object>);
-          break;
-        case 'orderProduct':
-          result.orderProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrderProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'productImage':
-          result.productImage.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerProductImage)]))
-              as BuiltList<Object>);
-          break;
-        case 'productImportDetail':
-          result.productImportDetail.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerProductImportDetail)
-              ])) as BuiltList<Object>);
-          break;
-        case 'regionProduct':
-          result.regionProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerRegionProduct)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerProduct extends KilerProduct {
   @override
@@ -433,7 +53,13 @@ class _$KilerProduct extends KilerProduct {
   @override
   final String menuName;
   @override
+  final double weight;
+  @override
+  final int productTag;
+  @override
   final KilerBrand brandNavigation;
+  @override
+  final KilerProductTag productTagNavigation;
   @override
   final KilerSupplier supplierNavigation;
   @override
@@ -479,7 +105,10 @@ class _$KilerProduct extends KilerProduct {
       this.productUnit,
       this.vat,
       this.menuName,
+      this.weight,
+      this.productTag,
       this.brandNavigation,
+      this.productTagNavigation,
       this.supplierNavigation,
       this.categoryProduct,
       this.configurationBagProductNavigation,
@@ -524,7 +153,10 @@ class _$KilerProduct extends KilerProduct {
         productUnit == other.productUnit &&
         vat == other.vat &&
         menuName == other.menuName &&
+        weight == other.weight &&
+        productTag == other.productTag &&
         brandNavigation == other.brandNavigation &&
+        productTagNavigation == other.productTagNavigation &&
         supplierNavigation == other.supplierNavigation &&
         categoryProduct == other.categoryProduct &&
         configurationBagProductNavigation ==
@@ -558,17 +190,17 @@ class _$KilerProduct extends KilerProduct {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode),
-                                                                                maxQuantity.hashCode),
-                                                                            minQuantity.hashCode),
-                                                                        initalQuantity.hashCode),
-                                                                    quantityStep.hashCode),
-                                                                erpId.hashCode),
-                                                            optimisticLockField.hashCode),
-                                                        productUnit.hashCode),
-                                                    vat.hashCode),
-                                                menuName.hashCode),
-                                            brandNavigation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode), maxQuantity.hashCode), minQuantity.hashCode), initalQuantity.hashCode),
+                                                                                quantityStep.hashCode),
+                                                                            erpId.hashCode),
+                                                                        optimisticLockField.hashCode),
+                                                                    productUnit.hashCode),
+                                                                vat.hashCode),
+                                                            menuName.hashCode),
+                                                        weight.hashCode),
+                                                    productTag.hashCode),
+                                                brandNavigation.hashCode),
+                                            productTagNavigation.hashCode),
                                         supplierNavigation.hashCode),
                                     categoryProduct.hashCode),
                                 configurationBagProductNavigation.hashCode),
@@ -605,7 +237,10 @@ class _$KilerProduct extends KilerProduct {
           ..add('productUnit', productUnit)
           ..add('vat', vat)
           ..add('menuName', menuName)
+          ..add('weight', weight)
+          ..add('productTag', productTag)
           ..add('brandNavigation', brandNavigation)
+          ..add('productTagNavigation', productTagNavigation)
           ..add('supplierNavigation', supplierNavigation)
           ..add('categoryProduct', categoryProduct)
           ..add('configurationBagProductNavigation',
@@ -718,11 +353,25 @@ class KilerProductBuilder
   String get menuName => _$this._menuName;
   set menuName(String menuName) => _$this._menuName = menuName;
 
+  double _weight;
+  double get weight => _$this._weight;
+  set weight(double weight) => _$this._weight = weight;
+
+  int _productTag;
+  int get productTag => _$this._productTag;
+  set productTag(int productTag) => _$this._productTag = productTag;
+
   KilerBrandBuilder _brandNavigation;
   KilerBrandBuilder get brandNavigation =>
       _$this._brandNavigation ??= new KilerBrandBuilder();
   set brandNavigation(KilerBrandBuilder brandNavigation) =>
       _$this._brandNavigation = brandNavigation;
+
+  KilerProductTagBuilder _productTagNavigation;
+  KilerProductTagBuilder get productTagNavigation =>
+      _$this._productTagNavigation ??= new KilerProductTagBuilder();
+  set productTagNavigation(KilerProductTagBuilder productTagNavigation) =>
+      _$this._productTagNavigation = productTagNavigation;
 
   KilerSupplierBuilder _supplierNavigation;
   KilerSupplierBuilder get supplierNavigation =>
@@ -789,44 +438,50 @@ class KilerProductBuilder
   set regionProduct(ListBuilder<KilerRegionProduct> regionProduct) =>
       _$this._regionProduct = regionProduct;
 
-  KilerProductBuilder();
+  KilerProductBuilder() {
+    KilerProduct._initializeBuilder(this);
+  }
 
   KilerProductBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _description = _$v.description;
-      _supplier = _$v.supplier;
-      _active = _$v.active;
-      _lowStockLimit = _$v.lowStockLimit;
-      _outOfStockLimit = _$v.outOfStockLimit;
-      _outOfStockDisplayBehavior = _$v.outOfStockDisplayBehavior;
-      _lowStockDisplayBehavior = _$v.lowStockDisplayBehavior;
-      _brand = _$v.brand;
-      _barcode = _$v.barcode;
-      _sku = _$v.sku;
-      _desi = _$v.desi;
-      _maxQuantity = _$v.maxQuantity;
-      _minQuantity = _$v.minQuantity;
-      _initalQuantity = _$v.initalQuantity;
-      _quantityStep = _$v.quantityStep;
-      _erpId = _$v.erpId;
-      _optimisticLockField = _$v.optimisticLockField;
-      _productUnit = _$v.productUnit;
-      _vat = _$v.vat;
-      _menuName = _$v.menuName;
-      _brandNavigation = _$v.brandNavigation?.toBuilder();
-      _supplierNavigation = _$v.supplierNavigation?.toBuilder();
-      _categoryProduct = _$v.categoryProduct?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _description = $v.description;
+      _supplier = $v.supplier;
+      _active = $v.active;
+      _lowStockLimit = $v.lowStockLimit;
+      _outOfStockLimit = $v.outOfStockLimit;
+      _outOfStockDisplayBehavior = $v.outOfStockDisplayBehavior;
+      _lowStockDisplayBehavior = $v.lowStockDisplayBehavior;
+      _brand = $v.brand;
+      _barcode = $v.barcode;
+      _sku = $v.sku;
+      _desi = $v.desi;
+      _maxQuantity = $v.maxQuantity;
+      _minQuantity = $v.minQuantity;
+      _initalQuantity = $v.initalQuantity;
+      _quantityStep = $v.quantityStep;
+      _erpId = $v.erpId;
+      _optimisticLockField = $v.optimisticLockField;
+      _productUnit = $v.productUnit;
+      _vat = $v.vat;
+      _menuName = $v.menuName;
+      _weight = $v.weight;
+      _productTag = $v.productTag;
+      _brandNavigation = $v.brandNavigation?.toBuilder();
+      _productTagNavigation = $v.productTagNavigation?.toBuilder();
+      _supplierNavigation = $v.supplierNavigation?.toBuilder();
+      _categoryProduct = $v.categoryProduct?.toBuilder();
       _configurationBagProductNavigation =
-          _$v.configurationBagProductNavigation?.toBuilder();
+          $v.configurationBagProductNavigation?.toBuilder();
       _configurationDeliveryProductNavigation =
-          _$v.configurationDeliveryProductNavigation?.toBuilder();
-      _customerFavoriteList = _$v.customerFavoriteList?.toBuilder();
-      _orderProduct = _$v.orderProduct?.toBuilder();
-      _productImage = _$v.productImage?.toBuilder();
-      _productImportDetail = _$v.productImportDetail?.toBuilder();
-      _regionProduct = _$v.regionProduct?.toBuilder();
+          $v.configurationDeliveryProductNavigation?.toBuilder();
+      _customerFavoriteList = $v.customerFavoriteList?.toBuilder();
+      _orderProduct = $v.orderProduct?.toBuilder();
+      _productImage = $v.productImage?.toBuilder();
+      _productImportDetail = $v.productImportDetail?.toBuilder();
+      _regionProduct = $v.regionProduct?.toBuilder();
       _$v = null;
     }
     return this;
@@ -834,9 +489,7 @@ class KilerProductBuilder
 
   @override
   void replace(KilerProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerProduct;
   }
 
@@ -873,7 +526,10 @@ class KilerProductBuilder
               productUnit: productUnit,
               vat: vat,
               menuName: menuName,
+              weight: weight,
+              productTag: productTag,
               brandNavigation: _brandNavigation?.build(),
+              productTagNavigation: _productTagNavigation?.build(),
               supplierNavigation: _supplierNavigation?.build(),
               categoryProduct: _categoryProduct?.build(),
               configurationBagProductNavigation:
@@ -890,6 +546,8 @@ class KilerProductBuilder
       try {
         _$failedField = 'brandNavigation';
         _brandNavigation?.build();
+        _$failedField = 'productTagNavigation';
+        _productTagNavigation?.build();
         _$failedField = 'supplierNavigation';
         _supplierNavigation?.build();
         _$failedField = 'categoryProduct';

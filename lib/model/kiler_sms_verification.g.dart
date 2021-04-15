@@ -1,140 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_sms_verification.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerSmsVerification> _$kilerSmsVerificationSerializer =
-    new _$KilerSmsVerificationSerializer();
-
-class _$KilerSmsVerificationSerializer
-    implements StructuredSerializer<KilerSmsVerification> {
-  @override
-  final Iterable<Type> types = const [
-    KilerSmsVerification,
-    _$KilerSmsVerification
-  ];
-  @override
-  final String wireName = 'KilerSmsVerification';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerSmsVerification object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.createdAt != null) {
-      result
-        ..add('createdAt')
-        ..add(serializers.serialize(object.createdAt,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.consumedAt != null) {
-      result
-        ..add('consumedAt')
-        ..add(serializers.serialize(object.consumedAt,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.ipAddress != null) {
-      result
-        ..add('ipAddress')
-        ..add(serializers.serialize(object.ipAddress,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    return result;
-  }
-
-  @override
-  KilerSmsVerification deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerSmsVerificationBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'createdAt':
-          result.createdAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'consumedAt':
-          result.consumedAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'ipAddress':
-          result.ipAddress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerSmsVerification extends KilerSmsVerification {
   @override
@@ -273,19 +144,22 @@ class KilerSmsVerificationBuilder
   set customerNavigation(KilerCustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  KilerSmsVerificationBuilder();
+  KilerSmsVerificationBuilder() {
+    KilerSmsVerification._initializeBuilder(this);
+  }
 
   KilerSmsVerificationBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _phone = _$v.phone;
-      _code = _$v.code;
-      _optimisticLockField = _$v.optimisticLockField;
-      _createdAt = _$v.createdAt;
-      _consumedAt = _$v.consumedAt;
-      _customer = _$v.customer;
-      _ipAddress = _$v.ipAddress;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _phone = $v.phone;
+      _code = $v.code;
+      _optimisticLockField = $v.optimisticLockField;
+      _createdAt = $v.createdAt;
+      _consumedAt = $v.consumedAt;
+      _customer = $v.customer;
+      _ipAddress = $v.ipAddress;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -293,9 +167,7 @@ class KilerSmsVerificationBuilder
 
   @override
   void replace(KilerSmsVerification other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerSmsVerification;
   }
 

@@ -1,163 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_region_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceRegionResponse> _$adminServiceRegionResponseSerializer =
-    new _$AdminServiceRegionResponseSerializer();
-
-class _$AdminServiceRegionResponseSerializer
-    implements StructuredSerializer<AdminServiceRegionResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceRegionResponse,
-    _$AdminServiceRegionResponse
-  ];
-  @override
-  final String wireName = 'AdminServiceRegionResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceRegionResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.freeDelivery != null) {
-      result
-        ..add('freeDelivery')
-        ..add(serializers.serialize(object.freeDelivery,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.freeDeliveryAmount != null) {
-      result
-        ..add('freeDeliveryAmount')
-        ..add(serializers.serialize(object.freeDeliveryAmount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.timeSlotGenerationWindow != null) {
-      result
-        ..add('timeSlotGenerationWindow')
-        ..add(serializers.serialize(object.timeSlotGenerationWindow,
-            specifiedType: const FullType(int)));
-    }
-    if (object.lastTimeSlotGeneratedDate != null) {
-      result
-        ..add('lastTimeSlotGeneratedDate')
-        ..add(serializers.serialize(object.lastTimeSlotGeneratedDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.minimunCartAmount != null) {
-      result
-        ..add('minimunCartAmount')
-        ..add(serializers.serialize(object.minimunCartAmount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.regionMail != null) {
-      result
-        ..add('regionMail')
-        ..add(serializers.serialize(object.regionMail,
-            specifiedType: const FullType(String)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.neighborhoods != null) {
-      result
-        ..add('neighborhoods')
-        ..add(serializers.serialize(object.neighborhoods,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(AdminServiceAdminNeighborResponse)])));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceRegionResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceRegionResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'freeDelivery':
-          result.freeDelivery = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'freeDeliveryAmount':
-          result.freeDeliveryAmount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'timeSlotGenerationWindow':
-          result.timeSlotGenerationWindow = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'lastTimeSlotGeneratedDate':
-          result.lastTimeSlotGeneratedDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'minimunCartAmount':
-          result.minimunCartAmount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'regionMail':
-          result.regionMail = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'neighborhoods':
-          result.neighborhoods.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(AdminServiceAdminNeighborResponse)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceRegionResponse extends AdminServiceRegionResponse {
   @override
@@ -324,21 +172,24 @@ class AdminServiceRegionResponseBuilder
           ListBuilder<AdminServiceAdminNeighborResponse> neighborhoods) =>
       _$this._neighborhoods = neighborhoods;
 
-  AdminServiceRegionResponseBuilder();
+  AdminServiceRegionResponseBuilder() {
+    AdminServiceRegionResponse._initializeBuilder(this);
+  }
 
   AdminServiceRegionResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _code = _$v.code;
-      _freeDelivery = _$v.freeDelivery;
-      _freeDeliveryAmount = _$v.freeDeliveryAmount;
-      _timeSlotGenerationWindow = _$v.timeSlotGenerationWindow;
-      _lastTimeSlotGeneratedDate = _$v.lastTimeSlotGeneratedDate;
-      _minimunCartAmount = _$v.minimunCartAmount;
-      _regionMail = _$v.regionMail;
-      _active = _$v.active;
-      _neighborhoods = _$v.neighborhoods?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
+      _code = $v.code;
+      _freeDelivery = $v.freeDelivery;
+      _freeDeliveryAmount = $v.freeDeliveryAmount;
+      _timeSlotGenerationWindow = $v.timeSlotGenerationWindow;
+      _lastTimeSlotGeneratedDate = $v.lastTimeSlotGeneratedDate;
+      _minimunCartAmount = $v.minimunCartAmount;
+      _regionMail = $v.regionMail;
+      _active = $v.active;
+      _neighborhoods = $v.neighborhoods?.toBuilder();
       _$v = null;
     }
     return this;
@@ -346,9 +197,7 @@ class AdminServiceRegionResponseBuilder
 
   @override
   void replace(AdminServiceRegionResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceRegionResponse;
   }
 

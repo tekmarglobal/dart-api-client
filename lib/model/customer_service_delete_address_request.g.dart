@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_delete_address_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceDeleteAddressRequest>
-    _$customerServiceDeleteAddressRequestSerializer =
-    new _$CustomerServiceDeleteAddressRequestSerializer();
-
-class _$CustomerServiceDeleteAddressRequestSerializer
-    implements StructuredSerializer<CustomerServiceDeleteAddressRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceDeleteAddressRequest,
-    _$CustomerServiceDeleteAddressRequest
-  ];
-  @override
-  final String wireName = 'CustomerServiceDeleteAddressRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceDeleteAddressRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.addressId != null) {
-      result
-        ..add('addressId')
-        ..add(serializers.serialize(object.addressId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceDeleteAddressRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceDeleteAddressRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'addressId':
-          result.addressId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceDeleteAddressRequest
     extends CustomerServiceDeleteAddressRequest {
@@ -109,11 +59,14 @@ class CustomerServiceDeleteAddressRequestBuilder
   int get addressId => _$this._addressId;
   set addressId(int addressId) => _$this._addressId = addressId;
 
-  CustomerServiceDeleteAddressRequestBuilder();
+  CustomerServiceDeleteAddressRequestBuilder() {
+    CustomerServiceDeleteAddressRequest._initializeBuilder(this);
+  }
 
   CustomerServiceDeleteAddressRequestBuilder get _$this {
-    if (_$v != null) {
-      _addressId = _$v.addressId;
+    final $v = _$v;
+    if ($v != null) {
+      _addressId = $v.addressId;
       _$v = null;
     }
     return this;
@@ -121,9 +74,7 @@ class CustomerServiceDeleteAddressRequestBuilder
 
   @override
   void replace(CustomerServiceDeleteAddressRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceDeleteAddressRequest;
   }
 

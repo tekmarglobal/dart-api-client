@@ -24,10 +24,12 @@ class _$SmsResponseSmsResponseSerializer
       Serializers serializers, SmsResponseSmsResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.phone != null) {
+    Object value;
+    value = object.phone;
+    if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(object.phone,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
     return result;
@@ -43,7 +45,7 @@ class _$SmsResponseSmsResponseSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final dynamic value = iterator.current;
+      final Object value = iterator.current;
       switch (key) {
         case 'phone':
           result.phone = serializers.deserialize(value,
@@ -107,8 +109,9 @@ class SmsResponseSmsResponseBuilder
   }
 
   SmsResponseSmsResponseBuilder get _$this {
-    if (_$v != null) {
-      _phone = _$v.phone;
+    final $v = _$v;
+    if ($v != null) {
+      _phone = $v.phone;
       _$v = null;
     }
     return this;
@@ -116,9 +119,7 @@ class SmsResponseSmsResponseBuilder
 
   @override
   void replace(SmsResponseSmsResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SmsResponseSmsResponse;
   }
 

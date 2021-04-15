@@ -50,8 +50,8 @@ abstract class KilerCall implements Built<KilerCall, KilerCallBuilder> {
     String get recordingFile;
 
     @nullable
-    @BuiltValueField(wireName: r'uniqId')
-    String get uniqId;
+    @BuiltValueField(wireName: r'uniqueId')
+    String get uniqueId;
 
     @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
@@ -140,10 +140,10 @@ class _$KilerCallSerializer implements StructuredSerializer<KilerCall> {
                 ..add(serializers.serialize(object.recordingFile,
                     specifiedType: const FullType(String)));
         }
-        if (object.uniqId != null) {
+        if (object.uniqueId != null) {
             result
-                ..add(r'uniqId')
-                ..add(serializers.serialize(object.uniqId,
+                ..add(r'uniqueId')
+                ..add(serializers.serialize(object.uniqueId,
                     specifiedType: const FullType(String)));
         }
         if (object.optimisticLockField != null) {
@@ -214,8 +214,8 @@ class _$KilerCallSerializer implements StructuredSerializer<KilerCall> {
                     result.recordingFile = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'uniqId':
-                    result.uniqId = serializers.deserialize(value,
+                case r'uniqueId':
+                    result.uniqueId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'optimisticLockField':

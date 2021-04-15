@@ -1,428 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_order.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerOrder> _$kilerOrderSerializer = new _$KilerOrderSerializer();
-
-class _$KilerOrderSerializer implements StructuredSerializer<KilerOrder> {
-  @override
-  final Iterable<Type> types = const [KilerOrder, _$KilerOrder];
-  @override
-  final String wireName = 'KilerOrder';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerOrder object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.cart != null) {
-      result
-        ..add('cart')
-        ..add(serializers.serialize(object.cart,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.orderDate != null) {
-      result
-        ..add('orderDate')
-        ..add(serializers.serialize(object.orderDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.productDiscountsTotal != null) {
-      result
-        ..add('productDiscountsTotal')
-        ..add(serializers.serialize(object.productDiscountsTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.campaignDiscountsTotal != null) {
-      result
-        ..add('campaignDiscountsTotal')
-        ..add(serializers.serialize(object.campaignDiscountsTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.deliveryAddress != null) {
-      result
-        ..add('deliveryAddress')
-        ..add(serializers.serialize(object.deliveryAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.billingAddress != null) {
-      result
-        ..add('billingAddress')
-        ..add(serializers.serialize(object.billingAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.orderStatus != null) {
-      result
-        ..add('orderStatus')
-        ..add(serializers.serialize(object.orderStatus,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productTotal != null) {
-      result
-        ..add('productTotal')
-        ..add(serializers.serialize(object.productTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.orderTotal != null) {
-      result
-        ..add('orderTotal')
-        ..add(serializers.serialize(object.orderTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.completedFrom != null) {
-      result
-        ..add('completedFrom')
-        ..add(serializers.serialize(object.completedFrom,
-            specifiedType: const FullType(int)));
-    }
-    if (object.note != null) {
-      result
-        ..add('note')
-        ..add(serializers.serialize(object.note,
-            specifiedType: const FullType(String)));
-    }
-    if (object.bagAmount != null) {
-      result
-        ..add('bagAmount')
-        ..add(serializers.serialize(object.bagAmount,
-            specifiedType: const FullType(int)));
-    }
-    if (object.bagTotal != null) {
-      result
-        ..add('bagTotal')
-        ..add(serializers.serialize(object.bagTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.timeSlot != null) {
-      result
-        ..add('timeSlot')
-        ..add(serializers.serialize(object.timeSlot,
-            specifiedType: const FullType(int)));
-    }
-    if (object.paymentType != null) {
-      result
-        ..add('paymentType')
-        ..add(serializers.serialize(object.paymentType,
-            specifiedType: const FullType(int)));
-    }
-    if (object.sent != null) {
-      result
-        ..add('sent')
-        ..add(serializers.serialize(object.sent,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.uuid != null) {
-      result
-        ..add('uuid')
-        ..add(serializers.serialize(object.uuid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.fee != null) {
-      result
-        ..add('fee')
-        ..add(serializers.serialize(object.fee,
-            specifiedType: const FullType(double)));
-    }
-    if (object.isProcessed != null) {
-      result
-        ..add('isProcessed')
-        ..add(serializers.serialize(object.isProcessed,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.billingAddressNavigation != null) {
-      result
-        ..add('billingAddressNavigation')
-        ..add(serializers.serialize(object.billingAddressNavigation,
-            specifiedType: const FullType(KilerAddress)));
-    }
-    if (object.cartNavigation != null) {
-      result
-        ..add('cartNavigation')
-        ..add(serializers.serialize(object.cartNavigation,
-            specifiedType: const FullType(KilerCart)));
-    }
-    if (object.completedFromNavigation != null) {
-      result
-        ..add('completedFromNavigation')
-        ..add(serializers.serialize(object.completedFromNavigation,
-            specifiedType: const FullType(KilerDevice)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.deliveryAddressNavigation != null) {
-      result
-        ..add('deliveryAddressNavigation')
-        ..add(serializers.serialize(object.deliveryAddressNavigation,
-            specifiedType: const FullType(KilerAddress)));
-    }
-    if (object.orderStatusNavigation != null) {
-      result
-        ..add('orderStatusNavigation')
-        ..add(serializers.serialize(object.orderStatusNavigation,
-            specifiedType: const FullType(KilerOrderStatus)));
-    }
-    if (object.paymentTypeNavigation != null) {
-      result
-        ..add('paymentTypeNavigation')
-        ..add(serializers.serialize(object.paymentTypeNavigation,
-            specifiedType: const FullType(KilerPaymentType)));
-    }
-    if (object.regionNavigation != null) {
-      result
-        ..add('regionNavigation')
-        ..add(serializers.serialize(object.regionNavigation,
-            specifiedType: const FullType(KilerRegion)));
-    }
-    if (object.timeSlotNavigation != null) {
-      result
-        ..add('timeSlotNavigation')
-        ..add(serializers.serialize(object.timeSlotNavigation,
-            specifiedType: const FullType(KilerTimeSlot)));
-    }
-    if (object.orderProduct != null) {
-      result
-        ..add('orderProduct')
-        ..add(serializers.serialize(object.orderProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerOrderProduct)])));
-    }
-    if (object.payment != null) {
-      result
-        ..add('payment')
-        ..add(serializers.serialize(object.payment,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPayment)])));
-    }
-    if (object.survey != null) {
-      result
-        ..add('survey')
-        ..add(serializers.serialize(object.survey,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerSurvey)])));
-    }
-    if (object.ticket != null) {
-      result
-        ..add('ticket')
-        ..add(serializers.serialize(object.ticket,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerTicket)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerOrder deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerOrderBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'cart':
-          result.cart = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'orderDate':
-          result.orderDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'productDiscountsTotal':
-          result.productDiscountsTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'campaignDiscountsTotal':
-          result.campaignDiscountsTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'deliveryAddress':
-          result.deliveryAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'billingAddress':
-          result.billingAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'orderStatus':
-          result.orderStatus = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productTotal':
-          result.productTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'orderTotal':
-          result.orderTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'completedFrom':
-          result.completedFrom = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'note':
-          result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'bagAmount':
-          result.bagAmount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'bagTotal':
-          result.bagTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'timeSlot':
-          result.timeSlot = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'paymentType':
-          result.paymentType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'sent':
-          result.sent = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'uuid':
-          result.uuid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'fee':
-          result.fee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'isProcessed':
-          result.isProcessed = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'billingAddressNavigation':
-          result.billingAddressNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerAddress)) as KilerAddress);
-          break;
-        case 'cartNavigation':
-          result.cartNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCart)) as KilerCart);
-          break;
-        case 'completedFromNavigation':
-          result.completedFromNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerDevice)) as KilerDevice);
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'deliveryAddressNavigation':
-          result.deliveryAddressNavigation.replace(serializers.deserialize(
-              value,
-              specifiedType: const FullType(KilerAddress)) as KilerAddress);
-          break;
-        case 'orderStatusNavigation':
-          result.orderStatusNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerOrderStatus))
-              as KilerOrderStatus);
-          break;
-        case 'paymentTypeNavigation':
-          result.paymentTypeNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerPaymentType))
-              as KilerPaymentType);
-          break;
-        case 'regionNavigation':
-          result.regionNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerRegion)) as KilerRegion);
-          break;
-        case 'timeSlotNavigation':
-          result.timeSlotNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerTimeSlot)) as KilerTimeSlot);
-          break;
-        case 'orderProduct':
-          result.orderProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrderProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'payment':
-          result.payment.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerPayment)]))
-              as BuiltList<Object>);
-          break;
-        case 'survey':
-          result.survey.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerSurvey)]))
-              as BuiltList<Object>);
-          break;
-        case 'ticket':
-          result.ticket.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerTicket)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerOrder extends KilerOrder {
   @override
@@ -492,6 +75,8 @@ class _$KilerOrder extends KilerOrder {
   @override
   final KilerTimeSlot timeSlotNavigation;
   @override
+  final BuiltList<KilerOlimposLog> olimposLog;
+  @override
   final BuiltList<KilerOrderProduct> orderProduct;
   @override
   final BuiltList<KilerPayment> payment;
@@ -537,6 +122,7 @@ class _$KilerOrder extends KilerOrder {
       this.paymentTypeNavigation,
       this.regionNavigation,
       this.timeSlotNavigation,
+      this.olimposLog,
       this.orderProduct,
       this.payment,
       this.survey,
@@ -587,6 +173,7 @@ class _$KilerOrder extends KilerOrder {
         paymentTypeNavigation == other.paymentTypeNavigation &&
         regionNavigation == other.regionNavigation &&
         timeSlotNavigation == other.timeSlotNavigation &&
+        olimposLog == other.olimposLog &&
         orderProduct == other.orderProduct &&
         payment == other.payment &&
         survey == other.survey &&
@@ -613,22 +200,22 @@ class _$KilerOrder extends KilerOrder {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode), timeSlot.hashCode), paymentType.hashCode),
-                                                                                sent.hashCode),
-                                                                            optimisticLockField.hashCode),
-                                                                        region.hashCode),
-                                                                    uuid.hashCode),
-                                                                fee.hashCode),
-                                                            isProcessed.hashCode),
-                                                        billingAddressNavigation.hashCode),
-                                                    cartNavigation.hashCode),
-                                                completedFromNavigation.hashCode),
-                                            customerNavigation.hashCode),
-                                        deliveryAddressNavigation.hashCode),
-                                    orderStatusNavigation.hashCode),
-                                paymentTypeNavigation.hashCode),
-                            regionNavigation.hashCode),
-                        timeSlotNavigation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode), timeSlot.hashCode), paymentType.hashCode), sent.hashCode),
+                                                                                optimisticLockField.hashCode),
+                                                                            region.hashCode),
+                                                                        uuid.hashCode),
+                                                                    fee.hashCode),
+                                                                isProcessed.hashCode),
+                                                            billingAddressNavigation.hashCode),
+                                                        cartNavigation.hashCode),
+                                                    completedFromNavigation.hashCode),
+                                                customerNavigation.hashCode),
+                                            deliveryAddressNavigation.hashCode),
+                                        orderStatusNavigation.hashCode),
+                                    paymentTypeNavigation.hashCode),
+                                regionNavigation.hashCode),
+                            timeSlotNavigation.hashCode),
+                        olimposLog.hashCode),
                     orderProduct.hashCode),
                 payment.hashCode),
             survey.hashCode),
@@ -671,6 +258,7 @@ class _$KilerOrder extends KilerOrder {
           ..add('paymentTypeNavigation', paymentTypeNavigation)
           ..add('regionNavigation', regionNavigation)
           ..add('timeSlotNavigation', timeSlotNavigation)
+          ..add('olimposLog', olimposLog)
           ..add('orderProduct', orderProduct)
           ..add('payment', payment)
           ..add('survey', survey)
@@ -838,6 +426,12 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
   set timeSlotNavigation(KilerTimeSlotBuilder timeSlotNavigation) =>
       _$this._timeSlotNavigation = timeSlotNavigation;
 
+  ListBuilder<KilerOlimposLog> _olimposLog;
+  ListBuilder<KilerOlimposLog> get olimposLog =>
+      _$this._olimposLog ??= new ListBuilder<KilerOlimposLog>();
+  set olimposLog(ListBuilder<KilerOlimposLog> olimposLog) =>
+      _$this._olimposLog = olimposLog;
+
   ListBuilder<KilerOrderProduct> _orderProduct;
   ListBuilder<KilerOrderProduct> get orderProduct =>
       _$this._orderProduct ??= new ListBuilder<KilerOrderProduct>();
@@ -859,47 +453,51 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerOrderBuilder();
+  KilerOrderBuilder() {
+    KilerOrder._initializeBuilder(this);
+  }
 
   KilerOrderBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _cart = _$v.cart;
-      _customer = _$v.customer;
-      _orderDate = _$v.orderDate;
-      _productDiscountsTotal = _$v.productDiscountsTotal;
-      _campaignDiscountsTotal = _$v.campaignDiscountsTotal;
-      _deliveryAddress = _$v.deliveryAddress;
-      _billingAddress = _$v.billingAddress;
-      _orderStatus = _$v.orderStatus;
-      _productTotal = _$v.productTotal;
-      _orderTotal = _$v.orderTotal;
-      _completedFrom = _$v.completedFrom;
-      _note = _$v.note;
-      _bagAmount = _$v.bagAmount;
-      _bagTotal = _$v.bagTotal;
-      _active = _$v.active;
-      _timeSlot = _$v.timeSlot;
-      _paymentType = _$v.paymentType;
-      _sent = _$v.sent;
-      _optimisticLockField = _$v.optimisticLockField;
-      _region = _$v.region;
-      _uuid = _$v.uuid;
-      _fee = _$v.fee;
-      _isProcessed = _$v.isProcessed;
-      _billingAddressNavigation = _$v.billingAddressNavigation?.toBuilder();
-      _cartNavigation = _$v.cartNavigation?.toBuilder();
-      _completedFromNavigation = _$v.completedFromNavigation?.toBuilder();
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _deliveryAddressNavigation = _$v.deliveryAddressNavigation?.toBuilder();
-      _orderStatusNavigation = _$v.orderStatusNavigation?.toBuilder();
-      _paymentTypeNavigation = _$v.paymentTypeNavigation?.toBuilder();
-      _regionNavigation = _$v.regionNavigation?.toBuilder();
-      _timeSlotNavigation = _$v.timeSlotNavigation?.toBuilder();
-      _orderProduct = _$v.orderProduct?.toBuilder();
-      _payment = _$v.payment?.toBuilder();
-      _survey = _$v.survey?.toBuilder();
-      _ticket = _$v.ticket?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _cart = $v.cart;
+      _customer = $v.customer;
+      _orderDate = $v.orderDate;
+      _productDiscountsTotal = $v.productDiscountsTotal;
+      _campaignDiscountsTotal = $v.campaignDiscountsTotal;
+      _deliveryAddress = $v.deliveryAddress;
+      _billingAddress = $v.billingAddress;
+      _orderStatus = $v.orderStatus;
+      _productTotal = $v.productTotal;
+      _orderTotal = $v.orderTotal;
+      _completedFrom = $v.completedFrom;
+      _note = $v.note;
+      _bagAmount = $v.bagAmount;
+      _bagTotal = $v.bagTotal;
+      _active = $v.active;
+      _timeSlot = $v.timeSlot;
+      _paymentType = $v.paymentType;
+      _sent = $v.sent;
+      _optimisticLockField = $v.optimisticLockField;
+      _region = $v.region;
+      _uuid = $v.uuid;
+      _fee = $v.fee;
+      _isProcessed = $v.isProcessed;
+      _billingAddressNavigation = $v.billingAddressNavigation?.toBuilder();
+      _cartNavigation = $v.cartNavigation?.toBuilder();
+      _completedFromNavigation = $v.completedFromNavigation?.toBuilder();
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _deliveryAddressNavigation = $v.deliveryAddressNavigation?.toBuilder();
+      _orderStatusNavigation = $v.orderStatusNavigation?.toBuilder();
+      _paymentTypeNavigation = $v.paymentTypeNavigation?.toBuilder();
+      _regionNavigation = $v.regionNavigation?.toBuilder();
+      _timeSlotNavigation = $v.timeSlotNavigation?.toBuilder();
+      _olimposLog = $v.olimposLog?.toBuilder();
+      _orderProduct = $v.orderProduct?.toBuilder();
+      _payment = $v.payment?.toBuilder();
+      _survey = $v.survey?.toBuilder();
+      _ticket = $v.ticket?.toBuilder();
       _$v = null;
     }
     return this;
@@ -907,9 +505,7 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
 
   @override
   void replace(KilerOrder other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerOrder;
   }
 
@@ -957,6 +553,7 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
               paymentTypeNavigation: _paymentTypeNavigation?.build(),
               regionNavigation: _regionNavigation?.build(),
               timeSlotNavigation: _timeSlotNavigation?.build(),
+              olimposLog: _olimposLog?.build(),
               orderProduct: _orderProduct?.build(),
               payment: _payment?.build(),
               survey: _survey?.build(),
@@ -982,6 +579,8 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
         _regionNavigation?.build();
         _$failedField = 'timeSlotNavigation';
         _timeSlotNavigation?.build();
+        _$failedField = 'olimposLog';
+        _olimposLog?.build();
         _$failedField = 'orderProduct';
         _orderProduct?.build();
         _$failedField = 'payment';

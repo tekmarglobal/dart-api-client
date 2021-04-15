@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'catalog_service_r_product_price.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CatalogServiceRProductPrice>
-    _$catalogServiceRProductPriceSerializer =
-    new _$CatalogServiceRProductPriceSerializer();
-
-class _$CatalogServiceRProductPriceSerializer
-    implements StructuredSerializer<CatalogServiceRProductPrice> {
-  @override
-  final Iterable<Type> types = const [
-    CatalogServiceRProductPrice,
-    _$CatalogServiceRProductPrice
-  ];
-  @override
-  final String wireName = 'CatalogServiceRProductPrice';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CatalogServiceRProductPrice object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.price != null) {
-      result
-        ..add('price')
-        ..add(serializers.serialize(object.price,
-            specifiedType: const FullType(double)));
-    }
-    if (object.listPrice != null) {
-      result
-        ..add('listPrice')
-        ..add(serializers.serialize(object.listPrice,
-            specifiedType: const FullType(double)));
-    }
-    return result;
-  }
-
-  @override
-  CatalogServiceRProductPrice deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CatalogServiceRProductPriceBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'price':
-          result.price = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'listPrice':
-          result.listPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CatalogServiceRProductPrice extends CatalogServiceRProductPrice {
   @override
@@ -124,12 +64,15 @@ class CatalogServiceRProductPriceBuilder
   double get listPrice => _$this._listPrice;
   set listPrice(double listPrice) => _$this._listPrice = listPrice;
 
-  CatalogServiceRProductPriceBuilder();
+  CatalogServiceRProductPriceBuilder() {
+    CatalogServiceRProductPrice._initializeBuilder(this);
+  }
 
   CatalogServiceRProductPriceBuilder get _$this {
-    if (_$v != null) {
-      _price = _$v.price;
-      _listPrice = _$v.listPrice;
+    final $v = _$v;
+    if ($v != null) {
+      _price = $v.price;
+      _listPrice = $v.listPrice;
       _$v = null;
     }
     return this;
@@ -137,9 +80,7 @@ class CatalogServiceRProductPriceBuilder
 
   @override
   void replace(CatalogServiceRProductPrice other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CatalogServiceRProductPrice;
   }
 

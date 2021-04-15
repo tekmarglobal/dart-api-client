@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'banner_service_banner_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<BannerServiceBannerResponse>
-    _$bannerServiceBannerResponseSerializer =
-    new _$BannerServiceBannerResponseSerializer();
-
-class _$BannerServiceBannerResponseSerializer
-    implements StructuredSerializer<BannerServiceBannerResponse> {
-  @override
-  final Iterable<Type> types = const [
-    BannerServiceBannerResponse,
-    _$BannerServiceBannerResponse
-  ];
-  @override
-  final String wireName = 'BannerServiceBannerResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, BannerServiceBannerResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.bannerList != null) {
-      result
-        ..add('bannerList')
-        ..add(serializers.serialize(object.bannerList,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(BannerServiceRBanner)])));
-    }
-    return result;
-  }
-
-  @override
-  BannerServiceBannerResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new BannerServiceBannerResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'bannerList':
-          result.bannerList.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(BannerServiceRBanner)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$BannerServiceBannerResponse extends BannerServiceBannerResponse {
   @override
@@ -111,11 +58,14 @@ class BannerServiceBannerResponseBuilder
   set bannerList(ListBuilder<BannerServiceRBanner> bannerList) =>
       _$this._bannerList = bannerList;
 
-  BannerServiceBannerResponseBuilder();
+  BannerServiceBannerResponseBuilder() {
+    BannerServiceBannerResponse._initializeBuilder(this);
+  }
 
   BannerServiceBannerResponseBuilder get _$this {
-    if (_$v != null) {
-      _bannerList = _$v.bannerList?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _bannerList = $v.bannerList?.toBuilder();
       _$v = null;
     }
     return this;
@@ -123,9 +73,7 @@ class BannerServiceBannerResponseBuilder
 
   @override
   void replace(BannerServiceBannerResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BannerServiceBannerResponse;
   }
 

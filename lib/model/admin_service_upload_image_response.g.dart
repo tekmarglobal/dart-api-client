@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_upload_image_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceUploadImageResponse>
-    _$adminServiceUploadImageResponseSerializer =
-    new _$AdminServiceUploadImageResponseSerializer();
-
-class _$AdminServiceUploadImageResponseSerializer
-    implements StructuredSerializer<AdminServiceUploadImageResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceUploadImageResponse,
-    _$AdminServiceUploadImageResponse
-  ];
-  @override
-  final String wireName = 'AdminServiceUploadImageResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceUploadImageResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceUploadImageResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceUploadImageResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceUploadImageResponse
     extends AdminServiceUploadImageResponse {
@@ -107,11 +57,14 @@ class AdminServiceUploadImageResponseBuilder
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
 
-  AdminServiceUploadImageResponseBuilder();
+  AdminServiceUploadImageResponseBuilder() {
+    AdminServiceUploadImageResponse._initializeBuilder(this);
+  }
 
   AdminServiceUploadImageResponseBuilder get _$this {
-    if (_$v != null) {
-      _productId = _$v.productId;
+    final $v = _$v;
+    if ($v != null) {
+      _productId = $v.productId;
       _$v = null;
     }
     return this;
@@ -119,9 +72,7 @@ class AdminServiceUploadImageResponseBuilder
 
   @override
   void replace(AdminServiceUploadImageResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceUploadImageResponse;
   }
 

@@ -1,62 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_customer_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceCustomerResponse>
-    _$customerServiceCustomerResponseSerializer =
-    new _$CustomerServiceCustomerResponseSerializer();
-
-class _$CustomerServiceCustomerResponseSerializer
-    implements StructuredSerializer<CustomerServiceCustomerResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceCustomerResponse,
-    _$CustomerServiceCustomerResponse
-  ];
-  @override
-  final String wireName = 'CustomerServiceCustomerResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceCustomerResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(CustomerServiceRCustomer)));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceCustomerResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceCustomerResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'customer':
-          result.customer.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(CustomerServiceRCustomer))
-              as CustomerServiceRCustomer);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceCustomerResponse
     extends CustomerServiceCustomerResponse {
@@ -110,11 +59,14 @@ class CustomerServiceCustomerResponseBuilder
   set customer(CustomerServiceRCustomerBuilder customer) =>
       _$this._customer = customer;
 
-  CustomerServiceCustomerResponseBuilder();
+  CustomerServiceCustomerResponseBuilder() {
+    CustomerServiceCustomerResponse._initializeBuilder(this);
+  }
 
   CustomerServiceCustomerResponseBuilder get _$this {
-    if (_$v != null) {
-      _customer = _$v.customer?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _customer = $v.customer?.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,9 +74,7 @@ class CustomerServiceCustomerResponseBuilder
 
   @override
   void replace(CustomerServiceCustomerResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceCustomerResponse;
   }
 

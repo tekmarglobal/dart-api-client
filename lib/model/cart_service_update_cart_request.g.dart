@@ -1,101 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_update_cart_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceUpdateCartRequest>
-    _$cartServiceUpdateCartRequestSerializer =
-    new _$CartServiceUpdateCartRequestSerializer();
-
-class _$CartServiceUpdateCartRequestSerializer
-    implements StructuredSerializer<CartServiceUpdateCartRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceUpdateCartRequest,
-    _$CartServiceUpdateCartRequest
-  ];
-  @override
-  final String wireName = 'CartServiceUpdateCartRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceUpdateCartRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.quantity != null) {
-      result
-        ..add('quantity')
-        ..add(serializers.serialize(object.quantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.cartNote != null) {
-      result
-        ..add('cartNote')
-        ..add(serializers.serialize(object.cartNote,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productNote != null) {
-      result
-        ..add('productNote')
-        ..add(serializers.serialize(object.productNote,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceUpdateCartRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceUpdateCartRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'quantity':
-          result.quantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'cartNote':
-          result.cartNote = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productNote':
-          result.productNote = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceUpdateCartRequest extends CartServiceUpdateCartRequest {
   @override
@@ -189,15 +99,18 @@ class CartServiceUpdateCartRequestBuilder
   String get productNote => _$this._productNote;
   set productNote(String productNote) => _$this._productNote = productNote;
 
-  CartServiceUpdateCartRequestBuilder();
+  CartServiceUpdateCartRequestBuilder() {
+    CartServiceUpdateCartRequest._initializeBuilder(this);
+  }
 
   CartServiceUpdateCartRequestBuilder get _$this {
-    if (_$v != null) {
-      _region = _$v.region;
-      _productId = _$v.productId;
-      _quantity = _$v.quantity;
-      _cartNote = _$v.cartNote;
-      _productNote = _$v.productNote;
+    final $v = _$v;
+    if ($v != null) {
+      _region = $v.region;
+      _productId = $v.productId;
+      _quantity = $v.quantity;
+      _cartNote = $v.cartNote;
+      _productNote = $v.productNote;
       _$v = null;
     }
     return this;
@@ -205,9 +118,7 @@ class CartServiceUpdateCartRequestBuilder
 
   @override
   void replace(CartServiceUpdateCartRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceUpdateCartRequest;
   }
 

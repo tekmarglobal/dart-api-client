@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'payment_service_payment_type_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<PaymentServicePaymentTypeResponse>
-    _$paymentServicePaymentTypeResponseSerializer =
-    new _$PaymentServicePaymentTypeResponseSerializer();
-
-class _$PaymentServicePaymentTypeResponseSerializer
-    implements StructuredSerializer<PaymentServicePaymentTypeResponse> {
-  @override
-  final Iterable<Type> types = const [
-    PaymentServicePaymentTypeResponse,
-    _$PaymentServicePaymentTypeResponse
-  ];
-  @override
-  final String wireName = 'PaymentServicePaymentTypeResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, PaymentServicePaymentTypeResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.paymentTypeList != null) {
-      result
-        ..add('paymentTypeList')
-        ..add(serializers.serialize(object.paymentTypeList,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(PaymentServiceRPaymentType)])));
-    }
-    return result;
-  }
-
-  @override
-  PaymentServicePaymentTypeResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new PaymentServicePaymentTypeResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'paymentTypeList':
-          result.paymentTypeList.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(PaymentServiceRPaymentType)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$PaymentServicePaymentTypeResponse
     extends PaymentServicePaymentTypeResponse {
@@ -113,11 +60,14 @@ class PaymentServicePaymentTypeResponseBuilder
           ListBuilder<PaymentServiceRPaymentType> paymentTypeList) =>
       _$this._paymentTypeList = paymentTypeList;
 
-  PaymentServicePaymentTypeResponseBuilder();
+  PaymentServicePaymentTypeResponseBuilder() {
+    PaymentServicePaymentTypeResponse._initializeBuilder(this);
+  }
 
   PaymentServicePaymentTypeResponseBuilder get _$this {
-    if (_$v != null) {
-      _paymentTypeList = _$v.paymentTypeList?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _paymentTypeList = $v.paymentTypeList?.toBuilder();
       _$v = null;
     }
     return this;
@@ -125,9 +75,7 @@ class PaymentServicePaymentTypeResponseBuilder
 
   @override
   void replace(PaymentServicePaymentTypeResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaymentServicePaymentTypeResponse;
   }
 

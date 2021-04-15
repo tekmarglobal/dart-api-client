@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'product_service_product_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<ProductServiceProductRequest>
-    _$productServiceProductRequestSerializer =
-    new _$ProductServiceProductRequestSerializer();
-
-class _$ProductServiceProductRequestSerializer
-    implements StructuredSerializer<ProductServiceProductRequest> {
-  @override
-  final Iterable<Type> types = const [
-    ProductServiceProductRequest,
-    _$ProductServiceProductRequest
-  ];
-  @override
-  final String wireName = 'ProductServiceProductRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, ProductServiceProductRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  ProductServiceProductRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new ProductServiceProductRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$ProductServiceProductRequest extends ProductServiceProductRequest {
   @override
@@ -105,11 +55,14 @@ class ProductServiceProductRequestBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  ProductServiceProductRequestBuilder();
+  ProductServiceProductRequestBuilder() {
+    ProductServiceProductRequest._initializeBuilder(this);
+  }
 
   ProductServiceProductRequestBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
       _$v = null;
     }
     return this;
@@ -117,9 +70,7 @@ class ProductServiceProductRequestBuilder
 
   @override
   void replace(ProductServiceProductRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ProductServiceProductRequest;
   }
 

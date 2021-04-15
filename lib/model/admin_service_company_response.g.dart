@@ -1,104 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_company_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceCompanyResponse>
-    _$adminServiceCompanyResponseSerializer =
-    new _$AdminServiceCompanyResponseSerializer();
-
-class _$AdminServiceCompanyResponseSerializer
-    implements StructuredSerializer<AdminServiceCompanyResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceCompanyResponse,
-    _$AdminServiceCompanyResponse
-  ];
-  @override
-  final String wireName = 'AdminServiceCompanyResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceCompanyResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.color != null) {
-      result
-        ..add('color')
-        ..add(serializers.serialize(object.color,
-            specifiedType: const FullType(String)));
-    }
-    if (object.population != null) {
-      result
-        ..add('population')
-        ..add(serializers.serialize(object.population,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regions != null) {
-      result
-        ..add('regions')
-        ..add(serializers.serialize(object.regions,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(AdminServiceRegionResponse)])));
-    }
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceCompanyResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceCompanyResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'color':
-          result.color = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'population':
-          result.population = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regions':
-          result.regions.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(AdminServiceRegionResponse)
-              ])) as BuiltList<Object>);
-          break;
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceCompanyResponse extends AdminServiceCompanyResponse {
   @override
@@ -190,15 +97,18 @@ class AdminServiceCompanyResponseBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  AdminServiceCompanyResponseBuilder();
+  AdminServiceCompanyResponseBuilder() {
+    AdminServiceCompanyResponse._initializeBuilder(this);
+  }
 
   AdminServiceCompanyResponseBuilder get _$this {
-    if (_$v != null) {
-      _name = _$v.name;
-      _color = _$v.color;
-      _population = _$v.population;
-      _regions = _$v.regions?.toBuilder();
-      _id = _$v.id;
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _color = $v.color;
+      _population = $v.population;
+      _regions = $v.regions?.toBuilder();
+      _id = $v.id;
       _$v = null;
     }
     return this;
@@ -206,9 +116,7 @@ class AdminServiceCompanyResponseBuilder
 
   @override
   void replace(AdminServiceCompanyResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceCompanyResponse;
   }
 

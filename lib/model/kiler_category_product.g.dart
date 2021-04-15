@@ -1,120 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_category_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCategoryProduct> _$kilerCategoryProductSerializer =
-    new _$KilerCategoryProductSerializer();
-
-class _$KilerCategoryProductSerializer
-    implements StructuredSerializer<KilerCategoryProduct> {
-  @override
-  final Iterable<Type> types = const [
-    KilerCategoryProduct,
-    _$KilerCategoryProduct
-  ];
-  @override
-  final String wireName = 'KilerCategoryProduct';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerCategoryProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.category != null) {
-      result
-        ..add('category')
-        ..add(serializers.serialize(object.category,
-            specifiedType: const FullType(int)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(int)));
-    }
-    if (object.main != null) {
-      result
-        ..add('main')
-        ..add(serializers.serialize(object.main,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.categoryNavigation != null) {
-      result
-        ..add('categoryNavigation')
-        ..add(serializers.serialize(object.categoryNavigation,
-            specifiedType: const FullType(KilerCategory)));
-    }
-    if (object.productNavigation != null) {
-      result
-        ..add('productNavigation')
-        ..add(serializers.serialize(object.productNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCategoryProduct deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCategoryProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'category':
-          result.category = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'product':
-          result.product = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'main':
-          result.main = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'categoryNavigation':
-          result.categoryNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCategory)) as KilerCategory);
-          break;
-        case 'productNavigation':
-          result.productNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCategoryProduct extends KilerCategoryProduct {
   @override
@@ -233,17 +124,20 @@ class KilerCategoryProductBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerCategoryProductBuilder();
+  KilerCategoryProductBuilder() {
+    KilerCategoryProduct._initializeBuilder(this);
+  }
 
   KilerCategoryProductBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _category = _$v.category;
-      _product = _$v.product;
-      _main = _$v.main;
-      _optimisticLockField = _$v.optimisticLockField;
-      _categoryNavigation = _$v.categoryNavigation?.toBuilder();
-      _productNavigation = _$v.productNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _category = $v.category;
+      _product = $v.product;
+      _main = $v.main;
+      _optimisticLockField = $v.optimisticLockField;
+      _categoryNavigation = $v.categoryNavigation?.toBuilder();
+      _productNavigation = $v.productNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -251,9 +145,7 @@ class KilerCategoryProductBuilder
 
   @override
   void replace(KilerCategoryProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCategoryProduct;
   }
 

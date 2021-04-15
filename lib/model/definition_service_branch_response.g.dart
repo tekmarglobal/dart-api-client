@@ -1,81 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_branch_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceBranchResponse>
-    _$definitionServiceBranchResponseSerializer =
-    new _$DefinitionServiceBranchResponseSerializer();
-
-class _$DefinitionServiceBranchResponseSerializer
-    implements StructuredSerializer<DefinitionServiceBranchResponse> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceBranchResponse,
-    _$DefinitionServiceBranchResponse
-  ];
-  @override
-  final String wireName = 'DefinitionServiceBranchResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceBranchResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.latitude != null) {
-      result
-        ..add('latitude')
-        ..add(serializers.serialize(object.latitude,
-            specifiedType: const FullType(double)));
-    }
-    if (object.longitude != null) {
-      result
-        ..add('longitude')
-        ..add(serializers.serialize(object.longitude,
-            specifiedType: const FullType(double)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceBranchResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceBranchResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'latitude':
-          result.latitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'longitude':
-          result.longitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceBranchResponse
     extends DefinitionServiceBranchResponse {
@@ -146,13 +76,16 @@ class DefinitionServiceBranchResponseBuilder
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
 
-  DefinitionServiceBranchResponseBuilder();
+  DefinitionServiceBranchResponseBuilder() {
+    DefinitionServiceBranchResponse._initializeBuilder(this);
+  }
 
   DefinitionServiceBranchResponseBuilder get _$this {
-    if (_$v != null) {
-      _name = _$v.name;
-      _latitude = _$v.latitude;
-      _longitude = _$v.longitude;
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _latitude = $v.latitude;
+      _longitude = $v.longitude;
       _$v = null;
     }
     return this;
@@ -160,9 +93,7 @@ class DefinitionServiceBranchResponseBuilder
 
   @override
   void replace(DefinitionServiceBranchResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceBranchResponse;
   }
 

@@ -1,126 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'catalog_service_r_category.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CatalogServiceRCategory> _$catalogServiceRCategorySerializer =
-    new _$CatalogServiceRCategorySerializer();
-
-class _$CatalogServiceRCategorySerializer
-    implements StructuredSerializer<CatalogServiceRCategory> {
-  @override
-  final Iterable<Type> types = const [
-    CatalogServiceRCategory,
-    _$CatalogServiceRCategory
-  ];
-  @override
-  final String wireName = 'CatalogServiceRCategory';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CatalogServiceRCategory object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.parentId != null) {
-      result
-        ..add('parentId')
-        ..add(serializers.serialize(object.parentId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.products != null) {
-      result
-        ..add('products')
-        ..add(serializers.serialize(object.products,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CatalogServiceRProduct)])));
-    }
-    if (object.subCategories != null) {
-      result
-        ..add('subCategories')
-        ..add(serializers.serialize(object.subCategories,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CatalogServiceRCategory)])));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType: const FullType(int)));
-    }
-    if (object.menuName != null) {
-      result
-        ..add('menuName')
-        ..add(serializers.serialize(object.menuName,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  CatalogServiceRCategory deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CatalogServiceRCategoryBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'parentId':
-          result.parentId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'products':
-          result.products.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CatalogServiceRProduct)
-              ])) as BuiltList<Object>);
-          break;
-        case 'subCategories':
-          result.subCategories.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CatalogServiceRCategory)
-              ])) as BuiltList<Object>);
-          break;
-        case 'order':
-          result.order = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'menuName':
-          result.menuName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CatalogServiceRCategory extends CatalogServiceRCategory {
   @override
@@ -239,17 +124,20 @@ class CatalogServiceRCategoryBuilder
   String get menuName => _$this._menuName;
   set menuName(String menuName) => _$this._menuName = menuName;
 
-  CatalogServiceRCategoryBuilder();
+  CatalogServiceRCategoryBuilder() {
+    CatalogServiceRCategory._initializeBuilder(this);
+  }
 
   CatalogServiceRCategoryBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _parentId = _$v.parentId;
-      _name = _$v.name;
-      _products = _$v.products?.toBuilder();
-      _subCategories = _$v.subCategories?.toBuilder();
-      _order = _$v.order;
-      _menuName = _$v.menuName;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _parentId = $v.parentId;
+      _name = $v.name;
+      _products = $v.products?.toBuilder();
+      _subCategories = $v.subCategories?.toBuilder();
+      _order = $v.order;
+      _menuName = $v.menuName;
       _$v = null;
     }
     return this;
@@ -257,9 +145,7 @@ class CatalogServiceRCategoryBuilder
 
   @override
   void replace(CatalogServiceRCategory other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CatalogServiceRCategory;
   }
 

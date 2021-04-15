@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_counties_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceCountiesRequest>
-    _$definitionServiceCountiesRequestSerializer =
-    new _$DefinitionServiceCountiesRequestSerializer();
-
-class _$DefinitionServiceCountiesRequestSerializer
-    implements StructuredSerializer<DefinitionServiceCountiesRequest> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceCountiesRequest,
-    _$DefinitionServiceCountiesRequest
-  ];
-  @override
-  final String wireName = 'DefinitionServiceCountiesRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceCountiesRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.city != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(object.city,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceCountiesRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceCountiesRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceCountiesRequest
     extends DefinitionServiceCountiesRequest {
@@ -106,11 +56,14 @@ class DefinitionServiceCountiesRequestBuilder
   int get city => _$this._city;
   set city(int city) => _$this._city = city;
 
-  DefinitionServiceCountiesRequestBuilder();
+  DefinitionServiceCountiesRequestBuilder() {
+    DefinitionServiceCountiesRequest._initializeBuilder(this);
+  }
 
   DefinitionServiceCountiesRequestBuilder get _$this {
-    if (_$v != null) {
-      _city = _$v.city;
+    final $v = _$v;
+    if ($v != null) {
+      _city = $v.city;
       _$v = null;
     }
     return this;
@@ -118,9 +71,7 @@ class DefinitionServiceCountiesRequestBuilder
 
   @override
   void replace(DefinitionServiceCountiesRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceCountiesRequest;
   }
 

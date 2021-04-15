@@ -24,7 +24,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
         ///
         /// 
         Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderCreateOrderPost({ 
-            OrderServiceOrderRequest orderServiceOrderRequest,
+            OrderServiceOrderRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -87,7 +87,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             dynamic _bodyData;
 
                         const _type = FullType(OrderServiceOrderRequest);
-                        _bodyData = _serializers.serialize(orderServiceOrderRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Order/CreateOrder',
@@ -208,7 +208,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
         ///
         /// 
         Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderGetOrderPost({ 
-            OrderServiceGetOrderRequest orderServiceGetOrderRequest,
+            OrderServiceGetOrderRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -271,7 +271,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             dynamic _bodyData;
 
                         const _type = FullType(OrderServiceGetOrderRequest);
-                        _bodyData = _serializers.serialize(orderServiceGetOrderRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Order/GetOrder',
@@ -388,7 +388,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
         ///
         /// 
         Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderUpdateStatusPost({ 
-            OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest,
+            OrderServiceUpdateOrderRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -451,7 +451,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             dynamic _bodyData;
 
                         const _type = FullType(OrderServiceUpdateOrderRequest);
-                        _bodyData = _serializers.serialize(orderServiceUpdateOrderRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Order/UpdateStatus',

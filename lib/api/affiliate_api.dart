@@ -94,7 +94,7 @@ import 'package:built_value/serializer.dart';
         ///
         /// 
         Future<Response<String>> apiAffiliateGetShareLinkPost({ 
-            AffiliateServiceLinkRequest affiliateServiceLinkRequest,
+            AffiliateServiceLinkRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -157,7 +157,7 @@ import 'package:built_value/serializer.dart';
             dynamic _bodyData;
 
                         const _type = FullType(AffiliateServiceLinkRequest);
-                        _bodyData = _serializers.serialize(affiliateServiceLinkRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Affiliate/GetShareLink',

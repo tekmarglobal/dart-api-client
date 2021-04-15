@@ -1,87 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_country.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCountry> _$kilerCountrySerializer =
-    new _$KilerCountrySerializer();
-
-class _$KilerCountrySerializer implements StructuredSerializer<KilerCountry> {
-  @override
-  final Iterable<Type> types = const [KilerCountry, _$KilerCountry];
-  @override
-  final String wireName = 'KilerCountry';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCountry object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.city != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(object.city,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerCity)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerCountry deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCountryBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'city':
-          result.city.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCity)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCountry extends KilerCountry {
   @override
@@ -157,14 +81,17 @@ class KilerCountryBuilder
       _$this._city ??= new ListBuilder<KilerCity>();
   set city(ListBuilder<KilerCity> city) => _$this._city = city;
 
-  KilerCountryBuilder();
+  KilerCountryBuilder() {
+    KilerCountry._initializeBuilder(this);
+  }
 
   KilerCountryBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _optimisticLockField = _$v.optimisticLockField;
-      _city = _$v.city?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _optimisticLockField = $v.optimisticLockField;
+      _city = $v.city?.toBuilder();
       _$v = null;
     }
     return this;
@@ -172,9 +99,7 @@ class KilerCountryBuilder
 
   @override
   void replace(KilerCountry other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCountry;
   }
 

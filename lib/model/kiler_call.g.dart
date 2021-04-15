@@ -1,173 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_call.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCall> _$kilerCallSerializer = new _$KilerCallSerializer();
-
-class _$KilerCallSerializer implements StructuredSerializer<KilerCall> {
-  @override
-  final Iterable<Type> types = const [KilerCall, _$KilerCall];
-  @override
-  final String wireName = 'KilerCall';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCall object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.callDateTime != null) {
-      result
-        ..add('callDateTime')
-        ..add(serializers.serialize(object.callDateTime,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.duration != null) {
-      result
-        ..add('duration')
-        ..add(serializers.serialize(object.duration,
-            specifiedType: const FullType(int)));
-    }
-    if (object.extention != null) {
-      result
-        ..add('extention')
-        ..add(serializers.serialize(object.extention,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.direction != null) {
-      result
-        ..add('direction')
-        ..add(serializers.serialize(object.direction,
-            specifiedType: const FullType(int)));
-    }
-    if (object.status != null) {
-      result
-        ..add('status')
-        ..add(serializers.serialize(object.status,
-            specifiedType: const FullType(int)));
-    }
-    if (object.phoneNumber != null) {
-      result
-        ..add('phoneNumber')
-        ..add(serializers.serialize(object.phoneNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.recordingFile != null) {
-      result
-        ..add('recordingFile')
-        ..add(serializers.serialize(object.recordingFile,
-            specifiedType: const FullType(String)));
-    }
-    if (object.uniqId != null) {
-      result
-        ..add('uniqId')
-        ..add(serializers.serialize(object.uniqId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCall deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCallBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'callDateTime':
-          result.callDateTime = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'duration':
-          result.duration = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'extention':
-          result.extention = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'direction':
-          result.direction = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'status':
-          result.status = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'phoneNumber':
-          result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'recordingFile':
-          result.recordingFile = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'uniqId':
-          result.uniqId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCall extends KilerCall {
   @override
@@ -189,7 +27,7 @@ class _$KilerCall extends KilerCall {
   @override
   final String recordingFile;
   @override
-  final String uniqId;
+  final String uniqueId;
   @override
   final int optimisticLockField;
   @override
@@ -210,7 +48,7 @@ class _$KilerCall extends KilerCall {
       this.status,
       this.phoneNumber,
       this.recordingFile,
-      this.uniqId,
+      this.uniqueId,
       this.optimisticLockField,
       this.gcrecord,
       this.customerNavigation})
@@ -236,7 +74,7 @@ class _$KilerCall extends KilerCall {
         status == other.status &&
         phoneNumber == other.phoneNumber &&
         recordingFile == other.recordingFile &&
-        uniqId == other.uniqId &&
+        uniqueId == other.uniqueId &&
         optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
         customerNavigation == other.customerNavigation;
@@ -264,7 +102,7 @@ class _$KilerCall extends KilerCall {
                                 status.hashCode),
                             phoneNumber.hashCode),
                         recordingFile.hashCode),
-                    uniqId.hashCode),
+                    uniqueId.hashCode),
                 optimisticLockField.hashCode),
             gcrecord.hashCode),
         customerNavigation.hashCode));
@@ -282,7 +120,7 @@ class _$KilerCall extends KilerCall {
           ..add('status', status)
           ..add('phoneNumber', phoneNumber)
           ..add('recordingFile', recordingFile)
-          ..add('uniqId', uniqId)
+          ..add('uniqueId', uniqueId)
           ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
           ..add('customerNavigation', customerNavigation))
@@ -331,9 +169,9 @@ class KilerCallBuilder implements Builder<KilerCall, KilerCallBuilder> {
   set recordingFile(String recordingFile) =>
       _$this._recordingFile = recordingFile;
 
-  String _uniqId;
-  String get uniqId => _$this._uniqId;
-  set uniqId(String uniqId) => _$this._uniqId = uniqId;
+  String _uniqueId;
+  String get uniqueId => _$this._uniqueId;
+  set uniqueId(String uniqueId) => _$this._uniqueId = uniqueId;
 
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
@@ -350,23 +188,26 @@ class KilerCallBuilder implements Builder<KilerCall, KilerCallBuilder> {
   set customerNavigation(KilerCustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  KilerCallBuilder();
+  KilerCallBuilder() {
+    KilerCall._initializeBuilder(this);
+  }
 
   KilerCallBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _callDateTime = _$v.callDateTime;
-      _duration = _$v.duration;
-      _extention = _$v.extention;
-      _customer = _$v.customer;
-      _direction = _$v.direction;
-      _status = _$v.status;
-      _phoneNumber = _$v.phoneNumber;
-      _recordingFile = _$v.recordingFile;
-      _uniqId = _$v.uniqId;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _callDateTime = $v.callDateTime;
+      _duration = $v.duration;
+      _extention = $v.extention;
+      _customer = $v.customer;
+      _direction = $v.direction;
+      _status = $v.status;
+      _phoneNumber = $v.phoneNumber;
+      _recordingFile = $v.recordingFile;
+      _uniqueId = $v.uniqueId;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -374,9 +215,7 @@ class KilerCallBuilder implements Builder<KilerCall, KilerCallBuilder> {
 
   @override
   void replace(KilerCall other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCall;
   }
 
@@ -400,7 +239,7 @@ class KilerCallBuilder implements Builder<KilerCall, KilerCallBuilder> {
               status: status,
               phoneNumber: phoneNumber,
               recordingFile: recordingFile,
-              uniqId: uniqId,
+              uniqueId: uniqueId,
               optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
               customerNavigation: _customerNavigation?.build());

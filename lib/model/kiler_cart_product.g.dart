@@ -1,227 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_cart_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCartProduct> _$kilerCartProductSerializer =
-    new _$KilerCartProductSerializer();
-
-class _$KilerCartProductSerializer
-    implements StructuredSerializer<KilerCartProduct> {
-  @override
-  final Iterable<Type> types = const [KilerCartProduct, _$KilerCartProduct];
-  @override
-  final String wireName = 'KilerCartProduct';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCartProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.cart != null) {
-      result
-        ..add('cart')
-        ..add(serializers.serialize(object.cart,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regionProduct != null) {
-      result
-        ..add('regionProduct')
-        ..add(serializers.serialize(object.regionProduct,
-            specifiedType: const FullType(int)));
-    }
-    if (object.quantity != null) {
-      result
-        ..add('quantity')
-        ..add(serializers.serialize(object.quantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.listPrice != null) {
-      result
-        ..add('listPrice')
-        ..add(serializers.serialize(object.listPrice,
-            specifiedType: const FullType(double)));
-    }
-    if (object.price != null) {
-      result
-        ..add('price')
-        ..add(serializers.serialize(object.price,
-            specifiedType: const FullType(double)));
-    }
-    if (object.dateAdded != null) {
-      result
-        ..add('dateAdded')
-        ..add(serializers.serialize(object.dateAdded,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.dateRemoved != null) {
-      result
-        ..add('dateRemoved')
-        ..add(serializers.serialize(object.dateRemoved,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.amount != null) {
-      result
-        ..add('amount')
-        ..add(serializers.serialize(object.amount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.discountAmount != null) {
-      result
-        ..add('discountAmount')
-        ..add(serializers.serialize(object.discountAmount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.addedFrom != null) {
-      result
-        ..add('addedFrom')
-        ..add(serializers.serialize(object.addedFrom,
-            specifiedType: const FullType(int)));
-    }
-    if (object.removedFrom != null) {
-      result
-        ..add('removedFrom')
-        ..add(serializers.serialize(object.removedFrom,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productNotes != null) {
-      result
-        ..add('productNotes')
-        ..add(serializers.serialize(object.productNotes,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.addedFromNavigation != null) {
-      result
-        ..add('addedFromNavigation')
-        ..add(serializers.serialize(object.addedFromNavigation,
-            specifiedType: const FullType(KilerDevice)));
-    }
-    if (object.cartNavigation != null) {
-      result
-        ..add('cartNavigation')
-        ..add(serializers.serialize(object.cartNavigation,
-            specifiedType: const FullType(KilerCart)));
-    }
-    if (object.regionProductNavigation != null) {
-      result
-        ..add('regionProductNavigation')
-        ..add(serializers.serialize(object.regionProductNavigation,
-            specifiedType: const FullType(KilerRegionProduct)));
-    }
-    if (object.removedFromNavigation != null) {
-      result
-        ..add('removedFromNavigation')
-        ..add(serializers.serialize(object.removedFromNavigation,
-            specifiedType: const FullType(KilerDevice)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCartProduct deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCartProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'cart':
-          result.cart = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regionProduct':
-          result.regionProduct = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'quantity':
-          result.quantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'listPrice':
-          result.listPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'price':
-          result.price = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'dateAdded':
-          result.dateAdded = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'dateRemoved':
-          result.dateRemoved = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'amount':
-          result.amount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'discountAmount':
-          result.discountAmount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'addedFrom':
-          result.addedFrom = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'removedFrom':
-          result.removedFrom = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productNotes':
-          result.productNotes = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'addedFromNavigation':
-          result.addedFromNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerDevice)) as KilerDevice);
-          break;
-        case 'cartNavigation':
-          result.cartNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCart)) as KilerCart);
-          break;
-        case 'regionProductNavigation':
-          result.regionProductNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerRegionProduct))
-              as KilerRegionProduct);
-          break;
-        case 'removedFromNavigation':
-          result.removedFromNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerDevice)) as KilerDevice);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCartProduct extends KilerCartProduct {
   @override
@@ -475,28 +259,31 @@ class KilerCartProductBuilder
   set removedFromNavigation(KilerDeviceBuilder removedFromNavigation) =>
       _$this._removedFromNavigation = removedFromNavigation;
 
-  KilerCartProductBuilder();
+  KilerCartProductBuilder() {
+    KilerCartProduct._initializeBuilder(this);
+  }
 
   KilerCartProductBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _cart = _$v.cart;
-      _regionProduct = _$v.regionProduct;
-      _quantity = _$v.quantity;
-      _listPrice = _$v.listPrice;
-      _price = _$v.price;
-      _dateAdded = _$v.dateAdded;
-      _dateRemoved = _$v.dateRemoved;
-      _amount = _$v.amount;
-      _discountAmount = _$v.discountAmount;
-      _addedFrom = _$v.addedFrom;
-      _removedFrom = _$v.removedFrom;
-      _productNotes = _$v.productNotes;
-      _optimisticLockField = _$v.optimisticLockField;
-      _addedFromNavigation = _$v.addedFromNavigation?.toBuilder();
-      _cartNavigation = _$v.cartNavigation?.toBuilder();
-      _regionProductNavigation = _$v.regionProductNavigation?.toBuilder();
-      _removedFromNavigation = _$v.removedFromNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _cart = $v.cart;
+      _regionProduct = $v.regionProduct;
+      _quantity = $v.quantity;
+      _listPrice = $v.listPrice;
+      _price = $v.price;
+      _dateAdded = $v.dateAdded;
+      _dateRemoved = $v.dateRemoved;
+      _amount = $v.amount;
+      _discountAmount = $v.discountAmount;
+      _addedFrom = $v.addedFrom;
+      _removedFrom = $v.removedFrom;
+      _productNotes = $v.productNotes;
+      _optimisticLockField = $v.optimisticLockField;
+      _addedFromNavigation = $v.addedFromNavigation?.toBuilder();
+      _cartNavigation = $v.cartNavigation?.toBuilder();
+      _regionProductNavigation = $v.regionProductNavigation?.toBuilder();
+      _removedFromNavigation = $v.removedFromNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -504,9 +291,7 @@ class KilerCartProductBuilder
 
   @override
   void replace(KilerCartProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCartProduct;
   }
 

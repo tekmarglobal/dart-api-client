@@ -1,225 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_ticket.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerTicket> _$kilerTicketSerializer = new _$KilerTicketSerializer();
-
-class _$KilerTicketSerializer implements StructuredSerializer<KilerTicket> {
-  @override
-  final Iterable<Type> types = const [KilerTicket, _$KilerTicket];
-  @override
-  final String wireName = 'KilerTicket';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerTicket object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.note != null) {
-      result
-        ..add('note')
-        ..add(serializers.serialize(object.note,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.ticketCategory != null) {
-      result
-        ..add('ticketCategory')
-        ..add(serializers.serialize(object.ticketCategory,
-            specifiedType: const FullType(int)));
-    }
-    if (object.status != null) {
-      result
-        ..add('status')
-        ..add(serializers.serialize(object.status,
-            specifiedType: const FullType(int)));
-    }
-    if (object.phoneNumber != null) {
-      result
-        ..add('phoneNumber')
-        ..add(serializers.serialize(object.phoneNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.createdAt != null) {
-      result
-        ..add('createdAt')
-        ..add(serializers.serialize(object.createdAt,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType: const FullType(int)));
-    }
-    if (object.user != null) {
-      result
-        ..add('user')
-        ..add(serializers.serialize(object.user,
-            specifiedType: const FullType(int)));
-    }
-    if (object.action != null) {
-      result
-        ..add('action')
-        ..add(serializers.serialize(object.action,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.actionNavigation != null) {
-      result
-        ..add('actionNavigation')
-        ..add(serializers.serialize(object.actionNavigation,
-            specifiedType: const FullType(KilerTicketAction)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.orderNavigation != null) {
-      result
-        ..add('orderNavigation')
-        ..add(serializers.serialize(object.orderNavigation,
-            specifiedType: const FullType(KilerOrder)));
-    }
-    if (object.ticketCategoryNavigation != null) {
-      result
-        ..add('ticketCategoryNavigation')
-        ..add(serializers.serialize(object.ticketCategoryNavigation,
-            specifiedType: const FullType(KilerTicketCategory)));
-    }
-    return result;
-  }
-
-  @override
-  KilerTicket deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerTicketBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'note':
-          result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'ticketCategory':
-          result.ticketCategory = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'status':
-          result.status = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'phoneNumber':
-          result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'createdAt':
-          result.createdAt = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'order':
-          result.order = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'user':
-          result.user = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'action':
-          result.action = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'actionNavigation':
-          result.actionNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerTicketAction))
-              as KilerTicketAction);
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'orderNavigation':
-          result.orderNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerOrder)) as KilerOrder);
-          break;
-        case 'ticketCategoryNavigation':
-          result.ticketCategoryNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerTicketCategory))
-              as KilerTicketCategory);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerTicket extends KilerTicket {
   @override
@@ -471,28 +257,31 @@ class KilerTicketBuilder implements Builder<KilerTicket, KilerTicketBuilder> {
           KilerTicketCategoryBuilder ticketCategoryNavigation) =>
       _$this._ticketCategoryNavigation = ticketCategoryNavigation;
 
-  KilerTicketBuilder();
+  KilerTicketBuilder() {
+    KilerTicket._initializeBuilder(this);
+  }
 
   KilerTicketBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _note = _$v.note;
-      _customer = _$v.customer;
-      _active = _$v.active;
-      _ticketCategory = _$v.ticketCategory;
-      _status = _$v.status;
-      _phoneNumber = _$v.phoneNumber;
-      _createdAt = _$v.createdAt;
-      _order = _$v.order;
-      _user = _$v.user;
-      _action = _$v.action;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _actionNavigation = _$v.actionNavigation?.toBuilder();
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _orderNavigation = _$v.orderNavigation?.toBuilder();
-      _ticketCategoryNavigation = _$v.ticketCategoryNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _note = $v.note;
+      _customer = $v.customer;
+      _active = $v.active;
+      _ticketCategory = $v.ticketCategory;
+      _status = $v.status;
+      _phoneNumber = $v.phoneNumber;
+      _createdAt = $v.createdAt;
+      _order = $v.order;
+      _user = $v.user;
+      _action = $v.action;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _actionNavigation = $v.actionNavigation?.toBuilder();
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _orderNavigation = $v.orderNavigation?.toBuilder();
+      _ticketCategoryNavigation = $v.ticketCategoryNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -500,9 +289,7 @@ class KilerTicketBuilder implements Builder<KilerTicket, KilerTicketBuilder> {
 
   @override
   void replace(KilerTicket other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerTicket;
   }
 

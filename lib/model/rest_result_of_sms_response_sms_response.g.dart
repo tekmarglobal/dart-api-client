@@ -25,22 +25,26 @@ class _$RestResultOfSmsResponseSmsResponseSerializer
       Serializers serializers, RestResultOfSmsResponseSmsResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.success != null) {
+    Object value;
+    value = object.success;
+    if (value != null) {
       result
         ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
     }
-    if (object.message != null) {
+    value = object.message;
+    if (value != null) {
       result
         ..add('message')
-        ..add(serializers.serialize(object.message,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    if (object.data != null) {
+    value = object.data;
+    if (value != null) {
       result
         ..add('data')
-        ..add(serializers.serialize(object.data,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(SmsResponseSmsResponse)));
     }
     return result;
@@ -56,7 +60,7 @@ class _$RestResultOfSmsResponseSmsResponseSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final dynamic value = iterator.current;
+      final Object value = iterator.current;
       switch (key) {
         case 'success':
           result.success = serializers.deserialize(value,
@@ -154,10 +158,11 @@ class RestResultOfSmsResponseSmsResponseBuilder
   }
 
   RestResultOfSmsResponseSmsResponseBuilder get _$this {
-    if (_$v != null) {
-      _success = _$v.success;
-      _message = _$v.message;
-      _data = _$v.data?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _success = $v.success;
+      _message = $v.message;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -165,9 +170,7 @@ class RestResultOfSmsResponseSmsResponseBuilder
 
   @override
   void replace(RestResultOfSmsResponseSmsResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RestResultOfSmsResponseSmsResponse;
   }
 

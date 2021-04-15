@@ -1,84 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'rest_result_of_payment_service_payment_type_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RestResultOfPaymentServicePaymentTypeResponse>
-    _$restResultOfPaymentServicePaymentTypeResponseSerializer =
-    new _$RestResultOfPaymentServicePaymentTypeResponseSerializer();
-
-class _$RestResultOfPaymentServicePaymentTypeResponseSerializer
-    implements
-        StructuredSerializer<RestResultOfPaymentServicePaymentTypeResponse> {
-  @override
-  final Iterable<Type> types = const [
-    RestResultOfPaymentServicePaymentTypeResponse,
-    _$RestResultOfPaymentServicePaymentTypeResponse
-  ];
-  @override
-  final String wireName = 'RestResultOfPaymentServicePaymentTypeResponse';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      RestResultOfPaymentServicePaymentTypeResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.message != null) {
-      result
-        ..add('message')
-        ..add(serializers.serialize(object.message,
-            specifiedType: const FullType(String)));
-    }
-    if (object.data != null) {
-      result
-        ..add('data')
-        ..add(serializers.serialize(object.data,
-            specifiedType: const FullType(PaymentServicePaymentTypeResponse)));
-    }
-    return result;
-  }
-
-  @override
-  RestResultOfPaymentServicePaymentTypeResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RestResultOfPaymentServicePaymentTypeResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(PaymentServicePaymentTypeResponse))
-              as PaymentServicePaymentTypeResponse);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RestResultOfPaymentServicePaymentTypeResponse
     extends RestResultOfPaymentServicePaymentTypeResponse {
@@ -156,13 +83,16 @@ class RestResultOfPaymentServicePaymentTypeResponseBuilder
   set data(PaymentServicePaymentTypeResponseBuilder data) =>
       _$this._data = data;
 
-  RestResultOfPaymentServicePaymentTypeResponseBuilder();
+  RestResultOfPaymentServicePaymentTypeResponseBuilder() {
+    RestResultOfPaymentServicePaymentTypeResponse._initializeBuilder(this);
+  }
 
   RestResultOfPaymentServicePaymentTypeResponseBuilder get _$this {
-    if (_$v != null) {
-      _success = _$v.success;
-      _message = _$v.message;
-      _data = _$v.data?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _success = $v.success;
+      _message = $v.message;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -170,9 +100,7 @@ class RestResultOfPaymentServicePaymentTypeResponseBuilder
 
   @override
   void replace(RestResultOfPaymentServicePaymentTypeResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RestResultOfPaymentServicePaymentTypeResponse;
   }
 

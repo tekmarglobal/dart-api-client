@@ -106,7 +106,7 @@ import 'package:openapi/model/rest_result_of_system_object.dart';
         ///
         /// 
         Future<Response<RestResultOfAccountServiceLoginResponse>> apiAccountLoginPost({ 
-            AccountServiceLoginRequest accountServiceLoginRequest,
+            AccountServiceLoginRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -169,7 +169,7 @@ import 'package:openapi/model/rest_result_of_system_object.dart';
             dynamic _bodyData;
 
                         const _type = FullType(AccountServiceLoginRequest);
-                        _bodyData = _serializers.serialize(accountServiceLoginRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Account/login',

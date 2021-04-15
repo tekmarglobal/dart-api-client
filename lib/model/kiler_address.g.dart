@@ -1,341 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_address.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerAddress> _$kilerAddressSerializer =
-    new _$KilerAddressSerializer();
-
-class _$KilerAddressSerializer implements StructuredSerializer<KilerAddress> {
-  @override
-  final Iterable<Type> types = const [KilerAddress, _$KilerAddress];
-  @override
-  final String wireName = 'KilerAddress';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerAddress object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.neighborhood != null) {
-      result
-        ..add('neighborhood')
-        ..add(serializers.serialize(object.neighborhood,
-            specifiedType: const FullType(int)));
-    }
-    if (object.fullAddress != null) {
-      result
-        ..add('fullAddress')
-        ..add(serializers.serialize(object.fullAddress,
-            specifiedType: const FullType(String)));
-    }
-    if (object.street != null) {
-      result
-        ..add('street')
-        ..add(serializers.serialize(object.street,
-            specifiedType: const FullType(String)));
-    }
-    if (object.building != null) {
-      result
-        ..add('building')
-        ..add(serializers.serialize(object.building,
-            specifiedType: const FullType(String)));
-    }
-    if (object.floor != null) {
-      result
-        ..add('floor')
-        ..add(serializers.serialize(object.floor,
-            specifiedType: const FullType(String)));
-    }
-    if (object.door != null) {
-      result
-        ..add('door')
-        ..add(serializers.serialize(object.door,
-            specifiedType: const FullType(String)));
-    }
-    if (object.postalCode != null) {
-      result
-        ..add('postalCode')
-        ..add(serializers.serialize(object.postalCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerName != null) {
-      result
-        ..add('customerName')
-        ..add(serializers.serialize(object.customerName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerSurname != null) {
-      result
-        ..add('customerSurname')
-        ..add(serializers.serialize(object.customerSurname,
-            specifiedType: const FullType(String)));
-    }
-    if (object.companyName != null) {
-      result
-        ..add('companyName')
-        ..add(serializers.serialize(object.companyName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.taxOffice != null) {
-      result
-        ..add('taxOffice')
-        ..add(serializers.serialize(object.taxOffice,
-            specifiedType: const FullType(String)));
-    }
-    if (object.taxNumber != null) {
-      result
-        ..add('taxNumber')
-        ..add(serializers.serialize(object.taxNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.longitude != null) {
-      result
-        ..add('longitude')
-        ..add(serializers.serialize(object.longitude,
-            specifiedType: const FullType(double)));
-    }
-    if (object.latitude != null) {
-      result
-        ..add('latitude')
-        ..add(serializers.serialize(object.latitude,
-            specifiedType: const FullType(double)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.isindividual != null) {
-      result
-        ..add('isindividual')
-        ..add(serializers.serialize(object.isindividual,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.phoneNumber != null) {
-      result
-        ..add('phoneNumber')
-        ..add(serializers.serialize(object.phoneNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.neighborhoodNavigation != null) {
-      result
-        ..add('neighborhoodNavigation')
-        ..add(serializers.serialize(object.neighborhoodNavigation,
-            specifiedType: const FullType(KilerNeighborhood)));
-    }
-    if (object.customerDefaultAddressNavigation != null) {
-      result
-        ..add('customerDefaultAddressNavigation')
-        ..add(serializers.serialize(object.customerDefaultAddressNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomer)])));
-    }
-    if (object.customerInvoiceAddressNavigation != null) {
-      result
-        ..add('customerInvoiceAddressNavigation')
-        ..add(serializers.serialize(object.customerInvoiceAddressNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomer)])));
-    }
-    if (object.orderBillingAddressNavigation != null) {
-      result
-        ..add('orderBillingAddressNavigation')
-        ..add(serializers.serialize(object.orderBillingAddressNavigation,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    if (object.orderDeliveryAddressNavigation != null) {
-      result
-        ..add('orderDeliveryAddressNavigation')
-        ..add(serializers.serialize(object.orderDeliveryAddressNavigation,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerAddress deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerAddressBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'neighborhood':
-          result.neighborhood = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'fullAddress':
-          result.fullAddress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'street':
-          result.street = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'building':
-          result.building = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'floor':
-          result.floor = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'door':
-          result.door = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'postalCode':
-          result.postalCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerName':
-          result.customerName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerSurname':
-          result.customerSurname = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'companyName':
-          result.companyName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'taxOffice':
-          result.taxOffice = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'taxNumber':
-          result.taxNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'longitude':
-          result.longitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'latitude':
-          result.latitude = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'isindividual':
-          result.isindividual = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'phoneNumber':
-          result.phoneNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'neighborhoodNavigation':
-          result.neighborhoodNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerNeighborhood))
-              as KilerNeighborhood);
-          break;
-        case 'customerDefaultAddressNavigation':
-          result.customerDefaultAddressNavigation.replace(
-              serializers.deserialize(value,
-                      specifiedType: const FullType(
-                          BuiltList, const [const FullType(KilerCustomer)]))
-                  as BuiltList<Object>);
-          break;
-        case 'customerInvoiceAddressNavigation':
-          result.customerInvoiceAddressNavigation.replace(
-              serializers.deserialize(value,
-                      specifiedType: const FullType(
-                          BuiltList, const [const FullType(KilerCustomer)]))
-                  as BuiltList<Object>);
-          break;
-        case 'orderBillingAddressNavigation':
-          result.orderBillingAddressNavigation.replace(serializers.deserialize(
-                  value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-        case 'orderDeliveryAddressNavigation':
-          result.orderDeliveryAddressNavigation.replace(serializers.deserialize(
-                  value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerAddress extends KilerAddress {
   @override
@@ -690,42 +360,45 @@ class KilerAddressBuilder
           ListBuilder<KilerOrder> orderDeliveryAddressNavigation) =>
       _$this._orderDeliveryAddressNavigation = orderDeliveryAddressNavigation;
 
-  KilerAddressBuilder();
+  KilerAddressBuilder() {
+    KilerAddress._initializeBuilder(this);
+  }
 
   KilerAddressBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _customer = _$v.customer;
-      _active = _$v.active;
-      _neighborhood = _$v.neighborhood;
-      _fullAddress = _$v.fullAddress;
-      _street = _$v.street;
-      _building = _$v.building;
-      _floor = _$v.floor;
-      _door = _$v.door;
-      _postalCode = _$v.postalCode;
-      _description = _$v.description;
-      _customerName = _$v.customerName;
-      _customerSurname = _$v.customerSurname;
-      _companyName = _$v.companyName;
-      _taxOffice = _$v.taxOffice;
-      _taxNumber = _$v.taxNumber;
-      _longitude = _$v.longitude;
-      _latitude = _$v.latitude;
-      _optimisticLockField = _$v.optimisticLockField;
-      _isindividual = _$v.isindividual;
-      _phoneNumber = _$v.phoneNumber;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _neighborhoodNavigation = _$v.neighborhoodNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _customer = $v.customer;
+      _active = $v.active;
+      _neighborhood = $v.neighborhood;
+      _fullAddress = $v.fullAddress;
+      _street = $v.street;
+      _building = $v.building;
+      _floor = $v.floor;
+      _door = $v.door;
+      _postalCode = $v.postalCode;
+      _description = $v.description;
+      _customerName = $v.customerName;
+      _customerSurname = $v.customerSurname;
+      _companyName = $v.companyName;
+      _taxOffice = $v.taxOffice;
+      _taxNumber = $v.taxNumber;
+      _longitude = $v.longitude;
+      _latitude = $v.latitude;
+      _optimisticLockField = $v.optimisticLockField;
+      _isindividual = $v.isindividual;
+      _phoneNumber = $v.phoneNumber;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _neighborhoodNavigation = $v.neighborhoodNavigation?.toBuilder();
       _customerDefaultAddressNavigation =
-          _$v.customerDefaultAddressNavigation?.toBuilder();
+          $v.customerDefaultAddressNavigation?.toBuilder();
       _customerInvoiceAddressNavigation =
-          _$v.customerInvoiceAddressNavigation?.toBuilder();
+          $v.customerInvoiceAddressNavigation?.toBuilder();
       _orderBillingAddressNavigation =
-          _$v.orderBillingAddressNavigation?.toBuilder();
+          $v.orderBillingAddressNavigation?.toBuilder();
       _orderDeliveryAddressNavigation =
-          _$v.orderDeliveryAddressNavigation?.toBuilder();
+          $v.orderDeliveryAddressNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -733,9 +406,7 @@ class KilerAddressBuilder
 
   @override
   void replace(KilerAddress other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerAddress;
   }
 

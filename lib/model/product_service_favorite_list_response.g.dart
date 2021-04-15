@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'product_service_favorite_list_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<ProductServiceFavoriteListResponse>
-    _$productServiceFavoriteListResponseSerializer =
-    new _$ProductServiceFavoriteListResponseSerializer();
-
-class _$ProductServiceFavoriteListResponseSerializer
-    implements StructuredSerializer<ProductServiceFavoriteListResponse> {
-  @override
-  final Iterable<Type> types = const [
-    ProductServiceFavoriteListResponse,
-    _$ProductServiceFavoriteListResponse
-  ];
-  @override
-  final String wireName = 'ProductServiceFavoriteListResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, ProductServiceFavoriteListResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.products != null) {
-      result
-        ..add('products')
-        ..add(serializers.serialize(object.products,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(ProductServiceRProduct)])));
-    }
-    return result;
-  }
-
-  @override
-  ProductServiceFavoriteListResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new ProductServiceFavoriteListResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'products':
-          result.products.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(ProductServiceRProduct)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$ProductServiceFavoriteListResponse
     extends ProductServiceFavoriteListResponse {
@@ -113,11 +60,14 @@ class ProductServiceFavoriteListResponseBuilder
   set products(ListBuilder<ProductServiceRProduct> products) =>
       _$this._products = products;
 
-  ProductServiceFavoriteListResponseBuilder();
+  ProductServiceFavoriteListResponseBuilder() {
+    ProductServiceFavoriteListResponse._initializeBuilder(this);
+  }
 
   ProductServiceFavoriteListResponseBuilder get _$this {
-    if (_$v != null) {
-      _products = _$v.products?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _products = $v.products?.toBuilder();
       _$v = null;
     }
     return this;
@@ -125,9 +75,7 @@ class ProductServiceFavoriteListResponseBuilder
 
   @override
   void replace(ProductServiceFavoriteListResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ProductServiceFavoriteListResponse;
   }
 

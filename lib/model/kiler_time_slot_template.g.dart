@@ -1,140 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_time_slot_template.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerTimeSlotTemplate> _$kilerTimeSlotTemplateSerializer =
-    new _$KilerTimeSlotTemplateSerializer();
-
-class _$KilerTimeSlotTemplateSerializer
-    implements StructuredSerializer<KilerTimeSlotTemplate> {
-  @override
-  final Iterable<Type> types = const [
-    KilerTimeSlotTemplate,
-    _$KilerTimeSlotTemplate
-  ];
-  @override
-  final String wireName = 'KilerTimeSlotTemplate';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerTimeSlotTemplate object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.dayOfWeek != null) {
-      result
-        ..add('dayOfWeek')
-        ..add(serializers.serialize(object.dayOfWeek,
-            specifiedType: const FullType(int)));
-    }
-    if (object.start != null) {
-      result
-        ..add('start')
-        ..add(serializers.serialize(object.start,
-            specifiedType: const FullType(double)));
-    }
-    if (object.end != null) {
-      result
-        ..add('end')
-        ..add(serializers.serialize(object.end,
-            specifiedType: const FullType(double)));
-    }
-    if (object.quota != null) {
-      result
-        ..add('quota')
-        ..add(serializers.serialize(object.quota,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.fee != null) {
-      result
-        ..add('fee')
-        ..add(serializers.serialize(object.fee,
-            specifiedType: const FullType(double)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regionNavigation != null) {
-      result
-        ..add('regionNavigation')
-        ..add(serializers.serialize(object.regionNavigation,
-            specifiedType: const FullType(KilerRegion)));
-    }
-    return result;
-  }
-
-  @override
-  KilerTimeSlotTemplate deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerTimeSlotTemplateBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'dayOfWeek':
-          result.dayOfWeek = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'start':
-          result.start = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'end':
-          result.end = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'quota':
-          result.quota = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'fee':
-          result.fee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regionNavigation':
-          result.regionNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerRegion)) as KilerRegion);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerTimeSlotTemplate extends KilerTimeSlotTemplate {
   @override
@@ -273,19 +144,22 @@ class KilerTimeSlotTemplateBuilder
   set regionNavigation(KilerRegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
-  KilerTimeSlotTemplateBuilder();
+  KilerTimeSlotTemplateBuilder() {
+    KilerTimeSlotTemplate._initializeBuilder(this);
+  }
 
   KilerTimeSlotTemplateBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _dayOfWeek = _$v.dayOfWeek;
-      _start = _$v.start;
-      _end = _$v.end;
-      _quota = _$v.quota;
-      _region = _$v.region;
-      _fee = _$v.fee;
-      _optimisticLockField = _$v.optimisticLockField;
-      _regionNavigation = _$v.regionNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _dayOfWeek = $v.dayOfWeek;
+      _start = $v.start;
+      _end = $v.end;
+      _quota = $v.quota;
+      _region = $v.region;
+      _fee = $v.fee;
+      _optimisticLockField = $v.optimisticLockField;
+      _regionNavigation = $v.regionNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -293,9 +167,7 @@ class KilerTimeSlotTemplateBuilder
 
   @override
   void replace(KilerTimeSlotTemplate other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerTimeSlotTemplate;
   }
 

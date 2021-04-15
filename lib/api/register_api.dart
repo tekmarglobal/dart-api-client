@@ -23,7 +23,7 @@ import 'package:openapi/model/rest_result_of_register_service_sms_response.dart'
         ///
         /// 
         Future<Response<RestResultOfRegisterServiceSmsResponse>> apiRegisterSendSmsPost({ 
-            RegisterServiceSmsRequest registerServiceSmsRequest,
+            RegisterServiceSmsRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -86,7 +86,7 @@ import 'package:openapi/model/rest_result_of_register_service_sms_response.dart'
             dynamic _bodyData;
 
                         const _type = FullType(RegisterServiceSmsRequest);
-                        _bodyData = _serializers.serialize(registerServiceSmsRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Register/SendSms',
@@ -119,7 +119,7 @@ import 'package:openapi/model/rest_result_of_register_service_sms_response.dart'
         ///
         /// 
         Future<Response<RestResultOfRegisterServiceLoginResponse>> apiRegisterVerifySmsPost({ 
-            RegisterServiceVerifyRequest registerServiceVerifyRequest,
+            RegisterServiceVerifyRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -182,7 +182,7 @@ import 'package:openapi/model/rest_result_of_register_service_sms_response.dart'
             dynamic _bodyData;
 
                         const _type = FullType(RegisterServiceVerifyRequest);
-                        _bodyData = _serializers.serialize(registerServiceVerifyRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Register/VerifySms',

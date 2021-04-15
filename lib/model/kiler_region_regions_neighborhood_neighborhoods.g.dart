@@ -1,113 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_region_regions_neighborhood_neighborhoods.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerRegionRegionsNeighborhoodNeighborhoods>
-    _$kilerRegionRegionsNeighborhoodNeighborhoodsSerializer =
-    new _$KilerRegionRegionsNeighborhoodNeighborhoodsSerializer();
-
-class _$KilerRegionRegionsNeighborhoodNeighborhoodsSerializer
-    implements
-        StructuredSerializer<KilerRegionRegionsNeighborhoodNeighborhoods> {
-  @override
-  final Iterable<Type> types = const [
-    KilerRegionRegionsNeighborhoodNeighborhoods,
-    _$KilerRegionRegionsNeighborhoodNeighborhoods
-  ];
-  @override
-  final String wireName = 'KilerRegionRegionsNeighborhoodNeighborhoods';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      KilerRegionRegionsNeighborhoodNeighborhoods object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.neighborhoods != null) {
-      result
-        ..add('neighborhoods')
-        ..add(serializers.serialize(object.neighborhoods,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regions != null) {
-      result
-        ..add('regions')
-        ..add(serializers.serialize(object.regions,
-            specifiedType: const FullType(int)));
-    }
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.neighborhoodsNavigation != null) {
-      result
-        ..add('neighborhoodsNavigation')
-        ..add(serializers.serialize(object.neighborhoodsNavigation,
-            specifiedType: const FullType(KilerNeighborhood)));
-    }
-    if (object.regionsNavigation != null) {
-      result
-        ..add('regionsNavigation')
-        ..add(serializers.serialize(object.regionsNavigation,
-            specifiedType: const FullType(KilerRegion)));
-    }
-    return result;
-  }
-
-  @override
-  KilerRegionRegionsNeighborhoodNeighborhoods deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerRegionRegionsNeighborhoodNeighborhoodsBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'neighborhoods':
-          result.neighborhoods = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regions':
-          result.regions = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'neighborhoodsNavigation':
-          result.neighborhoodsNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerNeighborhood))
-              as KilerNeighborhood);
-          break;
-        case 'regionsNavigation':
-          result.regionsNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerRegion)) as KilerRegion);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerRegionRegionsNeighborhoodNeighborhoods
     extends KilerRegionRegionsNeighborhoodNeighborhoods {
@@ -224,16 +122,19 @@ class KilerRegionRegionsNeighborhoodNeighborhoodsBuilder
   set regionsNavigation(KilerRegionBuilder regionsNavigation) =>
       _$this._regionsNavigation = regionsNavigation;
 
-  KilerRegionRegionsNeighborhoodNeighborhoodsBuilder();
+  KilerRegionRegionsNeighborhoodNeighborhoodsBuilder() {
+    KilerRegionRegionsNeighborhoodNeighborhoods._initializeBuilder(this);
+  }
 
   KilerRegionRegionsNeighborhoodNeighborhoodsBuilder get _$this {
-    if (_$v != null) {
-      _neighborhoods = _$v.neighborhoods;
-      _regions = _$v.regions;
-      _oid = _$v.oid;
-      _optimisticLockField = _$v.optimisticLockField;
-      _neighborhoodsNavigation = _$v.neighborhoodsNavigation?.toBuilder();
-      _regionsNavigation = _$v.regionsNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _neighborhoods = $v.neighborhoods;
+      _regions = $v.regions;
+      _oid = $v.oid;
+      _optimisticLockField = $v.optimisticLockField;
+      _neighborhoodsNavigation = $v.neighborhoodsNavigation?.toBuilder();
+      _regionsNavigation = $v.regionsNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -241,9 +142,7 @@ class KilerRegionRegionsNeighborhoodNeighborhoodsBuilder
 
   @override
   void replace(KilerRegionRegionsNeighborhoodNeighborhoods other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerRegionRegionsNeighborhoodNeighborhoods;
   }
 

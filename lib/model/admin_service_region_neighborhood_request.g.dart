@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_region_neighborhood_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceRegionNeighborhoodRequest>
-    _$adminServiceRegionNeighborhoodRequestSerializer =
-    new _$AdminServiceRegionNeighborhoodRequestSerializer();
-
-class _$AdminServiceRegionNeighborhoodRequestSerializer
-    implements StructuredSerializer<AdminServiceRegionNeighborhoodRequest> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceRegionNeighborhoodRequest,
-    _$AdminServiceRegionNeighborhoodRequest
-  ];
-  @override
-  final String wireName = 'AdminServiceRegionNeighborhoodRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceRegionNeighborhoodRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceRegionNeighborhoodRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceRegionNeighborhoodRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceRegionNeighborhoodRequest
     extends AdminServiceRegionNeighborhoodRequest {
@@ -110,11 +60,14 @@ class AdminServiceRegionNeighborhoodRequestBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  AdminServiceRegionNeighborhoodRequestBuilder();
+  AdminServiceRegionNeighborhoodRequestBuilder() {
+    AdminServiceRegionNeighborhoodRequest._initializeBuilder(this);
+  }
 
   AdminServiceRegionNeighborhoodRequestBuilder get _$this {
-    if (_$v != null) {
-      _region = _$v.region;
+    final $v = _$v;
+    if ($v != null) {
+      _region = $v.region;
       _$v = null;
     }
     return this;
@@ -122,9 +75,7 @@ class AdminServiceRegionNeighborhoodRequestBuilder
 
   @override
   void replace(AdminServiceRegionNeighborhoodRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceRegionNeighborhoodRequest;
   }
 

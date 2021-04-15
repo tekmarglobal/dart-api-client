@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_create_cart_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceCreateCartRequest>
-    _$cartServiceCreateCartRequestSerializer =
-    new _$CartServiceCreateCartRequestSerializer();
-
-class _$CartServiceCreateCartRequestSerializer
-    implements StructuredSerializer<CartServiceCreateCartRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceCreateCartRequest,
-    _$CartServiceCreateCartRequest
-  ];
-  @override
-  final String wireName = 'CartServiceCreateCartRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceCreateCartRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.neighborhoodId != null) {
-      result
-        ..add('neighborhoodId')
-        ..add(serializers.serialize(object.neighborhoodId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceCreateCartRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceCreateCartRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'neighborhoodId':
-          result.neighborhoodId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceCreateCartRequest extends CartServiceCreateCartRequest {
   @override
@@ -107,11 +57,14 @@ class CartServiceCreateCartRequestBuilder
   set neighborhoodId(int neighborhoodId) =>
       _$this._neighborhoodId = neighborhoodId;
 
-  CartServiceCreateCartRequestBuilder();
+  CartServiceCreateCartRequestBuilder() {
+    CartServiceCreateCartRequest._initializeBuilder(this);
+  }
 
   CartServiceCreateCartRequestBuilder get _$this {
-    if (_$v != null) {
-      _neighborhoodId = _$v.neighborhoodId;
+    final $v = _$v;
+    if ($v != null) {
+      _neighborhoodId = $v.neighborhoodId;
       _$v = null;
     }
     return this;
@@ -119,9 +72,7 @@ class CartServiceCreateCartRequestBuilder
 
   @override
   void replace(CartServiceCreateCartRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceCreateCartRequest;
   }
 

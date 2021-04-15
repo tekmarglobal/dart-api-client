@@ -1,142 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_region_product.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerRegionProduct> _$kilerRegionProductSerializer =
-    new _$KilerRegionProductSerializer();
-
-class _$KilerRegionProductSerializer
-    implements StructuredSerializer<KilerRegionProduct> {
-  @override
-  final Iterable<Type> types = const [KilerRegionProduct, _$KilerRegionProduct];
-  @override
-  final String wireName = 'KilerRegionProduct';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerRegionProduct object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productNavigation != null) {
-      result
-        ..add('productNavigation')
-        ..add(serializers.serialize(object.productNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    if (object.regionNavigation != null) {
-      result
-        ..add('regionNavigation')
-        ..add(serializers.serialize(object.regionNavigation,
-            specifiedType: const FullType(KilerRegion)));
-    }
-    if (object.cartProduct != null) {
-      result
-        ..add('cartProduct')
-        ..add(serializers.serialize(object.cartProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCartProduct)])));
-    }
-    if (object.productPrice != null) {
-      result
-        ..add('productPrice')
-        ..add(serializers.serialize(object.productPrice,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProductPrice)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerRegionProduct deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerRegionProductBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'product':
-          result.product = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productNavigation':
-          result.productNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-        case 'regionNavigation':
-          result.regionNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerRegion)) as KilerRegion);
-          break;
-        case 'cartProduct':
-          result.cartProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCartProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'productPrice':
-          result.productPrice.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerProductPrice)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerRegionProduct extends KilerRegionProduct {
   @override
@@ -281,19 +150,22 @@ class KilerRegionProductBuilder
   set productPrice(ListBuilder<KilerProductPrice> productPrice) =>
       _$this._productPrice = productPrice;
 
-  KilerRegionProductBuilder();
+  KilerRegionProductBuilder() {
+    KilerRegionProduct._initializeBuilder(this);
+  }
 
   KilerRegionProductBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _product = _$v.product;
-      _region = _$v.region;
-      _active = _$v.active;
-      _optimisticLockField = _$v.optimisticLockField;
-      _productNavigation = _$v.productNavigation?.toBuilder();
-      _regionNavigation = _$v.regionNavigation?.toBuilder();
-      _cartProduct = _$v.cartProduct?.toBuilder();
-      _productPrice = _$v.productPrice?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _product = $v.product;
+      _region = $v.region;
+      _active = $v.active;
+      _optimisticLockField = $v.optimisticLockField;
+      _productNavigation = $v.productNavigation?.toBuilder();
+      _regionNavigation = $v.regionNavigation?.toBuilder();
+      _cartProduct = $v.cartProduct?.toBuilder();
+      _productPrice = $v.productPrice?.toBuilder();
       _$v = null;
     }
     return this;
@@ -301,9 +173,7 @@ class KilerRegionProductBuilder
 
   @override
   void replace(KilerRegionProduct other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerRegionProduct;
   }
 

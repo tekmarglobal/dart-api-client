@@ -1,170 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_device.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerDevice> _$kilerDeviceSerializer = new _$KilerDeviceSerializer();
-
-class _$KilerDeviceSerializer implements StructuredSerializer<KilerDevice> {
-  @override
-  final Iterable<Type> types = const [KilerDevice, _$KilerDevice];
-  @override
-  final String wireName = 'KilerDevice';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerDevice object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.platform != null) {
-      result
-        ..add('platform')
-        ..add(serializers.serialize(object.platform,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.deviceId != null) {
-      result
-        ..add('deviceId')
-        ..add(serializers.serialize(object.deviceId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.platformNavigation != null) {
-      result
-        ..add('platformNavigation')
-        ..add(serializers.serialize(object.platformNavigation,
-            specifiedType: const FullType(KilerPlatform)));
-    }
-    if (object.cart != null) {
-      result
-        ..add('cart')
-        ..add(serializers.serialize(object.cart,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerCart)])));
-    }
-    if (object.cartProductAddedFromNavigation != null) {
-      result
-        ..add('cartProductAddedFromNavigation')
-        ..add(serializers.serialize(object.cartProductAddedFromNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCartProduct)])));
-    }
-    if (object.cartProductRemovedFromNavigation != null) {
-      result
-        ..add('cartProductRemovedFromNavigation')
-        ..add(serializers.serialize(object.cartProductRemovedFromNavigation,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCartProduct)])));
-    }
-    if (object.deviceLogin != null) {
-      result
-        ..add('deviceLogin')
-        ..add(serializers.serialize(object.deviceLogin,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerDeviceLogin)])));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerDevice deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerDeviceBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'platform':
-          result.platform = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'deviceId':
-          result.deviceId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'platformNavigation':
-          result.platformNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerPlatform)) as KilerPlatform);
-          break;
-        case 'cart':
-          result.cart.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCart)]))
-              as BuiltList<Object>);
-          break;
-        case 'cartProductAddedFromNavigation':
-          result.cartProductAddedFromNavigation.replace(serializers.deserialize(
-                  value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCartProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'cartProductRemovedFromNavigation':
-          result.cartProductRemovedFromNavigation.replace(
-              serializers.deserialize(value,
-                      specifiedType: const FullType(
-                          BuiltList, const [const FullType(KilerCartProduct)]))
-                  as BuiltList<Object>);
-          break;
-        case 'deviceLogin':
-          result.deviceLogin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerDeviceLogin)]))
-              as BuiltList<Object>);
-          break;
-        case 'order':
-          result.order.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerDevice extends KilerDevice {
   @override
@@ -340,23 +181,26 @@ class KilerDeviceBuilder implements Builder<KilerDevice, KilerDeviceBuilder> {
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerDeviceBuilder();
+  KilerDeviceBuilder() {
+    KilerDevice._initializeBuilder(this);
+  }
 
   KilerDeviceBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _platform = _$v.platform;
-      _optimisticLockField = _$v.optimisticLockField;
-      _deviceId = _$v.deviceId;
-      _platformNavigation = _$v.platformNavigation?.toBuilder();
-      _cart = _$v.cart?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _platform = $v.platform;
+      _optimisticLockField = $v.optimisticLockField;
+      _deviceId = $v.deviceId;
+      _platformNavigation = $v.platformNavigation?.toBuilder();
+      _cart = $v.cart?.toBuilder();
       _cartProductAddedFromNavigation =
-          _$v.cartProductAddedFromNavigation?.toBuilder();
+          $v.cartProductAddedFromNavigation?.toBuilder();
       _cartProductRemovedFromNavigation =
-          _$v.cartProductRemovedFromNavigation?.toBuilder();
-      _deviceLogin = _$v.deviceLogin?.toBuilder();
-      _order = _$v.order?.toBuilder();
+          $v.cartProductRemovedFromNavigation?.toBuilder();
+      _deviceLogin = $v.deviceLogin?.toBuilder();
+      _order = $v.order?.toBuilder();
       _$v = null;
     }
     return this;
@@ -364,9 +208,7 @@ class KilerDeviceBuilder implements Builder<KilerDevice, KilerDeviceBuilder> {
 
   @override
   void replace(KilerDevice other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerDevice;
   }
 

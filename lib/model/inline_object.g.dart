@@ -19,10 +19,12 @@ class _$InlineObjectSerializer implements StructuredSerializer<InlineObject> {
   Iterable<Object> serialize(Serializers serializers, InlineObject object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.file != null) {
+    Object value;
+    value = object.file;
+    if (value != null) {
       result
         ..add('file')
-        ..add(serializers.serialize(object.file,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(Uint8List)));
     }
     return result;
@@ -37,7 +39,7 @@ class _$InlineObjectSerializer implements StructuredSerializer<InlineObject> {
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final dynamic value = iterator.current;
+      final Object value = iterator.current;
       switch (key) {
         case 'file':
           result.file = serializers.deserialize(value,
@@ -95,8 +97,9 @@ class InlineObjectBuilder
   InlineObjectBuilder();
 
   InlineObjectBuilder get _$this {
-    if (_$v != null) {
-      _file = _$v.file;
+    final $v = _$v;
+    if ($v != null) {
+      _file = $v.file;
       _$v = null;
     }
     return this;
@@ -104,9 +107,7 @@ class InlineObjectBuilder
 
   @override
   void replace(InlineObject other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$InlineObject;
   }
 

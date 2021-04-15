@@ -1,81 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_counties_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceCountiesResponse>
-    _$definitionServiceCountiesResponseSerializer =
-    new _$DefinitionServiceCountiesResponseSerializer();
-
-class _$DefinitionServiceCountiesResponseSerializer
-    implements StructuredSerializer<DefinitionServiceCountiesResponse> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceCountiesResponse,
-    _$DefinitionServiceCountiesResponse
-  ];
-  @override
-  final String wireName = 'DefinitionServiceCountiesResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceCountiesResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.cityName != null) {
-      result
-        ..add('cityName')
-        ..add(serializers.serialize(object.cityName,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceCountiesResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceCountiesResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'cityName':
-          result.cityName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceCountiesResponse
     extends DefinitionServiceCountiesResponse {
@@ -144,13 +74,16 @@ class DefinitionServiceCountiesResponseBuilder
   String get cityName => _$this._cityName;
   set cityName(String cityName) => _$this._cityName = cityName;
 
-  DefinitionServiceCountiesResponseBuilder();
+  DefinitionServiceCountiesResponseBuilder() {
+    DefinitionServiceCountiesResponse._initializeBuilder(this);
+  }
 
   DefinitionServiceCountiesResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _cityName = _$v.cityName;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
+      _cityName = $v.cityName;
       _$v = null;
     }
     return this;
@@ -158,9 +91,7 @@ class DefinitionServiceCountiesResponseBuilder
 
   @override
   void replace(DefinitionServiceCountiesResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceCountiesResponse;
   }
 

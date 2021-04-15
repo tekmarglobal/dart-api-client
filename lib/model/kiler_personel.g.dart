@@ -1,138 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_personel.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPersonel> _$kilerPersonelSerializer =
-    new _$KilerPersonelSerializer();
-
-class _$KilerPersonelSerializer implements StructuredSerializer<KilerPersonel> {
-  @override
-  final Iterable<Type> types = const [KilerPersonel, _$KilerPersonel];
-  @override
-  final String wireName = 'KilerPersonel';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerPersonel object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.surname != null) {
-      result
-        ..add('surname')
-        ..add(serializers.serialize(object.surname,
-            specifiedType: const FullType(String)));
-    }
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.email != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(object.email,
-            specifiedType: const FullType(String)));
-    }
-    if (object.userName != null) {
-      result
-        ..add('userName')
-        ..add(serializers.serialize(object.userName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.password != null) {
-      result
-        ..add('password')
-        ..add(serializers.serialize(object.password,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.personelDepartment != null) {
-      result
-        ..add('personelDepartment')
-        ..add(serializers.serialize(object.personelDepartment,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPersonelDepartment)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerPersonel deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPersonelBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'surname':
-          result.surname = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'userName':
-          result.userName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'password':
-          result.password = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'personelDepartment':
-          result.personelDepartment.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerPersonelDepartment)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPersonel extends KilerPersonel {
   @override
@@ -269,19 +142,22 @@ class KilerPersonelBuilder
           ListBuilder<KilerPersonelDepartment> personelDepartment) =>
       _$this._personelDepartment = personelDepartment;
 
-  KilerPersonelBuilder();
+  KilerPersonelBuilder() {
+    KilerPersonel._initializeBuilder(this);
+  }
 
   KilerPersonelBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _surname = _$v.surname;
-      _phone = _$v.phone;
-      _email = _$v.email;
-      _userName = _$v.userName;
-      _password = _$v.password;
-      _optimisticLockField = _$v.optimisticLockField;
-      _personelDepartment = _$v.personelDepartment?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _surname = $v.surname;
+      _phone = $v.phone;
+      _email = $v.email;
+      _userName = $v.userName;
+      _password = $v.password;
+      _optimisticLockField = $v.optimisticLockField;
+      _personelDepartment = $v.personelDepartment?.toBuilder();
       _$v = null;
     }
     return this;
@@ -289,9 +165,7 @@ class KilerPersonelBuilder
 
   @override
   void replace(KilerPersonel other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPersonel;
   }
 

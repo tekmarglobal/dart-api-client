@@ -1,136 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_product_image.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerProductImage> _$kilerProductImageSerializer =
-    new _$KilerProductImageSerializer();
-
-class _$KilerProductImageSerializer
-    implements StructuredSerializer<KilerProductImage> {
-  @override
-  final Iterable<Type> types = const [KilerProductImage, _$KilerProductImage];
-  @override
-  final String wireName = 'KilerProductImage';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerProductImage object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(int)));
-    }
-    if (object.image != null) {
-      result
-        ..add('image')
-        ..add(serializers.serialize(object.image,
-            specifiedType: const FullType(String)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.path != null) {
-      result
-        ..add('path')
-        ..add(serializers.serialize(object.path,
-            specifiedType: const FullType(String)));
-    }
-    if (object.imageType != null) {
-      result
-        ..add('imageType')
-        ..add(serializers.serialize(object.imageType,
-            specifiedType: const FullType(String)));
-    }
-    if (object.cdn != null) {
-      result
-        ..add('cdn')
-        ..add(serializers.serialize(object.cdn,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productNavigation != null) {
-      result
-        ..add('productNavigation')
-        ..add(serializers.serialize(object.productNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerProductImage deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerProductImageBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'product':
-          result.product = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'image':
-          result.image = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'path':
-          result.path = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'imageType':
-          result.imageType = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'cdn':
-          result.cdn = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productNavigation':
-          result.productNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerProductImage extends KilerProductImage {
   @override
@@ -268,19 +143,22 @@ class KilerProductImageBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerProductImageBuilder();
+  KilerProductImageBuilder() {
+    KilerProductImage._initializeBuilder(this);
+  }
 
   KilerProductImageBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _product = _$v.product;
-      _image = _$v.image;
-      _active = _$v.active;
-      _path = _$v.path;
-      _imageType = _$v.imageType;
-      _cdn = _$v.cdn;
-      _optimisticLockField = _$v.optimisticLockField;
-      _productNavigation = _$v.productNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _product = $v.product;
+      _image = $v.image;
+      _active = $v.active;
+      _path = $v.path;
+      _imageType = $v.imageType;
+      _cdn = $v.cdn;
+      _optimisticLockField = $v.optimisticLockField;
+      _productNavigation = $v.productNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -288,9 +166,7 @@ class KilerProductImageBuilder
 
   @override
   void replace(KilerProductImage other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerProductImage;
   }
 

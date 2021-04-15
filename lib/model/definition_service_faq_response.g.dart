@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_faq_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceFaqResponse>
-    _$definitionServiceFaqResponseSerializer =
-    new _$DefinitionServiceFaqResponseSerializer();
-
-class _$DefinitionServiceFaqResponseSerializer
-    implements StructuredSerializer<DefinitionServiceFaqResponse> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceFaqResponse,
-    _$DefinitionServiceFaqResponse
-  ];
-  @override
-  final String wireName = 'DefinitionServiceFaqResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceFaqResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.content != null) {
-      result
-        ..add('content')
-        ..add(serializers.serialize(object.content,
-            specifiedType: const FullType(String)));
-    }
-    if (object.title != null) {
-      result
-        ..add('title')
-        ..add(serializers.serialize(object.title,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceFaqResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceFaqResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'content':
-          result.content = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'title':
-          result.title = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceFaqResponse extends DefinitionServiceFaqResponse {
   @override
@@ -124,12 +64,15 @@ class DefinitionServiceFaqResponseBuilder
   String get title => _$this._title;
   set title(String title) => _$this._title = title;
 
-  DefinitionServiceFaqResponseBuilder();
+  DefinitionServiceFaqResponseBuilder() {
+    DefinitionServiceFaqResponse._initializeBuilder(this);
+  }
 
   DefinitionServiceFaqResponseBuilder get _$this {
-    if (_$v != null) {
-      _content = _$v.content;
-      _title = _$v.title;
+    final $v = _$v;
+    if ($v != null) {
+      _content = $v.content;
+      _title = $v.title;
       _$v = null;
     }
     return this;
@@ -137,9 +80,7 @@ class DefinitionServiceFaqResponseBuilder
 
   @override
   void replace(DefinitionServiceFaqResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceFaqResponse;
   }
 

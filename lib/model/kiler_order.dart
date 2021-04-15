@@ -10,6 +10,7 @@ import 'package:openapi/model/kiler_survey.dart';
 import 'package:openapi/model/kiler_time_slot.dart';
 import 'package:openapi/model/kiler_order_status.dart';
 import 'package:openapi/model/kiler_address.dart';
+import 'package:openapi/model/kiler_olimpos_log.dart';
 import 'package:openapi/model/kiler_region.dart';
 import 'package:openapi/model/kiler_customer.dart';
 import 'package:openapi/model/kiler_cart.dart';
@@ -156,6 +157,10 @@ abstract class KilerOrder implements Built<KilerOrder, KilerOrderBuilder> {
     @nullable
     @BuiltValueField(wireName: r'timeSlotNavigation')
     KilerTimeSlot get timeSlotNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'olimposLog')
+    BuiltList<KilerOlimposLog> get olimposLog;
 
     @nullable
     @BuiltValueField(wireName: r'orderProduct')
@@ -392,6 +397,12 @@ class _$KilerOrderSerializer implements StructuredSerializer<KilerOrder> {
                 ..add(serializers.serialize(object.timeSlotNavigation,
                     specifiedType: const FullType(KilerTimeSlot)));
         }
+        if (object.olimposLog != null) {
+            result
+                ..add(r'olimposLog')
+                ..add(serializers.serialize(object.olimposLog,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerOlimposLog)])));
+        }
         if (object.orderProduct != null) {
             result
                 ..add(r'orderProduct')
@@ -561,6 +572,10 @@ class _$KilerOrderSerializer implements StructuredSerializer<KilerOrder> {
                 case r'timeSlotNavigation':
                     result.timeSlotNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerTimeSlot)) as KilerTimeSlot);
+                    break;
+                case r'olimposLog':
+                    result.olimposLog.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerOlimposLog)])) as BuiltList<KilerOlimposLog>);
                     break;
                 case r'orderProduct':
                     result.orderProduct.replace(serializers.deserialize(value,

@@ -55,7 +55,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiPaymentCreatePaymentPost**
-> RestResultOfPaymentServicePaymentResponse apiPaymentCreatePaymentPost(paymentServicePaymentRequest)
+> RestResultOfPaymentServicePaymentResponse apiPaymentCreatePaymentPost(body)
 
 
 
@@ -68,10 +68,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new PaymentApi();
-var paymentServicePaymentRequest = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest | 
+var body = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest | 
 
 try { 
-    var result = api_instance.apiPaymentCreatePaymentPost(paymentServicePaymentRequest);
+    var result = api_instance.apiPaymentCreatePaymentPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n');
@@ -82,7 +82,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
+ **body** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 

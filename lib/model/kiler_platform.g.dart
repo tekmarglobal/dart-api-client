@@ -1,123 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_platform.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPlatform> _$kilerPlatformSerializer =
-    new _$KilerPlatformSerializer();
-
-class _$KilerPlatformSerializer implements StructuredSerializer<KilerPlatform> {
-  @override
-  final Iterable<Type> types = const [KilerPlatform, _$KilerPlatform];
-  @override
-  final String wireName = 'KilerPlatform';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerPlatform object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.operatingSystem != null) {
-      result
-        ..add('operatingSystem')
-        ..add(serializers.serialize(object.operatingSystem,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.operatingSystemNavigation != null) {
-      result
-        ..add('operatingSystemNavigation')
-        ..add(serializers.serialize(object.operatingSystemNavigation,
-            specifiedType: const FullType(KilerOperatingSystem)));
-    }
-    if (object.customerLoginAttempt != null) {
-      result
-        ..add('customerLoginAttempt')
-        ..add(serializers.serialize(object.customerLoginAttempt,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomerLoginAttempt)])));
-    }
-    if (object.device != null) {
-      result
-        ..add('device')
-        ..add(serializers.serialize(object.device,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerDevice)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerPlatform deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPlatformBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'operatingSystem':
-          result.operatingSystem = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'operatingSystemNavigation':
-          result.operatingSystemNavigation.replace(serializers.deserialize(
-                  value,
-                  specifiedType: const FullType(KilerOperatingSystem))
-              as KilerOperatingSystem);
-          break;
-        case 'customerLoginAttempt':
-          result.customerLoginAttempt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerCustomerLoginAttempt)
-              ])) as BuiltList<Object>);
-          break;
-        case 'device':
-          result.device.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerDevice)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPlatform extends KilerPlatform {
   @override
@@ -238,17 +126,20 @@ class KilerPlatformBuilder
       _$this._device ??= new ListBuilder<KilerDevice>();
   set device(ListBuilder<KilerDevice> device) => _$this._device = device;
 
-  KilerPlatformBuilder();
+  KilerPlatformBuilder() {
+    KilerPlatform._initializeBuilder(this);
+  }
 
   KilerPlatformBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _operatingSystem = _$v.operatingSystem;
-      _optimisticLockField = _$v.optimisticLockField;
-      _operatingSystemNavigation = _$v.operatingSystemNavigation?.toBuilder();
-      _customerLoginAttempt = _$v.customerLoginAttempt?.toBuilder();
-      _device = _$v.device?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _operatingSystem = $v.operatingSystem;
+      _optimisticLockField = $v.optimisticLockField;
+      _operatingSystemNavigation = $v.operatingSystemNavigation?.toBuilder();
+      _customerLoginAttempt = $v.customerLoginAttempt?.toBuilder();
+      _device = $v.device?.toBuilder();
       _$v = null;
     }
     return this;
@@ -256,9 +147,7 @@ class KilerPlatformBuilder
 
   @override
   void replace(KilerPlatform other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPlatform;
   }
 

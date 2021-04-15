@@ -1,111 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_time_slots_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceTimeSlotsResponse>
-    _$cartServiceTimeSlotsResponseSerializer =
-    new _$CartServiceTimeSlotsResponseSerializer();
-
-class _$CartServiceTimeSlotsResponseSerializer
-    implements StructuredSerializer<CartServiceTimeSlotsResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceTimeSlotsResponse,
-    _$CartServiceTimeSlotsResponse
-  ];
-  @override
-  final String wireName = 'CartServiceTimeSlotsResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceTimeSlotsResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.start != null) {
-      result
-        ..add('start')
-        ..add(serializers.serialize(object.start,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.end != null) {
-      result
-        ..add('end')
-        ..add(serializers.serialize(object.end,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.quota != null) {
-      result
-        ..add('quota')
-        ..add(serializers.serialize(object.quota,
-            specifiedType: const FullType(int)));
-    }
-    if (object.isFree != null) {
-      result
-        ..add('isFree')
-        ..add(serializers.serialize(object.isFree,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.fee != null) {
-      result
-        ..add('fee')
-        ..add(serializers.serialize(object.fee,
-            specifiedType: const FullType(double)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceTimeSlotsResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceTimeSlotsResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'start':
-          result.start = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'end':
-          result.end = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'quota':
-          result.quota = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'isFree':
-          result.isFree = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'fee':
-          result.fee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
   @override
@@ -203,16 +103,19 @@ class CartServiceTimeSlotsResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
-  CartServiceTimeSlotsResponseBuilder();
+  CartServiceTimeSlotsResponseBuilder() {
+    CartServiceTimeSlotsResponse._initializeBuilder(this);
+  }
 
   CartServiceTimeSlotsResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _start = _$v.start;
-      _end = _$v.end;
-      _quota = _$v.quota;
-      _isFree = _$v.isFree;
-      _fee = _$v.fee;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _start = $v.start;
+      _end = $v.end;
+      _quota = $v.quota;
+      _isFree = $v.isFree;
+      _fee = $v.fee;
       _$v = null;
     }
     return this;
@@ -220,9 +123,7 @@ class CartServiceTimeSlotsResponseBuilder
 
   @override
   void replace(CartServiceTimeSlotsResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceTimeSlotsResponse;
   }
 

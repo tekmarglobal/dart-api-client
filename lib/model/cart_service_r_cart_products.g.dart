@@ -1,140 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_r_cart_products.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceRCartProducts> _$cartServiceRCartProductsSerializer =
-    new _$CartServiceRCartProductsSerializer();
-
-class _$CartServiceRCartProductsSerializer
-    implements StructuredSerializer<CartServiceRCartProducts> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceRCartProducts,
-    _$CartServiceRCartProducts
-  ];
-  @override
-  final String wireName = 'CartServiceRCartProducts';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceRCartProducts object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.regionProductId != null) {
-      result
-        ..add('regionProductId')
-        ..add(serializers.serialize(object.regionProductId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.quantity != null) {
-      result
-        ..add('quantity')
-        ..add(serializers.serialize(object.quantity,
-            specifiedType: const FullType(double)));
-    }
-    if (object.listPrice != null) {
-      result
-        ..add('listPrice')
-        ..add(serializers.serialize(object.listPrice,
-            specifiedType: const FullType(double)));
-    }
-    if (object.price != null) {
-      result
-        ..add('price')
-        ..add(serializers.serialize(object.price,
-            specifiedType: const FullType(double)));
-    }
-    if (object.amount != null) {
-      result
-        ..add('amount')
-        ..add(serializers.serialize(object.amount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.discountAmount != null) {
-      result
-        ..add('discountAmount')
-        ..add(serializers.serialize(object.discountAmount,
-            specifiedType: const FullType(double)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.unitId != null) {
-      result
-        ..add('unitId')
-        ..add(serializers.serialize(object.unitId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceRCartProducts deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceRCartProductsBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'regionProductId':
-          result.regionProductId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'quantity':
-          result.quantity = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'listPrice':
-          result.listPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'price':
-          result.price = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'amount':
-          result.amount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'discountAmount':
-          result.discountAmount = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'unitId':
-          result.unitId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceRCartProducts extends CartServiceRCartProducts {
   @override
@@ -275,19 +146,22 @@ class CartServiceRCartProductsBuilder
   int get unitId => _$this._unitId;
   set unitId(int unitId) => _$this._unitId = unitId;
 
-  CartServiceRCartProductsBuilder();
+  CartServiceRCartProductsBuilder() {
+    CartServiceRCartProducts._initializeBuilder(this);
+  }
 
   CartServiceRCartProductsBuilder get _$this {
-    if (_$v != null) {
-      _regionProductId = _$v.regionProductId;
-      _quantity = _$v.quantity;
-      _listPrice = _$v.listPrice;
-      _price = _$v.price;
-      _amount = _$v.amount;
-      _discountAmount = _$v.discountAmount;
-      _name = _$v.name;
-      _productId = _$v.productId;
-      _unitId = _$v.unitId;
+    final $v = _$v;
+    if ($v != null) {
+      _regionProductId = $v.regionProductId;
+      _quantity = $v.quantity;
+      _listPrice = $v.listPrice;
+      _price = $v.price;
+      _amount = $v.amount;
+      _discountAmount = $v.discountAmount;
+      _name = $v.name;
+      _productId = $v.productId;
+      _unitId = $v.unitId;
       _$v = null;
     }
     return this;
@@ -295,9 +169,7 @@ class CartServiceRCartProductsBuilder
 
   @override
   void replace(CartServiceRCartProducts other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceRCartProducts;
   }
 

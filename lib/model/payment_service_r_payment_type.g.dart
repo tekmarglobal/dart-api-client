@@ -1,70 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'payment_service_r_payment_type.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<PaymentServiceRPaymentType> _$paymentServiceRPaymentTypeSerializer =
-    new _$PaymentServiceRPaymentTypeSerializer();
-
-class _$PaymentServiceRPaymentTypeSerializer
-    implements StructuredSerializer<PaymentServiceRPaymentType> {
-  @override
-  final Iterable<Type> types = const [
-    PaymentServiceRPaymentType,
-    _$PaymentServiceRPaymentType
-  ];
-  @override
-  final String wireName = 'PaymentServiceRPaymentType';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, PaymentServiceRPaymentType object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  PaymentServiceRPaymentType deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new PaymentServiceRPaymentTypeBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$PaymentServiceRPaymentType extends PaymentServiceRPaymentType {
   @override
@@ -122,12 +63,15 @@ class PaymentServiceRPaymentTypeBuilder
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
 
-  PaymentServiceRPaymentTypeBuilder();
+  PaymentServiceRPaymentTypeBuilder() {
+    PaymentServiceRPaymentType._initializeBuilder(this);
+  }
 
   PaymentServiceRPaymentTypeBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
       _$v = null;
     }
     return this;
@@ -135,9 +79,7 @@ class PaymentServiceRPaymentTypeBuilder
 
   @override
   void replace(PaymentServiceRPaymentType other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaymentServiceRPaymentType;
   }
 

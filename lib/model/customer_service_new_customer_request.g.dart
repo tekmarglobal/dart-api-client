@@ -1,151 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_new_customer_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceNewCustomerRequest>
-    _$customerServiceNewCustomerRequestSerializer =
-    new _$CustomerServiceNewCustomerRequestSerializer();
-
-class _$CustomerServiceNewCustomerRequestSerializer
-    implements StructuredSerializer<CustomerServiceNewCustomerRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceNewCustomerRequest,
-    _$CustomerServiceNewCustomerRequest
-  ];
-  @override
-  final String wireName = 'CustomerServiceNewCustomerRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceNewCustomerRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.surname != null) {
-      result
-        ..add('surname')
-        ..add(serializers.serialize(object.surname,
-            specifiedType: const FullType(String)));
-    }
-    if (object.birthDate != null) {
-      result
-        ..add('birthDate')
-        ..add(serializers.serialize(object.birthDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.email != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(object.email,
-            specifiedType: const FullType(String)));
-    }
-    if (object.allowSms != null) {
-      result
-        ..add('allowSms')
-        ..add(serializers.serialize(object.allowSms,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.allowEmail != null) {
-      result
-        ..add('allowEmail')
-        ..add(serializers.serialize(object.allowEmail,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.gender != null) {
-      result
-        ..add('gender')
-        ..add(serializers.serialize(object.gender,
-            specifiedType: const FullType(int)));
-    }
-    if (object.allowCampaign != null) {
-      result
-        ..add('allowCampaign')
-        ..add(serializers.serialize(object.allowCampaign,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.identificationNumber != null) {
-      result
-        ..add('identificationNumber')
-        ..add(serializers.serialize(object.identificationNumber,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceNewCustomerRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceNewCustomerRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'surname':
-          result.surname = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'birthDate':
-          result.birthDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'allowSms':
-          result.allowSms = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'allowEmail':
-          result.allowEmail = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'gender':
-          result.gender = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'allowCampaign':
-          result.allowCampaign = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'identificationNumber':
-          result.identificationNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceNewCustomerRequest
     extends CustomerServiceNewCustomerRequest {
@@ -299,20 +159,23 @@ class CustomerServiceNewCustomerRequestBuilder
   set identificationNumber(String identificationNumber) =>
       _$this._identificationNumber = identificationNumber;
 
-  CustomerServiceNewCustomerRequestBuilder();
+  CustomerServiceNewCustomerRequestBuilder() {
+    CustomerServiceNewCustomerRequest._initializeBuilder(this);
+  }
 
   CustomerServiceNewCustomerRequestBuilder get _$this {
-    if (_$v != null) {
-      _name = _$v.name;
-      _surname = _$v.surname;
-      _birthDate = _$v.birthDate;
-      _phone = _$v.phone;
-      _email = _$v.email;
-      _allowSms = _$v.allowSms;
-      _allowEmail = _$v.allowEmail;
-      _gender = _$v.gender;
-      _allowCampaign = _$v.allowCampaign;
-      _identificationNumber = _$v.identificationNumber;
+    final $v = _$v;
+    if ($v != null) {
+      _name = $v.name;
+      _surname = $v.surname;
+      _birthDate = $v.birthDate;
+      _phone = $v.phone;
+      _email = $v.email;
+      _allowSms = $v.allowSms;
+      _allowEmail = $v.allowEmail;
+      _gender = $v.gender;
+      _allowCampaign = $v.allowCampaign;
+      _identificationNumber = $v.identificationNumber;
       _$v = null;
     }
     return this;
@@ -320,9 +183,7 @@ class CustomerServiceNewCustomerRequestBuilder
 
   @override
   void replace(CustomerServiceNewCustomerRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceNewCustomerRequest;
   }
 

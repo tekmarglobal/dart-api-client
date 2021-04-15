@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'account_service_login_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AccountServiceLoginRequest> _$accountServiceLoginRequestSerializer =
-    new _$AccountServiceLoginRequestSerializer();
-
-class _$AccountServiceLoginRequestSerializer
-    implements StructuredSerializer<AccountServiceLoginRequest> {
-  @override
-  final Iterable<Type> types = const [
-    AccountServiceLoginRequest,
-    _$AccountServiceLoginRequest
-  ];
-  @override
-  final String wireName = 'AccountServiceLoginRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AccountServiceLoginRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.sessionId != null) {
-      result
-        ..add('sessionId')
-        ..add(serializers.serialize(object.sessionId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.versionRequest != null) {
-      result
-        ..add('versionRequest')
-        ..add(serializers.serialize(object.versionRequest,
-            specifiedType: const FullType(AccountServiceVersionRequest)));
-    }
-    return result;
-  }
-
-  @override
-  AccountServiceLoginRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AccountServiceLoginRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'sessionId':
-          result.sessionId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'versionRequest':
-          result.versionRequest.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(AccountServiceVersionRequest))
-              as AccountServiceVersionRequest);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AccountServiceLoginRequest extends AccountServiceLoginRequest {
   @override
@@ -126,12 +66,15 @@ class AccountServiceLoginRequestBuilder
   set versionRequest(AccountServiceVersionRequestBuilder versionRequest) =>
       _$this._versionRequest = versionRequest;
 
-  AccountServiceLoginRequestBuilder();
+  AccountServiceLoginRequestBuilder() {
+    AccountServiceLoginRequest._initializeBuilder(this);
+  }
 
   AccountServiceLoginRequestBuilder get _$this {
-    if (_$v != null) {
-      _sessionId = _$v.sessionId;
-      _versionRequest = _$v.versionRequest?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _sessionId = $v.sessionId;
+      _versionRequest = $v.versionRequest?.toBuilder();
       _$v = null;
     }
     return this;
@@ -139,9 +82,7 @@ class AccountServiceLoginRequestBuilder
 
   @override
   void replace(AccountServiceLoginRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AccountServiceLoginRequest;
   }
 

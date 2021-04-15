@@ -1,120 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_brand.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerBrand> _$kilerBrandSerializer = new _$KilerBrandSerializer();
-
-class _$KilerBrandSerializer implements StructuredSerializer<KilerBrand> {
-  @override
-  final Iterable<Type> types = const [KilerBrand, _$KilerBrand];
-  @override
-  final String wireName = 'KilerBrand';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerBrand object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.manufacturer != null) {
-      result
-        ..add('manufacturer')
-        ..add(serializers.serialize(object.manufacturer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.manufacturerNavigation != null) {
-      result
-        ..add('manufacturerNavigation')
-        ..add(serializers.serialize(object.manufacturerNavigation,
-            specifiedType: const FullType(KilerManufacturer)));
-    }
-    if (object.brandManagerBrand != null) {
-      result
-        ..add('brandManagerBrand')
-        ..add(serializers.serialize(object.brandManagerBrand,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerBrandManagerBrand)])));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProduct)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerBrand deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerBrandBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'manufacturer':
-          result.manufacturer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'manufacturerNavigation':
-          result.manufacturerNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerManufacturer))
-              as KilerManufacturer);
-          break;
-        case 'brandManagerBrand':
-          result.brandManagerBrand.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerBrandManagerBrand)
-              ])) as BuiltList<Object>);
-          break;
-        case 'product':
-          result.product.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerProduct)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerBrand extends KilerBrand {
   @override
@@ -231,17 +122,20 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
       _$this._product ??= new ListBuilder<KilerProduct>();
   set product(ListBuilder<KilerProduct> product) => _$this._product = product;
 
-  KilerBrandBuilder();
+  KilerBrandBuilder() {
+    KilerBrand._initializeBuilder(this);
+  }
 
   KilerBrandBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _optimisticLockField = _$v.optimisticLockField;
-      _manufacturer = _$v.manufacturer;
-      _manufacturerNavigation = _$v.manufacturerNavigation?.toBuilder();
-      _brandManagerBrand = _$v.brandManagerBrand?.toBuilder();
-      _product = _$v.product?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _optimisticLockField = $v.optimisticLockField;
+      _manufacturer = $v.manufacturer;
+      _manufacturerNavigation = $v.manufacturerNavigation?.toBuilder();
+      _brandManagerBrand = $v.brandManagerBrand?.toBuilder();
+      _product = $v.product?.toBuilder();
       _$v = null;
     }
     return this;
@@ -249,9 +143,7 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
 
   @override
   void replace(KilerBrand other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerBrand;
   }
 

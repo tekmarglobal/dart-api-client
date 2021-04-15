@@ -1,249 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_cart.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCart> _$kilerCartSerializer = new _$KilerCartSerializer();
-
-class _$KilerCartSerializer implements StructuredSerializer<KilerCart> {
-  @override
-  final Iterable<Type> types = const [KilerCart, _$KilerCart];
-  @override
-  final String wireName = 'KilerCart';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCart object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.cartTotal != null) {
-      result
-        ..add('cartTotal')
-        ..add(serializers.serialize(object.cartTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.createdFrom != null) {
-      result
-        ..add('createdFrom')
-        ..add(serializers.serialize(object.createdFrom,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productDiscountsTotal != null) {
-      result
-        ..add('productDiscountsTotal')
-        ..add(serializers.serialize(object.productDiscountsTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.note != null) {
-      result
-        ..add('note')
-        ..add(serializers.serialize(object.note,
-            specifiedType: const FullType(String)));
-    }
-    if (object.bagAmount != null) {
-      result
-        ..add('bagAmount')
-        ..add(serializers.serialize(object.bagAmount,
-            specifiedType: const FullType(int)));
-    }
-    if (object.bagTotal != null) {
-      result
-        ..add('bagTotal')
-        ..add(serializers.serialize(object.bagTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.deleted != null) {
-      result
-        ..add('deleted')
-        ..add(serializers.serialize(object.deleted,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.estimatedFee != null) {
-      result
-        ..add('estimatedFee')
-        ..add(serializers.serialize(object.estimatedFee,
-            specifiedType: const FullType(double)));
-    }
-    if (object.dateDeleted != null) {
-      result
-        ..add('dateDeleted')
-        ..add(serializers.serialize(object.dateDeleted,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.dateCreated != null) {
-      result
-        ..add('dateCreated')
-        ..add(serializers.serialize(object.dateCreated,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.createdFromNavigation != null) {
-      result
-        ..add('createdFromNavigation')
-        ..add(serializers.serialize(object.createdFromNavigation,
-            specifiedType: const FullType(KilerDevice)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.regionNavigation != null) {
-      result
-        ..add('regionNavigation')
-        ..add(serializers.serialize(object.regionNavigation,
-            specifiedType: const FullType(KilerRegion)));
-    }
-    if (object.cartProduct != null) {
-      result
-        ..add('cartProduct')
-        ..add(serializers.serialize(object.cartProduct,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCartProduct)])));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerCart deserialize(Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCartBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'cartTotal':
-          result.cartTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'createdFrom':
-          result.createdFrom = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productDiscountsTotal':
-          result.productDiscountsTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'note':
-          result.note = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'bagAmount':
-          result.bagAmount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'bagTotal':
-          result.bagTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'deleted':
-          result.deleted = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'estimatedFee':
-          result.estimatedFee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'dateDeleted':
-          result.dateDeleted = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'dateCreated':
-          result.dateCreated = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'createdFromNavigation':
-          result.createdFromNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerDevice)) as KilerDevice);
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'regionNavigation':
-          result.regionNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerRegion)) as KilerRegion);
-          break;
-        case 'cartProduct':
-          result.cartProduct.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCartProduct)]))
-              as BuiltList<Object>);
-          break;
-        case 'order':
-          result.order.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCart extends KilerCart {
   @override
@@ -518,30 +280,33 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerCartBuilder();
+  KilerCartBuilder() {
+    KilerCart._initializeBuilder(this);
+  }
 
   KilerCartBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _customer = _$v.customer;
-      _region = _$v.region;
-      _cartTotal = _$v.cartTotal;
-      _createdFrom = _$v.createdFrom;
-      _productDiscountsTotal = _$v.productDiscountsTotal;
-      _note = _$v.note;
-      _bagAmount = _$v.bagAmount;
-      _bagTotal = _$v.bagTotal;
-      _active = _$v.active;
-      _deleted = _$v.deleted;
-      _optimisticLockField = _$v.optimisticLockField;
-      _estimatedFee = _$v.estimatedFee;
-      _dateDeleted = _$v.dateDeleted;
-      _dateCreated = _$v.dateCreated;
-      _createdFromNavigation = _$v.createdFromNavigation?.toBuilder();
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _regionNavigation = _$v.regionNavigation?.toBuilder();
-      _cartProduct = _$v.cartProduct?.toBuilder();
-      _order = _$v.order?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _customer = $v.customer;
+      _region = $v.region;
+      _cartTotal = $v.cartTotal;
+      _createdFrom = $v.createdFrom;
+      _productDiscountsTotal = $v.productDiscountsTotal;
+      _note = $v.note;
+      _bagAmount = $v.bagAmount;
+      _bagTotal = $v.bagTotal;
+      _active = $v.active;
+      _deleted = $v.deleted;
+      _optimisticLockField = $v.optimisticLockField;
+      _estimatedFee = $v.estimatedFee;
+      _dateDeleted = $v.dateDeleted;
+      _dateCreated = $v.dateCreated;
+      _createdFromNavigation = $v.createdFromNavigation?.toBuilder();
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _regionNavigation = $v.regionNavigation?.toBuilder();
+      _cartProduct = $v.cartProduct?.toBuilder();
+      _order = $v.order?.toBuilder();
       _$v = null;
     }
     return this;
@@ -549,9 +314,7 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
 
   @override
   void replace(KilerCart other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCart;
   }
 

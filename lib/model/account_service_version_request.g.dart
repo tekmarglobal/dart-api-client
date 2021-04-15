@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'account_service_version_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AccountServiceVersionRequest>
-    _$accountServiceVersionRequestSerializer =
-    new _$AccountServiceVersionRequestSerializer();
-
-class _$AccountServiceVersionRequestSerializer
-    implements StructuredSerializer<AccountServiceVersionRequest> {
-  @override
-  final Iterable<Type> types = const [
-    AccountServiceVersionRequest,
-    _$AccountServiceVersionRequest
-  ];
-  @override
-  final String wireName = 'AccountServiceVersionRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AccountServiceVersionRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.platform != null) {
-      result
-        ..add('platform')
-        ..add(serializers.serialize(object.platform,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  AccountServiceVersionRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AccountServiceVersionRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'platform':
-          result.platform = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AccountServiceVersionRequest extends AccountServiceVersionRequest {
   @override
@@ -124,12 +64,15 @@ class AccountServiceVersionRequestBuilder
   String get platform => _$this._platform;
   set platform(String platform) => _$this._platform = platform;
 
-  AccountServiceVersionRequestBuilder();
+  AccountServiceVersionRequestBuilder() {
+    AccountServiceVersionRequest._initializeBuilder(this);
+  }
 
   AccountServiceVersionRequestBuilder get _$this {
-    if (_$v != null) {
-      _code = _$v.code;
-      _platform = _$v.platform;
+    final $v = _$v;
+    if ($v != null) {
+      _code = $v.code;
+      _platform = $v.platform;
       _$v = null;
     }
     return this;
@@ -137,9 +80,7 @@ class AccountServiceVersionRequestBuilder
 
   @override
   void replace(AccountServiceVersionRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AccountServiceVersionRequest;
   }
 

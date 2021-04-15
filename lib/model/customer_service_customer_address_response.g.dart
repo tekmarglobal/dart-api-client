@@ -1,64 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_customer_address_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceCustomerAddressResponse>
-    _$customerServiceCustomerAddressResponseSerializer =
-    new _$CustomerServiceCustomerAddressResponseSerializer();
-
-class _$CustomerServiceCustomerAddressResponseSerializer
-    implements StructuredSerializer<CustomerServiceCustomerAddressResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceCustomerAddressResponse,
-    _$CustomerServiceCustomerAddressResponse
-  ];
-  @override
-  final String wireName = 'CustomerServiceCustomerAddressResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceCustomerAddressResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.address != null) {
-      result
-        ..add('address')
-        ..add(serializers.serialize(object.address,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CustomerServiceRAddress)])));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceCustomerAddressResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceCustomerAddressResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'address':
-          result.address.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CustomerServiceRAddress)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceCustomerAddressResponse
     extends CustomerServiceCustomerAddressResponse {
@@ -116,11 +63,14 @@ class CustomerServiceCustomerAddressResponseBuilder
   set address(ListBuilder<CustomerServiceRAddress> address) =>
       _$this._address = address;
 
-  CustomerServiceCustomerAddressResponseBuilder();
+  CustomerServiceCustomerAddressResponseBuilder() {
+    CustomerServiceCustomerAddressResponse._initializeBuilder(this);
+  }
 
   CustomerServiceCustomerAddressResponseBuilder get _$this {
-    if (_$v != null) {
-      _address = _$v.address?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _address = $v.address?.toBuilder();
       _$v = null;
     }
     return this;
@@ -128,9 +78,7 @@ class CustomerServiceCustomerAddressResponseBuilder
 
   @override
   void replace(CustomerServiceCustomerAddressResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceCustomerAddressResponse;
   }
 

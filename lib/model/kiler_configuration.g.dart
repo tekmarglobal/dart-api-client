@@ -1,198 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_configuration.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerConfiguration> _$kilerConfigurationSerializer =
-    new _$KilerConfigurationSerializer();
-
-class _$KilerConfigurationSerializer
-    implements StructuredSerializer<KilerConfiguration> {
-  @override
-  final Iterable<Type> types = const [KilerConfiguration, _$KilerConfiguration];
-  @override
-  final String wireName = 'KilerConfiguration';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerConfiguration object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.active != null) {
-      result
-        ..add('active')
-        ..add(serializers.serialize(object.active,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.s3keyId != null) {
-      result
-        ..add('s3keyId')
-        ..add(serializers.serialize(object.s3keyId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.s3keySecret != null) {
-      result
-        ..add('s3keySecret')
-        ..add(serializers.serialize(object.s3keySecret,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.defaultCategory != null) {
-      result
-        ..add('defaultCategory')
-        ..add(serializers.serialize(object.defaultCategory,
-            specifiedType: const FullType(int)));
-    }
-    if (object.bagProduct != null) {
-      result
-        ..add('bagProduct')
-        ..add(serializers.serialize(object.bagProduct,
-            specifiedType: const FullType(int)));
-    }
-    if (object.deliveryProduct != null) {
-      result
-        ..add('deliveryProduct')
-        ..add(serializers.serialize(object.deliveryProduct,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.timeZone != null) {
-      result
-        ..add('timeZone')
-        ..add(serializers.serialize(object.timeZone,
-            specifiedType: const FullType(int)));
-    }
-    if (object.affiliateLinkDomain != null) {
-      result
-        ..add('affiliateLinkDomain')
-        ..add(serializers.serialize(object.affiliateLinkDomain,
-            specifiedType: const FullType(String)));
-    }
-    if (object.bagProductNavigation != null) {
-      result
-        ..add('bagProductNavigation')
-        ..add(serializers.serialize(object.bagProductNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    if (object.defaultCategoryNavigation != null) {
-      result
-        ..add('defaultCategoryNavigation')
-        ..add(serializers.serialize(object.defaultCategoryNavigation,
-            specifiedType: const FullType(KilerCategory)));
-    }
-    if (object.deliveryProductNavigation != null) {
-      result
-        ..add('deliveryProductNavigation')
-        ..add(serializers.serialize(object.deliveryProductNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerConfiguration deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerConfigurationBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'active':
-          result.active = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 's3keyId':
-          result.s3keyId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 's3keySecret':
-          result.s3keySecret = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'defaultCategory':
-          result.defaultCategory = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'bagProduct':
-          result.bagProduct = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'deliveryProduct':
-          result.deliveryProduct = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'timeZone':
-          result.timeZone = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'affiliateLinkDomain':
-          result.affiliateLinkDomain = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'bagProductNavigation':
-          result.bagProductNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-        case 'defaultCategoryNavigation':
-          result.defaultCategoryNavigation.replace(serializers.deserialize(
-              value,
-              specifiedType: const FullType(KilerCategory)) as KilerCategory);
-          break;
-        case 'deliveryProductNavigation':
-          result.deliveryProductNavigation.replace(serializers.deserialize(
-              value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerConfiguration extends KilerConfiguration {
   @override
@@ -410,25 +223,28 @@ class KilerConfigurationBuilder
           KilerProductBuilder deliveryProductNavigation) =>
       _$this._deliveryProductNavigation = deliveryProductNavigation;
 
-  KilerConfigurationBuilder();
+  KilerConfigurationBuilder() {
+    KilerConfiguration._initializeBuilder(this);
+  }
 
   KilerConfigurationBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _active = _$v.active;
-      _s3keyId = _$v.s3keyId;
-      _s3keySecret = _$v.s3keySecret;
-      _optimisticLockField = _$v.optimisticLockField;
-      _defaultCategory = _$v.defaultCategory;
-      _bagProduct = _$v.bagProduct;
-      _deliveryProduct = _$v.deliveryProduct;
-      _gcrecord = _$v.gcrecord;
-      _timeZone = _$v.timeZone;
-      _affiliateLinkDomain = _$v.affiliateLinkDomain;
-      _bagProductNavigation = _$v.bagProductNavigation?.toBuilder();
-      _defaultCategoryNavigation = _$v.defaultCategoryNavigation?.toBuilder();
-      _deliveryProductNavigation = _$v.deliveryProductNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _active = $v.active;
+      _s3keyId = $v.s3keyId;
+      _s3keySecret = $v.s3keySecret;
+      _optimisticLockField = $v.optimisticLockField;
+      _defaultCategory = $v.defaultCategory;
+      _bagProduct = $v.bagProduct;
+      _deliveryProduct = $v.deliveryProduct;
+      _gcrecord = $v.gcrecord;
+      _timeZone = $v.timeZone;
+      _affiliateLinkDomain = $v.affiliateLinkDomain;
+      _bagProductNavigation = $v.bagProductNavigation?.toBuilder();
+      _defaultCategoryNavigation = $v.defaultCategoryNavigation?.toBuilder();
+      _deliveryProductNavigation = $v.deliveryProductNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -436,9 +252,7 @@ class KilerConfigurationBuilder
 
   @override
   void replace(KilerConfiguration other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerConfiguration;
   }
 

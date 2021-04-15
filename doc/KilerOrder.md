@@ -41,6 +41,7 @@ Name | Type | Description | Notes
 **paymentTypeNavigation** | [**KilerPaymentType**](KilerPaymentType.md) |  | [optional] 
 **regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] 
 **timeSlotNavigation** | [**KilerTimeSlot**](KilerTimeSlot.md) |  | [optional] 
+**olimposLog** | [**BuiltList<KilerOlimposLog>**](KilerOlimposLog.md) |  | [optional] 
 **orderProduct** | [**BuiltList<KilerOrderProduct>**](KilerOrderProduct.md) |  | [optional] 
 **payment** | [**BuiltList<KilerPayment>**](KilerPayment.md) |  | [optional] 
 **survey** | [**BuiltList<KilerSurvey>**](KilerSurvey.md) |  | [optional] 

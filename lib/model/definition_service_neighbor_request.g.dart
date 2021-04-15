@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_neighbor_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceNeighborRequest>
-    _$definitionServiceNeighborRequestSerializer =
-    new _$DefinitionServiceNeighborRequestSerializer();
-
-class _$DefinitionServiceNeighborRequestSerializer
-    implements StructuredSerializer<DefinitionServiceNeighborRequest> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceNeighborRequest,
-    _$DefinitionServiceNeighborRequest
-  ];
-  @override
-  final String wireName = 'DefinitionServiceNeighborRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceNeighborRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.county != null) {
-      result
-        ..add('county')
-        ..add(serializers.serialize(object.county,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceNeighborRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceNeighborRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'county':
-          result.county = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceNeighborRequest
     extends DefinitionServiceNeighborRequest {
@@ -106,11 +56,14 @@ class DefinitionServiceNeighborRequestBuilder
   int get county => _$this._county;
   set county(int county) => _$this._county = county;
 
-  DefinitionServiceNeighborRequestBuilder();
+  DefinitionServiceNeighborRequestBuilder() {
+    DefinitionServiceNeighborRequest._initializeBuilder(this);
+  }
 
   DefinitionServiceNeighborRequestBuilder get _$this {
-    if (_$v != null) {
-      _county = _$v.county;
+    final $v = _$v;
+    if ($v != null) {
+      _county = $v.county;
       _$v = null;
     }
     return this;
@@ -118,9 +71,7 @@ class DefinitionServiceNeighborRequestBuilder
 
   @override
   void replace(DefinitionServiceNeighborRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceNeighborRequest;
   }
 

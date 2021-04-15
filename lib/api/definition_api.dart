@@ -204,7 +204,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
         ///
         /// 
         Future<Response<RestResultOfListOfDefinitionServiceCountiesResponse>> apiDefinitionCountiesPost({ 
-            DefinitionServiceCountiesRequest definitionServiceCountiesRequest,
+            DefinitionServiceCountiesRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -267,7 +267,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
             dynamic _bodyData;
 
                         const _type = FullType(DefinitionServiceCountiesRequest);
-                        _bodyData = _serializers.serialize(definitionServiceCountiesRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Definition/Counties',
@@ -472,7 +472,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
         ///
         /// 
         Future<Response<RestResultOfListOfDefinitionServiceNeighborResponse>> apiDefinitionNeighborhoodPost({ 
-            DefinitionServiceNeighborRequest definitionServiceNeighborRequest,
+            DefinitionServiceNeighborRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -535,7 +535,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
             dynamic _bodyData;
 
                         const _type = FullType(DefinitionServiceNeighborRequest);
-                        _bodyData = _serializers.serialize(definitionServiceNeighborRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Definition/Neighborhood',
@@ -568,7 +568,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
         ///
         /// 
         Future<Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> apiDefinitionUpdateAgreementLogPost({ 
-            DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest,
+            DefinitionServiceUpdateAgreementRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -631,7 +631,7 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
             dynamic _bodyData;
 
                         const _type = FullType(DefinitionServiceUpdateAgreementRequest);
-                        _bodyData = _serializers.serialize(definitionServiceUpdateAgreementRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Definition/UpdateAgreementLog',

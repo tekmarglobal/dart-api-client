@@ -1,140 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_customer_login_attempt.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCustomerLoginAttempt> _$kilerCustomerLoginAttemptSerializer =
-    new _$KilerCustomerLoginAttemptSerializer();
-
-class _$KilerCustomerLoginAttemptSerializer
-    implements StructuredSerializer<KilerCustomerLoginAttempt> {
-  @override
-  final Iterable<Type> types = const [
-    KilerCustomerLoginAttempt,
-    _$KilerCustomerLoginAttempt
-  ];
-  @override
-  final String wireName = 'KilerCustomerLoginAttempt';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerCustomerLoginAttempt object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.date != null) {
-      result
-        ..add('date')
-        ..add(serializers.serialize(object.date,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.ip != null) {
-      result
-        ..add('ip')
-        ..add(serializers.serialize(object.ip,
-            specifiedType: const FullType(String)));
-    }
-    if (object.platform != null) {
-      result
-        ..add('platform')
-        ..add(serializers.serialize(object.platform,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.platformNavigation != null) {
-      result
-        ..add('platformNavigation')
-        ..add(serializers.serialize(object.platformNavigation,
-            specifiedType: const FullType(KilerPlatform)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCustomerLoginAttempt deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCustomerLoginAttemptBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'date':
-          result.date = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'ip':
-          result.ip = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'platform':
-          result.platform = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'platformNavigation':
-          result.platformNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerPlatform)) as KilerPlatform);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCustomerLoginAttempt extends KilerCustomerLoginAttempt {
   @override
@@ -276,19 +147,22 @@ class KilerCustomerLoginAttemptBuilder
   set platformNavigation(KilerPlatformBuilder platformNavigation) =>
       _$this._platformNavigation = platformNavigation;
 
-  KilerCustomerLoginAttemptBuilder();
+  KilerCustomerLoginAttemptBuilder() {
+    KilerCustomerLoginAttempt._initializeBuilder(this);
+  }
 
   KilerCustomerLoginAttemptBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _date = _$v.date;
-      _customer = _$v.customer;
-      _success = _$v.success;
-      _ip = _$v.ip;
-      _platform = _$v.platform;
-      _optimisticLockField = _$v.optimisticLockField;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _platformNavigation = _$v.platformNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _date = $v.date;
+      _customer = $v.customer;
+      _success = $v.success;
+      _ip = $v.ip;
+      _platform = $v.platform;
+      _optimisticLockField = $v.optimisticLockField;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _platformNavigation = $v.platformNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -296,9 +170,7 @@ class KilerCustomerLoginAttemptBuilder
 
   @override
   void replace(KilerCustomerLoginAttempt other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCustomerLoginAttempt;
   }
 

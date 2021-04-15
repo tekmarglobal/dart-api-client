@@ -1,129 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_product_import.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerProductImport> _$kilerProductImportSerializer =
-    new _$KilerProductImportSerializer();
-
-class _$KilerProductImportSerializer
-    implements StructuredSerializer<KilerProductImport> {
-  @override
-  final Iterable<Type> types = const [KilerProductImport, _$KilerProductImport];
-  @override
-  final String wireName = 'KilerProductImport';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerProductImport object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.importDate != null) {
-      result
-        ..add('importDate')
-        ..add(serializers.serialize(object.importDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.payload != null) {
-      result
-        ..add('payload')
-        ..add(serializers.serialize(object.payload,
-            specifiedType: const FullType(String)));
-    }
-    if (object.ipAddress != null) {
-      result
-        ..add('ipAddress')
-        ..add(serializers.serialize(object.ipAddress,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regionId != null) {
-      result
-        ..add('regionId')
-        ..add(serializers.serialize(object.regionId,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productImportDetail != null) {
-      result
-        ..add('productImportDetail')
-        ..add(serializers.serialize(object.productImportDetail,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProductImportDetail)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerProductImport deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerProductImportBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'importDate':
-          result.importDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'payload':
-          result.payload = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'ipAddress':
-          result.ipAddress = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regionId':
-          result.regionId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productImportDetail':
-          result.productImportDetail.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerProductImportDetail)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerProductImport extends KilerProductImport {
   @override
@@ -253,18 +135,21 @@ class KilerProductImportBuilder
           ListBuilder<KilerProductImportDetail> productImportDetail) =>
       _$this._productImportDetail = productImportDetail;
 
-  KilerProductImportBuilder();
+  KilerProductImportBuilder() {
+    KilerProductImport._initializeBuilder(this);
+  }
 
   KilerProductImportBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _importDate = _$v.importDate;
-      _payload = _$v.payload;
-      _ipAddress = _$v.ipAddress;
-      _optimisticLockField = _$v.optimisticLockField;
-      _regionId = _$v.regionId;
-      _productImportDetail = _$v.productImportDetail?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _importDate = $v.importDate;
+      _payload = $v.payload;
+      _ipAddress = $v.ipAddress;
+      _optimisticLockField = $v.optimisticLockField;
+      _regionId = $v.regionId;
+      _productImportDetail = $v.productImportDetail?.toBuilder();
       _$v = null;
     }
     return this;
@@ -272,9 +157,7 @@ class KilerProductImportBuilder
 
   @override
   void replace(KilerProductImport other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerProductImport;
   }
 

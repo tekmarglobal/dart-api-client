@@ -1,88 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_supplier.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerSupplier> _$kilerSupplierSerializer =
-    new _$KilerSupplierSerializer();
-
-class _$KilerSupplierSerializer implements StructuredSerializer<KilerSupplier> {
-  @override
-  final Iterable<Type> types = const [KilerSupplier, _$KilerSupplier];
-  @override
-  final String wireName = 'KilerSupplier';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerSupplier object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerProduct)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerSupplier deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerSupplierBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'product':
-          result.product.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerProduct)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerSupplier extends KilerSupplier {
   @override
@@ -159,14 +82,17 @@ class KilerSupplierBuilder
       _$this._product ??= new ListBuilder<KilerProduct>();
   set product(ListBuilder<KilerProduct> product) => _$this._product = product;
 
-  KilerSupplierBuilder();
+  KilerSupplierBuilder() {
+    KilerSupplier._initializeBuilder(this);
+  }
 
   KilerSupplierBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _optimisticLockField = _$v.optimisticLockField;
-      _product = _$v.product?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _optimisticLockField = $v.optimisticLockField;
+      _product = $v.product?.toBuilder();
       _$v = null;
     }
     return this;
@@ -174,9 +100,7 @@ class KilerSupplierBuilder
 
   @override
   void replace(KilerSupplier other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerSupplier;
   }
 

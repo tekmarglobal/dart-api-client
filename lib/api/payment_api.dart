@@ -95,7 +95,7 @@ import 'package:openapi/model/rest_result_of_payment_service_payment_type_respon
         ///
         /// 
         Future<Response<RestResultOfPaymentServicePaymentResponse>> apiPaymentCreatePaymentPost({ 
-            PaymentServicePaymentRequest paymentServicePaymentRequest,
+            PaymentServicePaymentRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -158,7 +158,7 @@ import 'package:openapi/model/rest_result_of_payment_service_payment_type_respon
             dynamic _bodyData;
 
                         const _type = FullType(PaymentServicePaymentRequest);
-                        _bodyData = _serializers.serialize(paymentServicePaymentRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Payment/CreatePayment',

@@ -1,144 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'admin_service_admin_neighbor_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AdminServiceAdminNeighborResponse>
-    _$adminServiceAdminNeighborResponseSerializer =
-    new _$AdminServiceAdminNeighborResponseSerializer();
-
-class _$AdminServiceAdminNeighborResponseSerializer
-    implements StructuredSerializer<AdminServiceAdminNeighborResponse> {
-  @override
-  final Iterable<Type> types = const [
-    AdminServiceAdminNeighborResponse,
-    _$AdminServiceAdminNeighborResponse
-  ];
-  @override
-  final String wireName = 'AdminServiceAdminNeighborResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AdminServiceAdminNeighborResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.cityName != null) {
-      result
-        ..add('cityName')
-        ..add(serializers.serialize(object.cityName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.countyName != null) {
-      result
-        ..add('countyName')
-        ..add(serializers.serialize(object.countyName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    if (object.regionName != null) {
-      result
-        ..add('regionName')
-        ..add(serializers.serialize(object.regionName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.gpsId != null) {
-      result
-        ..add('gpsId')
-        ..add(serializers.serialize(object.gpsId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.branch != null) {
-      result
-        ..add('branch')
-        ..add(serializers.serialize(object.branch,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(AdminServiceBranchResponse)])));
-    }
-    if (object.population != null) {
-      result
-        ..add('population')
-        ..add(serializers.serialize(object.population,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  AdminServiceAdminNeighborResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AdminServiceAdminNeighborResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'cityName':
-          result.cityName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'countyName':
-          result.countyName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'regionName':
-          result.regionName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'gpsId':
-          result.gpsId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'branch':
-          result.branch.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(AdminServiceBranchResponse)
-              ])) as BuiltList<Object>);
-          break;
-        case 'population':
-          result.population = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AdminServiceAdminNeighborResponse
     extends AdminServiceAdminNeighborResponse {
@@ -279,19 +146,22 @@ class AdminServiceAdminNeighborResponseBuilder
   int get population => _$this._population;
   set population(int population) => _$this._population = population;
 
-  AdminServiceAdminNeighborResponseBuilder();
+  AdminServiceAdminNeighborResponseBuilder() {
+    AdminServiceAdminNeighborResponse._initializeBuilder(this);
+  }
 
   AdminServiceAdminNeighborResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _cityName = _$v.cityName;
-      _countyName = _$v.countyName;
-      _region = _$v.region;
-      _regionName = _$v.regionName;
-      _gpsId = _$v.gpsId;
-      _branch = _$v.branch?.toBuilder();
-      _population = _$v.population;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _name = $v.name;
+      _cityName = $v.cityName;
+      _countyName = $v.countyName;
+      _region = $v.region;
+      _regionName = $v.regionName;
+      _gpsId = $v.gpsId;
+      _branch = $v.branch?.toBuilder();
+      _population = $v.population;
       _$v = null;
     }
     return this;
@@ -299,9 +169,7 @@ class AdminServiceAdminNeighborResponseBuilder
 
   @override
   void replace(AdminServiceAdminNeighborResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdminServiceAdminNeighborResponse;
   }
 

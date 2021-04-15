@@ -1,156 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_cart_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceCartResponse> _$cartServiceCartResponseSerializer =
-    new _$CartServiceCartResponseSerializer();
-
-class _$CartServiceCartResponseSerializer
-    implements StructuredSerializer<CartServiceCartResponse> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceCartResponse,
-    _$CartServiceCartResponse
-  ];
-  @override
-  final String wireName = 'CartServiceCartResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceCartResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.cartId != null) {
-      result
-        ..add('cartId')
-        ..add(serializers.serialize(object.cartId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.cartTotal != null) {
-      result
-        ..add('cartTotal')
-        ..add(serializers.serialize(object.cartTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.regionId != null) {
-      result
-        ..add('regionId')
-        ..add(serializers.serialize(object.regionId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.deviceToken != null) {
-      result
-        ..add('deviceToken')
-        ..add(serializers.serialize(object.deviceToken,
-            specifiedType: const FullType(String)));
-    }
-    if (object.bagTotal != null) {
-      result
-        ..add('bagTotal')
-        ..add(serializers.serialize(object.bagTotal,
-            specifiedType: const FullType(double)));
-    }
-    if (object.bagAmount != null) {
-      result
-        ..add('bagAmount')
-        ..add(serializers.serialize(object.bagAmount,
-            specifiedType: const FullType(int)));
-    }
-    if (object.estimatedFee != null) {
-      result
-        ..add('estimatedFee')
-        ..add(serializers.serialize(object.estimatedFee,
-            specifiedType: const FullType(double)));
-    }
-    if (object.cartProducts != null) {
-      result
-        ..add('cartProducts')
-        ..add(serializers.serialize(object.cartProducts,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CartServiceRCartProducts)])));
-    }
-    if (object.cardProducts != null) {
-      result
-        ..add('cardProducts')
-        ..add(serializers.serialize(object.cardProducts,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(CartServiceRCartProducts)])));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceCartResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceCartResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'cartId':
-          result.cartId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'cartTotal':
-          result.cartTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'regionId':
-          result.regionId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'deviceToken':
-          result.deviceToken = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'bagTotal':
-          result.bagTotal = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'bagAmount':
-          result.bagAmount = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'estimatedFee':
-          result.estimatedFee = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'cartProducts':
-          result.cartProducts.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CartServiceRCartProducts)
-              ])) as BuiltList<Object>);
-          break;
-        case 'cardProducts':
-          result.cardProducts.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(CartServiceRCartProducts)
-              ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceCartResponse extends CartServiceCartResponse {
   @override
@@ -304,20 +159,23 @@ class CartServiceCartResponseBuilder
   set cardProducts(ListBuilder<CartServiceRCartProducts> cardProducts) =>
       _$this._cardProducts = cardProducts;
 
-  CartServiceCartResponseBuilder();
+  CartServiceCartResponseBuilder() {
+    CartServiceCartResponse._initializeBuilder(this);
+  }
 
   CartServiceCartResponseBuilder get _$this {
-    if (_$v != null) {
-      _cartId = _$v.cartId;
-      _customer = _$v.customer;
-      _cartTotal = _$v.cartTotal;
-      _regionId = _$v.regionId;
-      _deviceToken = _$v.deviceToken;
-      _bagTotal = _$v.bagTotal;
-      _bagAmount = _$v.bagAmount;
-      _estimatedFee = _$v.estimatedFee;
-      _cartProducts = _$v.cartProducts?.toBuilder();
-      _cardProducts = _$v.cardProducts?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _cartId = $v.cartId;
+      _customer = $v.customer;
+      _cartTotal = $v.cartTotal;
+      _regionId = $v.regionId;
+      _deviceToken = $v.deviceToken;
+      _bagTotal = $v.bagTotal;
+      _bagAmount = $v.bagAmount;
+      _estimatedFee = $v.estimatedFee;
+      _cartProducts = $v.cartProducts?.toBuilder();
+      _cardProducts = $v.cardProducts?.toBuilder();
       _$v = null;
     }
     return this;
@@ -325,9 +183,7 @@ class CartServiceCartResponseBuilder
 
   @override
   void replace(CartServiceCartResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceCartResponse;
   }
 

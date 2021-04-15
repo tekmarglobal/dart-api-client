@@ -24,16 +24,19 @@ class _$VerifyRequestVerifyRequestSerializer
       Serializers serializers, VerifyRequestVerifyRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.phone != null) {
+    Object value;
+    value = object.phone;
+    if (value != null) {
       result
         ..add('phone')
-        ..add(serializers.serialize(object.phone,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    if (object.smsCode != null) {
+    value = object.smsCode;
+    if (value != null) {
       result
         ..add('smsCode')
-        ..add(serializers.serialize(object.smsCode,
+        ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
     return result;
@@ -49,7 +52,7 @@ class _$VerifyRequestVerifyRequestSerializer
     while (iterator.moveNext()) {
       final key = iterator.current as String;
       iterator.moveNext();
-      final dynamic value = iterator.current;
+      final Object value = iterator.current;
       switch (key) {
         case 'phone':
           result.phone = serializers.deserialize(value,
@@ -127,9 +130,10 @@ class VerifyRequestVerifyRequestBuilder
   }
 
   VerifyRequestVerifyRequestBuilder get _$this {
-    if (_$v != null) {
-      _phone = _$v.phone;
-      _smsCode = _$v.smsCode;
+    final $v = _$v;
+    if ($v != null) {
+      _phone = $v.phone;
+      _smsCode = $v.smsCode;
       _$v = null;
     }
     return this;
@@ -137,9 +141,7 @@ class VerifyRequestVerifyRequestBuilder
 
   @override
   void replace(VerifyRequestVerifyRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$VerifyRequestVerifyRequest;
   }
 

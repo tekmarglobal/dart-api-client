@@ -1,208 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_permission_policy_role.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPermissionPolicyRole> _$kilerPermissionPolicyRoleSerializer =
-    new _$KilerPermissionPolicyRoleSerializer();
-
-class _$KilerPermissionPolicyRoleSerializer
-    implements StructuredSerializer<KilerPermissionPolicyRole> {
-  @override
-  final Iterable<Type> types = const [
-    KilerPermissionPolicyRole,
-    _$KilerPermissionPolicyRole
-  ];
-  @override
-  final String wireName = 'KilerPermissionPolicyRole';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerPermissionPolicyRole object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.isAdministrative != null) {
-      result
-        ..add('isAdministrative')
-        ..add(serializers.serialize(object.isAdministrative,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.canEditModel != null) {
-      result
-        ..add('canEditModel')
-        ..add(serializers.serialize(object.canEditModel,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.permissionPolicy != null) {
-      result
-        ..add('permissionPolicy')
-        ..add(serializers.serialize(object.permissionPolicy,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.objectType != null) {
-      result
-        ..add('objectType')
-        ..add(serializers.serialize(object.objectType,
-            specifiedType: const FullType(int)));
-    }
-    if (object.objectTypeNavigation != null) {
-      result
-        ..add('objectTypeNavigation')
-        ..add(serializers.serialize(object.objectTypeNavigation,
-            specifiedType: const FullType(KilerXpobjectType)));
-    }
-    if (object.permissionPolicyActionPermissionObject != null) {
-      result
-        ..add('permissionPolicyActionPermissionObject')
-        ..add(serializers.serialize(
-            object.permissionPolicyActionPermissionObject,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(KilerPermissionPolicyActionPermissionObject)
-            ])));
-    }
-    if (object.permissionPolicyNavigationPermissionsObject != null) {
-      result
-        ..add('permissionPolicyNavigationPermissionsObject')
-        ..add(serializers.serialize(
-            object.permissionPolicyNavigationPermissionsObject,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(KilerPermissionPolicyNavigationPermissionsObject)
-            ])));
-    }
-    if (object.permissionPolicyTypePermissionsObject != null) {
-      result
-        ..add('permissionPolicyTypePermissionsObject')
-        ..add(serializers.serialize(
-            object.permissionPolicyTypePermissionsObject,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(KilerPermissionPolicyTypePermissionsObject)
-            ])));
-    }
-    if (object.permissionPolicyUserUsersPermissionPolicyRoleRoles != null) {
-      result
-        ..add('permissionPolicyUserUsersPermissionPolicyRoleRoles')
-        ..add(serializers.serialize(
-            object.permissionPolicyUserUsersPermissionPolicyRoleRoles,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(
-                  KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles)
-            ])));
-    }
-    return result;
-  }
-
-  @override
-  KilerPermissionPolicyRole deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPermissionPolicyRoleBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'isAdministrative':
-          result.isAdministrative = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'canEditModel':
-          result.canEditModel = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'permissionPolicy':
-          result.permissionPolicy = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'objectType':
-          result.objectType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'objectTypeNavigation':
-          result.objectTypeNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerXpobjectType))
-              as KilerXpobjectType);
-          break;
-        case 'permissionPolicyActionPermissionObject':
-          result.permissionPolicyActionPermissionObject.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(KilerPermissionPolicyActionPermissionObject)
-                  ])) as BuiltList<Object>);
-          break;
-        case 'permissionPolicyNavigationPermissionsObject':
-          result.permissionPolicyNavigationPermissionsObject.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(
-                        KilerPermissionPolicyNavigationPermissionsObject)
-                  ])) as BuiltList<Object>);
-          break;
-        case 'permissionPolicyTypePermissionsObject':
-          result.permissionPolicyTypePermissionsObject.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(KilerPermissionPolicyTypePermissionsObject)
-                  ])) as BuiltList<Object>);
-          break;
-        case 'permissionPolicyUserUsersPermissionPolicyRoleRoles':
-          result.permissionPolicyUserUsersPermissionPolicyRoleRoles.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(
-                        KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles)
-                  ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPermissionPolicyRole extends KilerPermissionPolicyRole {
   @override
@@ -435,27 +238,30 @@ class KilerPermissionPolicyRoleBuilder
       _$this._permissionPolicyUserUsersPermissionPolicyRoleRoles =
           permissionPolicyUserUsersPermissionPolicyRoleRoles;
 
-  KilerPermissionPolicyRoleBuilder();
+  KilerPermissionPolicyRoleBuilder() {
+    KilerPermissionPolicyRole._initializeBuilder(this);
+  }
 
   KilerPermissionPolicyRoleBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _isAdministrative = _$v.isAdministrative;
-      _canEditModel = _$v.canEditModel;
-      _permissionPolicy = _$v.permissionPolicy;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _objectType = _$v.objectType;
-      _objectTypeNavigation = _$v.objectTypeNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _isAdministrative = $v.isAdministrative;
+      _canEditModel = $v.canEditModel;
+      _permissionPolicy = $v.permissionPolicy;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _objectType = $v.objectType;
+      _objectTypeNavigation = $v.objectTypeNavigation?.toBuilder();
       _permissionPolicyActionPermissionObject =
-          _$v.permissionPolicyActionPermissionObject?.toBuilder();
+          $v.permissionPolicyActionPermissionObject?.toBuilder();
       _permissionPolicyNavigationPermissionsObject =
-          _$v.permissionPolicyNavigationPermissionsObject?.toBuilder();
+          $v.permissionPolicyNavigationPermissionsObject?.toBuilder();
       _permissionPolicyTypePermissionsObject =
-          _$v.permissionPolicyTypePermissionsObject?.toBuilder();
+          $v.permissionPolicyTypePermissionsObject?.toBuilder();
       _permissionPolicyUserUsersPermissionPolicyRoleRoles =
-          _$v.permissionPolicyUserUsersPermissionPolicyRoleRoles?.toBuilder();
+          $v.permissionPolicyUserUsersPermissionPolicyRoleRoles?.toBuilder();
       _$v = null;
     }
     return this;
@@ -463,9 +269,7 @@ class KilerPermissionPolicyRoleBuilder
 
   @override
   void replace(KilerPermissionPolicyRole other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPermissionPolicyRole;
   }
 

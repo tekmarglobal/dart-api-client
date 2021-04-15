@@ -9,6 +9,7 @@ import 'package:openapi/model/kiler_region_product.dart';
 import 'package:openapi/model/kiler_customer_favorite_list.dart';
 import 'package:openapi/model/kiler_order_product.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:openapi/model/kiler_product_tag.dart';
 import 'package:openapi/model/kiler_supplier.dart';
 import 'package:openapi/model/kiler_product_image.dart';
 import 'package:openapi/model/kiler_configuration.dart';
@@ -111,8 +112,20 @@ abstract class KilerProduct implements Built<KilerProduct, KilerProductBuilder> 
     String get menuName;
 
     @nullable
+    @BuiltValueField(wireName: r'weight')
+    double get weight;
+
+    @nullable
+    @BuiltValueField(wireName: r'productTag')
+    int get productTag;
+
+    @nullable
     @BuiltValueField(wireName: r'brandNavigation')
     KilerBrand get brandNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'productTagNavigation')
+    KilerProductTag get productTagNavigation;
 
     @nullable
     @BuiltValueField(wireName: r'supplierNavigation')
@@ -303,11 +316,29 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 ..add(serializers.serialize(object.menuName,
                     specifiedType: const FullType(String)));
         }
+        if (object.weight != null) {
+            result
+                ..add(r'weight')
+                ..add(serializers.serialize(object.weight,
+                    specifiedType: const FullType(double)));
+        }
+        if (object.productTag != null) {
+            result
+                ..add(r'productTag')
+                ..add(serializers.serialize(object.productTag,
+                    specifiedType: const FullType(int)));
+        }
         if (object.brandNavigation != null) {
             result
                 ..add(r'brandNavigation')
                 ..add(serializers.serialize(object.brandNavigation,
                     specifiedType: const FullType(KilerBrand)));
+        }
+        if (object.productTagNavigation != null) {
+            result
+                ..add(r'productTagNavigation')
+                ..add(serializers.serialize(object.productTagNavigation,
+                    specifiedType: const FullType(KilerProductTag)));
         }
         if (object.supplierNavigation != null) {
             result
@@ -465,9 +496,21 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                     result.menuName = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
+                case r'weight':
+                    result.weight = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    break;
+                case r'productTag':
+                    result.productTag = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
                 case r'brandNavigation':
                     result.brandNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerBrand)) as KilerBrand);
+                    break;
+                case r'productTagNavigation':
+                    result.productTagNavigation.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(KilerProductTag)) as KilerProductTag);
                     break;
                 case r'supplierNavigation':
                     result.supplierNavigation.replace(serializers.deserialize(value,

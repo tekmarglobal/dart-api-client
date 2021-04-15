@@ -1,120 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_customer_favorite_list.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCustomerFavoriteList> _$kilerCustomerFavoriteListSerializer =
-    new _$KilerCustomerFavoriteListSerializer();
-
-class _$KilerCustomerFavoriteListSerializer
-    implements StructuredSerializer<KilerCustomerFavoriteList> {
-  @override
-  final Iterable<Type> types = const [
-    KilerCustomerFavoriteList,
-    _$KilerCustomerFavoriteList
-  ];
-  @override
-  final String wireName = 'KilerCustomerFavoriteList';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerCustomerFavoriteList object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.productNavigation != null) {
-      result
-        ..add('productNavigation')
-        ..add(serializers.serialize(object.productNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCustomerFavoriteList deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCustomerFavoriteListBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'product':
-          result.product = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'productNavigation':
-          result.productNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCustomerFavoriteList extends KilerCustomerFavoriteList {
   @override
@@ -234,17 +125,20 @@ class KilerCustomerFavoriteListBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerCustomerFavoriteListBuilder();
+  KilerCustomerFavoriteListBuilder() {
+    KilerCustomerFavoriteList._initializeBuilder(this);
+  }
 
   KilerCustomerFavoriteListBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _product = _$v.product;
-      _customer = _$v.customer;
-      _optimisticLockField = _$v.optimisticLockField;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _productNavigation = _$v.productNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _product = $v.product;
+      _customer = $v.customer;
+      _optimisticLockField = $v.optimisticLockField;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _productNavigation = $v.productNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -252,9 +146,7 @@ class KilerCustomerFavoriteListBuilder
 
   @override
   void replace(KilerCustomerFavoriteList other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCustomerFavoriteList;
   }
 

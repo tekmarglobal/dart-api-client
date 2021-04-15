@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'customer_service_new_customer_default_address.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CustomerServiceNewCustomerDefaultAddress>
-    _$customerServiceNewCustomerDefaultAddressSerializer =
-    new _$CustomerServiceNewCustomerDefaultAddressSerializer();
-
-class _$CustomerServiceNewCustomerDefaultAddressSerializer
-    implements StructuredSerializer<CustomerServiceNewCustomerDefaultAddress> {
-  @override
-  final Iterable<Type> types = const [
-    CustomerServiceNewCustomerDefaultAddress,
-    _$CustomerServiceNewCustomerDefaultAddress
-  ];
-  @override
-  final String wireName = 'CustomerServiceNewCustomerDefaultAddress';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CustomerServiceNewCustomerDefaultAddress object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.defultAddress != null) {
-      result
-        ..add('defultAddress')
-        ..add(serializers.serialize(object.defultAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.invoiceAddress != null) {
-      result
-        ..add('invoiceAddress')
-        ..add(serializers.serialize(object.invoiceAddress,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CustomerServiceNewCustomerDefaultAddress deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CustomerServiceNewCustomerDefaultAddressBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'defultAddress':
-          result.defultAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'invoiceAddress':
-          result.invoiceAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CustomerServiceNewCustomerDefaultAddress
     extends CustomerServiceNewCustomerDefaultAddress {
@@ -132,12 +72,15 @@ class CustomerServiceNewCustomerDefaultAddressBuilder
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  CustomerServiceNewCustomerDefaultAddressBuilder();
+  CustomerServiceNewCustomerDefaultAddressBuilder() {
+    CustomerServiceNewCustomerDefaultAddress._initializeBuilder(this);
+  }
 
   CustomerServiceNewCustomerDefaultAddressBuilder get _$this {
-    if (_$v != null) {
-      _defultAddress = _$v.defultAddress;
-      _invoiceAddress = _$v.invoiceAddress;
+    final $v = _$v;
+    if ($v != null) {
+      _defultAddress = $v.defultAddress;
+      _invoiceAddress = $v.invoiceAddress;
       _$v = null;
     }
     return this;
@@ -145,9 +88,7 @@ class CustomerServiceNewCustomerDefaultAddressBuilder
 
   @override
   void replace(CustomerServiceNewCustomerDefaultAddress other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CustomerServiceNewCustomerDefaultAddress;
   }
 

@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'product_service_search_product_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<ProductServiceSearchProductRequest>
-    _$productServiceSearchProductRequestSerializer =
-    new _$ProductServiceSearchProductRequestSerializer();
-
-class _$ProductServiceSearchProductRequestSerializer
-    implements StructuredSerializer<ProductServiceSearchProductRequest> {
-  @override
-  final Iterable<Type> types = const [
-    ProductServiceSearchProductRequest,
-    _$ProductServiceSearchProductRequest
-  ];
-  @override
-  final String wireName = 'ProductServiceSearchProductRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, ProductServiceSearchProductRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.productName != null) {
-      result
-        ..add('productName')
-        ..add(serializers.serialize(object.productName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.region != null) {
-      result
-        ..add('region')
-        ..add(serializers.serialize(object.region,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  ProductServiceSearchProductRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new ProductServiceSearchProductRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'productName':
-          result.productName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'region':
-          result.region = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$ProductServiceSearchProductRequest
     extends ProductServiceSearchProductRequest {
@@ -127,12 +67,15 @@ class ProductServiceSearchProductRequestBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  ProductServiceSearchProductRequestBuilder();
+  ProductServiceSearchProductRequestBuilder() {
+    ProductServiceSearchProductRequest._initializeBuilder(this);
+  }
 
   ProductServiceSearchProductRequestBuilder get _$this {
-    if (_$v != null) {
-      _productName = _$v.productName;
-      _region = _$v.region;
+    final $v = _$v;
+    if ($v != null) {
+      _productName = $v.productName;
+      _region = $v.region;
       _$v = null;
     }
     return this;
@@ -140,9 +83,7 @@ class ProductServiceSearchProductRequestBuilder
 
   @override
   void replace(ProductServiceSearchProductRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ProductServiceSearchProductRequest;
   }
 

@@ -1,112 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_manufacturer.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerManufacturer> _$kilerManufacturerSerializer =
-    new _$KilerManufacturerSerializer();
-
-class _$KilerManufacturerSerializer
-    implements StructuredSerializer<KilerManufacturer> {
-  @override
-  final Iterable<Type> types = const [KilerManufacturer, _$KilerManufacturer];
-  @override
-  final String wireName = 'KilerManufacturer';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerManufacturer object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.description != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(object.description,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.brand != null) {
-      result
-        ..add('brand')
-        ..add(serializers.serialize(object.brand,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerBrand)])));
-    }
-    if (object.brandManager != null) {
-      result
-        ..add('brandManager')
-        ..add(serializers.serialize(object.brandManager,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerBrandManager)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerManufacturer deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerManufacturerBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'description':
-          result.description = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'brand':
-          result.brand.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerBrand)]))
-              as BuiltList<Object>);
-          break;
-        case 'brandManager':
-          result.brandManager.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerBrandManager)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerManufacturer extends KilerManufacturer {
   @override
@@ -212,16 +111,19 @@ class KilerManufacturerBuilder
   set brandManager(ListBuilder<KilerBrandManager> brandManager) =>
       _$this._brandManager = brandManager;
 
-  KilerManufacturerBuilder();
+  KilerManufacturerBuilder() {
+    KilerManufacturer._initializeBuilder(this);
+  }
 
   KilerManufacturerBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _description = _$v.description;
-      _optimisticLockField = _$v.optimisticLockField;
-      _brand = _$v.brand?.toBuilder();
-      _brandManager = _$v.brandManager?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _description = $v.description;
+      _optimisticLockField = $v.optimisticLockField;
+      _brand = $v.brand?.toBuilder();
+      _brandManager = $v.brandManager?.toBuilder();
       _$v = null;
     }
     return this;
@@ -229,9 +131,7 @@ class KilerManufacturerBuilder
 
   @override
   void replace(KilerManufacturer other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerManufacturer;
   }
 

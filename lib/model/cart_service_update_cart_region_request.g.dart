@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_update_cart_region_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceUpdateCartRegionRequest>
-    _$cartServiceUpdateCartRegionRequestSerializer =
-    new _$CartServiceUpdateCartRegionRequestSerializer();
-
-class _$CartServiceUpdateCartRegionRequestSerializer
-    implements StructuredSerializer<CartServiceUpdateCartRegionRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceUpdateCartRegionRequest,
-    _$CartServiceUpdateCartRegionRequest
-  ];
-  @override
-  final String wireName = 'CartServiceUpdateCartRegionRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceUpdateCartRegionRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.neighborhoodId != null) {
-      result
-        ..add('neighborhoodId')
-        ..add(serializers.serialize(object.neighborhoodId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.isForce != null) {
-      result
-        ..add('isForce')
-        ..add(serializers.serialize(object.isForce,
-            specifiedType: const FullType(bool)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceUpdateCartRegionRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceUpdateCartRegionRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'neighborhoodId':
-          result.neighborhoodId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'isForce':
-          result.isForce = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceUpdateCartRegionRequest
     extends CartServiceUpdateCartRegionRequest {
@@ -128,12 +68,15 @@ class CartServiceUpdateCartRegionRequestBuilder
   bool get isForce => _$this._isForce;
   set isForce(bool isForce) => _$this._isForce = isForce;
 
-  CartServiceUpdateCartRegionRequestBuilder();
+  CartServiceUpdateCartRegionRequestBuilder() {
+    CartServiceUpdateCartRegionRequest._initializeBuilder(this);
+  }
 
   CartServiceUpdateCartRegionRequestBuilder get _$this {
-    if (_$v != null) {
-      _neighborhoodId = _$v.neighborhoodId;
-      _isForce = _$v.isForce;
+    final $v = _$v;
+    if ($v != null) {
+      _neighborhoodId = $v.neighborhoodId;
+      _isForce = $v.isForce;
       _$v = null;
     }
     return this;
@@ -141,9 +84,7 @@ class CartServiceUpdateCartRegionRequestBuilder
 
   @override
   void replace(CartServiceUpdateCartRegionRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceUpdateCartRegionRequest;
   }
 

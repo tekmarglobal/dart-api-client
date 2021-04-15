@@ -1,141 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_category_import_detail.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCategoryImportDetail> _$kilerCategoryImportDetailSerializer =
-    new _$KilerCategoryImportDetailSerializer();
-
-class _$KilerCategoryImportDetailSerializer
-    implements StructuredSerializer<KilerCategoryImportDetail> {
-  @override
-  final Iterable<Type> types = const [
-    KilerCategoryImportDetail,
-    _$KilerCategoryImportDetail
-  ];
-  @override
-  final String wireName = 'KilerCategoryImportDetail';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerCategoryImportDetail object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.category != null) {
-      result
-        ..add('category')
-        ..add(serializers.serialize(object.category,
-            specifiedType: const FullType(int)));
-    }
-    if (object.oldValue != null) {
-      result
-        ..add('oldValue')
-        ..add(serializers.serialize(object.oldValue,
-            specifiedType: const FullType(String)));
-    }
-    if (object.newValue != null) {
-      result
-        ..add('newValue')
-        ..add(serializers.serialize(object.newValue,
-            specifiedType: const FullType(String)));
-    }
-    if (object.categoryImport != null) {
-      result
-        ..add('categoryImport')
-        ..add(serializers.serialize(object.categoryImport,
-            specifiedType: const FullType(int)));
-    }
-    if (object.operationType != null) {
-      result
-        ..add('operationType')
-        ..add(serializers.serialize(object.operationType,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.categoryImportNavigation != null) {
-      result
-        ..add('categoryImportNavigation')
-        ..add(serializers.serialize(object.categoryImportNavigation,
-            specifiedType: const FullType(KilerCategoryImport)));
-    }
-    if (object.categoryNavigation != null) {
-      result
-        ..add('categoryNavigation')
-        ..add(serializers.serialize(object.categoryNavigation,
-            specifiedType: const FullType(KilerCategory)));
-    }
-    return result;
-  }
-
-  @override
-  KilerCategoryImportDetail deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCategoryImportDetailBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'category':
-          result.category = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'oldValue':
-          result.oldValue = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'newValue':
-          result.newValue = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'categoryImport':
-          result.categoryImport = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'operationType':
-          result.operationType = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'categoryImportNavigation':
-          result.categoryImportNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerCategoryImport))
-              as KilerCategoryImport);
-          break;
-        case 'categoryNavigation':
-          result.categoryNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCategory)) as KilerCategory);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCategoryImportDetail extends KilerCategoryImportDetail {
   @override
@@ -280,19 +150,22 @@ class KilerCategoryImportDetailBuilder
   set categoryNavigation(KilerCategoryBuilder categoryNavigation) =>
       _$this._categoryNavigation = categoryNavigation;
 
-  KilerCategoryImportDetailBuilder();
+  KilerCategoryImportDetailBuilder() {
+    KilerCategoryImportDetail._initializeBuilder(this);
+  }
 
   KilerCategoryImportDetailBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _category = _$v.category;
-      _oldValue = _$v.oldValue;
-      _newValue = _$v.newValue;
-      _categoryImport = _$v.categoryImport;
-      _operationType = _$v.operationType;
-      _optimisticLockField = _$v.optimisticLockField;
-      _categoryImportNavigation = _$v.categoryImportNavigation?.toBuilder();
-      _categoryNavigation = _$v.categoryNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _category = $v.category;
+      _oldValue = $v.oldValue;
+      _newValue = $v.newValue;
+      _categoryImport = $v.categoryImport;
+      _operationType = $v.operationType;
+      _optimisticLockField = $v.optimisticLockField;
+      _categoryImportNavigation = $v.categoryImportNavigation?.toBuilder();
+      _categoryNavigation = $v.categoryNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -300,9 +173,7 @@ class KilerCategoryImportDetailBuilder
 
   @override
   void replace(KilerCategoryImportDetail other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCategoryImportDetail;
   }
 

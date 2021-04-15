@@ -1,99 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_affiliate_type.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerAffiliateType> _$kilerAffiliateTypeSerializer =
-    new _$KilerAffiliateTypeSerializer();
-
-class _$KilerAffiliateTypeSerializer
-    implements StructuredSerializer<KilerAffiliateType> {
-  @override
-  final Iterable<Type> types = const [KilerAffiliateType, _$KilerAffiliateType];
-  @override
-  final String wireName = 'KilerAffiliateType';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerAffiliateType object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.type != null) {
-      result
-        ..add('type')
-        ..add(serializers.serialize(object.type,
-            specifiedType: const FullType(String)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.affiliateLink != null) {
-      result
-        ..add('affiliateLink')
-        ..add(serializers.serialize(object.affiliateLink,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAffiliateLink)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerAffiliateType deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerAffiliateTypeBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'type':
-          result.type = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'affiliateLink':
-          result.affiliateLink.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAffiliateLink)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerAffiliateType extends KilerAffiliateType {
   @override
@@ -186,15 +98,18 @@ class KilerAffiliateTypeBuilder
   set affiliateLink(ListBuilder<KilerAffiliateLink> affiliateLink) =>
       _$this._affiliateLink = affiliateLink;
 
-  KilerAffiliateTypeBuilder();
+  KilerAffiliateTypeBuilder() {
+    KilerAffiliateType._initializeBuilder(this);
+  }
 
   KilerAffiliateTypeBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _type = _$v.type;
-      _code = _$v.code;
-      _optimisticLockField = _$v.optimisticLockField;
-      _affiliateLink = _$v.affiliateLink?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _type = $v.type;
+      _code = $v.code;
+      _optimisticLockField = $v.optimisticLockField;
+      _affiliateLink = $v.affiliateLink?.toBuilder();
       _$v = null;
     }
     return this;
@@ -202,9 +117,7 @@ class KilerAffiliateTypeBuilder
 
   @override
   void replace(KilerAffiliateType other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerAffiliateType;
   }
 

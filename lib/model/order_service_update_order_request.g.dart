@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'order_service_update_order_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<OrderServiceUpdateOrderRequest>
-    _$orderServiceUpdateOrderRequestSerializer =
-    new _$OrderServiceUpdateOrderRequestSerializer();
-
-class _$OrderServiceUpdateOrderRequestSerializer
-    implements StructuredSerializer<OrderServiceUpdateOrderRequest> {
-  @override
-  final Iterable<Type> types = const [
-    OrderServiceUpdateOrderRequest,
-    _$OrderServiceUpdateOrderRequest
-  ];
-  @override
-  final String wireName = 'OrderServiceUpdateOrderRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, OrderServiceUpdateOrderRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.orderId != null) {
-      result
-        ..add('orderId')
-        ..add(serializers.serialize(object.orderId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.orderStatusId != null) {
-      result
-        ..add('orderStatusId')
-        ..add(serializers.serialize(object.orderStatusId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  OrderServiceUpdateOrderRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new OrderServiceUpdateOrderRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'orderId':
-          result.orderId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'orderStatusId':
-          result.orderStatusId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$OrderServiceUpdateOrderRequest extends OrderServiceUpdateOrderRequest {
   @override
@@ -125,12 +65,15 @@ class OrderServiceUpdateOrderRequestBuilder
   int get orderStatusId => _$this._orderStatusId;
   set orderStatusId(int orderStatusId) => _$this._orderStatusId = orderStatusId;
 
-  OrderServiceUpdateOrderRequestBuilder();
+  OrderServiceUpdateOrderRequestBuilder() {
+    OrderServiceUpdateOrderRequest._initializeBuilder(this);
+  }
 
   OrderServiceUpdateOrderRequestBuilder get _$this {
-    if (_$v != null) {
-      _orderId = _$v.orderId;
-      _orderStatusId = _$v.orderStatusId;
+    final $v = _$v;
+    if ($v != null) {
+      _orderId = $v.orderId;
+      _orderStatusId = $v.orderStatusId;
       _$v = null;
     }
     return this;
@@ -138,9 +81,7 @@ class OrderServiceUpdateOrderRequestBuilder
 
   @override
   void replace(OrderServiceUpdateOrderRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$OrderServiceUpdateOrderRequest;
   }
 

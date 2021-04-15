@@ -1,84 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'rest_result_of_admin_service_upload_image_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RestResultOfAdminServiceUploadImageResponse>
-    _$restResultOfAdminServiceUploadImageResponseSerializer =
-    new _$RestResultOfAdminServiceUploadImageResponseSerializer();
-
-class _$RestResultOfAdminServiceUploadImageResponseSerializer
-    implements
-        StructuredSerializer<RestResultOfAdminServiceUploadImageResponse> {
-  @override
-  final Iterable<Type> types = const [
-    RestResultOfAdminServiceUploadImageResponse,
-    _$RestResultOfAdminServiceUploadImageResponse
-  ];
-  @override
-  final String wireName = 'RestResultOfAdminServiceUploadImageResponse';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      RestResultOfAdminServiceUploadImageResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.message != null) {
-      result
-        ..add('message')
-        ..add(serializers.serialize(object.message,
-            specifiedType: const FullType(String)));
-    }
-    if (object.data != null) {
-      result
-        ..add('data')
-        ..add(serializers.serialize(object.data,
-            specifiedType: const FullType(AdminServiceUploadImageResponse)));
-    }
-    return result;
-  }
-
-  @override
-  RestResultOfAdminServiceUploadImageResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RestResultOfAdminServiceUploadImageResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(AdminServiceUploadImageResponse))
-              as AdminServiceUploadImageResponse);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RestResultOfAdminServiceUploadImageResponse
     extends RestResultOfAdminServiceUploadImageResponse {
@@ -155,13 +82,16 @@ class RestResultOfAdminServiceUploadImageResponseBuilder
       _$this._data ??= new AdminServiceUploadImageResponseBuilder();
   set data(AdminServiceUploadImageResponseBuilder data) => _$this._data = data;
 
-  RestResultOfAdminServiceUploadImageResponseBuilder();
+  RestResultOfAdminServiceUploadImageResponseBuilder() {
+    RestResultOfAdminServiceUploadImageResponse._initializeBuilder(this);
+  }
 
   RestResultOfAdminServiceUploadImageResponseBuilder get _$this {
-    if (_$v != null) {
-      _success = _$v.success;
-      _message = _$v.message;
-      _data = _$v.data?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _success = $v.success;
+      _message = $v.message;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -169,9 +99,7 @@ class RestResultOfAdminServiceUploadImageResponseBuilder
 
   @override
   void replace(RestResultOfAdminServiceUploadImageResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RestResultOfAdminServiceUploadImageResponse;
   }
 

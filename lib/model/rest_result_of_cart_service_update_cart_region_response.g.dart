@@ -1,85 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'rest_result_of_cart_service_update_cart_region_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RestResultOfCartServiceUpdateCartRegionResponse>
-    _$restResultOfCartServiceUpdateCartRegionResponseSerializer =
-    new _$RestResultOfCartServiceUpdateCartRegionResponseSerializer();
-
-class _$RestResultOfCartServiceUpdateCartRegionResponseSerializer
-    implements
-        StructuredSerializer<RestResultOfCartServiceUpdateCartRegionResponse> {
-  @override
-  final Iterable<Type> types = const [
-    RestResultOfCartServiceUpdateCartRegionResponse,
-    _$RestResultOfCartServiceUpdateCartRegionResponse
-  ];
-  @override
-  final String wireName = 'RestResultOfCartServiceUpdateCartRegionResponse';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers,
-      RestResultOfCartServiceUpdateCartRegionResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.success != null) {
-      result
-        ..add('success')
-        ..add(serializers.serialize(object.success,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.message != null) {
-      result
-        ..add('message')
-        ..add(serializers.serialize(object.message,
-            specifiedType: const FullType(String)));
-    }
-    if (object.data != null) {
-      result
-        ..add('data')
-        ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(CartServiceUpdateCartRegionResponse)));
-    }
-    return result;
-  }
-
-  @override
-  RestResultOfCartServiceUpdateCartRegionResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RestResultOfCartServiceUpdateCartRegionResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'success':
-          result.success = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'message':
-          result.message = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'data':
-          result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(CartServiceUpdateCartRegionResponse))
-              as CartServiceUpdateCartRegionResponse);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RestResultOfCartServiceUpdateCartRegionResponse
     extends RestResultOfCartServiceUpdateCartRegionResponse {
@@ -158,13 +84,16 @@ class RestResultOfCartServiceUpdateCartRegionResponseBuilder
   set data(CartServiceUpdateCartRegionResponseBuilder data) =>
       _$this._data = data;
 
-  RestResultOfCartServiceUpdateCartRegionResponseBuilder();
+  RestResultOfCartServiceUpdateCartRegionResponseBuilder() {
+    RestResultOfCartServiceUpdateCartRegionResponse._initializeBuilder(this);
+  }
 
   RestResultOfCartServiceUpdateCartRegionResponseBuilder get _$this {
-    if (_$v != null) {
-      _success = _$v.success;
-      _message = _$v.message;
-      _data = _$v.data?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _success = $v.success;
+      _message = $v.message;
+      _data = $v.data?.toBuilder();
       _$v = null;
     }
     return this;
@@ -172,9 +101,7 @@ class RestResultOfCartServiceUpdateCartRegionResponseBuilder
 
   @override
   void replace(RestResultOfCartServiceUpdateCartRegionResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RestResultOfCartServiceUpdateCartRegionResponse;
   }
 

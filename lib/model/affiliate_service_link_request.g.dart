@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'affiliate_service_link_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<AffiliateServiceLinkRequest>
-    _$affiliateServiceLinkRequestSerializer =
-    new _$AffiliateServiceLinkRequestSerializer();
-
-class _$AffiliateServiceLinkRequestSerializer
-    implements StructuredSerializer<AffiliateServiceLinkRequest> {
-  @override
-  final Iterable<Type> types = const [
-    AffiliateServiceLinkRequest,
-    _$AffiliateServiceLinkRequest
-  ];
-  @override
-  final String wireName = 'AffiliateServiceLinkRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, AffiliateServiceLinkRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.type != null) {
-      result
-        ..add('type')
-        ..add(serializers.serialize(object.type,
-            specifiedType: const FullType(String)));
-    }
-    if (object.key != null) {
-      result
-        ..add('key')
-        ..add(serializers.serialize(object.key,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  AffiliateServiceLinkRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new AffiliateServiceLinkRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'type':
-          result.type = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'key':
-          result.key = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$AffiliateServiceLinkRequest extends AffiliateServiceLinkRequest {
   @override
@@ -124,12 +64,15 @@ class AffiliateServiceLinkRequestBuilder
   int get key => _$this._key;
   set key(int key) => _$this._key = key;
 
-  AffiliateServiceLinkRequestBuilder();
+  AffiliateServiceLinkRequestBuilder() {
+    AffiliateServiceLinkRequest._initializeBuilder(this);
+  }
 
   AffiliateServiceLinkRequestBuilder get _$this {
-    if (_$v != null) {
-      _type = _$v.type;
-      _key = _$v.key;
+    final $v = _$v;
+    if ($v != null) {
+      _type = $v.type;
+      _key = $v.key;
       _$v = null;
     }
     return this;
@@ -137,9 +80,7 @@ class AffiliateServiceLinkRequestBuilder
 
   @override
   void replace(AffiliateServiceLinkRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AffiliateServiceLinkRequest;
   }
 

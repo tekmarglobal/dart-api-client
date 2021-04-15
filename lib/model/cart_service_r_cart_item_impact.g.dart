@@ -1,90 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_r_cart_item_impact.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceRCartItemImpact> _$cartServiceRCartItemImpactSerializer =
-    new _$CartServiceRCartItemImpactSerializer();
-
-class _$CartServiceRCartItemImpactSerializer
-    implements StructuredSerializer<CartServiceRCartItemImpact> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceRCartItemImpact,
-    _$CartServiceRCartItemImpact
-  ];
-  @override
-  final String wireName = 'CartServiceRCartItemImpact';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceRCartItemImpact object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.productId != null) {
-      result
-        ..add('productId')
-        ..add(serializers.serialize(object.productId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.productName != null) {
-      result
-        ..add('productName')
-        ..add(serializers.serialize(object.productName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.oldPrice != null) {
-      result
-        ..add('oldPrice')
-        ..add(serializers.serialize(object.oldPrice,
-            specifiedType: const FullType(double)));
-    }
-    if (object.newPrice != null) {
-      result
-        ..add('newPrice')
-        ..add(serializers.serialize(object.newPrice,
-            specifiedType: const FullType(double)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceRCartItemImpact deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceRCartItemImpactBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'productId':
-          result.productId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'productName':
-          result.productName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'oldPrice':
-          result.oldPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'newPrice':
-          result.newPrice = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceRCartItemImpact extends CartServiceRCartItemImpact {
   @override
@@ -163,14 +84,17 @@ class CartServiceRCartItemImpactBuilder
   double get newPrice => _$this._newPrice;
   set newPrice(double newPrice) => _$this._newPrice = newPrice;
 
-  CartServiceRCartItemImpactBuilder();
+  CartServiceRCartItemImpactBuilder() {
+    CartServiceRCartItemImpact._initializeBuilder(this);
+  }
 
   CartServiceRCartItemImpactBuilder get _$this {
-    if (_$v != null) {
-      _productId = _$v.productId;
-      _productName = _$v.productName;
-      _oldPrice = _$v.oldPrice;
-      _newPrice = _$v.newPrice;
+    final $v = _$v;
+    if ($v != null) {
+      _productId = $v.productId;
+      _productName = $v.productName;
+      _oldPrice = $v.oldPrice;
+      _newPrice = $v.newPrice;
       _$v = null;
     }
     return this;
@@ -178,9 +102,7 @@ class CartServiceRCartItemImpactBuilder
 
   @override
   void replace(CartServiceRCartItemImpact other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceRCartItemImpact;
   }
 

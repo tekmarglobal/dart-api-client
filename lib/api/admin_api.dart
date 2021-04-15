@@ -580,7 +580,7 @@ import 'package:openapi/model/rest_result_of_system_int32.dart';
         ///
         /// 
         Future<Response<RestResultOfListOfAdminServiceAdminNeighborResponse>> apiAdminRegionNeighborhoodPost({ 
-            AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest,
+            AdminServiceRegionNeighborhoodRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -643,7 +643,7 @@ import 'package:openapi/model/rest_result_of_system_int32.dart';
             dynamic _bodyData;
 
                         const _type = FullType(AdminServiceRegionNeighborhoodRequest);
-                        _bodyData = _serializers.serialize(adminServiceRegionNeighborhoodRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Admin/RegionNeighborhood',
@@ -866,7 +866,7 @@ import 'package:openapi/model/rest_result_of_system_int32.dart';
         ///
         /// 
         Future<Response<RestResultOfAdminServiceAdminNeighborResponse>> apiAdminUpdateRegionNeighborhoodPost({ 
-            AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest,
+            AdminServiceUpdateRegionNeighborhoodRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -929,7 +929,7 @@ import 'package:openapi/model/rest_result_of_system_int32.dart';
             dynamic _bodyData;
 
                         const _type = FullType(AdminServiceUpdateRegionNeighborhoodRequest);
-                        _bodyData = _serializers.serialize(adminServiceUpdateRegionNeighborhoodRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Admin/UpdateRegionNeighborhood',

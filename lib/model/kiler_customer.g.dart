@@ -1,424 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_customer.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerCustomer> _$kilerCustomerSerializer =
-    new _$KilerCustomerSerializer();
-
-class _$KilerCustomerSerializer implements StructuredSerializer<KilerCustomer> {
-  @override
-  final Iterable<Type> types = const [KilerCustomer, _$KilerCustomer];
-  @override
-  final String wireName = 'KilerCustomer';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerCustomer object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.surname != null) {
-      result
-        ..add('surname')
-        ..add(serializers.serialize(object.surname,
-            specifiedType: const FullType(String)));
-    }
-    if (object.birthdate != null) {
-      result
-        ..add('birthdate')
-        ..add(serializers.serialize(object.birthdate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.email != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(object.email,
-            specifiedType: const FullType(String)));
-    }
-    if (object.allowSms != null) {
-      result
-        ..add('allowSms')
-        ..add(serializers.serialize(object.allowSms,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.allowEmail != null) {
-      result
-        ..add('allowEmail')
-        ..add(serializers.serialize(object.allowEmail,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.gender != null) {
-      result
-        ..add('gender')
-        ..add(serializers.serialize(object.gender,
-            specifiedType: const FullType(int)));
-    }
-    if (object.password != null) {
-      result
-        ..add('password')
-        ..add(serializers.serialize(object.password,
-            specifiedType: const FullType(String)));
-    }
-    if (object.smsVerificationCode != null) {
-      result
-        ..add('smsVerificationCode')
-        ..add(serializers.serialize(object.smsVerificationCode,
-            specifiedType: const FullType(String)));
-    }
-    if (object.smsVerificationSendDate != null) {
-      result
-        ..add('smsVerificationSendDate')
-        ..add(serializers.serialize(object.smsVerificationSendDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.anonymous != null) {
-      result
-        ..add('anonymous')
-        ..add(serializers.serialize(object.anonymous,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.allowCampaign != null) {
-      result
-        ..add('allowCampaign')
-        ..add(serializers.serialize(object.allowCampaign,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.identificationNumber != null) {
-      result
-        ..add('identificationNumber')
-        ..add(serializers.serialize(object.identificationNumber,
-            specifiedType: const FullType(String)));
-    }
-    if (object.defaultAddress != null) {
-      result
-        ..add('defaultAddress')
-        ..add(serializers.serialize(object.defaultAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.invoiceAddress != null) {
-      result
-        ..add('invoiceAddress')
-        ..add(serializers.serialize(object.invoiceAddress,
-            specifiedType: const FullType(int)));
-    }
-    if (object.uid != null) {
-      result
-        ..add('uid')
-        ..add(serializers.serialize(object.uid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.defaultAddressNavigation != null) {
-      result
-        ..add('defaultAddressNavigation')
-        ..add(serializers.serialize(object.defaultAddressNavigation,
-            specifiedType: const FullType(KilerAddress)));
-    }
-    if (object.invoiceAddressNavigation != null) {
-      result
-        ..add('invoiceAddressNavigation')
-        ..add(serializers.serialize(object.invoiceAddressNavigation,
-            specifiedType: const FullType(KilerAddress)));
-    }
-    if (object.address != null) {
-      result
-        ..add('address')
-        ..add(serializers.serialize(object.address,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAddress)])));
-    }
-    if (object.affiliateClick != null) {
-      result
-        ..add('affiliateClick')
-        ..add(serializers.serialize(object.affiliateClick,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAffiliateClick)])));
-    }
-    if (object.affiliateLink != null) {
-      result
-        ..add('affiliateLink')
-        ..add(serializers.serialize(object.affiliateLink,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAffiliateLink)])));
-    }
-    if (object.agreementLog != null) {
-      result
-        ..add('agreementLog')
-        ..add(serializers.serialize(object.agreementLog,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAgreementLog)])));
-    }
-    if (object.call != null) {
-      result
-        ..add('call')
-        ..add(serializers.serialize(object.call,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerCall)])));
-    }
-    if (object.cart != null) {
-      result
-        ..add('cart')
-        ..add(serializers.serialize(object.cart,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerCart)])));
-    }
-    if (object.customerFavoriteList != null) {
-      result
-        ..add('customerFavoriteList')
-        ..add(serializers.serialize(object.customerFavoriteList,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomerFavoriteList)])));
-    }
-    if (object.customerLoginAttempt != null) {
-      result
-        ..add('customerLoginAttempt')
-        ..add(serializers.serialize(object.customerLoginAttempt,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerCustomerLoginAttempt)])));
-    }
-    if (object.deviceLogin != null) {
-      result
-        ..add('deviceLogin')
-        ..add(serializers.serialize(object.deviceLogin,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerDeviceLogin)])));
-    }
-    if (object.order != null) {
-      result
-        ..add('order')
-        ..add(serializers.serialize(object.order,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(KilerOrder)])));
-    }
-    if (object.payment != null) {
-      result
-        ..add('payment')
-        ..add(serializers.serialize(object.payment,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerPayment)])));
-    }
-    if (object.smsVerification != null) {
-      result
-        ..add('smsVerification')
-        ..add(serializers.serialize(object.smsVerification,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerSmsVerification)])));
-    }
-    if (object.ticket != null) {
-      result
-        ..add('ticket')
-        ..add(serializers.serialize(object.ticket,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerTicket)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerCustomer deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerCustomerBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'surname':
-          result.surname = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'birthdate':
-          result.birthdate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'email':
-          result.email = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'allowSms':
-          result.allowSms = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'allowEmail':
-          result.allowEmail = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'gender':
-          result.gender = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'password':
-          result.password = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'smsVerificationCode':
-          result.smsVerificationCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'smsVerificationSendDate':
-          result.smsVerificationSendDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'anonymous':
-          result.anonymous = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'allowCampaign':
-          result.allowCampaign = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'identificationNumber':
-          result.identificationNumber = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'defaultAddress':
-          result.defaultAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'invoiceAddress':
-          result.invoiceAddress = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'uid':
-          result.uid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'defaultAddressNavigation':
-          result.defaultAddressNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerAddress)) as KilerAddress);
-          break;
-        case 'invoiceAddressNavigation':
-          result.invoiceAddressNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerAddress)) as KilerAddress);
-          break;
-        case 'address':
-          result.address.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAddress)]))
-              as BuiltList<Object>);
-          break;
-        case 'affiliateClick':
-          result.affiliateClick.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAffiliateClick)]))
-              as BuiltList<Object>);
-          break;
-        case 'affiliateLink':
-          result.affiliateLink.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAffiliateLink)]))
-              as BuiltList<Object>);
-          break;
-        case 'agreementLog':
-          result.agreementLog.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAgreementLog)]))
-              as BuiltList<Object>);
-          break;
-        case 'call':
-          result.call.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCall)]))
-              as BuiltList<Object>);
-          break;
-        case 'cart':
-          result.cart.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerCart)]))
-              as BuiltList<Object>);
-          break;
-        case 'customerFavoriteList':
-          result.customerFavoriteList.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerCustomerFavoriteList)
-              ])) as BuiltList<Object>);
-          break;
-        case 'customerLoginAttempt':
-          result.customerLoginAttempt.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(KilerCustomerLoginAttempt)
-              ])) as BuiltList<Object>);
-          break;
-        case 'deviceLogin':
-          result.deviceLogin.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerDeviceLogin)]))
-              as BuiltList<Object>);
-          break;
-        case 'order':
-          result.order.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerOrder)]))
-              as BuiltList<Object>);
-          break;
-        case 'payment':
-          result.payment.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerPayment)]))
-              as BuiltList<Object>);
-          break;
-        case 'smsVerification':
-          result.smsVerification.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerSmsVerification)]))
-              as BuiltList<Object>);
-          break;
-        case 'ticket':
-          result.ticket.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerTicket)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerCustomer extends KilerCustomer {
   @override
@@ -835,44 +422,47 @@ class KilerCustomerBuilder
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerCustomerBuilder();
+  KilerCustomerBuilder() {
+    KilerCustomer._initializeBuilder(this);
+  }
 
   KilerCustomerBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _surname = _$v.surname;
-      _birthdate = _$v.birthdate;
-      _phone = _$v.phone;
-      _email = _$v.email;
-      _allowSms = _$v.allowSms;
-      _allowEmail = _$v.allowEmail;
-      _gender = _$v.gender;
-      _password = _$v.password;
-      _smsVerificationCode = _$v.smsVerificationCode;
-      _smsVerificationSendDate = _$v.smsVerificationSendDate;
-      _anonymous = _$v.anonymous;
-      _optimisticLockField = _$v.optimisticLockField;
-      _allowCampaign = _$v.allowCampaign;
-      _identificationNumber = _$v.identificationNumber;
-      _defaultAddress = _$v.defaultAddress;
-      _invoiceAddress = _$v.invoiceAddress;
-      _uid = _$v.uid;
-      _defaultAddressNavigation = _$v.defaultAddressNavigation?.toBuilder();
-      _invoiceAddressNavigation = _$v.invoiceAddressNavigation?.toBuilder();
-      _address = _$v.address?.toBuilder();
-      _affiliateClick = _$v.affiliateClick?.toBuilder();
-      _affiliateLink = _$v.affiliateLink?.toBuilder();
-      _agreementLog = _$v.agreementLog?.toBuilder();
-      _call = _$v.call?.toBuilder();
-      _cart = _$v.cart?.toBuilder();
-      _customerFavoriteList = _$v.customerFavoriteList?.toBuilder();
-      _customerLoginAttempt = _$v.customerLoginAttempt?.toBuilder();
-      _deviceLogin = _$v.deviceLogin?.toBuilder();
-      _order = _$v.order?.toBuilder();
-      _payment = _$v.payment?.toBuilder();
-      _smsVerification = _$v.smsVerification?.toBuilder();
-      _ticket = _$v.ticket?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _surname = $v.surname;
+      _birthdate = $v.birthdate;
+      _phone = $v.phone;
+      _email = $v.email;
+      _allowSms = $v.allowSms;
+      _allowEmail = $v.allowEmail;
+      _gender = $v.gender;
+      _password = $v.password;
+      _smsVerificationCode = $v.smsVerificationCode;
+      _smsVerificationSendDate = $v.smsVerificationSendDate;
+      _anonymous = $v.anonymous;
+      _optimisticLockField = $v.optimisticLockField;
+      _allowCampaign = $v.allowCampaign;
+      _identificationNumber = $v.identificationNumber;
+      _defaultAddress = $v.defaultAddress;
+      _invoiceAddress = $v.invoiceAddress;
+      _uid = $v.uid;
+      _defaultAddressNavigation = $v.defaultAddressNavigation?.toBuilder();
+      _invoiceAddressNavigation = $v.invoiceAddressNavigation?.toBuilder();
+      _address = $v.address?.toBuilder();
+      _affiliateClick = $v.affiliateClick?.toBuilder();
+      _affiliateLink = $v.affiliateLink?.toBuilder();
+      _agreementLog = $v.agreementLog?.toBuilder();
+      _call = $v.call?.toBuilder();
+      _cart = $v.cart?.toBuilder();
+      _customerFavoriteList = $v.customerFavoriteList?.toBuilder();
+      _customerLoginAttempt = $v.customerLoginAttempt?.toBuilder();
+      _deviceLogin = $v.deviceLogin?.toBuilder();
+      _order = $v.order?.toBuilder();
+      _payment = $v.payment?.toBuilder();
+      _smsVerification = $v.smsVerification?.toBuilder();
+      _ticket = $v.ticket?.toBuilder();
       _$v = null;
     }
     return this;
@@ -880,9 +470,7 @@ class KilerCustomerBuilder
 
   @override
   void replace(KilerCustomer other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerCustomer;
   }
 

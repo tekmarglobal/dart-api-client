@@ -101,7 +101,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionCountiesPost**
-> RestResultOfListOfDefinitionServiceCountiesResponse apiDefinitionCountiesPost(definitionServiceCountiesRequest)
+> RestResultOfListOfDefinitionServiceCountiesResponse apiDefinitionCountiesPost(body)
 
 
 
@@ -114,10 +114,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var definitionServiceCountiesRequest = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest | 
+var body = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionCountiesPost(definitionServiceCountiesRequest);
+    var result = api_instance.apiDefinitionCountiesPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
@@ -128,7 +128,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **definitionServiceCountiesRequest** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
+ **body** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -228,7 +228,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionNeighborhoodPost**
-> RestResultOfListOfDefinitionServiceNeighborResponse apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest)
+> RestResultOfListOfDefinitionServiceNeighborResponse apiDefinitionNeighborhoodPost(body)
 
 
 
@@ -241,10 +241,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var definitionServiceNeighborRequest = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest | 
+var body = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
+    var result = api_instance.apiDefinitionNeighborhoodPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
@@ -255,7 +255,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **definitionServiceNeighborRequest** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
+ **body** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionUpdateAgreementLogPost**
-> RestResultOfDefinitionServiceUpdateAgreementLogResponse apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest)
+> RestResultOfDefinitionServiceUpdateAgreementLogResponse apiDefinitionUpdateAgreementLogPost(body)
 
 
 
@@ -286,10 +286,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new DefinitionApi();
-var definitionServiceUpdateAgreementRequest = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest | 
+var body = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest | 
 
 try { 
-    var result = api_instance.apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
+    var result = api_instance.apiDefinitionUpdateAgreementLogPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
@@ -300,7 +300,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **definitionServiceUpdateAgreementRequest** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
+ **body** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
 
 ### Return type
 

@@ -1,188 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_neighborhood.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerNeighborhood> _$kilerNeighborhoodSerializer =
-    new _$KilerNeighborhoodSerializer();
-
-class _$KilerNeighborhoodSerializer
-    implements StructuredSerializer<KilerNeighborhood> {
-  @override
-  final Iterable<Type> types = const [KilerNeighborhood, _$KilerNeighborhood];
-  @override
-  final String wireName = 'KilerNeighborhood';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerNeighborhood object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.county != null) {
-      result
-        ..add('county')
-        ..add(serializers.serialize(object.county,
-            specifiedType: const FullType(int)));
-    }
-    if (object.city != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(object.city,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gpsId != null) {
-      result
-        ..add('gpsId')
-        ..add(serializers.serialize(object.gpsId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.formalCode != null) {
-      result
-        ..add('formalCode')
-        ..add(serializers.serialize(object.formalCode,
-            specifiedType: const FullType(int)));
-    }
-    if (object.population != null) {
-      result
-        ..add('population')
-        ..add(serializers.serialize(object.population,
-            specifiedType: const FullType(int)));
-    }
-    if (object.cityNavigation != null) {
-      result
-        ..add('cityNavigation')
-        ..add(serializers.serialize(object.cityNavigation,
-            specifiedType: const FullType(KilerCity)));
-    }
-    if (object.countyNavigation != null) {
-      result
-        ..add('countyNavigation')
-        ..add(serializers.serialize(object.countyNavigation,
-            specifiedType: const FullType(KilerCounty)));
-    }
-    if (object.address != null) {
-      result
-        ..add('address')
-        ..add(serializers.serialize(object.address,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAddress)])));
-    }
-    if (object.branch != null) {
-      result
-        ..add('branch')
-        ..add(serializers.serialize(object.branch,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerBranch)])));
-    }
-    if (object.regionRegionsNeighborhoodNeighborhoods != null) {
-      result
-        ..add('regionRegionsNeighborhoodNeighborhoods')
-        ..add(serializers.serialize(
-            object.regionRegionsNeighborhoodNeighborhoods,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(KilerRegionRegionsNeighborhoodNeighborhoods)
-            ])));
-    }
-    return result;
-  }
-
-  @override
-  KilerNeighborhood deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerNeighborhoodBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'county':
-          result.county = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gpsId':
-          result.gpsId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'formalCode':
-          result.formalCode = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'population':
-          result.population = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'cityNavigation':
-          result.cityNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCity)) as KilerCity);
-          break;
-        case 'countyNavigation':
-          result.countyNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCounty)) as KilerCounty);
-          break;
-        case 'address':
-          result.address.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAddress)]))
-              as BuiltList<Object>);
-          break;
-        case 'branch':
-          result.branch.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerBranch)]))
-              as BuiltList<Object>);
-          break;
-        case 'regionRegionsNeighborhoodNeighborhoods':
-          result.regionRegionsNeighborhoodNeighborhoods.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(KilerRegionRegionsNeighborhoodNeighborhoods)
-                  ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerNeighborhood extends KilerNeighborhood {
   @override
@@ -381,24 +204,27 @@ class KilerNeighborhoodBuilder
       _$this._regionRegionsNeighborhoodNeighborhoods =
           regionRegionsNeighborhoodNeighborhoods;
 
-  KilerNeighborhoodBuilder();
+  KilerNeighborhoodBuilder() {
+    KilerNeighborhood._initializeBuilder(this);
+  }
 
   KilerNeighborhoodBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _county = _$v.county;
-      _city = _$v.city;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gpsId = _$v.gpsId;
-      _formalCode = _$v.formalCode;
-      _population = _$v.population;
-      _cityNavigation = _$v.cityNavigation?.toBuilder();
-      _countyNavigation = _$v.countyNavigation?.toBuilder();
-      _address = _$v.address?.toBuilder();
-      _branch = _$v.branch?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _county = $v.county;
+      _city = $v.city;
+      _optimisticLockField = $v.optimisticLockField;
+      _gpsId = $v.gpsId;
+      _formalCode = $v.formalCode;
+      _population = $v.population;
+      _cityNavigation = $v.cityNavigation?.toBuilder();
+      _countyNavigation = $v.countyNavigation?.toBuilder();
+      _address = $v.address?.toBuilder();
+      _branch = $v.branch?.toBuilder();
       _regionRegionsNeighborhoodNeighborhoods =
-          _$v.regionRegionsNeighborhoodNeighborhoods?.toBuilder();
+          $v.regionRegionsNeighborhoodNeighborhoods?.toBuilder();
       _$v = null;
     }
     return this;
@@ -406,9 +232,7 @@ class KilerNeighborhoodBuilder
 
   @override
   void replace(KilerNeighborhood other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerNeighborhood;
   }
 

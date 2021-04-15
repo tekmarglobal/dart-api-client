@@ -1,102 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'register_service_login_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RegisterServiceLoginResponse>
-    _$registerServiceLoginResponseSerializer =
-    new _$RegisterServiceLoginResponseSerializer();
-
-class _$RegisterServiceLoginResponseSerializer
-    implements StructuredSerializer<RegisterServiceLoginResponse> {
-  @override
-  final Iterable<Type> types = const [
-    RegisterServiceLoginResponse,
-    _$RegisterServiceLoginResponse
-  ];
-  @override
-  final String wireName = 'RegisterServiceLoginResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, RegisterServiceLoginResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.token != null) {
-      result
-        ..add('token')
-        ..add(serializers.serialize(object.token,
-            specifiedType: const FullType(String)));
-    }
-    if (object.customerId != null) {
-      result
-        ..add('customerId')
-        ..add(serializers.serialize(object.customerId,
-            specifiedType: const FullType(int)));
-    }
-    if (object.registered != null) {
-      result
-        ..add('registered')
-        ..add(serializers.serialize(object.registered,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.firebaseToken != null) {
-      result
-        ..add('firebaseToken')
-        ..add(serializers.serialize(object.firebaseToken,
-            specifiedType: const FullType(String)));
-    }
-    if (object.versionResponse != null) {
-      result
-        ..add('versionResponse')
-        ..add(serializers.serialize(object.versionResponse,
-            specifiedType: const FullType(RegisterServiceVersionResponse)));
-    }
-    return result;
-  }
-
-  @override
-  RegisterServiceLoginResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RegisterServiceLoginResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'token':
-          result.token = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'customerId':
-          result.customerId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'registered':
-          result.registered = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'firebaseToken':
-          result.firebaseToken = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'versionResponse':
-          result.versionResponse.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(RegisterServiceVersionResponse))
-              as RegisterServiceVersionResponse);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RegisterServiceLoginResponse extends RegisterServiceLoginResponse {
   @override
@@ -193,15 +102,18 @@ class RegisterServiceLoginResponseBuilder
   set versionResponse(RegisterServiceVersionResponseBuilder versionResponse) =>
       _$this._versionResponse = versionResponse;
 
-  RegisterServiceLoginResponseBuilder();
+  RegisterServiceLoginResponseBuilder() {
+    RegisterServiceLoginResponse._initializeBuilder(this);
+  }
 
   RegisterServiceLoginResponseBuilder get _$this {
-    if (_$v != null) {
-      _token = _$v.token;
-      _customerId = _$v.customerId;
-      _registered = _$v.registered;
-      _firebaseToken = _$v.firebaseToken;
-      _versionResponse = _$v.versionResponse?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _token = $v.token;
+      _customerId = $v.customerId;
+      _registered = $v.registered;
+      _firebaseToken = $v.firebaseToken;
+      _versionResponse = $v.versionResponse?.toBuilder();
       _$v = null;
     }
     return this;
@@ -209,9 +121,7 @@ class RegisterServiceLoginResponseBuilder
 
   @override
   void replace(RegisterServiceLoginResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RegisterServiceLoginResponse;
   }
 

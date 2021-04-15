@@ -1,101 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_agreement_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceAgreementResponse>
-    _$definitionServiceAgreementResponseSerializer =
-    new _$DefinitionServiceAgreementResponseSerializer();
-
-class _$DefinitionServiceAgreementResponseSerializer
-    implements StructuredSerializer<DefinitionServiceAgreementResponse> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceAgreementResponse,
-    _$DefinitionServiceAgreementResponse
-  ];
-  @override
-  final String wireName = 'DefinitionServiceAgreementResponse';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceAgreementResponse object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.id != null) {
-      result
-        ..add('id')
-        ..add(serializers.serialize(object.id,
-            specifiedType: const FullType(int)));
-    }
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.content != null) {
-      result
-        ..add('content')
-        ..add(serializers.serialize(object.content,
-            specifiedType: const FullType(String)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.required_ != null) {
-      result
-        ..add('required')
-        ..add(serializers.serialize(object.required_,
-            specifiedType: const FullType(bool)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceAgreementResponse deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceAgreementResponseBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'content':
-          result.content = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'required':
-          result.required_ = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceAgreementResponse
     extends DefinitionServiceAgreementResponse {
@@ -185,15 +95,18 @@ class DefinitionServiceAgreementResponseBuilder
   bool get required_ => _$this._required_;
   set required_(bool required_) => _$this._required_ = required_;
 
-  DefinitionServiceAgreementResponseBuilder();
+  DefinitionServiceAgreementResponseBuilder() {
+    DefinitionServiceAgreementResponse._initializeBuilder(this);
+  }
 
   DefinitionServiceAgreementResponseBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _code = _$v.code;
-      _content = _$v.content;
-      _name = _$v.name;
-      _required_ = _$v.required_;
+    final $v = _$v;
+    if ($v != null) {
+      _id = $v.id;
+      _code = $v.code;
+      _content = $v.content;
+      _name = $v.name;
+      _required_ = $v.required_;
       _$v = null;
     }
     return this;
@@ -201,9 +114,7 @@ class DefinitionServiceAgreementResponseBuilder
 
   @override
   void replace(DefinitionServiceAgreementResponse other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceAgreementResponse;
   }
 

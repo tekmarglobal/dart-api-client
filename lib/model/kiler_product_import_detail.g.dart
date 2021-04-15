@@ -1,141 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_product_import_detail.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerProductImportDetail> _$kilerProductImportDetailSerializer =
-    new _$KilerProductImportDetailSerializer();
-
-class _$KilerProductImportDetailSerializer
-    implements StructuredSerializer<KilerProductImportDetail> {
-  @override
-  final Iterable<Type> types = const [
-    KilerProductImportDetail,
-    _$KilerProductImportDetail
-  ];
-  @override
-  final String wireName = 'KilerProductImportDetail';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerProductImportDetail object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.product != null) {
-      result
-        ..add('product')
-        ..add(serializers.serialize(object.product,
-            specifiedType: const FullType(int)));
-    }
-    if (object.oldValue != null) {
-      result
-        ..add('oldValue')
-        ..add(serializers.serialize(object.oldValue,
-            specifiedType: const FullType(String)));
-    }
-    if (object.newValue != null) {
-      result
-        ..add('newValue')
-        ..add(serializers.serialize(object.newValue,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productImport != null) {
-      result
-        ..add('productImport')
-        ..add(serializers.serialize(object.productImport,
-            specifiedType: const FullType(int)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.operationType != null) {
-      result
-        ..add('operationType')
-        ..add(serializers.serialize(object.operationType,
-            specifiedType: const FullType(String)));
-    }
-    if (object.productImportNavigation != null) {
-      result
-        ..add('productImportNavigation')
-        ..add(serializers.serialize(object.productImportNavigation,
-            specifiedType: const FullType(KilerProductImport)));
-    }
-    if (object.productNavigation != null) {
-      result
-        ..add('productNavigation')
-        ..add(serializers.serialize(object.productNavigation,
-            specifiedType: const FullType(KilerProduct)));
-    }
-    return result;
-  }
-
-  @override
-  KilerProductImportDetail deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerProductImportDetailBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'product':
-          result.product = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'oldValue':
-          result.oldValue = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'newValue':
-          result.newValue = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productImport':
-          result.productImport = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'operationType':
-          result.operationType = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'productImportNavigation':
-          result.productImportNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerProductImport))
-              as KilerProductImport);
-          break;
-        case 'productNavigation':
-          result.productNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerProduct)) as KilerProduct);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerProductImportDetail extends KilerProductImportDetail {
   @override
@@ -279,19 +149,22 @@ class KilerProductImportDetailBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerProductImportDetailBuilder();
+  KilerProductImportDetailBuilder() {
+    KilerProductImportDetail._initializeBuilder(this);
+  }
 
   KilerProductImportDetailBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _product = _$v.product;
-      _oldValue = _$v.oldValue;
-      _newValue = _$v.newValue;
-      _productImport = _$v.productImport;
-      _optimisticLockField = _$v.optimisticLockField;
-      _operationType = _$v.operationType;
-      _productImportNavigation = _$v.productImportNavigation?.toBuilder();
-      _productNavigation = _$v.productNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _product = $v.product;
+      _oldValue = $v.oldValue;
+      _newValue = $v.newValue;
+      _productImport = $v.productImport;
+      _optimisticLockField = $v.optimisticLockField;
+      _operationType = $v.operationType;
+      _productImportNavigation = $v.productImportNavigation?.toBuilder();
+      _productNavigation = $v.productNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -299,9 +172,7 @@ class KilerProductImportDetailBuilder
 
   @override
   void replace(KilerProductImportDetail other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerProductImportDetail;
   }
 

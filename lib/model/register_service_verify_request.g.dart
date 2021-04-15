@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'register_service_verify_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<RegisterServiceVerifyRequest>
-    _$registerServiceVerifyRequestSerializer =
-    new _$RegisterServiceVerifyRequestSerializer();
-
-class _$RegisterServiceVerifyRequestSerializer
-    implements StructuredSerializer<RegisterServiceVerifyRequest> {
-  @override
-  final Iterable<Type> types = const [
-    RegisterServiceVerifyRequest,
-    _$RegisterServiceVerifyRequest
-  ];
-  @override
-  final String wireName = 'RegisterServiceVerifyRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, RegisterServiceVerifyRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.phone != null) {
-      result
-        ..add('phone')
-        ..add(serializers.serialize(object.phone,
-            specifiedType: const FullType(String)));
-    }
-    if (object.smsCode != null) {
-      result
-        ..add('smsCode')
-        ..add(serializers.serialize(object.smsCode,
-            specifiedType: const FullType(String)));
-    }
-    return result;
-  }
-
-  @override
-  RegisterServiceVerifyRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new RegisterServiceVerifyRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'phone':
-          result.phone = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'smsCode':
-          result.smsCode = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$RegisterServiceVerifyRequest extends RegisterServiceVerifyRequest {
   @override
@@ -124,12 +64,15 @@ class RegisterServiceVerifyRequestBuilder
   String get smsCode => _$this._smsCode;
   set smsCode(String smsCode) => _$this._smsCode = smsCode;
 
-  RegisterServiceVerifyRequestBuilder();
+  RegisterServiceVerifyRequestBuilder() {
+    RegisterServiceVerifyRequest._initializeBuilder(this);
+  }
 
   RegisterServiceVerifyRequestBuilder get _$this {
-    if (_$v != null) {
-      _phone = _$v.phone;
-      _smsCode = _$v.smsCode;
+    final $v = _$v;
+    if ($v != null) {
+      _phone = $v.phone;
+      _smsCode = $v.smsCode;
       _$v = null;
     }
     return this;
@@ -137,9 +80,7 @@ class RegisterServiceVerifyRequestBuilder
 
   @override
   void replace(RegisterServiceVerifyRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$RegisterServiceVerifyRequest;
   }
 

@@ -27,7 +27,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
         ///
         /// 
         Future<Response<RestResultOfCartServiceCreateCartResponse>> apiCartCreateCartPost({ 
-            CartServiceCreateCartRequest cartServiceCreateCartRequest,
+            CartServiceCreateCartRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -90,7 +90,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
             dynamic _bodyData;
 
                         const _type = FullType(CartServiceCreateCartRequest);
-                        _bodyData = _serializers.serialize(cartServiceCreateCartRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Cart/CreateCart',
@@ -475,7 +475,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
         ///
         /// 
         Future<Response<RestResultOfCartServiceCartResponse>> apiCartUpdateCartPost({ 
-            CartServiceUpdateCartRequest cartServiceUpdateCartRequest,
+            CartServiceUpdateCartRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -538,7 +538,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
             dynamic _bodyData;
 
                         const _type = FullType(CartServiceUpdateCartRequest);
-                        _bodyData = _serializers.serialize(cartServiceUpdateCartRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Cart/UpdateCart',
@@ -571,7 +571,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
         ///
         /// 
         Future<Response<RestResultOfCartServiceUpdateCartRegionResponse>> apiCartUpdateCartRegionPost({ 
-            CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest,
+            CartServiceUpdateCartRegionRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -634,7 +634,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
             dynamic _bodyData;
 
                         const _type = FullType(CartServiceUpdateCartRegionRequest);
-                        _bodyData = _serializers.serialize(cartServiceUpdateCartRegionRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Cart/UpdateCartRegion',
@@ -667,7 +667,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
         ///
         /// 
         Future<Response<RestResultOfCartServiceCartResponse>> apiCartUpdateTimeslotPost({ 
-            CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest,
+            CartServiceUpdateTimeslotRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -730,7 +730,7 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
             dynamic _bodyData;
 
                         const _type = FullType(CartServiceUpdateTimeslotRequest);
-                        _bodyData = _serializers.serialize(cartServiceUpdateTimeslotRequest, specifiedType: _type);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
 
             final _response = await _dio.request<dynamic>(
             r'/api/Cart/UpdateTimeslot',

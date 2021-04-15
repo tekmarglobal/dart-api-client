@@ -1,156 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_device_login.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerDeviceLogin> _$kilerDeviceLoginSerializer =
-    new _$KilerDeviceLoginSerializer();
-
-class _$KilerDeviceLoginSerializer
-    implements StructuredSerializer<KilerDeviceLogin> {
-  @override
-  final Iterable<Type> types = const [KilerDeviceLogin, _$KilerDeviceLogin];
-  @override
-  final String wireName = 'KilerDeviceLogin';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerDeviceLogin object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customer != null) {
-      result
-        ..add('customer')
-        ..add(serializers.serialize(object.customer,
-            specifiedType: const FullType(int)));
-    }
-    if (object.device != null) {
-      result
-        ..add('device')
-        ..add(serializers.serialize(object.device,
-            specifiedType: const FullType(int)));
-    }
-    if (object.isActive != null) {
-      result
-        ..add('isActive')
-        ..add(serializers.serialize(object.isActive,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.token != null) {
-      result
-        ..add('token')
-        ..add(serializers.serialize(object.token,
-            specifiedType: const FullType(String)));
-    }
-    if (object.loginDate != null) {
-      result
-        ..add('loginDate')
-        ..add(serializers.serialize(object.loginDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.logoutDate != null) {
-      result
-        ..add('logoutDate')
-        ..add(serializers.serialize(object.logoutDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.customerNavigation != null) {
-      result
-        ..add('customerNavigation')
-        ..add(serializers.serialize(object.customerNavigation,
-            specifiedType: const FullType(KilerCustomer)));
-    }
-    if (object.deviceNavigation != null) {
-      result
-        ..add('deviceNavigation')
-        ..add(serializers.serialize(object.deviceNavigation,
-            specifiedType: const FullType(KilerDevice)));
-    }
-    return result;
-  }
-
-  @override
-  KilerDeviceLogin deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerDeviceLoginBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customer':
-          result.customer = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'device':
-          result.device = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'isActive':
-          result.isActive = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'token':
-          result.token = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'loginDate':
-          result.loginDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'logoutDate':
-          result.logoutDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'customerNavigation':
-          result.customerNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerCustomer)) as KilerCustomer);
-          break;
-        case 'deviceNavigation':
-          result.deviceNavigation.replace(serializers.deserialize(value,
-              specifiedType: const FullType(KilerDevice)) as KilerDevice);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerDeviceLogin extends KilerDeviceLogin {
   @override
@@ -314,21 +169,24 @@ class KilerDeviceLoginBuilder
   set deviceNavigation(KilerDeviceBuilder deviceNavigation) =>
       _$this._deviceNavigation = deviceNavigation;
 
-  KilerDeviceLoginBuilder();
+  KilerDeviceLoginBuilder() {
+    KilerDeviceLogin._initializeBuilder(this);
+  }
 
   KilerDeviceLoginBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _customer = _$v.customer;
-      _device = _$v.device;
-      _isActive = _$v.isActive;
-      _token = _$v.token;
-      _loginDate = _$v.loginDate;
-      _logoutDate = _$v.logoutDate;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
-      _customerNavigation = _$v.customerNavigation?.toBuilder();
-      _deviceNavigation = _$v.deviceNavigation?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _customer = $v.customer;
+      _device = $v.device;
+      _isActive = $v.isActive;
+      _token = $v.token;
+      _loginDate = $v.loginDate;
+      _logoutDate = $v.logoutDate;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
+      _customerNavigation = $v.customerNavigation?.toBuilder();
+      _deviceNavigation = $v.deviceNavigation?.toBuilder();
       _$v = null;
     }
     return this;
@@ -336,9 +194,7 @@ class KilerDeviceLoginBuilder
 
   @override
   void replace(KilerDeviceLogin other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerDeviceLogin;
   }
 

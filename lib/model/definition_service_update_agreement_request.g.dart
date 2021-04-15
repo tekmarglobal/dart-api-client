@@ -1,71 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'definition_service_update_agreement_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<DefinitionServiceUpdateAgreementRequest>
-    _$definitionServiceUpdateAgreementRequestSerializer =
-    new _$DefinitionServiceUpdateAgreementRequestSerializer();
-
-class _$DefinitionServiceUpdateAgreementRequestSerializer
-    implements StructuredSerializer<DefinitionServiceUpdateAgreementRequest> {
-  @override
-  final Iterable<Type> types = const [
-    DefinitionServiceUpdateAgreementRequest,
-    _$DefinitionServiceUpdateAgreementRequest
-  ];
-  @override
-  final String wireName = 'DefinitionServiceUpdateAgreementRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, DefinitionServiceUpdateAgreementRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.code != null) {
-      result
-        ..add('code')
-        ..add(serializers.serialize(object.code,
-            specifiedType: const FullType(String)));
-    }
-    if (object.accept != null) {
-      result
-        ..add('accept')
-        ..add(serializers.serialize(object.accept,
-            specifiedType: const FullType(bool)));
-    }
-    return result;
-  }
-
-  @override
-  DefinitionServiceUpdateAgreementRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new DefinitionServiceUpdateAgreementRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'code':
-          result.code = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'accept':
-          result.accept = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$DefinitionServiceUpdateAgreementRequest
     extends DefinitionServiceUpdateAgreementRequest {
@@ -130,12 +70,15 @@ class DefinitionServiceUpdateAgreementRequestBuilder
   bool get accept => _$this._accept;
   set accept(bool accept) => _$this._accept = accept;
 
-  DefinitionServiceUpdateAgreementRequestBuilder();
+  DefinitionServiceUpdateAgreementRequestBuilder() {
+    DefinitionServiceUpdateAgreementRequest._initializeBuilder(this);
+  }
 
   DefinitionServiceUpdateAgreementRequestBuilder get _$this {
-    if (_$v != null) {
-      _code = _$v.code;
-      _accept = _$v.accept;
+    final $v = _$v;
+    if ($v != null) {
+      _code = $v.code;
+      _accept = $v.accept;
       _$v = null;
     }
     return this;
@@ -143,9 +86,7 @@ class DefinitionServiceUpdateAgreementRequestBuilder
 
   @override
   void replace(DefinitionServiceUpdateAgreementRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DefinitionServiceUpdateAgreementRequest;
   }
 

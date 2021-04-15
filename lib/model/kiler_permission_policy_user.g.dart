@@ -1,138 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_permission_policy_user.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerPermissionPolicyUser> _$kilerPermissionPolicyUserSerializer =
-    new _$KilerPermissionPolicyUserSerializer();
-
-class _$KilerPermissionPolicyUserSerializer
-    implements StructuredSerializer<KilerPermissionPolicyUser> {
-  @override
-  final Iterable<Type> types = const [
-    KilerPermissionPolicyUser,
-    _$KilerPermissionPolicyUser
-  ];
-  @override
-  final String wireName = 'KilerPermissionPolicyUser';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, KilerPermissionPolicyUser object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(String)));
-    }
-    if (object.storedPassword != null) {
-      result
-        ..add('storedPassword')
-        ..add(serializers.serialize(object.storedPassword,
-            specifiedType: const FullType(String)));
-    }
-    if (object.changePasswordOnFirstLogon != null) {
-      result
-        ..add('changePasswordOnFirstLogon')
-        ..add(serializers.serialize(object.changePasswordOnFirstLogon,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.userName != null) {
-      result
-        ..add('userName')
-        ..add(serializers.serialize(object.userName,
-            specifiedType: const FullType(String)));
-    }
-    if (object.isActive != null) {
-      result
-        ..add('isActive')
-        ..add(serializers.serialize(object.isActive,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.gcrecord != null) {
-      result
-        ..add('gcrecord')
-        ..add(serializers.serialize(object.gcrecord,
-            specifiedType: const FullType(int)));
-    }
-    if (object.permissionPolicyUserUsersPermissionPolicyRoleRoles != null) {
-      result
-        ..add('permissionPolicyUserUsersPermissionPolicyRoleRoles')
-        ..add(serializers.serialize(
-            object.permissionPolicyUserUsersPermissionPolicyRoleRoles,
-            specifiedType: const FullType(BuiltList, const [
-              const FullType(
-                  KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles)
-            ])));
-    }
-    return result;
-  }
-
-  @override
-  KilerPermissionPolicyUser deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerPermissionPolicyUserBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'storedPassword':
-          result.storedPassword = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'changePasswordOnFirstLogon':
-          result.changePasswordOnFirstLogon = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'userName':
-          result.userName = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'isActive':
-          result.isActive = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'gcrecord':
-          result.gcrecord = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'permissionPolicyUserUsersPermissionPolicyRoleRoles':
-          result.permissionPolicyUserUsersPermissionPolicyRoleRoles.replace(
-              serializers.deserialize(value,
-                  specifiedType: const FullType(BuiltList, const [
-                    const FullType(
-                        KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles)
-                  ])) as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerPermissionPolicyUser extends KilerPermissionPolicyUser {
   @override
@@ -273,19 +146,22 @@ class KilerPermissionPolicyUserBuilder
       _$this._permissionPolicyUserUsersPermissionPolicyRoleRoles =
           permissionPolicyUserUsersPermissionPolicyRoleRoles;
 
-  KilerPermissionPolicyUserBuilder();
+  KilerPermissionPolicyUserBuilder() {
+    KilerPermissionPolicyUser._initializeBuilder(this);
+  }
 
   KilerPermissionPolicyUserBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _storedPassword = _$v.storedPassword;
-      _changePasswordOnFirstLogon = _$v.changePasswordOnFirstLogon;
-      _userName = _$v.userName;
-      _isActive = _$v.isActive;
-      _optimisticLockField = _$v.optimisticLockField;
-      _gcrecord = _$v.gcrecord;
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _storedPassword = $v.storedPassword;
+      _changePasswordOnFirstLogon = $v.changePasswordOnFirstLogon;
+      _userName = $v.userName;
+      _isActive = $v.isActive;
+      _optimisticLockField = $v.optimisticLockField;
+      _gcrecord = $v.gcrecord;
       _permissionPolicyUserUsersPermissionPolicyRoleRoles =
-          _$v.permissionPolicyUserUsersPermissionPolicyRoleRoles?.toBuilder();
+          $v.permissionPolicyUserUsersPermissionPolicyRoleRoles?.toBuilder();
       _$v = null;
     }
     return this;
@@ -293,9 +169,7 @@ class KilerPermissionPolicyUserBuilder
 
   @override
   void replace(KilerPermissionPolicyUser other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerPermissionPolicyUser;
   }
 

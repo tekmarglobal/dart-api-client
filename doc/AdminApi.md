@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminRegionNeighborhoodPost**
-> RestResultOfListOfAdminServiceAdminNeighborResponse apiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest)
+> RestResultOfListOfAdminServiceAdminNeighborResponse apiAdminRegionNeighborhoodPost(body)
 
 
 
@@ -296,10 +296,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
-var adminServiceRegionNeighborhoodRequest = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest | 
+var body = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest | 
 
 try { 
-    var result = api_instance.apiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest);
+    var result = api_instance.apiAdminRegionNeighborhoodPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n');
@@ -310,7 +310,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adminServiceRegionNeighborhoodRequest** | [**AdminServiceRegionNeighborhoodRequest**](AdminServiceRegionNeighborhoodRequest.md)|  | [optional] 
+ **body** | [**AdminServiceRegionNeighborhoodRequest**](AdminServiceRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAdminUpdateRegionNeighborhoodPost**
-> RestResultOfAdminServiceAdminNeighborResponse apiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest)
+> RestResultOfAdminServiceAdminNeighborResponse apiAdminUpdateRegionNeighborhoodPost(body)
 
 
 
@@ -431,10 +431,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AdminApi();
-var adminServiceUpdateRegionNeighborhoodRequest = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest | 
+var body = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest | 
 
 try { 
-    var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest);
+    var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n');
@@ -445,7 +445,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adminServiceUpdateRegionNeighborhoodRequest** | [**AdminServiceUpdateRegionNeighborhoodRequest**](AdminServiceUpdateRegionNeighborhoodRequest.md)|  | [optional] 
+ **body** | [**AdminServiceUpdateRegionNeighborhoodRequest**](AdminServiceUpdateRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 

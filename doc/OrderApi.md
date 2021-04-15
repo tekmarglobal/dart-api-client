@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **apiOrderCreateOrderPost**
-> RestResultOfOrderServiceOrderResponse apiOrderCreateOrderPost(orderServiceOrderRequest)
+> RestResultOfOrderServiceOrderResponse apiOrderCreateOrderPost(body)
 
 
 
@@ -30,10 +30,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new OrderApi();
-var orderServiceOrderRequest = new OrderServiceOrderRequest(); // OrderServiceOrderRequest | 
+var body = new OrderServiceOrderRequest(); // OrderServiceOrderRequest | 
 
 try { 
-    var result = api_instance.apiOrderCreateOrderPost(orderServiceOrderRequest);
+    var result = api_instance.apiOrderCreateOrderPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderServiceOrderRequest** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
+ **body** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -103,7 +103,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderGetOrderPost**
-> RestResultOfOrderServiceOrderResponse apiOrderGetOrderPost(orderServiceGetOrderRequest)
+> RestResultOfOrderServiceOrderResponse apiOrderGetOrderPost(body)
 
 
 
@@ -116,10 +116,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new OrderApi();
-var orderServiceGetOrderRequest = new OrderServiceGetOrderRequest(); // OrderServiceGetOrderRequest | 
+var body = new OrderServiceGetOrderRequest(); // OrderServiceGetOrderRequest | 
 
 try { 
-    var result = api_instance.apiOrderGetOrderPost(orderServiceGetOrderRequest);
+    var result = api_instance.apiOrderGetOrderPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
@@ -130,7 +130,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderServiceGetOrderRequest** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
+ **body** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -189,7 +189,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderUpdateStatusPost**
-> RestResultOfOrderServiceOrderResponse apiOrderUpdateStatusPost(orderServiceUpdateOrderRequest)
+> RestResultOfOrderServiceOrderResponse apiOrderUpdateStatusPost(body)
 
 
 
@@ -202,10 +202,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new OrderApi();
-var orderServiceUpdateOrderRequest = new OrderServiceUpdateOrderRequest(); // OrderServiceUpdateOrderRequest | 
+var body = new OrderServiceUpdateOrderRequest(); // OrderServiceUpdateOrderRequest | 
 
 try { 
-    var result = api_instance.apiOrderUpdateStatusPost(orderServiceUpdateOrderRequest);
+    var result = api_instance.apiOrderUpdateStatusPost(body);
     print(result);
 } catch (e) {
     print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
@@ -216,7 +216,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderServiceUpdateOrderRequest** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
+ **body** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
 
 ### Return type
 

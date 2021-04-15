@@ -1,150 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'kiler_agreement.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<KilerAgreement> _$kilerAgreementSerializer =
-    new _$KilerAgreementSerializer();
-
-class _$KilerAgreementSerializer
-    implements StructuredSerializer<KilerAgreement> {
-  @override
-  final Iterable<Type> types = const [KilerAgreement, _$KilerAgreement];
-  @override
-  final String wireName = 'KilerAgreement';
-
-  @override
-  Iterable<Object> serialize(Serializers serializers, KilerAgreement object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.oid != null) {
-      result
-        ..add('oid')
-        ..add(serializers.serialize(object.oid,
-            specifiedType: const FullType(int)));
-    }
-    if (object.name != null) {
-      result
-        ..add('name')
-        ..add(serializers.serialize(object.name,
-            specifiedType: const FullType(String)));
-    }
-    if (object.agreementType != null) {
-      result
-        ..add('agreementType')
-        ..add(serializers.serialize(object.agreementType,
-            specifiedType: const FullType(int)));
-    }
-    if (object.startDate != null) {
-      result
-        ..add('startDate')
-        ..add(serializers.serialize(object.startDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.endDate != null) {
-      result
-        ..add('endDate')
-        ..add(serializers.serialize(object.endDate,
-            specifiedType: const FullType(DateTime)));
-    }
-    if (object.content != null) {
-      result
-        ..add('content')
-        ..add(serializers.serialize(object.content,
-            specifiedType: const FullType(String)));
-    }
-    if (object.optimisticLockField != null) {
-      result
-        ..add('optimisticLockField')
-        ..add(serializers.serialize(object.optimisticLockField,
-            specifiedType: const FullType(int)));
-    }
-    if (object.isRequired != null) {
-      result
-        ..add('isRequired')
-        ..add(serializers.serialize(object.isRequired,
-            specifiedType: const FullType(bool)));
-    }
-    if (object.agreementTypeNavigation != null) {
-      result
-        ..add('agreementTypeNavigation')
-        ..add(serializers.serialize(object.agreementTypeNavigation,
-            specifiedType: const FullType(KilerAgreementType)));
-    }
-    if (object.agreementLog != null) {
-      result
-        ..add('agreementLog')
-        ..add(serializers.serialize(object.agreementLog,
-            specifiedType: const FullType(
-                BuiltList, const [const FullType(KilerAgreementLog)])));
-    }
-    return result;
-  }
-
-  @override
-  KilerAgreement deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new KilerAgreementBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'oid':
-          result.oid = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'agreementType':
-          result.agreementType = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'startDate':
-          result.startDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'endDate':
-          result.endDate = serializers.deserialize(value,
-              specifiedType: const FullType(DateTime)) as DateTime;
-          break;
-        case 'content':
-          result.content = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'optimisticLockField':
-          result.optimisticLockField = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-        case 'isRequired':
-          result.isRequired = serializers.deserialize(value,
-              specifiedType: const FullType(bool)) as bool;
-          break;
-        case 'agreementTypeNavigation':
-          result.agreementTypeNavigation.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(KilerAgreementType))
-              as KilerAgreementType);
-          break;
-        case 'agreementLog':
-          result.agreementLog.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(
-                      BuiltList, const [const FullType(KilerAgreementLog)]))
-              as BuiltList<Object>);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$KilerAgreement extends KilerAgreement {
   @override
@@ -295,20 +156,23 @@ class KilerAgreementBuilder
   set agreementLog(ListBuilder<KilerAgreementLog> agreementLog) =>
       _$this._agreementLog = agreementLog;
 
-  KilerAgreementBuilder();
+  KilerAgreementBuilder() {
+    KilerAgreement._initializeBuilder(this);
+  }
 
   KilerAgreementBuilder get _$this {
-    if (_$v != null) {
-      _oid = _$v.oid;
-      _name = _$v.name;
-      _agreementType = _$v.agreementType;
-      _startDate = _$v.startDate;
-      _endDate = _$v.endDate;
-      _content = _$v.content;
-      _optimisticLockField = _$v.optimisticLockField;
-      _isRequired = _$v.isRequired;
-      _agreementTypeNavigation = _$v.agreementTypeNavigation?.toBuilder();
-      _agreementLog = _$v.agreementLog?.toBuilder();
+    final $v = _$v;
+    if ($v != null) {
+      _oid = $v.oid;
+      _name = $v.name;
+      _agreementType = $v.agreementType;
+      _startDate = $v.startDate;
+      _endDate = $v.endDate;
+      _content = $v.content;
+      _optimisticLockField = $v.optimisticLockField;
+      _isRequired = $v.isRequired;
+      _agreementTypeNavigation = $v.agreementTypeNavigation?.toBuilder();
+      _agreementLog = $v.agreementLog?.toBuilder();
       _$v = null;
     }
     return this;
@@ -316,9 +180,7 @@ class KilerAgreementBuilder
 
   @override
   void replace(KilerAgreement other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$KilerAgreement;
   }
 

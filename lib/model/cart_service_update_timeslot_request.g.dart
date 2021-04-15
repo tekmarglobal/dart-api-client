@@ -1,61 +1,11 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// @dart=2.7
 
 part of 'cart_service_update_timeslot_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
-
-Serializer<CartServiceUpdateTimeslotRequest>
-    _$cartServiceUpdateTimeslotRequestSerializer =
-    new _$CartServiceUpdateTimeslotRequestSerializer();
-
-class _$CartServiceUpdateTimeslotRequestSerializer
-    implements StructuredSerializer<CartServiceUpdateTimeslotRequest> {
-  @override
-  final Iterable<Type> types = const [
-    CartServiceUpdateTimeslotRequest,
-    _$CartServiceUpdateTimeslotRequest
-  ];
-  @override
-  final String wireName = 'CartServiceUpdateTimeslotRequest';
-
-  @override
-  Iterable<Object> serialize(
-      Serializers serializers, CartServiceUpdateTimeslotRequest object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[];
-    if (object.timeStotId != null) {
-      result
-        ..add('timeStotId')
-        ..add(serializers.serialize(object.timeStotId,
-            specifiedType: const FullType(int)));
-    }
-    return result;
-  }
-
-  @override
-  CartServiceUpdateTimeslotRequest deserialize(
-      Serializers serializers, Iterable<Object> serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CartServiceUpdateTimeslotRequestBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'timeStotId':
-          result.timeStotId = serializers.deserialize(value,
-              specifiedType: const FullType(int)) as int;
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
 
 class _$CartServiceUpdateTimeslotRequest
     extends CartServiceUpdateTimeslotRequest {
@@ -107,11 +57,14 @@ class CartServiceUpdateTimeslotRequestBuilder
   int get timeStotId => _$this._timeStotId;
   set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
 
-  CartServiceUpdateTimeslotRequestBuilder();
+  CartServiceUpdateTimeslotRequestBuilder() {
+    CartServiceUpdateTimeslotRequest._initializeBuilder(this);
+  }
 
   CartServiceUpdateTimeslotRequestBuilder get _$this {
-    if (_$v != null) {
-      _timeStotId = _$v.timeStotId;
+    final $v = _$v;
+    if ($v != null) {
+      _timeStotId = $v.timeStotId;
       _$v = null;
     }
     return this;
@@ -119,9 +72,7 @@ class CartServiceUpdateTimeslotRequestBuilder
 
   @override
   void replace(CartServiceUpdateTimeslotRequest other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CartServiceUpdateTimeslotRequest;
   }
 
