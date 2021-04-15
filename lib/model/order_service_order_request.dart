@@ -1,40 +1,139 @@
-        import 'package:built_value/built_value.dart';
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'order_service_order_request.g.dart';
 
 abstract class OrderServiceOrderRequest implements Built<OrderServiceOrderRequest, OrderServiceOrderRequestBuilder> {
 
-    
-        @nullable
+    @nullable
     @BuiltValueField(wireName: r'deliveryAddressId')
     int get deliveryAddressId;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'billingAddressId')
     int get billingAddressId;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'timeStotId')
     int get timeStotId;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'paymentCode')
     String get paymentCode;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'orderNote')
     String get orderNote;
-    
-        @nullable
+
+    @nullable
     @BuiltValueField(wireName: r'paymentTypeCode')
     String get paymentTypeCode;
 
-    // Boilerplate code needed to wire-up generated code
     OrderServiceOrderRequest._();
 
-    factory OrderServiceOrderRequest([updates(OrderServiceOrderRequestBuilder b)]) = _$OrderServiceOrderRequest;
-    static Serializer<OrderServiceOrderRequest> get serializer => _$orderServiceOrderRequestSerializer;
+    static void _initializeBuilder(OrderServiceOrderRequestBuilder b) => b;
 
+    factory OrderServiceOrderRequest([void updates(OrderServiceOrderRequestBuilder b)]) = _$OrderServiceOrderRequest;
+
+    @BuiltValueSerializer(custom: true)
+    static Serializer<OrderServiceOrderRequest> get serializer => _$OrderServiceOrderRequestSerializer();
+}
+
+class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<OrderServiceOrderRequest> {
+
+    @override
+    final Iterable<Type> types = const [OrderServiceOrderRequest, _$OrderServiceOrderRequest];
+    @override
+    final String wireName = r'OrderServiceOrderRequest';
+
+    @override
+    Iterable<Object> serialize(Serializers serializers, OrderServiceOrderRequest object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object>[];
+        if (object.deliveryAddressId != null) {
+            result
+                ..add(r'deliveryAddressId')
+                ..add(serializers.serialize(object.deliveryAddressId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.billingAddressId != null) {
+            result
+                ..add(r'billingAddressId')
+                ..add(serializers.serialize(object.billingAddressId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.timeStotId != null) {
+            result
+                ..add(r'timeStotId')
+                ..add(serializers.serialize(object.timeStotId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.paymentCode != null) {
+            result
+                ..add(r'paymentCode')
+                ..add(serializers.serialize(object.paymentCode,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.orderNote != null) {
+            result
+                ..add(r'orderNote')
+                ..add(serializers.serialize(object.orderNote,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.paymentTypeCode != null) {
+            result
+                ..add(r'paymentTypeCode')
+                ..add(serializers.serialize(object.paymentTypeCode,
+                    specifiedType: const FullType(String)));
+        }
+        return result;
+    }
+
+    @override
+    OrderServiceOrderRequest deserialize(Serializers serializers, Iterable<Object> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = OrderServiceOrderRequestBuilder();
+
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final dynamic value = iterator.current;
+            switch (key) {
+                case r'deliveryAddressId':
+                    result.deliveryAddressId = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'billingAddressId':
+                    result.billingAddressId = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'timeStotId':
+                    result.timeStotId = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'paymentCode':
+                    result.paymentCode = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'orderNote':
+                    result.orderNote = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'paymentTypeCode':
+                    result.paymentTypeCode = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+            }
+        }
+        return result.build();
+    }
 }
 

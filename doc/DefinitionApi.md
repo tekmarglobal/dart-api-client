@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiDefinitionAgreementGet**](DefinitionApi.md#apiDefinitionAgreementGet) | **get** /api/Definition/Agreement | 
-[**apiDefinitionCitiesPost**](DefinitionApi.md#apiDefinitionCitiesPost) | **post** /api/Definition/Cities | 
-[**apiDefinitionCountiesPost**](DefinitionApi.md#apiDefinitionCountiesPost) | **post** /api/Definition/Counties | 
-[**apiDefinitionFaqGet**](DefinitionApi.md#apiDefinitionFaqGet) | **get** /api/Definition/Faq | 
-[**apiDefinitionHelloGet**](DefinitionApi.md#apiDefinitionHelloGet) | **get** /api/Definition/Hello | 
-[**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apiDefinitionNeighborhoodPost) | **post** /api/Definition/Neighborhood | 
-[**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apiDefinitionUpdateAgreementLogPost) | **post** /api/Definition/UpdateAgreementLog | 
+[**apiDefinitionAgreementGet**](DefinitionApi.md#apidefinitionagreementget) | **get** /api/Definition/Agreement | 
+[**apiDefinitionCitiesPost**](DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
+[**apiDefinitionCountiesPost**](DefinitionApi.md#apidefinitioncountiespost) | **post** /api/Definition/Counties | 
+[**apiDefinitionFaqGet**](DefinitionApi.md#apidefinitionfaqget) | **get** /api/Definition/Faq | 
+[**apiDefinitionHelloGet**](DefinitionApi.md#apidefinitionhelloget) | **get** /api/Definition/Hello | 
+[**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
+[**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
 
 
 # **apiDefinitionAgreementGet**
@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiDefinitionAgreementGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
 }
 ```
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiDefinitionCitiesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n');
 }
 ```
 
@@ -120,7 +120,7 @@ try {
     var result = api_instance.apiDefinitionCountiesPost(definitionServiceCountiesRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
 }
 ```
 
@@ -164,7 +164,7 @@ try {
     var result = api_instance.apiDefinitionFaqGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n');
 }
 ```
 
@@ -205,7 +205,7 @@ try {
     var result = api_instance.apiDefinitionHelloGet();
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n');
 }
 ```
 
@@ -247,7 +247,7 @@ try {
     var result = api_instance.apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
 }
 ```
 
@@ -292,7 +292,7 @@ try {
     var result = api_instance.apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
+    print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
 }
 ```
 

@@ -1,316 +1,585 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'dart:async';
-import 'dart:io';
-import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/rest_result_of_customer_service_customer_address_response.dart';
-import 'package:openapi/model/rest_result_of_customer_service_delete_address_response.dart';
-import 'package:openapi/model/customer_service_customer_address_request.dart';
+    import 'package:openapi/model/customer_service_customer_address_request.dart';
+import 'package:openapi/model/customer_service_delete_address_request.dart';
 import 'package:openapi/model/customer_service_new_customer_default_address.dart';
 import 'package:openapi/model/customer_service_new_customer_request.dart';
+import 'package:openapi/model/rest_result_of_customer_service_customer_address_response.dart';
 import 'package:openapi/model/rest_result_of_customer_service_customer_response.dart';
-import 'package:openapi/model/customer_service_delete_address_request.dart';
+import 'package:openapi/model/rest_result_of_customer_service_delete_address_response.dart';
 
-class CustomerApi {
+    class CustomerApi {
     final Dio _dio;
-    Serializers _serializers;
-
-    CustomerApi(this._dio, this._serializers);
+    final Serializers _serializers;
+    const CustomerApi(this._dio, this._serializers);
 
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceDeleteAddressResponse>>apiCustomerDeleteAddressPost({ CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer/DeleteAddress";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(customerServiceDeleteAddressRequest);
-            var jsoncustomerServiceDeleteAddressRequest = json.encode(serializedBody);
-            bodyData = jsoncustomerServiceDeleteAddressRequest;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceDeleteAddressResponse>> apiCustomerDeleteAddressPost({ 
+            CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/DeleteAddress',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceDeleteAddressResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceDeleteAddressResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceDeleteAddressResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(CustomerServiceDeleteAddressRequest);
+                        _bodyData = _serializers.serialize(customerServiceDeleteAddressRequest, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/DeleteAddress',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceDeleteAddressResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceDeleteAddressResponse;
+
+                return Response<RestResultOfCustomerServiceDeleteAddressResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>>apiCustomerGetCustomerAdressesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer/GetCustomerAdresses";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>> apiCustomerGetCustomerAdressesPost({ 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/GetCustomerAdresses',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceCustomerAddressResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceCustomerAddressResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/GetCustomerAdresses',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceCustomerAddressResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceCustomerAddressResponse;
+
+                return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceCustomerResponse>>apiCustomerPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerPost({ 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceCustomerResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceCustomerResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceCustomerResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceCustomerResponse;
+
+                return Response<RestResultOfCustomerServiceCustomerResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>>apiCustomerUpdateAddressPost({ CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer/UpdateAddress";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(customerServiceCustomerAddressRequest);
-            var jsoncustomerServiceCustomerAddressRequest = json.encode(serializedBody);
-            bodyData = jsoncustomerServiceCustomerAddressRequest;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>> apiCustomerUpdateAddressPost({ 
+            CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/UpdateAddress',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceCustomerAddressResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceCustomerAddressResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(CustomerServiceCustomerAddressRequest);
+                        _bodyData = _serializers.serialize(customerServiceCustomerAddressRequest, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/UpdateAddress',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceCustomerAddressResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceCustomerAddressResponse;
+
+                return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceCustomerResponse>>apiCustomerUpdateCustomerDefultAddressPost({ CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer/UpdateCustomerDefultAddress";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(customerServiceNewCustomerDefaultAddress);
-            var jsoncustomerServiceNewCustomerDefaultAddress = json.encode(serializedBody);
-            bodyData = jsoncustomerServiceNewCustomerDefaultAddress;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerDefultAddressPost({ 
+            CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/UpdateCustomerDefultAddress',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceCustomerResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceCustomerResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceCustomerResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(CustomerServiceNewCustomerDefaultAddress);
+                        _bodyData = _serializers.serialize(customerServiceNewCustomerDefaultAddress, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/UpdateCustomerDefultAddress',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceCustomerResponse;
+
+                return Response<RestResultOfCustomerServiceCustomerResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfCustomerServiceCustomerResponse>>apiCustomerUpdateCustomerPost({ CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Customer/UpdateCustomer";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(customerServiceNewCustomerRequest);
-            var jsoncustomerServiceNewCustomerRequest = json.encode(serializedBody);
-            bodyData = jsoncustomerServiceNewCustomerRequest;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerPost({ 
+            CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/UpdateCustomer',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfCustomerServiceCustomerResponse);
-        var data = _serializers.deserializeWith<RestResultOfCustomerServiceCustomerResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfCustomerServiceCustomerResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(CustomerServiceNewCustomerRequest);
+                        _bodyData = _serializers.serialize(customerServiceNewCustomerRequest, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/UpdateCustomer',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCustomerServiceCustomerResponse;
+
+                return Response<RestResultOfCustomerServiceCustomerResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         }

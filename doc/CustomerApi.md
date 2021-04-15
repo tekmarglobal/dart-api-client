@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCustomerDeleteAddressPost**](CustomerApi.md#apiCustomerDeleteAddressPost) | **post** /api/Customer/DeleteAddress | 
-[**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apiCustomerGetCustomerAdressesPost) | **post** /api/Customer/GetCustomerAdresses | 
-[**apiCustomerPost**](CustomerApi.md#apiCustomerPost) | **post** /api/Customer | 
-[**apiCustomerUpdateAddressPost**](CustomerApi.md#apiCustomerUpdateAddressPost) | **post** /api/Customer/UpdateAddress | 
-[**apiCustomerUpdateCustomerDefultAddressPost**](CustomerApi.md#apiCustomerUpdateCustomerDefultAddressPost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
-[**apiCustomerUpdateCustomerPost**](CustomerApi.md#apiCustomerUpdateCustomerPost) | **post** /api/Customer/UpdateCustomer | 
+[**apiCustomerDeleteAddressPost**](CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
+[**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
+[**apiCustomerPost**](CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
+[**apiCustomerUpdateAddressPost**](CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
+[**apiCustomerUpdateCustomerDefultAddressPost**](CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
+[**apiCustomerUpdateCustomerPost**](CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
 
 
 # **apiCustomerDeleteAddressPost**
@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n');
 }
 ```
 
@@ -81,7 +81,7 @@ try {
     var result = api_instance.apiCustomerGetCustomerAdressesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n');
 }
 ```
 
@@ -122,7 +122,7 @@ try {
     var result = api_instance.apiCustomerPost();
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerPost: $e\n');
 }
 ```
 
@@ -164,7 +164,7 @@ try {
     var result = api_instance.apiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n');
 }
 ```
 
@@ -209,7 +209,7 @@ try {
     var result = api_instance.apiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n');
 }
 ```
 
@@ -254,7 +254,7 @@ try {
     var result = api_instance.apiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n");
+    print('Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n');
 }
 ```
 

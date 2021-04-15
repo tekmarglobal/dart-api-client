@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paymentTypeList** | [**BuiltList&lt;PaymentServiceRPaymentType&gt;**](PaymentServiceRPaymentType.md) |  | [optional] [default to const []]
+**paymentTypeList** | [**BuiltList<PaymentServiceRPaymentType>**](PaymentServiceRPaymentType.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

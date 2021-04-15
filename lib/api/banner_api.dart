@@ -1,114 +1,204 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'dart:async';
-import 'dart:io';
-import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
+    import 'package:openapi/model/banner_service_banner_request.dart';
 import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart';
-import 'package:openapi/model/banner_service_banner_request.dart';
 
-class BannerApi {
+    class BannerApi {
     final Dio _dio;
-    Serializers _serializers;
-
-    BannerApi(this._dio, this._serializers);
+    final Serializers _serializers;
+    const BannerApi(this._dio, this._serializers);
 
         /// 
         ///
         /// 
-        Future<Response<RestResultOfBannerServiceBannerResponse>>apiBannerGetBannersPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Banner/GetBanners";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfBannerServiceBannerResponse>> apiBannerGetBannersPost({ 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Banner/GetBanners',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfBannerServiceBannerResponse);
-        var data = _serializers.deserializeWith<RestResultOfBannerServiceBannerResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfBannerServiceBannerResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Banner/GetBanners',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfBannerServiceBannerResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfBannerServiceBannerResponse;
+
+                return Response<RestResultOfBannerServiceBannerResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<RestResultOfBannerServiceBannerResponse>>apiBannerUpdateBannerPost({ BannerServiceBannerRequest bannerServiceBannerRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Banner/UpdateBanner";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(bannerServiceBannerRequest);
-            var jsonbannerServiceBannerRequest = json.encode(serializedBody);
-            bodyData = jsonbannerServiceBannerRequest;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<RestResultOfBannerServiceBannerResponse>> apiBannerUpdateBannerPost({ 
+            BannerServiceBannerRequest bannerServiceBannerRequest,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Banner/UpdateBanner',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(RestResultOfBannerServiceBannerResponse);
-        var data = _serializers.deserializeWith<RestResultOfBannerServiceBannerResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<RestResultOfBannerServiceBannerResponse>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(BannerServiceBannerRequest);
+                        _bodyData = _serializers.serialize(bannerServiceBannerRequest, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Banner/UpdateBanner',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfBannerServiceBannerResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfBannerServiceBannerResponse;
+
+                return Response<RestResultOfBannerServiceBannerResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         }

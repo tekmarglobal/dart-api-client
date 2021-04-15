@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiPaymentCardSuccessPost**](PaymentApi.md#apiPaymentCardSuccessPost) | **post** /api/Payment/CardSuccess | 
-[**apiPaymentCreatePaymentPost**](PaymentApi.md#apiPaymentCreatePaymentPost) | **post** /api/Payment/CreatePayment | 
-[**apiPaymentGetPaymentTypesPost**](PaymentApi.md#apiPaymentGetPaymentTypesPost) | **post** /api/Payment/GetPaymentTypes | 
+[**apiPaymentCardSuccessPost**](PaymentApi.md#apipaymentcardsuccesspost) | **post** /api/Payment/CardSuccess | 
+[**apiPaymentCreatePaymentPost**](PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
+[**apiPaymentGetPaymentTypesPost**](PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
 
 
 # **apiPaymentCardSuccessPost**
@@ -32,7 +32,7 @@ var api_instance = new PaymentApi();
 try { 
     api_instance.apiPaymentCardSuccessPost();
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentCardSuccessPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentCardSuccessPost: $e\n');
 }
 ```
 
@@ -74,7 +74,7 @@ try {
     var result = api_instance.apiPaymentCreatePaymentPost(paymentServicePaymentRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n');
 }
 ```
 
@@ -118,7 +118,7 @@ try {
     var result = api_instance.apiPaymentGetPaymentTypesPost();
     print(result);
 } catch (e) {
-    print("Exception when calling PaymentApi->apiPaymentGetPaymentTypesPost: $e\n");
+    print('Exception when calling PaymentApi->apiPaymentGetPaymentTypesPost: $e\n');
 }
 ```
 

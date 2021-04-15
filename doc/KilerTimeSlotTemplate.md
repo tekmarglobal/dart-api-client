@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] [default to null]
-**dayOfWeek** | **int** |  | [optional] [default to null]
-**start** | **double** |  | [optional] [default to null]
-**end** | **double** |  | [optional] [default to null]
-**quota** | **int** |  | [optional] [default to null]
-**region** | **int** |  | [optional] [default to null]
-**fee** | **double** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
-**regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] [default to null]
+**oid** | **int** |  | [optional] 
+**dayOfWeek** | **int** |  | [optional] 
+**start** | **double** |  | [optional] 
+**end** | **double** |  | [optional] 
+**quota** | **int** |  | [optional] 
+**region** | **int** |  | [optional] 
+**fee** | **double** |  | [optional] 
+**optimisticLockField** | **int** |  | [optional] 
+**regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

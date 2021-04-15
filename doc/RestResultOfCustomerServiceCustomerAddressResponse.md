@@ -8,9 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **bool** |  | [optional] [default to null]
-**message** | **String** |  | [optional] [default to null]
-**data** | [**CustomerServiceCustomerAddressResponse**](CustomerServiceCustomerAddressResponse.md) |  | [optional] [default to null]
+**success** | **bool** |  | [optional] 
+**message** | **String** |  | [optional] 
+**data** | [**CustomerServiceCustomerAddressResponse**](CustomerServiceCustomerAddressResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

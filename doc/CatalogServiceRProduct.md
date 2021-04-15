@@ -8,21 +8,21 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] [default to null]
-**name** | **String** |  | [optional] [default to null]
-**description** | **String** |  | [optional] [default to null]
-**brandName** | **String** |  | [optional] [default to null]
-**maxQuantity** | **double** |  | [optional] [default to null]
-**minQuantity** | **double** |  | [optional] [default to null]
-**quantityStep** | **double** |  | [optional] [default to null]
-**initalQuantity** | **double** |  | [optional] [default to null]
-**prices** | [**BuiltList&lt;CatalogServiceRProductPrice&gt;**](CatalogServiceRProductPrice.md) |  | [optional] [default to const []]
-**eId** | **String** |  | [optional] [default to null]
-**barcode** | **String** |  | [optional] [default to null]
-**unitId** | **int** |  | [optional] [default to null]
-**unitName** | **String** |  | [optional] [default to null]
-**active** | **bool** |  | [optional] [default to null]
-**menuName** | **String** |  | [optional] [default to null]
+**id** | **int** |  | [optional] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**brandName** | **String** |  | [optional] 
+**maxQuantity** | **double** |  | [optional] 
+**minQuantity** | **double** |  | [optional] 
+**quantityStep** | **double** |  | [optional] 
+**initalQuantity** | **double** |  | [optional] 
+**prices** | [**BuiltList<CatalogServiceRProductPrice>**](CatalogServiceRProductPrice.md) |  | [optional] 
+**eId** | **String** |  | [optional] 
+**barcode** | **String** |  | [optional] 
+**unitId** | **int** |  | [optional] 
+**unitName** | **String** |  | [optional] 
+**active** | **bool** |  | [optional] 
+**menuName** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

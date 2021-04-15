@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCatalogAllCategoriesGet**](CatalogApi.md#apiCatalogAllCategoriesGet) | **get** /api/Catalog/allCategories | 
-[**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apiCatalogAllCategoriesRegionGet) | **get** /api/Catalog/allCategoriesRegion | 
-[**apiCatalogCreateCategoryPost**](CatalogApi.md#apiCatalogCreateCategoryPost) | **post** /api/Catalog/createCategory | 
-[**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apiCatalogDeleteCategoryDelete) | **delete** /api/Catalog/deleteCategory | 
-[**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apiCatalogImportCategoriesFromOlimposPost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
-[**apiCatalogPost**](CatalogApi.md#apiCatalogPost) | **post** /api/Catalog | 
-[**apiCatalogUpdateCategoryPut**](CatalogApi.md#apiCatalogUpdateCategoryPut) | **put** /api/Catalog/updateCategory | 
+[**apiCatalogAllCategoriesGet**](CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
+[**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apicatalogallcategoriesregionget) | **get** /api/Catalog/allCategoriesRegion | 
+[**apiCatalogCreateCategoryPost**](CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
+[**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
+[**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
+[**apiCatalogPost**](CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
+[**apiCatalogUpdateCategoryPut**](CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
 
 
 # **apiCatalogAllCategoriesGet**
@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiCatalogAllCategoriesGet();
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogAllCategoriesGet: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogAllCategoriesGet: $e\n');
 }
 ```
 
@@ -79,7 +79,7 @@ try {
     var result = api_instance.apiCatalogAllCategoriesRegionGet(neighborhood);
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogAllCategoriesRegionGet: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogAllCategoriesRegionGet: $e\n');
 }
 ```
 
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **neighborhood** | **int**|  | [optional] [default to null]
+ **neighborhood** | **int**|  | [optional] 
 
 ### Return type
 
@@ -127,7 +127,7 @@ try {
     var result = api_instance.apiCatalogCreateCategoryPost(name, parent, level, showInMenu);
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogCreateCategoryPost: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogCreateCategoryPost: $e\n');
 }
 ```
 
@@ -135,10 +135,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**|  | [optional] [default to null]
- **parent** | **int**|  | [optional] [default to null]
- **level** | **int**|  | [optional] [default to null]
- **showInMenu** | **bool**|  | [optional] [default to null]
+ **name** | **String**|  | [optional] 
+ **parent** | **int**|  | [optional] 
+ **level** | **int**|  | [optional] 
+ **showInMenu** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -175,7 +175,7 @@ try {
     var result = api_instance.apiCatalogDeleteCategoryDelete(id);
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogDeleteCategoryDelete: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogDeleteCategoryDelete: $e\n');
 }
 ```
 
@@ -183,7 +183,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**|  | [optional] [default to null]
+ **id** | **int**|  | [optional] 
 
 ### Return type
 
@@ -219,7 +219,7 @@ var region = 56; // int |
 try { 
     api_instance.apiCatalogImportCategoriesFromOlimposPost(region);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogImportCategoriesFromOlimposPost: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogImportCategoriesFromOlimposPost: $e\n');
 }
 ```
 
@@ -227,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region** | **int**|  | [optional] [default to null]
+ **region** | **int**|  | [optional] 
 
 ### Return type
 
@@ -267,7 +267,7 @@ try {
     var result = api_instance.apiCatalogPost(categoryId, regionId, withProducts, nestingLevel);
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogPost: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogPost: $e\n');
 }
 ```
 
@@ -275,10 +275,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryId** | **int**|  | [optional] [default to null]
- **regionId** | **int**|  | [optional] [default to null]
- **withProducts** | **bool**|  | [optional] [default to null]
- **nestingLevel** | **int**|  | [optional] [default to null]
+ **categoryId** | **int**|  | [optional] 
+ **regionId** | **int**|  | [optional] 
+ **withProducts** | **bool**|  | [optional] 
+ **nestingLevel** | **int**|  | [optional] 
 
 ### Return type
 
@@ -318,7 +318,7 @@ try {
     var result = api_instance.apiCatalogUpdateCategoryPut(id, name, parent, level);
     print(result);
 } catch (e) {
-    print("Exception when calling CatalogApi->apiCatalogUpdateCategoryPut: $e\n");
+    print('Exception when calling CatalogApi->apiCatalogUpdateCategoryPut: $e\n');
 }
 ```
 
@@ -326,10 +326,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**|  | [optional] [default to null]
- **name** | **String**|  | [optional] [default to null]
- **parent** | **int**|  | [optional] [default to null]
- **level** | **int**|  | [optional] [default to null]
+ **id** | **int**|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **parent** | **int**|  | [optional] 
+ **level** | **int**|  | [optional] 
 
 ### Return type
 

@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiBannerGetBannersPost**](BannerApi.md#apiBannerGetBannersPost) | **post** /api/Banner/GetBanners | 
-[**apiBannerUpdateBannerPost**](BannerApi.md#apiBannerUpdateBannerPost) | **post** /api/Banner/UpdateBanner | 
+[**apiBannerGetBannersPost**](BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
+[**apiBannerUpdateBannerPost**](BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
 
 
 # **apiBannerGetBannersPost**
@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiBannerGetBannersPost();
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerGetBannersPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerGetBannersPost: $e\n');
 }
 ```
 
@@ -74,7 +74,7 @@ try {
     var result = api_instance.apiBannerUpdateBannerPost(bannerServiceBannerRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n");
+    print('Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n');
 }
 ```
 

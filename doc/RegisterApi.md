@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiRegisterSendSmsPost**](RegisterApi.md#apiRegisterSendSmsPost) | **post** /api/Register/SendSms | 
-[**apiRegisterVerifySmsPost**](RegisterApi.md#apiRegisterVerifySmsPost) | **post** /api/Register/VerifySms | 
+[**apiRegisterSendSmsPost**](RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
+[**apiRegisterVerifySmsPost**](RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
 
 
 # **apiRegisterSendSmsPost**
@@ -33,7 +33,7 @@ try {
     var result = api_instance.apiRegisterSendSmsPost(registerServiceSmsRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n");
+    print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
 }
 ```
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiRegisterVerifySmsPost(registerServiceVerifyRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n");
+    print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
 }
 ```
 

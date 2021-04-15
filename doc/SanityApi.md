@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiSanityCheckGet**](SanityApi.md#apiSanityCheckGet) | **get** /api/Sanity/check | 
+[**apiSanityCheckGet**](SanityApi.md#apisanitycheckget) | **get** /api/Sanity/check | 
 
 
 # **apiSanityCheckGet**
@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiSanityCheckGet(fix);
     print(result);
 } catch (e) {
-    print("Exception when calling SanityApi->apiSanityCheckGet: $e\n");
+    print('Exception when calling SanityApi->apiSanityCheckGet: $e\n');
 }
 ```
 

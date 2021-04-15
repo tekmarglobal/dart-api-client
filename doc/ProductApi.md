@@ -9,14 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiProductAddToFavoriteListPost**](ProductApi.md#apiProductAddToFavoriteListPost) | **post** /api/Product/AddToFavoriteList | 
-[**apiProductDeleteFavoriteDelete**](ProductApi.md#apiProductDeleteFavoriteDelete) | **delete** /api/Product/DeleteFavorite | 
-[**apiProductGetFavoriteListPost**](ProductApi.md#apiProductGetFavoriteListPost) | **post** /api/Product/GetFavoriteList | 
-[**apiProductPost**](ProductApi.md#apiProductPost) | **post** /api/Product | 
-[**apiProductProductListPost**](ProductApi.md#apiProductProductListPost) | **post** /api/Product/ProductList | 
-[**apiProductProductSearchPost**](ProductApi.md#apiProductProductSearchPost) | **post** /api/Product/ProductSearch | 
-[**apiProductUpdateProductFromOlimposGet**](ProductApi.md#apiProductUpdateProductFromOlimposGet) | **get** /api/Product/UpdateProductFromOlimpos | 
-[**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiProductUpdateProductFromOlimposPost) | **post** /api/Product/UpdateProductFromOlimpos | 
+[**apiProductAddToFavoriteListPost**](ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
+[**apiProductDeleteFavoriteDelete**](ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
+[**apiProductGetFavoriteListPost**](ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
+[**apiProductPost**](ProductApi.md#apiproductpost) | **post** /api/Product | 
+[**apiProductProductListPost**](ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
+[**apiProductProductSearchPost**](ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
+[**apiProductUpdateProductFromOlimposGet**](ProductApi.md#apiproductupdateproductfromolimposget) | **get** /api/Product/UpdateProductFromOlimpos | 
+[**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
 
 
 # **apiProductAddToFavoriteListPost**
@@ -39,7 +39,7 @@ try {
     var result = api_instance.apiProductAddToFavoriteListPost(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
 }
 ```
 
@@ -84,7 +84,7 @@ try {
     var result = api_instance.apiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n");
+    print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
 }
 ```
 
@@ -128,7 +128,7 @@ try {
     var result = api_instance.apiProductGetFavoriteListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n');
 }
 ```
 
@@ -170,7 +170,7 @@ try {
     var result = api_instance.apiProductPost(productServiceProductRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductPost: $e\n");
+    print('Exception when calling ProductApi->apiProductPost: $e\n');
 }
 ```
 
@@ -214,7 +214,7 @@ try {
     var result = api_instance.apiProductProductListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductProductListPost: $e\n");
+    print('Exception when calling ProductApi->apiProductProductListPost: $e\n');
 }
 ```
 
@@ -256,7 +256,7 @@ try {
     var result = api_instance.apiProductProductSearchPost(productServiceSearchProductRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductProductSearchPost: $e\n");
+    print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
 }
 ```
 
@@ -303,7 +303,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n");
+    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n');
 }
 ```
 
@@ -311,8 +311,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] [default to null]
- **productErpId** | **String**|  | [optional] [default to null]
+ **regionErpId** | **String**|  | [optional] 
+ **productErpId** | **String**|  | [optional] 
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type
@@ -352,7 +352,7 @@ try {
     var result = api_instance.apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log);
     print(result);
 } catch (e) {
-    print("Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n");
+    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n');
 }
 ```
 
@@ -360,8 +360,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] [default to null]
- **productErpId** | **String**|  | [optional] [default to null]
+ **regionErpId** | **String**|  | [optional] 
+ **productErpId** | **String**|  | [optional] 
  **log** | **bool**|  | [optional] [default to false]
 
 ### Return type

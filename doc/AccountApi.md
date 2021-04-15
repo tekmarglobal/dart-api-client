@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAccountFirebaseTokenGet**](AccountApi.md#apiAccountFirebaseTokenGet) | **get** /api/Account/FirebaseToken | 
-[**apiAccountLoginPost**](AccountApi.md#apiAccountLoginPost) | **post** /api/Account/login | 
-[**apiAccountLogoutGet**](AccountApi.md#apiAccountLogoutGet) | **get** /api/Account/Logout | 
-[**apiAccountWhoAmIGet**](AccountApi.md#apiAccountWhoAmIGet) | **get** /api/Account/WhoAmI | 
+[**apiAccountFirebaseTokenGet**](AccountApi.md#apiaccountfirebasetokenget) | **get** /api/Account/FirebaseToken | 
+[**apiAccountLoginPost**](AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
+[**apiAccountLogoutGet**](AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
+[**apiAccountWhoAmIGet**](AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
 
 
 # **apiAccountFirebaseTokenGet**
@@ -34,7 +34,7 @@ try {
     var result = api_instance.apiAccountFirebaseTokenGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n');
 }
 ```
 
@@ -76,7 +76,7 @@ try {
     var result = api_instance.apiAccountLoginPost(accountServiceLoginRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLoginPost: $e\n");
+    print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
 }
 ```
 
@@ -120,7 +120,7 @@ try {
     var result = api_instance.apiAccountLogoutGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountLogoutGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountLogoutGet: $e\n');
 }
 ```
 
@@ -161,7 +161,7 @@ try {
     var result = api_instance.apiAccountWhoAmIGet();
     print(result);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n");
+    print('Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n');
 }
 ```
 

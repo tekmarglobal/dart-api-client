@@ -8,13 +8,13 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **String** |  | [optional] [default to null]
-**itemPath** | **String** |  | [optional] [default to null]
-**navigateState** | **int** |  | [optional] [default to null]
-**role** | **String** |  | [optional] [default to null]
-**optimisticLockField** | **int** |  | [optional] [default to null]
-**gcrecord** | **int** |  | [optional] [default to null]
-**roleNavigation** | [**KilerPermissionPolicyRole**](KilerPermissionPolicyRole.md) |  | [optional] [default to null]
+**oid** | **String** |  | [optional] 
+**itemPath** | **String** |  | [optional] 
+**navigateState** | **int** |  | [optional] 
+**role** | **String** |  | [optional] 
+**optimisticLockField** | **int** |  | [optional] 
+**gcrecord** | **int** |  | [optional] 
+**roleNavigation** | [**KilerPermissionPolicyRole**](KilerPermissionPolicyRole.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

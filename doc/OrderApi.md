@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiOrderCreateOrderPost**](OrderApi.md#apiOrderCreateOrderPost) | **post** /api/Order/CreateOrder | 
-[**apiOrderGetOrderListPost**](OrderApi.md#apiOrderGetOrderListPost) | **post** /api/Order/GetOrderList | 
-[**apiOrderGetOrderPost**](OrderApi.md#apiOrderGetOrderPost) | **post** /api/Order/GetOrder | 
-[**apiOrderSendmailPost**](OrderApi.md#apiOrderSendmailPost) | **post** /api/Order/sendmail | 
-[**apiOrderUpdateStatusPost**](OrderApi.md#apiOrderUpdateStatusPost) | **post** /api/Order/UpdateStatus | 
+[**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
+[**apiOrderGetOrderListPost**](OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
+[**apiOrderGetOrderPost**](OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
+[**apiOrderSendmailPost**](OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
+[**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
 
 
 # **apiOrderCreateOrderPost**
@@ -36,7 +36,7 @@ try {
     var result = api_instance.apiOrderCreateOrderPost(orderServiceOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
 }
 ```
 
@@ -80,7 +80,7 @@ try {
     var result = api_instance.apiOrderGetOrderListPost();
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n');
 }
 ```
 
@@ -122,7 +122,7 @@ try {
     var result = api_instance.apiOrderGetOrderPost(orderServiceGetOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderGetOrderPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
 }
 ```
 
@@ -166,7 +166,7 @@ try {
     var result = api_instance.apiOrderSendmailPost();
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderSendmailPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderSendmailPost: $e\n');
 }
 ```
 
@@ -208,7 +208,7 @@ try {
     var result = api_instance.apiOrderUpdateStatusPost(orderServiceUpdateOrderRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n");
+    print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
 }
 ```
 

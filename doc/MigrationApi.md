@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiMigrationCreateregionpriceGet**](MigrationApi.md#apiMigrationCreateregionpriceGet) | **get** /api/Migration/createregionprice | 
-[**apiMigrationUpdateCitiesFromRestGet**](MigrationApi.md#apiMigrationUpdateCitiesFromRestGet) | **get** /api/Migration/UpdateCitiesFromRest | 
+[**apiMigrationCreateregionpriceGet**](MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
+[**apiMigrationUpdateCitiesFromRestGet**](MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
 
 
 # **apiMigrationCreateregionpriceGet**
@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiMigrationCreateregionpriceGet();
     print(result);
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n');
 }
 ```
 
@@ -72,7 +72,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationUpdateCitiesFromRestGet();
 } catch (e) {
-    print("Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n");
+    print('Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n');
 }
 ```
 

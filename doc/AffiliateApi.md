@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAffiliateDetailUrllinkGet**](AffiliateApi.md#apiAffiliateDetailUrllinkGet) | **get** /api/Affiliate/detail/{urllink} | 
-[**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiAffiliateGetShareLinkPost) | **post** /api/Affiliate/GetShareLink | 
-[**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiAffiliateShareLinkClickedPost) | **post** /api/Affiliate/ShareLinkClicked | 
+[**apiAffiliateDetailUrllinkGet**](AffiliateApi.md#apiaffiliatedetailurllinkget) | **get** /api/Affiliate/detail/{urllink} | 
+[**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiaffiliategetsharelinkpost) | **post** /api/Affiliate/GetShareLink | 
+[**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **post** /api/Affiliate/ShareLinkClicked | 
 
 
 # **apiAffiliateDetailUrllinkGet**
@@ -33,7 +33,7 @@ var urllink = urllink_example; // String |
 try { 
     api_instance.apiAffiliateDetailUrllinkGet(urllink);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
 }
 ```
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urllink** | **String**|  | [default to null]
+ **urllink** | **String**|  | 
 
 ### Return type
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n');
 }
 ```
 
@@ -123,7 +123,7 @@ try {
     var result = api_instance.apiAffiliateShareLinkClickedPost(key);
     print(result);
 } catch (e) {
-    print("Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n");
+    print('Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n');
 }
 ```
 
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **String**|  | [optional] [default to null]
+ **key** | **String**|  | [optional] 
 
 ### Return type
 

@@ -1,147 +1,276 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'dart:async';
-import 'dart:io';
-import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
-import 'package:openapi/model/affiliate_service_link_request.dart';
+    import 'package:openapi/model/affiliate_service_link_request.dart';
 
-class AffiliateApi {
+    class AffiliateApi {
     final Dio _dio;
-    Serializers _serializers;
-
-    AffiliateApi(this._dio, this._serializers);
+    final Serializers _serializers;
+    const AffiliateApi(this._dio, this._serializers);
 
         /// 
         ///
         /// 
-        Future<Response>apiAffiliateDetailUrllinkGet(String urllink,{ CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Affiliate/detail/{urllink}".replaceAll("{" r'urllink' "}", urllink.toString());
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'get'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<void>> apiAffiliateDetailUrllinkGet(
+            String urllink, { 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urllink' '}', urllink.toString()),
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
             cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
+
+            final _request = Options(
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urllink' '}', urllink.toString()),
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                return _response;
             }
+
         /// 
         ///
         /// 
-        Future<Response<String>>apiAffiliateGetShareLinkPost({ AffiliateServiceLinkRequest affiliateServiceLinkRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Affiliate/GetShareLink";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
-
-
-            var serializedBody = _serializers.serialize(affiliateServiceLinkRequest);
-            var jsonaffiliateServiceLinkRequest = json.encode(serializedBody);
-            bodyData = jsonaffiliateServiceLinkRequest;
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<String>> apiAffiliateGetShareLinkPost({ 
+            AffiliateServiceLinkRequest affiliateServiceLinkRequest,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Affiliate/GetShareLink',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(String);
-        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<String>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(AffiliateServiceLinkRequest);
+                        _bodyData = _serializers.serialize(affiliateServiceLinkRequest, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Affiliate/GetShareLink',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            final String _responseData = _response.data as String;
+
+                return Response<String>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         /// 
         ///
         /// 
-        Future<Response<bool>>apiAffiliateShareLinkClickedPost({ String key,CancelToken cancelToken, Map<String, String> headers,}) async {
-
-        String _path = "/api/Affiliate/ShareLinkClicked";
-
-        Map<String, dynamic> queryParams = {};
-        Map<String, String> headerParams = Map.from(headers ?? {});
-        dynamic bodyData;
-
-                queryParams[r'key'] = key;
-        queryParams.removeWhere((key, value) => value == null);
-        headerParams.removeWhere((key, value) => value == null);
-
-        List<String> contentTypes = [];
-
-
-
-            return _dio.request(
-            _path,
-            queryParameters: queryParams,
-            data: bodyData,
-            options: Options(
-            method: 'post'.toUpperCase(),
-            headers: headerParams,
-            extra: {
-                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+        Future<Response<bool>> apiAffiliateShareLinkClickedPost({ 
+            String key,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Affiliate/ShareLinkClicked',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
             },
-            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
-            ),
+                queryParameters: <String, dynamic>{
+                if (key != null) r'key': key,
+                },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
             cancelToken: cancelToken,
-            ).then((response) {
-
-        var serializer = _serializers.serializerForType(bool);
-        var data = _serializers.deserializeWith<bool>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
-
-            return Response<bool>(
-                data: data,
-                headers: response.headers,
-                request: response.request,
-                redirects: response.redirects,
-                statusCode: response.statusCode,
-                statusMessage: response.statusMessage,
-                extra: response.extra,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
             );
-            });
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Affiliate/ShareLinkClicked',
+            data: _bodyData,
+            options: _request,
+                queryParameters: <String, dynamic>{
+                if (key != null) r'key': key,
+                },
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            final bool _responseData = _response.data as bool;
+
+                return Response<bool>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
             }
+
         }

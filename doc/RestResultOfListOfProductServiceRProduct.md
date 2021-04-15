@@ -8,9 +8,9 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **bool** |  | [optional] [default to null]
-**message** | **String** |  | [optional] [default to null]
-**data** | [**BuiltList&lt;ProductServiceRProduct&gt;**](ProductServiceRProduct.md) |  | [optional] [default to const []]
+**success** | **bool** |  | [optional] 
+**message** | **String** |  | [optional] 
+**data** | [**BuiltList<ProductServiceRProduct>**](ProductServiceRProduct.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
