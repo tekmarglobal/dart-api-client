@@ -163,9 +163,7 @@ class CartServiceRCartItemImpactBuilder
   double get newPrice => _$this._newPrice;
   set newPrice(double newPrice) => _$this._newPrice = newPrice;
 
-  CartServiceRCartItemImpactBuilder() {
-    CartServiceRCartItemImpact._initializeBuilder(this);
-  }
+  CartServiceRCartItemImpactBuilder();
 
   CartServiceRCartItemImpactBuilder get _$this {
     if (_$v != null) {

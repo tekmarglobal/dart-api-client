@@ -105,9 +105,7 @@ class CartServiceCreateCartResponseBuilder
   String get messages => _$this._messages;
   set messages(String messages) => _$this._messages = messages;
 
-  CartServiceCreateCartResponseBuilder() {
-    CartServiceCreateCartResponse._initializeBuilder(this);
-  }
+  CartServiceCreateCartResponseBuilder();
 
   CartServiceCreateCartResponseBuilder get _$this {
     if (_$v != null) {

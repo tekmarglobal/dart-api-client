@@ -181,9 +181,7 @@ class KilerPaymentStatusBuilder
       _$this._payment ??= new ListBuilder<KilerPayment>();
   set payment(ListBuilder<KilerPayment> payment) => _$this._payment = payment;
 
-  KilerPaymentStatusBuilder() {
-    KilerPaymentStatus._initializeBuilder(this);
-  }
+  KilerPaymentStatusBuilder();
 
   KilerPaymentStatusBuilder get _$this {
     if (_$v != null) {

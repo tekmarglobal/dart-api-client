@@ -190,9 +190,7 @@ class AdminServiceCompanyResponseBuilder
   int get id => _$this._id;
   set id(int id) => _$this._id = id;
 
-  AdminServiceCompanyResponseBuilder() {
-    AdminServiceCompanyResponse._initializeBuilder(this);
-  }
+  AdminServiceCompanyResponseBuilder();
 
   AdminServiceCompanyResponseBuilder get _$this {
     if (_$v != null) {

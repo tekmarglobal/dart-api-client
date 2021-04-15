@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**start** | [**DateTime**](DateTime.md) |  | [optional] 
-**end** | [**DateTime**](DateTime.md) |  | [optional] 
-**quota** | **int** |  | [optional] 
-**fee** | **double** |  | [optional] 
-**region** | **int** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] 
-**order** | [**BuiltList<KilerOrder>**](KilerOrder.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**start** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**end** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**quota** | **int** |  | [optional] [default to null]
+**fee** | **double** |  | [optional] [default to null]
+**region** | **int** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] [default to null]
+**order** | [**BuiltList&lt;KilerOrder&gt;**](KilerOrder.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

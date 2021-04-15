@@ -158,9 +158,7 @@ class RestResultOfListOfAdminServiceTimeSlotResponseBuilder
   set data(ListBuilder<AdminServiceTimeSlotResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfAdminServiceTimeSlotResponseBuilder() {
-    RestResultOfListOfAdminServiceTimeSlotResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfAdminServiceTimeSlotResponseBuilder();
 
   RestResultOfListOfAdminServiceTimeSlotResponseBuilder get _$this {
     if (_$v != null) {

@@ -34,7 +34,7 @@ try {
     var result = api_instance.apiAccountFirebaseTokenGet();
     print(result);
 } catch (e) {
-    print('Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n');
+    print("Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n");
 }
 ```
 
@@ -76,7 +76,7 @@ try {
     var result = api_instance.apiAccountLoginPost(accountServiceLoginRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
+    print("Exception when calling AccountApi->apiAccountLoginPost: $e\n");
 }
 ```
 
@@ -120,7 +120,7 @@ try {
     var result = api_instance.apiAccountLogoutGet();
     print(result);
 } catch (e) {
-    print('Exception when calling AccountApi->apiAccountLogoutGet: $e\n');
+    print("Exception when calling AccountApi->apiAccountLogoutGet: $e\n");
 }
 ```
 
@@ -161,7 +161,7 @@ try {
     var result = api_instance.apiAccountWhoAmIGet();
     print(result);
 } catch (e) {
-    print('Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n');
+    print("Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n");
 }
 ```
 

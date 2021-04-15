@@ -403,9 +403,7 @@ class KilerPermissionPolicyTypePermissionsObjectBuilder
       _$this._permissionPolicyObjectPermissionsObject =
           permissionPolicyObjectPermissionsObject;
 
-  KilerPermissionPolicyTypePermissionsObjectBuilder() {
-    KilerPermissionPolicyTypePermissionsObject._initializeBuilder(this);
-  }
+  KilerPermissionPolicyTypePermissionsObjectBuilder();
 
   KilerPermissionPolicyTypePermissionsObjectBuilder get _$this {
     if (_$v != null) {

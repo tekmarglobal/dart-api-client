@@ -110,9 +110,7 @@ class CustomerServiceCustomerResponseBuilder
   set customer(CustomerServiceRCustomerBuilder customer) =>
       _$this._customer = customer;
 
-  CustomerServiceCustomerResponseBuilder() {
-    CustomerServiceCustomerResponse._initializeBuilder(this);
-  }
+  CustomerServiceCustomerResponseBuilder();
 
   CustomerServiceCustomerResponseBuilder get _$this {
     if (_$v != null) {

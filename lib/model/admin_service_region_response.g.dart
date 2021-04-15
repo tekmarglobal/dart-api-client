@@ -324,9 +324,7 @@ class AdminServiceRegionResponseBuilder
           ListBuilder<AdminServiceAdminNeighborResponse> neighborhoods) =>
       _$this._neighborhoods = neighborhoods;
 
-  AdminServiceRegionResponseBuilder() {
-    AdminServiceRegionResponse._initializeBuilder(this);
-  }
+  AdminServiceRegionResponseBuilder();
 
   AdminServiceRegionResponseBuilder get _$this {
     if (_$v != null) {

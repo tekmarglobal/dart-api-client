@@ -214,9 +214,7 @@ class KilerPersonelDepartmentBuilder
   set personelNavigation(KilerPersonelBuilder personelNavigation) =>
       _$this._personelNavigation = personelNavigation;
 
-  KilerPersonelDepartmentBuilder() {
-    KilerPersonelDepartment._initializeBuilder(this);
-  }
+  KilerPersonelDepartmentBuilder();
 
   KilerPersonelDepartmentBuilder get _$this {
     if (_$v != null) {

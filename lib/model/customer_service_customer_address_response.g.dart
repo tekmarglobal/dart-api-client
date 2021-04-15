@@ -116,9 +116,7 @@ class CustomerServiceCustomerAddressResponseBuilder
   set address(ListBuilder<CustomerServiceRAddress> address) =>
       _$this._address = address;
 
-  CustomerServiceCustomerAddressResponseBuilder() {
-    CustomerServiceCustomerAddressResponse._initializeBuilder(this);
-  }
+  CustomerServiceCustomerAddressResponseBuilder();
 
   CustomerServiceCustomerAddressResponseBuilder get _$this {
     if (_$v != null) {

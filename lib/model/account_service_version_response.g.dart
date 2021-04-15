@@ -125,9 +125,7 @@ class AccountServiceVersionResponseBuilder
   bool get isMandatory => _$this._isMandatory;
   set isMandatory(bool isMandatory) => _$this._isMandatory = isMandatory;
 
-  AccountServiceVersionResponseBuilder() {
-    AccountServiceVersionResponse._initializeBuilder(this);
-  }
+  AccountServiceVersionResponseBuilder();
 
   AccountServiceVersionResponseBuilder get _$this {
     if (_$v != null) {

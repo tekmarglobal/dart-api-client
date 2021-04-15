@@ -124,9 +124,7 @@ class CatalogServiceRProductPriceBuilder
   double get listPrice => _$this._listPrice;
   set listPrice(double listPrice) => _$this._listPrice = listPrice;
 
-  CatalogServiceRProductPriceBuilder() {
-    CatalogServiceRProductPrice._initializeBuilder(this);
-  }
+  CatalogServiceRProductPriceBuilder();
 
   CatalogServiceRProductPriceBuilder get _$this {
     if (_$v != null) {

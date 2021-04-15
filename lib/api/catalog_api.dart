@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/rest_result_of_catalog_service_r_category.dart';
@@ -11,57 +13,41 @@ class CatalogApi {
 
     CatalogApi(this._dio, this._serializers);
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogAllCategoriesGet({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/allCategories';
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogAllCategoriesGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        String _path = "/api/Catalog/allCategories";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -72,62 +58,44 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogAllCategoriesRegionGet({ int neighborhood,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogAllCategoriesRegionGet({ 
-        int neighborhood,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/allCategoriesRegion';
+        String _path = "/api/Catalog/allCategoriesRegion";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'Neighborhood'] = neighborhood;
+                queryParams[r'Neighborhood'] = neighborhood;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -138,68 +106,47 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogCreateCategoryPost({ String name,int parent,int level,bool showInMenu,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogCreateCategoryPost({ 
-        String name,
-        int parent,
-        int level,
-        bool showInMenu,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/createCategory';
+        String _path = "/api/Catalog/createCategory";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'Name'] = name;
-        queryParams[r'Parent'] = parent;
-        queryParams[r'Level'] = level;
-        queryParams[r'ShowInMenu'] = showInMenu;
+                queryParams[r'Name'] = name;
+                queryParams[r'Parent'] = parent;
+                queryParams[r'Level'] = level;
+                queryParams[r'ShowInMenu'] = showInMenu;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -210,62 +157,44 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogDeleteCategoryDelete({ int id,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogDeleteCategoryDelete({ 
-        int id,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/deleteCategory';
+        String _path = "/api/Catalog/deleteCategory";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'Id'] = id;
+                queryParams[r'Id'] = id;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'delete'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'delete'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -276,121 +205,81 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response>apiCatalogImportCategoriesFromOlimposPost({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<void>> apiCatalogImportCategoriesFromOlimposPost({ 
-        int region,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/ImportCategoriesFromOlimpos';
+        String _path = "/api/Catalog/ImportCategoriesFromOlimpos";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'region'] = region;
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        );
-    }
+            );
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogPost({ int categoryId,int regionId,bool withProducts,int nestingLevel,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogPost({ 
-        int categoryId,
-        int regionId,
-        bool withProducts,
-        int nestingLevel,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog';
+        String _path = "/api/Catalog";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'CategoryId'] = categoryId;
-        queryParams[r'RegionId'] = regionId;
-        queryParams[r'WithProducts'] = withProducts;
-        queryParams[r'NestingLevel'] = nestingLevel;
+                queryParams[r'CategoryId'] = categoryId;
+                queryParams[r'RegionId'] = regionId;
+                queryParams[r'WithProducts'] = withProducts;
+                queryParams[r'NestingLevel'] = nestingLevel;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -401,68 +290,47 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCatalogServiceRCategory>>apiCatalogUpdateCategoryPut({ int id,String name,int parent,int level,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfCatalogServiceRCategory>> apiCatalogUpdateCategoryPut({ 
-        int id,
-        String name,
-        int parent,
-        int level,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Catalog/updateCategory';
+        String _path = "/api/Catalog/updateCategory";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'Id'] = id;
-        queryParams[r'Name'] = name;
-        queryParams[r'Parent'] = parent;
-        queryParams[r'Level'] = level;
+                queryParams[r'Id'] = id;
+                queryParams[r'Name'] = name;
+                queryParams[r'Parent'] = parent;
+                queryParams[r'Level'] = level;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'put'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'put'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
-            final data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfCatalogServiceRCategory);
+        var data = _serializers.deserializeWith<RestResultOfCatalogServiceRCategory>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfCatalogServiceRCategory>(
                 data: data,
@@ -473,7 +341,6 @@ class CatalogApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
-
-}
+            });
+            }
+        }

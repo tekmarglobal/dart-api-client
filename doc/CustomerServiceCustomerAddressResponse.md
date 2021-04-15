@@ -8,7 +8,7 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**BuiltList<CustomerServiceRAddress>**](CustomerServiceRAddress.md) |  | [optional] 
+**address** | [**BuiltList&lt;CustomerServiceRAddress&gt;**](CustomerServiceRAddress.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

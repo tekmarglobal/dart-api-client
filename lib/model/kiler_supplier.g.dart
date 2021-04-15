@@ -159,9 +159,7 @@ class KilerSupplierBuilder
       _$this._product ??= new ListBuilder<KilerProduct>();
   set product(ListBuilder<KilerProduct> product) => _$this._product = product;
 
-  KilerSupplierBuilder() {
-    KilerSupplier._initializeBuilder(this);
-  }
+  KilerSupplierBuilder();
 
   KilerSupplierBuilder get _$this {
     if (_$v != null) {

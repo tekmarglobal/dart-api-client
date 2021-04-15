@@ -271,9 +271,7 @@ class KilerCityBuilder implements Builder<KilerCity, KilerCityBuilder> {
   set neighborhood(ListBuilder<KilerNeighborhood> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  KilerCityBuilder() {
-    KilerCity._initializeBuilder(this);
-  }
+  KilerCityBuilder();
 
   KilerCityBuilder get _$this {
     if (_$v != null) {

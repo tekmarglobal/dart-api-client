@@ -183,9 +183,7 @@ class AdminServiceTimeSlotResponseBuilder
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
 
-  AdminServiceTimeSlotResponseBuilder() {
-    AdminServiceTimeSlotResponse._initializeBuilder(this);
-  }
+  AdminServiceTimeSlotResponseBuilder();
 
   AdminServiceTimeSlotResponseBuilder get _$this {
     if (_$v != null) {

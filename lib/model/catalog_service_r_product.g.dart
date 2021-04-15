@@ -404,9 +404,7 @@ class CatalogServiceRProductBuilder
   String get menuName => _$this._menuName;
   set menuName(String menuName) => _$this._menuName = menuName;
 
-  CatalogServiceRProductBuilder() {
-    CatalogServiceRProduct._initializeBuilder(this);
-  }
+  CatalogServiceRProductBuilder();
 
   CatalogServiceRProductBuilder get _$this {
     if (_$v != null) {

@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/rest_result_of_list_of_admin_service_admin_neighbor_response.dart';
@@ -23,57 +25,41 @@ class AdminApi {
 
     AdminApi(this._dio, this._serializers);
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceBranchResponse>> apiAdminBranchPost({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/Branch';
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceBranchResponse>>apiAdminBranchPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        String _path = "/api/Admin/Branch";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceBranchResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceBranchResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceBranchResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceBranchResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceBranchResponse>(
                 data: data,
@@ -84,60 +70,43 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceCompanyResponse>>apiAdminCompaniesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceCompanyResponse>> apiAdminCompaniesPost({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/Companies';
+        String _path = "/api/Admin/Companies";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceCompanyResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceCompanyResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceCompanyResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceCompanyResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceCompanyResponse>(
                 data: data,
@@ -148,62 +117,44 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceTimeSlotResponse>>apiAdminGenerateTimeSlotsGet({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceTimeSlotResponse>> apiAdminGenerateTimeSlotsGet({ 
-        int region,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/GenerateTimeSlots';
+        String _path = "/api/Admin/GenerateTimeSlots";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'region'] = region;
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceTimeSlotResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceTimeSlotResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceTimeSlotResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceTimeSlotResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceTimeSlotResponse>(
                 data: data,
@@ -214,62 +165,44 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceTimeSlotResponse>>apiAdminGenerateTimeSlotsPost({ int region,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceTimeSlotResponse>> apiAdminGenerateTimeSlotsPost({ 
-        int region,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/GenerateTimeSlots';
+        String _path = "/api/Admin/GenerateTimeSlots";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'region'] = region;
+                queryParams[r'region'] = region;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceTimeSlotResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceTimeSlotResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceTimeSlotResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceTimeSlotResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceTimeSlotResponse>(
                 data: data,
@@ -280,60 +213,43 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfKilerConfiguration>>apiAdminGetConfigurationGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfKilerConfiguration>> apiAdminGetConfigurationGet({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/GetConfiguration';
+        String _path = "/api/Admin/GetConfiguration";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfKilerConfiguration);
-            final data = _serializers.deserializeWith<RestResultOfKilerConfiguration>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfKilerConfiguration);
+        var data = _serializers.deserializeWith<RestResultOfKilerConfiguration>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfKilerConfiguration>(
                 data: data,
@@ -344,63 +260,45 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<String>>apiAdminGetProductGet({ String erpId,int productId,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<String>> apiAdminGetProductGet({ 
-        String erpId,
-        int productId,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/GetProduct';
+        String _path = "/api/Admin/GetProduct";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'erpId'] = erpId;
-        queryParams[r'productId'] = productId;
+                queryParams[r'erpId'] = erpId;
+                queryParams[r'productId'] = productId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final data = response.data as String;
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(String);
+        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<String>(
                 data: data,
@@ -411,69 +309,46 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceAdminNeighborResponse>>apiAdminRegionNeighborhoodPost({ AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceAdminNeighborResponse>> apiAdminRegionNeighborhoodPost({ 
-        AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/RegionNeighborhood';
+        String _path = "/api/Admin/RegionNeighborhood";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(adminServiceRegionNeighborhoodRequest);
-        final jsonadminServiceRegionNeighborhoodRequest = json.encode(serializedBody);
-        bodyData = jsonadminServiceRegionNeighborhoodRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(adminServiceRegionNeighborhoodRequest);
+            var jsonadminServiceRegionNeighborhoodRequest = json.encode(serializedBody);
+            bodyData = jsonadminServiceRegionNeighborhoodRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceAdminNeighborResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceAdminNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceAdminNeighborResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceAdminNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceAdminNeighborResponse>(
                 data: data,
@@ -484,62 +359,44 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfSystemInt32>>apiAdminRegionPopulationGet({ int gpsId,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfSystemInt32>> apiAdminRegionPopulationGet({ 
-        int gpsId,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/RegionPopulation';
+        String _path = "/api/Admin/RegionPopulation";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'gpsId'] = gpsId;
+                queryParams[r'gpsId'] = gpsId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfSystemInt32);
-            final data = _serializers.deserializeWith<RestResultOfSystemInt32>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfSystemInt32);
+        var data = _serializers.deserializeWith<RestResultOfSystemInt32>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfSystemInt32>(
                 data: data,
@@ -550,62 +407,44 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfAdminServiceRegionResponse>>apiAdminRegionPost({ int regionId,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfAdminServiceRegionResponse>> apiAdminRegionPost({ 
-        int regionId,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/Region';
+        String _path = "/api/Admin/Region";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
-        queryParams[r'regionId'] = regionId;
+                queryParams[r'regionId'] = regionId;
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceRegionResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfAdminServiceRegionResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfAdminServiceRegionResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfAdminServiceRegionResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfAdminServiceRegionResponse>(
                 data: data,
@@ -616,69 +455,46 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfAdminServiceAdminNeighborResponse>>apiAdminUpdateRegionNeighborhoodPost({ AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfAdminServiceAdminNeighborResponse>> apiAdminUpdateRegionNeighborhoodPost({ 
-        AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/UpdateRegionNeighborhood';
+        String _path = "/api/Admin/UpdateRegionNeighborhood";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(adminServiceUpdateRegionNeighborhoodRequest);
-        final jsonadminServiceUpdateRegionNeighborhoodRequest = json.encode(serializedBody);
-        bodyData = jsonadminServiceUpdateRegionNeighborhoodRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(adminServiceUpdateRegionNeighborhoodRequest);
+            var jsonadminServiceUpdateRegionNeighborhoodRequest = json.encode(serializedBody);
+            bodyData = jsonadminServiceUpdateRegionNeighborhoodRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfAdminServiceAdminNeighborResponse);
-            final data = _serializers.deserializeWith<RestResultOfAdminServiceAdminNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfAdminServiceAdminNeighborResponse);
+        var data = _serializers.deserializeWith<RestResultOfAdminServiceAdminNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfAdminServiceAdminNeighborResponse>(
                 data: data,
@@ -689,69 +505,48 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfAdminServiceUploadImageResponse>>apiAdminUploadProductImagePost({ Uint8List file,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfAdminServiceUploadImageResponse>> apiAdminUploadProductImagePost({ 
-        Uint8List file,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Admin/UploadProductImage';
+        String _path = "/api/Admin/UploadProductImage";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'multipart/form-data',
-        ];
+        List<String> contentTypes = ["multipart/form-data"];
 
-        final Map<String, dynamic> formData = {};
-        if (file != null) {
-            formData[r'file'] = MultipartFile.fromBytes(file, filename: r'file');
-        }
+        Map<String, dynamic> formData = {};
+                if (file != null) {
+                    formData[r'file'] = MultipartFile.fromBytes(file, filename: r'file');
+                }
         bodyData = FormData.fromMap(formData);
 
-        return _dio.request(
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfAdminServiceUploadImageResponse);
-            final data = _serializers.deserializeWith<RestResultOfAdminServiceUploadImageResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfAdminServiceUploadImageResponse);
+        var data = _serializers.deserializeWith<RestResultOfAdminServiceUploadImageResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfAdminServiceUploadImageResponse>(
                 data: data,
@@ -762,7 +557,6 @@ class AdminApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
-
-}
+            });
+            }
+        }

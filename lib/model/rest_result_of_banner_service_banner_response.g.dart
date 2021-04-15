@@ -152,9 +152,7 @@ class RestResultOfBannerServiceBannerResponseBuilder
       _$this._data ??= new BannerServiceBannerResponseBuilder();
   set data(BannerServiceBannerResponseBuilder data) => _$this._data = data;
 
-  RestResultOfBannerServiceBannerResponseBuilder() {
-    RestResultOfBannerServiceBannerResponse._initializeBuilder(this);
-  }
+  RestResultOfBannerServiceBannerResponseBuilder();
 
   RestResultOfBannerServiceBannerResponseBuilder get _$this {
     if (_$v != null) {

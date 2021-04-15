@@ -279,9 +279,7 @@ class AdminServiceAdminNeighborResponseBuilder
   int get population => _$this._population;
   set population(int population) => _$this._population = population;
 
-  AdminServiceAdminNeighborResponseBuilder() {
-    AdminServiceAdminNeighborResponse._initializeBuilder(this);
-  }
+  AdminServiceAdminNeighborResponseBuilder();
 
   AdminServiceAdminNeighborResponseBuilder get _$this {
     if (_$v != null) {

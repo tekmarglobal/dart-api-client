@@ -192,9 +192,7 @@ class KilerXpobjectTypeBuilder
       _$this._survey ??= new ListBuilder<KilerSurvey>();
   set survey(ListBuilder<KilerSurvey> survey) => _$this._survey = survey;
 
-  KilerXpobjectTypeBuilder() {
-    KilerXpobjectType._initializeBuilder(this);
-  }
+  KilerXpobjectTypeBuilder();
 
   KilerXpobjectTypeBuilder get _$this {
     if (_$v != null) {

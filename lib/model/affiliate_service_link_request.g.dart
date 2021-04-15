@@ -124,9 +124,7 @@ class AffiliateServiceLinkRequestBuilder
   int get key => _$this._key;
   set key(int key) => _$this._key = key;
 
-  AffiliateServiceLinkRequestBuilder() {
-    AffiliateServiceLinkRequest._initializeBuilder(this);
-  }
+  AffiliateServiceLinkRequestBuilder();
 
   AffiliateServiceLinkRequestBuilder get _$this {
     if (_$v != null) {

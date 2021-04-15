@@ -1,49 +1,49 @@
-import 'package:openapi/model/kiler_region.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_region.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_depot.g.dart';
 
 abstract class KilerDepot implements Built<KilerDepot, KilerDepotBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'latitude')
     double get latitude;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'longitude')
     double get longitude;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'regionNavigation')
     KilerRegion get regionNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerDepot._();
 
-    static void _initializeBuilder(KilerDepotBuilder b) => b;
-
     factory KilerDepot([updates(KilerDepotBuilder b)]) = _$KilerDepot;
     static Serializer<KilerDepot> get serializer => _$kilerDepotSerializer;
+
 }
 

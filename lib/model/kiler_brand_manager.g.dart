@@ -296,9 +296,7 @@ class KilerBrandManagerBuilder
           ListBuilder<KilerBrandManagerBrand> brandManagerBrand) =>
       _$this._brandManagerBrand = brandManagerBrand;
 
-  KilerBrandManagerBuilder() {
-    KilerBrandManager._initializeBuilder(this);
-  }
+  KilerBrandManagerBuilder();
 
   KilerBrandManagerBuilder get _$this {
     if (_$v != null) {

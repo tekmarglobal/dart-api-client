@@ -1,102 +1,102 @@
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:openapi/model/kiler_cart_product.dart';
-import 'package:openapi/model/kiler_order.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/kiler_device.dart';
-import 'package:openapi/model/kiler_region.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+            import 'package:openapi/model/kiler_cart_product.dart';
+            import 'package:openapi/model/kiler_order.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/kiler_device.dart';
+            import 'package:openapi/model/kiler_region.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_cart.g.dart';
 
 abstract class KilerCart implements Built<KilerCart, KilerCartBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cartTotal')
     double get cartTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'createdFrom')
     int get createdFrom;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'productDiscountsTotal')
     double get productDiscountsTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'note')
     String get note;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'bagAmount')
     int get bagAmount;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'bagTotal')
     double get bagTotal;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'deleted')
     bool get deleted;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'estimatedFee')
     double get estimatedFee;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'dateDeleted')
     DateTime get dateDeleted;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'dateCreated')
     DateTime get dateCreated;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'createdFromNavigation')
     KilerDevice get createdFromNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'regionNavigation')
     KilerRegion get regionNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'cartProduct')
     BuiltList<KilerCartProduct> get cartProduct;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     BuiltList<KilerOrder> get order;
 
     // Boilerplate code needed to wire-up generated code
     KilerCart._();
 
-    static void _initializeBuilder(KilerCartBuilder b) => b;
-
     factory KilerCart([updates(KilerCartBuilder b)]) = _$KilerCart;
     static Serializer<KilerCart> get serializer => _$kilerCartSerializer;
+
 }
 

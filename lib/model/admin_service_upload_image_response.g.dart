@@ -107,9 +107,7 @@ class AdminServiceUploadImageResponseBuilder
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
 
-  AdminServiceUploadImageResponseBuilder() {
-    AdminServiceUploadImageResponse._initializeBuilder(this);
-  }
+  AdminServiceUploadImageResponseBuilder();
 
   AdminServiceUploadImageResponseBuilder get _$this {
     if (_$v != null) {

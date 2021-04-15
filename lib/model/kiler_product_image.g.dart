@@ -268,9 +268,7 @@ class KilerProductImageBuilder
   set productNavigation(KilerProductBuilder productNavigation) =>
       _$this._productNavigation = productNavigation;
 
-  KilerProductImageBuilder() {
-    KilerProductImage._initializeBuilder(this);
-  }
+  KilerProductImageBuilder();
 
   KilerProductImageBuilder get _$this {
     if (_$v != null) {

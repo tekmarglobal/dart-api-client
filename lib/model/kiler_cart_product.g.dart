@@ -475,9 +475,7 @@ class KilerCartProductBuilder
   set removedFromNavigation(KilerDeviceBuilder removedFromNavigation) =>
       _$this._removedFromNavigation = removedFromNavigation;
 
-  KilerCartProductBuilder() {
-    KilerCartProduct._initializeBuilder(this);
-  }
+  KilerCartProductBuilder();
 
   KilerCartProductBuilder get _$this {
     if (_$v != null) {

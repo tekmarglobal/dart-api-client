@@ -193,9 +193,7 @@ class RegisterServiceLoginResponseBuilder
   set versionResponse(RegisterServiceVersionResponseBuilder versionResponse) =>
       _$this._versionResponse = versionResponse;
 
-  RegisterServiceLoginResponseBuilder() {
-    RegisterServiceLoginResponse._initializeBuilder(this);
-  }
+  RegisterServiceLoginResponseBuilder();
 
   RegisterServiceLoginResponseBuilder get _$this {
     if (_$v != null) {

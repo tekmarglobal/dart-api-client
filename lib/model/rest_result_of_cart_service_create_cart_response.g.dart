@@ -152,9 +152,7 @@ class RestResultOfCartServiceCreateCartResponseBuilder
       _$this._data ??= new CartServiceCreateCartResponseBuilder();
   set data(CartServiceCreateCartResponseBuilder data) => _$this._data = data;
 
-  RestResultOfCartServiceCreateCartResponseBuilder() {
-    RestResultOfCartServiceCreateCartResponse._initializeBuilder(this);
-  }
+  RestResultOfCartServiceCreateCartResponseBuilder();
 
   RestResultOfCartServiceCreateCartResponseBuilder get _$this {
     if (_$v != null) {

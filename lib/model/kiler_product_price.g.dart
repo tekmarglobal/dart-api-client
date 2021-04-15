@@ -249,9 +249,7 @@ class KilerProductPriceBuilder
           KilerRegionProductBuilder regionProductNavigation) =>
       _$this._regionProductNavigation = regionProductNavigation;
 
-  KilerProductPriceBuilder() {
-    KilerProductPrice._initializeBuilder(this);
-  }
+  KilerProductPriceBuilder();
 
   KilerProductPriceBuilder get _$this {
     if (_$v != null) {

@@ -318,9 +318,7 @@ class KilerSurveyBuilder implements Builder<KilerSurvey, KilerSurveyBuilder> {
   set surveyAnswer(ListBuilder<KilerSurveyAnswer> surveyAnswer) =>
       _$this._surveyAnswer = surveyAnswer;
 
-  KilerSurveyBuilder() {
-    KilerSurvey._initializeBuilder(this);
-  }
+  KilerSurveyBuilder();
 
   KilerSurveyBuilder get _$this {
     if (_$v != null) {

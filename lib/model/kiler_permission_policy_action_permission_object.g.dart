@@ -221,9 +221,7 @@ class KilerPermissionPolicyActionPermissionObjectBuilder
   set roleNavigation(KilerPermissionPolicyRoleBuilder roleNavigation) =>
       _$this._roleNavigation = roleNavigation;
 
-  KilerPermissionPolicyActionPermissionObjectBuilder() {
-    KilerPermissionPolicyActionPermissionObject._initializeBuilder(this);
-  }
+  KilerPermissionPolicyActionPermissionObjectBuilder();
 
   KilerPermissionPolicyActionPermissionObjectBuilder get _$this {
     if (_$v != null) {

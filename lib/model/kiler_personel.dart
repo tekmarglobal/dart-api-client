@@ -1,54 +1,54 @@
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/kiler_personel_department.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/kiler_personel_department.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_personel.g.dart';
 
 abstract class KilerPersonel implements Built<KilerPersonel, KilerPersonelBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'surname')
     String get surname;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phone')
     String get phone;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'email')
     String get email;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'userName')
     String get userName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'password')
     String get password;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'personelDepartment')
     BuiltList<KilerPersonelDepartment> get personelDepartment;
 
     // Boilerplate code needed to wire-up generated code
     KilerPersonel._();
 
-    static void _initializeBuilder(KilerPersonelBuilder b) => b;
-
     factory KilerPersonel([updates(KilerPersonelBuilder b)]) = _$KilerPersonel;
     static Serializer<KilerPersonel> get serializer => _$kilerPersonelSerializer;
+
 }
 

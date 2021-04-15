@@ -1,132 +1,132 @@
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:openapi/model/kiler_neighborhood.dart';
-import 'package:openapi/model/kiler_order.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+            import 'package:openapi/model/kiler_neighborhood.dart';
+            import 'package:openapi/model/kiler_order.dart';
+            import 'package:built_collection/built_collection.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_address.g.dart';
 
 abstract class KilerAddress implements Built<KilerAddress, KilerAddressBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'neighborhood')
     int get neighborhood;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'fullAddress')
     String get fullAddress;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'street')
     String get street;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'building')
     String get building;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'floor')
     String get floor;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'door')
     String get door;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'postalCode')
     String get postalCode;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'description')
     String get description;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerName')
     String get customerName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerSurname')
     String get customerSurname;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'companyName')
     String get companyName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'taxOffice')
     String get taxOffice;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'taxNumber')
     String get taxNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'longitude')
     double get longitude;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'latitude')
     double get latitude;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'isindividual')
     bool get isindividual;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'neighborhoodNavigation')
     KilerNeighborhood get neighborhoodNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerDefaultAddressNavigation')
     BuiltList<KilerCustomer> get customerDefaultAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerInvoiceAddressNavigation')
     BuiltList<KilerCustomer> get customerInvoiceAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderBillingAddressNavigation')
     BuiltList<KilerOrder> get orderBillingAddressNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderDeliveryAddressNavigation')
     BuiltList<KilerOrder> get orderDeliveryAddressNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerAddress._();
 
-    static void _initializeBuilder(KilerAddressBuilder b) => b;
-
     factory KilerAddress([updates(KilerAddressBuilder b)]) = _$KilerAddress;
     static Serializer<KilerAddress> get serializer => _$kilerAddressSerializer;
+
 }
 

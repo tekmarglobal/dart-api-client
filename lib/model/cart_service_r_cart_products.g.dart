@@ -275,9 +275,7 @@ class CartServiceRCartProductsBuilder
   int get unitId => _$this._unitId;
   set unitId(int unitId) => _$this._unitId = unitId;
 
-  CartServiceRCartProductsBuilder() {
-    CartServiceRCartProducts._initializeBuilder(this);
-  }
+  CartServiceRCartProductsBuilder();
 
   CartServiceRCartProductsBuilder get _$this {
     if (_$v != null) {

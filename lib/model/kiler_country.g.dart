@@ -157,9 +157,7 @@ class KilerCountryBuilder
       _$this._city ??= new ListBuilder<KilerCity>();
   set city(ListBuilder<KilerCity> city) => _$this._city = city;
 
-  KilerCountryBuilder() {
-    KilerCountry._initializeBuilder(this);
-  }
+  KilerCountryBuilder();
 
   KilerCountryBuilder get _$this {
     if (_$v != null) {

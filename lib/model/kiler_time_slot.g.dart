@@ -269,9 +269,7 @@ class KilerTimeSlotBuilder
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerTimeSlotBuilder() {
-    KilerTimeSlot._initializeBuilder(this);
-  }
+  KilerTimeSlotBuilder();
 
   KilerTimeSlotBuilder get _$this {
     if (_$v != null) {

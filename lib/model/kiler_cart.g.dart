@@ -518,9 +518,7 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
       _$this._order ??= new ListBuilder<KilerOrder>();
   set order(ListBuilder<KilerOrder> order) => _$this._order = order;
 
-  KilerCartBuilder() {
-    KilerCart._initializeBuilder(this);
-  }
+  KilerCartBuilder();
 
   KilerCartBuilder get _$this {
     if (_$v != null) {

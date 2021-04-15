@@ -158,9 +158,7 @@ class RestResultOfCartServiceUpdateCartRegionResponseBuilder
   set data(CartServiceUpdateCartRegionResponseBuilder data) =>
       _$this._data = data;
 
-  RestResultOfCartServiceUpdateCartRegionResponseBuilder() {
-    RestResultOfCartServiceUpdateCartRegionResponse._initializeBuilder(this);
-  }
+  RestResultOfCartServiceUpdateCartRegionResponseBuilder();
 
   RestResultOfCartServiceUpdateCartRegionResponseBuilder get _$this {
     if (_$v != null) {

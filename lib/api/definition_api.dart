@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/rest_result_of_list_of_definition_service_faq_response.dart';
@@ -19,57 +21,41 @@ class DefinitionApi {
 
     DefinitionApi(this._dio, this._serializers);
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfDefinitionServiceAgreementResponse>> apiDefinitionAgreementGet({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Agreement';
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfDefinitionServiceAgreementResponse>>apiDefinitionAgreementGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        String _path = "/api/Definition/Agreement";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceAgreementResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceAgreementResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceAgreementResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceAgreementResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfDefinitionServiceAgreementResponse>(
                 data: data,
@@ -80,60 +66,43 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfDefinitionServiceCitiesResponse>>apiDefinitionCitiesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfDefinitionServiceCitiesResponse>> apiDefinitionCitiesPost({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Cities';
+        String _path = "/api/Definition/Cities";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceCitiesResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceCitiesResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceCitiesResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceCitiesResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfDefinitionServiceCitiesResponse>(
                 data: data,
@@ -144,69 +113,46 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfDefinitionServiceCountiesResponse>>apiDefinitionCountiesPost({ DefinitionServiceCountiesRequest definitionServiceCountiesRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfDefinitionServiceCountiesResponse>> apiDefinitionCountiesPost({ 
-        DefinitionServiceCountiesRequest definitionServiceCountiesRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Counties';
+        String _path = "/api/Definition/Counties";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(definitionServiceCountiesRequest);
-        final jsondefinitionServiceCountiesRequest = json.encode(serializedBody);
-        bodyData = jsondefinitionServiceCountiesRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(definitionServiceCountiesRequest);
+            var jsondefinitionServiceCountiesRequest = json.encode(serializedBody);
+            bodyData = jsondefinitionServiceCountiesRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceCountiesResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceCountiesResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceCountiesResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceCountiesResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfDefinitionServiceCountiesResponse>(
                 data: data,
@@ -217,60 +163,43 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfDefinitionServiceFaqResponse>>apiDefinitionFaqGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfDefinitionServiceFaqResponse>> apiDefinitionFaqGet({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Faq';
+        String _path = "/api/Definition/Faq";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceFaqResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceFaqResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceFaqResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceFaqResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfDefinitionServiceFaqResponse>(
                 data: data,
@@ -281,59 +210,43 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<String>>apiDefinitionHelloGet({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<String>> apiDefinitionHelloGet({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Hello';
+        String _path = "/api/Definition/Hello";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'get'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'get'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final data = response.data as String;
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(String);
+        var data = _serializers.deserializeWith<String>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<String>(
                 data: data,
@@ -344,69 +257,46 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfDefinitionServiceNeighborResponse>>apiDefinitionNeighborhoodPost({ DefinitionServiceNeighborRequest definitionServiceNeighborRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfListOfDefinitionServiceNeighborResponse>> apiDefinitionNeighborhoodPost({ 
-        DefinitionServiceNeighborRequest definitionServiceNeighborRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/Neighborhood';
+        String _path = "/api/Definition/Neighborhood";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(definitionServiceNeighborRequest);
-        final jsondefinitionServiceNeighborRequest = json.encode(serializedBody);
-        bodyData = jsondefinitionServiceNeighborRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(definitionServiceNeighborRequest);
+            var jsondefinitionServiceNeighborRequest = json.encode(serializedBody);
+            bodyData = jsondefinitionServiceNeighborRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceNeighborResponse);
-            final data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfListOfDefinitionServiceNeighborResponse);
+        var data = _serializers.deserializeWith<RestResultOfListOfDefinitionServiceNeighborResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfListOfDefinitionServiceNeighborResponse>(
                 data: data,
@@ -417,69 +307,46 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>>apiDefinitionUpdateAgreementLogPost({ DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> apiDefinitionUpdateAgreementLogPost({ 
-        DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Definition/UpdateAgreementLog';
+        String _path = "/api/Definition/UpdateAgreementLog";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(definitionServiceUpdateAgreementRequest);
-        final jsondefinitionServiceUpdateAgreementRequest = json.encode(serializedBody);
-        bodyData = jsondefinitionServiceUpdateAgreementRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(definitionServiceUpdateAgreementRequest);
+            var jsondefinitionServiceUpdateAgreementRequest = json.encode(serializedBody);
+            bodyData = jsondefinitionServiceUpdateAgreementRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfDefinitionServiceUpdateAgreementLogResponse);
-            final data = _serializers.deserializeWith<RestResultOfDefinitionServiceUpdateAgreementLogResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfDefinitionServiceUpdateAgreementLogResponse);
+        var data = _serializers.deserializeWith<RestResultOfDefinitionServiceUpdateAgreementLogResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>(
                 data: data,
@@ -490,7 +357,6 @@ class DefinitionApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
-
-}
+            });
+            }
+        }

@@ -8,11 +8,11 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **String** |  | [optional] 
-**customerId** | **int** |  | [optional] 
-**registered** | **bool** |  | [optional] 
-**firebaseToken** | **String** |  | [optional] 
-**versionResponse** | [**RegisterServiceVersionResponse**](RegisterServiceVersionResponse.md) |  | [optional] 
+**token** | **String** |  | [optional] [default to null]
+**customerId** | **int** |  | [optional] [default to null]
+**registered** | **bool** |  | [optional] [default to null]
+**firebaseToken** | **String** |  | [optional] [default to null]
+**versionResponse** | [**RegisterServiceVersionResponse**](RegisterServiceVersionResponse.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

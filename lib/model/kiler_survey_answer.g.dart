@@ -251,9 +251,7 @@ class KilerSurveyAnswerBuilder
   set surveyNavigation(KilerSurveyBuilder surveyNavigation) =>
       _$this._surveyNavigation = surveyNavigation;
 
-  KilerSurveyAnswerBuilder() {
-    KilerSurveyAnswer._initializeBuilder(this);
-  }
+  KilerSurveyAnswerBuilder();
 
   KilerSurveyAnswerBuilder get _$this {
     if (_$v != null) {

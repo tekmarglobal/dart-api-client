@@ -280,9 +280,7 @@ class KilerCategoryImportDetailBuilder
   set categoryNavigation(KilerCategoryBuilder categoryNavigation) =>
       _$this._categoryNavigation = categoryNavigation;
 
-  KilerCategoryImportDetailBuilder() {
-    KilerCategoryImportDetail._initializeBuilder(this);
-  }
+  KilerCategoryImportDetailBuilder();
 
   KilerCategoryImportDetailBuilder get _$this {
     if (_$v != null) {

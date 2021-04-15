@@ -146,9 +146,7 @@ class DefinitionServiceBranchResponseBuilder
   double get longitude => _$this._longitude;
   set longitude(double longitude) => _$this._longitude = longitude;
 
-  DefinitionServiceBranchResponseBuilder() {
-    DefinitionServiceBranchResponse._initializeBuilder(this);
-  }
+  DefinitionServiceBranchResponseBuilder();
 
   DefinitionServiceBranchResponseBuilder get _$this {
     if (_$v != null) {

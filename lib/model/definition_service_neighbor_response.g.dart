@@ -279,9 +279,7 @@ class DefinitionServiceNeighborResponseBuilder
   int get population => _$this._population;
   set population(int population) => _$this._population = population;
 
-  DefinitionServiceNeighborResponseBuilder() {
-    DefinitionServiceNeighborResponse._initializeBuilder(this);
-  }
+  DefinitionServiceNeighborResponseBuilder();
 
   DefinitionServiceNeighborResponseBuilder get _$this {
     if (_$v != null) {

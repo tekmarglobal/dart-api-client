@@ -221,9 +221,7 @@ class KilerBranchBuilder implements Builder<KilerBranch, KilerBranchBuilder> {
   set neighborhoodNavigation(KilerNeighborhoodBuilder neighborhoodNavigation) =>
       _$this._neighborhoodNavigation = neighborhoodNavigation;
 
-  KilerBranchBuilder() {
-    KilerBranch._initializeBuilder(this);
-  }
+  KilerBranchBuilder();
 
   KilerBranchBuilder get _$this {
     if (_$v != null) {

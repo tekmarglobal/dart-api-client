@@ -152,9 +152,7 @@ class RestResultOfAccountServiceLoginResponseBuilder
       _$this._data ??= new AccountServiceLoginResponseBuilder();
   set data(AccountServiceLoginResponseBuilder data) => _$this._data = data;
 
-  RestResultOfAccountServiceLoginResponseBuilder() {
-    RestResultOfAccountServiceLoginResponse._initializeBuilder(this);
-  }
+  RestResultOfAccountServiceLoginResponseBuilder();
 
   RestResultOfAccountServiceLoginResponseBuilder get _$this {
     if (_$v != null) {

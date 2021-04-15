@@ -276,9 +276,7 @@ class KilerCustomerLoginAttemptBuilder
   set platformNavigation(KilerPlatformBuilder platformNavigation) =>
       _$this._platformNavigation = platformNavigation;
 
-  KilerCustomerLoginAttemptBuilder() {
-    KilerCustomerLoginAttempt._initializeBuilder(this);
-  }
+  KilerCustomerLoginAttemptBuilder();
 
   KilerCustomerLoginAttemptBuilder get _$this {
     if (_$v != null) {

@@ -15,6 +15,7 @@ import 'package:openapi/api/catalog_api.dart';
 import 'package:openapi/api/customer_api.dart';
 import 'package:openapi/api/definition_api.dart';
 import 'package:openapi/api/migration_api.dart';
+import 'package:openapi/api/order_api.dart';
 import 'package:openapi/api/payment_api.dart';
 import 'package:openapi/api/product_api.dart';
 import 'package:openapi/api/register_api.dart';
@@ -27,7 +28,7 @@ class Openapi {
 
     Dio dio;
     Serializers serializers;
-    String basePath = 'http://localhost';
+    String basePath = "http://localhost";
 
     Openapi({this.dio, Serializers serializers, String basePathOverride, List<Interceptor> interceptors}) {
         if (dio == null) {
@@ -139,6 +140,15 @@ class Openapi {
     */
     MigrationApi getMigrationApi() {
     return MigrationApi(dio, serializers);
+    }
+
+
+    /**
+    * Get OrderApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    OrderApi getOrderApi() {
+    return OrderApi(dio, serializers);
     }
 
 

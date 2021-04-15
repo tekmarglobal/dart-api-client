@@ -209,9 +209,7 @@ class KilerPaymentTypeBuilder
       _$this._payment ??= new ListBuilder<KilerPayment>();
   set payment(ListBuilder<KilerPayment> payment) => _$this._payment = payment;
 
-  KilerPaymentTypeBuilder() {
-    KilerPaymentType._initializeBuilder(this);
-  }
+  KilerPaymentTypeBuilder();
 
   KilerPaymentTypeBuilder get _$this {
     if (_$v != null) {

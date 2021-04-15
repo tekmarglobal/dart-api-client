@@ -1,12 +1,14 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/rest_result_of_register_service_login_response.dart';
-import 'package:openapi/model/rest_result_of_sms_response_sms_response.dart';
-import 'package:openapi/model/sms_request_sms_request.dart';
-import 'package:openapi/model/verify_request_verify_request.dart';
+import 'package:openapi/model/register_service_verify_request.dart';
+import 'package:openapi/model/rest_result_of_register_service_sms_response.dart';
+import 'package:openapi/model/register_service_sms_request.dart';
 
 class RegisterApi {
     final Dio _dio;
@@ -14,68 +16,46 @@ class RegisterApi {
 
     RegisterApi(this._dio, this._serializers);
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfSmsResponseSmsResponse>> apiRegisterSendSmsPost({ 
-        SmsRequestSmsRequest smsRequestSmsRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Register/SendSms';
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfRegisterServiceSmsResponse>>apiRegisterSendSmsPost({ RegisterServiceSmsRequest registerServiceSmsRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        String _path = "/api/Register/SendSms";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(smsRequestSmsRequest);
-        final jsonsmsRequestSmsRequest = json.encode(serializedBody);
-        bodyData = jsonsmsRequestSmsRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(registerServiceSmsRequest);
+            var jsonregisterServiceSmsRequest = json.encode(serializedBody);
+            bodyData = jsonregisterServiceSmsRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfSmsResponseSmsResponse);
-            final data = _serializers.deserializeWith<RestResultOfSmsResponseSmsResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
 
-            return Response<RestResultOfSmsResponseSmsResponse>(
+        var serializer = _serializers.serializerForType(RestResultOfRegisterServiceSmsResponse);
+        var data = _serializers.deserializeWith<RestResultOfRegisterServiceSmsResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+
+            return Response<RestResultOfRegisterServiceSmsResponse>(
                 data: data,
                 headers: response.headers,
                 request: response.request,
@@ -84,69 +64,46 @@ class RegisterApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfRegisterServiceLoginResponse>>apiRegisterVerifySmsPost({ RegisterServiceVerifyRequest registerServiceVerifyRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfRegisterServiceLoginResponse>> apiRegisterVerifySmsPost({ 
-        VerifyRequestVerifyRequest verifyRequestVerifyRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Register/VerifySms';
+        String _path = "/api/Register/VerifySms";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(verifyRequestVerifyRequest);
-        final jsonverifyRequestVerifyRequest = json.encode(serializedBody);
-        bodyData = jsonverifyRequestVerifyRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(registerServiceVerifyRequest);
+            var jsonregisterServiceVerifyRequest = json.encode(serializedBody);
+            bodyData = jsonregisterServiceVerifyRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfRegisterServiceLoginResponse);
-            final data = _serializers.deserializeWith<RestResultOfRegisterServiceLoginResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfRegisterServiceLoginResponse);
+        var data = _serializers.deserializeWith<RestResultOfRegisterServiceLoginResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfRegisterServiceLoginResponse>(
                 data: data,
@@ -157,7 +114,6 @@ class RegisterApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
-
-}
+            });
+            }
+        }

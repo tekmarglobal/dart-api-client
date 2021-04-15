@@ -1,92 +1,92 @@
-import 'package:openapi/model/kiler_customer.dart';
-import 'package:openapi/model/kiler_order.dart';
-import 'package:openapi/model/kiler_ticket_action.dart';
-import 'package:openapi/model/kiler_ticket_category.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:openapi/model/kiler_customer.dart';
+            import 'package:openapi/model/kiler_order.dart';
+            import 'package:openapi/model/kiler_ticket_action.dart';
+            import 'package:openapi/model/kiler_ticket_category.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_ticket.g.dart';
 
 abstract class KilerTicket implements Built<KilerTicket, KilerTicketBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'note')
     String get note;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customer')
     int get customer;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'active')
     bool get active;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'ticketCategory')
     int get ticketCategory;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'status')
     int get status;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'createdAt')
     DateTime get createdAt;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'user')
     int get user;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'action')
     int get action;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'gcrecord')
     int get gcrecord;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'actionNavigation')
     KilerTicketAction get actionNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'orderNavigation')
     KilerOrder get orderNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'ticketCategoryNavigation')
     KilerTicketCategory get ticketCategoryNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerTicket._();
 
-    static void _initializeBuilder(KilerTicketBuilder b) => b;
-
     factory KilerTicket([updates(KilerTicketBuilder b)]) = _$KilerTicket;
     static Serializer<KilerTicket> get serializer => _$kilerTicketSerializer;
+
 }
 

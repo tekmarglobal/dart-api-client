@@ -155,9 +155,7 @@ class RestResultOfAdminServiceUploadImageResponseBuilder
       _$this._data ??= new AdminServiceUploadImageResponseBuilder();
   set data(AdminServiceUploadImageResponseBuilder data) => _$this._data = data;
 
-  RestResultOfAdminServiceUploadImageResponseBuilder() {
-    RestResultOfAdminServiceUploadImageResponse._initializeBuilder(this);
-  }
+  RestResultOfAdminServiceUploadImageResponseBuilder();
 
   RestResultOfAdminServiceUploadImageResponseBuilder get _$this {
     if (_$v != null) {

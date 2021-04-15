@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
 
 import 'package:openapi/model/payment_service_payment_request.dart';
@@ -13,117 +15,77 @@ class PaymentApi {
 
     PaymentApi(this._dio, this._serializers);
 
-    /// 
-    ///
-    /// 
-    Future<Response<void>> apiPaymentCardSuccessPost({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Payment/CardSuccess';
+        /// 
+        ///
+        /// 
+        Future<Response>apiPaymentCardSuccessPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        String _path = "/api/Payment/CardSuccess";
+
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        );
-    }
+            );
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfPaymentServicePaymentResponse>>apiPaymentCreatePaymentPost({ PaymentServicePaymentRequest paymentServicePaymentRequest,CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfPaymentServicePaymentResponse>> apiPaymentCreatePaymentPost({ 
-        PaymentServicePaymentRequest paymentServicePaymentRequest,
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Payment/CreatePayment';
+        String _path = "/api/Payment/CreatePayment";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [
-            'application/json',
-            'text/json',
-            'application/_*+json',
-        ];
+        List<String> contentTypes = ["application/json","text/json","application/_*+json"];
 
-        final serializedBody = _serializers.serialize(paymentServicePaymentRequest);
-        final jsonpaymentServicePaymentRequest = json.encode(serializedBody);
-        bodyData = jsonpaymentServicePaymentRequest;
 
-        return _dio.request(
+            var serializedBody = _serializers.serialize(paymentServicePaymentRequest);
+            var jsonpaymentServicePaymentRequest = json.encode(serializedBody);
+            bodyData = jsonpaymentServicePaymentRequest;
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfPaymentServicePaymentResponse);
-            final data = _serializers.deserializeWith<RestResultOfPaymentServicePaymentResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfPaymentServicePaymentResponse);
+        var data = _serializers.deserializeWith<RestResultOfPaymentServicePaymentResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfPaymentServicePaymentResponse>(
                 data: data,
@@ -134,60 +96,43 @@ class PaymentApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
+            });
+            }
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfPaymentServicePaymentTypeResponse>>apiPaymentGetPaymentTypesPost({ CancelToken cancelToken, Map<String, String> headers,}) async {
 
-    /// 
-    ///
-    /// 
-    Future<Response<RestResultOfPaymentServicePaymentTypeResponse>> apiPaymentGetPaymentTypesPost({ 
-        CancelToken cancelToken,
-        Map<String, dynamic> headers,
-        Map<String, dynamic> extra,
-        ValidateStatus validateStatus,
-        ProgressCallback onSendProgress,
-        ProgressCallback onReceiveProgress,
-    }) async {
-        final String _path = '/api/Payment/GetPaymentTypes';
+        String _path = "/api/Payment/GetPaymentTypes";
 
-        final Map<String, dynamic> queryParams = {};
-        final Map<String, dynamic> headerParams = {
-            if (headers != null) ...headers,
-        };
+        Map<String, dynamic> queryParams = {};
+        Map<String, String> headerParams = Map.from(headers ?? {});
         dynamic bodyData;
 
         queryParams.removeWhere((key, value) => value == null);
         headerParams.removeWhere((key, value) => value == null);
 
-        final List<String> contentTypes = [];
+        List<String> contentTypes = [];
 
-        return _dio.request(
+
+
+            return _dio.request(
             _path,
             queryParameters: queryParams,
             data: bodyData,
             options: Options(
-                method: 'post'.toUpperCase(),
-                headers: headerParams,
-                extra: {
-                    'secure': [
-                        {
-                            'type': 'apiKey',
-                            'name': 'Bearer',
-                            'keyName': 'Authorization',
-                            'where': 'header',
-                        },
-                    ],
-                    if (extra != null) ...extra,
-                },
-                validateStatus: validateStatus,
-                contentType: contentTypes.isNotEmpty ? contentTypes[0] : 'application/json',
+            method: 'post'.toUpperCase(),
+            headers: headerParams,
+            extra: {
+                'secure': [ {"type": "apiKey", "name": "Bearer", "keyName": "Authorization", "where": "header" }],
+            },
+            contentType: contentTypes.isNotEmpty ? contentTypes[0] : "application/json",
             ),
             cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-        ).then((response) {
-            final serializer = _serializers.serializerForType(RestResultOfPaymentServicePaymentTypeResponse);
-            final data = _serializers.deserializeWith<RestResultOfPaymentServicePaymentTypeResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
+            ).then((response) {
+
+        var serializer = _serializers.serializerForType(RestResultOfPaymentServicePaymentTypeResponse);
+        var data = _serializers.deserializeWith<RestResultOfPaymentServicePaymentTypeResponse>(serializer, response.data is String ? jsonDecode(response.data) : response.data);
 
             return Response<RestResultOfPaymentServicePaymentTypeResponse>(
                 data: data,
@@ -198,7 +143,6 @@ class PaymentApi {
                 statusMessage: response.statusMessage,
                 extra: response.extra,
             );
-        });
-    }
-
-}
+            });
+            }
+        }

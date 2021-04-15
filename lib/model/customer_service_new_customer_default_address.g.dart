@@ -132,9 +132,7 @@ class CustomerServiceNewCustomerDefaultAddressBuilder
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  CustomerServiceNewCustomerDefaultAddressBuilder() {
-    CustomerServiceNewCustomerDefaultAddress._initializeBuilder(this);
-  }
+  CustomerServiceNewCustomerDefaultAddressBuilder();
 
   CustomerServiceNewCustomerDefaultAddressBuilder get _$this {
     if (_$v != null) {

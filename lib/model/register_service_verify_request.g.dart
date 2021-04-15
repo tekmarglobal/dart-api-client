@@ -1,0 +1,160 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'register_service_verify_request.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+Serializer<RegisterServiceVerifyRequest>
+    _$registerServiceVerifyRequestSerializer =
+    new _$RegisterServiceVerifyRequestSerializer();
+
+class _$RegisterServiceVerifyRequestSerializer
+    implements StructuredSerializer<RegisterServiceVerifyRequest> {
+  @override
+  final Iterable<Type> types = const [
+    RegisterServiceVerifyRequest,
+    _$RegisterServiceVerifyRequest
+  ];
+  @override
+  final String wireName = 'RegisterServiceVerifyRequest';
+
+  @override
+  Iterable<Object> serialize(
+      Serializers serializers, RegisterServiceVerifyRequest object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object>[];
+    if (object.phone != null) {
+      result
+        ..add('phone')
+        ..add(serializers.serialize(object.phone,
+            specifiedType: const FullType(String)));
+    }
+    if (object.smsCode != null) {
+      result
+        ..add('smsCode')
+        ..add(serializers.serialize(object.smsCode,
+            specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  RegisterServiceVerifyRequest deserialize(
+      Serializers serializers, Iterable<Object> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new RegisterServiceVerifyRequestBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final dynamic value = iterator.current;
+      switch (key) {
+        case 'phone':
+          result.phone = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'smsCode':
+          result.smsCode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+      }
+    }
+
+    return result.build();
+  }
+}
+
+class _$RegisterServiceVerifyRequest extends RegisterServiceVerifyRequest {
+  @override
+  final String phone;
+  @override
+  final String smsCode;
+
+  factory _$RegisterServiceVerifyRequest(
+          [void Function(RegisterServiceVerifyRequestBuilder) updates]) =>
+      (new RegisterServiceVerifyRequestBuilder()..update(updates)).build();
+
+  _$RegisterServiceVerifyRequest._({this.phone, this.smsCode}) : super._();
+
+  @override
+  RegisterServiceVerifyRequest rebuild(
+          void Function(RegisterServiceVerifyRequestBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  RegisterServiceVerifyRequestBuilder toBuilder() =>
+      new RegisterServiceVerifyRequestBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is RegisterServiceVerifyRequest &&
+        phone == other.phone &&
+        smsCode == other.smsCode;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc(0, phone.hashCode), smsCode.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('RegisterServiceVerifyRequest')
+          ..add('phone', phone)
+          ..add('smsCode', smsCode))
+        .toString();
+  }
+}
+
+class RegisterServiceVerifyRequestBuilder
+    implements
+        Builder<RegisterServiceVerifyRequest,
+            RegisterServiceVerifyRequestBuilder> {
+  _$RegisterServiceVerifyRequest _$v;
+
+  String _phone;
+  String get phone => _$this._phone;
+  set phone(String phone) => _$this._phone = phone;
+
+  String _smsCode;
+  String get smsCode => _$this._smsCode;
+  set smsCode(String smsCode) => _$this._smsCode = smsCode;
+
+  RegisterServiceVerifyRequestBuilder();
+
+  RegisterServiceVerifyRequestBuilder get _$this {
+    if (_$v != null) {
+      _phone = _$v.phone;
+      _smsCode = _$v.smsCode;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(RegisterServiceVerifyRequest other) {
+    if (other == null) {
+      throw new ArgumentError.notNull('other');
+    }
+    _$v = other as _$RegisterServiceVerifyRequest;
+  }
+
+  @override
+  void update(void Function(RegisterServiceVerifyRequestBuilder) updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$RegisterServiceVerifyRequest build() {
+    final _$result = _$v ??
+        new _$RegisterServiceVerifyRequest._(phone: phone, smsCode: smsCode);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

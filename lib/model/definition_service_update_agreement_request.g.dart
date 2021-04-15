@@ -130,9 +130,7 @@ class DefinitionServiceUpdateAgreementRequestBuilder
   bool get accept => _$this._accept;
   set accept(bool accept) => _$this._accept = accept;
 
-  DefinitionServiceUpdateAgreementRequestBuilder() {
-    DefinitionServiceUpdateAgreementRequest._initializeBuilder(this);
-  }
+  DefinitionServiceUpdateAgreementRequestBuilder();
 
   DefinitionServiceUpdateAgreementRequestBuilder get _$this {
     if (_$v != null) {

@@ -1,105 +1,105 @@
-import 'package:built_collection/built_collection.dart';
-import 'package:openapi/model/kiler_configuration.dart';
-import 'package:openapi/model/kiler_category_import_detail.dart';
-import 'package:openapi/model/kiler_category_product.dart';
-import 'package:openapi/model/kiler_department.dart';
-import 'package:built_value/built_value.dart';
+            import 'package:built_collection/built_collection.dart';
+            import 'package:openapi/model/kiler_configuration.dart';
+            import 'package:openapi/model/kiler_category_import_detail.dart';
+            import 'package:openapi/model/kiler_category_product.dart';
+            import 'package:openapi/model/kiler_department.dart';
+        import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'kiler_category.g.dart';
 
 abstract class KilerCategory implements Built<KilerCategory, KilerCategoryBuilder> {
 
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'oid')
     int get oid;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'name')
     String get name;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'level')
     int get level;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'parent')
     int get parent;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'image')
     String get image;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'showInMenu')
     bool get showInMenu;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'nleft')
     int get nleft;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'nright')
     int get nright;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'refId')
     String get refId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'imagePath')
     String get imagePath;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'department')
     int get department;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'erpId')
     int get erpId;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'order')
     int get order;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'menuName')
     String get menuName;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'departmentNavigation')
     KilerDepartment get departmentNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'parentNavigation')
     KilerCategory get parentNavigation;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'categoryImportDetail')
     BuiltList<KilerCategoryImportDetail> get categoryImportDetail;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'categoryProduct')
     BuiltList<KilerCategoryProduct> get categoryProduct;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'configuration')
     BuiltList<KilerConfiguration> get configuration;
-
-    @nullable
+    
+        @nullable
     @BuiltValueField(wireName: r'inverseParentNavigation')
     BuiltList<KilerCategory> get inverseParentNavigation;
 
     // Boilerplate code needed to wire-up generated code
     KilerCategory._();
 
-    static void _initializeBuilder(KilerCategoryBuilder b) => b;
-
     factory KilerCategory([updates(KilerCategoryBuilder b)]) = _$KilerCategory;
     static Serializer<KilerCategory> get serializer => _$kilerCategorySerializer;
+
 }
 

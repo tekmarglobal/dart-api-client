@@ -158,9 +158,7 @@ class RestResultOfListOfCartServiceTimeSlotsResponseBuilder
   set data(ListBuilder<CartServiceTimeSlotsResponse> data) =>
       _$this._data = data;
 
-  RestResultOfListOfCartServiceTimeSlotsResponseBuilder() {
-    RestResultOfListOfCartServiceTimeSlotsResponse._initializeBuilder(this);
-  }
+  RestResultOfListOfCartServiceTimeSlotsResponseBuilder();
 
   RestResultOfListOfCartServiceTimeSlotsResponseBuilder get _$this {
     if (_$v != null) {

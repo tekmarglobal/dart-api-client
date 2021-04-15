@@ -125,9 +125,7 @@ class RegisterServiceVersionResponseBuilder
   bool get isMandatory => _$this._isMandatory;
   set isMandatory(bool isMandatory) => _$this._isMandatory = isMandatory;
 
-  RegisterServiceVersionResponseBuilder() {
-    RegisterServiceVersionResponse._initializeBuilder(this);
-  }
+  RegisterServiceVersionResponseBuilder();
 
   RegisterServiceVersionResponseBuilder get _$this {
     if (_$v != null) {

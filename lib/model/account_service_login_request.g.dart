@@ -126,9 +126,7 @@ class AccountServiceLoginRequestBuilder
   set versionRequest(AccountServiceVersionRequestBuilder versionRequest) =>
       _$this._versionRequest = versionRequest;
 
-  AccountServiceLoginRequestBuilder() {
-    AccountServiceLoginRequest._initializeBuilder(this);
-  }
+  AccountServiceLoginRequestBuilder();
 
   AccountServiceLoginRequestBuilder get _$this {
     if (_$v != null) {

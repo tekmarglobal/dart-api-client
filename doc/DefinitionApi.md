@@ -37,7 +37,7 @@ try {
     var result = api_instance.apiDefinitionAgreementGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n");
 }
 ```
 
@@ -78,7 +78,7 @@ try {
     var result = api_instance.apiDefinitionCitiesPost();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n");
 }
 ```
 
@@ -120,7 +120,7 @@ try {
     var result = api_instance.apiDefinitionCountiesPost(definitionServiceCountiesRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n");
 }
 ```
 
@@ -164,7 +164,7 @@ try {
     var result = api_instance.apiDefinitionFaqGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n");
 }
 ```
 
@@ -205,7 +205,7 @@ try {
     var result = api_instance.apiDefinitionHelloGet();
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n");
 }
 ```
 
@@ -247,7 +247,7 @@ try {
     var result = api_instance.apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n");
 }
 ```
 
@@ -292,7 +292,7 @@ try {
     var result = api_instance.apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
+    print("Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n");
 }
 ```
 

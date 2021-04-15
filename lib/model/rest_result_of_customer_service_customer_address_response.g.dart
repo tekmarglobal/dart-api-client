@@ -162,9 +162,7 @@ class RestResultOfCustomerServiceCustomerAddressResponseBuilder
   set data(CustomerServiceCustomerAddressResponseBuilder data) =>
       _$this._data = data;
 
-  RestResultOfCustomerServiceCustomerAddressResponseBuilder() {
-    RestResultOfCustomerServiceCustomerAddressResponse._initializeBuilder(this);
-  }
+  RestResultOfCustomerServiceCustomerAddressResponseBuilder();
 
   RestResultOfCustomerServiceCustomerAddressResponseBuilder get _$this {
     if (_$v != null) {

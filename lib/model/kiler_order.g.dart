@@ -859,9 +859,7 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerOrderBuilder() {
-    KilerOrder._initializeBuilder(this);
-  }
+  KilerOrderBuilder();
 
   KilerOrderBuilder get _$this {
     if (_$v != null) {

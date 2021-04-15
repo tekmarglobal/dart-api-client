@@ -318,9 +318,7 @@ class KilerPermissionPolicyObjectPermissionsObjectBuilder
               typePermissionObjectNavigation) =>
       _$this._typePermissionObjectNavigation = typePermissionObjectNavigation;
 
-  KilerPermissionPolicyObjectPermissionsObjectBuilder() {
-    KilerPermissionPolicyObjectPermissionsObject._initializeBuilder(this);
-  }
+  KilerPermissionPolicyObjectPermissionsObjectBuilder();
 
   KilerPermissionPolicyObjectPermissionsObjectBuilder get _$this {
     if (_$v != null) {

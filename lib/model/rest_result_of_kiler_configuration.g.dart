@@ -146,9 +146,7 @@ class RestResultOfKilerConfigurationBuilder
       _$this._data ??= new KilerConfigurationBuilder();
   set data(KilerConfigurationBuilder data) => _$this._data = data;
 
-  RestResultOfKilerConfigurationBuilder() {
-    RestResultOfKilerConfiguration._initializeBuilder(this);
-  }
+  RestResultOfKilerConfigurationBuilder();
 
   RestResultOfKilerConfigurationBuilder get _$this {
     if (_$v != null) {

@@ -8,12 +8,12 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**brand** | [**BuiltList<KilerBrand>**](KilerBrand.md) |  | [optional] 
-**brandManager** | [**BuiltList<KilerBrandManager>**](KilerBrandManager.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**name** | **String** |  | [optional] [default to null]
+**description** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**brand** | [**BuiltList&lt;KilerBrand&gt;**](KilerBrand.md) |  | [optional] [default to const []]
+**brandManager** | [**BuiltList&lt;KilerBrandManager&gt;**](KilerBrandManager.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

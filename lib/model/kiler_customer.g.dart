@@ -835,9 +835,7 @@ class KilerCustomerBuilder
       _$this._ticket ??= new ListBuilder<KilerTicket>();
   set ticket(ListBuilder<KilerTicket> ticket) => _$this._ticket = ticket;
 
-  KilerCustomerBuilder() {
-    KilerCustomer._initializeBuilder(this);
-  }
+  KilerCustomerBuilder();
 
   KilerCustomerBuilder get _$this {
     if (_$v != null) {

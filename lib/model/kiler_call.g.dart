@@ -350,9 +350,7 @@ class KilerCallBuilder implements Builder<KilerCall, KilerCallBuilder> {
   set customerNavigation(KilerCustomerBuilder customerNavigation) =>
       _$this._customerNavigation = customerNavigation;
 
-  KilerCallBuilder() {
-    KilerCall._initializeBuilder(this);
-  }
+  KilerCallBuilder();
 
   KilerCallBuilder get _$this {
     if (_$v != null) {

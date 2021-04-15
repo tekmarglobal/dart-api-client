@@ -106,9 +106,7 @@ class ProductServiceFavoriteRequestBuilder
   int get productId => _$this._productId;
   set productId(int productId) => _$this._productId = productId;
 
-  ProductServiceFavoriteRequestBuilder() {
-    ProductServiceFavoriteRequest._initializeBuilder(this);
-  }
+  ProductServiceFavoriteRequestBuilder();
 
   ProductServiceFavoriteRequestBuilder get _$this {
     if (_$v != null) {

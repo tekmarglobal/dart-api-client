@@ -147,9 +147,7 @@ class RestResultOfListOfSystemStringBuilder
   ListBuilder<String> get data => _$this._data ??= new ListBuilder<String>();
   set data(ListBuilder<String> data) => _$this._data = data;
 
-  RestResultOfListOfSystemStringBuilder() {
-    RestResultOfListOfSystemString._initializeBuilder(this);
-  }
+  RestResultOfListOfSystemStringBuilder();
 
   RestResultOfListOfSystemStringBuilder get _$this {
     if (_$v != null) {

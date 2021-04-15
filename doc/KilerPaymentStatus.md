@@ -8,11 +8,11 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
-**code** | **String** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**payment** | [**BuiltList<KilerPayment>**](KilerPayment.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**name** | **String** |  | [optional] [default to null]
+**code** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**payment** | [**BuiltList&lt;KilerPayment&gt;**](KilerPayment.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

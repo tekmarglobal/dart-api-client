@@ -142,9 +142,7 @@ class RestResultOfSystemObjectBuilder
   JsonObject get data => _$this._data;
   set data(JsonObject data) => _$this._data = data;
 
-  RestResultOfSystemObjectBuilder() {
-    RestResultOfSystemObject._initializeBuilder(this);
-  }
+  RestResultOfSystemObjectBuilder();
 
   RestResultOfSystemObjectBuilder get _$this {
     if (_$v != null) {

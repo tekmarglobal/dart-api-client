@@ -110,9 +110,7 @@ class AdminServiceRegionNeighborhoodRequestBuilder
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
 
-  AdminServiceRegionNeighborhoodRequestBuilder() {
-    AdminServiceRegionNeighborhoodRequest._initializeBuilder(this);
-  }
+  AdminServiceRegionNeighborhoodRequestBuilder();
 
   AdminServiceRegionNeighborhoodRequestBuilder get _$this {
     if (_$v != null) {

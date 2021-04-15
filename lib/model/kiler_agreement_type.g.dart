@@ -186,9 +186,7 @@ class KilerAgreementTypeBuilder
   set agreement(ListBuilder<KilerAgreement> agreement) =>
       _$this._agreement = agreement;
 
-  KilerAgreementTypeBuilder() {
-    KilerAgreementType._initializeBuilder(this);
-  }
+  KilerAgreementTypeBuilder();
 
   KilerAgreementTypeBuilder get _$this {
     if (_$v != null) {

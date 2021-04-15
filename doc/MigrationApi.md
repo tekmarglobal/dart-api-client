@@ -32,7 +32,7 @@ try {
     var result = api_instance.apiMigrationCreateregionpriceGet();
     print(result);
 } catch (e) {
-    print('Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n');
+    print("Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n");
 }
 ```
 
@@ -72,7 +72,7 @@ var api_instance = new MigrationApi();
 try { 
     api_instance.apiMigrationUpdateCitiesFromRestGet();
 } catch (e) {
-    print('Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n');
+    print("Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n");
 }
 ```
 

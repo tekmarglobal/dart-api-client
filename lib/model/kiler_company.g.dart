@@ -201,9 +201,7 @@ class KilerCompanyBuilder
       _$this._region ??= new ListBuilder<KilerRegion>();
   set region(ListBuilder<KilerRegion> region) => _$this._region = region;
 
-  KilerCompanyBuilder() {
-    KilerCompany._initializeBuilder(this);
-  }
+  KilerCompanyBuilder();
 
   KilerCompanyBuilder get _$this {
     if (_$v != null) {

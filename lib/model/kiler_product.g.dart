@@ -789,9 +789,7 @@ class KilerProductBuilder
   set regionProduct(ListBuilder<KilerRegionProduct> regionProduct) =>
       _$this._regionProduct = regionProduct;
 
-  KilerProductBuilder() {
-    KilerProduct._initializeBuilder(this);
-  }
+  KilerProductBuilder();
 
   KilerProductBuilder get _$this {
     if (_$v != null) {

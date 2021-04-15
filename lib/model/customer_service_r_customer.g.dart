@@ -411,9 +411,7 @@ class CustomerServiceRCustomerBuilder
   set invoiceAddress(int invoiceAddress) =>
       _$this._invoiceAddress = invoiceAddress;
 
-  CustomerServiceRCustomerBuilder() {
-    CustomerServiceRCustomer._initializeBuilder(this);
-  }
+  CustomerServiceRCustomerBuilder();
 
   CustomerServiceRCustomerBuilder get _$this {
     if (_$v != null) {

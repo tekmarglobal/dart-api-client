@@ -128,9 +128,7 @@ class CartServiceUpdateCartRegionRequestBuilder
   bool get isForce => _$this._isForce;
   set isForce(bool isForce) => _$this._isForce = isForce;
 
-  CartServiceUpdateCartRegionRequestBuilder() {
-    CartServiceUpdateCartRegionRequest._initializeBuilder(this);
-  }
+  CartServiceUpdateCartRegionRequestBuilder();
 
   CartServiceUpdateCartRegionRequestBuilder get _$this {
     if (_$v != null) {

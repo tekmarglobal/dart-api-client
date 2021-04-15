@@ -236,9 +236,7 @@ class KilerCategoryImportBuilder
           ListBuilder<KilerCategoryImportDetail> categoryImportDetail) =>
       _$this._categoryImportDetail = categoryImportDetail;
 
-  KilerCategoryImportBuilder() {
-    KilerCategoryImport._initializeBuilder(this);
-  }
+  KilerCategoryImportBuilder();
 
   KilerCategoryImportBuilder get _$this {
     if (_$v != null) {

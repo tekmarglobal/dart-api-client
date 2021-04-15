@@ -246,9 +246,7 @@ class KilerCountyBuilder implements Builder<KilerCounty, KilerCountyBuilder> {
   set neighborhood(ListBuilder<KilerNeighborhood> neighborhood) =>
       _$this._neighborhood = neighborhood;
 
-  KilerCountyBuilder() {
-    KilerCounty._initializeBuilder(this);
-  }
+  KilerCountyBuilder();
 
   KilerCountyBuilder get _$this {
     if (_$v != null) {

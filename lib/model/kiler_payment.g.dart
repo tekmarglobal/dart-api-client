@@ -472,9 +472,7 @@ class KilerPaymentBuilder
   set paymentTypeNavigation(KilerPaymentTypeBuilder paymentTypeNavigation) =>
       _$this._paymentTypeNavigation = paymentTypeNavigation;
 
-  KilerPaymentBuilder() {
-    KilerPayment._initializeBuilder(this);
-  }
+  KilerPaymentBuilder();
 
   KilerPaymentBuilder get _$this {
     if (_$v != null) {

@@ -273,9 +273,7 @@ class KilerTimeSlotTemplateBuilder
   set regionNavigation(KilerRegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
-  KilerTimeSlotTemplateBuilder() {
-    KilerTimeSlotTemplate._initializeBuilder(this);
-  }
+  KilerTimeSlotTemplateBuilder();
 
   KilerTimeSlotTemplateBuilder get _$this {
     if (_$v != null) {

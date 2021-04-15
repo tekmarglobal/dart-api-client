@@ -8,15 +8,15 @@ import 'package:openapi/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**oid** | **int** |  | [optional] 
-**category** | **int** |  | [optional] 
-**oldValue** | **String** |  | [optional] 
-**newValue** | **String** |  | [optional] 
-**categoryImport** | **int** |  | [optional] 
-**operationType** | **String** |  | [optional] 
-**optimisticLockField** | **int** |  | [optional] 
-**categoryImportNavigation** | [**KilerCategoryImport**](KilerCategoryImport.md) |  | [optional] 
-**categoryNavigation** | [**KilerCategory**](KilerCategory.md) |  | [optional] 
+**oid** | **int** |  | [optional] [default to null]
+**category** | **int** |  | [optional] [default to null]
+**oldValue** | **String** |  | [optional] [default to null]
+**newValue** | **String** |  | [optional] [default to null]
+**categoryImport** | **int** |  | [optional] [default to null]
+**operationType** | **String** |  | [optional] [default to null]
+**optimisticLockField** | **int** |  | [optional] [default to null]
+**categoryImportNavigation** | [**KilerCategoryImport**](KilerCategoryImport.md) |  | [optional] [default to null]
+**categoryNavigation** | [**KilerCategory**](KilerCategory.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -564,9 +564,7 @@ class CustomerServiceRAddressBuilder
   String get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  CustomerServiceRAddressBuilder() {
-    CustomerServiceRAddress._initializeBuilder(this);
-  }
+  CustomerServiceRAddressBuilder();
 
   CustomerServiceRAddressBuilder get _$this {
     if (_$v != null) {
