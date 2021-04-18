@@ -20,7 +20,7 @@ abstract class ProductServiceProductRequest implements Built<ProductServiceProdu
 
     static void _initializeBuilder(ProductServiceProductRequestBuilder b) => b;
 
-    factory ProductServiceProductRequest(void updates(ProductServiceProductRequestBuilder b)) = _$ProductServiceProductRequest;
+    factory ProductServiceProductRequest([void updates(ProductServiceProductRequestBuilder b)]) = _$ProductServiceProductRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceProductRequest> get serializer => _$ProductServiceProductRequestSerializer();

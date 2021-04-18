@@ -37,7 +37,7 @@ abstract class AccountServiceLoginResponse implements Built<AccountServiceLoginR
 
     static void _initializeBuilder(AccountServiceLoginResponseBuilder b) => b;
 
-    factory AccountServiceLoginResponse(void updates(AccountServiceLoginResponseBuilder b)) = _$AccountServiceLoginResponse;
+    factory AccountServiceLoginResponse([void updates(AccountServiceLoginResponseBuilder b)]) = _$AccountServiceLoginResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AccountServiceLoginResponse> get serializer => _$AccountServiceLoginResponseSerializer();

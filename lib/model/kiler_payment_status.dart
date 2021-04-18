@@ -38,7 +38,7 @@ abstract class KilerPaymentStatus implements Built<KilerPaymentStatus, KilerPaym
 
     static void _initializeBuilder(KilerPaymentStatusBuilder b) => b;
 
-    factory KilerPaymentStatus(void updates(KilerPaymentStatusBuilder b)) = _$KilerPaymentStatus;
+    factory KilerPaymentStatus([void updates(KilerPaymentStatusBuilder b)]) = _$KilerPaymentStatus;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerPaymentStatus> get serializer => _$KilerPaymentStatusSerializer();

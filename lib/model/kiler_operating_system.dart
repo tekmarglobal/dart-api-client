@@ -34,7 +34,7 @@ abstract class KilerOperatingSystem implements Built<KilerOperatingSystem, Kiler
 
     static void _initializeBuilder(KilerOperatingSystemBuilder b) => b;
 
-    factory KilerOperatingSystem(void updates(KilerOperatingSystemBuilder b)) = _$KilerOperatingSystem;
+    factory KilerOperatingSystem([void updates(KilerOperatingSystemBuilder b)]) = _$KilerOperatingSystem;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerOperatingSystem> get serializer => _$KilerOperatingSystemSerializer();

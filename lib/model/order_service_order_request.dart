@@ -40,7 +40,7 @@ abstract class OrderServiceOrderRequest implements Built<OrderServiceOrderReques
 
     static void _initializeBuilder(OrderServiceOrderRequestBuilder b) => b;
 
-    factory OrderServiceOrderRequest(void updates(OrderServiceOrderRequestBuilder b)) = _$OrderServiceOrderRequest;
+    factory OrderServiceOrderRequest([void updates(OrderServiceOrderRequestBuilder b)]) = _$OrderServiceOrderRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<OrderServiceOrderRequest> get serializer => _$OrderServiceOrderRequestSerializer();

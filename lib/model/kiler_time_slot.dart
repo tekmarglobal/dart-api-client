@@ -55,7 +55,7 @@ abstract class KilerTimeSlot implements Built<KilerTimeSlot, KilerTimeSlotBuilde
 
     static void _initializeBuilder(KilerTimeSlotBuilder b) => b;
 
-    factory KilerTimeSlot(void updates(KilerTimeSlotBuilder b)) = _$KilerTimeSlot;
+    factory KilerTimeSlot([void updates(KilerTimeSlotBuilder b)]) = _$KilerTimeSlot;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerTimeSlot> get serializer => _$KilerTimeSlotSerializer();

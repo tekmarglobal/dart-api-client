@@ -69,7 +69,7 @@ abstract class KilerCall implements Built<KilerCall, KilerCallBuilder> {
 
     static void _initializeBuilder(KilerCallBuilder b) => b;
 
-    factory KilerCall(void updates(KilerCallBuilder b)) = _$KilerCall;
+    factory KilerCall([void updates(KilerCallBuilder b)]) = _$KilerCall;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCall> get serializer => _$KilerCallSerializer();

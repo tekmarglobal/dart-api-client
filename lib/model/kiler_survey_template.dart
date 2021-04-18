@@ -39,7 +39,7 @@ abstract class KilerSurveyTemplate implements Built<KilerSurveyTemplate, KilerSu
 
     static void _initializeBuilder(KilerSurveyTemplateBuilder b) => b;
 
-    factory KilerSurveyTemplate(void updates(KilerSurveyTemplateBuilder b)) = _$KilerSurveyTemplate;
+    factory KilerSurveyTemplate([void updates(KilerSurveyTemplateBuilder b)]) = _$KilerSurveyTemplate;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerSurveyTemplate> get serializer => _$KilerSurveyTemplateSerializer();

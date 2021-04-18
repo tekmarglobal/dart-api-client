@@ -34,7 +34,7 @@ abstract class KilerCountry implements Built<KilerCountry, KilerCountryBuilder> 
 
     static void _initializeBuilder(KilerCountryBuilder b) => b;
 
-    factory KilerCountry(void updates(KilerCountryBuilder b)) = _$KilerCountry;
+    factory KilerCountry([void updates(KilerCountryBuilder b)]) = _$KilerCountry;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCountry> get serializer => _$KilerCountrySerializer();

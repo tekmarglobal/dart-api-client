@@ -54,7 +54,7 @@ abstract class AdminServiceAdminNeighborResponse implements Built<AdminServiceAd
 
     static void _initializeBuilder(AdminServiceAdminNeighborResponseBuilder b) => b;
 
-    factory AdminServiceAdminNeighborResponse(void updates(AdminServiceAdminNeighborResponseBuilder b)) = _$AdminServiceAdminNeighborResponse;
+    factory AdminServiceAdminNeighborResponse([void updates(AdminServiceAdminNeighborResponseBuilder b)]) = _$AdminServiceAdminNeighborResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceAdminNeighborResponse> get serializer => _$AdminServiceAdminNeighborResponseSerializer();

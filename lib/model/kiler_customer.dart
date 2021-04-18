@@ -166,7 +166,7 @@ abstract class KilerCustomer implements Built<KilerCustomer, KilerCustomerBuilde
 
     static void _initializeBuilder(KilerCustomerBuilder b) => b;
 
-    factory KilerCustomer(void updates(KilerCustomerBuilder b)) = _$KilerCustomer;
+    factory KilerCustomer([void updates(KilerCustomerBuilder b)]) = _$KilerCustomer;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCustomer> get serializer => _$KilerCustomerSerializer();

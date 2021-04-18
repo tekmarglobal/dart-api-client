@@ -24,7 +24,7 @@ abstract class PaymentServiceRPaymentType implements Built<PaymentServiceRPaymen
 
     static void _initializeBuilder(PaymentServiceRPaymentTypeBuilder b) => b;
 
-    factory PaymentServiceRPaymentType(void updates(PaymentServiceRPaymentTypeBuilder b)) = _$PaymentServiceRPaymentType;
+    factory PaymentServiceRPaymentType([void updates(PaymentServiceRPaymentTypeBuilder b)]) = _$PaymentServiceRPaymentType;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<PaymentServiceRPaymentType> get serializer => _$PaymentServiceRPaymentTypeSerializer();

@@ -38,7 +38,7 @@ abstract class KilerTicketCategory implements Built<KilerTicketCategory, KilerTi
 
     static void _initializeBuilder(KilerTicketCategoryBuilder b) => b;
 
-    factory KilerTicketCategory(void updates(KilerTicketCategoryBuilder b)) = _$KilerTicketCategory;
+    factory KilerTicketCategory([void updates(KilerTicketCategoryBuilder b)]) = _$KilerTicketCategory;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerTicketCategory> get serializer => _$KilerTicketCategorySerializer();

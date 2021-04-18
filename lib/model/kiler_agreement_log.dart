@@ -54,7 +54,7 @@ abstract class KilerAgreementLog implements Built<KilerAgreementLog, KilerAgreem
 
     static void _initializeBuilder(KilerAgreementLogBuilder b) => b;
 
-    factory KilerAgreementLog(void updates(KilerAgreementLogBuilder b)) = _$KilerAgreementLog;
+    factory KilerAgreementLog([void updates(KilerAgreementLogBuilder b)]) = _$KilerAgreementLog;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerAgreementLog> get serializer => _$KilerAgreementLogSerializer();

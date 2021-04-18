@@ -24,7 +24,7 @@ abstract class AccountServiceVersionResponse implements Built<AccountServiceVers
 
     static void _initializeBuilder(AccountServiceVersionResponseBuilder b) => b;
 
-    factory AccountServiceVersionResponse(void updates(AccountServiceVersionResponseBuilder b)) = _$AccountServiceVersionResponse;
+    factory AccountServiceVersionResponse([void updates(AccountServiceVersionResponseBuilder b)]) = _$AccountServiceVersionResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AccountServiceVersionResponse> get serializer => _$AccountServiceVersionResponseSerializer();

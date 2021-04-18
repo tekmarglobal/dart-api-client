@@ -78,7 +78,7 @@ abstract class CustomerServiceRCustomer implements Built<CustomerServiceRCustome
 
     static void _initializeBuilder(CustomerServiceRCustomerBuilder b) => b;
 
-    factory CustomerServiceRCustomer(void updates(CustomerServiceRCustomerBuilder b)) = _$CustomerServiceRCustomer;
+    factory CustomerServiceRCustomer([void updates(CustomerServiceRCustomerBuilder b)]) = _$CustomerServiceRCustomer;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceRCustomer> get serializer => _$CustomerServiceRCustomerSerializer();

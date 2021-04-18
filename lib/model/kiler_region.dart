@@ -109,7 +109,7 @@ abstract class KilerRegion implements Built<KilerRegion, KilerRegionBuilder> {
 
     static void _initializeBuilder(KilerRegionBuilder b) => b;
 
-    factory KilerRegion(void updates(KilerRegionBuilder b)) = _$KilerRegion;
+    factory KilerRegion([void updates(KilerRegionBuilder b)]) = _$KilerRegion;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerRegion> get serializer => _$KilerRegionSerializer();

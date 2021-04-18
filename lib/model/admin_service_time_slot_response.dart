@@ -36,7 +36,7 @@ abstract class AdminServiceTimeSlotResponse implements Built<AdminServiceTimeSlo
 
     static void _initializeBuilder(AdminServiceTimeSlotResponseBuilder b) => b;
 
-    factory AdminServiceTimeSlotResponse(void updates(AdminServiceTimeSlotResponseBuilder b)) = _$AdminServiceTimeSlotResponse;
+    factory AdminServiceTimeSlotResponse([void updates(AdminServiceTimeSlotResponseBuilder b)]) = _$AdminServiceTimeSlotResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceTimeSlotResponse> get serializer => _$AdminServiceTimeSlotResponseSerializer();

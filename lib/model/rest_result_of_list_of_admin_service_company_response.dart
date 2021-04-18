@@ -30,7 +30,7 @@ abstract class RestResultOfListOfAdminServiceCompanyResponse implements Built<Re
 
     static void _initializeBuilder(RestResultOfListOfAdminServiceCompanyResponseBuilder b) => b;
 
-    factory RestResultOfListOfAdminServiceCompanyResponse(void updates(RestResultOfListOfAdminServiceCompanyResponseBuilder b)) = _$RestResultOfListOfAdminServiceCompanyResponse;
+    factory RestResultOfListOfAdminServiceCompanyResponse([void updates(RestResultOfListOfAdminServiceCompanyResponseBuilder b)]) = _$RestResultOfListOfAdminServiceCompanyResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfAdminServiceCompanyResponse> get serializer => _$RestResultOfListOfAdminServiceCompanyResponseSerializer();

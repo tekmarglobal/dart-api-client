@@ -29,7 +29,7 @@ abstract class RestResultOfAccountServiceLoginResponse implements Built<RestResu
 
     static void _initializeBuilder(RestResultOfAccountServiceLoginResponseBuilder b) => b;
 
-    factory RestResultOfAccountServiceLoginResponse(void updates(RestResultOfAccountServiceLoginResponseBuilder b)) = _$RestResultOfAccountServiceLoginResponse;
+    factory RestResultOfAccountServiceLoginResponse([void updates(RestResultOfAccountServiceLoginResponseBuilder b)]) = _$RestResultOfAccountServiceLoginResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfAccountServiceLoginResponse> get serializer => _$RestResultOfAccountServiceLoginResponseSerializer();

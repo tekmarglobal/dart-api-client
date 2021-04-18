@@ -48,7 +48,7 @@ abstract class PaymentServicePaymentRequest implements Built<PaymentServicePayme
 
     static void _initializeBuilder(PaymentServicePaymentRequestBuilder b) => b;
 
-    factory PaymentServicePaymentRequest(void updates(PaymentServicePaymentRequestBuilder b)) = _$PaymentServicePaymentRequest;
+    factory PaymentServicePaymentRequest([void updates(PaymentServicePaymentRequestBuilder b)]) = _$PaymentServicePaymentRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<PaymentServicePaymentRequest> get serializer => _$PaymentServicePaymentRequestSerializer();

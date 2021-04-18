@@ -59,7 +59,7 @@ abstract class KilerAgreement implements Built<KilerAgreement, KilerAgreementBui
 
     static void _initializeBuilder(KilerAgreementBuilder b) => b;
 
-    factory KilerAgreement(void updates(KilerAgreementBuilder b)) = _$KilerAgreement;
+    factory KilerAgreement([void updates(KilerAgreementBuilder b)]) = _$KilerAgreement;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerAgreement> get serializer => _$KilerAgreementSerializer();

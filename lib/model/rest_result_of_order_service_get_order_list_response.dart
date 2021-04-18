@@ -29,7 +29,7 @@ abstract class RestResultOfOrderServiceGetOrderListResponse implements Built<Res
 
     static void _initializeBuilder(RestResultOfOrderServiceGetOrderListResponseBuilder b) => b;
 
-    factory RestResultOfOrderServiceGetOrderListResponse(void updates(RestResultOfOrderServiceGetOrderListResponseBuilder b)) = _$RestResultOfOrderServiceGetOrderListResponse;
+    factory RestResultOfOrderServiceGetOrderListResponse([void updates(RestResultOfOrderServiceGetOrderListResponseBuilder b)]) = _$RestResultOfOrderServiceGetOrderListResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfOrderServiceGetOrderListResponse> get serializer => _$RestResultOfOrderServiceGetOrderListResponseSerializer();

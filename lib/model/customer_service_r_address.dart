@@ -108,7 +108,7 @@ abstract class CustomerServiceRAddress implements Built<CustomerServiceRAddress,
 
     static void _initializeBuilder(CustomerServiceRAddressBuilder b) => b;
 
-    factory CustomerServiceRAddress(void updates(CustomerServiceRAddressBuilder b)) = _$CustomerServiceRAddress;
+    factory CustomerServiceRAddress([void updates(CustomerServiceRAddressBuilder b)]) = _$CustomerServiceRAddress;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceRAddress> get serializer => _$CustomerServiceRAddressSerializer();

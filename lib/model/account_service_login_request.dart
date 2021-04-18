@@ -25,7 +25,7 @@ abstract class AccountServiceLoginRequest implements Built<AccountServiceLoginRe
 
     static void _initializeBuilder(AccountServiceLoginRequestBuilder b) => b;
 
-    factory AccountServiceLoginRequest(void updates(AccountServiceLoginRequestBuilder b)) = _$AccountServiceLoginRequest;
+    factory AccountServiceLoginRequest([void updates(AccountServiceLoginRequestBuilder b)]) = _$AccountServiceLoginRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AccountServiceLoginRequest> get serializer => _$AccountServiceLoginRequestSerializer();

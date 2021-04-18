@@ -54,7 +54,7 @@ abstract class KilerCategoryImportDetail implements Built<KilerCategoryImportDet
 
     static void _initializeBuilder(KilerCategoryImportDetailBuilder b) => b;
 
-    factory KilerCategoryImportDetail(void updates(KilerCategoryImportDetailBuilder b)) = _$KilerCategoryImportDetail;
+    factory KilerCategoryImportDetail([void updates(KilerCategoryImportDetailBuilder b)]) = _$KilerCategoryImportDetail;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCategoryImportDetail> get serializer => _$KilerCategoryImportDetailSerializer();

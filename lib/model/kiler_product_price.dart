@@ -49,7 +49,7 @@ abstract class KilerProductPrice implements Built<KilerProductPrice, KilerProduc
 
     static void _initializeBuilder(KilerProductPriceBuilder b) => b;
 
-    factory KilerProductPrice(void updates(KilerProductPriceBuilder b)) = _$KilerProductPrice;
+    factory KilerProductPrice([void updates(KilerProductPriceBuilder b)]) = _$KilerProductPrice;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerProductPrice> get serializer => _$KilerProductPriceSerializer();

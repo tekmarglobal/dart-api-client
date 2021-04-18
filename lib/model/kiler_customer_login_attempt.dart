@@ -54,7 +54,7 @@ abstract class KilerCustomerLoginAttempt implements Built<KilerCustomerLoginAtte
 
     static void _initializeBuilder(KilerCustomerLoginAttemptBuilder b) => b;
 
-    factory KilerCustomerLoginAttempt(void updates(KilerCustomerLoginAttemptBuilder b)) = _$KilerCustomerLoginAttempt;
+    factory KilerCustomerLoginAttempt([void updates(KilerCustomerLoginAttemptBuilder b)]) = _$KilerCustomerLoginAttempt;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCustomerLoginAttempt> get serializer => _$KilerCustomerLoginAttemptSerializer();

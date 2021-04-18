@@ -22,7 +22,7 @@ abstract class ProductServiceFavoriteListResponse implements Built<ProductServic
 
     static void _initializeBuilder(ProductServiceFavoriteListResponseBuilder b) => b;
 
-    factory ProductServiceFavoriteListResponse(void updates(ProductServiceFavoriteListResponseBuilder b)) = _$ProductServiceFavoriteListResponse;
+    factory ProductServiceFavoriteListResponse([void updates(ProductServiceFavoriteListResponseBuilder b)]) = _$ProductServiceFavoriteListResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceFavoriteListResponse> get serializer => _$ProductServiceFavoriteListResponseSerializer();

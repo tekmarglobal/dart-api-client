@@ -32,7 +32,7 @@ abstract class CartServiceRCartItemImpact implements Built<CartServiceRCartItemI
 
     static void _initializeBuilder(CartServiceRCartItemImpactBuilder b) => b;
 
-    factory CartServiceRCartItemImpact(void updates(CartServiceRCartItemImpactBuilder b)) = _$CartServiceRCartItemImpact;
+    factory CartServiceRCartItemImpact([void updates(CartServiceRCartItemImpactBuilder b)]) = _$CartServiceRCartItemImpact;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceRCartItemImpact> get serializer => _$CartServiceRCartItemImpactSerializer();

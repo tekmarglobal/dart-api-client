@@ -74,7 +74,7 @@ abstract class KilerNeighborhood implements Built<KilerNeighborhood, KilerNeighb
 
     static void _initializeBuilder(KilerNeighborhoodBuilder b) => b;
 
-    factory KilerNeighborhood(void updates(KilerNeighborhoodBuilder b)) = _$KilerNeighborhood;
+    factory KilerNeighborhood([void updates(KilerNeighborhoodBuilder b)]) = _$KilerNeighborhood;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerNeighborhood> get serializer => _$KilerNeighborhoodSerializer();

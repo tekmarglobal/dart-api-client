@@ -30,7 +30,7 @@ abstract class RestResultOfListOfAdminServiceAdminNeighborResponse implements Bu
 
     static void _initializeBuilder(RestResultOfListOfAdminServiceAdminNeighborResponseBuilder b) => b;
 
-    factory RestResultOfListOfAdminServiceAdminNeighborResponse(void updates(RestResultOfListOfAdminServiceAdminNeighborResponseBuilder b)) = _$RestResultOfListOfAdminServiceAdminNeighborResponse;
+    factory RestResultOfListOfAdminServiceAdminNeighborResponse([void updates(RestResultOfListOfAdminServiceAdminNeighborResponseBuilder b)]) = _$RestResultOfListOfAdminServiceAdminNeighborResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfAdminServiceAdminNeighborResponse> get serializer => _$RestResultOfListOfAdminServiceAdminNeighborResponseSerializer();

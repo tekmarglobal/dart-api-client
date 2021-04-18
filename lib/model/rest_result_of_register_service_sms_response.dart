@@ -29,7 +29,7 @@ abstract class RestResultOfRegisterServiceSmsResponse implements Built<RestResul
 
     static void _initializeBuilder(RestResultOfRegisterServiceSmsResponseBuilder b) => b;
 
-    factory RestResultOfRegisterServiceSmsResponse(void updates(RestResultOfRegisterServiceSmsResponseBuilder b)) = _$RestResultOfRegisterServiceSmsResponse;
+    factory RestResultOfRegisterServiceSmsResponse([void updates(RestResultOfRegisterServiceSmsResponseBuilder b)]) = _$RestResultOfRegisterServiceSmsResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfRegisterServiceSmsResponse> get serializer => _$RestResultOfRegisterServiceSmsResponseSerializer();

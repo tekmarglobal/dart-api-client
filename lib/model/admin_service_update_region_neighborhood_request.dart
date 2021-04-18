@@ -25,7 +25,7 @@ abstract class AdminServiceUpdateRegionNeighborhoodRequest implements Built<Admi
 
     static void _initializeBuilder(AdminServiceUpdateRegionNeighborhoodRequestBuilder b) => b;
 
-    factory AdminServiceUpdateRegionNeighborhoodRequest(void updates(AdminServiceUpdateRegionNeighborhoodRequestBuilder b)) = _$AdminServiceUpdateRegionNeighborhoodRequest;
+    factory AdminServiceUpdateRegionNeighborhoodRequest([void updates(AdminServiceUpdateRegionNeighborhoodRequestBuilder b)]) = _$AdminServiceUpdateRegionNeighborhoodRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceUpdateRegionNeighborhoodRequest> get serializer => _$AdminServiceUpdateRegionNeighborhoodRequestSerializer();

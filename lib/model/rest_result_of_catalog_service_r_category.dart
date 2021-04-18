@@ -29,7 +29,7 @@ abstract class RestResultOfCatalogServiceRCategory implements Built<RestResultOf
 
     static void _initializeBuilder(RestResultOfCatalogServiceRCategoryBuilder b) => b;
 
-    factory RestResultOfCatalogServiceRCategory(void updates(RestResultOfCatalogServiceRCategoryBuilder b)) = _$RestResultOfCatalogServiceRCategory;
+    factory RestResultOfCatalogServiceRCategory([void updates(RestResultOfCatalogServiceRCategoryBuilder b)]) = _$RestResultOfCatalogServiceRCategory;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfCatalogServiceRCategory> get serializer => _$RestResultOfCatalogServiceRCategorySerializer();

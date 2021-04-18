@@ -29,7 +29,7 @@ abstract class RestResultOfListOfSystemString implements Built<RestResultOfListO
 
     static void _initializeBuilder(RestResultOfListOfSystemStringBuilder b) => b;
 
-    factory RestResultOfListOfSystemString(void updates(RestResultOfListOfSystemStringBuilder b)) = _$RestResultOfListOfSystemString;
+    factory RestResultOfListOfSystemString([void updates(RestResultOfListOfSystemStringBuilder b)]) = _$RestResultOfListOfSystemString;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfSystemString> get serializer => _$RestResultOfListOfSystemStringSerializer();

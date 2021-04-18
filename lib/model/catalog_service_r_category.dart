@@ -46,7 +46,7 @@ abstract class CatalogServiceRCategory implements Built<CatalogServiceRCategory,
 
     static void _initializeBuilder(CatalogServiceRCategoryBuilder b) => b;
 
-    factory CatalogServiceRCategory(void updates(CatalogServiceRCategoryBuilder b)) = _$CatalogServiceRCategory;
+    factory CatalogServiceRCategory([void updates(CatalogServiceRCategoryBuilder b)]) = _$CatalogServiceRCategory;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CatalogServiceRCategory> get serializer => _$CatalogServiceRCategorySerializer();

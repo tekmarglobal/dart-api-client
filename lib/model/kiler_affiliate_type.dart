@@ -38,7 +38,7 @@ abstract class KilerAffiliateType implements Built<KilerAffiliateType, KilerAffi
 
     static void _initializeBuilder(KilerAffiliateTypeBuilder b) => b;
 
-    factory KilerAffiliateType(void updates(KilerAffiliateTypeBuilder b)) = _$KilerAffiliateType;
+    factory KilerAffiliateType([void updates(KilerAffiliateTypeBuilder b)]) = _$KilerAffiliateType;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerAffiliateType> get serializer => _$KilerAffiliateTypeSerializer();

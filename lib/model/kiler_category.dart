@@ -105,7 +105,7 @@ abstract class KilerCategory implements Built<KilerCategory, KilerCategoryBuilde
 
     static void _initializeBuilder(KilerCategoryBuilder b) => b;
 
-    factory KilerCategory(void updates(KilerCategoryBuilder b)) = _$KilerCategory;
+    factory KilerCategory([void updates(KilerCategoryBuilder b)]) = _$KilerCategory;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCategory> get serializer => _$KilerCategorySerializer();

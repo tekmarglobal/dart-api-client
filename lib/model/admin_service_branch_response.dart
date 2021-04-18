@@ -28,7 +28,7 @@ abstract class AdminServiceBranchResponse implements Built<AdminServiceBranchRes
 
     static void _initializeBuilder(AdminServiceBranchResponseBuilder b) => b;
 
-    factory AdminServiceBranchResponse(void updates(AdminServiceBranchResponseBuilder b)) = _$AdminServiceBranchResponse;
+    factory AdminServiceBranchResponse([void updates(AdminServiceBranchResponseBuilder b)]) = _$AdminServiceBranchResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceBranchResponse> get serializer => _$AdminServiceBranchResponseSerializer();

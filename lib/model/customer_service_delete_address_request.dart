@@ -20,7 +20,7 @@ abstract class CustomerServiceDeleteAddressRequest implements Built<CustomerServ
 
     static void _initializeBuilder(CustomerServiceDeleteAddressRequestBuilder b) => b;
 
-    factory CustomerServiceDeleteAddressRequest(void updates(CustomerServiceDeleteAddressRequestBuilder b)) = _$CustomerServiceDeleteAddressRequest;
+    factory CustomerServiceDeleteAddressRequest([void updates(CustomerServiceDeleteAddressRequestBuilder b)]) = _$CustomerServiceDeleteAddressRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceDeleteAddressRequest> get serializer => _$CustomerServiceDeleteAddressRequestSerializer();

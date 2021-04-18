@@ -102,7 +102,7 @@ abstract class KilerCart implements Built<KilerCart, KilerCartBuilder> {
 
     static void _initializeBuilder(KilerCartBuilder b) => b;
 
-    factory KilerCart(void updates(KilerCartBuilder b)) = _$KilerCart;
+    factory KilerCart([void updates(KilerCartBuilder b)]) = _$KilerCart;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCart> get serializer => _$KilerCartSerializer();

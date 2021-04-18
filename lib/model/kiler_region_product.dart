@@ -57,7 +57,7 @@ abstract class KilerRegionProduct implements Built<KilerRegionProduct, KilerRegi
 
     static void _initializeBuilder(KilerRegionProductBuilder b) => b;
 
-    factory KilerRegionProduct(void updates(KilerRegionProductBuilder b)) = _$KilerRegionProduct;
+    factory KilerRegionProduct([void updates(KilerRegionProductBuilder b)]) = _$KilerRegionProduct;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerRegionProduct> get serializer => _$KilerRegionProductSerializer();

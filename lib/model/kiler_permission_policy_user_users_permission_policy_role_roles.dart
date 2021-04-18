@@ -42,7 +42,7 @@ abstract class KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles implement
 
     static void _initializeBuilder(KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder b) => b;
 
-    factory KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles(void updates(KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder b)) = _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles;
+    factory KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles([void updates(KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder b)]) = _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles> get serializer => _$KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesSerializer();

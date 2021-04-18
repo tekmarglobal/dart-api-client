@@ -54,7 +54,7 @@ abstract class KilerPersonel implements Built<KilerPersonel, KilerPersonelBuilde
 
     static void _initializeBuilder(KilerPersonelBuilder b) => b;
 
-    factory KilerPersonel(void updates(KilerPersonelBuilder b)) = _$KilerPersonel;
+    factory KilerPersonel([void updates(KilerPersonelBuilder b)]) = _$KilerPersonel;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerPersonel> get serializer => _$KilerPersonelSerializer();

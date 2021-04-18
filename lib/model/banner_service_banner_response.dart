@@ -22,7 +22,7 @@ abstract class BannerServiceBannerResponse implements Built<BannerServiceBannerR
 
     static void _initializeBuilder(BannerServiceBannerResponseBuilder b) => b;
 
-    factory BannerServiceBannerResponse(void updates(BannerServiceBannerResponseBuilder b)) = _$BannerServiceBannerResponse;
+    factory BannerServiceBannerResponse([void updates(BannerServiceBannerResponseBuilder b)]) = _$BannerServiceBannerResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<BannerServiceBannerResponse> get serializer => _$BannerServiceBannerResponseSerializer();

@@ -24,7 +24,7 @@ abstract class ProductServiceSearchProductRequest implements Built<ProductServic
 
     static void _initializeBuilder(ProductServiceSearchProductRequestBuilder b) => b;
 
-    factory ProductServiceSearchProductRequest(void updates(ProductServiceSearchProductRequestBuilder b)) = _$ProductServiceSearchProductRequest;
+    factory ProductServiceSearchProductRequest([void updates(ProductServiceSearchProductRequestBuilder b)]) = _$ProductServiceSearchProductRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceSearchProductRequest> get serializer => _$ProductServiceSearchProductRequestSerializer();

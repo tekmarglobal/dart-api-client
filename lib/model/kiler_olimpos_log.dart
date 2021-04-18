@@ -45,7 +45,7 @@ abstract class KilerOlimposLog implements Built<KilerOlimposLog, KilerOlimposLog
 
     static void _initializeBuilder(KilerOlimposLogBuilder b) => b;
 
-    factory KilerOlimposLog(void updates(KilerOlimposLogBuilder b)) = _$KilerOlimposLog;
+    factory KilerOlimposLog([void updates(KilerOlimposLogBuilder b)]) = _$KilerOlimposLog;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerOlimposLog> get serializer => _$KilerOlimposLogSerializer();

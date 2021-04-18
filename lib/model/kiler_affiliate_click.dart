@@ -54,7 +54,7 @@ abstract class KilerAffiliateClick implements Built<KilerAffiliateClick, KilerAf
 
     static void _initializeBuilder(KilerAffiliateClickBuilder b) => b;
 
-    factory KilerAffiliateClick(void updates(KilerAffiliateClickBuilder b)) = _$KilerAffiliateClick;
+    factory KilerAffiliateClick([void updates(KilerAffiliateClickBuilder b)]) = _$KilerAffiliateClick;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerAffiliateClick> get serializer => _$KilerAffiliateClickSerializer();

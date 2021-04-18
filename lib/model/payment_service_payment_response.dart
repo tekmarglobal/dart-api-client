@@ -20,7 +20,7 @@ abstract class PaymentServicePaymentResponse implements Built<PaymentServicePaym
 
     static void _initializeBuilder(PaymentServicePaymentResponseBuilder b) => b;
 
-    factory PaymentServicePaymentResponse(void updates(PaymentServicePaymentResponseBuilder b)) = _$PaymentServicePaymentResponse;
+    factory PaymentServicePaymentResponse([void updates(PaymentServicePaymentResponseBuilder b)]) = _$PaymentServicePaymentResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<PaymentServicePaymentResponse> get serializer => _$PaymentServicePaymentResponseSerializer();

@@ -56,7 +56,7 @@ abstract class KilerCity implements Built<KilerCity, KilerCityBuilder> {
 
     static void _initializeBuilder(KilerCityBuilder b) => b;
 
-    factory KilerCity(void updates(KilerCityBuilder b)) = _$KilerCity;
+    factory KilerCity([void updates(KilerCityBuilder b)]) = _$KilerCity;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCity> get serializer => _$KilerCitySerializer();

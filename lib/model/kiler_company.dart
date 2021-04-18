@@ -42,7 +42,7 @@ abstract class KilerCompany implements Built<KilerCompany, KilerCompanyBuilder> 
 
     static void _initializeBuilder(KilerCompanyBuilder b) => b;
 
-    factory KilerCompany(void updates(KilerCompanyBuilder b)) = _$KilerCompany;
+    factory KilerCompany([void updates(KilerCompanyBuilder b)]) = _$KilerCompany;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCompany> get serializer => _$KilerCompanySerializer();

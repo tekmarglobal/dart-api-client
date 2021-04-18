@@ -24,7 +24,7 @@ abstract class AffiliateServiceLinkRequest implements Built<AffiliateServiceLink
 
     static void _initializeBuilder(AffiliateServiceLinkRequestBuilder b) => b;
 
-    factory AffiliateServiceLinkRequest(void updates(AffiliateServiceLinkRequestBuilder b)) = _$AffiliateServiceLinkRequest;
+    factory AffiliateServiceLinkRequest([void updates(AffiliateServiceLinkRequestBuilder b)]) = _$AffiliateServiceLinkRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AffiliateServiceLinkRequest> get serializer => _$AffiliateServiceLinkRequestSerializer();

@@ -24,7 +24,7 @@ abstract class CartServiceUpdateCartRegionRequest implements Built<CartServiceUp
 
     static void _initializeBuilder(CartServiceUpdateCartRegionRequestBuilder b) => b;
 
-    factory CartServiceUpdateCartRegionRequest(void updates(CartServiceUpdateCartRegionRequestBuilder b)) = _$CartServiceUpdateCartRegionRequest;
+    factory CartServiceUpdateCartRegionRequest([void updates(CartServiceUpdateCartRegionRequestBuilder b)]) = _$CartServiceUpdateCartRegionRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceUpdateCartRegionRequest> get serializer => _$CartServiceUpdateCartRegionRequestSerializer();

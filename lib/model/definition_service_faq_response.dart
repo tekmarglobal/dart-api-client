@@ -24,7 +24,7 @@ abstract class DefinitionServiceFaqResponse implements Built<DefinitionServiceFa
 
     static void _initializeBuilder(DefinitionServiceFaqResponseBuilder b) => b;
 
-    factory DefinitionServiceFaqResponse(void updates(DefinitionServiceFaqResponseBuilder b)) = _$DefinitionServiceFaqResponse;
+    factory DefinitionServiceFaqResponse([void updates(DefinitionServiceFaqResponseBuilder b)]) = _$DefinitionServiceFaqResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceFaqResponse> get serializer => _$DefinitionServiceFaqResponseSerializer();

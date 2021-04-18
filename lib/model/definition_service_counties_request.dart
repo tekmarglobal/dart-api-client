@@ -20,7 +20,7 @@ abstract class DefinitionServiceCountiesRequest implements Built<DefinitionServi
 
     static void _initializeBuilder(DefinitionServiceCountiesRequestBuilder b) => b;
 
-    factory DefinitionServiceCountiesRequest(void updates(DefinitionServiceCountiesRequestBuilder b)) = _$DefinitionServiceCountiesRequest;
+    factory DefinitionServiceCountiesRequest([void updates(DefinitionServiceCountiesRequestBuilder b)]) = _$DefinitionServiceCountiesRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceCountiesRequest> get serializer => _$DefinitionServiceCountiesRequestSerializer();

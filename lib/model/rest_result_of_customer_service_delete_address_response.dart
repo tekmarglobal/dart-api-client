@@ -29,7 +29,7 @@ abstract class RestResultOfCustomerServiceDeleteAddressResponse implements Built
 
     static void _initializeBuilder(RestResultOfCustomerServiceDeleteAddressResponseBuilder b) => b;
 
-    factory RestResultOfCustomerServiceDeleteAddressResponse(void updates(RestResultOfCustomerServiceDeleteAddressResponseBuilder b)) = _$RestResultOfCustomerServiceDeleteAddressResponse;
+    factory RestResultOfCustomerServiceDeleteAddressResponse([void updates(RestResultOfCustomerServiceDeleteAddressResponseBuilder b)]) = _$RestResultOfCustomerServiceDeleteAddressResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfCustomerServiceDeleteAddressResponse> get serializer => _$RestResultOfCustomerServiceDeleteAddressResponseSerializer();

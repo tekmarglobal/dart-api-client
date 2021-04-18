@@ -62,7 +62,7 @@ abstract class KilerDeviceLogin implements Built<KilerDeviceLogin, KilerDeviceLo
 
     static void _initializeBuilder(KilerDeviceLoginBuilder b) => b;
 
-    factory KilerDeviceLogin(void updates(KilerDeviceLoginBuilder b)) = _$KilerDeviceLogin;
+    factory KilerDeviceLogin([void updates(KilerDeviceLoginBuilder b)]) = _$KilerDeviceLogin;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerDeviceLogin> get serializer => _$KilerDeviceLoginSerializer();

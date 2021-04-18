@@ -80,7 +80,7 @@ abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServ
 
     static void _initializeBuilder(OrderServiceOrdersBuilder b) => b;
 
-    factory OrderServiceOrders(void updates(OrderServiceOrdersBuilder b)) = _$OrderServiceOrders;
+    factory OrderServiceOrders([void updates(OrderServiceOrdersBuilder b)]) = _$OrderServiceOrders;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<OrderServiceOrders> get serializer => _$OrderServiceOrdersSerializer();

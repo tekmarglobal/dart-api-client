@@ -29,7 +29,7 @@ abstract class RestResultOfAdminServiceUploadImageResponse implements Built<Rest
 
     static void _initializeBuilder(RestResultOfAdminServiceUploadImageResponseBuilder b) => b;
 
-    factory RestResultOfAdminServiceUploadImageResponse(void updates(RestResultOfAdminServiceUploadImageResponseBuilder b)) = _$RestResultOfAdminServiceUploadImageResponse;
+    factory RestResultOfAdminServiceUploadImageResponse([void updates(RestResultOfAdminServiceUploadImageResponseBuilder b)]) = _$RestResultOfAdminServiceUploadImageResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfAdminServiceUploadImageResponse> get serializer => _$RestResultOfAdminServiceUploadImageResponseSerializer();

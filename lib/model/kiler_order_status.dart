@@ -38,7 +38,7 @@ abstract class KilerOrderStatus implements Built<KilerOrderStatus, KilerOrderSta
 
     static void _initializeBuilder(KilerOrderStatusBuilder b) => b;
 
-    factory KilerOrderStatus(void updates(KilerOrderStatusBuilder b)) = _$KilerOrderStatus;
+    factory KilerOrderStatus([void updates(KilerOrderStatusBuilder b)]) = _$KilerOrderStatus;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerOrderStatus> get serializer => _$KilerOrderStatusSerializer();

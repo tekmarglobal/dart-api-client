@@ -30,7 +30,7 @@ abstract class RestResultOfListOfDefinitionServiceAgreementResponse implements B
 
     static void _initializeBuilder(RestResultOfListOfDefinitionServiceAgreementResponseBuilder b) => b;
 
-    factory RestResultOfListOfDefinitionServiceAgreementResponse(void updates(RestResultOfListOfDefinitionServiceAgreementResponseBuilder b)) = _$RestResultOfListOfDefinitionServiceAgreementResponse;
+    factory RestResultOfListOfDefinitionServiceAgreementResponse([void updates(RestResultOfListOfDefinitionServiceAgreementResponseBuilder b)]) = _$RestResultOfListOfDefinitionServiceAgreementResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfDefinitionServiceAgreementResponse> get serializer => _$RestResultOfListOfDefinitionServiceAgreementResponseSerializer();

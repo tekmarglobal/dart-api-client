@@ -20,7 +20,7 @@ abstract class DefinitionServiceNeighborRequest implements Built<DefinitionServi
 
     static void _initializeBuilder(DefinitionServiceNeighborRequestBuilder b) => b;
 
-    factory DefinitionServiceNeighborRequest(void updates(DefinitionServiceNeighborRequestBuilder b)) = _$DefinitionServiceNeighborRequest;
+    factory DefinitionServiceNeighborRequest([void updates(DefinitionServiceNeighborRequestBuilder b)]) = _$DefinitionServiceNeighborRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceNeighborRequest> get serializer => _$DefinitionServiceNeighborRequestSerializer();

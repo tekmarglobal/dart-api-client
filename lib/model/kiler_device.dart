@@ -66,7 +66,7 @@ abstract class KilerDevice implements Built<KilerDevice, KilerDeviceBuilder> {
 
     static void _initializeBuilder(KilerDeviceBuilder b) => b;
 
-    factory KilerDevice(void updates(KilerDeviceBuilder b)) = _$KilerDevice;
+    factory KilerDevice([void updates(KilerDeviceBuilder b)]) = _$KilerDevice;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerDevice> get serializer => _$KilerDeviceSerializer();

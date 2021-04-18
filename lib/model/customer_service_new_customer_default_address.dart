@@ -24,7 +24,7 @@ abstract class CustomerServiceNewCustomerDefaultAddress implements Built<Custome
 
     static void _initializeBuilder(CustomerServiceNewCustomerDefaultAddressBuilder b) => b;
 
-    factory CustomerServiceNewCustomerDefaultAddress(void updates(CustomerServiceNewCustomerDefaultAddressBuilder b)) = _$CustomerServiceNewCustomerDefaultAddress;
+    factory CustomerServiceNewCustomerDefaultAddress([void updates(CustomerServiceNewCustomerDefaultAddressBuilder b)]) = _$CustomerServiceNewCustomerDefaultAddress;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceNewCustomerDefaultAddress> get serializer => _$CustomerServiceNewCustomerDefaultAddressSerializer();

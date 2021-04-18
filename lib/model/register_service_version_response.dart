@@ -24,7 +24,7 @@ abstract class RegisterServiceVersionResponse implements Built<RegisterServiceVe
 
     static void _initializeBuilder(RegisterServiceVersionResponseBuilder b) => b;
 
-    factory RegisterServiceVersionResponse(void updates(RegisterServiceVersionResponseBuilder b)) = _$RegisterServiceVersionResponse;
+    factory RegisterServiceVersionResponse([void updates(RegisterServiceVersionResponseBuilder b)]) = _$RegisterServiceVersionResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RegisterServiceVersionResponse> get serializer => _$RegisterServiceVersionResponseSerializer();

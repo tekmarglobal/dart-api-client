@@ -167,7 +167,7 @@ abstract class KilerProduct implements Built<KilerProduct, KilerProductBuilder> 
 
     static void _initializeBuilder(KilerProductBuilder b) => b;
 
-    factory KilerProduct(void updates(KilerProductBuilder b)) = _$KilerProduct;
+    factory KilerProduct([void updates(KilerProductBuilder b)]) = _$KilerProduct;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerProduct> get serializer => _$KilerProductSerializer();

@@ -24,7 +24,7 @@ abstract class AccountServiceVersionRequest implements Built<AccountServiceVersi
 
     static void _initializeBuilder(AccountServiceVersionRequestBuilder b) => b;
 
-    factory AccountServiceVersionRequest(void updates(AccountServiceVersionRequestBuilder b)) = _$AccountServiceVersionRequest;
+    factory AccountServiceVersionRequest([void updates(AccountServiceVersionRequestBuilder b)]) = _$AccountServiceVersionRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AccountServiceVersionRequest> get serializer => _$AccountServiceVersionRequestSerializer();
