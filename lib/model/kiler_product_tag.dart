@@ -38,7 +38,7 @@ abstract class KilerProductTag implements Built<KilerProductTag, KilerProductTag
 
     static void _initializeBuilder(KilerProductTagBuilder b) => b;
 
-    factory KilerProductTag([void updates(KilerProductTagBuilder b)]) = _$KilerProductTag;
+    factory KilerProductTag(void updates(KilerProductTagBuilder b)) = _$KilerProductTag;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerProductTag> get serializer => _$KilerProductTagSerializer();

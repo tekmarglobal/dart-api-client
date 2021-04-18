@@ -30,7 +30,7 @@ abstract class RestResultOfListOfAdminServiceTimeSlotResponse implements Built<R
 
     static void _initializeBuilder(RestResultOfListOfAdminServiceTimeSlotResponseBuilder b) => b;
 
-    factory RestResultOfListOfAdminServiceTimeSlotResponse([void updates(RestResultOfListOfAdminServiceTimeSlotResponseBuilder b)]) = _$RestResultOfListOfAdminServiceTimeSlotResponse;
+    factory RestResultOfListOfAdminServiceTimeSlotResponse(void updates(RestResultOfListOfAdminServiceTimeSlotResponseBuilder b)) = _$RestResultOfListOfAdminServiceTimeSlotResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfAdminServiceTimeSlotResponse> get serializer => _$RestResultOfListOfAdminServiceTimeSlotResponseSerializer();

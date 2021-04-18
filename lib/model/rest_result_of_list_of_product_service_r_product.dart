@@ -30,7 +30,7 @@ abstract class RestResultOfListOfProductServiceRProduct implements Built<RestRes
 
     static void _initializeBuilder(RestResultOfListOfProductServiceRProductBuilder b) => b;
 
-    factory RestResultOfListOfProductServiceRProduct([void updates(RestResultOfListOfProductServiceRProductBuilder b)]) = _$RestResultOfListOfProductServiceRProduct;
+    factory RestResultOfListOfProductServiceRProduct(void updates(RestResultOfListOfProductServiceRProductBuilder b)) = _$RestResultOfListOfProductServiceRProduct;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfProductServiceRProduct> get serializer => _$RestResultOfListOfProductServiceRProductSerializer();

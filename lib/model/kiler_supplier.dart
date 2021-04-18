@@ -34,7 +34,7 @@ abstract class KilerSupplier implements Built<KilerSupplier, KilerSupplierBuilde
 
     static void _initializeBuilder(KilerSupplierBuilder b) => b;
 
-    factory KilerSupplier([void updates(KilerSupplierBuilder b)]) = _$KilerSupplier;
+    factory KilerSupplier(void updates(KilerSupplierBuilder b)) = _$KilerSupplier;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerSupplier> get serializer => _$KilerSupplierSerializer();

@@ -53,7 +53,7 @@ abstract class KilerProductImage implements Built<KilerProductImage, KilerProduc
 
     static void _initializeBuilder(KilerProductImageBuilder b) => b;
 
-    factory KilerProductImage([void updates(KilerProductImageBuilder b)]) = _$KilerProductImage;
+    factory KilerProductImage(void updates(KilerProductImageBuilder b)) = _$KilerProductImage;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerProductImage> get serializer => _$KilerProductImageSerializer();

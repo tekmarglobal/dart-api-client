@@ -42,7 +42,7 @@ abstract class KilerBrandManagerBrand implements Built<KilerBrandManagerBrand, K
 
     static void _initializeBuilder(KilerBrandManagerBrandBuilder b) => b;
 
-    factory KilerBrandManagerBrand([void updates(KilerBrandManagerBrandBuilder b)]) = _$KilerBrandManagerBrand;
+    factory KilerBrandManagerBrand(void updates(KilerBrandManagerBrandBuilder b)) = _$KilerBrandManagerBrand;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerBrandManagerBrand> get serializer => _$KilerBrandManagerBrandSerializer();

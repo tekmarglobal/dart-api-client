@@ -78,7 +78,7 @@ abstract class CatalogServiceRProduct implements Built<CatalogServiceRProduct, C
 
     static void _initializeBuilder(CatalogServiceRProductBuilder b) => b;
 
-    factory CatalogServiceRProduct([void updates(CatalogServiceRProductBuilder b)]) = _$CatalogServiceRProduct;
+    factory CatalogServiceRProduct(void updates(CatalogServiceRProductBuilder b)) = _$CatalogServiceRProduct;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CatalogServiceRProduct> get serializer => _$CatalogServiceRProductSerializer();

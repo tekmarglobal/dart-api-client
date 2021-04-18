@@ -29,7 +29,7 @@ abstract class RestResultOfProductServiceFavoriteListResponse implements Built<R
 
     static void _initializeBuilder(RestResultOfProductServiceFavoriteListResponseBuilder b) => b;
 
-    factory RestResultOfProductServiceFavoriteListResponse([void updates(RestResultOfProductServiceFavoriteListResponseBuilder b)]) = _$RestResultOfProductServiceFavoriteListResponse;
+    factory RestResultOfProductServiceFavoriteListResponse(void updates(RestResultOfProductServiceFavoriteListResponseBuilder b)) = _$RestResultOfProductServiceFavoriteListResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfProductServiceFavoriteListResponse> get serializer => _$RestResultOfProductServiceFavoriteListResponseSerializer();

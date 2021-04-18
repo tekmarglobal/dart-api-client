@@ -389,5 +389,3 @@ lib/model/rest_result_of_system_int32.dart
 lib/model/rest_result_of_system_object.dart
 lib/serializers.dart
 pubspec.yaml
-test/kiler_olimpos_log_test.dart
-test/kiler_product_tag_test.dart

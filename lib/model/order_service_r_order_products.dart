@@ -56,7 +56,7 @@ abstract class OrderServiceROrderProducts implements Built<OrderServiceROrderPro
 
     static void _initializeBuilder(OrderServiceROrderProductsBuilder b) => b;
 
-    factory OrderServiceROrderProducts([void updates(OrderServiceROrderProductsBuilder b)]) = _$OrderServiceROrderProducts;
+    factory OrderServiceROrderProducts(void updates(OrderServiceROrderProductsBuilder b)) = _$OrderServiceROrderProducts;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<OrderServiceROrderProducts> get serializer => _$OrderServiceROrderProductsSerializer();

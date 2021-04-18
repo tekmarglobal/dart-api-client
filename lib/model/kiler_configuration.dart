@@ -78,7 +78,7 @@ abstract class KilerConfiguration implements Built<KilerConfiguration, KilerConf
 
     static void _initializeBuilder(KilerConfigurationBuilder b) => b;
 
-    factory KilerConfiguration([void updates(KilerConfigurationBuilder b)]) = _$KilerConfiguration;
+    factory KilerConfiguration(void updates(KilerConfigurationBuilder b)) = _$KilerConfiguration;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerConfiguration> get serializer => _$KilerConfigurationSerializer();

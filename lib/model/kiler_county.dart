@@ -51,7 +51,7 @@ abstract class KilerCounty implements Built<KilerCounty, KilerCountyBuilder> {
 
     static void _initializeBuilder(KilerCountyBuilder b) => b;
 
-    factory KilerCounty([void updates(KilerCountyBuilder b)]) = _$KilerCounty;
+    factory KilerCounty(void updates(KilerCountyBuilder b)) = _$KilerCounty;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCounty> get serializer => _$KilerCountySerializer();

@@ -45,7 +45,7 @@ abstract class KilerBranch implements Built<KilerBranch, KilerBranchBuilder> {
 
     static void _initializeBuilder(KilerBranchBuilder b) => b;
 
-    factory KilerBranch([void updates(KilerBranchBuilder b)]) = _$KilerBranch;
+    factory KilerBranch(void updates(KilerBranchBuilder b)) = _$KilerBranch;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerBranch> get serializer => _$KilerBranchSerializer();

@@ -30,7 +30,7 @@ abstract class RestResultOfListOfCartServiceTimeSlotsResponse implements Built<R
 
     static void _initializeBuilder(RestResultOfListOfCartServiceTimeSlotsResponseBuilder b) => b;
 
-    factory RestResultOfListOfCartServiceTimeSlotsResponse([void updates(RestResultOfListOfCartServiceTimeSlotsResponseBuilder b)]) = _$RestResultOfListOfCartServiceTimeSlotsResponse;
+    factory RestResultOfListOfCartServiceTimeSlotsResponse(void updates(RestResultOfListOfCartServiceTimeSlotsResponseBuilder b)) = _$RestResultOfListOfCartServiceTimeSlotsResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfCartServiceTimeSlotsResponse> get serializer => _$RestResultOfListOfCartServiceTimeSlotsResponseSerializer();

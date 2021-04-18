@@ -24,7 +24,7 @@ abstract class RegisterServiceVerifyRequest implements Built<RegisterServiceVeri
 
     static void _initializeBuilder(RegisterServiceVerifyRequestBuilder b) => b;
 
-    factory RegisterServiceVerifyRequest([void updates(RegisterServiceVerifyRequestBuilder b)]) = _$RegisterServiceVerifyRequest;
+    factory RegisterServiceVerifyRequest(void updates(RegisterServiceVerifyRequestBuilder b)) = _$RegisterServiceVerifyRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RegisterServiceVerifyRequest> get serializer => _$RegisterServiceVerifyRequestSerializer();

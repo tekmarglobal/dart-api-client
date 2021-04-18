@@ -92,7 +92,7 @@ abstract class KilerTicket implements Built<KilerTicket, KilerTicketBuilder> {
 
     static void _initializeBuilder(KilerTicketBuilder b) => b;
 
-    factory KilerTicket([void updates(KilerTicketBuilder b)]) = _$KilerTicket;
+    factory KilerTicket(void updates(KilerTicketBuilder b)) = _$KilerTicket;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerTicket> get serializer => _$KilerTicketSerializer();

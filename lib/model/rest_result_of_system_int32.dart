@@ -28,7 +28,7 @@ abstract class RestResultOfSystemInt32 implements Built<RestResultOfSystemInt32,
 
     static void _initializeBuilder(RestResultOfSystemInt32Builder b) => b;
 
-    factory RestResultOfSystemInt32([void updates(RestResultOfSystemInt32Builder b)]) = _$RestResultOfSystemInt32;
+    factory RestResultOfSystemInt32(void updates(RestResultOfSystemInt32Builder b)) = _$RestResultOfSystemInt32;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfSystemInt32> get serializer => _$RestResultOfSystemInt32Serializer();

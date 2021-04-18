@@ -38,7 +38,7 @@ abstract class AdminServiceCompanyResponse implements Built<AdminServiceCompanyR
 
     static void _initializeBuilder(AdminServiceCompanyResponseBuilder b) => b;
 
-    factory AdminServiceCompanyResponse([void updates(AdminServiceCompanyResponseBuilder b)]) = _$AdminServiceCompanyResponse;
+    factory AdminServiceCompanyResponse(void updates(AdminServiceCompanyResponseBuilder b)) = _$AdminServiceCompanyResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceCompanyResponse> get serializer => _$AdminServiceCompanyResponseSerializer();

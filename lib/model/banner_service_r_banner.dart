@@ -36,7 +36,7 @@ abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, Banne
 
     static void _initializeBuilder(BannerServiceRBannerBuilder b) => b;
 
-    factory BannerServiceRBanner([void updates(BannerServiceRBannerBuilder b)]) = _$BannerServiceRBanner;
+    factory BannerServiceRBanner(void updates(BannerServiceRBannerBuilder b)) = _$BannerServiceRBanner;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<BannerServiceRBanner> get serializer => _$BannerServiceRBannerSerializer();

@@ -24,7 +24,7 @@ abstract class DefinitionServiceUpdateAgreementRequest implements Built<Definiti
 
     static void _initializeBuilder(DefinitionServiceUpdateAgreementRequestBuilder b) => b;
 
-    factory DefinitionServiceUpdateAgreementRequest([void updates(DefinitionServiceUpdateAgreementRequestBuilder b)]) = _$DefinitionServiceUpdateAgreementRequest;
+    factory DefinitionServiceUpdateAgreementRequest(void updates(DefinitionServiceUpdateAgreementRequestBuilder b)) = _$DefinitionServiceUpdateAgreementRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceUpdateAgreementRequest> get serializer => _$DefinitionServiceUpdateAgreementRequestSerializer();

@@ -29,7 +29,7 @@ abstract class RestResultOfPaymentServicePaymentResponse implements Built<RestRe
 
     static void _initializeBuilder(RestResultOfPaymentServicePaymentResponseBuilder b) => b;
 
-    factory RestResultOfPaymentServicePaymentResponse([void updates(RestResultOfPaymentServicePaymentResponseBuilder b)]) = _$RestResultOfPaymentServicePaymentResponse;
+    factory RestResultOfPaymentServicePaymentResponse(void updates(RestResultOfPaymentServicePaymentResponseBuilder b)) = _$RestResultOfPaymentServicePaymentResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfPaymentServicePaymentResponse> get serializer => _$RestResultOfPaymentServicePaymentResponseSerializer();

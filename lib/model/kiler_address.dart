@@ -132,7 +132,7 @@ abstract class KilerAddress implements Built<KilerAddress, KilerAddressBuilder> 
 
     static void _initializeBuilder(KilerAddressBuilder b) => b;
 
-    factory KilerAddress([void updates(KilerAddressBuilder b)]) = _$KilerAddress;
+    factory KilerAddress(void updates(KilerAddressBuilder b)) = _$KilerAddress;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerAddress> get serializer => _$KilerAddressSerializer();

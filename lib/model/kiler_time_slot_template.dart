@@ -53,7 +53,7 @@ abstract class KilerTimeSlotTemplate implements Built<KilerTimeSlotTemplate, Kil
 
     static void _initializeBuilder(KilerTimeSlotTemplateBuilder b) => b;
 
-    factory KilerTimeSlotTemplate([void updates(KilerTimeSlotTemplateBuilder b)]) = _$KilerTimeSlotTemplate;
+    factory KilerTimeSlotTemplate(void updates(KilerTimeSlotTemplateBuilder b)) = _$KilerTimeSlotTemplate;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerTimeSlotTemplate> get serializer => _$KilerTimeSlotTemplateSerializer();

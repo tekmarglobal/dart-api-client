@@ -29,7 +29,7 @@ abstract class RestResultOfDefinitionServiceUpdateAgreementLogResponse implement
 
     static void _initializeBuilder(RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder b) => b;
 
-    factory RestResultOfDefinitionServiceUpdateAgreementLogResponse([void updates(RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder b)]) = _$RestResultOfDefinitionServiceUpdateAgreementLogResponse;
+    factory RestResultOfDefinitionServiceUpdateAgreementLogResponse(void updates(RestResultOfDefinitionServiceUpdateAgreementLogResponseBuilder b)) = _$RestResultOfDefinitionServiceUpdateAgreementLogResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfDefinitionServiceUpdateAgreementLogResponse> get serializer => _$RestResultOfDefinitionServiceUpdateAgreementLogResponseSerializer();

@@ -36,7 +36,7 @@ abstract class DefinitionServiceAgreementResponse implements Built<DefinitionSer
 
     static void _initializeBuilder(DefinitionServiceAgreementResponseBuilder b) => b;
 
-    factory DefinitionServiceAgreementResponse([void updates(DefinitionServiceAgreementResponseBuilder b)]) = _$DefinitionServiceAgreementResponse;
+    factory DefinitionServiceAgreementResponse(void updates(DefinitionServiceAgreementResponseBuilder b)) = _$DefinitionServiceAgreementResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceAgreementResponse> get serializer => _$DefinitionServiceAgreementResponseSerializer();

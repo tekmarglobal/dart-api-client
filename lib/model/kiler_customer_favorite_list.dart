@@ -46,7 +46,7 @@ abstract class KilerCustomerFavoriteList implements Built<KilerCustomerFavoriteL
 
     static void _initializeBuilder(KilerCustomerFavoriteListBuilder b) => b;
 
-    factory KilerCustomerFavoriteList([void updates(KilerCustomerFavoriteListBuilder b)]) = _$KilerCustomerFavoriteList;
+    factory KilerCustomerFavoriteList(void updates(KilerCustomerFavoriteListBuilder b)) = _$KilerCustomerFavoriteList;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerCustomerFavoriteList> get serializer => _$KilerCustomerFavoriteListSerializer();

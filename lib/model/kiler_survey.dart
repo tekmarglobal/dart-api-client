@@ -65,7 +65,7 @@ abstract class KilerSurvey implements Built<KilerSurvey, KilerSurveyBuilder> {
 
     static void _initializeBuilder(KilerSurveyBuilder b) => b;
 
-    factory KilerSurvey([void updates(KilerSurveyBuilder b)]) = _$KilerSurvey;
+    factory KilerSurvey(void updates(KilerSurveyBuilder b)) = _$KilerSurvey;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerSurvey> get serializer => _$KilerSurveySerializer();

@@ -28,7 +28,7 @@ abstract class DefinitionServiceBranchResponse implements Built<DefinitionServic
 
     static void _initializeBuilder(DefinitionServiceBranchResponseBuilder b) => b;
 
-    factory DefinitionServiceBranchResponse([void updates(DefinitionServiceBranchResponseBuilder b)]) = _$DefinitionServiceBranchResponse;
+    factory DefinitionServiceBranchResponse(void updates(DefinitionServiceBranchResponseBuilder b)) = _$DefinitionServiceBranchResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceBranchResponse> get serializer => _$DefinitionServiceBranchResponseSerializer();

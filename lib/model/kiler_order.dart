@@ -182,7 +182,7 @@ abstract class KilerOrder implements Built<KilerOrder, KilerOrderBuilder> {
 
     static void _initializeBuilder(KilerOrderBuilder b) => b;
 
-    factory KilerOrder([void updates(KilerOrderBuilder b)]) = _$KilerOrder;
+    factory KilerOrder(void updates(KilerOrderBuilder b)) = _$KilerOrder;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerOrder> get serializer => _$KilerOrderSerializer();

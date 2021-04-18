@@ -37,7 +37,7 @@ abstract class RegisterServiceLoginResponse implements Built<RegisterServiceLogi
 
     static void _initializeBuilder(RegisterServiceLoginResponseBuilder b) => b;
 
-    factory RegisterServiceLoginResponse([void updates(RegisterServiceLoginResponseBuilder b)]) = _$RegisterServiceLoginResponse;
+    factory RegisterServiceLoginResponse(void updates(RegisterServiceLoginResponseBuilder b)) = _$RegisterServiceLoginResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RegisterServiceLoginResponse> get serializer => _$RegisterServiceLoginResponseSerializer();

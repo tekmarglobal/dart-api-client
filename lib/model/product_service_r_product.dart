@@ -78,7 +78,7 @@ abstract class ProductServiceRProduct implements Built<ProductServiceRProduct, P
 
     static void _initializeBuilder(ProductServiceRProductBuilder b) => b;
 
-    factory ProductServiceRProduct([void updates(ProductServiceRProductBuilder b)]) = _$ProductServiceRProduct;
+    factory ProductServiceRProduct(void updates(ProductServiceRProductBuilder b)) = _$ProductServiceRProduct;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceRProduct> get serializer => _$ProductServiceRProductSerializer();

@@ -28,7 +28,7 @@ abstract class DefinitionServiceCountiesResponse implements Built<DefinitionServ
 
     static void _initializeBuilder(DefinitionServiceCountiesResponseBuilder b) => b;
 
-    factory DefinitionServiceCountiesResponse([void updates(DefinitionServiceCountiesResponseBuilder b)]) = _$DefinitionServiceCountiesResponse;
+    factory DefinitionServiceCountiesResponse(void updates(DefinitionServiceCountiesResponseBuilder b)) = _$DefinitionServiceCountiesResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceCountiesResponse> get serializer => _$DefinitionServiceCountiesResponseSerializer();

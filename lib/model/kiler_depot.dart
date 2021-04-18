@@ -49,7 +49,7 @@ abstract class KilerDepot implements Built<KilerDepot, KilerDepotBuilder> {
 
     static void _initializeBuilder(KilerDepotBuilder b) => b;
 
-    factory KilerDepot([void updates(KilerDepotBuilder b)]) = _$KilerDepot;
+    factory KilerDepot(void updates(KilerDepotBuilder b)) = _$KilerDepot;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerDepot> get serializer => _$KilerDepotSerializer();

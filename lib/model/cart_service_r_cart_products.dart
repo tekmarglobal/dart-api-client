@@ -52,7 +52,7 @@ abstract class CartServiceRCartProducts implements Built<CartServiceRCartProduct
 
     static void _initializeBuilder(CartServiceRCartProductsBuilder b) => b;
 
-    factory CartServiceRCartProducts([void updates(CartServiceRCartProductsBuilder b)]) = _$CartServiceRCartProducts;
+    factory CartServiceRCartProducts(void updates(CartServiceRCartProductsBuilder b)) = _$CartServiceRCartProducts;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceRCartProducts> get serializer => _$CartServiceRCartProductsSerializer();

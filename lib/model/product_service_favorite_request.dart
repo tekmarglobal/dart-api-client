@@ -20,7 +20,7 @@ abstract class ProductServiceFavoriteRequest implements Built<ProductServiceFavo
 
     static void _initializeBuilder(ProductServiceFavoriteRequestBuilder b) => b;
 
-    factory ProductServiceFavoriteRequest([void updates(ProductServiceFavoriteRequestBuilder b)]) = _$ProductServiceFavoriteRequest;
+    factory ProductServiceFavoriteRequest(void updates(ProductServiceFavoriteRequestBuilder b)) = _$ProductServiceFavoriteRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceFavoriteRequest> get serializer => _$ProductServiceFavoriteRequestSerializer();

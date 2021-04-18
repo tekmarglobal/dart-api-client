@@ -48,7 +48,7 @@ abstract class KilerPlatform implements Built<KilerPlatform, KilerPlatformBuilde
 
     static void _initializeBuilder(KilerPlatformBuilder b) => b;
 
-    factory KilerPlatform([void updates(KilerPlatformBuilder b)]) = _$KilerPlatform;
+    factory KilerPlatform(void updates(KilerPlatformBuilder b)) = _$KilerPlatform;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerPlatform> get serializer => _$KilerPlatformSerializer();

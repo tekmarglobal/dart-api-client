@@ -20,7 +20,7 @@ abstract class CartServiceCreateCartResponse implements Built<CartServiceCreateC
 
     static void _initializeBuilder(CartServiceCreateCartResponseBuilder b) => b;
 
-    factory CartServiceCreateCartResponse([void updates(CartServiceCreateCartResponseBuilder b)]) = _$CartServiceCreateCartResponse;
+    factory CartServiceCreateCartResponse(void updates(CartServiceCreateCartResponseBuilder b)) = _$CartServiceCreateCartResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceCreateCartResponse> get serializer => _$CartServiceCreateCartResponseSerializer();

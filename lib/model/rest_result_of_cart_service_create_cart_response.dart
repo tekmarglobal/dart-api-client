@@ -29,7 +29,7 @@ abstract class RestResultOfCartServiceCreateCartResponse implements Built<RestRe
 
     static void _initializeBuilder(RestResultOfCartServiceCreateCartResponseBuilder b) => b;
 
-    factory RestResultOfCartServiceCreateCartResponse([void updates(RestResultOfCartServiceCreateCartResponseBuilder b)]) = _$RestResultOfCartServiceCreateCartResponse;
+    factory RestResultOfCartServiceCreateCartResponse(void updates(RestResultOfCartServiceCreateCartResponseBuilder b)) = _$RestResultOfCartServiceCreateCartResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfCartServiceCreateCartResponse> get serializer => _$RestResultOfCartServiceCreateCartResponseSerializer();

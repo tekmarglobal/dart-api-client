@@ -53,7 +53,7 @@ abstract class KilerPermissionPolicyMemberPermissionsObject implements Built<Kil
 
     static void _initializeBuilder(KilerPermissionPolicyMemberPermissionsObjectBuilder b) => b;
 
-    factory KilerPermissionPolicyMemberPermissionsObject([void updates(KilerPermissionPolicyMemberPermissionsObjectBuilder b)]) = _$KilerPermissionPolicyMemberPermissionsObject;
+    factory KilerPermissionPolicyMemberPermissionsObject(void updates(KilerPermissionPolicyMemberPermissionsObjectBuilder b)) = _$KilerPermissionPolicyMemberPermissionsObject;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerPermissionPolicyMemberPermissionsObject> get serializer => _$KilerPermissionPolicyMemberPermissionsObjectSerializer();

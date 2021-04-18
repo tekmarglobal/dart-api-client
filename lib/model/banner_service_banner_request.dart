@@ -36,7 +36,7 @@ abstract class BannerServiceBannerRequest implements Built<BannerServiceBannerRe
 
     static void _initializeBuilder(BannerServiceBannerRequestBuilder b) => b;
 
-    factory BannerServiceBannerRequest([void updates(BannerServiceBannerRequestBuilder b)]) = _$BannerServiceBannerRequest;
+    factory BannerServiceBannerRequest(void updates(BannerServiceBannerRequestBuilder b)) = _$BannerServiceBannerRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<BannerServiceBannerRequest> get serializer => _$BannerServiceBannerRequestSerializer();

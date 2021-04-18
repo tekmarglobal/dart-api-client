@@ -40,7 +40,7 @@ abstract class CartServiceTimeSlotsResponse implements Built<CartServiceTimeSlot
 
     static void _initializeBuilder(CartServiceTimeSlotsResponseBuilder b) => b;
 
-    factory CartServiceTimeSlotsResponse([void updates(CartServiceTimeSlotsResponseBuilder b)]) = _$CartServiceTimeSlotsResponse;
+    factory CartServiceTimeSlotsResponse(void updates(CartServiceTimeSlotsResponseBuilder b)) = _$CartServiceTimeSlotsResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceTimeSlotsResponse> get serializer => _$CartServiceTimeSlotsResponseSerializer();

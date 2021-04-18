@@ -29,7 +29,7 @@ abstract class RestResultOfKilerConfiguration implements Built<RestResultOfKiler
 
     static void _initializeBuilder(RestResultOfKilerConfigurationBuilder b) => b;
 
-    factory RestResultOfKilerConfiguration([void updates(RestResultOfKilerConfigurationBuilder b)]) = _$RestResultOfKilerConfiguration;
+    factory RestResultOfKilerConfiguration(void updates(RestResultOfKilerConfigurationBuilder b)) = _$RestResultOfKilerConfiguration;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfKilerConfiguration> get serializer => _$RestResultOfKilerConfigurationSerializer();

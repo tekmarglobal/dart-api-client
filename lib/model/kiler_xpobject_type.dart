@@ -39,7 +39,7 @@ abstract class KilerXpobjectType implements Built<KilerXpobjectType, KilerXpobje
 
     static void _initializeBuilder(KilerXpobjectTypeBuilder b) => b;
 
-    factory KilerXpobjectType([void updates(KilerXpobjectTypeBuilder b)]) = _$KilerXpobjectType;
+    factory KilerXpobjectType(void updates(KilerXpobjectTypeBuilder b)) = _$KilerXpobjectType;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerXpobjectType> get serializer => _$KilerXpobjectTypeSerializer();

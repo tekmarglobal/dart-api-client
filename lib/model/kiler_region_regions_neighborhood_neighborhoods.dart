@@ -42,7 +42,7 @@ abstract class KilerRegionRegionsNeighborhoodNeighborhoods implements Built<Kile
 
     static void _initializeBuilder(KilerRegionRegionsNeighborhoodNeighborhoodsBuilder b) => b;
 
-    factory KilerRegionRegionsNeighborhoodNeighborhoods([void updates(KilerRegionRegionsNeighborhoodNeighborhoodsBuilder b)]) = _$KilerRegionRegionsNeighborhoodNeighborhoods;
+    factory KilerRegionRegionsNeighborhoodNeighborhoods(void updates(KilerRegionRegionsNeighborhoodNeighborhoodsBuilder b)) = _$KilerRegionRegionsNeighborhoodNeighborhoods;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerRegionRegionsNeighborhoodNeighborhoods> get serializer => _$KilerRegionRegionsNeighborhoodNeighborhoodsSerializer();

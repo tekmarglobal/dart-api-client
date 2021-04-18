@@ -29,7 +29,7 @@ abstract class RestResultOfBannerServiceBannerResponse implements Built<RestResu
 
     static void _initializeBuilder(RestResultOfBannerServiceBannerResponseBuilder b) => b;
 
-    factory RestResultOfBannerServiceBannerResponse([void updates(RestResultOfBannerServiceBannerResponseBuilder b)]) = _$RestResultOfBannerServiceBannerResponse;
+    factory RestResultOfBannerServiceBannerResponse(void updates(RestResultOfBannerServiceBannerResponseBuilder b)) = _$RestResultOfBannerServiceBannerResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfBannerServiceBannerResponse> get serializer => _$RestResultOfBannerServiceBannerResponseSerializer();

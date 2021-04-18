@@ -30,7 +30,7 @@ abstract class RestResultOfListOfDefinitionServiceFaqResponse implements Built<R
 
     static void _initializeBuilder(RestResultOfListOfDefinitionServiceFaqResponseBuilder b) => b;
 
-    factory RestResultOfListOfDefinitionServiceFaqResponse([void updates(RestResultOfListOfDefinitionServiceFaqResponseBuilder b)]) = _$RestResultOfListOfDefinitionServiceFaqResponse;
+    factory RestResultOfListOfDefinitionServiceFaqResponse(void updates(RestResultOfListOfDefinitionServiceFaqResponseBuilder b)) = _$RestResultOfListOfDefinitionServiceFaqResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfDefinitionServiceFaqResponse> get serializer => _$RestResultOfListOfDefinitionServiceFaqResponseSerializer();

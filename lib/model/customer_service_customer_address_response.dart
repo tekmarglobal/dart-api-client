@@ -22,7 +22,7 @@ abstract class CustomerServiceCustomerAddressResponse implements Built<CustomerS
 
     static void _initializeBuilder(CustomerServiceCustomerAddressResponseBuilder b) => b;
 
-    factory CustomerServiceCustomerAddressResponse([void updates(CustomerServiceCustomerAddressResponseBuilder b)]) = _$CustomerServiceCustomerAddressResponse;
+    factory CustomerServiceCustomerAddressResponse(void updates(CustomerServiceCustomerAddressResponseBuilder b)) = _$CustomerServiceCustomerAddressResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceCustomerAddressResponse> get serializer => _$CustomerServiceCustomerAddressResponseSerializer();

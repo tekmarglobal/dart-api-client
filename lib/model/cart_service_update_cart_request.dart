@@ -36,7 +36,7 @@ abstract class CartServiceUpdateCartRequest implements Built<CartServiceUpdateCa
 
     static void _initializeBuilder(CartServiceUpdateCartRequestBuilder b) => b;
 
-    factory CartServiceUpdateCartRequest([void updates(CartServiceUpdateCartRequestBuilder b)]) = _$CartServiceUpdateCartRequest;
+    factory CartServiceUpdateCartRequest(void updates(CartServiceUpdateCartRequestBuilder b)) = _$CartServiceUpdateCartRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceUpdateCartRequest> get serializer => _$CartServiceUpdateCartRequestSerializer();

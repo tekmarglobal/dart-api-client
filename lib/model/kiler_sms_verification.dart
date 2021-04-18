@@ -53,7 +53,7 @@ abstract class KilerSmsVerification implements Built<KilerSmsVerification, Kiler
 
     static void _initializeBuilder(KilerSmsVerificationBuilder b) => b;
 
-    factory KilerSmsVerification([void updates(KilerSmsVerificationBuilder b)]) = _$KilerSmsVerification;
+    factory KilerSmsVerification(void updates(KilerSmsVerificationBuilder b)) = _$KilerSmsVerification;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerSmsVerification> get serializer => _$KilerSmsVerificationSerializer();

@@ -62,7 +62,7 @@ abstract class AdminServiceRegionResponse implements Built<AdminServiceRegionRes
 
     static void _initializeBuilder(AdminServiceRegionResponseBuilder b) => b;
 
-    factory AdminServiceRegionResponse([void updates(AdminServiceRegionResponseBuilder b)]) = _$AdminServiceRegionResponse;
+    factory AdminServiceRegionResponse(void updates(AdminServiceRegionResponseBuilder b)) = _$AdminServiceRegionResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceRegionResponse> get serializer => _$AdminServiceRegionResponseSerializer();

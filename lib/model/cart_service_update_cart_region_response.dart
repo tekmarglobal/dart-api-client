@@ -22,7 +22,7 @@ abstract class CartServiceUpdateCartRegionResponse implements Built<CartServiceU
 
     static void _initializeBuilder(CartServiceUpdateCartRegionResponseBuilder b) => b;
 
-    factory CartServiceUpdateCartRegionResponse([void updates(CartServiceUpdateCartRegionResponseBuilder b)]) = _$CartServiceUpdateCartRegionResponse;
+    factory CartServiceUpdateCartRegionResponse(void updates(CartServiceUpdateCartRegionResponseBuilder b)) = _$CartServiceUpdateCartRegionResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceUpdateCartRegionResponse> get serializer => _$CartServiceUpdateCartRegionResponseSerializer();

@@ -12,16 +12,16 @@ import 'package:dio/dio.dart';
 class OAuthInterceptor extends AuthInterceptor {
     Map<String, String> tokens = {};
 
-    @override
-    Future<dynamic> onRequest(RequestOptions options) {
-        final authInfo = getAuthInfo(options, 'oauth');
-        for (final info in authInfo) {
-            final token = tokens[info['name']];
-            if (token != null) {
-                options.headers['Authorization'] = 'Bearer ${token}';
-                break;
-            }
-        }
-        return super.onRequest(options);
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    final authInfo = getAuthInfo(options, 'oauth');
+    for (final info in authInfo) {
+      final token = tokens[info['name']];
+      if (token != null) {
+        options.headers['Authorization'] = 'Bearer ${token}';
+        break;
+      }
     }
+    super.onRequest(options, handler);
+  }
 }

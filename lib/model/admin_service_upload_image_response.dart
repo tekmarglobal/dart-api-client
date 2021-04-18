@@ -20,7 +20,7 @@ abstract class AdminServiceUploadImageResponse implements Built<AdminServiceUplo
 
     static void _initializeBuilder(AdminServiceUploadImageResponseBuilder b) => b;
 
-    factory AdminServiceUploadImageResponse([void updates(AdminServiceUploadImageResponseBuilder b)]) = _$AdminServiceUploadImageResponse;
+    factory AdminServiceUploadImageResponse(void updates(AdminServiceUploadImageResponseBuilder b)) = _$AdminServiceUploadImageResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<AdminServiceUploadImageResponse> get serializer => _$AdminServiceUploadImageResponseSerializer();

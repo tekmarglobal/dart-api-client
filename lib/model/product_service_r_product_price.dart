@@ -24,7 +24,7 @@ abstract class ProductServiceRProductPrice implements Built<ProductServiceRProdu
 
     static void _initializeBuilder(ProductServiceRProductPriceBuilder b) => b;
 
-    factory ProductServiceRProductPrice([void updates(ProductServiceRProductPriceBuilder b)]) = _$ProductServiceRProductPrice;
+    factory ProductServiceRProductPrice(void updates(ProductServiceRProductPriceBuilder b)) = _$ProductServiceRProductPrice;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<ProductServiceRProductPrice> get serializer => _$ProductServiceRProductPriceSerializer();

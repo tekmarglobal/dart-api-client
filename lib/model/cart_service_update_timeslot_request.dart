@@ -20,7 +20,7 @@ abstract class CartServiceUpdateTimeslotRequest implements Built<CartServiceUpda
 
     static void _initializeBuilder(CartServiceUpdateTimeslotRequestBuilder b) => b;
 
-    factory CartServiceUpdateTimeslotRequest([void updates(CartServiceUpdateTimeslotRequestBuilder b)]) = _$CartServiceUpdateTimeslotRequest;
+    factory CartServiceUpdateTimeslotRequest(void updates(CartServiceUpdateTimeslotRequestBuilder b)) = _$CartServiceUpdateTimeslotRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CartServiceUpdateTimeslotRequest> get serializer => _$CartServiceUpdateTimeslotRequestSerializer();

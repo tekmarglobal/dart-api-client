@@ -54,7 +54,7 @@ abstract class DefinitionServiceNeighborResponse implements Built<DefinitionServ
 
     static void _initializeBuilder(DefinitionServiceNeighborResponseBuilder b) => b;
 
-    factory DefinitionServiceNeighborResponse([void updates(DefinitionServiceNeighborResponseBuilder b)]) = _$DefinitionServiceNeighborResponse;
+    factory DefinitionServiceNeighborResponse(void updates(DefinitionServiceNeighborResponseBuilder b)) = _$DefinitionServiceNeighborResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceNeighborResponse> get serializer => _$DefinitionServiceNeighborResponseSerializer();

@@ -28,7 +28,7 @@ abstract class DefinitionServiceCitiesResponse implements Built<DefinitionServic
 
     static void _initializeBuilder(DefinitionServiceCitiesResponseBuilder b) => b;
 
-    factory DefinitionServiceCitiesResponse([void updates(DefinitionServiceCitiesResponseBuilder b)]) = _$DefinitionServiceCitiesResponse;
+    factory DefinitionServiceCitiesResponse(void updates(DefinitionServiceCitiesResponseBuilder b)) = _$DefinitionServiceCitiesResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<DefinitionServiceCitiesResponse> get serializer => _$DefinitionServiceCitiesResponseSerializer();

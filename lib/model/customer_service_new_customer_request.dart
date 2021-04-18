@@ -56,7 +56,7 @@ abstract class CustomerServiceNewCustomerRequest implements Built<CustomerServic
 
     static void _initializeBuilder(CustomerServiceNewCustomerRequestBuilder b) => b;
 
-    factory CustomerServiceNewCustomerRequest([void updates(CustomerServiceNewCustomerRequestBuilder b)]) = _$CustomerServiceNewCustomerRequest;
+    factory CustomerServiceNewCustomerRequest(void updates(CustomerServiceNewCustomerRequestBuilder b)) = _$CustomerServiceNewCustomerRequest;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<CustomerServiceNewCustomerRequest> get serializer => _$CustomerServiceNewCustomerRequestSerializer();

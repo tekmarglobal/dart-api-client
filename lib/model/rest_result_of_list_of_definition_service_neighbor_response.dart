@@ -30,7 +30,7 @@ abstract class RestResultOfListOfDefinitionServiceNeighborResponse implements Bu
 
     static void _initializeBuilder(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b) => b;
 
-    factory RestResultOfListOfDefinitionServiceNeighborResponse([void updates(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b)]) = _$RestResultOfListOfDefinitionServiceNeighborResponse;
+    factory RestResultOfListOfDefinitionServiceNeighborResponse(void updates(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b)) = _$RestResultOfListOfDefinitionServiceNeighborResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RestResultOfListOfDefinitionServiceNeighborResponse> get serializer => _$RestResultOfListOfDefinitionServiceNeighborResponseSerializer();

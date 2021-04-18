@@ -43,7 +43,7 @@ abstract class KilerDepartment implements Built<KilerDepartment, KilerDepartment
 
     static void _initializeBuilder(KilerDepartmentBuilder b) => b;
 
-    factory KilerDepartment([void updates(KilerDepartmentBuilder b)]) = _$KilerDepartment;
+    factory KilerDepartment(void updates(KilerDepartmentBuilder b)) = _$KilerDepartment;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<KilerDepartment> get serializer => _$KilerDepartmentSerializer();

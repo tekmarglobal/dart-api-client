@@ -20,7 +20,7 @@ abstract class RegisterServiceSmsResponse implements Built<RegisterServiceSmsRes
 
     static void _initializeBuilder(RegisterServiceSmsResponseBuilder b) => b;
 
-    factory RegisterServiceSmsResponse([void updates(RegisterServiceSmsResponseBuilder b)]) = _$RegisterServiceSmsResponse;
+    factory RegisterServiceSmsResponse(void updates(RegisterServiceSmsResponseBuilder b)) = _$RegisterServiceSmsResponse;
 
     @BuiltValueSerializer(custom: true)
     static Serializer<RegisterServiceSmsResponse> get serializer => _$RegisterServiceSmsResponseSerializer();
