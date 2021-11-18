@@ -11,6 +11,8 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
   @override
   final int adressId;
   @override
+  final int addressId;
+  @override
   final int customerId;
   @override
   final String fullAddress;
@@ -54,6 +56,8 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
   final String taxNumber;
   @override
   final String phoneNumber;
+  @override
+  final bool active;
 
   factory _$CustomerServiceRAddress(
           [void Function(CustomerServiceRAddressBuilder) updates]) =>
@@ -61,6 +65,7 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
 
   _$CustomerServiceRAddress._(
       {this.adressId,
+      this.addressId,
       this.customerId,
       this.fullAddress,
       this.building,
@@ -82,7 +87,8 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
       this.companyName,
       this.taxOffice,
       this.taxNumber,
-      this.phoneNumber})
+      this.phoneNumber,
+      this.active})
       : super._();
 
   @override
@@ -99,6 +105,7 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
     if (identical(other, this)) return true;
     return other is CustomerServiceRAddress &&
         adressId == other.adressId &&
+        addressId == other.addressId &&
         customerId == other.customerId &&
         fullAddress == other.fullAddress &&
         building == other.building &&
@@ -120,7 +127,8 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
         companyName == other.companyName &&
         taxOffice == other.taxOffice &&
         taxNumber == other.taxNumber &&
-        phoneNumber == other.phoneNumber;
+        phoneNumber == other.phoneNumber &&
+        active == other.active;
   }
 
   @override
@@ -143,32 +151,33 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc(0, adressId.hashCode), customerId.hashCode), fullAddress.hashCode), building.hashCode),
-                                                                                floor.hashCode),
-                                                                            door.hashCode),
-                                                                        postalCode.hashCode),
-                                                                    description.hashCode),
-                                                                neighborhoodId.hashCode),
-                                                            neighborhoodName.hashCode),
-                                                        cityId.hashCode),
-                                                    cityName.hashCode),
-                                                countyId.hashCode),
-                                            countyName.hashCode),
-                                        name.hashCode),
-                                    street.hashCode),
-                                customerName.hashCode),
-                            customerSurname.hashCode),
-                        isindividual.hashCode),
-                    companyName.hashCode),
-                taxOffice.hashCode),
-            taxNumber.hashCode),
-        phoneNumber.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc(0, adressId.hashCode), addressId.hashCode), customerId.hashCode), fullAddress.hashCode), building.hashCode), floor.hashCode),
+                                                                                door.hashCode),
+                                                                            postalCode.hashCode),
+                                                                        description.hashCode),
+                                                                    neighborhoodId.hashCode),
+                                                                neighborhoodName.hashCode),
+                                                            cityId.hashCode),
+                                                        cityName.hashCode),
+                                                    countyId.hashCode),
+                                                countyName.hashCode),
+                                            name.hashCode),
+                                        street.hashCode),
+                                    customerName.hashCode),
+                                customerSurname.hashCode),
+                            isindividual.hashCode),
+                        companyName.hashCode),
+                    taxOffice.hashCode),
+                taxNumber.hashCode),
+            phoneNumber.hashCode),
+        active.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CustomerServiceRAddress')
           ..add('adressId', adressId)
+          ..add('addressId', addressId)
           ..add('customerId', customerId)
           ..add('fullAddress', fullAddress)
           ..add('building', building)
@@ -190,7 +199,8 @@ class _$CustomerServiceRAddress extends CustomerServiceRAddress {
           ..add('companyName', companyName)
           ..add('taxOffice', taxOffice)
           ..add('taxNumber', taxNumber)
-          ..add('phoneNumber', phoneNumber))
+          ..add('phoneNumber', phoneNumber)
+          ..add('active', active))
         .toString();
   }
 }
@@ -203,6 +213,10 @@ class CustomerServiceRAddressBuilder
   int _adressId;
   int get adressId => _$this._adressId;
   set adressId(int adressId) => _$this._adressId = adressId;
+
+  int _addressId;
+  int get addressId => _$this._addressId;
+  set addressId(int addressId) => _$this._addressId = addressId;
 
   int _customerId;
   int get customerId => _$this._customerId;
@@ -295,6 +309,10 @@ class CustomerServiceRAddressBuilder
   String get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   CustomerServiceRAddressBuilder() {
     CustomerServiceRAddress._initializeBuilder(this);
   }
@@ -303,6 +321,7 @@ class CustomerServiceRAddressBuilder
     final $v = _$v;
     if ($v != null) {
       _adressId = $v.adressId;
+      _addressId = $v.addressId;
       _customerId = $v.customerId;
       _fullAddress = $v.fullAddress;
       _building = $v.building;
@@ -325,6 +344,7 @@ class CustomerServiceRAddressBuilder
       _taxOffice = $v.taxOffice;
       _taxNumber = $v.taxNumber;
       _phoneNumber = $v.phoneNumber;
+      _active = $v.active;
       _$v = null;
     }
     return this;
@@ -346,6 +366,7 @@ class CustomerServiceRAddressBuilder
     final _$result = _$v ??
         new _$CustomerServiceRAddress._(
             adressId: adressId,
+            addressId: addressId,
             customerId: customerId,
             fullAddress: fullAddress,
             building: building,
@@ -367,7 +388,8 @@ class CustomerServiceRAddressBuilder
             companyName: companyName,
             taxOffice: taxOffice,
             taxNumber: taxNumber,
-            phoneNumber: phoneNumber);
+            phoneNumber: phoneNumber,
+            active: active);
     replace(_$result);
     return _$result;
   }

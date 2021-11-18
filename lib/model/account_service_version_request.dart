@@ -17,8 +17,16 @@ abstract class AccountServiceVersionRequest implements Built<AccountServiceVersi
     String get code;
 
     @nullable
+    @BuiltValueField(wireName: r'version')
+    String get version;
+
+    @nullable
     @BuiltValueField(wireName: r'platform')
     String get platform;
+
+    @nullable
+    @BuiltValueField(wireName: r'isWeb')
+    bool get isWeb;
 
     AccountServiceVersionRequest._();
 
@@ -47,11 +55,23 @@ class _$AccountServiceVersionRequestSerializer implements StructuredSerializer<A
                 ..add(serializers.serialize(object.code,
                     specifiedType: const FullType(String)));
         }
+        if (object.version != null) {
+            result
+                ..add(r'version')
+                ..add(serializers.serialize(object.version,
+                    specifiedType: const FullType(String)));
+        }
         if (object.platform != null) {
             result
                 ..add(r'platform')
                 ..add(serializers.serialize(object.platform,
                     specifiedType: const FullType(String)));
+        }
+        if (object.isWeb != null) {
+            result
+                ..add(r'isWeb')
+                ..add(serializers.serialize(object.isWeb,
+                    specifiedType: const FullType(bool)));
         }
         return result;
     }
@@ -71,9 +91,17 @@ class _$AccountServiceVersionRequestSerializer implements StructuredSerializer<A
                     result.code = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
+                case r'version':
+                    result.version = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
                 case r'platform':
                     result.platform = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'isWeb':
+                    result.isWeb = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

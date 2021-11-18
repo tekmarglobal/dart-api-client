@@ -13,15 +13,208 @@ import 'package:built_value/serializer.dart';
 import 'package:openapi/model/cart_service_update_cart_region_request.dart';
 import 'package:openapi/model/cart_service_update_cart_request.dart';
 import 'package:openapi/model/cart_service_update_timeslot_request.dart';
+import 'package:openapi/model/rest_result_of_cart_service_campaign_apply_response.dart';
+import 'package:openapi/model/rest_result_of_cart_service_campaign_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_cart_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_create_cart_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_update_cart_region_response.dart';
+import 'package:openapi/model/rest_result_of_list_of_cart_service_campaign_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_response.dart';
 
     class CartApi {
     final Dio _dio;
     final Serializers _serializers;
     const CartApi(this._dio, this._serializers);
+
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCartServiceCampaignResponse>> apiCartAddCampaignByCodePost({ 
+            String campaignCode,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Cart/AddCampaignByCode',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+                queryParameters: <String, dynamic>{
+                if (campaignCode != null) r'campaignCode': campaignCode,
+                },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Cart/AddCampaignByCode',
+            data: _bodyData,
+            options: _request,
+                queryParameters: <String, dynamic>{
+                if (campaignCode != null) r'campaignCode': campaignCode,
+                },
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCartServiceCampaignResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCartServiceCampaignResponse;
+
+                return Response<RestResultOfCartServiceCampaignResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfCartServiceCampaignApplyResponse>> apiCartApplyCampaignPost({ 
+            int campaignId,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Cart/ApplyCampaign',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+                queryParameters: <String, dynamic>{
+                if (campaignId != null) r'campaignId': campaignId,
+                },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Cart/ApplyCampaign',
+            data: _bodyData,
+            options: _request,
+                queryParameters: <String, dynamic>{
+                if (campaignId != null) r'campaignId': campaignId,
+                },
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfCartServiceCampaignApplyResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfCartServiceCampaignApplyResponse;
+
+                return Response<RestResultOfCartServiceCampaignApplyResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
 
         /// 
         ///
@@ -284,6 +477,94 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
                             ) as RestResultOfCartServiceCartResponse;
 
                 return Response<RestResultOfCartServiceCartResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfCartServiceCampaignResponse>> apiCartGetCampaignsGet({ 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Cart/GetCampaigns',
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Cart/GetCampaigns',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfListOfCartServiceCampaignResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfListOfCartServiceCampaignResponse;
+
+                return Response<RestResultOfListOfCartServiceCampaignResponse>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

@@ -7,6 +7,7 @@
 
 import 'package:openapi/model/kiler_order_product.dart';
 import 'package:openapi/model/kiler_survey.dart';
+import 'package:openapi/model/kiler_order_campaign.dart';
 import 'package:openapi/model/kiler_time_slot.dart';
 import 'package:openapi/model/kiler_order_status.dart';
 import 'package:openapi/model/kiler_address.dart';
@@ -161,6 +162,10 @@ abstract class KilerOrder implements Built<KilerOrder, KilerOrderBuilder> {
     @nullable
     @BuiltValueField(wireName: r'olimposLog')
     BuiltList<KilerOlimposLog> get olimposLog;
+
+    @nullable
+    @BuiltValueField(wireName: r'orderCampaign')
+    BuiltList<KilerOrderCampaign> get orderCampaign;
 
     @nullable
     @BuiltValueField(wireName: r'orderProduct')
@@ -403,6 +408,12 @@ class _$KilerOrderSerializer implements StructuredSerializer<KilerOrder> {
                 ..add(serializers.serialize(object.olimposLog,
                     specifiedType: const FullType(BuiltList, [FullType(KilerOlimposLog)])));
         }
+        if (object.orderCampaign != null) {
+            result
+                ..add(r'orderCampaign')
+                ..add(serializers.serialize(object.orderCampaign,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerOrderCampaign)])));
+        }
         if (object.orderProduct != null) {
             result
                 ..add(r'orderProduct')
@@ -576,6 +587,10 @@ class _$KilerOrderSerializer implements StructuredSerializer<KilerOrder> {
                 case r'olimposLog':
                     result.olimposLog.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerOlimposLog)])) as BuiltList<KilerOlimposLog>);
+                    break;
+                case r'orderCampaign':
+                    result.orderCampaign.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerOrderCampaign)])) as BuiltList<KilerOrderCampaign>);
                     break;
                 case r'orderProduct':
                     result.orderProduct.replace(serializers.deserialize(value,

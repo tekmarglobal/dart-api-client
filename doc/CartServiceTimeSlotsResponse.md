@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **end** | [**DateTime**](DateTime.md) |  | [optional] 
 **quota** | **int** |  | [optional] 
 **isFree** | **bool** |  | [optional] 
+**isAvailable** | **bool** |  | [optional] 
 **fee** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

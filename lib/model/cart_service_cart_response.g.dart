@@ -25,6 +25,10 @@ class _$CartServiceCartResponse extends CartServiceCartResponse {
   @override
   final double estimatedFee;
   @override
+  final BuiltList<CartServiceCampaignResponse> appliedCampaigns;
+  @override
+  final double campaignTotalDiscount;
+  @override
   final BuiltList<CartServiceRCartProducts> cartProducts;
   @override
   final BuiltList<CartServiceRCartProducts> cardProducts;
@@ -42,6 +46,8 @@ class _$CartServiceCartResponse extends CartServiceCartResponse {
       this.bagTotal,
       this.bagAmount,
       this.estimatedFee,
+      this.appliedCampaigns,
+      this.campaignTotalDiscount,
       this.cartProducts,
       this.cardProducts})
       : super._();
@@ -67,6 +73,8 @@ class _$CartServiceCartResponse extends CartServiceCartResponse {
         bagTotal == other.bagTotal &&
         bagAmount == other.bagAmount &&
         estimatedFee == other.estimatedFee &&
+        appliedCampaigns == other.appliedCampaigns &&
+        campaignTotalDiscount == other.campaignTotalDiscount &&
         cartProducts == other.cartProducts &&
         cardProducts == other.cardProducts;
   }
@@ -81,14 +89,18 @@ class _$CartServiceCartResponse extends CartServiceCartResponse {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, cartId.hashCode),
-                                        customer.hashCode),
-                                    cartTotal.hashCode),
-                                regionId.hashCode),
-                            deviceToken.hashCode),
-                        bagTotal.hashCode),
-                    bagAmount.hashCode),
-                estimatedFee.hashCode),
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, cartId.hashCode),
+                                                customer.hashCode),
+                                            cartTotal.hashCode),
+                                        regionId.hashCode),
+                                    deviceToken.hashCode),
+                                bagTotal.hashCode),
+                            bagAmount.hashCode),
+                        estimatedFee.hashCode),
+                    appliedCampaigns.hashCode),
+                campaignTotalDiscount.hashCode),
             cartProducts.hashCode),
         cardProducts.hashCode));
   }
@@ -104,6 +116,8 @@ class _$CartServiceCartResponse extends CartServiceCartResponse {
           ..add('bagTotal', bagTotal)
           ..add('bagAmount', bagAmount)
           ..add('estimatedFee', estimatedFee)
+          ..add('appliedCampaigns', appliedCampaigns)
+          ..add('campaignTotalDiscount', campaignTotalDiscount)
           ..add('cartProducts', cartProducts)
           ..add('cardProducts', cardProducts))
         .toString();
@@ -147,6 +161,19 @@ class CartServiceCartResponseBuilder
   double get estimatedFee => _$this._estimatedFee;
   set estimatedFee(double estimatedFee) => _$this._estimatedFee = estimatedFee;
 
+  ListBuilder<CartServiceCampaignResponse> _appliedCampaigns;
+  ListBuilder<CartServiceCampaignResponse> get appliedCampaigns =>
+      _$this._appliedCampaigns ??=
+          new ListBuilder<CartServiceCampaignResponse>();
+  set appliedCampaigns(
+          ListBuilder<CartServiceCampaignResponse> appliedCampaigns) =>
+      _$this._appliedCampaigns = appliedCampaigns;
+
+  double _campaignTotalDiscount;
+  double get campaignTotalDiscount => _$this._campaignTotalDiscount;
+  set campaignTotalDiscount(double campaignTotalDiscount) =>
+      _$this._campaignTotalDiscount = campaignTotalDiscount;
+
   ListBuilder<CartServiceRCartProducts> _cartProducts;
   ListBuilder<CartServiceRCartProducts> get cartProducts =>
       _$this._cartProducts ??= new ListBuilder<CartServiceRCartProducts>();
@@ -174,6 +201,8 @@ class CartServiceCartResponseBuilder
       _bagTotal = $v.bagTotal;
       _bagAmount = $v.bagAmount;
       _estimatedFee = $v.estimatedFee;
+      _appliedCampaigns = $v.appliedCampaigns?.toBuilder();
+      _campaignTotalDiscount = $v.campaignTotalDiscount;
       _cartProducts = $v.cartProducts?.toBuilder();
       _cardProducts = $v.cardProducts?.toBuilder();
       _$v = null;
@@ -206,11 +235,16 @@ class CartServiceCartResponseBuilder
               bagTotal: bagTotal,
               bagAmount: bagAmount,
               estimatedFee: estimatedFee,
+              appliedCampaigns: _appliedCampaigns?.build(),
+              campaignTotalDiscount: campaignTotalDiscount,
               cartProducts: _cartProducts?.build(),
               cardProducts: _cardProducts?.build());
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'appliedCampaigns';
+        _appliedCampaigns?.build();
+
         _$failedField = 'cartProducts';
         _cartProducts?.build();
         _$failedField = 'cardProducts';

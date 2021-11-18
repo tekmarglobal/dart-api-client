@@ -84,6 +84,16 @@ void main() {
       // TODO
     });
 
+    // DateTime deliveryTimeStart
+    test('to test the property `deliveryTimeStart`', () async {
+      // TODO
+    });
+
+    // DateTime deliveryTimeEnd
+    test('to test the property `deliveryTimeEnd`', () async {
+      // TODO
+    });
+
     // double fee
     test('to test the property `fee`', () async {
       // TODO

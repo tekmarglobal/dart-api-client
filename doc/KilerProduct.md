@@ -40,8 +40,12 @@ Name | Type | Description | Notes
 **configurationDeliveryProductNavigation** | [**BuiltList<KilerConfiguration>**](KilerConfiguration.md) |  | [optional] 
 **customerFavoriteList** | [**BuiltList<KilerCustomerFavoriteList>**](KilerCustomerFavoriteList.md) |  | [optional] 
 **orderProduct** | [**BuiltList<KilerOrderProduct>**](KilerOrderProduct.md) |  | [optional] 
+**productAlternativesAlternativeProductNavigation** | [**BuiltList<KilerProductAlternatives>**](KilerProductAlternatives.md) |  | [optional] 
+**productAlternativesProductNavigation** | [**BuiltList<KilerProductAlternatives>**](KilerProductAlternatives.md) |  | [optional] 
 **productImage** | [**BuiltList<KilerProductImage>**](KilerProductImage.md) |  | [optional] 
 **productImportDetail** | [**BuiltList<KilerProductImportDetail>**](KilerProductImportDetail.md) |  | [optional] 
+**productProductsCampaignCampaigns** | [**BuiltList<KilerProductProductsCampaignCampaigns>**](KilerProductProductsCampaignCampaigns.md) |  | [optional] 
+**productProductsProductAlternativesProductAlternatives0eac5f03** | [**BuiltList<KilerProductProductsProductAlternativesProductAlternatives0eac5f03>**](KilerProductProductsProductAlternativesProductAlternatives0eac5f03.md) |  | [optional] 
 **regionProduct** | [**BuiltList<KilerRegionProduct>**](KilerRegionProduct.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

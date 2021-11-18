@@ -25,6 +25,10 @@ abstract class OrderServiceOrderRequest implements Built<OrderServiceOrderReques
     int get timeStotId;
 
     @nullable
+    @BuiltValueField(wireName: r'timeSlotId')
+    int get timeSlotId;
+
+    @nullable
     @BuiltValueField(wireName: r'paymentCode')
     String get paymentCode;
 
@@ -75,6 +79,12 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
                 ..add(serializers.serialize(object.timeStotId,
                     specifiedType: const FullType(int)));
         }
+        if (object.timeSlotId != null) {
+            result
+                ..add(r'timeSlotId')
+                ..add(serializers.serialize(object.timeSlotId,
+                    specifiedType: const FullType(int)));
+        }
         if (object.paymentCode != null) {
             result
                 ..add(r'paymentCode')
@@ -117,6 +127,10 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
                     break;
                 case r'timeStotId':
                     result.timeStotId = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'timeSlotId':
+                    result.timeSlotId = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     break;
                 case r'paymentCode':

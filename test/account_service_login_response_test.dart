@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/account_service_login_response.dart';
 import 'package:test/test.dart';
 
 // tests for AccountServiceLoginResponse
 void main() {
-  final instance = AccountServiceLoginResponse();
+  final instance = AccountServiceLoginResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(AccountServiceLoginResponse, () {
     // String token

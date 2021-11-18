@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_depot.dart';
 import 'package:test/test.dart';
 
 // tests for KilerDepot
 void main() {
-  final instance = KilerDepot();
+  final instance = KilerDepotBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerDepot, () {
     // int oid

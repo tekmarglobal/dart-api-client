@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_survey_template.dart';
 import 'package:test/test.dart';
 
 // tests for KilerSurveyTemplate
 void main() {
-  final instance = KilerSurveyTemplate();
+  final instance = KilerSurveyTemplateBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerSurveyTemplate, () {
     // int oid

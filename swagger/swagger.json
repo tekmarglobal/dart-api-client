@@ -469,7 +469,7 @@
         "parameters": [
           {
             "in": "path",
-            "name": "urllink",
+            "name": "urlLink",
             "required": true,
             "type": "string"
           }
@@ -595,6 +595,54 @@
         }
       }
     },
+    "/api/Cart/ApplyCampaign": {
+      "post": {
+        "tags": [
+          "Cart"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "campaignId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfCartServiceCampaignApplyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Cart/GetCampaigns": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfCartServiceCampaignResponse"
+            }
+          }
+        }
+      }
+    },
     "/api/Cart/CreateCart": {
       "post": {
         "tags": [
@@ -697,6 +745,33 @@
         }
       }
     },
+    "/api/Cart/AddCampaignByCode": {
+      "post": {
+        "tags": [
+          "Cart"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "campaignCode",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfCartServiceCampaignResponse"
+            }
+          }
+        }
+      }
+    },
     "/api/Cart/UpdateCartRegion": {
       "post": {
         "tags": [
@@ -755,14 +830,6 @@
       "post": {
         "tags": [
           "Catalog"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "region",
-            "type": "integer",
-            "format": "int32"
-          }
         ],
         "responses": {
           "200": {
@@ -981,6 +1048,134 @@
         }
       }
     },
+    "/api/Crm/FindCustomerIVR": {
+      "get": {
+        "tags": [
+          "Crm"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "PhoneNumber",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "GetName",
+            "type": "boolean",
+            "default": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Crm/FindOrderIVR": {
+      "get": {
+        "tags": [
+          "Crm"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "orderNo",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Crm/CreateTicket": {
+      "post": {
+        "tags": [
+          "Crm"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CrmServiceTicketRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfCrmServiceTicketResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Crm/Call": {
+      "post": {
+        "tags": [
+          "Crm"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/CrmServiceCallRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
     "/api/Customer": {
       "post": {
         "tags": [
@@ -1157,6 +1352,40 @@
         }
       }
     },
+    "/api/Customer/GetCustomerMessage": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "startSendDate",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
+            "name": "endSendDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfCustomerServiceCustomerMessageResponse"
+            }
+          }
+        }
+      }
+    },
     "/api/Definition/Faq": {
       "get": {
         "tags": [
@@ -1172,6 +1401,26 @@
             "description": "Success",
             "schema": {
               "$ref": "#/definitions/RestResultOfListOfDefinitionServiceFaqResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Definition/UploadCountriesToFirebase": {
+      "post": {
+        "tags": [
+          "Definition"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfDefinitionServiceUploadCountriesResponse"
             }
           }
         }
@@ -1339,6 +1588,80 @@
         }
       }
     },
+    "/api/Integration/UpdateProductFromOlimpos": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "regionErpId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "productErpId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "log",
+            "type": "boolean",
+            "default": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Integration"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "regionErpId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "productErpId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "log",
+            "type": "boolean",
+            "default": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
     "/api/Migration/createregionprice": {
       "get": {
         "tags": [
@@ -1367,26 +1690,6 @@
         "responses": {
           "200": {
             "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/Order/sendmail": {
-      "post": {
-        "tags": [
-          "Order"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "type": "string"
-            }
           }
         }
       }
@@ -1513,7 +1816,53 @@
         }
       }
     },
-    "/api/Payment/CardSuccess": {
+    "/api/Order/PatchOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/OrderServicePatchOrderRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfOrderServiceOrderResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Payment/PaymentSuccess": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment/PaymentFail": {
       "post": {
         "tags": [
           "Payment"
@@ -1579,7 +1928,67 @@
         }
       }
     },
-    "/api/Product": {
+    "/api/Payment/CreatePaymentReturnUrl": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PaymentServicePaymentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment/CheckTransaction": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/PaymentServicePaymentTransactionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfPaymentServicePaymentTransactionResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/RecommendProduct": {
       "post": {
         "tags": [
           "Product"
@@ -1599,7 +2008,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/ProductServiceProductRequest"
+              "$ref": "#/definitions/ProductServiceRecommendProductRequest"
             }
           }
         ],
@@ -1607,135 +2016,7 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/RestResultOfProductServiceRProduct"
-            }
-          }
-        }
-      }
-    },
-    "/api/Product/ProductList": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/RestResultOfListOfProductServiceRProduct"
-            }
-          }
-        }
-      }
-    },
-    "/api/Product/ProductSearch": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "consumes": [
-          "application/json",
-          "text/json",
-          "application/*+json"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "schema": {
-              "$ref": "#/definitions/ProductServiceSearchProductRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/RestResultOfListOfProductServiceRProduct"
-            }
-          }
-        }
-      }
-    },
-    "/api/Product/UpdateProductFromOlimpos": {
-      "post": {
-        "tags": [
-          "Product"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "regionErpId",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "productErpId",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "log",
-            "type": "boolean",
-            "default": false
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "regionErpId",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "productErpId",
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "log",
-            "type": "boolean",
-            "default": false
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "type": "string"
+              "$ref": "#/definitions/RestResultOfProductServiceRecommendProductResponse"
             }
           }
         }
@@ -1829,6 +2110,128 @@
         }
       }
     },
+    "/api/Product": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProductServiceProductRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfProductServiceRProduct"
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/ProductList": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfProductServiceRProduct"
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/ProductSearch": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProductServiceSearchProductRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfProductServiceRProduct"
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/ProductAlternatives": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/ProductServiceProductAlternativesRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfProductServiceRProduct"
+            }
+          }
+        }
+      }
+    },
     "/api/Register/SendSms": {
       "post": {
         "tags": [
@@ -1896,34 +2299,6 @@
           }
         }
       }
-    },
-    "/api/Sanity/check": {
-      "get": {
-        "tags": [
-          "Sanity"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "fix",
-            "type": "boolean",
-            "default": false
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/RestResultOfListOfSystemString"
-            }
-          }
-        }
-      }
     }
   },
   "definitions": {
@@ -1933,8 +2308,14 @@
         "code": {
           "type": "string"
         },
+        "version": {
+          "type": "string"
+        },
         "platform": {
           "type": "string"
+        },
+        "isWeb": {
+          "type": "boolean"
         }
       }
     },
@@ -1953,6 +2334,9 @@
       "type": "object",
       "properties": {
         "latestCode": {
+          "type": "string"
+        },
+        "latestVersion": {
           "type": "string"
         },
         "isMandatory": {
@@ -2151,7 +2535,7 @@
         }
       }
     },
-    "KilerBrand": {
+    "KilerOperatingSystem": {
       "type": "object",
       "properties": {
         "oid": {
@@ -2165,354 +2549,11 @@
           "format": "int32",
           "type": "integer"
         },
-        "manufacturer": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "manufacturerNavigation": {
-          "$ref": "#/definitions/KilerManufacturer"
-        },
-        "brandManagerBrand": {
+        "platform": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/KilerBrandManagerBrand"
+            "$ref": "#/definitions/KilerPlatform"
           }
-        },
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerProduct"
-          }
-        }
-      }
-    },
-    "KilerProductTag": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "code": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerProduct"
-          }
-        }
-      }
-    },
-    "KilerSupplier": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "product": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerProduct"
-          }
-        }
-      }
-    },
-    "KilerPersonel": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "surname": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "userName": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "personelDepartment": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerPersonelDepartment"
-          }
-        }
-      }
-    },
-    "KilerPersonelDepartment": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "department": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "personel": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "departmentNavigation": {
-          "$ref": "#/definitions/KilerDepartment"
-        },
-        "personelNavigation": {
-          "$ref": "#/definitions/KilerPersonel"
-        }
-      }
-    },
-    "KilerDepartment": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategory"
-          }
-        },
-        "personelDepartment": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerPersonelDepartment"
-          }
-        }
-      }
-    },
-    "KilerCategoryImport": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "importDate": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "ipAddress": {
-          "type": "string"
-        },
-        "payLoad": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryImportDetail": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryImportDetail"
-          }
-        }
-      }
-    },
-    "KilerCategoryImportDetail": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "oldValue": {
-          "type": "string"
-        },
-        "newValue": {
-          "type": "string"
-        },
-        "categoryImport": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "operationType": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryImportNavigation": {
-          "$ref": "#/definitions/KilerCategoryImport"
-        },
-        "categoryNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        }
-      }
-    },
-    "KilerCategory": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "level": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "parent": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "image": {
-          "format": "byte",
-          "type": "string"
-        },
-        "showInMenu": {
-          "type": "boolean"
-        },
-        "nleft": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "nright": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "refId": {
-          "type": "string"
-        },
-        "imagePath": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "department": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "erpId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "order": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "menuName": {
-          "type": "string"
-        },
-        "departmentNavigation": {
-          "$ref": "#/definitions/KilerDepartment"
-        },
-        "parentNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        },
-        "categoryImportDetail": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryImportDetail"
-          }
-        },
-        "categoryProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryProduct"
-          }
-        },
-        "configuration": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerConfiguration"
-          }
-        },
-        "inverseParentNavigation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategory"
-          }
-        }
-      }
-    },
-    "KilerCategoryProduct": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "product": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "main": {
-          "type": "boolean"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        },
-        "productNavigation": {
-          "$ref": "#/definitions/KilerProduct"
         }
       }
     },
@@ -2529,6 +2570,26 @@
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "numericCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alpha2Code": {
+          "type": "string"
+        },
+        "alpha3Code": {
+          "type": "string"
+        },
+        "dialCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
         },
         "city": {
           "type": "array",
@@ -2678,7 +2739,7 @@
         }
       }
     },
-    "KilerOperatingSystem": {
+    "KilerDepot": {
       "type": "object",
       "properties": {
         "oid": {
@@ -2688,283 +2749,27 @@
         "name": {
           "type": "string"
         },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
+        "latitude": {
+          "format": "double",
+          "type": "number"
         },
-        "platform": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerPlatform"
-          }
-        }
-      }
-    },
-    "KilerCustomerLoginAttempt": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
+        "longitude": {
+          "format": "double",
+          "type": "number"
         },
-        "date": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "customer": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "success": {
+        "active": {
           "type": "boolean"
-        },
-        "ip": {
-          "type": "string"
-        },
-        "platform": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "customerNavigation": {
-          "$ref": "#/definitions/KilerCustomer"
-        },
-        "platformNavigation": {
-          "$ref": "#/definitions/KilerPlatform"
-        }
-      }
-    },
-    "KilerPlatform": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "operatingSystem": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "operatingSystemNavigation": {
-          "$ref": "#/definitions/KilerOperatingSystem"
-        },
-        "customerLoginAttempt": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCustomerLoginAttempt"
-          }
-        },
-        "device": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerDevice"
-          }
-        }
-      }
-    },
-    "KilerProductPrice": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "dateStart": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "dateEnd": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "price": {
-          "format": "double",
-          "type": "number"
-        },
-        "regionProduct": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "listPrice": {
-          "format": "double",
-          "type": "number"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "regionProductNavigation": {
-          "$ref": "#/definitions/KilerRegionProduct"
-        }
-      }
-    },
-    "KilerRegionProduct": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "product": {
-          "format": "int32",
-          "type": "integer"
         },
         "region": {
           "format": "int32",
           "type": "integer"
         },
-        "active": {
-          "type": "boolean"
-        },
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
-        },
-        "productNavigation": {
-          "$ref": "#/definitions/KilerProduct"
         },
         "regionNavigation": {
           "$ref": "#/definitions/KilerRegion"
-        },
-        "cartProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCartProduct"
-          }
-        },
-        "productPrice": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerProductPrice"
-          }
-        }
-      }
-    },
-    "KilerCartProduct": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "cart": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "regionProduct": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "quantity": {
-          "format": "double",
-          "type": "number"
-        },
-        "listPrice": {
-          "format": "double",
-          "type": "number"
-        },
-        "price": {
-          "format": "double",
-          "type": "number"
-        },
-        "dateAdded": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "dateRemoved": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "amount": {
-          "format": "double",
-          "type": "number"
-        },
-        "discountAmount": {
-          "format": "double",
-          "type": "number"
-        },
-        "addedFrom": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "removedFrom": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "productNotes": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "addedFromNavigation": {
-          "$ref": "#/definitions/KilerDevice"
-        },
-        "cartNavigation": {
-          "$ref": "#/definitions/KilerCart"
-        },
-        "regionProductNavigation": {
-          "$ref": "#/definitions/KilerRegionProduct"
-        },
-        "removedFromNavigation": {
-          "$ref": "#/definitions/KilerDevice"
-        }
-      }
-    },
-    "KilerDeviceLogin": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "customer": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "device": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "isActive": {
-          "type": "boolean"
-        },
-        "token": {
-          "format": "uuid",
-          "type": "string"
-        },
-        "loginDate": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "logoutDate": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "gcrecord": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "customerNavigation": {
-          "$ref": "#/definitions/KilerCustomer"
-        },
-        "deviceNavigation": {
-          "$ref": "#/definitions/KilerDevice"
         }
       }
     },
@@ -3177,6 +2982,12 @@
           "format": "int32",
           "type": "integer"
         },
+        "sent": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
@@ -3184,6 +2995,37 @@
         "gcrecord": {
           "format": "int32",
           "type": "integer"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        }
+      }
+    },
+    "KilerOrderCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
         },
         "orderNavigation": {
           "$ref": "#/definitions/KilerOrder"
@@ -3970,6 +3812,12 @@
             "$ref": "#/definitions/KilerOlimposLog"
           }
         },
+        "orderCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderCampaign"
+          }
+        },
         "orderProduct": {
           "type": "array",
           "items": {
@@ -3996,70 +3844,122 @@
         }
       }
     },
-    "KilerDevice": {
+    "KilerCartProduct": {
       "type": "object",
       "properties": {
         "oid": {
           "format": "int32",
           "type": "integer"
         },
-        "name": {
-          "type": "string"
-        },
-        "platform": {
+        "cart": {
           "format": "int32",
           "type": "integer"
+        },
+        "regionProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "quantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "listPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "dateAdded": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateRemoved": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "addedFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "removedFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productNotes": {
+          "type": "string"
         },
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
         },
-        "deviceId": {
-          "type": "string"
+        "addedFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
         },
-        "platformNavigation": {
-          "$ref": "#/definitions/KilerPlatform"
+        "cartNavigation": {
+          "$ref": "#/definitions/KilerCart"
         },
-        "cart": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCart"
-          }
+        "regionProductNavigation": {
+          "$ref": "#/definitions/KilerRegionProduct"
         },
-        "cartProductAddedFromNavigation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCartProduct"
-          }
-        },
-        "cartProductRemovedFromNavigation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCartProduct"
-          }
-        },
-        "deviceLogin": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerDeviceLogin"
-          }
-        },
-        "order": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerOrder"
-          }
+        "removedFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
         }
       }
     },
-    "KilerCart": {
+    "KilerProductPrice": {
       "type": "object",
       "properties": {
         "oid": {
           "format": "int32",
           "type": "integer"
         },
-        "customer": {
+        "dateStart": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateEnd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "regionProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "listPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionProductNavigation": {
+          "$ref": "#/definitions/KilerRegionProduct"
+        }
+      }
+    },
+    "KilerRegionProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
           "format": "int32",
           "type": "integer"
         },
@@ -4067,56 +3967,15 @@
           "format": "int32",
           "type": "integer"
         },
-        "cartTotal": {
-          "format": "double",
-          "type": "number"
-        },
-        "createdFrom": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "productDiscountsTotal": {
-          "format": "double",
-          "type": "number"
-        },
-        "note": {
-          "type": "string"
-        },
-        "bagAmount": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "bagTotal": {
-          "format": "double",
-          "type": "number"
-        },
         "active": {
-          "type": "boolean"
-        },
-        "deleted": {
           "type": "boolean"
         },
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
         },
-        "estimatedFee": {
-          "format": "double",
-          "type": "number"
-        },
-        "dateDeleted": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "dateCreated": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "createdFromNavigation": {
-          "$ref": "#/definitions/KilerDevice"
-        },
-        "customerNavigation": {
-          "$ref": "#/definitions/KilerCustomer"
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
         },
         "regionNavigation": {
           "$ref": "#/definitions/KilerRegion"
@@ -4127,36 +3986,26 @@
             "$ref": "#/definitions/KilerCartProduct"
           }
         },
-        "order": {
+        "productPrice": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/KilerOrder"
+            "$ref": "#/definitions/KilerProductPrice"
           }
         }
       }
     },
-    "KilerDepot": {
+    "KilerRegionRegionsCampaignCampaigns": {
       "type": "object",
       "properties": {
-        "oid": {
+        "campaigns": {
           "format": "int32",
           "type": "integer"
         },
-        "name": {
-          "type": "string"
+        "regions": {
+          "format": "int32",
+          "type": "integer"
         },
-        "latitude": {
-          "format": "double",
-          "type": "number"
-        },
-        "longitude": {
-          "format": "double",
-          "type": "number"
-        },
-        "active": {
-          "type": "boolean"
-        },
-        "region": {
+        "oid": {
           "format": "int32",
           "type": "integer"
         },
@@ -4164,7 +4013,10 @@
           "format": "int32",
           "type": "integer"
         },
-        "regionNavigation": {
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "regionsNavigation": {
           "$ref": "#/definitions/KilerRegion"
         }
       }
@@ -4258,6 +4110,14 @@
           "format": "int32",
           "type": "integer"
         },
+        "bufferTime": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "timeSlotWindow": {
+          "format": "int32",
+          "type": "integer"
+        },
         "companyNavigation": {
           "$ref": "#/definitions/KilerCompany"
         },
@@ -4283,6 +4143,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/KilerRegionProduct"
+          }
+        },
+        "regionRegionsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsCampaignCampaigns"
           }
         },
         "regionRegionsNeighborhoodNeighborhoods": {
@@ -4766,6 +4632,181 @@
         }
       }
     },
+    "KilerCustomerFavoriteList": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCustomerMessage": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "sendDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "readDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerCustomerValidCustomersCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "validCustomers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "validCustomersNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerDeviceLogin": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "device": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "token": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "loginDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "logoutDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "deviceNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        }
+      }
+    },
+    "KilerProductRecommendation": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
     "KilerSmsVerification": {
       "type": "object",
       "properties": {
@@ -4925,6 +4966,18 @@
             "$ref": "#/definitions/KilerCustomerLoginAttempt"
           }
         },
+        "customerMessage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerMessage"
+          }
+        },
+        "customerValidCustomersCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerValidCustomersCampaignCampaigns"
+          }
+        },
         "deviceLogin": {
           "type": "array",
           "items": {
@@ -4943,6 +4996,12 @@
             "$ref": "#/definitions/KilerPayment"
           }
         },
+        "productRecommendation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductRecommendation"
+          }
+        },
         "smsVerification": {
           "type": "array",
           "items": {
@@ -4957,21 +5016,28 @@
         }
       }
     },
-    "KilerCustomerFavoriteList": {
+    "KilerCustomerLoginAttempt": {
       "type": "object",
       "properties": {
         "oid": {
           "format": "int32",
           "type": "integer"
         },
-        "name": {
+        "date": {
+          "format": "date-time",
           "type": "string"
         },
-        "product": {
+        "customer": {
           "format": "int32",
           "type": "integer"
         },
-        "customer": {
+        "success": {
+          "type": "boolean"
+        },
+        "ip": {
+          "type": "string"
+        },
+        "platform": {
           "format": "int32",
           "type": "integer"
         },
@@ -4982,8 +5048,874 @@
         "customerNavigation": {
           "$ref": "#/definitions/KilerCustomer"
         },
+        "platformNavigation": {
+          "$ref": "#/definitions/KilerPlatform"
+        }
+      }
+    },
+    "KilerPlatform": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "operatingSystem": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operatingSystemNavigation": {
+          "$ref": "#/definitions/KilerOperatingSystem"
+        },
+        "customerLoginAttempt": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerLoginAttempt"
+          }
+        },
+        "device": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDevice"
+          }
+        }
+      }
+    },
+    "KilerDevice": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "deviceId": {
+          "type": "string"
+        },
+        "platformNavigation": {
+          "$ref": "#/definitions/KilerPlatform"
+        },
+        "cart": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCart"
+          }
+        },
+        "cartProductAddedFromNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "cartProductRemovedFromNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "deviceLogin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDeviceLogin"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerCart": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cartTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "createdFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productDiscountsTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "note": {
+          "type": "string"
+        },
+        "bagAmount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bagTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estimatedFee": {
+          "format": "double",
+          "type": "number"
+        },
+        "dateDeleted": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateCreated": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        },
+        "cartCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartCampaign"
+          }
+        },
+        "cartProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerCartCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cart": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "cartNavigation": {
+          "$ref": "#/definitions/KilerCart"
+        }
+      }
+    },
+    "KilerPersonel": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerPersonelDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personel": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "personelNavigation": {
+          "$ref": "#/definitions/KilerPersonel"
+        }
+      }
+    },
+    "KilerDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerCategoryImport": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "importDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "payLoad": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        }
+      }
+    },
+    "KilerCategoryImportDetail": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oldValue": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "string"
+        },
+        "categoryImport": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportNavigation": {
+          "$ref": "#/definitions/KilerCategoryImport"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerCategoryProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "main": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
         "productNavigation": {
           "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCategory": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "level": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parent": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        },
+        "showInMenu": {
+          "type": "boolean"
+        },
+        "nleft": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nright": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "refId": {
+          "type": "string"
+        },
+        "imagePath": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "erpId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "menuName": {
+          "type": "string"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "parentNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "categoryCategoriesCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
+          }
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        },
+        "categoryProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryProduct"
+          }
+        },
+        "configuration": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerConfiguration"
+          }
+        },
+        "inverseParentNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        }
+      }
+    },
+    "KilerCategoryCategoriesCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categories": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "categoriesNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerProductProductsCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "products": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "productsNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "displayPriority": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerOrderCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cartMinAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "productMinAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "productMinCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "maxDiscountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "freeDelivery": {
+          "type": "boolean"
+        },
+        "discountPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "maxPerCustomerUsageCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "maxUsageCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affectedProductCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affectedProductDiscountPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "smallImage": {
+          "type": "string"
+        },
+        "uid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "campaignCampaignsBrandBrands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCampaignCampaignsBrandBrands"
+          }
+        },
+        "cartCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartCampaign"
+          }
+        },
+        "categoryCategoriesCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
+          }
+        },
+        "customerValidCustomersCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerValidCustomersCampaignCampaigns"
+          }
+        },
+        "orderCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderCampaign"
+          }
+        },
+        "productProductsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsCampaignCampaigns"
+          }
+        },
+        "regionRegionsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsCampaignCampaigns"
+          }
+        }
+      }
+    },
+    "KilerCampaignCampaignsBrandBrands": {
+      "type": "object",
+      "properties": {
+        "brands": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brandsNavigation": {
+          "$ref": "#/definitions/KilerBrand"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        }
+      }
+    },
+    "KilerBrand": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "manufacturer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "manufacturerNavigation": {
+          "$ref": "#/definitions/KilerManufacturer"
+        },
+        "brandManagerBrand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBrandManagerBrand"
+          }
+        },
+        "campaignCampaignsBrandBrands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCampaignCampaignsBrandBrands"
+          }
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerProductTag": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerSupplier": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerProductProductsProductAlternativesProductAlternatives0eac5f03": {
+      "type": "object",
+      "properties": {
+        "productAlternativesCollection": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "products": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productAlternativesCollectionNavigation": {
+          "$ref": "#/definitions/KilerProductAlternatives"
+        },
+        "productsNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerProductAlternatives": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alternativeProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alternativeProductNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "productProductsProductAlternativesProductAlternatives0eac5f03": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsProductAlternativesProductAlternatives0eac5f03"
+          }
         }
       }
     },
@@ -5225,6 +6157,18 @@
             "$ref": "#/definitions/KilerOrderProduct"
           }
         },
+        "productAlternativesAlternativeProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductAlternatives"
+          }
+        },
+        "productAlternativesProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductAlternatives"
+          }
+        },
         "productImage": {
           "type": "array",
           "items": {
@@ -5235,6 +6179,18 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/KilerProductImportDetail"
+          }
+        },
+        "productProductsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsCampaignCampaigns"
+          }
+        },
+        "productProductsProductAlternativesProductAlternatives0eac5f03": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsProductAlternativesProductAlternatives0eac5f03"
           }
         },
         "regionProduct": {
@@ -5289,6 +6245,9 @@
           "type": "integer"
         },
         "affiliateLinkDomain": {
+          "type": "string"
+        },
+        "s3bucketName": {
           "type": "string"
         },
         "bagProductNavigation": {
@@ -5672,6 +6631,45 @@
         }
       }
     },
+    "CartServiceCampaignResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "smallImage": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "string"
+        },
+        "displayPriority": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productIds": {
+          "type": "array",
+          "items": {
+            "format": "int32",
+            "type": "integer"
+          }
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
     "CartServiceRCartProducts": {
       "type": "object",
       "properties": {
@@ -5709,6 +6707,9 @@
         "unitId": {
           "format": "int32",
           "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
         }
       }
     },
@@ -5746,6 +6747,16 @@
           "format": "double",
           "type": "number"
         },
+        "appliedCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CartServiceCampaignResponse"
+          }
+        },
+        "campaignTotalDiscount": {
+          "format": "double",
+          "type": "number"
+        },
         "cartProducts": {
           "type": "array",
           "items": {
@@ -5771,6 +6782,57 @@
         },
         "data": {
           "$ref": "#/definitions/CartServiceCartResponse"
+        }
+      }
+    },
+    "CartServiceCampaignApplyResponse": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "missingConditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cart": {
+          "$ref": "#/definitions/CartServiceCartResponse"
+        }
+      }
+    },
+    "RestResultOfCartServiceCampaignApplyResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/CartServiceCampaignApplyResponse"
+        }
+      }
+    },
+    "RestResultOfListOfCartServiceCampaignResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CartServiceCampaignResponse"
+          }
         }
       }
     },
@@ -5834,6 +6896,20 @@
         },
         "productNote": {
           "type": "string"
+        }
+      }
+    },
+    "RestResultOfCartServiceCampaignResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/CartServiceCampaignResponse"
         }
       }
     },
@@ -5914,6 +6990,9 @@
           "type": "integer"
         },
         "isFree": {
+          "type": "boolean"
+        },
+        "isAvailable": {
           "type": "boolean"
         },
         "fee": {
@@ -6061,10 +7140,89 @@
         }
       }
     },
+    "CrmServiceTicketRequest": {
+      "type": "object",
+      "properties": {
+        "phoneNumber": {
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "CrmServiceTicketResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "ticketCategory": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "RestResultOfCrmServiceTicketResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/CrmServiceTicketResponse"
+        }
+      }
+    },
+    "CrmServiceCallRequest": {
+      "type": "object",
+      "properties": {
+        "extention": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        }
+      }
+    },
     "CustomerServiceRAddress": {
       "type": "object",
       "properties": {
         "adressId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "addressId": {
           "format": "int32",
           "type": "integer"
         },
@@ -6138,6 +7296,9 @@
         },
         "phoneNumber": {
           "type": "string"
+        },
+        "active": {
+          "type": "boolean"
         }
       }
     },
@@ -6389,6 +7550,49 @@
         }
       }
     },
+    "CustomerServiceCustomerMessageResponse": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "sendDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "readDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "RestResultOfListOfCustomerServiceCustomerMessageResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomerServiceCustomerMessageResponse"
+          }
+        }
+      }
+    },
     "DefinitionServiceFaqResponse": {
       "type": "object",
       "properties": {
@@ -6414,6 +7618,23 @@
           "items": {
             "$ref": "#/definitions/DefinitionServiceFaqResponse"
           }
+        }
+      }
+    },
+    "DefinitionServiceUploadCountriesResponse": {
+      "type": "object"
+    },
+    "RestResultOfDefinitionServiceUploadCountriesResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/DefinitionServiceUploadCountriesResponse"
         }
       }
     },
@@ -6688,6 +7909,31 @@
         }
       }
     },
+    "OrderServiceCampaignResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "smallImage": {
+          "type": "string"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
     "OrderServiceOrderResponse": {
       "type": "object",
       "properties": {
@@ -6759,6 +8005,16 @@
         "region": {
           "format": "int32",
           "type": "integer"
+        },
+        "appliedCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrderServiceCampaignResponse"
+          }
+        },
+        "campaignTotalDiscount": {
+          "format": "double",
+          "type": "number"
         }
       }
     },
@@ -6773,6 +8029,17 @@
         },
         "data": {
           "$ref": "#/definitions/OrderServiceOrderResponse"
+        }
+      }
+    },
+    "OrderServiceOrderStatus": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
         }
       }
     },
@@ -6828,6 +8095,14 @@
         "paymentType": {
           "type": "string"
         },
+        "deliveryTimeStart": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "deliveryTimeEnd": {
+          "format": "date-time",
+          "type": "string"
+        },
         "fee": {
           "format": "double",
           "type": "number"
@@ -6835,6 +8110,13 @@
         "region": {
           "format": "int32",
           "type": "integer"
+        },
+        "editUntil": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/OrderServiceOrderStatus"
         }
       }
     },
@@ -6878,6 +8160,10 @@
           "format": "int32",
           "type": "integer"
         },
+        "timeSlotId": {
+          "format": "int32",
+          "type": "integer"
+        },
         "paymentCode": {
           "type": "string"
         },
@@ -6899,6 +8185,18 @@
         "orderStatusId": {
           "format": "int32",
           "type": "integer"
+        }
+      }
+    },
+    "OrderServicePatchOrderRequest": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentCode": {
+          "type": "string"
         }
       }
     },
@@ -6993,10 +8291,73 @@
         }
       }
     },
-    "ProductServiceProductRequest": {
+    "PaymentServicePaymentTransactionRequest": {
       "type": "object",
       "properties": {
-        "id": {
+        "transactionUid": {
+          "type": "string"
+        }
+      }
+    },
+    "PaymentServicePaymentTransactionResponse": {
+      "type": "object",
+      "properties": {
+        "isStateSuccess": {
+          "type": "boolean"
+        },
+        "stateMessage": {
+          "type": "string"
+        }
+      }
+    },
+    "RestResultOfPaymentServicePaymentTransactionResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/PaymentServicePaymentTransactionResponse"
+        }
+      }
+    },
+    "ProductServiceRecommendProductRequest": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductServiceRecommendProductResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "RestResultOfProductServiceRecommendProductResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/ProductServiceRecommendProductResponse"
+        }
+      }
+    },
+    "ProductServiceFavoriteRequest": {
+      "type": "object",
+      "properties": {
+        "productId": {
           "format": "int32",
           "type": "integer"
         }
@@ -7075,6 +8436,40 @@
         }
       }
     },
+    "ProductServiceFavoriteListResponse": {
+      "type": "object",
+      "properties": {
+        "products": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProductServiceRProduct"
+          }
+        }
+      }
+    },
+    "RestResultOfProductServiceFavoriteListResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/ProductServiceFavoriteListResponse"
+        }
+      }
+    },
+    "ProductServiceProductRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "RestResultOfProductServiceRProduct": {
       "type": "object",
       "properties": {
@@ -7118,37 +8513,12 @@
         }
       }
     },
-    "ProductServiceFavoriteRequest": {
+    "ProductServiceProductAlternativesRequest": {
       "type": "object",
       "properties": {
-        "productId": {
+        "product": {
           "format": "int32",
           "type": "integer"
-        }
-      }
-    },
-    "ProductServiceFavoriteListResponse": {
-      "type": "object",
-      "properties": {
-        "products": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ProductServiceRProduct"
-          }
-        }
-      }
-    },
-    "RestResultOfProductServiceFavoriteListResponse": {
-      "type": "object",
-      "properties": {
-        "success": {
-          "type": "boolean"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "$ref": "#/definitions/ProductServiceFavoriteListResponse"
         }
       }
     },
@@ -7239,23 +8609,6 @@
           "$ref": "#/definitions/RegisterServiceLoginResponse"
         }
       }
-    },
-    "RestResultOfListOfSystemString": {
-      "type": "object",
-      "properties": {
-        "success": {
-          "type": "boolean"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
     }
   },
   "securityDefinitions": {
@@ -7263,7 +8616,7 @@
       "type": "apiKey",
       "name": "Authorization",
       "in": "header",
-      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \r\n                      Enter 'Bearer' [space] and then your token in the text input below.\r\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
+      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \n                      Enter 'Bearer' [space] and then your token in the text input below.\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
     }
   },
   "security": [

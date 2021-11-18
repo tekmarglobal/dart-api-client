@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_import
 
+import 'package:openapi/model/kiler_campaign_campaigns_brand_brands.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_manufacturer.dart';
 import 'package:openapi/model/kiler_product.dart';
@@ -39,6 +40,10 @@ abstract class KilerBrand implements Built<KilerBrand, KilerBrandBuilder> {
     @nullable
     @BuiltValueField(wireName: r'brandManagerBrand')
     BuiltList<KilerBrandManagerBrand> get brandManagerBrand;
+
+    @nullable
+    @BuiltValueField(wireName: r'campaignCampaignsBrandBrands')
+    BuiltList<KilerCampaignCampaignsBrandBrands> get campaignCampaignsBrandBrands;
 
     @nullable
     @BuiltValueField(wireName: r'product')
@@ -101,6 +106,12 @@ class _$KilerBrandSerializer implements StructuredSerializer<KilerBrand> {
                 ..add(serializers.serialize(object.brandManagerBrand,
                     specifiedType: const FullType(BuiltList, [FullType(KilerBrandManagerBrand)])));
         }
+        if (object.campaignCampaignsBrandBrands != null) {
+            result
+                ..add(r'campaignCampaignsBrandBrands')
+                ..add(serializers.serialize(object.campaignCampaignsBrandBrands,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerCampaignCampaignsBrandBrands)])));
+        }
         if (object.product != null) {
             result
                 ..add(r'product')
@@ -144,6 +155,10 @@ class _$KilerBrandSerializer implements StructuredSerializer<KilerBrand> {
                 case r'brandManagerBrand':
                     result.brandManagerBrand.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerBrandManagerBrand)])) as BuiltList<KilerBrandManagerBrand>);
+                    break;
+                case r'campaignCampaignsBrandBrands':
+                    result.campaignCampaignsBrandBrands.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerCampaignCampaignsBrandBrands)])) as BuiltList<KilerCampaignCampaignsBrandBrands>);
                     break;
                 case r'product':
                     result.product.replace(serializers.deserialize(value,

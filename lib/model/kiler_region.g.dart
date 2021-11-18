@@ -35,6 +35,10 @@ class _$KilerRegion extends KilerRegion {
   @override
   final int company;
   @override
+  final int bufferTime;
+  @override
+  final int timeSlotWindow;
+  @override
   final KilerCompany companyNavigation;
   @override
   final BuiltList<KilerCart> cart;
@@ -44,6 +48,9 @@ class _$KilerRegion extends KilerRegion {
   final BuiltList<KilerOrder> order;
   @override
   final BuiltList<KilerRegionProduct> regionProduct;
+  @override
+  final BuiltList<KilerRegionRegionsCampaignCampaigns>
+      regionRegionsCampaignCampaigns;
   @override
   final BuiltList<KilerRegionRegionsNeighborhoodNeighborhoods>
       regionRegionsNeighborhoodNeighborhoods;
@@ -69,11 +76,14 @@ class _$KilerRegion extends KilerRegion {
       this.erpId,
       this.active,
       this.company,
+      this.bufferTime,
+      this.timeSlotWindow,
       this.companyNavigation,
       this.cart,
       this.depot,
       this.order,
       this.regionProduct,
+      this.regionRegionsCampaignCampaigns,
       this.regionRegionsNeighborhoodNeighborhoods,
       this.timeSlot,
       this.timeSlotTemplate})
@@ -103,11 +113,15 @@ class _$KilerRegion extends KilerRegion {
         erpId == other.erpId &&
         active == other.active &&
         company == other.company &&
+        bufferTime == other.bufferTime &&
+        timeSlotWindow == other.timeSlotWindow &&
         companyNavigation == other.companyNavigation &&
         cart == other.cart &&
         depot == other.depot &&
         order == other.order &&
         regionProduct == other.regionProduct &&
+        regionRegionsCampaignCampaigns ==
+            other.regionRegionsCampaignCampaigns &&
         regionRegionsNeighborhoodNeighborhoods ==
             other.regionRegionsNeighborhoodNeighborhoods &&
         timeSlot == other.timeSlot &&
@@ -134,23 +148,23 @@ class _$KilerRegion extends KilerRegion {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc(0, oid.hashCode), name.hashCode),
-                                                                                code.hashCode),
-                                                                            freeDelivery.hashCode),
-                                                                        freeDeliveryAmount.hashCode),
-                                                                    timeSlotGenerationWindow.hashCode),
-                                                                lastTimeSlotGeneratedDate.hashCode),
-                                                            minimumCartAmount.hashCode),
-                                                        optimisticLockField.hashCode),
-                                                    regionMail.hashCode),
-                                                erpId.hashCode),
-                                            active.hashCode),
-                                        company.hashCode),
-                                    companyNavigation.hashCode),
-                                cart.hashCode),
-                            depot.hashCode),
-                        order.hashCode),
-                    regionProduct.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), code.hashCode), freeDelivery.hashCode), freeDeliveryAmount.hashCode),
+                                                                                timeSlotGenerationWindow.hashCode),
+                                                                            lastTimeSlotGeneratedDate.hashCode),
+                                                                        minimumCartAmount.hashCode),
+                                                                    optimisticLockField.hashCode),
+                                                                regionMail.hashCode),
+                                                            erpId.hashCode),
+                                                        active.hashCode),
+                                                    company.hashCode),
+                                                bufferTime.hashCode),
+                                            timeSlotWindow.hashCode),
+                                        companyNavigation.hashCode),
+                                    cart.hashCode),
+                                depot.hashCode),
+                            order.hashCode),
+                        regionProduct.hashCode),
+                    regionRegionsCampaignCampaigns.hashCode),
                 regionRegionsNeighborhoodNeighborhoods.hashCode),
             timeSlot.hashCode),
         timeSlotTemplate.hashCode));
@@ -172,11 +186,15 @@ class _$KilerRegion extends KilerRegion {
           ..add('erpId', erpId)
           ..add('active', active)
           ..add('company', company)
+          ..add('bufferTime', bufferTime)
+          ..add('timeSlotWindow', timeSlotWindow)
           ..add('companyNavigation', companyNavigation)
           ..add('cart', cart)
           ..add('depot', depot)
           ..add('order', order)
           ..add('regionProduct', regionProduct)
+          ..add(
+              'regionRegionsCampaignCampaigns', regionRegionsCampaignCampaigns)
           ..add('regionRegionsNeighborhoodNeighborhoods',
               regionRegionsNeighborhoodNeighborhoods)
           ..add('timeSlot', timeSlot)
@@ -245,6 +263,15 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
   int get company => _$this._company;
   set company(int company) => _$this._company = company;
 
+  int _bufferTime;
+  int get bufferTime => _$this._bufferTime;
+  set bufferTime(int bufferTime) => _$this._bufferTime = bufferTime;
+
+  int _timeSlotWindow;
+  int get timeSlotWindow => _$this._timeSlotWindow;
+  set timeSlotWindow(int timeSlotWindow) =>
+      _$this._timeSlotWindow = timeSlotWindow;
+
   KilerCompanyBuilder _companyNavigation;
   KilerCompanyBuilder get companyNavigation =>
       _$this._companyNavigation ??= new KilerCompanyBuilder();
@@ -271,6 +298,17 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
       _$this._regionProduct ??= new ListBuilder<KilerRegionProduct>();
   set regionProduct(ListBuilder<KilerRegionProduct> regionProduct) =>
       _$this._regionProduct = regionProduct;
+
+  ListBuilder<KilerRegionRegionsCampaignCampaigns>
+      _regionRegionsCampaignCampaigns;
+  ListBuilder<KilerRegionRegionsCampaignCampaigns>
+      get regionRegionsCampaignCampaigns =>
+          _$this._regionRegionsCampaignCampaigns ??=
+              new ListBuilder<KilerRegionRegionsCampaignCampaigns>();
+  set regionRegionsCampaignCampaigns(
+          ListBuilder<KilerRegionRegionsCampaignCampaigns>
+              regionRegionsCampaignCampaigns) =>
+      _$this._regionRegionsCampaignCampaigns = regionRegionsCampaignCampaigns;
 
   ListBuilder<KilerRegionRegionsNeighborhoodNeighborhoods>
       _regionRegionsNeighborhoodNeighborhoods;
@@ -316,11 +354,15 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
       _erpId = $v.erpId;
       _active = $v.active;
       _company = $v.company;
+      _bufferTime = $v.bufferTime;
+      _timeSlotWindow = $v.timeSlotWindow;
       _companyNavigation = $v.companyNavigation?.toBuilder();
       _cart = $v.cart?.toBuilder();
       _depot = $v.depot?.toBuilder();
       _order = $v.order?.toBuilder();
       _regionProduct = $v.regionProduct?.toBuilder();
+      _regionRegionsCampaignCampaigns =
+          $v.regionRegionsCampaignCampaigns?.toBuilder();
       _regionRegionsNeighborhoodNeighborhoods =
           $v.regionRegionsNeighborhoodNeighborhoods?.toBuilder();
       _timeSlot = $v.timeSlot?.toBuilder();
@@ -360,11 +402,15 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
               erpId: erpId,
               active: active,
               company: company,
+              bufferTime: bufferTime,
+              timeSlotWindow: timeSlotWindow,
               companyNavigation: _companyNavigation?.build(),
               cart: _cart?.build(),
               depot: _depot?.build(),
               order: _order?.build(),
               regionProduct: _regionProduct?.build(),
+              regionRegionsCampaignCampaigns:
+                  _regionRegionsCampaignCampaigns?.build(),
               regionRegionsNeighborhoodNeighborhoods:
                   _regionRegionsNeighborhoodNeighborhoods?.build(),
               timeSlot: _timeSlot?.build(),
@@ -382,6 +428,8 @@ class KilerRegionBuilder implements Builder<KilerRegion, KilerRegionBuilder> {
         _order?.build();
         _$failedField = 'regionProduct';
         _regionProduct?.build();
+        _$failedField = 'regionRegionsCampaignCampaigns';
+        _regionRegionsCampaignCampaigns?.build();
         _$failedField = 'regionRegionsNeighborhoodNeighborhoods';
         _regionRegionsNeighborhoodNeighborhoods?.build();
         _$failedField = 'timeSlot';

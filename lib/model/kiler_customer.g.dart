@@ -67,11 +67,18 @@ class _$KilerCustomer extends KilerCustomer {
   @override
   final BuiltList<KilerCustomerLoginAttempt> customerLoginAttempt;
   @override
+  final BuiltList<KilerCustomerMessage> customerMessage;
+  @override
+  final BuiltList<KilerCustomerValidCustomersCampaignCampaigns>
+      customerValidCustomersCampaignCampaigns;
+  @override
   final BuiltList<KilerDeviceLogin> deviceLogin;
   @override
   final BuiltList<KilerOrder> order;
   @override
   final BuiltList<KilerPayment> payment;
+  @override
+  final BuiltList<KilerProductRecommendation> productRecommendation;
   @override
   final BuiltList<KilerSmsVerification> smsVerification;
   @override
@@ -110,9 +117,12 @@ class _$KilerCustomer extends KilerCustomer {
       this.cart,
       this.customerFavoriteList,
       this.customerLoginAttempt,
+      this.customerMessage,
+      this.customerValidCustomersCampaignCampaigns,
       this.deviceLogin,
       this.order,
       this.payment,
+      this.productRecommendation,
       this.smsVerification,
       this.ticket})
       : super._();
@@ -157,9 +167,13 @@ class _$KilerCustomer extends KilerCustomer {
         cart == other.cart &&
         customerFavoriteList == other.customerFavoriteList &&
         customerLoginAttempt == other.customerLoginAttempt &&
+        customerMessage == other.customerMessage &&
+        customerValidCustomersCampaignCampaigns ==
+            other.customerValidCustomersCampaignCampaigns &&
         deviceLogin == other.deviceLogin &&
         order == other.order &&
         payment == other.payment &&
+        productRecommendation == other.productRecommendation &&
         smsVerification == other.smsVerification &&
         ticket == other.ticket;
   }
@@ -184,24 +198,24 @@ class _$KilerCustomer extends KilerCustomer {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode), anonymous.hashCode), optimisticLockField.hashCode), allowCampaign.hashCode),
-                                                                                identificationNumber.hashCode),
-                                                                            defaultAddress.hashCode),
-                                                                        invoiceAddress.hashCode),
-                                                                    uid.hashCode),
-                                                                defaultAddressNavigation.hashCode),
-                                                            invoiceAddressNavigation.hashCode),
-                                                        address.hashCode),
-                                                    affiliateClick.hashCode),
-                                                affiliateLink.hashCode),
-                                            agreementLog.hashCode),
-                                        call.hashCode),
-                                    cart.hashCode),
-                                customerFavoriteList.hashCode),
-                            customerLoginAttempt.hashCode),
-                        deviceLogin.hashCode),
-                    order.hashCode),
-                payment.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), surname.hashCode), birthdate.hashCode), phone.hashCode), email.hashCode), allowSms.hashCode), allowEmail.hashCode), gender.hashCode), password.hashCode), smsVerificationCode.hashCode), smsVerificationSendDate.hashCode), anonymous.hashCode), optimisticLockField.hashCode), allowCampaign.hashCode), identificationNumber.hashCode), defaultAddress.hashCode), invoiceAddress.hashCode),
+                                                                                uid.hashCode),
+                                                                            defaultAddressNavigation.hashCode),
+                                                                        invoiceAddressNavigation.hashCode),
+                                                                    address.hashCode),
+                                                                affiliateClick.hashCode),
+                                                            affiliateLink.hashCode),
+                                                        agreementLog.hashCode),
+                                                    call.hashCode),
+                                                cart.hashCode),
+                                            customerFavoriteList.hashCode),
+                                        customerLoginAttempt.hashCode),
+                                    customerMessage.hashCode),
+                                customerValidCustomersCampaignCampaigns.hashCode),
+                            deviceLogin.hashCode),
+                        order.hashCode),
+                    payment.hashCode),
+                productRecommendation.hashCode),
             smsVerification.hashCode),
         ticket.hashCode));
   }
@@ -238,9 +252,13 @@ class _$KilerCustomer extends KilerCustomer {
           ..add('cart', cart)
           ..add('customerFavoriteList', customerFavoriteList)
           ..add('customerLoginAttempt', customerLoginAttempt)
+          ..add('customerMessage', customerMessage)
+          ..add('customerValidCustomersCampaignCampaigns',
+              customerValidCustomersCampaignCampaigns)
           ..add('deviceLogin', deviceLogin)
           ..add('order', order)
           ..add('payment', payment)
+          ..add('productRecommendation', productRecommendation)
           ..add('smsVerification', smsVerification)
           ..add('ticket', ticket))
         .toString();
@@ -395,6 +413,24 @@ class KilerCustomerBuilder
           ListBuilder<KilerCustomerLoginAttempt> customerLoginAttempt) =>
       _$this._customerLoginAttempt = customerLoginAttempt;
 
+  ListBuilder<KilerCustomerMessage> _customerMessage;
+  ListBuilder<KilerCustomerMessage> get customerMessage =>
+      _$this._customerMessage ??= new ListBuilder<KilerCustomerMessage>();
+  set customerMessage(ListBuilder<KilerCustomerMessage> customerMessage) =>
+      _$this._customerMessage = customerMessage;
+
+  ListBuilder<KilerCustomerValidCustomersCampaignCampaigns>
+      _customerValidCustomersCampaignCampaigns;
+  ListBuilder<KilerCustomerValidCustomersCampaignCampaigns>
+      get customerValidCustomersCampaignCampaigns =>
+          _$this._customerValidCustomersCampaignCampaigns ??=
+              new ListBuilder<KilerCustomerValidCustomersCampaignCampaigns>();
+  set customerValidCustomersCampaignCampaigns(
+          ListBuilder<KilerCustomerValidCustomersCampaignCampaigns>
+              customerValidCustomersCampaignCampaigns) =>
+      _$this._customerValidCustomersCampaignCampaigns =
+          customerValidCustomersCampaignCampaigns;
+
   ListBuilder<KilerDeviceLogin> _deviceLogin;
   ListBuilder<KilerDeviceLogin> get deviceLogin =>
       _$this._deviceLogin ??= new ListBuilder<KilerDeviceLogin>();
@@ -410,6 +446,14 @@ class KilerCustomerBuilder
   ListBuilder<KilerPayment> get payment =>
       _$this._payment ??= new ListBuilder<KilerPayment>();
   set payment(ListBuilder<KilerPayment> payment) => _$this._payment = payment;
+
+  ListBuilder<KilerProductRecommendation> _productRecommendation;
+  ListBuilder<KilerProductRecommendation> get productRecommendation =>
+      _$this._productRecommendation ??=
+          new ListBuilder<KilerProductRecommendation>();
+  set productRecommendation(
+          ListBuilder<KilerProductRecommendation> productRecommendation) =>
+      _$this._productRecommendation = productRecommendation;
 
   ListBuilder<KilerSmsVerification> _smsVerification;
   ListBuilder<KilerSmsVerification> get smsVerification =>
@@ -458,9 +502,13 @@ class KilerCustomerBuilder
       _cart = $v.cart?.toBuilder();
       _customerFavoriteList = $v.customerFavoriteList?.toBuilder();
       _customerLoginAttempt = $v.customerLoginAttempt?.toBuilder();
+      _customerMessage = $v.customerMessage?.toBuilder();
+      _customerValidCustomersCampaignCampaigns =
+          $v.customerValidCustomersCampaignCampaigns?.toBuilder();
       _deviceLogin = $v.deviceLogin?.toBuilder();
       _order = $v.order?.toBuilder();
       _payment = $v.payment?.toBuilder();
+      _productRecommendation = $v.productRecommendation?.toBuilder();
       _smsVerification = $v.smsVerification?.toBuilder();
       _ticket = $v.ticket?.toBuilder();
       _$v = null;
@@ -514,9 +562,13 @@ class KilerCustomerBuilder
               cart: _cart?.build(),
               customerFavoriteList: _customerFavoriteList?.build(),
               customerLoginAttempt: _customerLoginAttempt?.build(),
+              customerMessage: _customerMessage?.build(),
+              customerValidCustomersCampaignCampaigns:
+                  _customerValidCustomersCampaignCampaigns?.build(),
               deviceLogin: _deviceLogin?.build(),
               order: _order?.build(),
               payment: _payment?.build(),
+              productRecommendation: _productRecommendation?.build(),
               smsVerification: _smsVerification?.build(),
               ticket: _ticket?.build());
     } catch (_) {
@@ -542,12 +594,18 @@ class KilerCustomerBuilder
         _customerFavoriteList?.build();
         _$failedField = 'customerLoginAttempt';
         _customerLoginAttempt?.build();
+        _$failedField = 'customerMessage';
+        _customerMessage?.build();
+        _$failedField = 'customerValidCustomersCampaignCampaigns';
+        _customerValidCustomersCampaignCampaigns?.build();
         _$failedField = 'deviceLogin';
         _deviceLogin?.build();
         _$failedField = 'order';
         _order?.build();
         _$failedField = 'payment';
         _payment?.build();
+        _$failedField = 'productRecommendation';
+        _productRecommendation?.build();
         _$failedField = 'smsVerification';
         _smsVerification?.build();
         _$failedField = 'ticket';

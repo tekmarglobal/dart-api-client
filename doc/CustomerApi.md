@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiCustomerDeleteAddressPost**](CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
 [**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
+[**apiCustomerGetCustomerMessageGet**](CustomerApi.md#apicustomergetcustomermessageget) | **get** /api/Customer/GetCustomerMessage | 
 [**apiCustomerPost**](CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 [**apiCustomerUpdateAddressPost**](CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
 [**apiCustomerUpdateCustomerDefultAddressPost**](CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
@@ -91,6 +92,53 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestResultOfCustomerServiceCustomerAddressResponse**](RestResultOfCustomerServiceCustomerAddressResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCustomerGetCustomerMessageGet**
+> RestResultOfListOfCustomerServiceCustomerMessageResponse apiCustomerGetCustomerMessageGet(startSendDate, endSendDate)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CustomerApi();
+var startSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+var endSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+
+try { 
+    var result = api_instance.apiCustomerGetCustomerMessageGet(startSendDate, endSendDate);
+    print(result);
+} catch (e) {
+    print('Exception when calling CustomerApi->apiCustomerGetCustomerMessageGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startSendDate** | **DateTime**|  | [optional] 
+ **endSendDate** | **DateTime**|  | [optional] 
+
+### Return type
+
+[**RestResultOfListOfCustomerServiceCustomerMessageResponse**](RestResultOfListOfCustomerServiceCustomerMessageResponse.md)
 
 ### Authorization
 

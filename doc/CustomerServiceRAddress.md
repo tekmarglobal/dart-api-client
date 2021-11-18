@@ -9,6 +9,7 @@ import 'package:openapi/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **adressId** | **int** |  | [optional] 
+**addressId** | **int** |  | [optional] 
 **customerId** | **int** |  | [optional] 
 **fullAddress** | **String** |  | [optional] 
 **building** | **String** |  | [optional] 
@@ -31,6 +32,7 @@ Name | Type | Description | Notes
 **taxOffice** | **String** |  | [optional] 
 **taxNumber** | **String** |  | [optional] 
 **phoneNumber** | **String** |  | [optional] 
+**active** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_configuration.dart';
 import 'package:test/test.dart';
 
 // tests for KilerConfiguration
 void main() {
-  final instance = KilerConfiguration();
+  final instance = KilerConfigurationBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerConfiguration, () {
     // int oid

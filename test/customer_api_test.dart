@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/customer_api.dart';
 import 'package:test/test.dart';
@@ -8,32 +15,32 @@ void main() {
   final instance = Openapi().getCustomerApi();
 
   group(CustomerApi, () {
-    //Future<DeleteAddressResponseRestResult> apiCustomerDeleteAddressPost({ DeleteAddressRequest deleteAddressRequest }) async
+    //Future<RestResultOfCustomerServiceDeleteAddressResponse> apiCustomerDeleteAddressPost({ CustomerServiceDeleteAddressRequest body }) async
     test('test apiCustomerDeleteAddressPost', () async {
       // TODO
     });
 
-    //Future<CustomerAddressResponseRestResult> apiCustomerGetCustomerAdressesPost() async
+    //Future<RestResultOfCustomerServiceCustomerAddressResponse> apiCustomerGetCustomerAdressesPost() async
     test('test apiCustomerGetCustomerAdressesPost', () async {
       // TODO
     });
 
-    //Future<CustomerResponseRestResult> apiCustomerPost() async
+    //Future<RestResultOfCustomerServiceCustomerResponse> apiCustomerPost() async
     test('test apiCustomerPost', () async {
       // TODO
     });
 
-    //Future<CustomerAddressResponseRestResult> apiCustomerUpdateAddressPost({ CustomerAddressRequest customerAddressRequest }) async
+    //Future<RestResultOfCustomerServiceCustomerAddressResponse> apiCustomerUpdateAddressPost({ CustomerServiceCustomerAddressRequest body }) async
     test('test apiCustomerUpdateAddressPost', () async {
       // TODO
     });
 
-    //Future<CustomerResponseRestResult> apiCustomerUpdateCustomerDefultAddressPost({ NewCustomerDefaultAddress newCustomerDefaultAddress }) async
+    //Future<RestResultOfCustomerServiceCustomerResponse> apiCustomerUpdateCustomerDefultAddressPost({ CustomerServiceNewCustomerDefaultAddress body }) async
     test('test apiCustomerUpdateCustomerDefultAddressPost', () async {
       // TODO
     });
 
-    //Future<CustomerResponseRestResult> apiCustomerUpdateCustomerPost({ NewCustomerRequest newCustomerRequest }) async
+    //Future<RestResultOfCustomerServiceCustomerResponse> apiCustomerUpdateCustomerPost({ CustomerServiceNewCustomerRequest body }) async
     test('test apiCustomerUpdateCustomerPost', () async {
       // TODO
     });

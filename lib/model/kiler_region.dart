@@ -13,6 +13,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_region_regions_neighborhood_neighborhoods.dart';
 import 'package:openapi/model/kiler_company.dart';
 import 'package:openapi/model/kiler_time_slot_template.dart';
+import 'package:openapi/model/kiler_region_regions_campaign_campaigns.dart';
 import 'package:openapi/model/kiler_depot.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -74,6 +75,14 @@ abstract class KilerRegion implements Built<KilerRegion, KilerRegionBuilder> {
     int get company;
 
     @nullable
+    @BuiltValueField(wireName: r'bufferTime')
+    int get bufferTime;
+
+    @nullable
+    @BuiltValueField(wireName: r'timeSlotWindow')
+    int get timeSlotWindow;
+
+    @nullable
     @BuiltValueField(wireName: r'companyNavigation')
     KilerCompany get companyNavigation;
 
@@ -92,6 +101,10 @@ abstract class KilerRegion implements Built<KilerRegion, KilerRegionBuilder> {
     @nullable
     @BuiltValueField(wireName: r'regionProduct')
     BuiltList<KilerRegionProduct> get regionProduct;
+
+    @nullable
+    @BuiltValueField(wireName: r'regionRegionsCampaignCampaigns')
+    BuiltList<KilerRegionRegionsCampaignCampaigns> get regionRegionsCampaignCampaigns;
 
     @nullable
     @BuiltValueField(wireName: r'regionRegionsNeighborhoodNeighborhoods')
@@ -204,6 +217,18 @@ class _$KilerRegionSerializer implements StructuredSerializer<KilerRegion> {
                 ..add(serializers.serialize(object.company,
                     specifiedType: const FullType(int)));
         }
+        if (object.bufferTime != null) {
+            result
+                ..add(r'bufferTime')
+                ..add(serializers.serialize(object.bufferTime,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.timeSlotWindow != null) {
+            result
+                ..add(r'timeSlotWindow')
+                ..add(serializers.serialize(object.timeSlotWindow,
+                    specifiedType: const FullType(int)));
+        }
         if (object.companyNavigation != null) {
             result
                 ..add(r'companyNavigation')
@@ -233,6 +258,12 @@ class _$KilerRegionSerializer implements StructuredSerializer<KilerRegion> {
                 ..add(r'regionProduct')
                 ..add(serializers.serialize(object.regionProduct,
                     specifiedType: const FullType(BuiltList, [FullType(KilerRegionProduct)])));
+        }
+        if (object.regionRegionsCampaignCampaigns != null) {
+            result
+                ..add(r'regionRegionsCampaignCampaigns')
+                ..add(serializers.serialize(object.regionRegionsCampaignCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerRegionRegionsCampaignCampaigns)])));
         }
         if (object.regionRegionsNeighborhoodNeighborhoods != null) {
             result
@@ -318,6 +349,14 @@ class _$KilerRegionSerializer implements StructuredSerializer<KilerRegion> {
                     result.company = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     break;
+                case r'bufferTime':
+                    result.bufferTime = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'timeSlotWindow':
+                    result.timeSlotWindow = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
                 case r'companyNavigation':
                     result.companyNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerCompany)) as KilerCompany);
@@ -337,6 +376,10 @@ class _$KilerRegionSerializer implements StructuredSerializer<KilerRegion> {
                 case r'regionProduct':
                     result.regionProduct.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerRegionProduct)])) as BuiltList<KilerRegionProduct>);
+                    break;
+                case r'regionRegionsCampaignCampaigns':
+                    result.regionRegionsCampaignCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerRegionRegionsCampaignCampaigns)])) as BuiltList<KilerRegionRegionsCampaignCampaigns>);
                     break;
                 case r'regionRegionsNeighborhoodNeighborhoods':
                     result.regionRegionsNeighborhoodNeighborhoods.replace(serializers.deserialize(value,

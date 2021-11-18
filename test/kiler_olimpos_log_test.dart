@@ -34,6 +34,16 @@ void main() {
       // TODO
     });
 
+    // bool sent
+    test('to test the property `sent`', () async {
+      // TODO
+    });
+
+    // String message
+    test('to test the property `message`', () async {
+      // TODO
+    });
+
     // int optimisticLockField
     test('to test the property `optimisticLockField`', () async {
       // TODO

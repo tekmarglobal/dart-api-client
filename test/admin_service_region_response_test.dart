@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/admin_service_region_response.dart';
 import 'package:test/test.dart';
 
 // tests for AdminServiceRegionResponse
 void main() {
-  final instance = AdminServiceRegionResponse();
+  final instance = AdminServiceRegionResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(AdminServiceRegionResponse, () {
     // int id

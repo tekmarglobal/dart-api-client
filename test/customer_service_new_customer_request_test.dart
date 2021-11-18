@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/customer_service_new_customer_request.dart';
 import 'package:test/test.dart';
 
 // tests for CustomerServiceNewCustomerRequest
 void main() {
-  final instance = CustomerServiceNewCustomerRequest();
+  final instance = CustomerServiceNewCustomerRequestBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CustomerServiceNewCustomerRequest, () {
     // String name

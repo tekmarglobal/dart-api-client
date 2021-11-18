@@ -20,7 +20,7 @@ import 'package:built_value/serializer.dart';
         ///
         /// 
         Future<Response<void>> apiAffiliateDetailUrllinkGet(
-            String urllink, { 
+            String urlLink, { 
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -29,7 +29,7 @@ import 'package:built_value/serializer.dart';
             ProgressCallback onReceiveProgress,
             }) async {
             final _requestOpt = RequestOptions(
-            path: r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urllink' '}', urllink.toString()),
+            path: r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urlLink' '}', urlLink.toString()),
             method: 'GET',
             headers: <String, dynamic>{
             ...?headers,
@@ -79,7 +79,7 @@ import 'package:built_value/serializer.dart';
             dynamic _bodyData;
 
             final _response = await _dio.request<dynamic>(
-            r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urllink' '}', urllink.toString()),
+            r'/api/Affiliate/detail/{urllink}'.replaceAll('{' r'urlLink' '}', urlLink.toString()),
             data: _bodyData,
             options: _request,
             cancelToken: cancelToken,

@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_operating_system.dart';
 import 'package:test/test.dart';
 
 // tests for KilerOperatingSystem
 void main() {
-  final instance = KilerOperatingSystem();
+  final instance = KilerOperatingSystemBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerOperatingSystem, () {
     // int oid

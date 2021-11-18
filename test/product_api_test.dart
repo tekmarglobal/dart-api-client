@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/product_api.dart';
 import 'package:test/test.dart';
@@ -8,42 +15,52 @@ void main() {
   final instance = Openapi().getProductApi();
 
   group(ProductApi, () {
-    //Future<FavoriteListResponseRestResult> apiProductAddToFavoriteListPost({ FavoriteRequest favoriteRequest }) async
+    //Future<RestResultOfProductServiceFavoriteListResponse> apiProductAddToFavoriteListPost({ ProductServiceFavoriteRequest body }) async
     test('test apiProductAddToFavoriteListPost', () async {
       // TODO
     });
 
-    //Future<FavoriteListResponseRestResult> apiProductDeleteFavoriteDelete({ FavoriteRequest favoriteRequest }) async
+    //Future<RestResultOfProductServiceFavoriteListResponse> apiProductDeleteFavoriteDelete({ ProductServiceFavoriteRequest body }) async
     test('test apiProductDeleteFavoriteDelete', () async {
       // TODO
     });
 
-    //Future<FavoriteListResponseRestResult> apiProductGetFavoriteListPost() async
+    //Future<RestResultOfProductServiceFavoriteListResponse> apiProductGetFavoriteListPost() async
     test('test apiProductGetFavoriteListPost', () async {
       // TODO
     });
 
-    //Future apiProductInsertimagesPost({ int i, String shopid, String client }) async
-    test('test apiProductInsertimagesPost', () async {
-      // TODO
-    });
-
-    //Future<RProductRestResult> apiProductPost({ ProductRequest productRequest }) async
+    //Future<RestResultOfProductServiceRProduct> apiProductPost({ ProductServiceProductRequest body }) async
     test('test apiProductPost', () async {
       // TODO
     });
 
-    //Future<RProductListRestResult> apiProductProductListPost() async
+    //Future<RestResultOfListOfProductServiceRProduct> apiProductProductAlternativesPost({ ProductServiceProductAlternativesRequest body }) async
+    test('test apiProductProductAlternativesPost', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfProductServiceRProduct> apiProductProductListPost() async
     test('test apiProductProductListPost', () async {
       // TODO
     });
 
-    //Future<RProductListRestResult> apiProductProductSearchPost({ SearchProductRequest searchProductRequest }) async
+    //Future<RestResultOfListOfProductServiceRProduct> apiProductProductSearchPost({ ProductServiceSearchProductRequest body }) async
     test('test apiProductProductSearchPost', () async {
       // TODO
     });
 
-    //Future apiProductUpdateProductFromOlimposPost({ int region }) async
+    //Future<RestResultOfProductServiceRecommendProductResponse> apiProductRecommendProductPost({ ProductServiceRecommendProductRequest body }) async
+    test('test apiProductRecommendProductPost', () async {
+      // TODO
+    });
+
+    //Future<String> apiProductUpdateProductFromOlimposGet({ String regionErpId, String productErpId, bool log }) async
+    test('test apiProductUpdateProductFromOlimposGet', () async {
+      // TODO
+    });
+
+    //Future<String> apiProductUpdateProductFromOlimposPost({ String regionErpId, String productErpId, bool log }) async
     test('test apiProductUpdateProductFromOlimposPost', () async {
       // TODO
     });

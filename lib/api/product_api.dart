@@ -10,11 +10,14 @@ import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
 
     import 'package:openapi/model/product_service_favorite_request.dart';
+import 'package:openapi/model/product_service_product_alternatives_request.dart';
 import 'package:openapi/model/product_service_product_request.dart';
+import 'package:openapi/model/product_service_recommend_product_request.dart';
 import 'package:openapi/model/product_service_search_product_request.dart';
 import 'package:openapi/model/rest_result_of_list_of_product_service_r_product.dart';
 import 'package:openapi/model/rest_result_of_product_service_favorite_list_response.dart';
 import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
+import 'package:openapi/model/rest_result_of_product_service_recommend_product_response.dart';
 
     class ProductApi {
     final Dio _dio;
@@ -400,6 +403,102 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         /// 
         ///
         /// 
+        Future<Response<RestResultOfListOfProductServiceRProduct>> apiProductProductAlternativesPost({ 
+            ProductServiceProductAlternativesRequest body,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Product/ProductAlternatives',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+                'text/json',
+                'application/_*+json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+                        const _type = FullType(ProductServiceProductAlternativesRequest);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Product/ProductAlternatives',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfListOfProductServiceRProduct);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfListOfProductServiceRProduct;
+
+                return Response<RestResultOfListOfProductServiceRProduct>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
         Future<Response<RestResultOfListOfProductServiceRProduct>> apiProductProductListPost({ 
             CancelToken cancelToken,
             Map<String, dynamic> headers,
@@ -584,10 +683,8 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
         /// 
         ///
         /// 
-        Future<Response<String>> apiProductUpdateProductFromOlimposGet({ 
-            String regionErpId,
-            String productErpId,
-            bool log,
+        Future<Response<RestResultOfProductServiceRecommendProductResponse>> apiProductRecommendProductPost({ 
+            ProductServiceRecommendProductRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -596,113 +693,11 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             ProgressCallback onReceiveProgress,
             }) async {
             final _requestOpt = RequestOptions(
-            path: r'/api/Product/UpdateProductFromOlimpos',
-            method: 'GET',
-            headers: <String, dynamic>{
-            ...?headers,
-            },
-                queryParameters: <String, dynamic>{
-                if (regionErpId != null) r'regionErpId': regionErpId,
-                if (productErpId != null) r'productErpId': productErpId,
-                if (log != null) r'log': log,
-                },
-            extra: <String, dynamic>{
-            'secure': <Map<String, String>>[
-            {
-                'type': 'apiKey',
-                'name': 'Bearer',
-                    'keyName': 'Authorization',
-                    'where': 'header',
-                },
-                ],
-            ...?extra,
-            },
-            validateStatus: validateStatus,
-            contentType: [
-                'application/json',
-            ].first,
-            cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-            );
-
-            final _request = Options(
-            method: 'GET',
-            headers: <String, dynamic>{
-            ...?headers,
-            },
-            extra: <String, dynamic>{
-            'secure': <Map<String, String>>[
-            {
-                'type': 'apiKey',
-                'name': 'Bearer',
-                    'keyName': 'Authorization',
-                    'where': 'header',
-                },
-                ],
-            ...?extra,
-            },
-            validateStatus: validateStatus,
-            contentType: [
-                'application/json',
-            ].first,
-            );
-
-            dynamic _bodyData;
-
-            final _response = await _dio.request<dynamic>(
-            r'/api/Product/UpdateProductFromOlimpos',
-            data: _bodyData,
-            options: _request,
-                queryParameters: <String, dynamic>{
-                if (regionErpId != null) r'regionErpId': regionErpId,
-                if (productErpId != null) r'productErpId': productErpId,
-                if (log != null) r'log': log,
-                },
-            cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-            );
-
-                            final String _responseData = _response.data as String;
-
-                return Response<String>(
-                data: _responseData,
-                headers: _response.headers,
-                isRedirect: _response.isRedirect,
-                requestOptions: _requestOpt,
-                redirects: _response.redirects,
-                statusCode: _response.statusCode,
-                statusMessage: _response.statusMessage,
-                extra: _response.extra,
-                );
-            }
-
-        /// 
-        ///
-        /// 
-        Future<Response<String>> apiProductUpdateProductFromOlimposPost({ 
-            String regionErpId,
-            String productErpId,
-            bool log,
-            CancelToken cancelToken,
-            Map<String, dynamic> headers,
-            Map<String, dynamic> extra,
-            ValidateStatus validateStatus,
-            ProgressCallback onSendProgress,
-            ProgressCallback onReceiveProgress,
-            }) async {
-            final _requestOpt = RequestOptions(
-            path: r'/api/Product/UpdateProductFromOlimpos',
+            path: r'/api/Product/RecommendProduct',
             method: 'POST',
             headers: <String, dynamic>{
             ...?headers,
             },
-                queryParameters: <String, dynamic>{
-                if (regionErpId != null) r'regionErpId': regionErpId,
-                if (productErpId != null) r'productErpId': productErpId,
-                if (log != null) r'log': log,
-                },
             extra: <String, dynamic>{
             'secure': <Map<String, String>>[
             {
@@ -717,6 +712,8 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             validateStatus: validateStatus,
             contentType: [
                 'application/json',
+                'text/json',
+                'application/_*+json',
             ].first,
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
@@ -742,28 +739,32 @@ import 'package:openapi/model/rest_result_of_product_service_r_product.dart';
             validateStatus: validateStatus,
             contentType: [
                 'application/json',
+                'text/json',
+                'application/_*+json',
             ].first,
             );
 
             dynamic _bodyData;
 
+                        const _type = FullType(ProductServiceRecommendProductRequest);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
+
             final _response = await _dio.request<dynamic>(
-            r'/api/Product/UpdateProductFromOlimpos',
+            r'/api/Product/RecommendProduct',
             data: _bodyData,
             options: _request,
-                queryParameters: <String, dynamic>{
-                if (regionErpId != null) r'regionErpId': regionErpId,
-                if (productErpId != null) r'productErpId': productErpId,
-                if (log != null) r'log': log,
-                },
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,
             );
 
-                            final String _responseData = _response.data as String;
+                            const _responseType = FullType(RestResultOfProductServiceRecommendProductResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfProductServiceRecommendProductResponse;
 
-                return Response<String>(
+                return Response<RestResultOfProductServiceRecommendProductResponse>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

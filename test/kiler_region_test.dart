@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_region.dart';
 import 'package:test/test.dart';
 
 // tests for KilerRegion
 void main() {
-  final instance = KilerRegion();
+  final instance = KilerRegionBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerRegion, () {
     // int oid
@@ -68,6 +76,16 @@ void main() {
 
     // int company
     test('to test the property `company`', () async {
+      // TODO
+    });
+
+    // int bufferTime
+    test('to test the property `bufferTime`', () async {
+      // TODO
+    });
+
+    // int timeSlotWindow
+    test('to test the property `timeSlotWindow`', () async {
       // TODO
     });
 

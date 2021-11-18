@@ -37,9 +37,12 @@ Name | Type | Description | Notes
 **cart** | [**BuiltList<KilerCart>**](KilerCart.md) |  | [optional] 
 **customerFavoriteList** | [**BuiltList<KilerCustomerFavoriteList>**](KilerCustomerFavoriteList.md) |  | [optional] 
 **customerLoginAttempt** | [**BuiltList<KilerCustomerLoginAttempt>**](KilerCustomerLoginAttempt.md) |  | [optional] 
+**customerMessage** | [**BuiltList<KilerCustomerMessage>**](KilerCustomerMessage.md) |  | [optional] 
+**customerValidCustomersCampaignCampaigns** | [**BuiltList<KilerCustomerValidCustomersCampaignCampaigns>**](KilerCustomerValidCustomersCampaignCampaigns.md) |  | [optional] 
 **deviceLogin** | [**BuiltList<KilerDeviceLogin>**](KilerDeviceLogin.md) |  | [optional] 
 **order** | [**BuiltList<KilerOrder>**](KilerOrder.md) |  | [optional] 
 **payment** | [**BuiltList<KilerPayment>**](KilerPayment.md) |  | [optional] 
+**productRecommendation** | [**BuiltList<KilerProductRecommendation>**](KilerProductRecommendation.md) |  | [optional] 
 **smsVerification** | [**BuiltList<KilerSmsVerification>**](KilerSmsVerification.md) |  | [optional] 
 **ticket** | [**BuiltList<KilerTicket>**](KilerTicket.md) |  | [optional] 
 

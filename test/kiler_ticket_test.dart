@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_ticket.dart';
 import 'package:test/test.dart';
 
 // tests for KilerTicket
 void main() {
-  final instance = KilerTicket();
+  final instance = KilerTicketBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerTicket, () {
     // int oid

@@ -7,6 +7,7 @@
 
 import 'package:openapi/model/cart_service_r_cart_products.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:openapi/model/cart_service_campaign_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -45,6 +46,14 @@ abstract class CartServiceCartResponse implements Built<CartServiceCartResponse,
     @nullable
     @BuiltValueField(wireName: r'estimatedFee')
     double get estimatedFee;
+
+    @nullable
+    @BuiltValueField(wireName: r'appliedCampaigns')
+    BuiltList<CartServiceCampaignResponse> get appliedCampaigns;
+
+    @nullable
+    @BuiltValueField(wireName: r'campaignTotalDiscount')
+    double get campaignTotalDiscount;
 
     @nullable
     @BuiltValueField(wireName: r'cartProducts')
@@ -123,6 +132,18 @@ class _$CartServiceCartResponseSerializer implements StructuredSerializer<CartSe
                 ..add(serializers.serialize(object.estimatedFee,
                     specifiedType: const FullType(double)));
         }
+        if (object.appliedCampaigns != null) {
+            result
+                ..add(r'appliedCampaigns')
+                ..add(serializers.serialize(object.appliedCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(CartServiceCampaignResponse)])));
+        }
+        if (object.campaignTotalDiscount != null) {
+            result
+                ..add(r'campaignTotalDiscount')
+                ..add(serializers.serialize(object.campaignTotalDiscount,
+                    specifiedType: const FullType(double)));
+        }
         if (object.cartProducts != null) {
             result
                 ..add(r'cartProducts')
@@ -179,6 +200,14 @@ class _$CartServiceCartResponseSerializer implements StructuredSerializer<CartSe
                     break;
                 case r'estimatedFee':
                     result.estimatedFee = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    break;
+                case r'appliedCampaigns':
+                    result.appliedCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(CartServiceCampaignResponse)])) as BuiltList<CartServiceCampaignResponse>);
+                    break;
+                case r'campaignTotalDiscount':
+                    result.campaignTotalDiscount = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
                     break;
                 case r'cartProducts':

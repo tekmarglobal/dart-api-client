@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **deliveryTimeStart** | [**DateTime**](DateTime.md) |  | [optional] 
 **deliveryTimeEnd** | [**DateTime**](DateTime.md) |  | [optional] 
 **region** | **int** |  | [optional] 
+**appliedCampaigns** | [**BuiltList<OrderServiceCampaignResponse>**](OrderServiceCampaignResponse.md) |  | [optional] 
+**campaignTotalDiscount** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

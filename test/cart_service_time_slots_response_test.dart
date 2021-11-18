@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/cart_service_time_slots_response.dart';
 import 'package:test/test.dart';
 
 // tests for CartServiceTimeSlotsResponse
 void main() {
-  final instance = CartServiceTimeSlotsResponse();
+  final instance = CartServiceTimeSlotsResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CartServiceTimeSlotsResponse, () {
     // int id

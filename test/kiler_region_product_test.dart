@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_region_product.dart';
 import 'package:test/test.dart';
 
 // tests for KilerRegionProduct
 void main() {
-  final instance = KilerRegionProduct();
+  final instance = KilerRegionProductBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerRegionProduct, () {
     // int oid

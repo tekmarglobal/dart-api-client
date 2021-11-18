@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/payment_api.dart';
 import 'package:test/test.dart';
@@ -8,18 +15,23 @@ void main() {
   final instance = Openapi().getPaymentApi();
 
   group(PaymentApi, () {
-    //Future apiPaymentCardSuccessPost() async
-    test('test apiPaymentCardSuccessPost', () async {
-      // TODO
-    });
-
-    //Future<PaymentResponseRestResult> apiPaymentCreatePaymentPost({ PaymentRequest paymentRequest }) async
+    //Future<RestResultOfPaymentServicePaymentResponse> apiPaymentCreatePaymentPost({ PaymentServicePaymentRequest body }) async
     test('test apiPaymentCreatePaymentPost', () async {
       // TODO
     });
 
-    //Future<PaymentTypeResponseRestResult> apiPaymentGetPaymentTypesPost() async
+    //Future<RestResultOfPaymentServicePaymentTypeResponse> apiPaymentGetPaymentTypesPost() async
     test('test apiPaymentGetPaymentTypesPost', () async {
+      // TODO
+    });
+
+    //Future apiPaymentPaymentFailPost() async
+    test('test apiPaymentPaymentFailPost', () async {
+      // TODO
+    });
+
+    //Future apiPaymentPaymentSuccessPost() async
+    test('test apiPaymentPaymentSuccessPost', () async {
       // TODO
     });
 

@@ -402,7 +402,6 @@ import 'package:built_value/serializer.dart';
         ///
         /// 
         Future<Response<void>> apiCatalogImportCategoriesFromOlimposPost({ 
-            int region,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -416,9 +415,6 @@ import 'package:built_value/serializer.dart';
             headers: <String, dynamic>{
             ...?headers,
             },
-                queryParameters: <String, dynamic>{
-                if (region != null) r'region': region,
-                },
             extra: <String, dynamic>{
             'secure': <Map<String, String>>[
             {
@@ -467,9 +463,6 @@ import 'package:built_value/serializer.dart';
             r'/api/Catalog/ImportCategoriesFromOlimpos',
             data: _bodyData,
             options: _request,
-                queryParameters: <String, dynamic>{
-                if (region != null) r'region': region,
-                },
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
             onReceiveProgress: onReceiveProgress,

@@ -37,9 +37,17 @@ class _$OrderServiceOrders extends OrderServiceOrders {
   @override
   final String paymentType;
   @override
+  final DateTime deliveryTimeStart;
+  @override
+  final DateTime deliveryTimeEnd;
+  @override
   final double fee;
   @override
   final int region;
+  @override
+  final DateTime editUntil;
+  @override
+  final OrderServiceOrderStatus status;
 
   factory _$OrderServiceOrders(
           [void Function(OrderServiceOrdersBuilder) updates]) =>
@@ -60,8 +68,12 @@ class _$OrderServiceOrders extends OrderServiceOrders {
       this.cityName,
       this.countyName,
       this.paymentType,
+      this.deliveryTimeStart,
+      this.deliveryTimeEnd,
       this.fee,
-      this.region})
+      this.region,
+      this.editUntil,
+      this.status})
       : super._();
 
   @override
@@ -91,8 +103,12 @@ class _$OrderServiceOrders extends OrderServiceOrders {
         cityName == other.cityName &&
         countyName == other.countyName &&
         paymentType == other.paymentType &&
+        deliveryTimeStart == other.deliveryTimeStart &&
+        deliveryTimeEnd == other.deliveryTimeEnd &&
         fee == other.fee &&
-        region == other.region;
+        region == other.region &&
+        editUntil == other.editUntil &&
+        status == other.status;
   }
 
   @override
@@ -113,27 +129,38 @@ class _$OrderServiceOrders extends OrderServiceOrders {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    orderId
+                                                                    $jc(
+                                                                        $jc(
+                                                                            $jc(
+                                                                                $jc(
+                                                                                    0,
+                                                                                    orderId
+                                                                                        .hashCode),
+                                                                                orderDate
+                                                                                    .hashCode),
+                                                                            deliveryAddress
+                                                                                .hashCode),
+                                                                        billingAddress
+                                                                            .hashCode),
+                                                                    productTotal
                                                                         .hashCode),
-                                                                orderDate
+                                                                orderTotal
                                                                     .hashCode),
-                                                            deliveryAddress
+                                                            productDiscountsTotal
                                                                 .hashCode),
-                                                        billingAddress
-                                                            .hashCode),
-                                                    productTotal.hashCode),
-                                                orderTotal.hashCode),
-                                            productDiscountsTotal.hashCode),
-                                        bagAmount.hashCode),
-                                    bagTotal.hashCode),
-                                orderNote.hashCode),
-                            active.hashCode),
-                        cityName.hashCode),
-                    countyName.hashCode),
-                paymentType.hashCode),
-            fee.hashCode),
-        region.hashCode));
+                                                        bagAmount.hashCode),
+                                                    bagTotal.hashCode),
+                                                orderNote.hashCode),
+                                            active.hashCode),
+                                        cityName.hashCode),
+                                    countyName.hashCode),
+                                paymentType.hashCode),
+                            deliveryTimeStart.hashCode),
+                        deliveryTimeEnd.hashCode),
+                    fee.hashCode),
+                region.hashCode),
+            editUntil.hashCode),
+        status.hashCode));
   }
 
   @override
@@ -153,8 +180,12 @@ class _$OrderServiceOrders extends OrderServiceOrders {
           ..add('cityName', cityName)
           ..add('countyName', countyName)
           ..add('paymentType', paymentType)
+          ..add('deliveryTimeStart', deliveryTimeStart)
+          ..add('deliveryTimeEnd', deliveryTimeEnd)
           ..add('fee', fee)
-          ..add('region', region))
+          ..add('region', region)
+          ..add('editUntil', editUntil)
+          ..add('status', status))
         .toString();
   }
 }
@@ -222,6 +253,16 @@ class OrderServiceOrdersBuilder
   String get paymentType => _$this._paymentType;
   set paymentType(String paymentType) => _$this._paymentType = paymentType;
 
+  DateTime _deliveryTimeStart;
+  DateTime get deliveryTimeStart => _$this._deliveryTimeStart;
+  set deliveryTimeStart(DateTime deliveryTimeStart) =>
+      _$this._deliveryTimeStart = deliveryTimeStart;
+
+  DateTime _deliveryTimeEnd;
+  DateTime get deliveryTimeEnd => _$this._deliveryTimeEnd;
+  set deliveryTimeEnd(DateTime deliveryTimeEnd) =>
+      _$this._deliveryTimeEnd = deliveryTimeEnd;
+
   double _fee;
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
@@ -229,6 +270,15 @@ class OrderServiceOrdersBuilder
   int _region;
   int get region => _$this._region;
   set region(int region) => _$this._region = region;
+
+  DateTime _editUntil;
+  DateTime get editUntil => _$this._editUntil;
+  set editUntil(DateTime editUntil) => _$this._editUntil = editUntil;
+
+  OrderServiceOrderStatusBuilder _status;
+  OrderServiceOrderStatusBuilder get status =>
+      _$this._status ??= new OrderServiceOrderStatusBuilder();
+  set status(OrderServiceOrderStatusBuilder status) => _$this._status = status;
 
   OrderServiceOrdersBuilder() {
     OrderServiceOrders._initializeBuilder(this);
@@ -251,8 +301,12 @@ class OrderServiceOrdersBuilder
       _cityName = $v.cityName;
       _countyName = $v.countyName;
       _paymentType = $v.paymentType;
+      _deliveryTimeStart = $v.deliveryTimeStart;
+      _deliveryTimeEnd = $v.deliveryTimeEnd;
       _fee = $v.fee;
       _region = $v.region;
+      _editUntil = $v.editUntil;
+      _status = $v.status?.toBuilder();
       _$v = null;
     }
     return this;
@@ -271,24 +325,41 @@ class OrderServiceOrdersBuilder
 
   @override
   _$OrderServiceOrders build() {
-    final _$result = _$v ??
-        new _$OrderServiceOrders._(
-            orderId: orderId,
-            orderDate: orderDate,
-            deliveryAddress: deliveryAddress,
-            billingAddress: billingAddress,
-            productTotal: productTotal,
-            orderTotal: orderTotal,
-            productDiscountsTotal: productDiscountsTotal,
-            bagAmount: bagAmount,
-            bagTotal: bagTotal,
-            orderNote: orderNote,
-            active: active,
-            cityName: cityName,
-            countyName: countyName,
-            paymentType: paymentType,
-            fee: fee,
-            region: region);
+    _$OrderServiceOrders _$result;
+    try {
+      _$result = _$v ??
+          new _$OrderServiceOrders._(
+              orderId: orderId,
+              orderDate: orderDate,
+              deliveryAddress: deliveryAddress,
+              billingAddress: billingAddress,
+              productTotal: productTotal,
+              orderTotal: orderTotal,
+              productDiscountsTotal: productDiscountsTotal,
+              bagAmount: bagAmount,
+              bagTotal: bagTotal,
+              orderNote: orderNote,
+              active: active,
+              cityName: cityName,
+              countyName: countyName,
+              paymentType: paymentType,
+              deliveryTimeStart: deliveryTimeStart,
+              deliveryTimeEnd: deliveryTimeEnd,
+              fee: fee,
+              region: region,
+              editUntil: editUntil,
+              status: _status?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'status';
+        _status?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'OrderServiceOrders', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

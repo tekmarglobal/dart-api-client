@@ -9,12 +9,104 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCrmFindCustomerIVRGet**](CrmApi.md#apiCrmFindCustomerIVRGet) | **get** /api/Crm/FindCustomerIVR | 
-[**apiCrmFindOrderIVRGet**](CrmApi.md#apiCrmFindOrderIVRGet) | **get** /api/Crm/FindOrderIVR | 
+[**apiCrmCallPost**](CrmApi.md#apicrmcallpost) | **post** /api/Crm/Call | 
+[**apiCrmCreateTicketPost**](CrmApi.md#apicrmcreateticketpost) | **post** /api/Crm/CreateTicket | 
+[**apiCrmFindCustomerIVRGet**](CrmApi.md#apicrmfindcustomerivrget) | **get** /api/Crm/FindCustomerIVR | 
+[**apiCrmFindOrderIVRGet**](CrmApi.md#apicrmfindorderivrget) | **get** /api/Crm/FindOrderIVR | 
 
+
+# **apiCrmCallPost**
+> bool apiCrmCallPost(body)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CrmApi();
+var body = new CrmServiceCallRequest(); // CrmServiceCallRequest | 
+
+try { 
+    var result = api_instance.apiCrmCallPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling CrmApi->apiCrmCallPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CrmServiceCallRequest**](CrmServiceCallRequest.md)|  | [optional] 
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCrmCreateTicketPost**
+> RestResultOfCrmServiceTicketResponse apiCrmCreateTicketPost(body)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CrmApi();
+var body = new CrmServiceTicketRequest(); // CrmServiceTicketRequest | 
+
+try { 
+    var result = api_instance.apiCrmCreateTicketPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling CrmApi->apiCrmCreateTicketPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CrmServiceTicketRequest**](CrmServiceTicketRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfCrmServiceTicketResponse**](RestResultOfCrmServiceTicketResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCrmFindCustomerIVRGet**
-> String apiCrmFindCustomerIVRGet(phoneNumber)
+> String apiCrmFindCustomerIVRGet(phoneNumber, getName)
 
 
 
@@ -28,9 +120,10 @@ import 'package:openapi/api.dart';
 
 var api_instance = new CrmApi();
 var phoneNumber = phoneNumber_example; // String | 
+var getName = true; // bool | 
 
 try { 
-    var result = api_instance.apiCrmFindCustomerIVRGet(phoneNumber);
+    var result = api_instance.apiCrmFindCustomerIVRGet(phoneNumber, getName);
     print(result);
 } catch (e) {
     print('Exception when calling CrmApi->apiCrmFindCustomerIVRGet: $e\n');
@@ -42,6 +135,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phoneNumber** | **String**|  | [optional] 
+ **getName** | **bool**|  | [optional] [default to false]
 
 ### Return type
 

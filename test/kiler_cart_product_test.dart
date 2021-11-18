@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_cart_product.dart';
 import 'package:test/test.dart';
 
 // tests for KilerCartProduct
 void main() {
-  final instance = KilerCartProduct();
+  final instance = KilerCartProductBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerCartProduct, () {
     // int oid

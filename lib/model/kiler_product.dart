@@ -5,15 +5,18 @@
 
 // ignore_for_file: unused_import
 
-import 'package:openapi/model/kiler_region_product.dart';
-import 'package:openapi/model/kiler_customer_favorite_list.dart';
 import 'package:openapi/model/kiler_order_product.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_product_tag.dart';
 import 'package:openapi/model/kiler_supplier.dart';
 import 'package:openapi/model/kiler_product_image.dart';
-import 'package:openapi/model/kiler_configuration.dart';
+import 'package:openapi/model/kiler_product_products_campaign_campaigns.dart';
 import 'package:openapi/model/kiler_brand.dart';
+import 'package:openapi/model/kiler_region_product.dart';
+import 'package:openapi/model/kiler_customer_favorite_list.dart';
+import 'package:openapi/model/kiler_product_alternatives.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:openapi/model/kiler_product_products_product_alternatives_product_alternatives0eac5f03.dart';
+import 'package:openapi/model/kiler_configuration.dart';
 import 'package:openapi/model/kiler_category_product.dart';
 import 'package:openapi/model/kiler_product_import_detail.dart';
 import 'package:built_value/built_value.dart';
@@ -152,12 +155,28 @@ abstract class KilerProduct implements Built<KilerProduct, KilerProductBuilder> 
     BuiltList<KilerOrderProduct> get orderProduct;
 
     @nullable
+    @BuiltValueField(wireName: r'productAlternativesAlternativeProductNavigation')
+    BuiltList<KilerProductAlternatives> get productAlternativesAlternativeProductNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'productAlternativesProductNavigation')
+    BuiltList<KilerProductAlternatives> get productAlternativesProductNavigation;
+
+    @nullable
     @BuiltValueField(wireName: r'productImage')
     BuiltList<KilerProductImage> get productImage;
 
     @nullable
     @BuiltValueField(wireName: r'productImportDetail')
     BuiltList<KilerProductImportDetail> get productImportDetail;
+
+    @nullable
+    @BuiltValueField(wireName: r'productProductsCampaignCampaigns')
+    BuiltList<KilerProductProductsCampaignCampaigns> get productProductsCampaignCampaigns;
+
+    @nullable
+    @BuiltValueField(wireName: r'productProductsProductAlternativesProductAlternatives0eac5f03')
+    BuiltList<KilerProductProductsProductAlternativesProductAlternatives0eac5f03> get productProductsProductAlternativesProductAlternatives0eac5f03;
 
     @nullable
     @BuiltValueField(wireName: r'regionProduct')
@@ -376,6 +395,18 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 ..add(serializers.serialize(object.orderProduct,
                     specifiedType: const FullType(BuiltList, [FullType(KilerOrderProduct)])));
         }
+        if (object.productAlternativesAlternativeProductNavigation != null) {
+            result
+                ..add(r'productAlternativesAlternativeProductNavigation')
+                ..add(serializers.serialize(object.productAlternativesAlternativeProductNavigation,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerProductAlternatives)])));
+        }
+        if (object.productAlternativesProductNavigation != null) {
+            result
+                ..add(r'productAlternativesProductNavigation')
+                ..add(serializers.serialize(object.productAlternativesProductNavigation,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerProductAlternatives)])));
+        }
         if (object.productImage != null) {
             result
                 ..add(r'productImage')
@@ -387,6 +418,18 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 ..add(r'productImportDetail')
                 ..add(serializers.serialize(object.productImportDetail,
                     specifiedType: const FullType(BuiltList, [FullType(KilerProductImportDetail)])));
+        }
+        if (object.productProductsCampaignCampaigns != null) {
+            result
+                ..add(r'productProductsCampaignCampaigns')
+                ..add(serializers.serialize(object.productProductsCampaignCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerProductProductsCampaignCampaigns)])));
+        }
+        if (object.productProductsProductAlternativesProductAlternatives0eac5f03 != null) {
+            result
+                ..add(r'productProductsProductAlternativesProductAlternatives0eac5f03')
+                ..add(serializers.serialize(object.productProductsProductAlternativesProductAlternatives0eac5f03,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerProductProductsProductAlternativesProductAlternatives0eac5f03)])));
         }
         if (object.regionProduct != null) {
             result
@@ -536,6 +579,14 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                     result.orderProduct.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerOrderProduct)])) as BuiltList<KilerOrderProduct>);
                     break;
+                case r'productAlternativesAlternativeProductNavigation':
+                    result.productAlternativesAlternativeProductNavigation.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerProductAlternatives)])) as BuiltList<KilerProductAlternatives>);
+                    break;
+                case r'productAlternativesProductNavigation':
+                    result.productAlternativesProductNavigation.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerProductAlternatives)])) as BuiltList<KilerProductAlternatives>);
+                    break;
                 case r'productImage':
                     result.productImage.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerProductImage)])) as BuiltList<KilerProductImage>);
@@ -543,6 +594,14 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 case r'productImportDetail':
                     result.productImportDetail.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerProductImportDetail)])) as BuiltList<KilerProductImportDetail>);
+                    break;
+                case r'productProductsCampaignCampaigns':
+                    result.productProductsCampaignCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerProductProductsCampaignCampaigns)])) as BuiltList<KilerProductProductsCampaignCampaigns>);
+                    break;
+                case r'productProductsProductAlternativesProductAlternatives0eac5f03':
+                    result.productProductsProductAlternativesProductAlternatives0eac5f03.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerProductProductsProductAlternativesProductAlternatives0eac5f03)])) as BuiltList<KilerProductProductsProductAlternativesProductAlternatives0eac5f03>);
                     break;
                 case r'regionProduct':
                     result.regionProduct.replace(serializers.deserialize(value,

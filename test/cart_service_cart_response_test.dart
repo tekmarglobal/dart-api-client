@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/cart_service_cart_response.dart';
 import 'package:test/test.dart';
 
 // tests for CartServiceCartResponse
 void main() {
-  final instance = CartServiceCartResponse();
+  final instance = CartServiceCartResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CartServiceCartResponse, () {
     // int cartId

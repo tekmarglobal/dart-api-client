@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_category_import.dart';
 import 'package:test/test.dart';
 
 // tests for KilerCategoryImport
 void main() {
-  final instance = KilerCategoryImport();
+  final instance = KilerCategoryImportBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerCategoryImport, () {
     // int oid

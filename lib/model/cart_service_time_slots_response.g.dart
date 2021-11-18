@@ -19,6 +19,8 @@ class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
   @override
   final bool isFree;
   @override
+  final bool isAvailable;
+  @override
   final double fee;
 
   factory _$CartServiceTimeSlotsResponse(
@@ -26,7 +28,13 @@ class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
       (new CartServiceTimeSlotsResponseBuilder()..update(updates)).build();
 
   _$CartServiceTimeSlotsResponse._(
-      {this.id, this.start, this.end, this.quota, this.isFree, this.fee})
+      {this.id,
+      this.start,
+      this.end,
+      this.quota,
+      this.isFree,
+      this.isAvailable,
+      this.fee})
       : super._();
 
   @override
@@ -47,6 +55,7 @@ class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
         end == other.end &&
         quota == other.quota &&
         isFree == other.isFree &&
+        isAvailable == other.isAvailable &&
         fee == other.fee;
   }
 
@@ -54,9 +63,11 @@ class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc($jc(0, id.hashCode), start.hashCode), end.hashCode),
-                quota.hashCode),
-            isFree.hashCode),
+            $jc(
+                $jc($jc($jc($jc(0, id.hashCode), start.hashCode), end.hashCode),
+                    quota.hashCode),
+                isFree.hashCode),
+            isAvailable.hashCode),
         fee.hashCode));
   }
 
@@ -68,6 +79,7 @@ class _$CartServiceTimeSlotsResponse extends CartServiceTimeSlotsResponse {
           ..add('end', end)
           ..add('quota', quota)
           ..add('isFree', isFree)
+          ..add('isAvailable', isAvailable)
           ..add('fee', fee))
         .toString();
   }
@@ -99,6 +111,10 @@ class CartServiceTimeSlotsResponseBuilder
   bool get isFree => _$this._isFree;
   set isFree(bool isFree) => _$this._isFree = isFree;
 
+  bool _isAvailable;
+  bool get isAvailable => _$this._isAvailable;
+  set isAvailable(bool isAvailable) => _$this._isAvailable = isAvailable;
+
   double _fee;
   double get fee => _$this._fee;
   set fee(double fee) => _$this._fee = fee;
@@ -115,6 +131,7 @@ class CartServiceTimeSlotsResponseBuilder
       _end = $v.end;
       _quota = $v.quota;
       _isFree = $v.isFree;
+      _isAvailable = $v.isAvailable;
       _fee = $v.fee;
       _$v = null;
     }
@@ -141,6 +158,7 @@ class CartServiceTimeSlotsResponseBuilder
             end: end,
             quota: quota,
             isFree: isFree,
+            isAvailable: isAvailable,
             fee: fee);
     replace(_$result);
     return _$result;

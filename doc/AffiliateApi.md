@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **apiAffiliateDetailUrllinkGet**
-> apiAffiliateDetailUrllinkGet(urllink)
+> apiAffiliateDetailUrllinkGet(urlLink)
 
 
 
@@ -28,10 +28,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new AffiliateApi();
-var urllink = urllink_example; // String | 
+var urlLink = urlLink_example; // String | 
 
 try { 
-    api_instance.apiAffiliateDetailUrllinkGet(urllink);
+    api_instance.apiAffiliateDetailUrllinkGet(urlLink);
 } catch (e) {
     print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
 }
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urllink** | **String**|  | 
+ **urlLink** | **String**|  | 
 
 ### Return type
 

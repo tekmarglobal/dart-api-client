@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **menuName** | **String** |  | [optional] 
 **departmentNavigation** | [**KilerDepartment**](KilerDepartment.md) |  | [optional] 
 **parentNavigation** | [**KilerCategory**](KilerCategory.md) |  | [optional] 
+**categoryCategoriesCampaignCampaigns** | [**BuiltList<KilerCategoryCategoriesCampaignCampaigns>**](KilerCategoryCategoriesCampaignCampaigns.md) |  | [optional] 
 **categoryImportDetail** | [**BuiltList<KilerCategoryImportDetail>**](KilerCategoryImportDetail.md) |  | [optional] 
 **categoryProduct** | [**BuiltList<KilerCategoryProduct>**](KilerCategoryProduct.md) |  | [optional] 
 **configuration** | [**BuiltList<KilerConfiguration>**](KilerConfiguration.md) |  | [optional] 

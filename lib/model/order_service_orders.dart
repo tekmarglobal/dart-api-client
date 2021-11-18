@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_import
 
+import 'package:openapi/model/order_service_order_status.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -69,12 +70,28 @@ abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServ
     String get paymentType;
 
     @nullable
+    @BuiltValueField(wireName: r'deliveryTimeStart')
+    DateTime get deliveryTimeStart;
+
+    @nullable
+    @BuiltValueField(wireName: r'deliveryTimeEnd')
+    DateTime get deliveryTimeEnd;
+
+    @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
 
     @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
+
+    @nullable
+    @BuiltValueField(wireName: r'editUntil')
+    DateTime get editUntil;
+
+    @nullable
+    @BuiltValueField(wireName: r'status')
+    OrderServiceOrderStatus get status;
 
     OrderServiceOrders._();
 
@@ -181,6 +198,18 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                 ..add(serializers.serialize(object.paymentType,
                     specifiedType: const FullType(String)));
         }
+        if (object.deliveryTimeStart != null) {
+            result
+                ..add(r'deliveryTimeStart')
+                ..add(serializers.serialize(object.deliveryTimeStart,
+                    specifiedType: const FullType(DateTime)));
+        }
+        if (object.deliveryTimeEnd != null) {
+            result
+                ..add(r'deliveryTimeEnd')
+                ..add(serializers.serialize(object.deliveryTimeEnd,
+                    specifiedType: const FullType(DateTime)));
+        }
         if (object.fee != null) {
             result
                 ..add(r'fee')
@@ -192,6 +221,18 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                 ..add(r'region')
                 ..add(serializers.serialize(object.region,
                     specifiedType: const FullType(int)));
+        }
+        if (object.editUntil != null) {
+            result
+                ..add(r'editUntil')
+                ..add(serializers.serialize(object.editUntil,
+                    specifiedType: const FullType(DateTime)));
+        }
+        if (object.status != null) {
+            result
+                ..add(r'status')
+                ..add(serializers.serialize(object.status,
+                    specifiedType: const FullType(OrderServiceOrderStatus)));
         }
         return result;
     }
@@ -263,6 +304,14 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     result.paymentType = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
+                case r'deliveryTimeStart':
+                    result.deliveryTimeStart = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'deliveryTimeEnd':
+                    result.deliveryTimeEnd = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
                 case r'fee':
                     result.fee = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
@@ -270,6 +319,14 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                 case r'region':
                     result.region = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'editUntil':
+                    result.editUntil = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'status':
+                    result.status.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(OrderServiceOrderStatus)) as OrderServiceOrderStatus);
                     break;
             }
         }

@@ -45,6 +45,8 @@ class _$KilerCart extends KilerCart {
   @override
   final KilerRegion regionNavigation;
   @override
+  final BuiltList<KilerCartCampaign> cartCampaign;
+  @override
   final BuiltList<KilerCartProduct> cartProduct;
   @override
   final BuiltList<KilerOrder> order;
@@ -71,6 +73,7 @@ class _$KilerCart extends KilerCart {
       this.createdFromNavigation,
       this.customerNavigation,
       this.regionNavigation,
+      this.cartCampaign,
       this.cartProduct,
       this.order})
       : super._();
@@ -104,6 +107,7 @@ class _$KilerCart extends KilerCart {
         createdFromNavigation == other.createdFromNavigation &&
         customerNavigation == other.customerNavigation &&
         regionNavigation == other.regionNavigation &&
+        cartCampaign == other.cartCampaign &&
         cartProduct == other.cartProduct &&
         order == other.order;
   }
@@ -128,33 +132,24 @@ class _$KilerCart extends KilerCart {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                $jc(
-                                                                                    0,
-                                                                                    oid
-                                                                                        .hashCode),
-                                                                                customer
-                                                                                    .hashCode),
-                                                                            region
-                                                                                .hashCode),
-                                                                        cartTotal
-                                                                            .hashCode),
-                                                                    createdFrom
-                                                                        .hashCode),
-                                                                productDiscountsTotal
-                                                                    .hashCode),
-                                                            note.hashCode),
-                                                        bagAmount.hashCode),
-                                                    bagTotal.hashCode),
-                                                active.hashCode),
-                                            deleted.hashCode),
-                                        optimisticLockField.hashCode),
-                                    estimatedFee.hashCode),
-                                dateDeleted.hashCode),
-                            dateCreated.hashCode),
-                        createdFromNavigation.hashCode),
-                    customerNavigation.hashCode),
-                regionNavigation.hashCode),
+                                                                            $jc($jc($jc(0, oid.hashCode), customer.hashCode),
+                                                                                region.hashCode),
+                                                                            cartTotal.hashCode),
+                                                                        createdFrom.hashCode),
+                                                                    productDiscountsTotal.hashCode),
+                                                                note.hashCode),
+                                                            bagAmount.hashCode),
+                                                        bagTotal.hashCode),
+                                                    active.hashCode),
+                                                deleted.hashCode),
+                                            optimisticLockField.hashCode),
+                                        estimatedFee.hashCode),
+                                    dateDeleted.hashCode),
+                                dateCreated.hashCode),
+                            createdFromNavigation.hashCode),
+                        customerNavigation.hashCode),
+                    regionNavigation.hashCode),
+                cartCampaign.hashCode),
             cartProduct.hashCode),
         order.hashCode));
   }
@@ -180,6 +175,7 @@ class _$KilerCart extends KilerCart {
           ..add('createdFromNavigation', createdFromNavigation)
           ..add('customerNavigation', customerNavigation)
           ..add('regionNavigation', regionNavigation)
+          ..add('cartCampaign', cartCampaign)
           ..add('cartProduct', cartProduct)
           ..add('order', order))
         .toString();
@@ -269,6 +265,12 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
   set regionNavigation(KilerRegionBuilder regionNavigation) =>
       _$this._regionNavigation = regionNavigation;
 
+  ListBuilder<KilerCartCampaign> _cartCampaign;
+  ListBuilder<KilerCartCampaign> get cartCampaign =>
+      _$this._cartCampaign ??= new ListBuilder<KilerCartCampaign>();
+  set cartCampaign(ListBuilder<KilerCartCampaign> cartCampaign) =>
+      _$this._cartCampaign = cartCampaign;
+
   ListBuilder<KilerCartProduct> _cartProduct;
   ListBuilder<KilerCartProduct> get cartProduct =>
       _$this._cartProduct ??= new ListBuilder<KilerCartProduct>();
@@ -305,6 +307,7 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
       _createdFromNavigation = $v.createdFromNavigation?.toBuilder();
       _customerNavigation = $v.customerNavigation?.toBuilder();
       _regionNavigation = $v.regionNavigation?.toBuilder();
+      _cartCampaign = $v.cartCampaign?.toBuilder();
       _cartProduct = $v.cartProduct?.toBuilder();
       _order = $v.order?.toBuilder();
       _$v = null;
@@ -347,6 +350,7 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
               createdFromNavigation: _createdFromNavigation?.build(),
               customerNavigation: _customerNavigation?.build(),
               regionNavigation: _regionNavigation?.build(),
+              cartCampaign: _cartCampaign?.build(),
               cartProduct: _cartProduct?.build(),
               order: _order?.build());
     } catch (_) {
@@ -358,6 +362,8 @@ class KilerCartBuilder implements Builder<KilerCart, KilerCartBuilder> {
         _customerNavigation?.build();
         _$failedField = 'regionNavigation';
         _regionNavigation?.build();
+        _$failedField = 'cartCampaign';
+        _cartCampaign?.build();
         _$failedField = 'cartProduct';
         _cartProduct?.build();
         _$failedField = 'order';

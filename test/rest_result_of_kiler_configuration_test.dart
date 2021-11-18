@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/rest_result_of_kiler_configuration.dart';
 import 'package:test/test.dart';
 
 // tests for RestResultOfKilerConfiguration
 void main() {
-  final instance = RestResultOfKilerConfiguration();
+  final instance = RestResultOfKilerConfigurationBuilder();
+  // TODO add properties to the builder and call build()
 
   group(RestResultOfKilerConfiguration, () {
     // bool success

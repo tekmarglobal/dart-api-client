@@ -30,6 +30,14 @@ abstract class KilerOlimposLog implements Built<KilerOlimposLog, KilerOlimposLog
     int get order;
 
     @nullable
+    @BuiltValueField(wireName: r'sent')
+    bool get sent;
+
+    @nullable
+    @BuiltValueField(wireName: r'message')
+    String get message;
+
+    @nullable
     @BuiltValueField(wireName: r'optimisticLockField')
     int get optimisticLockField;
 
@@ -86,6 +94,18 @@ class _$KilerOlimposLogSerializer implements StructuredSerializer<KilerOlimposLo
                 ..add(serializers.serialize(object.order,
                     specifiedType: const FullType(int)));
         }
+        if (object.sent != null) {
+            result
+                ..add(r'sent')
+                ..add(serializers.serialize(object.sent,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.message != null) {
+            result
+                ..add(r'message')
+                ..add(serializers.serialize(object.message,
+                    specifiedType: const FullType(String)));
+        }
         if (object.optimisticLockField != null) {
             result
                 ..add(r'optimisticLockField')
@@ -133,6 +153,14 @@ class _$KilerOlimposLogSerializer implements StructuredSerializer<KilerOlimposLo
                 case r'order':
                     result.order = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'sent':
+                    result.sent = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'message':
+                    result.message = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'optimisticLockField':
                     result.optimisticLockField = serializers.deserialize(value,

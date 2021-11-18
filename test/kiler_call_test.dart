@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_call.dart';
 import 'package:test/test.dart';
 
 // tests for KilerCall
 void main() {
-  final instance = KilerCall();
+  final instance = KilerCallBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerCall, () {
     // int oid
@@ -51,8 +59,8 @@ void main() {
       // TODO
     });
 
-    // String uniqId
-    test('to test the property `uniqId`', () async {
+    // String uniqueId
+    test('to test the property `uniqueId`', () async {
       // TODO
     });
 

@@ -21,6 +21,9 @@ class _$KilerBrand extends KilerBrand {
   @override
   final BuiltList<KilerBrandManagerBrand> brandManagerBrand;
   @override
+  final BuiltList<KilerCampaignCampaignsBrandBrands>
+      campaignCampaignsBrandBrands;
+  @override
   final BuiltList<KilerProduct> product;
 
   factory _$KilerBrand([void Function(KilerBrandBuilder) updates]) =>
@@ -33,6 +36,7 @@ class _$KilerBrand extends KilerBrand {
       this.manufacturer,
       this.manufacturerNavigation,
       this.brandManagerBrand,
+      this.campaignCampaignsBrandBrands,
       this.product})
       : super._();
 
@@ -53,6 +57,7 @@ class _$KilerBrand extends KilerBrand {
         manufacturer == other.manufacturer &&
         manufacturerNavigation == other.manufacturerNavigation &&
         brandManagerBrand == other.brandManagerBrand &&
+        campaignCampaignsBrandBrands == other.campaignCampaignsBrandBrands &&
         product == other.product;
   }
 
@@ -62,11 +67,13 @@ class _$KilerBrand extends KilerBrand {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, oid.hashCode), name.hashCode),
-                        optimisticLockField.hashCode),
-                    manufacturer.hashCode),
-                manufacturerNavigation.hashCode),
-            brandManagerBrand.hashCode),
+                    $jc(
+                        $jc($jc($jc(0, oid.hashCode), name.hashCode),
+                            optimisticLockField.hashCode),
+                        manufacturer.hashCode),
+                    manufacturerNavigation.hashCode),
+                brandManagerBrand.hashCode),
+            campaignCampaignsBrandBrands.hashCode),
         product.hashCode));
   }
 
@@ -79,6 +86,7 @@ class _$KilerBrand extends KilerBrand {
           ..add('manufacturer', manufacturer)
           ..add('manufacturerNavigation', manufacturerNavigation)
           ..add('brandManagerBrand', brandManagerBrand)
+          ..add('campaignCampaignsBrandBrands', campaignCampaignsBrandBrands)
           ..add('product', product))
         .toString();
   }
@@ -117,6 +125,16 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
           ListBuilder<KilerBrandManagerBrand> brandManagerBrand) =>
       _$this._brandManagerBrand = brandManagerBrand;
 
+  ListBuilder<KilerCampaignCampaignsBrandBrands> _campaignCampaignsBrandBrands;
+  ListBuilder<KilerCampaignCampaignsBrandBrands>
+      get campaignCampaignsBrandBrands =>
+          _$this._campaignCampaignsBrandBrands ??=
+              new ListBuilder<KilerCampaignCampaignsBrandBrands>();
+  set campaignCampaignsBrandBrands(
+          ListBuilder<KilerCampaignCampaignsBrandBrands>
+              campaignCampaignsBrandBrands) =>
+      _$this._campaignCampaignsBrandBrands = campaignCampaignsBrandBrands;
+
   ListBuilder<KilerProduct> _product;
   ListBuilder<KilerProduct> get product =>
       _$this._product ??= new ListBuilder<KilerProduct>();
@@ -135,6 +153,8 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
       _manufacturer = $v.manufacturer;
       _manufacturerNavigation = $v.manufacturerNavigation?.toBuilder();
       _brandManagerBrand = $v.brandManagerBrand?.toBuilder();
+      _campaignCampaignsBrandBrands =
+          $v.campaignCampaignsBrandBrands?.toBuilder();
       _product = $v.product?.toBuilder();
       _$v = null;
     }
@@ -164,6 +184,8 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
               manufacturer: manufacturer,
               manufacturerNavigation: _manufacturerNavigation?.build(),
               brandManagerBrand: _brandManagerBrand?.build(),
+              campaignCampaignsBrandBrands:
+                  _campaignCampaignsBrandBrands?.build(),
               product: _product?.build());
     } catch (_) {
       String _$failedField;
@@ -172,6 +194,8 @@ class KilerBrandBuilder implements Builder<KilerBrand, KilerBrandBuilder> {
         _manufacturerNavigation?.build();
         _$failedField = 'brandManagerBrand';
         _brandManagerBrand?.build();
+        _$failedField = 'campaignCampaignsBrandBrands';
+        _campaignCampaignsBrandBrands?.build();
         _$failedField = 'product';
         _product?.build();
       } catch (e) {

@@ -17,6 +17,10 @@ class _$KilerOlimposLog extends KilerOlimposLog {
   @override
   final int order;
   @override
+  final bool sent;
+  @override
+  final String message;
+  @override
   final int optimisticLockField;
   @override
   final int gcrecord;
@@ -31,6 +35,8 @@ class _$KilerOlimposLog extends KilerOlimposLog {
       this.createdAt,
       this.sentData,
       this.order,
+      this.sent,
+      this.message,
       this.optimisticLockField,
       this.gcrecord,
       this.orderNavigation})
@@ -52,6 +58,8 @@ class _$KilerOlimposLog extends KilerOlimposLog {
         createdAt == other.createdAt &&
         sentData == other.sentData &&
         order == other.order &&
+        sent == other.sent &&
+        message == other.message &&
         optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
         orderNavigation == other.orderNavigation;
@@ -63,9 +71,13 @@ class _$KilerOlimposLog extends KilerOlimposLog {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, oid.hashCode), createdAt.hashCode),
-                        sentData.hashCode),
-                    order.hashCode),
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, oid.hashCode), createdAt.hashCode),
+                                sentData.hashCode),
+                            order.hashCode),
+                        sent.hashCode),
+                    message.hashCode),
                 optimisticLockField.hashCode),
             gcrecord.hashCode),
         orderNavigation.hashCode));
@@ -78,6 +90,8 @@ class _$KilerOlimposLog extends KilerOlimposLog {
           ..add('createdAt', createdAt)
           ..add('sentData', sentData)
           ..add('order', order)
+          ..add('sent', sent)
+          ..add('message', message)
           ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
           ..add('orderNavigation', orderNavigation))
@@ -105,6 +119,14 @@ class KilerOlimposLogBuilder
   int get order => _$this._order;
   set order(int order) => _$this._order = order;
 
+  bool _sent;
+  bool get sent => _$this._sent;
+  set sent(bool sent) => _$this._sent = sent;
+
+  String _message;
+  String get message => _$this._message;
+  set message(String message) => _$this._message = message;
+
   int _optimisticLockField;
   int get optimisticLockField => _$this._optimisticLockField;
   set optimisticLockField(int optimisticLockField) =>
@@ -131,6 +153,8 @@ class KilerOlimposLogBuilder
       _createdAt = $v.createdAt;
       _sentData = $v.sentData;
       _order = $v.order;
+      _sent = $v.sent;
+      _message = $v.message;
       _optimisticLockField = $v.optimisticLockField;
       _gcrecord = $v.gcrecord;
       _orderNavigation = $v.orderNavigation?.toBuilder();
@@ -160,6 +184,8 @@ class KilerOlimposLogBuilder
               createdAt: createdAt,
               sentData: sentData,
               order: order,
+              sent: sent,
+              message: message,
               optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
               orderNavigation: _orderNavigation?.build());

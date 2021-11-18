@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_product.dart';
 import 'package:test/test.dart';
 
 // tests for KilerProduct
 void main() {
-  final instance = KilerProduct();
+  final instance = KilerProductBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerProduct, () {
     // int oid
@@ -116,8 +124,23 @@ void main() {
       // TODO
     });
 
+    // double weight
+    test('to test the property `weight`', () async {
+      // TODO
+    });
+
+    // int productTag
+    test('to test the property `productTag`', () async {
+      // TODO
+    });
+
     // KilerBrand brandNavigation
     test('to test the property `brandNavigation`', () async {
+      // TODO
+    });
+
+    // KilerProductTag productTagNavigation
+    test('to test the property `productTagNavigation`', () async {
       // TODO
     });
 
@@ -151,6 +174,16 @@ void main() {
       // TODO
     });
 
+    // BuiltList<KilerProductAlternatives> productAlternativesAlternativeProductNavigation
+    test('to test the property `productAlternativesAlternativeProductNavigation`', () async {
+      // TODO
+    });
+
+    // BuiltList<KilerProductAlternatives> productAlternativesProductNavigation
+    test('to test the property `productAlternativesProductNavigation`', () async {
+      // TODO
+    });
+
     // BuiltList<KilerProductImage> productImage
     test('to test the property `productImage`', () async {
       // TODO
@@ -158,6 +191,11 @@ void main() {
 
     // BuiltList<KilerProductImportDetail> productImportDetail
     test('to test the property `productImportDetail`', () async {
+      // TODO
+    });
+
+    // BuiltList<KilerProductProductsProductAlternativesProductAlternatives0eac5f03> productProductsProductAlternativesProductAlternatives0eac5f03
+    test('to test the property `productProductsProductAlternativesProductAlternatives0eac5f03`', () async {
       // TODO
     });
 

@@ -19,14 +19,15 @@ import 'package:openapi/api/affiliate_api.dart';
 import 'package:openapi/api/banner_api.dart';
 import 'package:openapi/api/cart_api.dart';
 import 'package:openapi/api/catalog_api.dart';
+import 'package:openapi/api/crm_api.dart';
 import 'package:openapi/api/customer_api.dart';
 import 'package:openapi/api/definition_api.dart';
+import 'package:openapi/api/integration_api.dart';
 import 'package:openapi/api/migration_api.dart';
 import 'package:openapi/api/order_api.dart';
 import 'package:openapi/api/payment_api.dart';
 import 'package:openapi/api/product_api.dart';
 import 'package:openapi/api/register_api.dart';
-import 'package:openapi/api/sanity_api.dart';
 
 
 final _defaultInterceptors = [
@@ -130,6 +131,15 @@ class Openapi {
 
 
     /**
+    * Get CrmApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    CrmApi getCrmApi() {
+    return CrmApi(dio, serializers);
+    }
+
+
+    /**
     * Get CustomerApi instance, base route and serializer can be overridden by a given but be careful,
     * by doing that all interceptors will not be executed
     */
@@ -144,6 +154,15 @@ class Openapi {
     */
     DefinitionApi getDefinitionApi() {
     return DefinitionApi(dio, serializers);
+    }
+
+
+    /**
+    * Get IntegrationApi instance, base route and serializer can be overridden by a given but be careful,
+    * by doing that all interceptors will not be executed
+    */
+    IntegrationApi getIntegrationApi() {
+    return IntegrationApi(dio, serializers);
     }
 
 
@@ -189,15 +208,6 @@ class Openapi {
     */
     RegisterApi getRegisterApi() {
     return RegisterApi(dio, serializers);
-    }
-
-
-    /**
-    * Get SanityApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    SanityApi getSanityApi() {
-    return SanityApi(dio, serializers);
     }
 
 
