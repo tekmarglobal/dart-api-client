@@ -26,6 +26,8 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
   final int productId;
   @override
   final int unitId;
+  @override
+  final bool isActive;
 
   factory _$CartServiceRCartProducts(
           [void Function(CartServiceRCartProductsBuilder) updates]) =>
@@ -40,7 +42,8 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
       this.discountAmount,
       this.name,
       this.productId,
-      this.unitId})
+      this.unitId,
+      this.isActive})
       : super._();
 
   @override
@@ -64,7 +67,8 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
         discountAmount == other.discountAmount &&
         name == other.name &&
         productId == other.productId &&
-        unitId == other.unitId;
+        unitId == other.unitId &&
+        isActive == other.isActive;
   }
 
   @override
@@ -76,15 +80,17 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, regionProductId.hashCode),
-                                    quantity.hashCode),
-                                listPrice.hashCode),
-                            price.hashCode),
-                        amount.hashCode),
-                    discountAmount.hashCode),
-                name.hashCode),
-            productId.hashCode),
-        unitId.hashCode));
+                                $jc(
+                                    $jc($jc(0, regionProductId.hashCode),
+                                        quantity.hashCode),
+                                    listPrice.hashCode),
+                                price.hashCode),
+                            amount.hashCode),
+                        discountAmount.hashCode),
+                    name.hashCode),
+                productId.hashCode),
+            unitId.hashCode),
+        isActive.hashCode));
   }
 
   @override
@@ -98,7 +104,8 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
           ..add('discountAmount', discountAmount)
           ..add('name', name)
           ..add('productId', productId)
-          ..add('unitId', unitId))
+          ..add('unitId', unitId)
+          ..add('isActive', isActive))
         .toString();
   }
 }
@@ -146,6 +153,10 @@ class CartServiceRCartProductsBuilder
   int get unitId => _$this._unitId;
   set unitId(int unitId) => _$this._unitId = unitId;
 
+  bool _isActive;
+  bool get isActive => _$this._isActive;
+  set isActive(bool isActive) => _$this._isActive = isActive;
+
   CartServiceRCartProductsBuilder() {
     CartServiceRCartProducts._initializeBuilder(this);
   }
@@ -162,6 +173,7 @@ class CartServiceRCartProductsBuilder
       _name = $v.name;
       _productId = $v.productId;
       _unitId = $v.unitId;
+      _isActive = $v.isActive;
       _$v = null;
     }
     return this;
@@ -190,7 +202,8 @@ class CartServiceRCartProductsBuilder
             discountAmount: discountAmount,
             name: name,
             productId: productId,
-            unitId: unitId);
+            unitId: unitId,
+            isActive: isActive);
     replace(_$result);
     return _$result;
   }

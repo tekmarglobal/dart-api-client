@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_permission_policy_action_permission_object.dart';
 import 'package:test/test.dart';
 
 // tests for KilerPermissionPolicyActionPermissionObject
 void main() {
-  final instance = KilerPermissionPolicyActionPermissionObject();
+  final instance = KilerPermissionPolicyActionPermissionObjectBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerPermissionPolicyActionPermissionObject, () {
     // String oid

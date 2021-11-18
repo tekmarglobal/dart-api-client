@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
 [**apiOrderGetOrderListPost**](OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 [**apiOrderGetOrderPost**](OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
-[**apiOrderSendmailPost**](OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
+[**apiOrderPatchOrderPost**](OrderApi.md#apiorderpatchorderpost) | **post** /api/Order/PatchOrder | 
 [**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
 
 
@@ -147,8 +147,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiOrderSendmailPost**
-> String apiOrderSendmailPost()
+# **apiOrderPatchOrderPost**
+> RestResultOfOrderServiceOrderResponse apiOrderPatchOrderPost(body)
 
 
 
@@ -161,21 +161,25 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new OrderApi();
+var body = new OrderServicePatchOrderRequest(); // OrderServicePatchOrderRequest | 
 
 try { 
-    var result = api_instance.apiOrderSendmailPost();
+    var result = api_instance.apiOrderPatchOrderPost(body);
     print(result);
 } catch (e) {
-    print('Exception when calling OrderApi->apiOrderSendmailPost: $e\n');
+    print('Exception when calling OrderApi->apiOrderPatchOrderPost: $e\n');
 }
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**OrderServicePatchOrderRequest**](OrderServicePatchOrderRequest.md)|  | [optional] 
 
 ### Return type
 
-**String**
+[**RestResultOfOrderServiceOrderResponse**](RestResultOfOrderServiceOrderResponse.md)
 
 ### Authorization
 
@@ -183,7 +187,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -10,6 +10,7 @@ import 'package:openapi/model/kiler_cart_product.dart';
 import 'package:openapi/model/kiler_order.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_device.dart';
+import 'package:openapi/model/kiler_cart_campaign.dart';
 import 'package:openapi/model/kiler_region.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -89,6 +90,10 @@ abstract class KilerCart implements Built<KilerCart, KilerCartBuilder> {
     @nullable
     @BuiltValueField(wireName: r'regionNavigation')
     KilerRegion get regionNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'cartCampaign')
+    BuiltList<KilerCartCampaign> get cartCampaign;
 
     @nullable
     @BuiltValueField(wireName: r'cartProduct')
@@ -227,6 +232,12 @@ class _$KilerCartSerializer implements StructuredSerializer<KilerCart> {
                 ..add(serializers.serialize(object.regionNavigation,
                     specifiedType: const FullType(KilerRegion)));
         }
+        if (object.cartCampaign != null) {
+            result
+                ..add(r'cartCampaign')
+                ..add(serializers.serialize(object.cartCampaign,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerCartCampaign)])));
+        }
         if (object.cartProduct != null) {
             result
                 ..add(r'cartProduct')
@@ -324,6 +335,10 @@ class _$KilerCartSerializer implements StructuredSerializer<KilerCart> {
                 case r'regionNavigation':
                     result.regionNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerRegion)) as KilerRegion);
+                    break;
+                case r'cartCampaign':
+                    result.cartCampaign.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerCartCampaign)])) as BuiltList<KilerCartCampaign>);
                     break;
                 case r'cartProduct':
                     result.cartProduct.replace(serializers.deserialize(value,

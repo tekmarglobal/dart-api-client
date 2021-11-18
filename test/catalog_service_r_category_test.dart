@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/catalog_service_r_category.dart';
 import 'package:test/test.dart';
 
 // tests for CatalogServiceRCategory
 void main() {
-  final instance = CatalogServiceRCategory();
+  final instance = CatalogServiceRCategoryBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CatalogServiceRCategory, () {
     // int id

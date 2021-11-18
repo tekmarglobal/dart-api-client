@@ -17,6 +17,10 @@ abstract class CustomerServiceRAddress implements Built<CustomerServiceRAddress,
     int get adressId;
 
     @nullable
+    @BuiltValueField(wireName: r'addressId')
+    int get addressId;
+
+    @nullable
     @BuiltValueField(wireName: r'customerId')
     int get customerId;
 
@@ -104,6 +108,10 @@ abstract class CustomerServiceRAddress implements Built<CustomerServiceRAddress,
     @BuiltValueField(wireName: r'phoneNumber')
     String get phoneNumber;
 
+    @nullable
+    @BuiltValueField(wireName: r'active')
+    bool get active;
+
     CustomerServiceRAddress._();
 
     static void _initializeBuilder(CustomerServiceRAddressBuilder b) => b;
@@ -129,6 +137,12 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'adressId')
                 ..add(serializers.serialize(object.adressId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.addressId != null) {
+            result
+                ..add(r'addressId')
+                ..add(serializers.serialize(object.addressId,
                     specifiedType: const FullType(int)));
         }
         if (object.customerId != null) {
@@ -263,6 +277,12 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                 ..add(serializers.serialize(object.phoneNumber,
                     specifiedType: const FullType(String)));
         }
+        if (object.active != null) {
+            result
+                ..add(r'active')
+                ..add(serializers.serialize(object.active,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -279,6 +299,10 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             switch (key) {
                 case r'adressId':
                     result.adressId = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'addressId':
+                    result.addressId = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     break;
                 case r'customerId':
@@ -368,6 +392,10 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                 case r'phoneNumber':
                     result.phoneNumber = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'active':
+                    result.active = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

@@ -16,6 +16,7 @@ import 'package:openapi/model/customer_service_new_customer_request.dart';
 import 'package:openapi/model/rest_result_of_customer_service_customer_address_response.dart';
 import 'package:openapi/model/rest_result_of_customer_service_customer_response.dart';
 import 'package:openapi/model/rest_result_of_customer_service_delete_address_response.dart';
+import 'package:openapi/model/rest_result_of_list_of_customer_service_customer_message_response.dart';
 
     class CustomerApi {
     final Dio _dio;
@@ -195,6 +196,104 @@ import 'package:openapi/model/rest_result_of_customer_service_delete_address_res
                             ) as RestResultOfCustomerServiceCustomerAddressResponse;
 
                 return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfListOfCustomerServiceCustomerMessageResponse>> apiCustomerGetCustomerMessageGet({ 
+            DateTime startSendDate,
+            DateTime endSendDate,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Customer/GetCustomerMessage',
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+                queryParameters: <String, dynamic>{
+                if (startSendDate != null) r'startSendDate': startSendDate,
+                if (endSendDate != null) r'endSendDate': endSendDate,
+                },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Customer/GetCustomerMessage',
+            data: _bodyData,
+            options: _request,
+                queryParameters: <String, dynamic>{
+                if (startSendDate != null) r'startSendDate': startSendDate,
+                if (endSendDate != null) r'endSendDate': endSendDate,
+                },
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfListOfCustomerServiceCustomerMessageResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfListOfCustomerServiceCustomerMessageResponse;
+
+                return Response<RestResultOfListOfCustomerServiceCustomerMessageResponse>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

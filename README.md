@@ -77,9 +77,12 @@ Class | Method | HTTP request | Description
 *AffiliateApi* | [**apiAffiliateShareLinkClickedPost**](doc/AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **post** /api/Affiliate/ShareLinkClicked | 
 *BannerApi* | [**apiBannerGetBannersPost**](doc/BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc/BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
+*CartApi* | [**apiCartAddCampaignByCodePost**](doc/CartApi.md#apicartaddcampaignbycodepost) | **post** /api/Cart/AddCampaignByCode | 
+*CartApi* | [**apiCartApplyCampaignPost**](doc/CartApi.md#apicartapplycampaignpost) | **post** /api/Cart/ApplyCampaign | 
 *CartApi* | [**apiCartCreateCartPost**](doc/CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 *CartApi* | [**apiCartDeleteCardDelete**](doc/CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 *CartApi* | [**apiCartDeleteCartDelete**](doc/CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
+*CartApi* | [**apiCartGetCampaignsGet**](doc/CartApi.md#apicartgetcampaignsget) | **get** /api/Cart/GetCampaigns | 
 *CartApi* | [**apiCartGetTimeSlotsPost**](doc/CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 *CartApi* | [**apiCartPost**](doc/CartApi.md#apicartpost) | **post** /api/Cart | 
 *CartApi* | [**apiCartUpdateCartPost**](doc/CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
@@ -92,8 +95,13 @@ Class | Method | HTTP request | Description
 *CatalogApi* | [**apiCatalogImportCategoriesFromOlimposPost**](doc/CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
 *CatalogApi* | [**apiCatalogPost**](doc/CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
 *CatalogApi* | [**apiCatalogUpdateCategoryPut**](doc/CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
+*CrmApi* | [**apiCrmCallPost**](doc/CrmApi.md#apicrmcallpost) | **post** /api/Crm/Call | 
+*CrmApi* | [**apiCrmCreateTicketPost**](doc/CrmApi.md#apicrmcreateticketpost) | **post** /api/Crm/CreateTicket | 
+*CrmApi* | [**apiCrmFindCustomerIVRGet**](doc/CrmApi.md#apicrmfindcustomerivrget) | **get** /api/Crm/FindCustomerIVR | 
+*CrmApi* | [**apiCrmFindOrderIVRGet**](doc/CrmApi.md#apicrmfindorderivrget) | **get** /api/Crm/FindOrderIVR | 
 *CustomerApi* | [**apiCustomerDeleteAddressPost**](doc/CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
 *CustomerApi* | [**apiCustomerGetCustomerAdressesPost**](doc/CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
+*CustomerApi* | [**apiCustomerGetCustomerMessageGet**](doc/CustomerApi.md#apicustomergetcustomermessageget) | **get** /api/Customer/GetCustomerMessage | 
 *CustomerApi* | [**apiCustomerPost**](doc/CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
 *CustomerApi* | [**apiCustomerUpdateAddressPost**](doc/CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
 *CustomerApi* | [**apiCustomerUpdateCustomerDefultAddressPost**](doc/CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
@@ -105,27 +113,32 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**apiDefinitionHelloGet**](doc/DefinitionApi.md#apidefinitionhelloget) | **get** /api/Definition/Hello | 
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc/DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
 *DefinitionApi* | [**apiDefinitionUpdateAgreementLogPost**](doc/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
+*DefinitionApi* | [**apiDefinitionUploadCountriesToFirebasePost**](doc/DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **post** /api/Definition/UploadCountriesToFirebase | 
+*IntegrationApi* | [**apiIntegrationUpdateProductFromOlimposGet**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **get** /api/Integration/UpdateProductFromOlimpos | 
+*IntegrationApi* | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **post** /api/Integration/UpdateProductFromOlimpos | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc/MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
 *MigrationApi* | [**apiMigrationUpdateCitiesFromRestGet**](doc/MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
 *OrderApi* | [**apiOrderCreateOrderPost**](doc/OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
 *OrderApi* | [**apiOrderGetOrderListPost**](doc/OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
 *OrderApi* | [**apiOrderGetOrderPost**](doc/OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
-*OrderApi* | [**apiOrderSendmailPost**](doc/OrderApi.md#apiordersendmailpost) | **post** /api/Order/sendmail | 
+*OrderApi* | [**apiOrderPatchOrderPost**](doc/OrderApi.md#apiorderpatchorderpost) | **post** /api/Order/PatchOrder | 
 *OrderApi* | [**apiOrderUpdateStatusPost**](doc/OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
-*PaymentApi* | [**apiPaymentCardSuccessPost**](doc/PaymentApi.md#apipaymentcardsuccesspost) | **post** /api/Payment/CardSuccess | 
+*PaymentApi* | [**apiPaymentCheckTransactionPost**](doc/PaymentApi.md#apipaymentchecktransactionpost) | **post** /api/Payment/CheckTransaction | 
 *PaymentApi* | [**apiPaymentCreatePaymentPost**](doc/PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
+*PaymentApi* | [**apiPaymentCreatePaymentReturnUrlPost**](doc/PaymentApi.md#apipaymentcreatepaymentreturnurlpost) | **post** /api/Payment/CreatePaymentReturnUrl | 
 *PaymentApi* | [**apiPaymentGetPaymentTypesPost**](doc/PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
+*PaymentApi* | [**apiPaymentPaymentFailPost**](doc/PaymentApi.md#apipaymentpaymentfailpost) | **post** /api/Payment/PaymentFail | 
+*PaymentApi* | [**apiPaymentPaymentSuccessPost**](doc/PaymentApi.md#apipaymentpaymentsuccesspost) | **post** /api/Payment/PaymentSuccess | 
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc/ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductDeleteFavoriteDelete**](doc/ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc/ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
 *ProductApi* | [**apiProductPost**](doc/ProductApi.md#apiproductpost) | **post** /api/Product | 
+*ProductApi* | [**apiProductProductAlternativesPost**](doc/ProductApi.md#apiproductproductalternativespost) | **post** /api/Product/ProductAlternatives | 
 *ProductApi* | [**apiProductProductListPost**](doc/ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 *ProductApi* | [**apiProductProductSearchPost**](doc/ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
-*ProductApi* | [**apiProductUpdateProductFromOlimposGet**](doc/ProductApi.md#apiproductupdateproductfromolimposget) | **get** /api/Product/UpdateProductFromOlimpos | 
-*ProductApi* | [**apiProductUpdateProductFromOlimposPost**](doc/ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
+*ProductApi* | [**apiProductRecommendProductPost**](doc/ProductApi.md#apiproductrecommendproductpost) | **post** /api/Product/RecommendProduct | 
 *RegisterApi* | [**apiRegisterSendSmsPost**](doc/RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
 *RegisterApi* | [**apiRegisterVerifySmsPost**](doc/RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
-*SanityApi* | [**apiSanityCheckGet**](doc/SanityApi.md#apisanitycheckget) | **get** /api/Sanity/check | 
 
 
 ## Documentation For Models
@@ -146,6 +159,8 @@ Class | Method | HTTP request | Description
  - [BannerServiceBannerRequest](doc/BannerServiceBannerRequest.md)
  - [BannerServiceBannerResponse](doc/BannerServiceBannerResponse.md)
  - [BannerServiceRBanner](doc/BannerServiceRBanner.md)
+ - [CartServiceCampaignApplyResponse](doc/CartServiceCampaignApplyResponse.md)
+ - [CartServiceCampaignResponse](doc/CartServiceCampaignResponse.md)
  - [CartServiceCartResponse](doc/CartServiceCartResponse.md)
  - [CartServiceCreateCartRequest](doc/CartServiceCreateCartRequest.md)
  - [CartServiceCreateCartResponse](doc/CartServiceCreateCartResponse.md)
@@ -159,8 +174,12 @@ Class | Method | HTTP request | Description
  - [CatalogServiceRCategory](doc/CatalogServiceRCategory.md)
  - [CatalogServiceRProduct](doc/CatalogServiceRProduct.md)
  - [CatalogServiceRProductPrice](doc/CatalogServiceRProductPrice.md)
+ - [CrmServiceCallRequest](doc/CrmServiceCallRequest.md)
+ - [CrmServiceTicketRequest](doc/CrmServiceTicketRequest.md)
+ - [CrmServiceTicketResponse](doc/CrmServiceTicketResponse.md)
  - [CustomerServiceCustomerAddressRequest](doc/CustomerServiceCustomerAddressRequest.md)
  - [CustomerServiceCustomerAddressResponse](doc/CustomerServiceCustomerAddressResponse.md)
+ - [CustomerServiceCustomerMessageResponse](doc/CustomerServiceCustomerMessageResponse.md)
  - [CustomerServiceCustomerResponse](doc/CustomerServiceCustomerResponse.md)
  - [CustomerServiceDeleteAddressRequest](doc/CustomerServiceDeleteAddressRequest.md)
  - [CustomerServiceNewCustomerDefaultAddress](doc/CustomerServiceNewCustomerDefaultAddress.md)
@@ -188,9 +207,13 @@ Class | Method | HTTP request | Description
  - [KilerBrandManager](doc/KilerBrandManager.md)
  - [KilerBrandManagerBrand](doc/KilerBrandManagerBrand.md)
  - [KilerCall](doc/KilerCall.md)
+ - [KilerCampaign](doc/KilerCampaign.md)
+ - [KilerCampaignCampaignsBrandBrands](doc/KilerCampaignCampaignsBrandBrands.md)
  - [KilerCart](doc/KilerCart.md)
+ - [KilerCartCampaign](doc/KilerCartCampaign.md)
  - [KilerCartProduct](doc/KilerCartProduct.md)
  - [KilerCategory](doc/KilerCategory.md)
+ - [KilerCategoryCategoriesCampaignCampaigns](doc/KilerCategoryCategoriesCampaignCampaigns.md)
  - [KilerCategoryImport](doc/KilerCategoryImport.md)
  - [KilerCategoryImportDetail](doc/KilerCategoryImportDetail.md)
  - [KilerCategoryProduct](doc/KilerCategoryProduct.md)
@@ -202,6 +225,8 @@ Class | Method | HTTP request | Description
  - [KilerCustomer](doc/KilerCustomer.md)
  - [KilerCustomerFavoriteList](doc/KilerCustomerFavoriteList.md)
  - [KilerCustomerLoginAttempt](doc/KilerCustomerLoginAttempt.md)
+ - [KilerCustomerMessage](doc/KilerCustomerMessage.md)
+ - [KilerCustomerValidCustomersCampaignCampaigns](doc/KilerCustomerValidCustomersCampaignCampaigns.md)
  - [KilerDepartment](doc/KilerDepartment.md)
  - [KilerDepot](doc/KilerDepot.md)
  - [KilerDevice](doc/KilerDevice.md)
@@ -211,6 +236,7 @@ Class | Method | HTTP request | Description
  - [KilerOlimposLog](doc/KilerOlimposLog.md)
  - [KilerOperatingSystem](doc/KilerOperatingSystem.md)
  - [KilerOrder](doc/KilerOrder.md)
+ - [KilerOrderCampaign](doc/KilerOrderCampaign.md)
  - [KilerOrderProduct](doc/KilerOrderProduct.md)
  - [KilerOrderStatus](doc/KilerOrderStatus.md)
  - [KilerPayment](doc/KilerPayment.md)
@@ -228,13 +254,18 @@ Class | Method | HTTP request | Description
  - [KilerPersonelDepartment](doc/KilerPersonelDepartment.md)
  - [KilerPlatform](doc/KilerPlatform.md)
  - [KilerProduct](doc/KilerProduct.md)
+ - [KilerProductAlternatives](doc/KilerProductAlternatives.md)
  - [KilerProductImage](doc/KilerProductImage.md)
  - [KilerProductImport](doc/KilerProductImport.md)
  - [KilerProductImportDetail](doc/KilerProductImportDetail.md)
  - [KilerProductPrice](doc/KilerProductPrice.md)
+ - [KilerProductProductsCampaignCampaigns](doc/KilerProductProductsCampaignCampaigns.md)
+ - [KilerProductProductsProductAlternativesProductAlternatives0eac5f03](doc/KilerProductProductsProductAlternativesProductAlternatives0eac5f03.md)
+ - [KilerProductRecommendation](doc/KilerProductRecommendation.md)
  - [KilerProductTag](doc/KilerProductTag.md)
  - [KilerRegion](doc/KilerRegion.md)
  - [KilerRegionProduct](doc/KilerRegionProduct.md)
+ - [KilerRegionRegionsCampaignCampaigns](doc/KilerRegionRegionsCampaignCampaigns.md)
  - [KilerRegionRegionsNeighborhoodNeighborhoods](doc/KilerRegionRegionsNeighborhoodNeighborhoods.md)
  - [KilerSmsVerification](doc/KilerSmsVerification.md)
  - [KilerSupplier](doc/KilerSupplier.md)
@@ -248,22 +279,30 @@ Class | Method | HTTP request | Description
  - [KilerTimeSlot](doc/KilerTimeSlot.md)
  - [KilerTimeSlotTemplate](doc/KilerTimeSlotTemplate.md)
  - [KilerXpobjectType](doc/KilerXpobjectType.md)
+ - [OrderServiceCampaignResponse](doc/OrderServiceCampaignResponse.md)
  - [OrderServiceGetOrderListResponse](doc/OrderServiceGetOrderListResponse.md)
  - [OrderServiceGetOrderRequest](doc/OrderServiceGetOrderRequest.md)
  - [OrderServiceOrderRequest](doc/OrderServiceOrderRequest.md)
  - [OrderServiceOrderResponse](doc/OrderServiceOrderResponse.md)
+ - [OrderServiceOrderStatus](doc/OrderServiceOrderStatus.md)
  - [OrderServiceOrders](doc/OrderServiceOrders.md)
+ - [OrderServicePatchOrderRequest](doc/OrderServicePatchOrderRequest.md)
  - [OrderServiceROrderProducts](doc/OrderServiceROrderProducts.md)
  - [OrderServiceUpdateOrderRequest](doc/OrderServiceUpdateOrderRequest.md)
  - [PaymentServicePaymentRequest](doc/PaymentServicePaymentRequest.md)
  - [PaymentServicePaymentResponse](doc/PaymentServicePaymentResponse.md)
+ - [PaymentServicePaymentTransactionRequest](doc/PaymentServicePaymentTransactionRequest.md)
+ - [PaymentServicePaymentTransactionResponse](doc/PaymentServicePaymentTransactionResponse.md)
  - [PaymentServicePaymentTypeResponse](doc/PaymentServicePaymentTypeResponse.md)
  - [PaymentServiceRPaymentType](doc/PaymentServiceRPaymentType.md)
  - [ProductServiceFavoriteListResponse](doc/ProductServiceFavoriteListResponse.md)
  - [ProductServiceFavoriteRequest](doc/ProductServiceFavoriteRequest.md)
+ - [ProductServiceProductAlternativesRequest](doc/ProductServiceProductAlternativesRequest.md)
  - [ProductServiceProductRequest](doc/ProductServiceProductRequest.md)
  - [ProductServiceRProduct](doc/ProductServiceRProduct.md)
  - [ProductServiceRProductPrice](doc/ProductServiceRProductPrice.md)
+ - [ProductServiceRecommendProductRequest](doc/ProductServiceRecommendProductRequest.md)
+ - [ProductServiceRecommendProductResponse](doc/ProductServiceRecommendProductResponse.md)
  - [ProductServiceSearchProductRequest](doc/ProductServiceSearchProductRequest.md)
  - [RegisterServiceLoginResponse](doc/RegisterServiceLoginResponse.md)
  - [RegisterServiceSmsRequest](doc/RegisterServiceSmsRequest.md)
@@ -274,34 +313,41 @@ Class | Method | HTTP request | Description
  - [RestResultOfAdminServiceAdminNeighborResponse](doc/RestResultOfAdminServiceAdminNeighborResponse.md)
  - [RestResultOfAdminServiceUploadImageResponse](doc/RestResultOfAdminServiceUploadImageResponse.md)
  - [RestResultOfBannerServiceBannerResponse](doc/RestResultOfBannerServiceBannerResponse.md)
+ - [RestResultOfCartServiceCampaignApplyResponse](doc/RestResultOfCartServiceCampaignApplyResponse.md)
+ - [RestResultOfCartServiceCampaignResponse](doc/RestResultOfCartServiceCampaignResponse.md)
  - [RestResultOfCartServiceCartResponse](doc/RestResultOfCartServiceCartResponse.md)
  - [RestResultOfCartServiceCreateCartResponse](doc/RestResultOfCartServiceCreateCartResponse.md)
  - [RestResultOfCartServiceUpdateCartRegionResponse](doc/RestResultOfCartServiceUpdateCartRegionResponse.md)
  - [RestResultOfCatalogServiceRCategory](doc/RestResultOfCatalogServiceRCategory.md)
+ - [RestResultOfCrmServiceTicketResponse](doc/RestResultOfCrmServiceTicketResponse.md)
  - [RestResultOfCustomerServiceCustomerAddressResponse](doc/RestResultOfCustomerServiceCustomerAddressResponse.md)
  - [RestResultOfCustomerServiceCustomerResponse](doc/RestResultOfCustomerServiceCustomerResponse.md)
  - [RestResultOfCustomerServiceDeleteAddressResponse](doc/RestResultOfCustomerServiceDeleteAddressResponse.md)
  - [RestResultOfDefinitionServiceUpdateAgreementLogResponse](doc/RestResultOfDefinitionServiceUpdateAgreementLogResponse.md)
+ - [RestResultOfDefinitionServiceUploadCountriesResponse](doc/RestResultOfDefinitionServiceUploadCountriesResponse.md)
  - [RestResultOfKilerConfiguration](doc/RestResultOfKilerConfiguration.md)
  - [RestResultOfListOfAdminServiceAdminNeighborResponse](doc/RestResultOfListOfAdminServiceAdminNeighborResponse.md)
  - [RestResultOfListOfAdminServiceBranchResponse](doc/RestResultOfListOfAdminServiceBranchResponse.md)
  - [RestResultOfListOfAdminServiceCompanyResponse](doc/RestResultOfListOfAdminServiceCompanyResponse.md)
  - [RestResultOfListOfAdminServiceRegionResponse](doc/RestResultOfListOfAdminServiceRegionResponse.md)
  - [RestResultOfListOfAdminServiceTimeSlotResponse](doc/RestResultOfListOfAdminServiceTimeSlotResponse.md)
+ - [RestResultOfListOfCartServiceCampaignResponse](doc/RestResultOfListOfCartServiceCampaignResponse.md)
  - [RestResultOfListOfCartServiceTimeSlotsResponse](doc/RestResultOfListOfCartServiceTimeSlotsResponse.md)
+ - [RestResultOfListOfCustomerServiceCustomerMessageResponse](doc/RestResultOfListOfCustomerServiceCustomerMessageResponse.md)
  - [RestResultOfListOfDefinitionServiceAgreementResponse](doc/RestResultOfListOfDefinitionServiceAgreementResponse.md)
  - [RestResultOfListOfDefinitionServiceCitiesResponse](doc/RestResultOfListOfDefinitionServiceCitiesResponse.md)
  - [RestResultOfListOfDefinitionServiceCountiesResponse](doc/RestResultOfListOfDefinitionServiceCountiesResponse.md)
  - [RestResultOfListOfDefinitionServiceFaqResponse](doc/RestResultOfListOfDefinitionServiceFaqResponse.md)
  - [RestResultOfListOfDefinitionServiceNeighborResponse](doc/RestResultOfListOfDefinitionServiceNeighborResponse.md)
  - [RestResultOfListOfProductServiceRProduct](doc/RestResultOfListOfProductServiceRProduct.md)
- - [RestResultOfListOfSystemString](doc/RestResultOfListOfSystemString.md)
  - [RestResultOfOrderServiceGetOrderListResponse](doc/RestResultOfOrderServiceGetOrderListResponse.md)
  - [RestResultOfOrderServiceOrderResponse](doc/RestResultOfOrderServiceOrderResponse.md)
  - [RestResultOfPaymentServicePaymentResponse](doc/RestResultOfPaymentServicePaymentResponse.md)
+ - [RestResultOfPaymentServicePaymentTransactionResponse](doc/RestResultOfPaymentServicePaymentTransactionResponse.md)
  - [RestResultOfPaymentServicePaymentTypeResponse](doc/RestResultOfPaymentServicePaymentTypeResponse.md)
  - [RestResultOfProductServiceFavoriteListResponse](doc/RestResultOfProductServiceFavoriteListResponse.md)
  - [RestResultOfProductServiceRProduct](doc/RestResultOfProductServiceRProduct.md)
+ - [RestResultOfProductServiceRecommendProductResponse](doc/RestResultOfProductServiceRecommendProductResponse.md)
  - [RestResultOfRegisterServiceLoginResponse](doc/RestResultOfRegisterServiceLoginResponse.md)
  - [RestResultOfRegisterServiceSmsResponse](doc/RestResultOfRegisterServiceSmsResponse.md)
  - [RestResultOfSystemInt32](doc/RestResultOfSystemInt32.md)

@@ -77,6 +77,8 @@ class _$KilerOrder extends KilerOrder {
   @override
   final BuiltList<KilerOlimposLog> olimposLog;
   @override
+  final BuiltList<KilerOrderCampaign> orderCampaign;
+  @override
   final BuiltList<KilerOrderProduct> orderProduct;
   @override
   final BuiltList<KilerPayment> payment;
@@ -123,6 +125,7 @@ class _$KilerOrder extends KilerOrder {
       this.regionNavigation,
       this.timeSlotNavigation,
       this.olimposLog,
+      this.orderCampaign,
       this.orderProduct,
       this.payment,
       this.survey,
@@ -174,6 +177,7 @@ class _$KilerOrder extends KilerOrder {
         regionNavigation == other.regionNavigation &&
         timeSlotNavigation == other.timeSlotNavigation &&
         olimposLog == other.olimposLog &&
+        orderCampaign == other.orderCampaign &&
         orderProduct == other.orderProduct &&
         payment == other.payment &&
         survey == other.survey &&
@@ -200,22 +204,22 @@ class _$KilerOrder extends KilerOrder {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode), timeSlot.hashCode), paymentType.hashCode), sent.hashCode),
-                                                                                optimisticLockField.hashCode),
-                                                                            region.hashCode),
-                                                                        uuid.hashCode),
-                                                                    fee.hashCode),
-                                                                isProcessed.hashCode),
-                                                            billingAddressNavigation.hashCode),
-                                                        cartNavigation.hashCode),
-                                                    completedFromNavigation.hashCode),
-                                                customerNavigation.hashCode),
-                                            deliveryAddressNavigation.hashCode),
-                                        orderStatusNavigation.hashCode),
-                                    paymentTypeNavigation.hashCode),
-                                regionNavigation.hashCode),
-                            timeSlotNavigation.hashCode),
-                        olimposLog.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), cart.hashCode), customer.hashCode), orderDate.hashCode), productDiscountsTotal.hashCode), campaignDiscountsTotal.hashCode), deliveryAddress.hashCode), billingAddress.hashCode), orderStatus.hashCode), productTotal.hashCode), orderTotal.hashCode), completedFrom.hashCode), note.hashCode), bagAmount.hashCode), bagTotal.hashCode), active.hashCode), timeSlot.hashCode), paymentType.hashCode), sent.hashCode), optimisticLockField.hashCode),
+                                                                                region.hashCode),
+                                                                            uuid.hashCode),
+                                                                        fee.hashCode),
+                                                                    isProcessed.hashCode),
+                                                                billingAddressNavigation.hashCode),
+                                                            cartNavigation.hashCode),
+                                                        completedFromNavigation.hashCode),
+                                                    customerNavigation.hashCode),
+                                                deliveryAddressNavigation.hashCode),
+                                            orderStatusNavigation.hashCode),
+                                        paymentTypeNavigation.hashCode),
+                                    regionNavigation.hashCode),
+                                timeSlotNavigation.hashCode),
+                            olimposLog.hashCode),
+                        orderCampaign.hashCode),
                     orderProduct.hashCode),
                 payment.hashCode),
             survey.hashCode),
@@ -259,6 +263,7 @@ class _$KilerOrder extends KilerOrder {
           ..add('regionNavigation', regionNavigation)
           ..add('timeSlotNavigation', timeSlotNavigation)
           ..add('olimposLog', olimposLog)
+          ..add('orderCampaign', orderCampaign)
           ..add('orderProduct', orderProduct)
           ..add('payment', payment)
           ..add('survey', survey)
@@ -432,6 +437,12 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
   set olimposLog(ListBuilder<KilerOlimposLog> olimposLog) =>
       _$this._olimposLog = olimposLog;
 
+  ListBuilder<KilerOrderCampaign> _orderCampaign;
+  ListBuilder<KilerOrderCampaign> get orderCampaign =>
+      _$this._orderCampaign ??= new ListBuilder<KilerOrderCampaign>();
+  set orderCampaign(ListBuilder<KilerOrderCampaign> orderCampaign) =>
+      _$this._orderCampaign = orderCampaign;
+
   ListBuilder<KilerOrderProduct> _orderProduct;
   ListBuilder<KilerOrderProduct> get orderProduct =>
       _$this._orderProduct ??= new ListBuilder<KilerOrderProduct>();
@@ -494,6 +505,7 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
       _regionNavigation = $v.regionNavigation?.toBuilder();
       _timeSlotNavigation = $v.timeSlotNavigation?.toBuilder();
       _olimposLog = $v.olimposLog?.toBuilder();
+      _orderCampaign = $v.orderCampaign?.toBuilder();
       _orderProduct = $v.orderProduct?.toBuilder();
       _payment = $v.payment?.toBuilder();
       _survey = $v.survey?.toBuilder();
@@ -554,6 +566,7 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
               regionNavigation: _regionNavigation?.build(),
               timeSlotNavigation: _timeSlotNavigation?.build(),
               olimposLog: _olimposLog?.build(),
+              orderCampaign: _orderCampaign?.build(),
               orderProduct: _orderProduct?.build(),
               payment: _payment?.build(),
               survey: _survey?.build(),
@@ -581,6 +594,8 @@ class KilerOrderBuilder implements Builder<KilerOrder, KilerOrderBuilder> {
         _timeSlotNavigation?.build();
         _$failedField = 'olimposLog';
         _olimposLog?.build();
+        _$failedField = 'orderCampaign';
+        _orderCampaign?.build();
         _$failedField = 'orderProduct';
         _orderProduct?.build();
         _$failedField = 'payment';

@@ -33,6 +33,10 @@ abstract class CartServiceTimeSlotsResponse implements Built<CartServiceTimeSlot
     bool get isFree;
 
     @nullable
+    @BuiltValueField(wireName: r'isAvailable')
+    bool get isAvailable;
+
+    @nullable
     @BuiltValueField(wireName: r'fee')
     double get fee;
 
@@ -87,6 +91,12 @@ class _$CartServiceTimeSlotsResponseSerializer implements StructuredSerializer<C
                 ..add(serializers.serialize(object.isFree,
                     specifiedType: const FullType(bool)));
         }
+        if (object.isAvailable != null) {
+            result
+                ..add(r'isAvailable')
+                ..add(serializers.serialize(object.isAvailable,
+                    specifiedType: const FullType(bool)));
+        }
         if (object.fee != null) {
             result
                 ..add(r'fee')
@@ -125,6 +135,10 @@ class _$CartServiceTimeSlotsResponseSerializer implements StructuredSerializer<C
                     break;
                 case r'isFree':
                     result.isFree = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'isAvailable':
+                    result.isAvailable = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     break;
                 case r'fee':

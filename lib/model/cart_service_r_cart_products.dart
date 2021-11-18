@@ -48,6 +48,10 @@ abstract class CartServiceRCartProducts implements Built<CartServiceRCartProduct
     @BuiltValueField(wireName: r'unitId')
     int get unitId;
 
+    @nullable
+    @BuiltValueField(wireName: r'isActive')
+    bool get isActive;
+
     CartServiceRCartProducts._();
 
     static void _initializeBuilder(CartServiceRCartProductsBuilder b) => b;
@@ -123,6 +127,12 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
                 ..add(serializers.serialize(object.unitId,
                     specifiedType: const FullType(int)));
         }
+        if (object.isActive != null) {
+            result
+                ..add(r'isActive')
+                ..add(serializers.serialize(object.isActive,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -172,6 +182,10 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
                 case r'unitId':
                     result.unitId = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'isActive':
+                    result.isActive = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

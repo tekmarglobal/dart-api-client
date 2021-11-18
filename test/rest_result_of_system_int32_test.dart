@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/rest_result_of_system_int32.dart';
 import 'package:test/test.dart';
 
 // tests for RestResultOfSystemInt32
 void main() {
-  final instance = RestResultOfSystemInt32();
+  final instance = RestResultOfSystemInt32Builder();
+  // TODO add properties to the builder and call build()
 
   group(RestResultOfSystemInt32, () {
     // bool success

@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **createdFromNavigation** | [**KilerDevice**](KilerDevice.md) |  | [optional] 
 **customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] 
 **regionNavigation** | [**KilerRegion**](KilerRegion.md) |  | [optional] 
+**cartCampaign** | [**BuiltList<KilerCartCampaign>**](KilerCartCampaign.md) |  | [optional] 
 **cartProduct** | [**BuiltList<KilerCartProduct>**](KilerCartProduct.md) |  | [optional] 
 **order** | [**BuiltList<KilerOrder>**](KilerOrder.md) |  | [optional] 
 

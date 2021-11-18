@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_region_regions_neighborhood_neighborhoods.dart';
 import 'package:test/test.dart';
 
 // tests for KilerRegionRegionsNeighborhoodNeighborhoods
 void main() {
-  final instance = KilerRegionRegionsNeighborhoodNeighborhoods();
+  final instance = KilerRegionRegionsNeighborhoodNeighborhoodsBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerRegionRegionsNeighborhoodNeighborhoods, () {
     // int neighborhoods

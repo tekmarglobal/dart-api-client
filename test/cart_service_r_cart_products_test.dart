@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/cart_service_r_cart_products.dart';
 import 'package:test/test.dart';
 
 // tests for CartServiceRCartProducts
 void main() {
-  final instance = CartServiceRCartProducts();
+  final instance = CartServiceRCartProductsBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CartServiceRCartProducts, () {
     // int regionProductId
@@ -48,6 +56,11 @@ void main() {
 
     // int unitId
     test('to test the property `unitId`', () async {
+      // TODO
+    });
+
+    // bool isActive
+    test('to test the property `isActive`', () async {
       // TODO
     });
 

@@ -13,6 +13,7 @@ import 'package:built_value/serializer.dart';
 import 'package:openapi/model/definition_service_neighbor_request.dart';
 import 'package:openapi/model/definition_service_update_agreement_request.dart';
 import 'package:openapi/model/rest_result_of_definition_service_update_agreement_log_response.dart';
+import 'package:openapi/model/rest_result_of_definition_service_upload_countries_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_definition_service_agreement_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_definition_service_cities_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_definition_service_counties_response.dart';
@@ -649,6 +650,94 @@ import 'package:openapi/model/rest_result_of_list_of_definition_service_neighbor
                             ) as RestResultOfDefinitionServiceUpdateAgreementLogResponse;
 
                 return Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
+        Future<Response<RestResultOfDefinitionServiceUploadCountriesResponse>> apiDefinitionUploadCountriesToFirebasePost({ 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Definition/UploadCountriesToFirebase',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Definition/UploadCountriesToFirebase',
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfDefinitionServiceUploadCountriesResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfDefinitionServiceUploadCountriesResponse;
+
+                return Response<RestResultOfDefinitionServiceUploadCountriesResponse>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

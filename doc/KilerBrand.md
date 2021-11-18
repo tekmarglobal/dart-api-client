@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **manufacturer** | **int** |  | [optional] 
 **manufacturerNavigation** | [**KilerManufacturer**](KilerManufacturer.md) |  | [optional] 
 **brandManagerBrand** | [**BuiltList<KilerBrandManagerBrand>**](KilerBrandManagerBrand.md) |  | [optional] 
+**campaignCampaignsBrandBrands** | [**BuiltList<KilerCampaignCampaignsBrandBrands>**](KilerCampaignCampaignsBrandBrands.md) |  | [optional] 
 **product** | [**BuiltList<KilerProduct>**](KilerProduct.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

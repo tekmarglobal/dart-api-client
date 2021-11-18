@@ -33,6 +33,8 @@ class _$KilerConfiguration extends KilerConfiguration {
   @override
   final String affiliateLinkDomain;
   @override
+  final String s3bucketName;
+  @override
   final KilerProduct bagProductNavigation;
   @override
   final KilerCategory defaultCategoryNavigation;
@@ -56,6 +58,7 @@ class _$KilerConfiguration extends KilerConfiguration {
       this.gcrecord,
       this.timeZone,
       this.affiliateLinkDomain,
+      this.s3bucketName,
       this.bagProductNavigation,
       this.defaultCategoryNavigation,
       this.deliveryProductNavigation})
@@ -86,6 +89,7 @@ class _$KilerConfiguration extends KilerConfiguration {
         gcrecord == other.gcrecord &&
         timeZone == other.timeZone &&
         affiliateLinkDomain == other.affiliateLinkDomain &&
+        s3bucketName == other.s3bucketName &&
         bagProductNavigation == other.bagProductNavigation &&
         defaultCategoryNavigation == other.defaultCategoryNavigation &&
         deliveryProductNavigation == other.deliveryProductNavigation;
@@ -107,19 +111,21 @@ class _$KilerConfiguration extends KilerConfiguration {
                                                 $jc(
                                                     $jc(
                                                         $jc(
-                                                            $jc(0,
-                                                                oid.hashCode),
-                                                            name.hashCode),
-                                                        active.hashCode),
-                                                    s3keyId.hashCode),
-                                                s3keySecret.hashCode),
-                                            optimisticLockField.hashCode),
-                                        defaultCategory.hashCode),
-                                    bagProduct.hashCode),
-                                deliveryProduct.hashCode),
-                            gcrecord.hashCode),
-                        timeZone.hashCode),
-                    affiliateLinkDomain.hashCode),
+                                                            $jc(
+                                                                $jc(0,
+                                                                    oid.hashCode),
+                                                                name.hashCode),
+                                                            active.hashCode),
+                                                        s3keyId.hashCode),
+                                                    s3keySecret.hashCode),
+                                                optimisticLockField.hashCode),
+                                            defaultCategory.hashCode),
+                                        bagProduct.hashCode),
+                                    deliveryProduct.hashCode),
+                                gcrecord.hashCode),
+                            timeZone.hashCode),
+                        affiliateLinkDomain.hashCode),
+                    s3bucketName.hashCode),
                 bagProductNavigation.hashCode),
             defaultCategoryNavigation.hashCode),
         deliveryProductNavigation.hashCode));
@@ -140,6 +146,7 @@ class _$KilerConfiguration extends KilerConfiguration {
           ..add('gcrecord', gcrecord)
           ..add('timeZone', timeZone)
           ..add('affiliateLinkDomain', affiliateLinkDomain)
+          ..add('s3bucketName', s3bucketName)
           ..add('bagProductNavigation', bagProductNavigation)
           ..add('defaultCategoryNavigation', defaultCategoryNavigation)
           ..add('deliveryProductNavigation', deliveryProductNavigation))
@@ -203,6 +210,10 @@ class KilerConfigurationBuilder
   set affiliateLinkDomain(String affiliateLinkDomain) =>
       _$this._affiliateLinkDomain = affiliateLinkDomain;
 
+  String _s3bucketName;
+  String get s3bucketName => _$this._s3bucketName;
+  set s3bucketName(String s3bucketName) => _$this._s3bucketName = s3bucketName;
+
   KilerProductBuilder _bagProductNavigation;
   KilerProductBuilder get bagProductNavigation =>
       _$this._bagProductNavigation ??= new KilerProductBuilder();
@@ -242,6 +253,7 @@ class KilerConfigurationBuilder
       _gcrecord = $v.gcrecord;
       _timeZone = $v.timeZone;
       _affiliateLinkDomain = $v.affiliateLinkDomain;
+      _s3bucketName = $v.s3bucketName;
       _bagProductNavigation = $v.bagProductNavigation?.toBuilder();
       _defaultCategoryNavigation = $v.defaultCategoryNavigation?.toBuilder();
       _deliveryProductNavigation = $v.deliveryProductNavigation?.toBuilder();
@@ -279,6 +291,7 @@ class KilerConfigurationBuilder
               gcrecord: gcrecord,
               timeZone: timeZone,
               affiliateLinkDomain: affiliateLinkDomain,
+              s3bucketName: s3bucketName,
               bagProductNavigation: _bagProductNavigation?.build(),
               defaultCategoryNavigation: _defaultCategoryNavigation?.build(),
               deliveryProductNavigation: _deliveryProductNavigation?.build());

@@ -9,16 +9,19 @@ import 'package:openapi/model/kiler_affiliate_link.dart';
 import 'package:openapi/model/kiler_agreement_log.dart';
 import 'package:openapi/model/kiler_call.dart';
 import 'package:openapi/model/kiler_order.dart';
+import 'package:openapi/model/kiler_product_recommendation.dart';
 import 'package:openapi/model/kiler_affiliate_click.dart';
 import 'package:openapi/model/kiler_address.dart';
 import 'package:openapi/model/kiler_sms_verification.dart';
 import 'package:openapi/model/kiler_cart.dart';
 import 'package:openapi/model/kiler_customer_favorite_list.dart';
+import 'package:openapi/model/kiler_customer_message.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_ticket.dart';
 import 'package:openapi/model/kiler_device_login.dart';
 import 'package:openapi/model/kiler_customer_login_attempt.dart';
 import 'package:openapi/model/kiler_payment.dart';
+import 'package:openapi/model/kiler_customer_valid_customers_campaign_campaigns.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -143,6 +146,14 @@ abstract class KilerCustomer implements Built<KilerCustomer, KilerCustomerBuilde
     BuiltList<KilerCustomerLoginAttempt> get customerLoginAttempt;
 
     @nullable
+    @BuiltValueField(wireName: r'customerMessage')
+    BuiltList<KilerCustomerMessage> get customerMessage;
+
+    @nullable
+    @BuiltValueField(wireName: r'customerValidCustomersCampaignCampaigns')
+    BuiltList<KilerCustomerValidCustomersCampaignCampaigns> get customerValidCustomersCampaignCampaigns;
+
+    @nullable
     @BuiltValueField(wireName: r'deviceLogin')
     BuiltList<KilerDeviceLogin> get deviceLogin;
 
@@ -153,6 +164,10 @@ abstract class KilerCustomer implements Built<KilerCustomer, KilerCustomerBuilde
     @nullable
     @BuiltValueField(wireName: r'payment')
     BuiltList<KilerPayment> get payment;
+
+    @nullable
+    @BuiltValueField(wireName: r'productRecommendation')
+    BuiltList<KilerProductRecommendation> get productRecommendation;
 
     @nullable
     @BuiltValueField(wireName: r'smsVerification')
@@ -357,6 +372,18 @@ class _$KilerCustomerSerializer implements StructuredSerializer<KilerCustomer> {
                 ..add(serializers.serialize(object.customerLoginAttempt,
                     specifiedType: const FullType(BuiltList, [FullType(KilerCustomerLoginAttempt)])));
         }
+        if (object.customerMessage != null) {
+            result
+                ..add(r'customerMessage')
+                ..add(serializers.serialize(object.customerMessage,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerCustomerMessage)])));
+        }
+        if (object.customerValidCustomersCampaignCampaigns != null) {
+            result
+                ..add(r'customerValidCustomersCampaignCampaigns')
+                ..add(serializers.serialize(object.customerValidCustomersCampaignCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerCustomerValidCustomersCampaignCampaigns)])));
+        }
         if (object.deviceLogin != null) {
             result
                 ..add(r'deviceLogin')
@@ -374,6 +401,12 @@ class _$KilerCustomerSerializer implements StructuredSerializer<KilerCustomer> {
                 ..add(r'payment')
                 ..add(serializers.serialize(object.payment,
                     specifiedType: const FullType(BuiltList, [FullType(KilerPayment)])));
+        }
+        if (object.productRecommendation != null) {
+            result
+                ..add(r'productRecommendation')
+                ..add(serializers.serialize(object.productRecommendation,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerProductRecommendation)])));
         }
         if (object.smsVerification != null) {
             result
@@ -517,6 +550,14 @@ class _$KilerCustomerSerializer implements StructuredSerializer<KilerCustomer> {
                     result.customerLoginAttempt.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerCustomerLoginAttempt)])) as BuiltList<KilerCustomerLoginAttempt>);
                     break;
+                case r'customerMessage':
+                    result.customerMessage.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerCustomerMessage)])) as BuiltList<KilerCustomerMessage>);
+                    break;
+                case r'customerValidCustomersCampaignCampaigns':
+                    result.customerValidCustomersCampaignCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerCustomerValidCustomersCampaignCampaigns)])) as BuiltList<KilerCustomerValidCustomersCampaignCampaigns>);
+                    break;
                 case r'deviceLogin':
                     result.deviceLogin.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerDeviceLogin)])) as BuiltList<KilerDeviceLogin>);
@@ -528,6 +569,10 @@ class _$KilerCustomerSerializer implements StructuredSerializer<KilerCustomer> {
                 case r'payment':
                     result.payment.replace(serializers.deserialize(value,
                         specifiedType: const FullType(BuiltList, [FullType(KilerPayment)])) as BuiltList<KilerPayment>);
+                    break;
+                case r'productRecommendation':
+                    result.productRecommendation.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerProductRecommendation)])) as BuiltList<KilerProductRecommendation>);
                     break;
                 case r'smsVerification':
                     result.smsVerification.replace(serializers.deserialize(value,

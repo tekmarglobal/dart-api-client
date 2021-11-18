@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/migration_api.dart';
 import 'package:test/test.dart';
@@ -10,21 +17,6 @@ void main() {
   group(MigrationApi, () {
     //Future<bool> apiMigrationCreateregionpriceGet() async
     test('test apiMigrationCreateregionpriceGet', () async {
-      // TODO
-    });
-
-    //Future apiMigrationMatchCitiesGet() async
-    test('test apiMigrationMatchCitiesGet', () async {
-      // TODO
-    });
-
-    //Future apiMigrationMatchCountiesGet() async
-    test('test apiMigrationMatchCountiesGet', () async {
-      // TODO
-    });
-
-    //Future apiMigrationMatchNeighborhoodGet() async
-    test('test apiMigrationMatchNeighborhoodGet', () async {
       // TODO
     });
 

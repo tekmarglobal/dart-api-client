@@ -11,6 +11,7 @@ import 'package:built_value/serializer.dart';
 
     import 'package:openapi/model/order_service_get_order_request.dart';
 import 'package:openapi/model/order_service_order_request.dart';
+import 'package:openapi/model/order_service_patch_order_request.dart';
 import 'package:openapi/model/order_service_update_order_request.dart';
 import 'package:openapi/model/rest_result_of_order_service_get_order_list_response.dart';
 import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
@@ -303,7 +304,8 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
         /// 
         ///
         /// 
-        Future<Response<String>> apiOrderSendmailPost({ 
+        Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderPatchOrderPost({ 
+            OrderServicePatchOrderRequest body,
             CancelToken cancelToken,
             Map<String, dynamic> headers,
             Map<String, dynamic> extra,
@@ -312,7 +314,7 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             ProgressCallback onReceiveProgress,
             }) async {
             final _requestOpt = RequestOptions(
-            path: r'/api/Order/sendmail',
+            path: r'/api/Order/PatchOrder',
             method: 'POST',
             headers: <String, dynamic>{
             ...?headers,
@@ -331,6 +333,8 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             validateStatus: validateStatus,
             contentType: [
                 'application/json',
+                'text/json',
+                'application/_*+json',
             ].first,
             cancelToken: cancelToken,
             onSendProgress: onSendProgress,
@@ -356,13 +360,18 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             validateStatus: validateStatus,
             contentType: [
                 'application/json',
+                'text/json',
+                'application/_*+json',
             ].first,
             );
 
             dynamic _bodyData;
 
+                        const _type = FullType(OrderServicePatchOrderRequest);
+                        _bodyData = _serializers.serialize(body, specifiedType: _type);
+
             final _response = await _dio.request<dynamic>(
-            r'/api/Order/sendmail',
+            r'/api/Order/PatchOrder',
             data: _bodyData,
             options: _request,
             cancelToken: cancelToken,
@@ -370,9 +379,13 @@ import 'package:openapi/model/rest_result_of_order_service_order_response.dart';
             onReceiveProgress: onReceiveProgress,
             );
 
-                            final String _responseData = _response.data as String;
+                            const _responseType = FullType(RestResultOfOrderServiceOrderResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfOrderServiceOrderResponse;
 
-                return Response<String>(
+                return Response<RestResultOfOrderServiceOrderResponse>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

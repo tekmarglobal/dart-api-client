@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **gcrecord** | **int** |  | [optional] 
 **timeZone** | **int** |  | [optional] 
 **affiliateLinkDomain** | **String** |  | [optional] 
+**s3bucketName** | **String** |  | [optional] 
 **bagProductNavigation** | [**KilerProduct**](KilerProduct.md) |  | [optional] 
 **defaultCategoryNavigation** | [**KilerCategory**](KilerCategory.md) |  | [optional] 
 **deliveryProductNavigation** | [**KilerProduct**](KilerProduct.md) |  | [optional] 

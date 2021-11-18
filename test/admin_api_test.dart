@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/admin_api.dart';
 import 'package:test/test.dart';
@@ -8,33 +15,58 @@ void main() {
   final instance = Openapi().getAdminApi();
 
   group(AdminApi, () {
-    //Future<TimeSlotResponseListRestResult> apiAdminGenerateTimeSlotsGet({ int region }) async
+    //Future<RestResultOfListOfAdminServiceBranchResponse> apiAdminBranchPost() async
+    test('test apiAdminBranchPost', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfAdminServiceCompanyResponse> apiAdminCompaniesPost() async
+    test('test apiAdminCompaniesPost', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfAdminServiceTimeSlotResponse> apiAdminGenerateTimeSlotsGet({ int region }) async
     test('test apiAdminGenerateTimeSlotsGet', () async {
       // TODO
     });
 
-    //Future<TimeSlotResponseListRestResult> apiAdminGenerateTimeSlotsPost({ int region }) async
+    //Future<RestResultOfListOfAdminServiceTimeSlotResponse> apiAdminGenerateTimeSlotsPost({ int region }) async
     test('test apiAdminGenerateTimeSlotsPost', () async {
       // TODO
     });
 
-    //Future<ConfigurationRestResult> apiAdminGetConfigurationGet() async
+    //Future<RestResultOfKilerConfiguration> apiAdminGetConfigurationGet() async
     test('test apiAdminGetConfigurationGet', () async {
       // TODO
     });
 
-    //Future<NeighborResponseListRestResult> apiAdminRegionNeighborhoodPost({ RegionNeighborhoodRequest regionNeighborhoodRequest }) async
+    //Future<String> apiAdminGetProductGet({ String erpId, int productId }) async
+    test('test apiAdminGetProductGet', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfAdminServiceAdminNeighborResponse> apiAdminRegionNeighborhoodPost({ AdminServiceRegionNeighborhoodRequest body }) async
     test('test apiAdminRegionNeighborhoodPost', () async {
       // TODO
     });
 
-    //Future<RegionResponseListRestResult> apiAdminRegionPost({ int regionId }) async
+    //Future<RestResultOfSystemInt32> apiAdminRegionPopulationGet({ int gpsId }) async
+    test('test apiAdminRegionPopulationGet', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfAdminServiceRegionResponse> apiAdminRegionPost({ int regionId }) async
     test('test apiAdminRegionPost', () async {
       // TODO
     });
 
-    //Future<NeighborResponseRestResult> apiAdminUpdateRegionNeighborhoodPost({ UpdateRegionNeighborhoodRequest updateRegionNeighborhoodRequest }) async
+    //Future<RestResultOfAdminServiceAdminNeighborResponse> apiAdminUpdateRegionNeighborhoodPost({ AdminServiceUpdateRegionNeighborhoodRequest body }) async
     test('test apiAdminUpdateRegionNeighborhoodPost', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfAdminServiceUploadImageResponse> apiAdminUploadProductImagePost({ Uint8List file }) async
+    test('test apiAdminUploadProductImagePost', () async {
       // TODO
     });
 

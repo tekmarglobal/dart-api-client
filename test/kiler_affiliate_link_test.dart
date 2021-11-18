@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_affiliate_link.dart';
 import 'package:test/test.dart';
 
 // tests for KilerAffiliateLink
 void main() {
-  final instance = KilerAffiliateLink();
+  final instance = KilerAffiliateLinkBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerAffiliateLink, () {
     // int oid

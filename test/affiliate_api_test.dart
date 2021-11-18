@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/affiliate_api.dart';
 import 'package:test/test.dart';
@@ -8,12 +15,7 @@ void main() {
   final instance = Openapi().getAffiliateApi();
 
   group(AffiliateApi, () {
-    //Future apiAffiliateDetailUrllinkGet(String urllink) async
-    test('test apiAffiliateDetailUrllinkGet', () async {
-      // TODO
-    });
-
-    //Future<String> apiAffiliateGetShareLinkPost({ LinkRequest linkRequest }) async
+    //Future<String> apiAffiliateGetShareLinkPost({ AffiliateServiceLinkRequest body }) async
     test('test apiAffiliateGetShareLinkPost', () async {
       // TODO
     });

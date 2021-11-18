@@ -15,6 +15,8 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
   @override
   final int timeStotId;
   @override
+  final int timeSlotId;
+  @override
   final String paymentCode;
   @override
   final String orderNote;
@@ -29,6 +31,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
       {this.deliveryAddressId,
       this.billingAddressId,
       this.timeStotId,
+      this.timeSlotId,
       this.paymentCode,
       this.orderNote,
       this.paymentTypeCode})
@@ -50,6 +53,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
         deliveryAddressId == other.deliveryAddressId &&
         billingAddressId == other.billingAddressId &&
         timeStotId == other.timeStotId &&
+        timeSlotId == other.timeSlotId &&
         paymentCode == other.paymentCode &&
         orderNote == other.orderNote &&
         paymentTypeCode == other.paymentTypeCode;
@@ -61,9 +65,11 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc(0, deliveryAddressId.hashCode),
-                        billingAddressId.hashCode),
-                    timeStotId.hashCode),
+                    $jc(
+                        $jc($jc(0, deliveryAddressId.hashCode),
+                            billingAddressId.hashCode),
+                        timeStotId.hashCode),
+                    timeSlotId.hashCode),
                 paymentCode.hashCode),
             orderNote.hashCode),
         paymentTypeCode.hashCode));
@@ -75,6 +81,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
           ..add('deliveryAddressId', deliveryAddressId)
           ..add('billingAddressId', billingAddressId)
           ..add('timeStotId', timeStotId)
+          ..add('timeSlotId', timeSlotId)
           ..add('paymentCode', paymentCode)
           ..add('orderNote', orderNote)
           ..add('paymentTypeCode', paymentTypeCode))
@@ -101,6 +108,10 @@ class OrderServiceOrderRequestBuilder
   int get timeStotId => _$this._timeStotId;
   set timeStotId(int timeStotId) => _$this._timeStotId = timeStotId;
 
+  int _timeSlotId;
+  int get timeSlotId => _$this._timeSlotId;
+  set timeSlotId(int timeSlotId) => _$this._timeSlotId = timeSlotId;
+
   String _paymentCode;
   String get paymentCode => _$this._paymentCode;
   set paymentCode(String paymentCode) => _$this._paymentCode = paymentCode;
@@ -124,6 +135,7 @@ class OrderServiceOrderRequestBuilder
       _deliveryAddressId = $v.deliveryAddressId;
       _billingAddressId = $v.billingAddressId;
       _timeStotId = $v.timeStotId;
+      _timeSlotId = $v.timeSlotId;
       _paymentCode = $v.paymentCode;
       _orderNote = $v.orderNote;
       _paymentTypeCode = $v.paymentTypeCode;
@@ -150,6 +162,7 @@ class OrderServiceOrderRequestBuilder
             deliveryAddressId: deliveryAddressId,
             billingAddressId: billingAddressId,
             timeStotId: timeStotId,
+            timeSlotId: timeSlotId,
             paymentCode: paymentCode,
             orderNote: orderNote,
             paymentTypeCode: paymentTypeCode);

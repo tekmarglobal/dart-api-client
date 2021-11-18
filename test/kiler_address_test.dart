@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_address.dart';
 import 'package:test/test.dart';
 
 // tests for KilerAddress
 void main() {
-  final instance = KilerAddress();
+  final instance = KilerAddressBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerAddress, () {
     // int oid

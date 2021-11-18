@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_permission_policy_user_users_permission_policy_role_roles.dart';
 import 'package:test/test.dart';
 
 // tests for KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles
 void main() {
-  final instance = KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles();
+  final instance = KilerPermissionPolicyUserUsersPermissionPolicyRoleRolesBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles, () {
     // String roles

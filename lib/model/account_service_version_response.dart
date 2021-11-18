@@ -17,6 +17,10 @@ abstract class AccountServiceVersionResponse implements Built<AccountServiceVers
     String get latestCode;
 
     @nullable
+    @BuiltValueField(wireName: r'latestVersion')
+    String get latestVersion;
+
+    @nullable
     @BuiltValueField(wireName: r'isMandatory')
     bool get isMandatory;
 
@@ -47,6 +51,12 @@ class _$AccountServiceVersionResponseSerializer implements StructuredSerializer<
                 ..add(serializers.serialize(object.latestCode,
                     specifiedType: const FullType(String)));
         }
+        if (object.latestVersion != null) {
+            result
+                ..add(r'latestVersion')
+                ..add(serializers.serialize(object.latestVersion,
+                    specifiedType: const FullType(String)));
+        }
         if (object.isMandatory != null) {
             result
                 ..add(r'isMandatory')
@@ -69,6 +79,10 @@ class _$AccountServiceVersionResponseSerializer implements StructuredSerializer<
             switch (key) {
                 case r'latestCode':
                     result.latestCode = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'latestVersion':
+                    result.latestVersion = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'isMandatory':

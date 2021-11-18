@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_product_price.dart';
 import 'package:test/test.dart';
 
 // tests for KilerProductPrice
 void main() {
-  final instance = KilerProductPrice();
+  final instance = KilerProductPriceBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerProductPrice, () {
     // int oid

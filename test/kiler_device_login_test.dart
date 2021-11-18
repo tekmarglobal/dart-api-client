@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_device_login.dart';
 import 'package:test/test.dart';
 
 // tests for KilerDeviceLogin
 void main() {
-  final instance = KilerDeviceLogin();
+  final instance = KilerDeviceLoginBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerDeviceLogin, () {
     // int oid

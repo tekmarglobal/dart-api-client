@@ -5,6 +5,7 @@
 
 // ignore_for_file: unused_import
 
+import 'package:openapi/model/kiler_category_categories_campaign_campaigns.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_configuration.dart';
 import 'package:openapi/model/kiler_category_import_detail.dart';
@@ -84,6 +85,10 @@ abstract class KilerCategory implements Built<KilerCategory, KilerCategoryBuilde
     @nullable
     @BuiltValueField(wireName: r'parentNavigation')
     KilerCategory get parentNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'categoryCategoriesCampaignCampaigns')
+    BuiltList<KilerCategoryCategoriesCampaignCampaigns> get categoryCategoriesCampaignCampaigns;
 
     @nullable
     @BuiltValueField(wireName: r'categoryImportDetail')
@@ -224,6 +229,12 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
                 ..add(serializers.serialize(object.parentNavigation,
                     specifiedType: const FullType(KilerCategory)));
         }
+        if (object.categoryCategoriesCampaignCampaigns != null) {
+            result
+                ..add(r'categoryCategoriesCampaignCampaigns')
+                ..add(serializers.serialize(object.categoryCategoriesCampaignCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerCategoryCategoriesCampaignCampaigns)])));
+        }
         if (object.categoryImportDetail != null) {
             result
                 ..add(r'categoryImportDetail')
@@ -329,6 +340,10 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
                 case r'parentNavigation':
                     result.parentNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerCategory)) as KilerCategory);
+                    break;
+                case r'categoryCategoriesCampaignCampaigns':
+                    result.categoryCategoriesCampaignCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerCategoryCategoriesCampaignCampaigns)])) as BuiltList<KilerCategoryCategoriesCampaignCampaigns>);
                     break;
                 case r'categoryImportDetail':
                     result.categoryImportDetail.replace(serializers.deserialize(value,

@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_customer_favorite_list.dart';
 import 'package:test/test.dart';
 
 // tests for KilerCustomerFavoriteList
 void main() {
-  final instance = KilerCustomerFavoriteList();
+  final instance = KilerCustomerFavoriteListBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerCustomerFavoriteList, () {
     // int oid

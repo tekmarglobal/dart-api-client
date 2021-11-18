@@ -73,9 +73,22 @@ class _$KilerProduct extends KilerProduct {
   @override
   final BuiltList<KilerOrderProduct> orderProduct;
   @override
+  final BuiltList<KilerProductAlternatives>
+      productAlternativesAlternativeProductNavigation;
+  @override
+  final BuiltList<KilerProductAlternatives>
+      productAlternativesProductNavigation;
+  @override
   final BuiltList<KilerProductImage> productImage;
   @override
   final BuiltList<KilerProductImportDetail> productImportDetail;
+  @override
+  final BuiltList<KilerProductProductsCampaignCampaigns>
+      productProductsCampaignCampaigns;
+  @override
+  final BuiltList<
+          KilerProductProductsProductAlternativesProductAlternatives0eac5f03>
+      productProductsProductAlternativesProductAlternatives0eac5f03;
   @override
   final BuiltList<KilerRegionProduct> regionProduct;
 
@@ -115,8 +128,12 @@ class _$KilerProduct extends KilerProduct {
       this.configurationDeliveryProductNavigation,
       this.customerFavoriteList,
       this.orderProduct,
+      this.productAlternativesAlternativeProductNavigation,
+      this.productAlternativesProductNavigation,
       this.productImage,
       this.productImportDetail,
+      this.productProductsCampaignCampaigns,
+      this.productProductsProductAlternativesProductAlternatives0eac5f03,
       this.regionProduct})
       : super._();
 
@@ -165,8 +182,17 @@ class _$KilerProduct extends KilerProduct {
             other.configurationDeliveryProductNavigation &&
         customerFavoriteList == other.customerFavoriteList &&
         orderProduct == other.orderProduct &&
+        productAlternativesAlternativeProductNavigation ==
+            other.productAlternativesAlternativeProductNavigation &&
+        productAlternativesProductNavigation ==
+            other.productAlternativesProductNavigation &&
         productImage == other.productImage &&
         productImportDetail == other.productImportDetail &&
+        productProductsCampaignCampaigns ==
+            other.productProductsCampaignCampaigns &&
+        productProductsProductAlternativesProductAlternatives0eac5f03 ==
+            other
+                .productProductsProductAlternativesProductAlternatives0eac5f03 &&
         regionProduct == other.regionProduct;
   }
 
@@ -190,25 +216,25 @@ class _$KilerProduct extends KilerProduct {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode), maxQuantity.hashCode), minQuantity.hashCode), initalQuantity.hashCode),
-                                                                                quantityStep.hashCode),
-                                                                            erpId.hashCode),
-                                                                        optimisticLockField.hashCode),
-                                                                    productUnit.hashCode),
-                                                                vat.hashCode),
-                                                            menuName.hashCode),
-                                                        weight.hashCode),
-                                                    productTag.hashCode),
-                                                brandNavigation.hashCode),
-                                            productTagNavigation.hashCode),
-                                        supplierNavigation.hashCode),
-                                    categoryProduct.hashCode),
-                                configurationBagProductNavigation.hashCode),
-                            configurationDeliveryProductNavigation.hashCode),
-                        customerFavoriteList.hashCode),
-                    orderProduct.hashCode),
-                productImage.hashCode),
-            productImportDetail.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode), maxQuantity.hashCode), minQuantity.hashCode), initalQuantity.hashCode), quantityStep.hashCode), erpId.hashCode), optimisticLockField.hashCode), productUnit.hashCode),
+                                                                                vat.hashCode),
+                                                                            menuName.hashCode),
+                                                                        weight.hashCode),
+                                                                    productTag.hashCode),
+                                                                brandNavigation.hashCode),
+                                                            productTagNavigation.hashCode),
+                                                        supplierNavigation.hashCode),
+                                                    categoryProduct.hashCode),
+                                                configurationBagProductNavigation.hashCode),
+                                            configurationDeliveryProductNavigation.hashCode),
+                                        customerFavoriteList.hashCode),
+                                    orderProduct.hashCode),
+                                productAlternativesAlternativeProductNavigation.hashCode),
+                            productAlternativesProductNavigation.hashCode),
+                        productImage.hashCode),
+                    productImportDetail.hashCode),
+                productProductsCampaignCampaigns.hashCode),
+            productProductsProductAlternativesProductAlternatives0eac5f03.hashCode),
         regionProduct.hashCode));
   }
 
@@ -249,8 +275,16 @@ class _$KilerProduct extends KilerProduct {
               configurationDeliveryProductNavigation)
           ..add('customerFavoriteList', customerFavoriteList)
           ..add('orderProduct', orderProduct)
+          ..add('productAlternativesAlternativeProductNavigation',
+              productAlternativesAlternativeProductNavigation)
+          ..add('productAlternativesProductNavigation',
+              productAlternativesProductNavigation)
           ..add('productImage', productImage)
           ..add('productImportDetail', productImportDetail)
+          ..add('productProductsCampaignCampaigns',
+              productProductsCampaignCampaigns)
+          ..add('productProductsProductAlternativesProductAlternatives0eac5f03',
+              productProductsProductAlternativesProductAlternatives0eac5f03)
           ..add('regionProduct', regionProduct))
         .toString();
   }
@@ -418,6 +452,29 @@ class KilerProductBuilder
   set orderProduct(ListBuilder<KilerOrderProduct> orderProduct) =>
       _$this._orderProduct = orderProduct;
 
+  ListBuilder<KilerProductAlternatives>
+      _productAlternativesAlternativeProductNavigation;
+  ListBuilder<KilerProductAlternatives>
+      get productAlternativesAlternativeProductNavigation =>
+          _$this._productAlternativesAlternativeProductNavigation ??=
+              new ListBuilder<KilerProductAlternatives>();
+  set productAlternativesAlternativeProductNavigation(
+          ListBuilder<KilerProductAlternatives>
+              productAlternativesAlternativeProductNavigation) =>
+      _$this._productAlternativesAlternativeProductNavigation =
+          productAlternativesAlternativeProductNavigation;
+
+  ListBuilder<KilerProductAlternatives> _productAlternativesProductNavigation;
+  ListBuilder<KilerProductAlternatives>
+      get productAlternativesProductNavigation =>
+          _$this._productAlternativesProductNavigation ??=
+              new ListBuilder<KilerProductAlternatives>();
+  set productAlternativesProductNavigation(
+          ListBuilder<KilerProductAlternatives>
+              productAlternativesProductNavigation) =>
+      _$this._productAlternativesProductNavigation =
+          productAlternativesProductNavigation;
+
   ListBuilder<KilerProductImage> _productImage;
   ListBuilder<KilerProductImage> get productImage =>
       _$this._productImage ??= new ListBuilder<KilerProductImage>();
@@ -431,6 +488,34 @@ class KilerProductBuilder
   set productImportDetail(
           ListBuilder<KilerProductImportDetail> productImportDetail) =>
       _$this._productImportDetail = productImportDetail;
+
+  ListBuilder<KilerProductProductsCampaignCampaigns>
+      _productProductsCampaignCampaigns;
+  ListBuilder<KilerProductProductsCampaignCampaigns>
+      get productProductsCampaignCampaigns =>
+          _$this._productProductsCampaignCampaigns ??=
+              new ListBuilder<KilerProductProductsCampaignCampaigns>();
+  set productProductsCampaignCampaigns(
+          ListBuilder<KilerProductProductsCampaignCampaigns>
+              productProductsCampaignCampaigns) =>
+      _$this._productProductsCampaignCampaigns =
+          productProductsCampaignCampaigns;
+
+  ListBuilder<
+          KilerProductProductsProductAlternativesProductAlternatives0eac5f03>
+      _productProductsProductAlternativesProductAlternatives0eac5f03;
+  ListBuilder<
+          KilerProductProductsProductAlternativesProductAlternatives0eac5f03>
+      get productProductsProductAlternativesProductAlternatives0eac5f03 => _$this
+              ._productProductsProductAlternativesProductAlternatives0eac5f03 ??=
+          new ListBuilder<
+              KilerProductProductsProductAlternativesProductAlternatives0eac5f03>();
+  set productProductsProductAlternativesProductAlternatives0eac5f03(
+          ListBuilder<
+                  KilerProductProductsProductAlternativesProductAlternatives0eac5f03>
+              productProductsProductAlternativesProductAlternatives0eac5f03) =>
+      _$this._productProductsProductAlternativesProductAlternatives0eac5f03 =
+          productProductsProductAlternativesProductAlternatives0eac5f03;
 
   ListBuilder<KilerRegionProduct> _regionProduct;
   ListBuilder<KilerRegionProduct> get regionProduct =>
@@ -479,8 +564,17 @@ class KilerProductBuilder
           $v.configurationDeliveryProductNavigation?.toBuilder();
       _customerFavoriteList = $v.customerFavoriteList?.toBuilder();
       _orderProduct = $v.orderProduct?.toBuilder();
+      _productAlternativesAlternativeProductNavigation =
+          $v.productAlternativesAlternativeProductNavigation?.toBuilder();
+      _productAlternativesProductNavigation =
+          $v.productAlternativesProductNavigation?.toBuilder();
       _productImage = $v.productImage?.toBuilder();
       _productImportDetail = $v.productImportDetail?.toBuilder();
+      _productProductsCampaignCampaigns =
+          $v.productProductsCampaignCampaigns?.toBuilder();
+      _productProductsProductAlternativesProductAlternatives0eac5f03 = $v
+          .productProductsProductAlternativesProductAlternatives0eac5f03
+          ?.toBuilder();
       _regionProduct = $v.regionProduct?.toBuilder();
       _$v = null;
     }
@@ -538,8 +632,17 @@ class KilerProductBuilder
                   _configurationDeliveryProductNavigation?.build(),
               customerFavoriteList: _customerFavoriteList?.build(),
               orderProduct: _orderProduct?.build(),
+              productAlternativesAlternativeProductNavigation:
+                  _productAlternativesAlternativeProductNavigation?.build(),
+              productAlternativesProductNavigation:
+                  _productAlternativesProductNavigation?.build(),
               productImage: _productImage?.build(),
               productImportDetail: _productImportDetail?.build(),
+              productProductsCampaignCampaigns:
+                  _productProductsCampaignCampaigns?.build(),
+              productProductsProductAlternativesProductAlternatives0eac5f03:
+                  _productProductsProductAlternativesProductAlternatives0eac5f03
+                      ?.build(),
               regionProduct: _regionProduct?.build());
     } catch (_) {
       String _$failedField;
@@ -560,10 +663,19 @@ class KilerProductBuilder
         _customerFavoriteList?.build();
         _$failedField = 'orderProduct';
         _orderProduct?.build();
+        _$failedField = 'productAlternativesAlternativeProductNavigation';
+        _productAlternativesAlternativeProductNavigation?.build();
+        _$failedField = 'productAlternativesProductNavigation';
+        _productAlternativesProductNavigation?.build();
         _$failedField = 'productImage';
         _productImage?.build();
         _$failedField = 'productImportDetail';
         _productImportDetail?.build();
+        _$failedField = 'productProductsCampaignCampaigns';
+        _productProductsCampaignCampaigns?.build();
+        _$failedField =
+            'productProductsProductAlternativesProductAlternatives0eac5f03';
+        _productProductsProductAlternativesProductAlternatives0eac5f03?.build();
         _$failedField = 'regionProduct';
         _regionProduct?.build();
       } catch (e) {

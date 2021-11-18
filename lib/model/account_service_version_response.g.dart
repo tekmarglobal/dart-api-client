@@ -11,13 +11,16 @@ class _$AccountServiceVersionResponse extends AccountServiceVersionResponse {
   @override
   final String latestCode;
   @override
+  final String latestVersion;
+  @override
   final bool isMandatory;
 
   factory _$AccountServiceVersionResponse(
           [void Function(AccountServiceVersionResponseBuilder) updates]) =>
       (new AccountServiceVersionResponseBuilder()..update(updates)).build();
 
-  _$AccountServiceVersionResponse._({this.latestCode, this.isMandatory})
+  _$AccountServiceVersionResponse._(
+      {this.latestCode, this.latestVersion, this.isMandatory})
       : super._();
 
   @override
@@ -34,18 +37,21 @@ class _$AccountServiceVersionResponse extends AccountServiceVersionResponse {
     if (identical(other, this)) return true;
     return other is AccountServiceVersionResponse &&
         latestCode == other.latestCode &&
+        latestVersion == other.latestVersion &&
         isMandatory == other.isMandatory;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, latestCode.hashCode), isMandatory.hashCode));
+    return $jf($jc($jc($jc(0, latestCode.hashCode), latestVersion.hashCode),
+        isMandatory.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AccountServiceVersionResponse')
           ..add('latestCode', latestCode)
+          ..add('latestVersion', latestVersion)
           ..add('isMandatory', isMandatory))
         .toString();
   }
@@ -61,6 +67,11 @@ class AccountServiceVersionResponseBuilder
   String get latestCode => _$this._latestCode;
   set latestCode(String latestCode) => _$this._latestCode = latestCode;
 
+  String _latestVersion;
+  String get latestVersion => _$this._latestVersion;
+  set latestVersion(String latestVersion) =>
+      _$this._latestVersion = latestVersion;
+
   bool _isMandatory;
   bool get isMandatory => _$this._isMandatory;
   set isMandatory(bool isMandatory) => _$this._isMandatory = isMandatory;
@@ -73,6 +84,7 @@ class AccountServiceVersionResponseBuilder
     final $v = _$v;
     if ($v != null) {
       _latestCode = $v.latestCode;
+      _latestVersion = $v.latestVersion;
       _isMandatory = $v.isMandatory;
       _$v = null;
     }
@@ -94,7 +106,9 @@ class AccountServiceVersionResponseBuilder
   _$AccountServiceVersionResponse build() {
     final _$result = _$v ??
         new _$AccountServiceVersionResponse._(
-            latestCode: latestCode, isMandatory: isMandatory);
+            latestCode: latestCode,
+            latestVersion: latestVersion,
+            isMandatory: isMandatory);
     replace(_$result);
     return _$result;
   }

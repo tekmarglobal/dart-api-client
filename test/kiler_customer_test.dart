@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_customer.dart';
 import 'package:test/test.dart';
 
 // tests for KilerCustomer
 void main() {
-  final instance = KilerCustomer();
+  final instance = KilerCustomerBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerCustomer, () {
     // int oid
@@ -151,6 +159,11 @@ void main() {
       // TODO
     });
 
+    // BuiltList<KilerCustomerMessage> customerMessage
+    test('to test the property `customerMessage`', () async {
+      // TODO
+    });
+
     // BuiltList<KilerDeviceLogin> deviceLogin
     test('to test the property `deviceLogin`', () async {
       // TODO
@@ -163,6 +176,11 @@ void main() {
 
     // BuiltList<KilerPayment> payment
     test('to test the property `payment`', () async {
+      // TODO
+    });
+
+    // BuiltList<KilerProductRecommendation> productRecommendation
+    test('to test the property `productRecommendation`', () async {
       // TODO
     });
 

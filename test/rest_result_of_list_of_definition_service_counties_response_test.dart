@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/rest_result_of_list_of_definition_service_counties_response.dart';
 import 'package:test/test.dart';
 
 // tests for RestResultOfListOfDefinitionServiceCountiesResponse
 void main() {
-  final instance = RestResultOfListOfDefinitionServiceCountiesResponse();
+  final instance = RestResultOfListOfDefinitionServiceCountiesResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(RestResultOfListOfDefinitionServiceCountiesResponse, () {
     // bool success

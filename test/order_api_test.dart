@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/order_api.dart';
 import 'package:test/test.dart';
@@ -8,28 +15,18 @@ void main() {
   final instance = Openapi().getOrderApi();
 
   group(OrderApi, () {
-    //Future<OrderResponseRestResult> apiOrderCreateOrderPost({ OrderRequest orderRequest }) async
+    //Future<RestResultOfOrderServiceOrderResponse> apiOrderCreateOrderPost({ OrderServiceOrderRequest body }) async
     test('test apiOrderCreateOrderPost', () async {
       // TODO
     });
 
-    //Future<BuiltList<Mail>> apiOrderGenerateOrderMailPost({ int orderId }) async
-    test('test apiOrderGenerateOrderMailPost', () async {
-      // TODO
-    });
-
-    //Future<GetOrderListResponseRestResult> apiOrderGetOrderListPost() async
+    //Future<RestResultOfOrderServiceGetOrderListResponse> apiOrderGetOrderListPost() async
     test('test apiOrderGetOrderListPost', () async {
       // TODO
     });
 
-    //Future<OrderResponseRestResult> apiOrderGetOrderPost({ GetOrderRequest getOrderRequest }) async
+    //Future<RestResultOfOrderServiceOrderResponse> apiOrderGetOrderPost({ OrderServiceGetOrderRequest body }) async
     test('test apiOrderGetOrderPost', () async {
-      // TODO
-    });
-
-    //Future apiOrderSendToOlimposPost() async
-    test('test apiOrderSendToOlimposPost', () async {
       // TODO
     });
 
@@ -38,7 +35,7 @@ void main() {
       // TODO
     });
 
-    //Future<OrderResponseRestResult> apiOrderUpdateStatusPost({ UpdateOrderRequest updateOrderRequest }) async
+    //Future<RestResultOfOrderServiceOrderResponse> apiOrderUpdateStatusPost({ OrderServiceUpdateOrderRequest body }) async
     test('test apiOrderUpdateStatusPost', () async {
       // TODO
     });

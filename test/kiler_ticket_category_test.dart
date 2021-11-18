@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_ticket_category.dart';
 import 'package:test/test.dart';
 
 // tests for KilerTicketCategory
 void main() {
-  final instance = KilerTicketCategory();
+  final instance = KilerTicketCategoryBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerTicketCategory, () {
     // int oid

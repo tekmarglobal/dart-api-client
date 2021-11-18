@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/customer_service_r_address.dart';
 import 'package:test/test.dart';
 
 // tests for CustomerServiceRAddress
 void main() {
-  final instance = CustomerServiceRAddress();
+  final instance = CustomerServiceRAddressBuilder();
+  // TODO add properties to the builder and call build()
 
   group(CustomerServiceRAddress, () {
     // int adressId

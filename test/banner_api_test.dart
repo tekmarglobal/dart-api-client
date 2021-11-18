@@ -1,3 +1,10 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/api.dart';
 import 'package:openapi/api/banner_api.dart';
 import 'package:test/test.dart';
@@ -8,12 +15,12 @@ void main() {
   final instance = Openapi().getBannerApi();
 
   group(BannerApi, () {
-    //Future<BannerResponseRestResult> apiBannerGetBannersPost() async
+    //Future<RestResultOfBannerServiceBannerResponse> apiBannerGetBannersPost() async
     test('test apiBannerGetBannersPost', () async {
       // TODO
     });
 
-    //Future<BannerResponseRestResult> apiBannerUpdateBannerPost({ BannerRequest bannerRequest }) async
+    //Future<RestResultOfBannerServiceBannerResponse> apiBannerUpdateBannerPost({ BannerServiceBannerRequest body }) async
     test('test apiBannerUpdateBannerPost', () async {
       // TODO
     });

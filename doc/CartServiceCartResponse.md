@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **bagTotal** | **double** |  | [optional] 
 **bagAmount** | **int** |  | [optional] 
 **estimatedFee** | **double** |  | [optional] 
+**appliedCampaigns** | [**BuiltList<CartServiceCampaignResponse>**](CartServiceCampaignResponse.md) |  | [optional] 
+**campaignTotalDiscount** | **double** |  | [optional] 
 **cartProducts** | [**BuiltList<CartServiceRCartProducts>**](CartServiceRCartProducts.md) |  | [optional] 
 **cardProducts** | [**BuiltList<CartServiceRCartProducts>**](CartServiceRCartProducts.md) |  | [optional] 
 

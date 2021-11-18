@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/admin_service_company_response.dart';
 import 'package:test/test.dart';
 
 // tests for AdminServiceCompanyResponse
 void main() {
-  final instance = AdminServiceCompanyResponse();
+  final instance = AdminServiceCompanyResponseBuilder();
+  // TODO add properties to the builder and call build()
 
   group(AdminServiceCompanyResponse, () {
     // String name

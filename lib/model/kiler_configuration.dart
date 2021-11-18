@@ -63,6 +63,10 @@ abstract class KilerConfiguration implements Built<KilerConfiguration, KilerConf
     String get affiliateLinkDomain;
 
     @nullable
+    @BuiltValueField(wireName: r's3bucketName')
+    String get s3bucketName;
+
+    @nullable
     @BuiltValueField(wireName: r'bagProductNavigation')
     KilerProduct get bagProductNavigation;
 
@@ -167,6 +171,12 @@ class _$KilerConfigurationSerializer implements StructuredSerializer<KilerConfig
                 ..add(serializers.serialize(object.affiliateLinkDomain,
                     specifiedType: const FullType(String)));
         }
+        if (object.s3bucketName != null) {
+            result
+                ..add(r's3bucketName')
+                ..add(serializers.serialize(object.s3bucketName,
+                    specifiedType: const FullType(String)));
+        }
         if (object.bagProductNavigation != null) {
             result
                 ..add(r'bagProductNavigation')
@@ -245,6 +255,10 @@ class _$KilerConfigurationSerializer implements StructuredSerializer<KilerConfig
                     break;
                 case r'affiliateLinkDomain':
                     result.affiliateLinkDomain = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r's3bucketName':
+                    result.s3bucketName = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'bagProductNavigation':

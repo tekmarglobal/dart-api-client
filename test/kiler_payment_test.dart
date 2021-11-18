@@ -1,9 +1,17 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.7
+
+// ignore_for_file: unused_import
+
 import 'package:openapi/model/kiler_payment.dart';
 import 'package:test/test.dart';
 
 // tests for KilerPayment
 void main() {
-  final instance = KilerPayment();
+  final instance = KilerPaymentBuilder();
+  // TODO add properties to the builder and call build()
 
   group(KilerPayment, () {
     // int oid

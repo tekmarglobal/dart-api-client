@@ -9,15 +9,108 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiCartAddCampaignByCodePost**](CartApi.md#apicartaddcampaignbycodepost) | **post** /api/Cart/AddCampaignByCode | 
+[**apiCartApplyCampaignPost**](CartApi.md#apicartapplycampaignpost) | **post** /api/Cart/ApplyCampaign | 
 [**apiCartCreateCartPost**](CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 [**apiCartDeleteCardDelete**](CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 [**apiCartDeleteCartDelete**](CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
+[**apiCartGetCampaignsGet**](CartApi.md#apicartgetcampaignsget) | **get** /api/Cart/GetCampaigns | 
 [**apiCartGetTimeSlotsPost**](CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
 [**apiCartPost**](CartApi.md#apicartpost) | **post** /api/Cart | 
 [**apiCartUpdateCartPost**](CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
 [**apiCartUpdateCartRegionPost**](CartApi.md#apicartupdatecartregionpost) | **post** /api/Cart/UpdateCartRegion | 
 [**apiCartUpdateTimeslotPost**](CartApi.md#apicartupdatetimeslotpost) | **post** /api/Cart/UpdateTimeslot | 
 
+
+# **apiCartAddCampaignByCodePost**
+> RestResultOfCartServiceCampaignResponse apiCartAddCampaignByCodePost(campaignCode)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CartApi();
+var campaignCode = campaignCode_example; // String | 
+
+try { 
+    var result = api_instance.apiCartAddCampaignByCodePost(campaignCode);
+    print(result);
+} catch (e) {
+    print('Exception when calling CartApi->apiCartAddCampaignByCodePost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignCode** | **String**|  | [optional] 
+
+### Return type
+
+[**RestResultOfCartServiceCampaignResponse**](RestResultOfCartServiceCampaignResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCartApplyCampaignPost**
+> RestResultOfCartServiceCampaignApplyResponse apiCartApplyCampaignPost(campaignId)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CartApi();
+var campaignId = 56; // int | 
+
+try { 
+    var result = api_instance.apiCartApplyCampaignPost(campaignId);
+    print(result);
+} catch (e) {
+    print('Exception when calling CartApi->apiCartApplyCampaignPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaignId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfCartServiceCampaignApplyResponse**](RestResultOfCartServiceCampaignApplyResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCartCreateCartPost**
 > RestResultOfCartServiceCreateCartResponse apiCartCreateCartPost(body)
@@ -134,6 +227,47 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestResultOfCartServiceCartResponse**](RestResultOfCartServiceCartResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCartGetCampaignsGet**
+> RestResultOfListOfCartServiceCampaignResponse apiCartGetCampaignsGet()
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new CartApi();
+
+try { 
+    var result = api_instance.apiCartGetCampaignsGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling CartApi->apiCartGetCampaignsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RestResultOfListOfCartServiceCampaignResponse**](RestResultOfListOfCartServiceCampaignResponse.md)
 
 ### Authorization
 

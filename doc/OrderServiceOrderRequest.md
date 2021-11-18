@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **deliveryAddressId** | **int** |  | [optional] 
 **billingAddressId** | **int** |  | [optional] 
 **timeStotId** | **int** |  | [optional] 
+**timeSlotId** | **int** |  | [optional] 
 **paymentCode** | **String** |  | [optional] 
 **orderNote** | **String** |  | [optional] 
 **paymentTypeCode** | **String** |  | [optional] 

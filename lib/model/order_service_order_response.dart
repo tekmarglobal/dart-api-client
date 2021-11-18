@@ -7,6 +7,7 @@
 
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/order_service_r_order_products.dart';
+import 'package:openapi/model/order_service_campaign_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -85,6 +86,14 @@ abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderRespo
     @nullable
     @BuiltValueField(wireName: r'region')
     int get region;
+
+    @nullable
+    @BuiltValueField(wireName: r'appliedCampaigns')
+    BuiltList<OrderServiceCampaignResponse> get appliedCampaigns;
+
+    @nullable
+    @BuiltValueField(wireName: r'campaignTotalDiscount')
+    double get campaignTotalDiscount;
 
     OrderServiceOrderResponse._();
 
@@ -215,6 +224,18 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                 ..add(serializers.serialize(object.region,
                     specifiedType: const FullType(int)));
         }
+        if (object.appliedCampaigns != null) {
+            result
+                ..add(r'appliedCampaigns')
+                ..add(serializers.serialize(object.appliedCampaigns,
+                    specifiedType: const FullType(BuiltList, [FullType(OrderServiceCampaignResponse)])));
+        }
+        if (object.campaignTotalDiscount != null) {
+            result
+                ..add(r'campaignTotalDiscount')
+                ..add(serializers.serialize(object.campaignTotalDiscount,
+                    specifiedType: const FullType(double)));
+        }
         return result;
     }
 
@@ -300,6 +321,14 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                 case r'region':
                     result.region = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'appliedCampaigns':
+                    result.appliedCampaigns.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(OrderServiceCampaignResponse)])) as BuiltList<OrderServiceCampaignResponse>);
+                    break;
+                case r'campaignTotalDiscount':
+                    result.campaignTotalDiscount = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
                     break;
             }
         }

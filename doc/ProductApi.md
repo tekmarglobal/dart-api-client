@@ -13,10 +13,10 @@ Method | HTTP request | Description
 [**apiProductDeleteFavoriteDelete**](ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 [**apiProductGetFavoriteListPost**](ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
 [**apiProductPost**](ProductApi.md#apiproductpost) | **post** /api/Product | 
+[**apiProductProductAlternativesPost**](ProductApi.md#apiproductproductalternativespost) | **post** /api/Product/ProductAlternatives | 
 [**apiProductProductListPost**](ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
 [**apiProductProductSearchPost**](ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
-[**apiProductUpdateProductFromOlimposGet**](ProductApi.md#apiproductupdateproductfromolimposget) | **get** /api/Product/UpdateProductFromOlimpos | 
-[**apiProductUpdateProductFromOlimposPost**](ProductApi.md#apiproductupdateproductfromolimpospost) | **post** /api/Product/UpdateProductFromOlimpos | 
+[**apiProductRecommendProductPost**](ProductApi.md#apiproductrecommendproductpost) | **post** /api/Product/RecommendProduct | 
 
 
 # **apiProductAddToFavoriteListPost**
@@ -195,6 +195,51 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **apiProductProductAlternativesPost**
+> RestResultOfListOfProductServiceRProduct apiProductProductAlternativesPost(body)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+var body = new ProductServiceProductAlternativesRequest(); // ProductServiceProductAlternativesRequest | 
+
+try { 
+    var result = api_instance.apiProductProductAlternativesPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling ProductApi->apiProductProductAlternativesPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ProductServiceProductAlternativesRequest**](ProductServiceProductAlternativesRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfListOfProductServiceRProduct**](RestResultOfListOfProductServiceRProduct.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **apiProductProductListPost**
 > RestResultOfListOfProductServiceRProduct apiProductProductListPost()
 
@@ -281,8 +326,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiProductUpdateProductFromOlimposGet**
-> String apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log)
+# **apiProductRecommendProductPost**
+> RestResultOfProductServiceRecommendProductResponse apiProductRecommendProductPost(body)
 
 
 
@@ -295,15 +340,13 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 var api_instance = new ProductApi();
-var regionErpId = regionErpId_example; // String | 
-var productErpId = productErpId_example; // String | 
-var log = true; // bool | 
+var body = new ProductServiceRecommendProductRequest(); // ProductServiceRecommendProductRequest | 
 
 try { 
-    var result = api_instance.apiProductUpdateProductFromOlimposGet(regionErpId, productErpId, log);
+    var result = api_instance.apiProductRecommendProductPost(body);
     print(result);
 } catch (e) {
-    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposGet: $e\n');
+    print('Exception when calling ProductApi->apiProductRecommendProductPost: $e\n');
 }
 ```
 
@@ -311,13 +354,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] 
- **productErpId** | **String**|  | [optional] 
- **log** | **bool**|  | [optional] [default to false]
+ **body** | [**ProductServiceRecommendProductRequest**](ProductServiceRecommendProductRequest.md)|  | [optional] 
 
 ### Return type
 
-**String**
+[**RestResultOfProductServiceRecommendProductResponse**](RestResultOfProductServiceRecommendProductResponse.md)
 
 ### Authorization
 
@@ -325,56 +366,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **apiProductUpdateProductFromOlimposPost**
-> String apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log)
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new ProductApi();
-var regionErpId = regionErpId_example; // String | 
-var productErpId = productErpId_example; // String | 
-var log = true; // bool | 
-
-try { 
-    var result = api_instance.apiProductUpdateProductFromOlimposPost(regionErpId, productErpId, log);
-    print(result);
-} catch (e) {
-    print('Exception when calling ProductApi->apiProductUpdateProductFromOlimposPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **regionErpId** | **String**|  | [optional] 
- **productErpId** | **String**|  | [optional] 
- **log** | **bool**|  | [optional] [default to false]
-
-### Return type
-
-**String**
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

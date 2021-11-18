@@ -11,13 +11,19 @@ class _$AccountServiceVersionRequest extends AccountServiceVersionRequest {
   @override
   final String code;
   @override
+  final String version;
+  @override
   final String platform;
+  @override
+  final bool isWeb;
 
   factory _$AccountServiceVersionRequest(
           [void Function(AccountServiceVersionRequestBuilder) updates]) =>
       (new AccountServiceVersionRequestBuilder()..update(updates)).build();
 
-  _$AccountServiceVersionRequest._({this.code, this.platform}) : super._();
+  _$AccountServiceVersionRequest._(
+      {this.code, this.version, this.platform, this.isWeb})
+      : super._();
 
   @override
   AccountServiceVersionRequest rebuild(
@@ -33,19 +39,25 @@ class _$AccountServiceVersionRequest extends AccountServiceVersionRequest {
     if (identical(other, this)) return true;
     return other is AccountServiceVersionRequest &&
         code == other.code &&
-        platform == other.platform;
+        version == other.version &&
+        platform == other.platform &&
+        isWeb == other.isWeb;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, code.hashCode), platform.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, code.hashCode), version.hashCode), platform.hashCode),
+        isWeb.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('AccountServiceVersionRequest')
           ..add('code', code)
-          ..add('platform', platform))
+          ..add('version', version)
+          ..add('platform', platform)
+          ..add('isWeb', isWeb))
         .toString();
   }
 }
@@ -60,9 +72,17 @@ class AccountServiceVersionRequestBuilder
   String get code => _$this._code;
   set code(String code) => _$this._code = code;
 
+  String _version;
+  String get version => _$this._version;
+  set version(String version) => _$this._version = version;
+
   String _platform;
   String get platform => _$this._platform;
   set platform(String platform) => _$this._platform = platform;
+
+  bool _isWeb;
+  bool get isWeb => _$this._isWeb;
+  set isWeb(bool isWeb) => _$this._isWeb = isWeb;
 
   AccountServiceVersionRequestBuilder() {
     AccountServiceVersionRequest._initializeBuilder(this);
@@ -72,7 +92,9 @@ class AccountServiceVersionRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _code = $v.code;
+      _version = $v.version;
       _platform = $v.platform;
+      _isWeb = $v.isWeb;
       _$v = null;
     }
     return this;
@@ -92,7 +114,8 @@ class AccountServiceVersionRequestBuilder
   @override
   _$AccountServiceVersionRequest build() {
     final _$result = _$v ??
-        new _$AccountServiceVersionRequest._(code: code, platform: platform);
+        new _$AccountServiceVersionRequest._(
+            code: code, version: version, platform: platform, isWeb: isWeb);
     replace(_$result);
     return _$result;
   }

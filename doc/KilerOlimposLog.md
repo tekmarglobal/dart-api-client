@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **createdAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **sentData** | **String** |  | [optional] 
 **order** | **int** |  | [optional] 
+**sent** | **bool** |  | [optional] 
+**message** | **String** |  | [optional] 
 **optimisticLockField** | **int** |  | [optional] 
 **gcrecord** | **int** |  | [optional] 
 **orderNavigation** | [**KilerOrder**](KilerOrder.md) |  | [optional] 
