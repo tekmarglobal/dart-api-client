@@ -806,6 +806,33 @@
         }
       }
     },
+    "/api/Cart/ApplyCoupon": {
+      "post": {
+        "tags": [
+          "Cart"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "coupon",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfCartServiceCampaignResponse"
+            }
+          }
+        }
+      }
+    },
     "/api/Cart/GetTimeSlots": {
       "post": {
         "tags": [

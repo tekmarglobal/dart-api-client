@@ -457,4 +457,3 @@ lib/model/rest_result_of_system_int32.dart
 lib/model/rest_result_of_system_object.dart
 lib/serializers.dart
 pubspec.yaml
-test/rest_result_of_cart_service_campaign_response_test.dart

@@ -219,6 +219,101 @@ import 'package:openapi/model/rest_result_of_list_of_cart_service_time_slots_res
         /// 
         ///
         /// 
+        Future<Response<RestResultOfListOfCartServiceCampaignResponse>> apiCartApplyCouponPost({ 
+            String coupon,
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Cart/ApplyCoupon',
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+                queryParameters: <String, dynamic>{
+                if (coupon != null) r'coupon': coupon,
+                },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'POST',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Cart/ApplyCoupon',
+            data: _bodyData,
+            options: _request,
+                queryParameters: <String, dynamic>{
+                if (coupon != null) r'coupon': coupon,
+                },
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                            const _responseType = FullType(RestResultOfListOfCartServiceCampaignResponse);
+                            final _responseData = _serializers.deserialize(
+                            _response.data,
+                            specifiedType: _responseType,
+                            ) as RestResultOfListOfCartServiceCampaignResponse;
+
+                return Response<RestResultOfListOfCartServiceCampaignResponse>(
+                data: _responseData,
+                headers: _response.headers,
+                isRedirect: _response.isRedirect,
+                requestOptions: _requestOpt,
+                redirects: _response.redirects,
+                statusCode: _response.statusCode,
+                statusMessage: _response.statusMessage,
+                extra: _response.extra,
+                );
+            }
+
+        /// 
+        ///
+        /// 
         Future<Response<RestResultOfCartServiceCreateCartResponse>> apiCartCreateCartPost({ 
             CartServiceCreateCartRequest body,
             CancelToken cancelToken,
