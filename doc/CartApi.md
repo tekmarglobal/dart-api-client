@@ -11,7 +11,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiCartAddCampaignByCodePost**](CartApi.md#apicartaddcampaignbycodepost) | **post** /api/Cart/AddCampaignByCode | 
 [**apiCartApplyCampaignPost**](CartApi.md#apicartapplycampaignpost) | **post** /api/Cart/ApplyCampaign | 
-[**apiCartApplyCouponPost**](CartApi.md#apicartapplycouponpost) | **post** /api/Cart/ApplyCoupon | 
 [**apiCartCreateCartPost**](CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 [**apiCartDeleteCardDelete**](CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 [**apiCartDeleteCartDelete**](CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
@@ -24,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **apiCartAddCampaignByCodePost**
-> RestResultOfCartServiceCampaignResponse apiCartAddCampaignByCodePost(campaignCode)
+> RestResultOfListOfCartServiceCampaignResponse apiCartAddCampaignByCodePost(campaignCode)
 
 
 
@@ -55,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RestResultOfCartServiceCampaignResponse**](RestResultOfCartServiceCampaignResponse.md)
+[**RestResultOfListOfCartServiceCampaignResponse**](RestResultOfListOfCartServiceCampaignResponse.md)
 
 ### Authorization
 
@@ -101,51 +100,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestResultOfCartServiceCampaignApplyResponse**](RestResultOfCartServiceCampaignApplyResponse.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **apiCartApplyCouponPost**
-> RestResultOfListOfCartServiceCampaignResponse apiCartApplyCouponPost(coupon)
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new CartApi();
-var coupon = coupon_example; // String | 
-
-try { 
-    var result = api_instance.apiCartApplyCouponPost(coupon);
-    print(result);
-} catch (e) {
-    print('Exception when calling CartApi->apiCartApplyCouponPost: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **coupon** | **String**|  | [optional] 
-
-### Return type
-
-[**RestResultOfListOfCartServiceCampaignResponse**](RestResultOfListOfCartServiceCampaignResponse.md)
 
 ### Authorization
 
