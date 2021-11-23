@@ -766,7 +766,7 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/RestResultOfCartServiceCampaignResponse"
+              "$ref": "#/definitions/RestResultOfListOfCartServiceCampaignResponse"
             }
           }
         }
@@ -801,33 +801,6 @@
             "description": "Success",
             "schema": {
               "$ref": "#/definitions/RestResultOfCartServiceUpdateCartRegionResponse"
-            }
-          }
-        }
-      }
-    },
-    "/api/Cart/ApplyCoupon": {
-      "post": {
-        "tags": [
-          "Cart"
-        ],
-        "produces": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "coupon",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "schema": {
-              "$ref": "#/definitions/RestResultOfListOfCartServiceCampaignResponse"
             }
           }
         }
@@ -6923,20 +6896,6 @@
         },
         "productNote": {
           "type": "string"
-        }
-      }
-    },
-    "RestResultOfCartServiceCampaignResponse": {
-      "type": "object",
-      "properties": {
-        "success": {
-          "type": "boolean"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "$ref": "#/definitions/CartServiceCampaignResponse"
         }
       }
     },

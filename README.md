@@ -79,7 +79,6 @@ Class | Method | HTTP request | Description
 *BannerApi* | [**apiBannerUpdateBannerPost**](doc/BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
 *CartApi* | [**apiCartAddCampaignByCodePost**](doc/CartApi.md#apicartaddcampaignbycodepost) | **post** /api/Cart/AddCampaignByCode | 
 *CartApi* | [**apiCartApplyCampaignPost**](doc/CartApi.md#apicartapplycampaignpost) | **post** /api/Cart/ApplyCampaign | 
-*CartApi* | [**apiCartApplyCouponPost**](doc/CartApi.md#apicartapplycouponpost) | **post** /api/Cart/ApplyCoupon | 
 *CartApi* | [**apiCartCreateCartPost**](doc/CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
 *CartApi* | [**apiCartDeleteCardDelete**](doc/CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
 *CartApi* | [**apiCartDeleteCartDelete**](doc/CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
@@ -315,7 +314,6 @@ Class | Method | HTTP request | Description
  - [RestResultOfAdminServiceUploadImageResponse](doc/RestResultOfAdminServiceUploadImageResponse.md)
  - [RestResultOfBannerServiceBannerResponse](doc/RestResultOfBannerServiceBannerResponse.md)
  - [RestResultOfCartServiceCampaignApplyResponse](doc/RestResultOfCartServiceCampaignApplyResponse.md)
- - [RestResultOfCartServiceCampaignResponse](doc/RestResultOfCartServiceCampaignResponse.md)
  - [RestResultOfCartServiceCartResponse](doc/RestResultOfCartServiceCartResponse.md)
  - [RestResultOfCartServiceCreateCartResponse](doc/RestResultOfCartServiceCreateCartResponse.md)
  - [RestResultOfCartServiceUpdateCartRegionResponse](doc/RestResultOfCartServiceUpdateCartRegionResponse.md)

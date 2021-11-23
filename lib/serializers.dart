@@ -184,7 +184,6 @@ import 'package:openapi/model/rest_result_of_admin_service_admin_neighbor_respon
 import 'package:openapi/model/rest_result_of_admin_service_upload_image_response.dart';
 import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_campaign_apply_response.dart';
-import 'package:openapi/model/rest_result_of_cart_service_campaign_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_cart_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_create_cart_response.dart';
 import 'package:openapi/model/rest_result_of_cart_service_update_cart_region_response.dart';
@@ -397,7 +396,6 @@ part 'serializers.g.dart';
   RestResultOfAdminServiceUploadImageResponse,
   RestResultOfBannerServiceBannerResponse,
   RestResultOfCartServiceCampaignApplyResponse,
-  RestResultOfCartServiceCampaignResponse,
   RestResultOfCartServiceCartResponse,
   RestResultOfCartServiceCreateCartResponse,
   RestResultOfCartServiceUpdateCartRegionResponse,
