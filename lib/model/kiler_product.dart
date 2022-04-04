@@ -17,6 +17,7 @@ import 'package:openapi/model/kiler_product_alternatives.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_product_products_product_alternatives_product_alternatives0eac5f03.dart';
 import 'package:openapi/model/kiler_configuration.dart';
+import 'package:openapi/model/kiler_banner.dart';
 import 'package:openapi/model/kiler_category_product.dart';
 import 'package:openapi/model/kiler_product_import_detail.dart';
 import 'package:built_value/built_value.dart';
@@ -133,6 +134,10 @@ abstract class KilerProduct implements Built<KilerProduct, KilerProductBuilder> 
     @nullable
     @BuiltValueField(wireName: r'supplierNavigation')
     KilerSupplier get supplierNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'banner')
+    BuiltList<KilerBanner> get banner;
 
     @nullable
     @BuiltValueField(wireName: r'categoryProduct')
@@ -365,6 +370,12 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 ..add(serializers.serialize(object.supplierNavigation,
                     specifiedType: const FullType(KilerSupplier)));
         }
+        if (object.banner != null) {
+            result
+                ..add(r'banner')
+                ..add(serializers.serialize(object.banner,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])));
+        }
         if (object.categoryProduct != null) {
             result
                 ..add(r'categoryProduct')
@@ -558,6 +569,10 @@ class _$KilerProductSerializer implements StructuredSerializer<KilerProduct> {
                 case r'supplierNavigation':
                     result.supplierNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerSupplier)) as KilerSupplier);
+                    break;
+                case r'banner':
+                    result.banner.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])) as BuiltList<KilerBanner>);
                     break;
                 case r'categoryProduct':
                     result.categoryProduct.replace(serializers.deserialize(value,

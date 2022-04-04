@@ -55,6 +55,10 @@ class _$KilerCampaign extends KilerCampaign {
   @override
   final String uid;
   @override
+  final bool public;
+  @override
+  final BuiltList<KilerBanner> banner;
+  @override
   final BuiltList<KilerCampaignCampaignsBrandBrands>
       campaignCampaignsBrandBrands;
   @override
@@ -101,6 +105,8 @@ class _$KilerCampaign extends KilerCampaign {
       this.optimisticLockField,
       this.smallImage,
       this.uid,
+      this.public,
+      this.banner,
       this.campaignCampaignsBrandBrands,
       this.cartCampaign,
       this.categoryCategoriesCampaignCampaigns,
@@ -145,6 +151,8 @@ class _$KilerCampaign extends KilerCampaign {
         optimisticLockField == other.optimisticLockField &&
         smallImage == other.smallImage &&
         uid == other.uid &&
+        public == other.public &&
+        banner == other.banner &&
         campaignCampaignsBrandBrands == other.campaignCampaignsBrandBrands &&
         cartCampaign == other.cartCampaign &&
         categoryCategoriesCampaignCampaigns ==
@@ -177,19 +185,19 @@ class _$KilerCampaign extends KilerCampaign {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), active.hashCode), image.hashCode), startDate.hashCode), endDate.hashCode), displayPriority.hashCode), customerOrderCount.hashCode), cartMinAmount.hashCode), productMinAmount.hashCode),
-                                                                                productMinCount.hashCode),
-                                                                            maxDiscountAmount.hashCode),
-                                                                        freeDelivery.hashCode),
-                                                                    discountPercentage.hashCode),
-                                                                discountAmount.hashCode),
-                                                            maxPerCustomerUsageCount.hashCode),
-                                                        maxUsageCount.hashCode),
-                                                    affectedProductCount.hashCode),
-                                                affectedProductDiscountPercentage.hashCode),
-                                            optimisticLockField.hashCode),
-                                        smallImage.hashCode),
-                                    uid.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), active.hashCode), image.hashCode), startDate.hashCode), endDate.hashCode), displayPriority.hashCode), customerOrderCount.hashCode), cartMinAmount.hashCode), productMinAmount.hashCode), productMinCount.hashCode), maxDiscountAmount.hashCode),
+                                                                                freeDelivery.hashCode),
+                                                                            discountPercentage.hashCode),
+                                                                        discountAmount.hashCode),
+                                                                    maxPerCustomerUsageCount.hashCode),
+                                                                maxUsageCount.hashCode),
+                                                            affectedProductCount.hashCode),
+                                                        affectedProductDiscountPercentage.hashCode),
+                                                    optimisticLockField.hashCode),
+                                                smallImage.hashCode),
+                                            uid.hashCode),
+                                        public.hashCode),
+                                    banner.hashCode),
                                 campaignCampaignsBrandBrands.hashCode),
                             cartCampaign.hashCode),
                         categoryCategoriesCampaignCampaigns.hashCode),
@@ -226,6 +234,8 @@ class _$KilerCampaign extends KilerCampaign {
           ..add('optimisticLockField', optimisticLockField)
           ..add('smallImage', smallImage)
           ..add('uid', uid)
+          ..add('public', public)
+          ..add('banner', banner)
           ..add('campaignCampaignsBrandBrands', campaignCampaignsBrandBrands)
           ..add('cartCampaign', cartCampaign)
           ..add('categoryCategoriesCampaignCampaigns',
@@ -352,6 +362,15 @@ class KilerCampaignBuilder
   String get uid => _$this._uid;
   set uid(String uid) => _$this._uid = uid;
 
+  bool _public;
+  bool get public => _$this._public;
+  set public(bool public) => _$this._public = public;
+
+  ListBuilder<KilerBanner> _banner;
+  ListBuilder<KilerBanner> get banner =>
+      _$this._banner ??= new ListBuilder<KilerBanner>();
+  set banner(ListBuilder<KilerBanner> banner) => _$this._banner = banner;
+
   ListBuilder<KilerCampaignCampaignsBrandBrands> _campaignCampaignsBrandBrands;
   ListBuilder<KilerCampaignCampaignsBrandBrands>
       get campaignCampaignsBrandBrands =>
@@ -451,6 +470,8 @@ class KilerCampaignBuilder
       _optimisticLockField = $v.optimisticLockField;
       _smallImage = $v.smallImage;
       _uid = $v.uid;
+      _public = $v.public;
+      _banner = $v.banner?.toBuilder();
       _campaignCampaignsBrandBrands =
           $v.campaignCampaignsBrandBrands?.toBuilder();
       _cartCampaign = $v.cartCampaign?.toBuilder();
@@ -509,6 +530,8 @@ class KilerCampaignBuilder
               optimisticLockField: optimisticLockField,
               smallImage: smallImage,
               uid: uid,
+              public: public,
+              banner: _banner?.build(),
               campaignCampaignsBrandBrands:
                   _campaignCampaignsBrandBrands?.build(),
               cartCampaign: _cartCampaign?.build(),
@@ -524,6 +547,8 @@ class KilerCampaignBuilder
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'banner';
+        _banner?.build();
         _$failedField = 'campaignCampaignsBrandBrands';
         _campaignCampaignsBrandBrands?.build();
         _$failedField = 'cartCampaign';

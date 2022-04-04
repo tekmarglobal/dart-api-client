@@ -73,6 +73,10 @@ abstract class KilerPayment implements Built<KilerPayment, KilerPaymentBuilder> 
     int get optimisticLockField;
 
     @nullable
+    @BuiltValueField(wireName: r'paymentMessage')
+    String get paymentMessage;
+
+    @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
 
@@ -193,6 +197,12 @@ class _$KilerPaymentSerializer implements StructuredSerializer<KilerPayment> {
                 ..add(serializers.serialize(object.optimisticLockField,
                     specifiedType: const FullType(int)));
         }
+        if (object.paymentMessage != null) {
+            result
+                ..add(r'paymentMessage')
+                ..add(serializers.serialize(object.paymentMessage,
+                    specifiedType: const FullType(String)));
+        }
         if (object.customerNavigation != null) {
             result
                 ..add(r'customerNavigation')
@@ -286,6 +296,10 @@ class _$KilerPaymentSerializer implements StructuredSerializer<KilerPayment> {
                 case r'optimisticLockField':
                     result.optimisticLockField = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'paymentMessage':
+                    result.paymentMessage = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'customerNavigation':
                     result.customerNavigation.replace(serializers.deserialize(value,

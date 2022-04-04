@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**apiProductAddToFavoriteListPost**](ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 [**apiProductDeleteFavoriteDelete**](ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 [**apiProductGetFavoriteListPost**](ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
+[**apiProductImage2ProductErpIdImagetypeGet**](ProductApi.md#apiproductimage2producterpidimagetypeget) | **get** /api/Product/image2/{productErpId}/{imagetype} | 
 [**apiProductPost**](ProductApi.md#apiproductpost) | **post** /api/Product | 
 [**apiProductProductAlternativesPost**](ProductApi.md#apiproductproductalternativespost) | **post** /api/Product/ProductAlternatives | 
 [**apiProductProductListPost**](ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
@@ -147,6 +148,52 @@ This endpoint does not need any parameter.
 
  - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiProductImage2ProductErpIdImagetypeGet**
+> apiProductImage2ProductErpIdImagetypeGet(productErpId, imagetype)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new ProductApi();
+var productErpId = productErpId_example; // String | 
+var imagetype = 56; // int | 
+
+try { 
+    api_instance.apiProductImage2ProductErpIdImagetypeGet(productErpId, imagetype);
+} catch (e) {
+    print('Exception when calling ProductApi->apiProductImage2ProductErpIdImagetypeGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **productErpId** | **String**|  | 
+ **imagetype** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -39,6 +39,40 @@
         }
       }
     },
+    "/api/Account/checkversion": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AccountServiceVersionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfAccountServiceVersionResponse"
+            }
+          }
+        }
+      }
+    },
     "/api/Account/FirebaseToken": {
       "get": {
         "tags": [
@@ -1662,6 +1696,142 @@
         }
       }
     },
+    "/api/Integration/MarketyoCategoriesImport": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "categoriesJsonFile",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Integration/MarketyoProductsImport": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "productsJsonFile",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Integration/MarketyoCustomersImport": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "importBannedUser",
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "minimumOrderCount",
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "minimumOrderAmount",
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "in": "formData",
+            "name": "customerJsonFile",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Integration/test": {
+      "get": {
+        "tags": [
+          "Integration"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "delaySeconds",
+            "type": "integer",
+            "format": "int32",
+            "default": 120
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
     "/api/Migration/createregionprice": {
       "get": {
         "tags": [
@@ -2018,6 +2188,33 @@
             "schema": {
               "$ref": "#/definitions/RestResultOfProductServiceRecommendProductResponse"
             }
+          }
+        }
+      }
+    },
+    "/api/Product/image2/{productErpId}/{imagetype}": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "productErpId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "imagetype",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -2380,6 +2577,20 @@
         }
       }
     },
+    "RestResultOfAccountServiceVersionResponse": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/AccountServiceVersionResponse"
+        }
+      }
+    },
     "RestResultOfSystemObject": {
       "type": "object",
       "properties": {
@@ -2532,6 +2743,419 @@
           "items": {
             "$ref": "#/definitions/KilerBrandManager"
           }
+        }
+      }
+    },
+    "KilerPersonel": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerPersonelDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personel": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "personelNavigation": {
+          "$ref": "#/definitions/KilerPersonel"
+        }
+      }
+    },
+    "KilerDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerCategoryCategoriesCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categories": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "categoriesNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerCategoryImport": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "importDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "payLoad": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        }
+      }
+    },
+    "KilerCategoryImportDetail": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oldValue": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "string"
+        },
+        "categoryImport": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportNavigation": {
+          "$ref": "#/definitions/KilerCategoryImport"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerCategoryProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "main": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCategory": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "level": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parent": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        },
+        "showInMenu": {
+          "type": "boolean"
+        },
+        "nleft": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nright": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "refId": {
+          "type": "string"
+        },
+        "imagePath": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "erpId": {
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "menuName": {
+          "type": "string"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "parentNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        },
+        "categoryCategoriesCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
+          }
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        },
+        "categoryProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryProduct"
+          }
+        },
+        "configuration": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerConfiguration"
+          }
+        },
+        "inverseParentNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        }
+      }
+    },
+    "KilerFileData": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "size": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "content": {
+          "format": "byte",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        }
+      }
+    },
+    "KilerBanner": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string"
+        },
+        "index": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "imageData": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "target": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "imageDataNavigation": {
+          "$ref": "#/definitions/KilerFileData"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
         }
       }
     },
@@ -2876,6 +3500,9 @@
         "optimisticLockField": {
           "format": "int32",
           "type": "integer"
+        },
+        "paymentMessage": {
+          "type": "string"
         },
         "customerNavigation": {
           "$ref": "#/definitions/KilerCustomer"
@@ -4768,6 +5395,16 @@
           "format": "int32",
           "type": "integer"
         },
+        "ipAddress": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "lastUsed": {
+          "format": "date-time",
+          "type": "string"
+        },
         "customerNavigation": {
           "$ref": "#/definitions/KilerCustomer"
         },
@@ -5264,322 +5901,6 @@
         }
       }
     },
-    "KilerPersonel": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "surname": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "userName": {
-          "type": "string"
-        },
-        "password": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "personelDepartment": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerPersonelDepartment"
-          }
-        }
-      }
-    },
-    "KilerPersonelDepartment": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "department": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "personel": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "departmentNavigation": {
-          "$ref": "#/definitions/KilerDepartment"
-        },
-        "personelNavigation": {
-          "$ref": "#/definitions/KilerPersonel"
-        }
-      }
-    },
-    "KilerDepartment": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategory"
-          }
-        },
-        "personelDepartment": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerPersonelDepartment"
-          }
-        }
-      }
-    },
-    "KilerCategoryImport": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "importDate": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "ipAddress": {
-          "type": "string"
-        },
-        "payLoad": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryImportDetail": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryImportDetail"
-          }
-        }
-      }
-    },
-    "KilerCategoryImportDetail": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "oldValue": {
-          "type": "string"
-        },
-        "newValue": {
-          "type": "string"
-        },
-        "categoryImport": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "operationType": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryImportNavigation": {
-          "$ref": "#/definitions/KilerCategoryImport"
-        },
-        "categoryNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        }
-      }
-    },
-    "KilerCategoryProduct": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "category": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "product": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "main": {
-          "type": "boolean"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categoryNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        },
-        "productNavigation": {
-          "$ref": "#/definitions/KilerProduct"
-        }
-      }
-    },
-    "KilerCategory": {
-      "type": "object",
-      "properties": {
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "level": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "parent": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "image": {
-          "format": "byte",
-          "type": "string"
-        },
-        "showInMenu": {
-          "type": "boolean"
-        },
-        "nleft": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "nright": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "refId": {
-          "type": "string"
-        },
-        "imagePath": {
-          "type": "string"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "department": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "erpId": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "order": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "menuName": {
-          "type": "string"
-        },
-        "departmentNavigation": {
-          "$ref": "#/definitions/KilerDepartment"
-        },
-        "parentNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        },
-        "categoryCategoriesCampaignCampaigns": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
-          }
-        },
-        "categoryImportDetail": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryImportDetail"
-          }
-        },
-        "categoryProduct": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategoryProduct"
-          }
-        },
-        "configuration": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerConfiguration"
-          }
-        },
-        "inverseParentNavigation": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/KilerCategory"
-          }
-        }
-      }
-    },
-    "KilerCategoryCategoriesCampaignCampaigns": {
-      "type": "object",
-      "properties": {
-        "campaigns": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "categories": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "oid": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "optimisticLockField": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "campaignsNavigation": {
-          "$ref": "#/definitions/KilerCampaign"
-        },
-        "categoriesNavigation": {
-          "$ref": "#/definitions/KilerCategory"
-        }
-      }
-    },
     "KilerProductProductsCampaignCampaigns": {
       "type": "object",
       "properties": {
@@ -5695,6 +6016,15 @@
         "uid": {
           "format": "uuid",
           "type": "string"
+        },
+        "public": {
+          "type": "boolean"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
         },
         "campaignCampaignsBrandBrands": {
           "type": "array",
@@ -6126,6 +6456,12 @@
         },
         "supplierNavigation": {
           "$ref": "#/definitions/KilerSupplier"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
         },
         "categoryProduct": {
           "type": "array",

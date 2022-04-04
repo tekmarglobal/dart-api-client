@@ -27,6 +27,12 @@ class _$KilerDeviceLogin extends KilerDeviceLogin {
   @override
   final int gcrecord;
   @override
+  final String ipAddress;
+  @override
+  final String version;
+  @override
+  final DateTime lastUsed;
+  @override
   final KilerCustomer customerNavigation;
   @override
   final KilerDevice deviceNavigation;
@@ -45,6 +51,9 @@ class _$KilerDeviceLogin extends KilerDeviceLogin {
       this.logoutDate,
       this.optimisticLockField,
       this.gcrecord,
+      this.ipAddress,
+      this.version,
+      this.lastUsed,
       this.customerNavigation,
       this.deviceNavigation})
       : super._();
@@ -70,6 +79,9 @@ class _$KilerDeviceLogin extends KilerDeviceLogin {
         logoutDate == other.logoutDate &&
         optimisticLockField == other.optimisticLockField &&
         gcrecord == other.gcrecord &&
+        ipAddress == other.ipAddress &&
+        version == other.version &&
+        lastUsed == other.lastUsed &&
         customerNavigation == other.customerNavigation &&
         deviceNavigation == other.deviceNavigation;
   }
@@ -85,15 +97,21 @@ class _$KilerDeviceLogin extends KilerDeviceLogin {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, oid.hashCode),
-                                            customer.hashCode),
-                                        device.hashCode),
-                                    isActive.hashCode),
-                                token.hashCode),
-                            loginDate.hashCode),
-                        logoutDate.hashCode),
-                    optimisticLockField.hashCode),
-                gcrecord.hashCode),
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc($jc(0, oid.hashCode),
+                                                        customer.hashCode),
+                                                    device.hashCode),
+                                                isActive.hashCode),
+                                            token.hashCode),
+                                        loginDate.hashCode),
+                                    logoutDate.hashCode),
+                                optimisticLockField.hashCode),
+                            gcrecord.hashCode),
+                        ipAddress.hashCode),
+                    version.hashCode),
+                lastUsed.hashCode),
             customerNavigation.hashCode),
         deviceNavigation.hashCode));
   }
@@ -110,6 +128,9 @@ class _$KilerDeviceLogin extends KilerDeviceLogin {
           ..add('logoutDate', logoutDate)
           ..add('optimisticLockField', optimisticLockField)
           ..add('gcrecord', gcrecord)
+          ..add('ipAddress', ipAddress)
+          ..add('version', version)
+          ..add('lastUsed', lastUsed)
           ..add('customerNavigation', customerNavigation)
           ..add('deviceNavigation', deviceNavigation))
         .toString();
@@ -157,6 +178,18 @@ class KilerDeviceLoginBuilder
   int get gcrecord => _$this._gcrecord;
   set gcrecord(int gcrecord) => _$this._gcrecord = gcrecord;
 
+  String _ipAddress;
+  String get ipAddress => _$this._ipAddress;
+  set ipAddress(String ipAddress) => _$this._ipAddress = ipAddress;
+
+  String _version;
+  String get version => _$this._version;
+  set version(String version) => _$this._version = version;
+
+  DateTime _lastUsed;
+  DateTime get lastUsed => _$this._lastUsed;
+  set lastUsed(DateTime lastUsed) => _$this._lastUsed = lastUsed;
+
   KilerCustomerBuilder _customerNavigation;
   KilerCustomerBuilder get customerNavigation =>
       _$this._customerNavigation ??= new KilerCustomerBuilder();
@@ -185,6 +218,9 @@ class KilerDeviceLoginBuilder
       _logoutDate = $v.logoutDate;
       _optimisticLockField = $v.optimisticLockField;
       _gcrecord = $v.gcrecord;
+      _ipAddress = $v.ipAddress;
+      _version = $v.version;
+      _lastUsed = $v.lastUsed;
       _customerNavigation = $v.customerNavigation?.toBuilder();
       _deviceNavigation = $v.deviceNavigation?.toBuilder();
       _$v = null;
@@ -218,6 +254,9 @@ class KilerDeviceLoginBuilder
               logoutDate: logoutDate,
               optimisticLockField: optimisticLockField,
               gcrecord: gcrecord,
+              ipAddress: ipAddress,
+              version: version,
+              lastUsed: lastUsed,
               customerNavigation: _customerNavigation?.build(),
               deviceNavigation: _deviceNavigation?.build());
     } catch (_) {

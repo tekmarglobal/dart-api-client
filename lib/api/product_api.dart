@@ -307,6 +307,81 @@ import 'package:openapi/model/rest_result_of_product_service_recommend_product_r
         /// 
         ///
         /// 
+        Future<Response<void>> apiProductImage2ProductErpIdImagetypeGet(
+            String productErpId,
+            int imagetype, { 
+            CancelToken cancelToken,
+            Map<String, dynamic> headers,
+            Map<String, dynamic> extra,
+            ValidateStatus validateStatus,
+            ProgressCallback onSendProgress,
+            ProgressCallback onReceiveProgress,
+            }) async {
+            final _requestOpt = RequestOptions(
+            path: r'/api/Product/image2/{productErpId}/{imagetype}'.replaceAll('{' r'productErpId' '}', productErpId.toString()).replaceAll('{' r'imagetype' '}', imagetype.toString()),
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+            final _request = Options(
+            method: 'GET',
+            headers: <String, dynamic>{
+            ...?headers,
+            },
+            extra: <String, dynamic>{
+            'secure': <Map<String, String>>[
+            {
+                'type': 'apiKey',
+                'name': 'Bearer',
+                    'keyName': 'Authorization',
+                    'where': 'header',
+                },
+                ],
+            ...?extra,
+            },
+            validateStatus: validateStatus,
+            contentType: [
+                'application/json',
+            ].first,
+            );
+
+            dynamic _bodyData;
+
+            final _response = await _dio.request<dynamic>(
+            r'/api/Product/image2/{productErpId}/{imagetype}'.replaceAll('{' r'productErpId' '}', productErpId.toString()).replaceAll('{' r'imagetype' '}', imagetype.toString()),
+            data: _bodyData,
+            options: _request,
+            cancelToken: cancelToken,
+            onSendProgress: onSendProgress,
+            onReceiveProgress: onReceiveProgress,
+            );
+
+                return _response;
+            }
+
+        /// 
+        ///
+        /// 
         Future<Response<RestResultOfProductServiceRProduct>> apiProductPost({ 
             ProductServiceProductRequest body,
             CancelToken cancelToken,

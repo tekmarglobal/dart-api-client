@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **brandNavigation** | [**KilerBrand**](KilerBrand.md) |  | [optional] 
 **productTagNavigation** | [**KilerProductTag**](KilerProductTag.md) |  | [optional] 
 **supplierNavigation** | [**KilerSupplier**](KilerSupplier.md) |  | [optional] 
+**banner** | [**BuiltList<KilerBanner>**](KilerBanner.md) |  | [optional] 
 **categoryProduct** | [**BuiltList<KilerCategoryProduct>**](KilerCategoryProduct.md) |  | [optional] 
 **configurationBagProductNavigation** | [**BuiltList<KilerConfiguration>**](KilerConfiguration.md) |  | [optional] 
 **configurationDeliveryProductNavigation** | [**BuiltList<KilerConfiguration>**](KilerConfiguration.md) |  | [optional] 

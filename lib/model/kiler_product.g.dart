@@ -63,6 +63,8 @@ class _$KilerProduct extends KilerProduct {
   @override
   final KilerSupplier supplierNavigation;
   @override
+  final BuiltList<KilerBanner> banner;
+  @override
   final BuiltList<KilerCategoryProduct> categoryProduct;
   @override
   final BuiltList<KilerConfiguration> configurationBagProductNavigation;
@@ -123,6 +125,7 @@ class _$KilerProduct extends KilerProduct {
       this.brandNavigation,
       this.productTagNavigation,
       this.supplierNavigation,
+      this.banner,
       this.categoryProduct,
       this.configurationBagProductNavigation,
       this.configurationDeliveryProductNavigation,
@@ -175,6 +178,7 @@ class _$KilerProduct extends KilerProduct {
         brandNavigation == other.brandNavigation &&
         productTagNavigation == other.productTagNavigation &&
         supplierNavigation == other.supplierNavigation &&
+        banner == other.banner &&
         categoryProduct == other.categoryProduct &&
         configurationBagProductNavigation ==
             other.configurationBagProductNavigation &&
@@ -216,14 +220,14 @@ class _$KilerProduct extends KilerProduct {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode), maxQuantity.hashCode), minQuantity.hashCode), initalQuantity.hashCode), quantityStep.hashCode), erpId.hashCode), optimisticLockField.hashCode), productUnit.hashCode),
-                                                                                vat.hashCode),
-                                                                            menuName.hashCode),
-                                                                        weight.hashCode),
-                                                                    productTag.hashCode),
-                                                                brandNavigation.hashCode),
-                                                            productTagNavigation.hashCode),
-                                                        supplierNavigation.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), description.hashCode), supplier.hashCode), active.hashCode), lowStockLimit.hashCode), outOfStockLimit.hashCode), outOfStockDisplayBehavior.hashCode), lowStockDisplayBehavior.hashCode), brand.hashCode), barcode.hashCode), sku.hashCode), desi.hashCode), maxQuantity.hashCode), minQuantity.hashCode), initalQuantity.hashCode), quantityStep.hashCode), erpId.hashCode), optimisticLockField.hashCode), productUnit.hashCode), vat.hashCode),
+                                                                                menuName.hashCode),
+                                                                            weight.hashCode),
+                                                                        productTag.hashCode),
+                                                                    brandNavigation.hashCode),
+                                                                productTagNavigation.hashCode),
+                                                            supplierNavigation.hashCode),
+                                                        banner.hashCode),
                                                     categoryProduct.hashCode),
                                                 configurationBagProductNavigation.hashCode),
                                             configurationDeliveryProductNavigation.hashCode),
@@ -268,6 +272,7 @@ class _$KilerProduct extends KilerProduct {
           ..add('brandNavigation', brandNavigation)
           ..add('productTagNavigation', productTagNavigation)
           ..add('supplierNavigation', supplierNavigation)
+          ..add('banner', banner)
           ..add('categoryProduct', categoryProduct)
           ..add('configurationBagProductNavigation',
               configurationBagProductNavigation)
@@ -413,6 +418,11 @@ class KilerProductBuilder
   set supplierNavigation(KilerSupplierBuilder supplierNavigation) =>
       _$this._supplierNavigation = supplierNavigation;
 
+  ListBuilder<KilerBanner> _banner;
+  ListBuilder<KilerBanner> get banner =>
+      _$this._banner ??= new ListBuilder<KilerBanner>();
+  set banner(ListBuilder<KilerBanner> banner) => _$this._banner = banner;
+
   ListBuilder<KilerCategoryProduct> _categoryProduct;
   ListBuilder<KilerCategoryProduct> get categoryProduct =>
       _$this._categoryProduct ??= new ListBuilder<KilerCategoryProduct>();
@@ -557,6 +567,7 @@ class KilerProductBuilder
       _brandNavigation = $v.brandNavigation?.toBuilder();
       _productTagNavigation = $v.productTagNavigation?.toBuilder();
       _supplierNavigation = $v.supplierNavigation?.toBuilder();
+      _banner = $v.banner?.toBuilder();
       _categoryProduct = $v.categoryProduct?.toBuilder();
       _configurationBagProductNavigation =
           $v.configurationBagProductNavigation?.toBuilder();
@@ -625,6 +636,7 @@ class KilerProductBuilder
               brandNavigation: _brandNavigation?.build(),
               productTagNavigation: _productTagNavigation?.build(),
               supplierNavigation: _supplierNavigation?.build(),
+              banner: _banner?.build(),
               categoryProduct: _categoryProduct?.build(),
               configurationBagProductNavigation:
                   _configurationBagProductNavigation?.build(),
@@ -653,6 +665,8 @@ class KilerProductBuilder
         _productTagNavigation?.build();
         _$failedField = 'supplierNavigation';
         _supplierNavigation?.build();
+        _$failedField = 'banner';
+        _banner?.build();
         _$failedField = 'categoryProduct';
         _categoryProduct?.build();
         _$failedField = 'configurationBagProductNavigation';

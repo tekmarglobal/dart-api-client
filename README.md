@@ -41,12 +41,13 @@ import 'package:openapi/api.dart';
 
 
 final api = AccountApi();
+final body = AccountServiceVersionRequest(); // AccountServiceVersionRequest | 
 
 try {
-    final response = await api.apiAccountFirebaseTokenGet();
+    final response = await api.apiAccountCheckversionPost(body);
     print(response);
 } catch (e) {
-    print("Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n");
+    print("Exception when calling AccountApi->apiAccountCheckversionPost: $e\n");
 }
 
 ```
@@ -57,6 +58,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccountApi* | [**apiAccountCheckversionPost**](doc/AccountApi.md#apiaccountcheckversionpost) | **post** /api/Account/checkversion | 
 *AccountApi* | [**apiAccountFirebaseTokenGet**](doc/AccountApi.md#apiaccountfirebasetokenget) | **get** /api/Account/FirebaseToken | 
 *AccountApi* | [**apiAccountLoginPost**](doc/AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
 *AccountApi* | [**apiAccountLogoutGet**](doc/AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
@@ -114,6 +116,10 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**apiDefinitionNeighborhoodPost**](doc/DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
 *DefinitionApi* | [**apiDefinitionUpdateAgreementLogPost**](doc/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
 *DefinitionApi* | [**apiDefinitionUploadCountriesToFirebasePost**](doc/DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **post** /api/Definition/UploadCountriesToFirebase | 
+*IntegrationApi* | [**apiIntegrationMarketyoCategoriesImportPost**](doc/IntegrationApi.md#apiintegrationmarketyocategoriesimportpost) | **post** /api/Integration/MarketyoCategoriesImport | 
+*IntegrationApi* | [**apiIntegrationMarketyoCustomersImportPost**](doc/IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **post** /api/Integration/MarketyoCustomersImport | 
+*IntegrationApi* | [**apiIntegrationMarketyoProductsImportPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductsimportpost) | **post** /api/Integration/MarketyoProductsImport | 
+*IntegrationApi* | [**apiIntegrationTestGet**](doc/IntegrationApi.md#apiintegrationtestget) | **get** /api/Integration/test | 
 *IntegrationApi* | [**apiIntegrationUpdateProductFromOlimposGet**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **get** /api/Integration/UpdateProductFromOlimpos | 
 *IntegrationApi* | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **post** /api/Integration/UpdateProductFromOlimpos | 
 *MigrationApi* | [**apiMigrationCreateregionpriceGet**](doc/MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
@@ -132,6 +138,7 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**apiProductAddToFavoriteListPost**](doc/ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**apiProductDeleteFavoriteDelete**](doc/ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
 *ProductApi* | [**apiProductGetFavoriteListPost**](doc/ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
+*ProductApi* | [**apiProductImage2ProductErpIdImagetypeGet**](doc/ProductApi.md#apiproductimage2producterpidimagetypeget) | **get** /api/Product/image2/{productErpId}/{imagetype} | 
 *ProductApi* | [**apiProductPost**](doc/ProductApi.md#apiproductpost) | **post** /api/Product | 
 *ProductApi* | [**apiProductProductAlternativesPost**](doc/ProductApi.md#apiproductproductalternativespost) | **post** /api/Product/ProductAlternatives | 
 *ProductApi* | [**apiProductProductListPost**](doc/ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
@@ -202,6 +209,7 @@ Class | Method | HTTP request | Description
  - [KilerAgreement](doc/KilerAgreement.md)
  - [KilerAgreementLog](doc/KilerAgreementLog.md)
  - [KilerAgreementType](doc/KilerAgreementType.md)
+ - [KilerBanner](doc/KilerBanner.md)
  - [KilerBranch](doc/KilerBranch.md)
  - [KilerBrand](doc/KilerBrand.md)
  - [KilerBrandManager](doc/KilerBrandManager.md)
@@ -231,6 +239,7 @@ Class | Method | HTTP request | Description
  - [KilerDepot](doc/KilerDepot.md)
  - [KilerDevice](doc/KilerDevice.md)
  - [KilerDeviceLogin](doc/KilerDeviceLogin.md)
+ - [KilerFileData](doc/KilerFileData.md)
  - [KilerManufacturer](doc/KilerManufacturer.md)
  - [KilerNeighborhood](doc/KilerNeighborhood.md)
  - [KilerOlimposLog](doc/KilerOlimposLog.md)
@@ -310,6 +319,7 @@ Class | Method | HTTP request | Description
  - [RegisterServiceVerifyRequest](doc/RegisterServiceVerifyRequest.md)
  - [RegisterServiceVersionResponse](doc/RegisterServiceVersionResponse.md)
  - [RestResultOfAccountServiceLoginResponse](doc/RestResultOfAccountServiceLoginResponse.md)
+ - [RestResultOfAccountServiceVersionResponse](doc/RestResultOfAccountServiceVersionResponse.md)
  - [RestResultOfAdminServiceAdminNeighborResponse](doc/RestResultOfAdminServiceAdminNeighborResponse.md)
  - [RestResultOfAdminServiceUploadImageResponse](doc/RestResultOfAdminServiceUploadImageResponse.md)
  - [RestResultOfBannerServiceBannerResponse](doc/RestResultOfBannerServiceBannerResponse.md)

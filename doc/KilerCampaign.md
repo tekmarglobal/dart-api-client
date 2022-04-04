@@ -31,6 +31,8 @@ Name | Type | Description | Notes
 **optimisticLockField** | **int** |  | [optional] 
 **smallImage** | **String** |  | [optional] 
 **uid** | **String** |  | [optional] 
+**public** | **bool** |  | [optional] 
+**banner** | [**BuiltList<KilerBanner>**](KilerBanner.md) |  | [optional] 
 **campaignCampaignsBrandBrands** | [**BuiltList<KilerCampaignCampaignsBrandBrands>**](KilerCampaignCampaignsBrandBrands.md) |  | [optional] 
 **cartCampaign** | [**BuiltList<KilerCartCampaign>**](KilerCartCampaign.md) |  | [optional] 
 **categoryCategoriesCampaignCampaigns** | [**BuiltList<KilerCategoryCategoriesCampaignCampaigns>**](KilerCategoryCategoriesCampaignCampaigns.md) |  | [optional] 

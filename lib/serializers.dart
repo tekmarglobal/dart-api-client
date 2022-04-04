@@ -72,6 +72,7 @@ import 'package:openapi/model/kiler_affiliate_type.dart';
 import 'package:openapi/model/kiler_agreement.dart';
 import 'package:openapi/model/kiler_agreement_log.dart';
 import 'package:openapi/model/kiler_agreement_type.dart';
+import 'package:openapi/model/kiler_banner.dart';
 import 'package:openapi/model/kiler_branch.dart';
 import 'package:openapi/model/kiler_brand.dart';
 import 'package:openapi/model/kiler_brand_manager.dart';
@@ -101,6 +102,7 @@ import 'package:openapi/model/kiler_department.dart';
 import 'package:openapi/model/kiler_depot.dart';
 import 'package:openapi/model/kiler_device.dart';
 import 'package:openapi/model/kiler_device_login.dart';
+import 'package:openapi/model/kiler_file_data.dart';
 import 'package:openapi/model/kiler_manufacturer.dart';
 import 'package:openapi/model/kiler_neighborhood.dart';
 import 'package:openapi/model/kiler_olimpos_log.dart';
@@ -180,6 +182,7 @@ import 'package:openapi/model/register_service_sms_response.dart';
 import 'package:openapi/model/register_service_verify_request.dart';
 import 'package:openapi/model/register_service_version_response.dart';
 import 'package:openapi/model/rest_result_of_account_service_login_response.dart';
+import 'package:openapi/model/rest_result_of_account_service_version_response.dart';
 import 'package:openapi/model/rest_result_of_admin_service_admin_neighbor_response.dart';
 import 'package:openapi/model/rest_result_of_admin_service_upload_image_response.dart';
 import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart';
@@ -284,6 +287,7 @@ part 'serializers.g.dart';
   KilerAgreement,
   KilerAgreementLog,
   KilerAgreementType,
+  KilerBanner,
   KilerBranch,
   KilerBrand,
   KilerBrandManager,
@@ -313,6 +317,7 @@ part 'serializers.g.dart';
   KilerDepot,
   KilerDevice,
   KilerDeviceLogin,
+  KilerFileData,
   KilerManufacturer,
   KilerNeighborhood,
   KilerOlimposLog,
@@ -392,6 +397,7 @@ part 'serializers.g.dart';
   RegisterServiceVerifyRequest,
   RegisterServiceVersionResponse,
   RestResultOfAccountServiceLoginResponse,
+  RestResultOfAccountServiceVersionResponse,
   RestResultOfAdminServiceAdminNeighborResponse,
   RestResultOfAdminServiceUploadImageResponse,
   RestResultOfBannerServiceBannerResponse,

@@ -51,6 +51,18 @@ abstract class KilerDeviceLogin implements Built<KilerDeviceLogin, KilerDeviceLo
     int get gcrecord;
 
     @nullable
+    @BuiltValueField(wireName: r'ipAddress')
+    String get ipAddress;
+
+    @nullable
+    @BuiltValueField(wireName: r'version')
+    String get version;
+
+    @nullable
+    @BuiltValueField(wireName: r'lastUsed')
+    DateTime get lastUsed;
+
+    @nullable
     @BuiltValueField(wireName: r'customerNavigation')
     KilerCustomer get customerNavigation;
 
@@ -133,6 +145,24 @@ class _$KilerDeviceLoginSerializer implements StructuredSerializer<KilerDeviceLo
                 ..add(serializers.serialize(object.gcrecord,
                     specifiedType: const FullType(int)));
         }
+        if (object.ipAddress != null) {
+            result
+                ..add(r'ipAddress')
+                ..add(serializers.serialize(object.ipAddress,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.version != null) {
+            result
+                ..add(r'version')
+                ..add(serializers.serialize(object.version,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.lastUsed != null) {
+            result
+                ..add(r'lastUsed')
+                ..add(serializers.serialize(object.lastUsed,
+                    specifiedType: const FullType(DateTime)));
+        }
         if (object.customerNavigation != null) {
             result
                 ..add(r'customerNavigation')
@@ -194,6 +224,18 @@ class _$KilerDeviceLoginSerializer implements StructuredSerializer<KilerDeviceLo
                 case r'gcrecord':
                     result.gcrecord = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'ipAddress':
+                    result.ipAddress = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'version':
+                    result.version = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'lastUsed':
+                    result.lastUsed = serializers.deserialize(value,
+                        specifiedType: const FullType(DateTime)) as DateTime;
                     break;
                 case r'customerNavigation':
                     result.customerNavigation.replace(serializers.deserialize(value,

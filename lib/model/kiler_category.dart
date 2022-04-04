@@ -8,6 +8,7 @@
 import 'package:openapi/model/kiler_category_categories_campaign_campaigns.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/model/kiler_configuration.dart';
+import 'package:openapi/model/kiler_banner.dart';
 import 'package:openapi/model/kiler_category_import_detail.dart';
 import 'package:openapi/model/kiler_category_product.dart';
 import 'package:openapi/model/kiler_department.dart';
@@ -68,7 +69,7 @@ abstract class KilerCategory implements Built<KilerCategory, KilerCategoryBuilde
 
     @nullable
     @BuiltValueField(wireName: r'erpId')
-    int get erpId;
+    String get erpId;
 
     @nullable
     @BuiltValueField(wireName: r'order')
@@ -85,6 +86,10 @@ abstract class KilerCategory implements Built<KilerCategory, KilerCategoryBuilde
     @nullable
     @BuiltValueField(wireName: r'parentNavigation')
     KilerCategory get parentNavigation;
+
+    @nullable
+    @BuiltValueField(wireName: r'banner')
+    BuiltList<KilerBanner> get banner;
 
     @nullable
     @BuiltValueField(wireName: r'categoryCategoriesCampaignCampaigns')
@@ -203,7 +208,7 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
             result
                 ..add(r'erpId')
                 ..add(serializers.serialize(object.erpId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType(String)));
         }
         if (object.order != null) {
             result
@@ -228,6 +233,12 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
                 ..add(r'parentNavigation')
                 ..add(serializers.serialize(object.parentNavigation,
                     specifiedType: const FullType(KilerCategory)));
+        }
+        if (object.banner != null) {
+            result
+                ..add(r'banner')
+                ..add(serializers.serialize(object.banner,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])));
         }
         if (object.categoryCategoriesCampaignCampaigns != null) {
             result
@@ -323,7 +334,7 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
                     break;
                 case r'erpId':
                     result.erpId = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'order':
                     result.order = serializers.deserialize(value,
@@ -340,6 +351,10 @@ class _$KilerCategorySerializer implements StructuredSerializer<KilerCategory> {
                 case r'parentNavigation':
                     result.parentNavigation.replace(serializers.deserialize(value,
                         specifiedType: const FullType(KilerCategory)) as KilerCategory);
+                    break;
+                case r'banner':
+                    result.banner.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])) as BuiltList<KilerBanner>);
                     break;
                 case r'categoryCategoriesCampaignCampaigns':
                     result.categoryCategoriesCampaignCampaigns.replace(serializers.deserialize(value,

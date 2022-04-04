@@ -70,6 +70,7 @@ doc/KilerAffiliateType.md
 doc/KilerAgreement.md
 doc/KilerAgreementLog.md
 doc/KilerAgreementType.md
+doc/KilerBanner.md
 doc/KilerBranch.md
 doc/KilerBrand.md
 doc/KilerBrandManager.md
@@ -99,6 +100,7 @@ doc/KilerDepartment.md
 doc/KilerDepot.md
 doc/KilerDevice.md
 doc/KilerDeviceLogin.md
+doc/KilerFileData.md
 doc/KilerManufacturer.md
 doc/KilerNeighborhood.md
 doc/KilerOlimposLog.md
@@ -183,6 +185,7 @@ doc/RegisterServiceSmsResponse.md
 doc/RegisterServiceVerifyRequest.md
 doc/RegisterServiceVersionResponse.md
 doc/RestResultOfAccountServiceLoginResponse.md
+doc/RestResultOfAccountServiceVersionResponse.md
 doc/RestResultOfAdminServiceAdminNeighborResponse.md
 doc/RestResultOfAdminServiceUploadImageResponse.md
 doc/RestResultOfBannerServiceBannerResponse.md
@@ -304,6 +307,7 @@ lib/model/kiler_affiliate_type.dart
 lib/model/kiler_agreement.dart
 lib/model/kiler_agreement_log.dart
 lib/model/kiler_agreement_type.dart
+lib/model/kiler_banner.dart
 lib/model/kiler_branch.dart
 lib/model/kiler_brand.dart
 lib/model/kiler_brand_manager.dart
@@ -333,6 +337,7 @@ lib/model/kiler_department.dart
 lib/model/kiler_depot.dart
 lib/model/kiler_device.dart
 lib/model/kiler_device_login.dart
+lib/model/kiler_file_data.dart
 lib/model/kiler_manufacturer.dart
 lib/model/kiler_neighborhood.dart
 lib/model/kiler_olimpos_log.dart
@@ -412,6 +417,7 @@ lib/model/register_service_sms_response.dart
 lib/model/register_service_verify_request.dart
 lib/model/register_service_version_response.dart
 lib/model/rest_result_of_account_service_login_response.dart
+lib/model/rest_result_of_account_service_version_response.dart
 lib/model/rest_result_of_admin_service_admin_neighbor_response.dart
 lib/model/rest_result_of_admin_service_upload_image_response.dart
 lib/model/rest_result_of_banner_service_banner_response.dart
@@ -455,3 +461,6 @@ lib/model/rest_result_of_system_int32.dart
 lib/model/rest_result_of_system_object.dart
 lib/serializers.dart
 pubspec.yaml
+test/kiler_banner_test.dart
+test/kiler_file_data_test.dart
+test/rest_result_of_account_service_version_response_test.dart

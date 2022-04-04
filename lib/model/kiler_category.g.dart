@@ -33,7 +33,7 @@ class _$KilerCategory extends KilerCategory {
   @override
   final int department;
   @override
-  final int erpId;
+  final String erpId;
   @override
   final int order;
   @override
@@ -42,6 +42,8 @@ class _$KilerCategory extends KilerCategory {
   final KilerDepartment departmentNavigation;
   @override
   final KilerCategory parentNavigation;
+  @override
+  final BuiltList<KilerBanner> banner;
   @override
   final BuiltList<KilerCategoryCategoriesCampaignCampaigns>
       categoryCategoriesCampaignCampaigns;
@@ -75,6 +77,7 @@ class _$KilerCategory extends KilerCategory {
       this.menuName,
       this.departmentNavigation,
       this.parentNavigation,
+      this.banner,
       this.categoryCategoriesCampaignCampaigns,
       this.categoryImportDetail,
       this.categoryProduct,
@@ -110,6 +113,7 @@ class _$KilerCategory extends KilerCategory {
         menuName == other.menuName &&
         departmentNavigation == other.departmentNavigation &&
         parentNavigation == other.parentNavigation &&
+        banner == other.banner &&
         categoryCategoriesCampaignCampaigns ==
             other.categoryCategoriesCampaignCampaigns &&
         categoryImportDetail == other.categoryImportDetail &&
@@ -138,21 +142,21 @@ class _$KilerCategory extends KilerCategory {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc(0, oid.hashCode), name.hashCode), level.hashCode),
-                                                                                parent.hashCode),
-                                                                            image.hashCode),
-                                                                        showInMenu.hashCode),
-                                                                    nleft.hashCode),
-                                                                nright.hashCode),
-                                                            refId.hashCode),
-                                                        imagePath.hashCode),
-                                                    optimisticLockField.hashCode),
-                                                department.hashCode),
-                                            erpId.hashCode),
-                                        order.hashCode),
-                                    menuName.hashCode),
-                                departmentNavigation.hashCode),
-                            parentNavigation.hashCode),
+                                                                            $jc($jc($jc($jc($jc(0, oid.hashCode), name.hashCode), level.hashCode), parent.hashCode),
+                                                                                image.hashCode),
+                                                                            showInMenu.hashCode),
+                                                                        nleft.hashCode),
+                                                                    nright.hashCode),
+                                                                refId.hashCode),
+                                                            imagePath.hashCode),
+                                                        optimisticLockField.hashCode),
+                                                    department.hashCode),
+                                                erpId.hashCode),
+                                            order.hashCode),
+                                        menuName.hashCode),
+                                    departmentNavigation.hashCode),
+                                parentNavigation.hashCode),
+                            banner.hashCode),
                         categoryCategoriesCampaignCampaigns.hashCode),
                     categoryImportDetail.hashCode),
                 categoryProduct.hashCode),
@@ -180,6 +184,7 @@ class _$KilerCategory extends KilerCategory {
           ..add('menuName', menuName)
           ..add('departmentNavigation', departmentNavigation)
           ..add('parentNavigation', parentNavigation)
+          ..add('banner', banner)
           ..add('categoryCategoriesCampaignCampaigns',
               categoryCategoriesCampaignCampaigns)
           ..add('categoryImportDetail', categoryImportDetail)
@@ -243,9 +248,9 @@ class KilerCategoryBuilder
   int get department => _$this._department;
   set department(int department) => _$this._department = department;
 
-  int _erpId;
-  int get erpId => _$this._erpId;
-  set erpId(int erpId) => _$this._erpId = erpId;
+  String _erpId;
+  String get erpId => _$this._erpId;
+  set erpId(String erpId) => _$this._erpId = erpId;
 
   int _order;
   int get order => _$this._order;
@@ -266,6 +271,11 @@ class KilerCategoryBuilder
       _$this._parentNavigation ??= new KilerCategoryBuilder();
   set parentNavigation(KilerCategoryBuilder parentNavigation) =>
       _$this._parentNavigation = parentNavigation;
+
+  ListBuilder<KilerBanner> _banner;
+  ListBuilder<KilerBanner> get banner =>
+      _$this._banner ??= new ListBuilder<KilerBanner>();
+  set banner(ListBuilder<KilerBanner> banner) => _$this._banner = banner;
 
   ListBuilder<KilerCategoryCategoriesCampaignCampaigns>
       _categoryCategoriesCampaignCampaigns;
@@ -330,6 +340,7 @@ class KilerCategoryBuilder
       _menuName = $v.menuName;
       _departmentNavigation = $v.departmentNavigation?.toBuilder();
       _parentNavigation = $v.parentNavigation?.toBuilder();
+      _banner = $v.banner?.toBuilder();
       _categoryCategoriesCampaignCampaigns =
           $v.categoryCategoriesCampaignCampaigns?.toBuilder();
       _categoryImportDetail = $v.categoryImportDetail?.toBuilder();
@@ -375,6 +386,7 @@ class KilerCategoryBuilder
               menuName: menuName,
               departmentNavigation: _departmentNavigation?.build(),
               parentNavigation: _parentNavigation?.build(),
+              banner: _banner?.build(),
               categoryCategoriesCampaignCampaigns:
                   _categoryCategoriesCampaignCampaigns?.build(),
               categoryImportDetail: _categoryImportDetail?.build(),
@@ -388,6 +400,8 @@ class KilerCategoryBuilder
         _departmentNavigation?.build();
         _$failedField = 'parentNavigation';
         _parentNavigation?.build();
+        _$failedField = 'banner';
+        _banner?.build();
         _$failedField = 'categoryCategoriesCampaignCampaigns';
         _categoryCategoriesCampaignCampaigns?.build();
         _$failedField = 'categoryImportDetail';

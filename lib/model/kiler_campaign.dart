@@ -13,6 +13,7 @@ import 'package:openapi/model/kiler_region_regions_campaign_campaigns.dart';
 import 'package:openapi/model/kiler_product_products_campaign_campaigns.dart';
 import 'package:openapi/model/kiler_cart_campaign.dart';
 import 'package:openapi/model/kiler_customer_valid_customers_campaign_campaigns.dart';
+import 'package:openapi/model/kiler_banner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -111,6 +112,14 @@ abstract class KilerCampaign implements Built<KilerCampaign, KilerCampaignBuilde
     @nullable
     @BuiltValueField(wireName: r'uid')
     String get uid;
+
+    @nullable
+    @BuiltValueField(wireName: r'public')
+    bool get public;
+
+    @nullable
+    @BuiltValueField(wireName: r'banner')
+    BuiltList<KilerBanner> get banner;
 
     @nullable
     @BuiltValueField(wireName: r'campaignCampaignsBrandBrands')
@@ -299,6 +308,18 @@ class _$KilerCampaignSerializer implements StructuredSerializer<KilerCampaign> {
                 ..add(serializers.serialize(object.uid,
                     specifiedType: const FullType(String)));
         }
+        if (object.public != null) {
+            result
+                ..add(r'public')
+                ..add(serializers.serialize(object.public,
+                    specifiedType: const FullType(bool)));
+        }
+        if (object.banner != null) {
+            result
+                ..add(r'banner')
+                ..add(serializers.serialize(object.banner,
+                    specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])));
+        }
         if (object.campaignCampaignsBrandBrands != null) {
             result
                 ..add(r'campaignCampaignsBrandBrands')
@@ -446,6 +467,14 @@ class _$KilerCampaignSerializer implements StructuredSerializer<KilerCampaign> {
                 case r'uid':
                     result.uid = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'public':
+                    result.public = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
+                case r'banner':
+                    result.banner.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(KilerBanner)])) as BuiltList<KilerBanner>);
                     break;
                 case r'campaignCampaignsBrandBrands':
                     result.campaignCampaignsBrandBrands.replace(serializers.deserialize(value,

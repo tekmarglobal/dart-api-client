@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **uuId** | **String** |  | [optional] 
 **customer** | **int** |  | [optional] 
 **optimisticLockField** | **int** |  | [optional] 
+**paymentMessage** | **String** |  | [optional] 
 **customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] 
 **orderNavigation** | [**KilerOrder**](KilerOrder.md) |  | [optional] 
 **paymentStatusNavigation** | [**KilerPaymentStatus**](KilerPaymentStatus.md) |  | [optional] 

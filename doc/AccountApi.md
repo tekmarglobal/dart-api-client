@@ -9,11 +9,57 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiAccountCheckversionPost**](AccountApi.md#apiaccountcheckversionpost) | **post** /api/Account/checkversion | 
 [**apiAccountFirebaseTokenGet**](AccountApi.md#apiaccountfirebasetokenget) | **get** /api/Account/FirebaseToken | 
 [**apiAccountLoginPost**](AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
 [**apiAccountLogoutGet**](AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
 [**apiAccountWhoAmIGet**](AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
 
+
+# **apiAccountCheckversionPost**
+> RestResultOfAccountServiceVersionResponse apiAccountCheckversionPost(body)
+
+
+
+### Example 
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+var api_instance = new AccountApi();
+var body = new AccountServiceVersionRequest(); // AccountServiceVersionRequest | 
+
+try { 
+    var result = api_instance.apiAccountCheckversionPost(body);
+    print(result);
+} catch (e) {
+    print('Exception when calling AccountApi->apiAccountCheckversionPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccountServiceVersionRequest**](AccountServiceVersionRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfAccountServiceVersionResponse**](RestResultOfAccountServiceVersionResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAccountFirebaseTokenGet**
 > String apiAccountFirebaseTokenGet()

@@ -37,6 +37,8 @@ class _$KilerPayment extends KilerPayment {
   @override
   final int optimisticLockField;
   @override
+  final String paymentMessage;
+  @override
   final KilerCustomer customerNavigation;
   @override
   final KilerOrder orderNavigation;
@@ -63,6 +65,7 @@ class _$KilerPayment extends KilerPayment {
       this.uuId,
       this.customer,
       this.optimisticLockField,
+      this.paymentMessage,
       this.customerNavigation,
       this.orderNavigation,
       this.paymentStatusNavigation,
@@ -94,6 +97,7 @@ class _$KilerPayment extends KilerPayment {
         uuId == other.uuId &&
         customer == other.customer &&
         optimisticLockField == other.optimisticLockField &&
+        paymentMessage == other.paymentMessage &&
         customerNavigation == other.customerNavigation &&
         orderNavigation == other.orderNavigation &&
         paymentStatusNavigation == other.paymentStatusNavigation &&
@@ -120,25 +124,29 @@ class _$KilerPayment extends KilerPayment {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            oid
+                                                                            $jc(
+                                                                                0,
+                                                                                oid
+                                                                                    .hashCode),
+                                                                            name
                                                                                 .hashCode),
-                                                                        name
+                                                                        success
                                                                             .hashCode),
-                                                                    success
+                                                                    paymentDate
                                                                         .hashCode),
-                                                                paymentDate
+                                                                amount
                                                                     .hashCode),
-                                                            amount.hashCode),
-                                                        description.hashCode),
-                                                    paymentType.hashCode),
-                                                paymentStatus.hashCode),
-                                            order.hashCode),
-                                        chargeType.hashCode),
-                                    transactionCode.hashCode),
-                                uuId.hashCode),
-                            customer.hashCode),
-                        optimisticLockField.hashCode),
+                                                            description
+                                                                .hashCode),
+                                                        paymentType.hashCode),
+                                                    paymentStatus.hashCode),
+                                                order.hashCode),
+                                            chargeType.hashCode),
+                                        transactionCode.hashCode),
+                                    uuId.hashCode),
+                                customer.hashCode),
+                            optimisticLockField.hashCode),
+                        paymentMessage.hashCode),
                     customerNavigation.hashCode),
                 orderNavigation.hashCode),
             paymentStatusNavigation.hashCode),
@@ -162,6 +170,7 @@ class _$KilerPayment extends KilerPayment {
           ..add('uuId', uuId)
           ..add('customer', customer)
           ..add('optimisticLockField', optimisticLockField)
+          ..add('paymentMessage', paymentMessage)
           ..add('customerNavigation', customerNavigation)
           ..add('orderNavigation', orderNavigation)
           ..add('paymentStatusNavigation', paymentStatusNavigation)
@@ -232,6 +241,11 @@ class KilerPaymentBuilder
   set optimisticLockField(int optimisticLockField) =>
       _$this._optimisticLockField = optimisticLockField;
 
+  String _paymentMessage;
+  String get paymentMessage => _$this._paymentMessage;
+  set paymentMessage(String paymentMessage) =>
+      _$this._paymentMessage = paymentMessage;
+
   KilerCustomerBuilder _customerNavigation;
   KilerCustomerBuilder get customerNavigation =>
       _$this._customerNavigation ??= new KilerCustomerBuilder();
@@ -278,6 +292,7 @@ class KilerPaymentBuilder
       _uuId = $v.uuId;
       _customer = $v.customer;
       _optimisticLockField = $v.optimisticLockField;
+      _paymentMessage = $v.paymentMessage;
       _customerNavigation = $v.customerNavigation?.toBuilder();
       _orderNavigation = $v.orderNavigation?.toBuilder();
       _paymentStatusNavigation = $v.paymentStatusNavigation?.toBuilder();
@@ -318,6 +333,7 @@ class KilerPaymentBuilder
               uuId: uuId,
               customer: customer,
               optimisticLockField: optimisticLockField,
+              paymentMessage: paymentMessage,
               customerNavigation: _customerNavigation?.build(),
               orderNavigation: _orderNavigation?.build(),
               paymentStatusNavigation: _paymentStatusNavigation?.build(),

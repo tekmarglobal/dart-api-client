@@ -17,6 +17,9 @@ Name | Type | Description | Notes
 **logoutDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **optimisticLockField** | **int** |  | [optional] 
 **gcrecord** | **int** |  | [optional] 
+**ipAddress** | **String** |  | [optional] 
+**version** | **String** |  | [optional] 
+**lastUsed** | [**DateTime**](DateTime.md) |  | [optional] 
 **customerNavigation** | [**KilerCustomer**](KilerCustomer.md) |  | [optional] 
 **deviceNavigation** | [**KilerDevice**](KilerDevice.md) |  | [optional] 
 
