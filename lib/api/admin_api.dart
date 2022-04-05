@@ -15,7 +15,6 @@ import 'package:openapi/model/admin_service_region_neighborhood_request.dart';
 import 'package:openapi/model/admin_service_update_region_neighborhood_request.dart';
 import 'package:openapi/model/rest_result_of_admin_service_admin_neighbor_response.dart';
 import 'package:openapi/model/rest_result_of_admin_service_upload_image_response.dart';
-import 'package:openapi/model/rest_result_of_kiler_configuration.dart';
 import 'package:openapi/model/rest_result_of_list_of_admin_service_admin_neighbor_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_admin_service_branch_response.dart';
 import 'package:openapi/model/rest_result_of_list_of_admin_service_company_response.dart';
@@ -383,94 +382,6 @@ import 'package:openapi/model/rest_result_of_system_int32.dart';
                             ) as RestResultOfListOfAdminServiceTimeSlotResponse;
 
                 return Response<RestResultOfListOfAdminServiceTimeSlotResponse>(
-                data: _responseData,
-                headers: _response.headers,
-                isRedirect: _response.isRedirect,
-                requestOptions: _requestOpt,
-                redirects: _response.redirects,
-                statusCode: _response.statusCode,
-                statusMessage: _response.statusMessage,
-                extra: _response.extra,
-                );
-            }
-
-        /// 
-        ///
-        /// 
-        Future<Response<RestResultOfKilerConfiguration>> apiAdminGetConfigurationGet({ 
-            CancelToken cancelToken,
-            Map<String, dynamic> headers,
-            Map<String, dynamic> extra,
-            ValidateStatus validateStatus,
-            ProgressCallback onSendProgress,
-            ProgressCallback onReceiveProgress,
-            }) async {
-            final _requestOpt = RequestOptions(
-            path: r'/api/Admin/GetConfiguration',
-            method: 'GET',
-            headers: <String, dynamic>{
-            ...?headers,
-            },
-            extra: <String, dynamic>{
-            'secure': <Map<String, String>>[
-            {
-                'type': 'apiKey',
-                'name': 'Bearer',
-                    'keyName': 'Authorization',
-                    'where': 'header',
-                },
-                ],
-            ...?extra,
-            },
-            validateStatus: validateStatus,
-            contentType: [
-                'application/json',
-            ].first,
-            cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-            );
-
-            final _request = Options(
-            method: 'GET',
-            headers: <String, dynamic>{
-            ...?headers,
-            },
-            extra: <String, dynamic>{
-            'secure': <Map<String, String>>[
-            {
-                'type': 'apiKey',
-                'name': 'Bearer',
-                    'keyName': 'Authorization',
-                    'where': 'header',
-                },
-                ],
-            ...?extra,
-            },
-            validateStatus: validateStatus,
-            contentType: [
-                'application/json',
-            ].first,
-            );
-
-            dynamic _bodyData;
-
-            final _response = await _dio.request<dynamic>(
-            r'/api/Admin/GetConfiguration',
-            data: _bodyData,
-            options: _request,
-            cancelToken: cancelToken,
-            onSendProgress: onSendProgress,
-            onReceiveProgress: onReceiveProgress,
-            );
-
-                            const _responseType = FullType(RestResultOfKilerConfiguration);
-                            final _responseData = _serializers.deserialize(
-                            _response.data,
-                            specifiedType: _responseType,
-                            ) as RestResultOfKilerConfiguration;
-
-                return Response<RestResultOfKilerConfiguration>(
                 data: _responseData,
                 headers: _response.headers,
                 isRedirect: _response.isRedirect,

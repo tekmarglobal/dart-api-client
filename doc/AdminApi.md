@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**apiAdminCompaniesPost**](AdminApi.md#apiadmincompaniespost) | **post** /api/Admin/Companies | 
 [**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
-[**apiAdminGetConfigurationGet**](AdminApi.md#apiadmingetconfigurationget) | **get** /api/Admin/GetConfiguration | 
 [**apiAdminGetProductGet**](AdminApi.md#apiadmingetproductget) | **get** /api/Admin/GetProduct | 
 [**apiAdminRegionNeighborhoodPost**](AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
 [**apiAdminRegionPopulationGet**](AdminApi.md#apiadminregionpopulationget) | **get** /api/Admin/RegionPopulation | 
@@ -182,47 +181,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestResultOfListOfAdminServiceTimeSlotResponse**](RestResultOfListOfAdminServiceTimeSlotResponse.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **apiAdminGetConfigurationGet**
-> RestResultOfKilerConfiguration apiAdminGetConfigurationGet()
-
-
-
-### Example 
-```dart
-import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
-
-var api_instance = new AdminApi();
-
-try { 
-    var result = api_instance.apiAdminGetConfigurationGet();
-    print(result);
-} catch (e) {
-    print('Exception when calling AdminApi->apiAdminGetConfigurationGet: $e\n');
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**RestResultOfKilerConfiguration**](RestResultOfKilerConfiguration.md)
 
 ### Authorization
 

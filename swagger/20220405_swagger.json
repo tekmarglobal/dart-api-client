@@ -187,6 +187,26 @@
         }
       }
     },
+    "/api/Admin/GetConfiguration": {
+      "get": {
+        "tags": [
+          "Admin"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfKilerConfiguration"
+            }
+          }
+        }
+      }
+    },
     "/api/Admin/Companies": {
       "post": {
         "tags": [
@@ -475,15 +495,16 @@
         }
       }
     },
-    "/api/Affiliate/detail": {
+    "/api/Affiliate/detail/{urllink}": {
       "get": {
         "tags": [
           "Affiliate"
         ],
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "urlLink",
+            "required": true,
             "type": "string"
           }
         ],
@@ -2623,6 +2644,3970 @@
           "items": {
             "$ref": "#/definitions/AdminServiceTimeSlotResponse"
           }
+        }
+      }
+    },
+    "KilerBrandManagerBrand": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brand": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brandManager": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brandManagerNavigation": {
+          "$ref": "#/definitions/KilerBrandManager"
+        },
+        "brandNavigation": {
+          "$ref": "#/definitions/KilerBrand"
+        }
+      }
+    },
+    "KilerBrandManager": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "manufacturer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "manufacturerNavigation": {
+          "$ref": "#/definitions/KilerManufacturer"
+        },
+        "brandManagerBrand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBrandManagerBrand"
+          }
+        }
+      }
+    },
+    "KilerManufacturer": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBrand"
+          }
+        },
+        "brandManager": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBrandManager"
+          }
+        }
+      }
+    },
+    "KilerPersonel": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerPersonelDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "personel": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "personelNavigation": {
+          "$ref": "#/definitions/KilerPersonel"
+        }
+      }
+    },
+    "KilerDepartment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        },
+        "personelDepartment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPersonelDepartment"
+          }
+        }
+      }
+    },
+    "KilerCategoryCategoriesCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categories": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "categoriesNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerCategoryImport": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "importDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "payLoad": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        }
+      }
+    },
+    "KilerCategoryImportDetail": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oldValue": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "string"
+        },
+        "categoryImport": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryImportNavigation": {
+          "$ref": "#/definitions/KilerCategoryImport"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        }
+      }
+    },
+    "KilerCategoryProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "main": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCategory": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "level": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parent": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        },
+        "showInMenu": {
+          "type": "boolean"
+        },
+        "nleft": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nright": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "refId": {
+          "type": "string"
+        },
+        "imagePath": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "department": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "erpId": {
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "menuName": {
+          "type": "string"
+        },
+        "departmentNavigation": {
+          "$ref": "#/definitions/KilerDepartment"
+        },
+        "parentNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        },
+        "categoryCategoriesCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
+          }
+        },
+        "categoryImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryImportDetail"
+          }
+        },
+        "categoryProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryProduct"
+          }
+        },
+        "configuration": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerConfiguration"
+          }
+        },
+        "inverseParentNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategory"
+          }
+        }
+      }
+    },
+    "KilerFileData": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "size": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "content": {
+          "format": "byte",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        }
+      }
+    },
+    "KilerBanner": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string"
+        },
+        "index": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "imageData": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "target": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "category": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "categoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "imageDataNavigation": {
+          "$ref": "#/definitions/KilerFileData"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerOperatingSystem": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "platform": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPlatform"
+          }
+        }
+      }
+    },
+    "KilerCountry": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "numericCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alpha2Code": {
+          "type": "string"
+        },
+        "alpha3Code": {
+          "type": "string"
+        },
+        "dialCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "city": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCity"
+          }
+        }
+      }
+    },
+    "KilerCounty": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "city": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formalCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gpsId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cityNavigation": {
+          "$ref": "#/definitions/KilerCity"
+        },
+        "neighborhood": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerNeighborhood"
+          }
+        }
+      }
+    },
+    "KilerCity": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "country": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formalCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gpsId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "countryNavigation": {
+          "$ref": "#/definitions/KilerCountry"
+        },
+        "county": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCounty"
+          }
+        },
+        "neighborhood": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerNeighborhood"
+          }
+        }
+      }
+    },
+    "KilerBranch": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "neighborhood": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "neighborhoodNavigation": {
+          "$ref": "#/definitions/KilerNeighborhood"
+        }
+      }
+    },
+    "KilerCompany": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegion"
+          }
+        }
+      }
+    },
+    "KilerDepot": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        }
+      }
+    },
+    "KilerOrderStatus": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerPaymentStatus": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPayment"
+          }
+        }
+      }
+    },
+    "KilerPayment": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "paymentDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "paymentType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentStatus": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "chargeType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "transactionCode": {
+          "type": "string"
+        },
+        "uuId": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentMessage": {
+          "type": "string"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        },
+        "paymentStatusNavigation": {
+          "$ref": "#/definitions/KilerPaymentStatus"
+        },
+        "paymentTypeNavigation": {
+          "$ref": "#/definitions/KilerPaymentType"
+        }
+      }
+    },
+    "KilerPaymentType": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPayment"
+          }
+        }
+      }
+    },
+    "KilerTimeSlot": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "start": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "end": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "quota": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fee": {
+          "format": "double",
+          "type": "number"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerOlimposLog": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "sentData": {
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "sent": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        }
+      }
+    },
+    "KilerOrderCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        }
+      }
+    },
+    "KilerOrderProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "listPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "quantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "productNotes": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerPermissionPolicyActionPermissionObject": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "actionId": {
+          "type": "string"
+        },
+        "role": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "roleNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyRole"
+        }
+      }
+    },
+    "KilerPermissionPolicyNavigationPermissionsObject": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "itemPath": {
+          "type": "string"
+        },
+        "navigateState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "role": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "roleNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyRole"
+        }
+      }
+    },
+    "KilerPermissionPolicyMemberPermissionsObject": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "members": {
+          "type": "string"
+        },
+        "readState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "writeState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "criteria": {
+          "type": "string"
+        },
+        "typePermissionObject": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "typePermissionObjectNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyTypePermissionsObject"
+        }
+      }
+    },
+    "KilerPermissionPolicyObjectPermissionsObject": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "criteria": {
+          "type": "string"
+        },
+        "readState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "writeState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "deleteState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "navigateState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "typePermissionObject": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "typePermissionObjectNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyTypePermissionsObject"
+        }
+      }
+    },
+    "KilerPermissionPolicyTypePermissionsObject": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "role": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "targetType": {
+          "type": "string"
+        },
+        "readState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "writeState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "createState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "deleteState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "navigateState": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "roleNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyRole"
+        },
+        "permissionPolicyMemberPermissionsObject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyMemberPermissionsObject"
+          }
+        },
+        "permissionPolicyObjectPermissionsObject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyObjectPermissionsObject"
+          }
+        }
+      }
+    },
+    "KilerPermissionPolicyUser": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "storedPassword": {
+          "type": "string"
+        },
+        "changePasswordOnFirstLogon": {
+          "type": "boolean"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "permissionPolicyUserUsersPermissionPolicyRoleRoles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles"
+          }
+        }
+      }
+    },
+    "KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles": {
+      "type": "object",
+      "properties": {
+        "roles": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "users": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rolesNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyRole"
+        },
+        "usersNavigation": {
+          "$ref": "#/definitions/KilerPermissionPolicyUser"
+        }
+      }
+    },
+    "KilerPermissionPolicyRole": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isAdministrative": {
+          "type": "boolean"
+        },
+        "canEditModel": {
+          "type": "boolean"
+        },
+        "permissionPolicy": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "objectType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "objectTypeNavigation": {
+          "$ref": "#/definitions/KilerXpobjectType"
+        },
+        "permissionPolicyActionPermissionObject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyActionPermissionObject"
+          }
+        },
+        "permissionPolicyNavigationPermissionsObject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyNavigationPermissionsObject"
+          }
+        },
+        "permissionPolicyTypePermissionsObject": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyTypePermissionsObject"
+          }
+        },
+        "permissionPolicyUserUsersPermissionPolicyRoleRoles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyUserUsersPermissionPolicyRoleRoles"
+          }
+        }
+      }
+    },
+    "KilerXpobjectType": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "typeName": {
+          "type": "string"
+        },
+        "assemblyName": {
+          "type": "string"
+        },
+        "permissionPolicyRole": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPermissionPolicyRole"
+          }
+        },
+        "survey": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurvey"
+          }
+        }
+      }
+    },
+    "KilerSurveyAnswer": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "survey": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "question": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "value": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "additionalNote": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "questionNavigation": {
+          "$ref": "#/definitions/KilerSurveyQuestion"
+        },
+        "surveyNavigation": {
+          "$ref": "#/definitions/KilerSurvey"
+        }
+      }
+    },
+    "KilerSurveyQuestion": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "template": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "templateNavigation": {
+          "$ref": "#/definitions/KilerSurveyTemplate"
+        },
+        "surveyAnswer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurveyAnswer"
+          }
+        }
+      }
+    },
+    "KilerSurveyTemplate": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "survey": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurvey"
+          }
+        },
+        "surveyQuestion": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurveyQuestion"
+          }
+        }
+      }
+    },
+    "KilerSurvey": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "template": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "additionalNote": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "objectType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "objectTypeNavigation": {
+          "$ref": "#/definitions/KilerXpobjectType"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        },
+        "templateNavigation": {
+          "$ref": "#/definitions/KilerSurveyTemplate"
+        },
+        "surveyAnswer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurveyAnswer"
+          }
+        }
+      }
+    },
+    "KilerTicketAction": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ticket": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTicket"
+          }
+        }
+      }
+    },
+    "KilerTicketCategory": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ticket": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTicket"
+          }
+        }
+      }
+    },
+    "KilerTicket": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "ticketCategory": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "order": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "user": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "action": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "actionNavigation": {
+          "$ref": "#/definitions/KilerTicketAction"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "orderNavigation": {
+          "$ref": "#/definitions/KilerOrder"
+        },
+        "ticketCategoryNavigation": {
+          "$ref": "#/definitions/KilerTicketCategory"
+        }
+      }
+    },
+    "KilerOrder": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cart": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "orderDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "productDiscountsTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "campaignDiscountsTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "deliveryAddress": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "billingAddress": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "orderStatus": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "orderTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "completedFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "note": {
+          "type": "string"
+        },
+        "bagAmount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bagTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "timeSlot": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "paymentType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "sent": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "uuid": {
+          "type": "string"
+        },
+        "fee": {
+          "format": "double",
+          "type": "number"
+        },
+        "isProcessed": {
+          "type": "boolean"
+        },
+        "billingAddressNavigation": {
+          "$ref": "#/definitions/KilerAddress"
+        },
+        "cartNavigation": {
+          "$ref": "#/definitions/KilerCart"
+        },
+        "completedFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "deliveryAddressNavigation": {
+          "$ref": "#/definitions/KilerAddress"
+        },
+        "orderStatusNavigation": {
+          "$ref": "#/definitions/KilerOrderStatus"
+        },
+        "paymentTypeNavigation": {
+          "$ref": "#/definitions/KilerPaymentType"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        },
+        "timeSlotNavigation": {
+          "$ref": "#/definitions/KilerTimeSlot"
+        },
+        "olimposLog": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOlimposLog"
+          }
+        },
+        "orderCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderCampaign"
+          }
+        },
+        "orderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderProduct"
+          }
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPayment"
+          }
+        },
+        "survey": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSurvey"
+          }
+        },
+        "ticket": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTicket"
+          }
+        }
+      }
+    },
+    "KilerCartProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cart": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "quantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "listPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "dateAdded": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateRemoved": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "addedFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "removedFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productNotes": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "addedFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        },
+        "cartNavigation": {
+          "$ref": "#/definitions/KilerCart"
+        },
+        "regionProductNavigation": {
+          "$ref": "#/definitions/KilerRegionProduct"
+        },
+        "removedFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        }
+      }
+    },
+    "KilerProductPrice": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "dateStart": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateEnd": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "price": {
+          "format": "double",
+          "type": "number"
+        },
+        "regionProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "listPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionProductNavigation": {
+          "$ref": "#/definitions/KilerRegionProduct"
+        }
+      }
+    },
+    "KilerRegionProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        },
+        "cartProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "productPrice": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductPrice"
+          }
+        }
+      }
+    },
+    "KilerRegionRegionsCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regions": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "regionsNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        }
+      }
+    },
+    "KilerTimeSlotTemplate": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "dayOfWeek": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "start": {
+          "format": "double",
+          "type": "number"
+        },
+        "end": {
+          "format": "double",
+          "type": "number"
+        },
+        "quota": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fee": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        }
+      }
+    },
+    "KilerRegion": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "freeDelivery": {
+          "type": "boolean"
+        },
+        "freeDeliveryAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "timeSlotGenerationWindow": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "lastTimeSlotGeneratedDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "minimumCartAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionMail": {
+          "type": "string"
+        },
+        "erpId": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "company": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bufferTime": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "timeSlotWindow": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "companyNavigation": {
+          "$ref": "#/definitions/KilerCompany"
+        },
+        "cart": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCart"
+          }
+        },
+        "depot": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDepot"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        },
+        "regionProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionProduct"
+          }
+        },
+        "regionRegionsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsCampaignCampaigns"
+          }
+        },
+        "regionRegionsNeighborhoodNeighborhoods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsNeighborhoodNeighborhoods"
+          }
+        },
+        "timeSlot": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTimeSlot"
+          }
+        },
+        "timeSlotTemplate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTimeSlotTemplate"
+          }
+        }
+      }
+    },
+    "KilerRegionRegionsNeighborhoodNeighborhoods": {
+      "type": "object",
+      "properties": {
+        "neighborhoods": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regions": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "neighborhoodsNavigation": {
+          "$ref": "#/definitions/KilerNeighborhood"
+        },
+        "regionsNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        }
+      }
+    },
+    "KilerNeighborhood": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "county": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "city": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gpsId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "formalCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "population": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cityNavigation": {
+          "$ref": "#/definitions/KilerCity"
+        },
+        "countyNavigation": {
+          "$ref": "#/definitions/KilerCounty"
+        },
+        "address": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAddress"
+          }
+        },
+        "branch": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBranch"
+          }
+        },
+        "regionRegionsNeighborhoodNeighborhoods": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsNeighborhoodNeighborhoods"
+          }
+        }
+      }
+    },
+    "KilerAddress": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "neighborhood": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fullAddress": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "building": {
+          "type": "string"
+        },
+        "floor": {
+          "type": "string"
+        },
+        "door": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "customerName": {
+          "type": "string"
+        },
+        "customerSurname": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "taxOffice": {
+          "type": "string"
+        },
+        "taxNumber": {
+          "type": "string"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "isindividual": {
+          "type": "boolean"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "neighborhoodNavigation": {
+          "$ref": "#/definitions/KilerNeighborhood"
+        },
+        "customerDefaultAddressNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomer"
+          }
+        },
+        "customerInvoiceAddressNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomer"
+          }
+        },
+        "orderBillingAddressNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        },
+        "orderDeliveryAddressNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerAffiliateType": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affiliateLink": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAffiliateLink"
+          }
+        }
+      }
+    },
+    "KilerAffiliateLink": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "lastClickedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdBy": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "url": {
+          "type": "string"
+        },
+        "recordId": {
+          "type": "string"
+        },
+        "recordType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "createdByNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "recordTypeNavigation": {
+          "$ref": "#/definitions/KilerAffiliateType"
+        },
+        "affiliateClick": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAffiliateClick"
+          }
+        }
+      }
+    },
+    "KilerAffiliateClick": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "clickedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "clickedBy": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ip": {
+          "type": "string"
+        },
+        "affiliateLink": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affiliateLinkNavigation": {
+          "$ref": "#/definitions/KilerAffiliateLink"
+        },
+        "clickedByNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerAgreementType": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "agreement": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAgreement"
+          }
+        }
+      }
+    },
+    "KilerAgreement": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "agreementType": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "isRequired": {
+          "type": "boolean"
+        },
+        "agreementTypeNavigation": {
+          "$ref": "#/definitions/KilerAgreementType"
+        },
+        "agreementLog": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAgreementLog"
+          }
+        }
+      }
+    },
+    "KilerAgreementLog": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "recordDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "agreement": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "accept": {
+          "type": "boolean"
+        },
+        "agreementNavigation": {
+          "$ref": "#/definitions/KilerAgreement"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerCall": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "callDateTime": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "duration": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "extention": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "direction": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "recordingFile": {
+          "type": "string"
+        },
+        "uniqueId": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerCustomerFavoriteList": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCustomerMessage": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "sendDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "readDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerCustomerValidCustomersCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "validCustomers": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "validCustomersNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerDeviceLogin": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "device": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "token": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "loginDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "logoutDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "lastUsed": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "deviceNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        }
+      }
+    },
+    "KilerProductRecommendation": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerSmsVerification": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "consumedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        }
+      }
+    },
+    "KilerCustomer": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "surname": {
+          "type": "string"
+        },
+        "birthdate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "allowSms": {
+          "type": "boolean"
+        },
+        "allowEmail": {
+          "type": "boolean"
+        },
+        "gender": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "password": {
+          "type": "string"
+        },
+        "smsVerificationCode": {
+          "type": "string"
+        },
+        "smsVerificationSendDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "anonymous": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "allowCampaign": {
+          "type": "boolean"
+        },
+        "identificationNumber": {
+          "type": "string"
+        },
+        "defaultAddress": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "invoiceAddress": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "uid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "defaultAddressNavigation": {
+          "$ref": "#/definitions/KilerAddress"
+        },
+        "invoiceAddressNavigation": {
+          "$ref": "#/definitions/KilerAddress"
+        },
+        "address": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAddress"
+          }
+        },
+        "affiliateClick": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAffiliateClick"
+          }
+        },
+        "affiliateLink": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAffiliateLink"
+          }
+        },
+        "agreementLog": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerAgreementLog"
+          }
+        },
+        "call": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCall"
+          }
+        },
+        "cart": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCart"
+          }
+        },
+        "customerFavoriteList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerFavoriteList"
+          }
+        },
+        "customerLoginAttempt": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerLoginAttempt"
+          }
+        },
+        "customerMessage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerMessage"
+          }
+        },
+        "customerValidCustomersCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerValidCustomersCampaignCampaigns"
+          }
+        },
+        "deviceLogin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDeviceLogin"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        },
+        "payment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerPayment"
+          }
+        },
+        "productRecommendation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductRecommendation"
+          }
+        },
+        "smsVerification": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerSmsVerification"
+          }
+        },
+        "ticket": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerTicket"
+          }
+        }
+      }
+    },
+    "KilerCustomerLoginAttempt": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "ip": {
+          "type": "string"
+        },
+        "platform": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "platformNavigation": {
+          "$ref": "#/definitions/KilerPlatform"
+        }
+      }
+    },
+    "KilerPlatform": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "operatingSystem": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operatingSystemNavigation": {
+          "$ref": "#/definitions/KilerOperatingSystem"
+        },
+        "customerLoginAttempt": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerLoginAttempt"
+          }
+        },
+        "device": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDevice"
+          }
+        }
+      }
+    },
+    "KilerDevice": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "platform": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "deviceId": {
+          "type": "string"
+        },
+        "platformNavigation": {
+          "$ref": "#/definitions/KilerPlatform"
+        },
+        "cart": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCart"
+          }
+        },
+        "cartProductAddedFromNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "cartProductRemovedFromNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "deviceLogin": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerDeviceLogin"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerCart": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "region": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cartTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "createdFrom": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productDiscountsTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "note": {
+          "type": "string"
+        },
+        "bagAmount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bagTotal": {
+          "format": "double",
+          "type": "number"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "deleted": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "estimatedFee": {
+          "format": "double",
+          "type": "number"
+        },
+        "dateDeleted": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "dateCreated": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "createdFromNavigation": {
+          "$ref": "#/definitions/KilerDevice"
+        },
+        "customerNavigation": {
+          "$ref": "#/definitions/KilerCustomer"
+        },
+        "regionNavigation": {
+          "$ref": "#/definitions/KilerRegion"
+        },
+        "cartCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartCampaign"
+          }
+        },
+        "cartProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartProduct"
+          }
+        },
+        "order": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrder"
+          }
+        }
+      }
+    },
+    "KilerCartCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cart": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaign": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "discount": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "cartNavigation": {
+          "$ref": "#/definitions/KilerCart"
+        }
+      }
+    },
+    "KilerProductProductsCampaignCampaigns": {
+      "type": "object",
+      "properties": {
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "products": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        },
+        "productsNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerCampaign": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "image": {
+          "type": "string"
+        },
+        "startDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "endDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "displayPriority": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "customerOrderCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "cartMinAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "productMinAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "productMinCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "maxDiscountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "freeDelivery": {
+          "type": "boolean"
+        },
+        "discountPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "discountAmount": {
+          "format": "double",
+          "type": "number"
+        },
+        "maxPerCustomerUsageCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "maxUsageCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affectedProductCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affectedProductDiscountPercentage": {
+          "format": "double",
+          "type": "number"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "smallImage": {
+          "type": "string"
+        },
+        "uid": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "public": {
+          "type": "boolean"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        },
+        "campaignCampaignsBrandBrands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCampaignCampaignsBrandBrands"
+          }
+        },
+        "cartCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCartCampaign"
+          }
+        },
+        "categoryCategoriesCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryCategoriesCampaignCampaigns"
+          }
+        },
+        "customerValidCustomersCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerValidCustomersCampaignCampaigns"
+          }
+        },
+        "orderCampaign": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderCampaign"
+          }
+        },
+        "productProductsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsCampaignCampaigns"
+          }
+        },
+        "regionRegionsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionRegionsCampaignCampaigns"
+          }
+        }
+      }
+    },
+    "KilerCampaignCampaignsBrandBrands": {
+      "type": "object",
+      "properties": {
+        "brands": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "campaigns": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brandsNavigation": {
+          "$ref": "#/definitions/KilerBrand"
+        },
+        "campaignsNavigation": {
+          "$ref": "#/definitions/KilerCampaign"
+        }
+      }
+    },
+    "KilerBrand": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "manufacturer": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "manufacturerNavigation": {
+          "$ref": "#/definitions/KilerManufacturer"
+        },
+        "brandManagerBrand": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBrandManagerBrand"
+          }
+        },
+        "campaignCampaignsBrandBrands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCampaignCampaignsBrandBrands"
+          }
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerProductTag": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerSupplier": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProduct"
+          }
+        }
+      }
+    },
+    "KilerProductProductsProductAlternativesProductAlternatives0eac5f03": {
+      "type": "object",
+      "properties": {
+        "productAlternativesCollection": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "products": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productAlternativesCollectionNavigation": {
+          "$ref": "#/definitions/KilerProductAlternatives"
+        },
+        "productsNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerProductAlternatives": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alternativeProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "alternativeProductNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "productProductsProductAlternativesProductAlternatives0eac5f03": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsProductAlternativesProductAlternatives0eac5f03"
+          }
+        }
+      }
+    },
+    "KilerProductImage": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "image": {
+          "format": "byte",
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "path": {
+          "type": "string"
+        },
+        "imageType": {
+          "type": "string"
+        },
+        "cdn": {
+          "type": "boolean"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerProductImport": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "importDate": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "payload": {
+          "type": "string"
+        },
+        "ipAddress": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionId": {
+          "type": "string"
+        },
+        "productImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductImportDetail"
+          }
+        }
+      }
+    },
+    "KilerProductImportDetail": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "product": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "oldValue": {
+          "type": "string"
+        },
+        "newValue": {
+          "type": "string"
+        },
+        "productImport": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "operationType": {
+          "type": "string"
+        },
+        "productImportNavigation": {
+          "$ref": "#/definitions/KilerProductImport"
+        },
+        "productNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "KilerProduct": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "supplier": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "lowStockLimit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "outOfStockLimit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "outOfStockDisplayBehavior": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "lowStockDisplayBehavior": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brand": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "barcode": {
+          "type": "string"
+        },
+        "sku": {
+          "type": "string"
+        },
+        "desi": {
+          "format": "double",
+          "type": "number"
+        },
+        "maxQuantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "minQuantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "initalQuantity": {
+          "format": "double",
+          "type": "number"
+        },
+        "quantityStep": {
+          "format": "double",
+          "type": "number"
+        },
+        "erpId": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "productUnit": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "vat": {
+          "format": "double",
+          "type": "number"
+        },
+        "menuName": {
+          "type": "string"
+        },
+        "weight": {
+          "format": "double",
+          "type": "number"
+        },
+        "productTag": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "brandNavigation": {
+          "$ref": "#/definitions/KilerBrand"
+        },
+        "productTagNavigation": {
+          "$ref": "#/definitions/KilerProductTag"
+        },
+        "supplierNavigation": {
+          "$ref": "#/definitions/KilerSupplier"
+        },
+        "banner": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerBanner"
+          }
+        },
+        "categoryProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCategoryProduct"
+          }
+        },
+        "configurationBagProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerConfiguration"
+          }
+        },
+        "configurationDeliveryProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerConfiguration"
+          }
+        },
+        "customerFavoriteList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerCustomerFavoriteList"
+          }
+        },
+        "orderProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerOrderProduct"
+          }
+        },
+        "productAlternativesAlternativeProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductAlternatives"
+          }
+        },
+        "productAlternativesProductNavigation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductAlternatives"
+          }
+        },
+        "productImage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductImage"
+          }
+        },
+        "productImportDetail": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductImportDetail"
+          }
+        },
+        "productProductsCampaignCampaigns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsCampaignCampaigns"
+          }
+        },
+        "productProductsProductAlternativesProductAlternatives0eac5f03": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerProductProductsProductAlternativesProductAlternatives0eac5f03"
+          }
+        },
+        "regionProduct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/KilerRegionProduct"
+          }
+        }
+      }
+    },
+    "KilerConfiguration": {
+      "type": "object",
+      "properties": {
+        "oid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "s3keyId": {
+          "type": "string"
+        },
+        "s3keySecret": {
+          "type": "string"
+        },
+        "optimisticLockField": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "defaultCategory": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "bagProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "deliveryProduct": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "gcrecord": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "timeZone": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "affiliateLinkDomain": {
+          "type": "string"
+        },
+        "s3bucketName": {
+          "type": "string"
+        },
+        "bagProductNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        },
+        "defaultCategoryNavigation": {
+          "$ref": "#/definitions/KilerCategory"
+        },
+        "deliveryProductNavigation": {
+          "$ref": "#/definitions/KilerProduct"
+        }
+      }
+    },
+    "RestResultOfKilerConfiguration": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/KilerConfiguration"
         }
       }
     },

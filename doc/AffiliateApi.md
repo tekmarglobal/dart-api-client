@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAffiliateDetailUrllinkGet**](AffiliateApi.md#apiaffiliatedetailurllinkget) | **get** /api/Affiliate/detail/{urllink} | 
+[**apiAffiliateDetailGet**](AffiliateApi.md#apiaffiliatedetailget) | **get** /api/Affiliate/detail | 
 [**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiaffiliategetsharelinkpost) | **post** /api/Affiliate/GetShareLink | 
 [**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **post** /api/Affiliate/ShareLinkClicked | 
 
 
-# **apiAffiliateDetailUrllinkGet**
-> apiAffiliateDetailUrllinkGet(urlLink)
+# **apiAffiliateDetailGet**
+> apiAffiliateDetailGet(urlLink)
 
 
 
@@ -31,9 +31,9 @@ var api_instance = new AffiliateApi();
 var urlLink = urlLink_example; // String | 
 
 try { 
-    api_instance.apiAffiliateDetailUrllinkGet(urlLink);
+    api_instance.apiAffiliateDetailGet(urlLink);
 } catch (e) {
-    print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
+    print('Exception when calling AffiliateApi->apiAffiliateDetailGet: $e\n');
 }
 ```
 
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urlLink** | **String**|  | 
+ **urlLink** | **String**|  | [optional] 
 
 ### Return type
 
