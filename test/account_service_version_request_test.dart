@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/account_service_version_request.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for AccountServiceVersionRequest
 void main() {
@@ -19,12 +12,20 @@ void main() {
       // TODO
     });
 
+    // String version
+    test('to test the property `version`', () async {
+      // TODO
+    });
+
     // String platform
     test('to test the property `platform`', () async {
       // TODO
     });
 
+    // bool isWeb
+    test('to test the property `isWeb`', () async {
+      // TODO
+    });
 
   });
-
 }

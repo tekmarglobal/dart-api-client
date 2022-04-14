@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/cart_service_update_timeslot_request.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for CartServiceUpdateTimeslotRequest
 void main() {
@@ -19,7 +12,5 @@ void main() {
       // TODO
     });
 
-
   });
-
 }

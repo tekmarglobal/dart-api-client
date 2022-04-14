@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **color** | **String** |  | [optional] 
 **population** | **int** |  | [optional] 
-**regions** | [**BuiltList<AdminServiceRegionResponse>**](AdminServiceRegionResponse.md) |  | [optional] 
+**regions** | [**BuiltList&lt;AdminServiceRegionResponse&gt;**](AdminServiceRegionResponse.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

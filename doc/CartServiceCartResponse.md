@@ -16,10 +16,10 @@ Name | Type | Description | Notes
 **bagTotal** | **double** |  | [optional] 
 **bagAmount** | **int** |  | [optional] 
 **estimatedFee** | **double** |  | [optional] 
-**appliedCampaigns** | [**BuiltList<CartServiceCampaignResponse>**](CartServiceCampaignResponse.md) |  | [optional] 
+**appliedCampaigns** | [**BuiltList&lt;CartServiceCampaignResponse&gt;**](CartServiceCampaignResponse.md) |  | [optional] 
 **campaignTotalDiscount** | **double** |  | [optional] 
-**cartProducts** | [**BuiltList<CartServiceRCartProducts>**](CartServiceRCartProducts.md) |  | [optional] 
-**cardProducts** | [**BuiltList<CartServiceRCartProducts>**](CartServiceRCartProducts.md) |  | [optional] 
+**cartProducts** | [**BuiltList&lt;CartServiceRCartProducts&gt;**](CartServiceRCartProducts.md) |  | [optional] 
+**cardProducts** | [**BuiltList&lt;CartServiceRCartProducts&gt;**](CartServiceRCartProducts.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,14 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiDefinitionAgreementGet**](DefinitionApi.md#apidefinitionagreementget) | **get** /api/Definition/Agreement | 
-[**apiDefinitionCitiesPost**](DefinitionApi.md#apidefinitioncitiespost) | **post** /api/Definition/Cities | 
-[**apiDefinitionCountiesPost**](DefinitionApi.md#apidefinitioncountiespost) | **post** /api/Definition/Counties | 
-[**apiDefinitionFaqGet**](DefinitionApi.md#apidefinitionfaqget) | **get** /api/Definition/Faq | 
-[**apiDefinitionHelloGet**](DefinitionApi.md#apidefinitionhelloget) | **get** /api/Definition/Hello | 
-[**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apidefinitionneighborhoodpost) | **post** /api/Definition/Neighborhood | 
-[**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apidefinitionupdateagreementlogpost) | **post** /api/Definition/UpdateAgreementLog | 
-[**apiDefinitionUploadCountriesToFirebasePost**](DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **post** /api/Definition/UploadCountriesToFirebase | 
+[**apiDefinitionAgreementGet**](DefinitionApi.md#apidefinitionagreementget) | **GET** /api/Definition/Agreement | 
+[**apiDefinitionCitiesPost**](DefinitionApi.md#apidefinitioncitiespost) | **POST** /api/Definition/Cities | 
+[**apiDefinitionCountiesPost**](DefinitionApi.md#apidefinitioncountiespost) | **POST** /api/Definition/Counties | 
+[**apiDefinitionFaqGet**](DefinitionApi.md#apidefinitionfaqget) | **GET** /api/Definition/Faq | 
+[**apiDefinitionHelloGet**](DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
+[**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
+[**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
+[**apiDefinitionUploadCountriesToFirebasePost**](DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **POST** /api/Definition/UploadCountriesToFirebase | 
 
 
 # **apiDefinitionAgreementGet**
@@ -24,20 +24,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
+final api = Openapi().getDefinitionApi();
 
-try { 
-    var result = api_instance.apiDefinitionAgreementGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionAgreementGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
 }
 ```
@@ -51,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -65,20 +61,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
+final api = Openapi().getDefinitionApi();
 
-try { 
-    var result = api_instance.apiDefinitionCitiesPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionCitiesPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionCitiesPost: $e\n');
 }
 ```
@@ -92,7 +84,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -106,21 +98,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
-var body = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest | 
+final api = Openapi().getDefinitionApi();
+final DefinitionServiceCountiesRequest body = ; // DefinitionServiceCountiesRequest | 
 
-try { 
-    var result = api_instance.apiDefinitionCountiesPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionCountiesPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
 }
 ```
@@ -137,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -151,20 +139,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
+final api = Openapi().getDefinitionApi();
 
-try { 
-    var result = api_instance.apiDefinitionFaqGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionFaqGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionFaqGet: $e\n');
 }
 ```
@@ -178,7 +162,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -192,20 +176,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
+final api = Openapi().getDefinitionApi();
 
-try { 
-    var result = api_instance.apiDefinitionHelloGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionHelloGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionHelloGet: $e\n');
 }
 ```
@@ -219,7 +199,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -233,21 +213,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
-var body = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest | 
+final api = Openapi().getDefinitionApi();
+final DefinitionServiceNeighborRequest body = ; // DefinitionServiceNeighborRequest | 
 
-try { 
-    var result = api_instance.apiDefinitionNeighborhoodPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionNeighborhoodPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
 }
 ```
@@ -264,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -278,21 +254,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
-var body = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest | 
+final api = Openapi().getDefinitionApi();
+final DefinitionServiceUpdateAgreementRequest body = ; // DefinitionServiceUpdateAgreementRequest | 
 
-try { 
-    var result = api_instance.apiDefinitionUpdateAgreementLogPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionUpdateAgreementLogPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
 }
 ```
@@ -309,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -323,20 +295,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new DefinitionApi();
+final api = Openapi().getDefinitionApi();
 
-try { 
-    var result = api_instance.apiDefinitionUploadCountriesToFirebasePost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiDefinitionUploadCountriesToFirebasePost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionUploadCountriesToFirebasePost: $e\n');
 }
 ```
@@ -350,7 +318,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

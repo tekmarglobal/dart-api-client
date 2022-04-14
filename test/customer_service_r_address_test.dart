@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/customer_service_r_address.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for CustomerServiceRAddress
 void main() {
@@ -16,6 +9,11 @@ void main() {
   group(CustomerServiceRAddress, () {
     // int adressId
     test('to test the property `adressId`', () async {
+      // TODO
+    });
+
+    // int addressId
+    test('to test the property `addressId`', () async {
       // TODO
     });
 
@@ -129,7 +127,10 @@ void main() {
       // TODO
     });
 
+    // bool active
+    test('to test the property `active`', () async {
+      // TODO
+    });
 
   });
-
 }

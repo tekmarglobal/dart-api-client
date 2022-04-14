@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **region** | **int** |  | [optional] 
 **regionName** | **String** |  | [optional] 
 **gpsId** | **int** |  | [optional] 
-**branch** | [**BuiltList<AdminServiceBranchResponse>**](AdminServiceBranchResponse.md) |  | [optional] 
+**branch** | [**BuiltList&lt;AdminServiceBranchResponse&gt;**](AdminServiceBranchResponse.md) |  | [optional] 
 **population** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

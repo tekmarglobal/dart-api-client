@@ -9,33 +9,29 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAccountCheckversionPost**](AccountApi.md#apiaccountcheckversionpost) | **post** /api/Account/checkversion | 
-[**apiAccountFirebaseTokenGet**](AccountApi.md#apiaccountfirebasetokenget) | **get** /api/Account/FirebaseToken | 
-[**apiAccountLoginPost**](AccountApi.md#apiaccountloginpost) | **post** /api/Account/login | 
-[**apiAccountLogoutGet**](AccountApi.md#apiaccountlogoutget) | **get** /api/Account/Logout | 
-[**apiAccountWhoAmIGet**](AccountApi.md#apiaccountwhoamiget) | **get** /api/Account/WhoAmI | 
+[**apiAccountCheckversionPost**](AccountApi.md#apiaccountcheckversionpost) | **POST** /api/Account/checkversion | 
+[**apiAccountFirebaseTokenGet**](AccountApi.md#apiaccountfirebasetokenget) | **GET** /api/Account/FirebaseToken | 
+[**apiAccountLoginPost**](AccountApi.md#apiaccountloginpost) | **POST** /api/Account/login | 
+[**apiAccountLogoutGet**](AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
+[**apiAccountWhoAmIGet**](AccountApi.md#apiaccountwhoamiget) | **GET** /api/Account/WhoAmI | 
 
 
 # **apiAccountCheckversionPost**
-> RestResultOfAccountServiceVersionResponse apiAccountCheckversionPost(body)
+> RestResultOfAccountServiceCheckVersionResponse apiAccountCheckversionPost(body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AccountApi();
-var body = new AccountServiceVersionRequest(); // AccountServiceVersionRequest | 
+final api = Openapi().getAccountApi();
+final AccountServiceCheckVersionRequest body = ; // AccountServiceCheckVersionRequest | 
 
-try { 
-    var result = api_instance.apiAccountCheckversionPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAccountCheckversionPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountCheckversionPost: $e\n');
 }
 ```
@@ -44,15 +40,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccountServiceVersionRequest**](AccountServiceVersionRequest.md)|  | [optional] 
+ **body** | [**AccountServiceCheckVersionRequest**](AccountServiceCheckVersionRequest.md)|  | [optional] 
 
 ### Return type
 
-[**RestResultOfAccountServiceVersionResponse**](RestResultOfAccountServiceVersionResponse.md)
+[**RestResultOfAccountServiceCheckVersionResponse**](RestResultOfAccountServiceCheckVersionResponse.md)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,20 +62,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AccountApi();
+final api = Openapi().getAccountApi();
 
-try { 
-    var result = api_instance.apiAccountFirebaseTokenGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAccountFirebaseTokenGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountFirebaseTokenGet: $e\n');
 }
 ```
@@ -93,7 +85,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -107,21 +99,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AccountApi();
-var body = new AccountServiceLoginRequest(); // AccountServiceLoginRequest | 
+final api = Openapi().getAccountApi();
+final AccountServiceLoginRequest body = ; // AccountServiceLoginRequest | 
 
-try { 
-    var result = api_instance.apiAccountLoginPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAccountLoginPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
 }
 ```
@@ -138,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -152,20 +140,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AccountApi();
+final api = Openapi().getAccountApi();
 
-try { 
-    var result = api_instance.apiAccountLogoutGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAccountLogoutGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountLogoutGet: $e\n');
 }
 ```
@@ -179,7 +163,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -193,20 +177,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AccountApi();
+final api = Openapi().getAccountApi();
 
-try { 
-    var result = api_instance.apiAccountWhoAmIGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAccountWhoAmIGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountWhoAmIGet: $e\n');
 }
 ```
@@ -220,7 +200,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

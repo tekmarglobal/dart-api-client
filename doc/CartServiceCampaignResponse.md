@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **smallImage** | **String** |  | [optional] 
 **conditions** | **String** |  | [optional] 
 **displayPriority** | **int** |  | [optional] 
-**productIds** | **BuiltList<int>** |  | [optional] 
+**productIds** | **BuiltList&lt;int&gt;** |  | [optional] 
 **discount** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/cart_service_campaign_apply_response.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for CartServiceCampaignApplyResponse
 void main() {
@@ -24,12 +17,15 @@ void main() {
       // TODO
     });
 
+    // BuiltList<String> missingConditions
+    test('to test the property `missingConditions`', () async {
+      // TODO
+    });
+
     // CartServiceCartResponse cart
     test('to test the property `cart`', () async {
       // TODO
     });
 
-
   });
-
 }

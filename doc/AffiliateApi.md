@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAffiliateDetailGet**](AffiliateApi.md#apiaffiliatedetailget) | **get** /api/Affiliate/detail | 
-[**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiaffiliategetsharelinkpost) | **post** /api/Affiliate/GetShareLink | 
-[**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **post** /api/Affiliate/ShareLinkClicked | 
+[**apiAffiliateDetailGet**](AffiliateApi.md#apiaffiliatedetailget) | **GET** /api/Affiliate/detail | 
+[**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiaffiliategetsharelinkpost) | **POST** /api/Affiliate/GetShareLink | 
+[**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **POST** /api/Affiliate/ShareLinkClicked | 
 
 
 # **apiAffiliateDetailGet**
@@ -19,20 +19,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AffiliateApi();
-var urlLink = urlLink_example; // String | 
+final api = Openapi().getAffiliateApi();
+final String urlLink = urlLink_example; // String | 
 
-try { 
-    api_instance.apiAffiliateDetailGet(urlLink);
-} catch (e) {
+try {
+    api.apiAffiliateDetailGet(urlLink);
+} catch on DioError (e) {
     print('Exception when calling AffiliateApi->apiAffiliateDetailGet: $e\n');
 }
 ```
@@ -49,7 +45,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -63,21 +59,17 @@ void (empty response body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AffiliateApi();
-var body = new AffiliateServiceLinkRequest(); // AffiliateServiceLinkRequest | 
+final api = Openapi().getAffiliateApi();
+final AffiliateServiceLinkRequest body = ; // AffiliateServiceLinkRequest | 
 
-try { 
-    var result = api_instance.apiAffiliateGetShareLinkPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAffiliateGetShareLinkPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n');
 }
 ```
@@ -94,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,21 +100,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AffiliateApi();
-var key = key_example; // String | 
+final api = Openapi().getAffiliateApi();
+final String key = key_example; // String | 
 
-try { 
-    var result = api_instance.apiAffiliateShareLinkClickedPost(key);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAffiliateShareLinkClickedPost(key);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AffiliateApi->apiAffiliateShareLinkClickedPost: $e\n');
 }
 ```
@@ -139,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

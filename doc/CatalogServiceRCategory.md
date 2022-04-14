@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **parentId** | **int** |  | [optional] 
 **name** | **String** |  | [optional] 
-**products** | [**BuiltList<CatalogServiceRProduct>**](CatalogServiceRProduct.md) |  | [optional] 
-**subCategories** | [**BuiltList<CatalogServiceRCategory>**](CatalogServiceRCategory.md) |  | [optional] 
+**products** | [**BuiltList&lt;CatalogServiceRProduct&gt;**](CatalogServiceRProduct.md) |  | [optional] 
+**subCategories** | [**BuiltList&lt;CatalogServiceRCategory&gt;**](CatalogServiceRCategory.md) |  | [optional] 
 **order** | **int** |  | [optional] 
 **menuName** | **String** |  | [optional] 
 

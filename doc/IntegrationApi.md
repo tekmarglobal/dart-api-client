@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIntegrationMarketyoCategoriesImportPost**](IntegrationApi.md#apiintegrationmarketyocategoriesimportpost) | **post** /api/Integration/MarketyoCategoriesImport | 
-[**apiIntegrationMarketyoCustomersImportPost**](IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **post** /api/Integration/MarketyoCustomersImport | 
-[**apiIntegrationMarketyoProductsImportPost**](IntegrationApi.md#apiintegrationmarketyoproductsimportpost) | **post** /api/Integration/MarketyoProductsImport | 
-[**apiIntegrationTestGet**](IntegrationApi.md#apiintegrationtestget) | **get** /api/Integration/test | 
-[**apiIntegrationUpdateProductFromOlimposGet**](IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **get** /api/Integration/UpdateProductFromOlimpos | 
-[**apiIntegrationUpdateProductFromOlimposPost**](IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **post** /api/Integration/UpdateProductFromOlimpos | 
+[**apiIntegrationMarketyoCategoriesImportPost**](IntegrationApi.md#apiintegrationmarketyocategoriesimportpost) | **POST** /api/Integration/MarketyoCategoriesImport | 
+[**apiIntegrationMarketyoCustomersImportPost**](IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **POST** /api/Integration/MarketyoCustomersImport | 
+[**apiIntegrationMarketyoProductsImportPost**](IntegrationApi.md#apiintegrationmarketyoproductsimportpost) | **POST** /api/Integration/MarketyoProductsImport | 
+[**apiIntegrationTestGet**](IntegrationApi.md#apiintegrationtestget) | **GET** /api/Integration/test | 
+[**apiIntegrationUpdateProductFromOlimposGet**](IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **GET** /api/Integration/UpdateProductFromOlimpos | 
+[**apiIntegrationUpdateProductFromOlimposPost**](IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
 
 
 # **apiIntegrationMarketyoCategoriesImportPost**
@@ -22,21 +22,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var categoriesJsonFile = BINARY_DATA_HERE; // Uint8List | 
+final api = Openapi().getIntegrationApi();
+final MultipartFile categoriesJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
-try { 
-    var result = api_instance.apiIntegrationMarketyoCategoriesImportPost(categoriesJsonFile);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationMarketyoCategoriesImportPost(categoriesJsonFile);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationMarketyoCategoriesImportPost: $e\n');
 }
 ```
@@ -45,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoriesJsonFile** | **Uint8List**|  | [optional] 
+ **categoriesJsonFile** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -53,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -67,24 +63,20 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var importBannedUser = true; // bool | 
-var minimumOrderCount = 56; // int | 
-var minimumOrderAmount = 1.2; // double | 
-var customerJsonFile = BINARY_DATA_HERE; // Uint8List | 
+final api = Openapi().getIntegrationApi();
+final bool importBannedUser = true; // bool | 
+final int minimumOrderCount = 56; // int | 
+final double minimumOrderAmount = 1.2; // double | 
+final MultipartFile customerJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
-try { 
-    var result = api_instance.apiIntegrationMarketyoCustomersImportPost(importBannedUser, minimumOrderCount, minimumOrderAmount, customerJsonFile);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationMarketyoCustomersImportPost(importBannedUser, minimumOrderCount, minimumOrderAmount, customerJsonFile);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationMarketyoCustomersImportPost: $e\n');
 }
 ```
@@ -96,7 +88,7 @@ Name | Type | Description  | Notes
  **importBannedUser** | **bool**|  | [optional] 
  **minimumOrderCount** | **int**|  | [optional] 
  **minimumOrderAmount** | **double**|  | [optional] 
- **customerJsonFile** | **Uint8List**|  | [optional] 
+ **customerJsonFile** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -104,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -118,21 +110,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var productsJsonFile = BINARY_DATA_HERE; // Uint8List | 
+final api = Openapi().getIntegrationApi();
+final MultipartFile productsJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
-try { 
-    var result = api_instance.apiIntegrationMarketyoProductsImportPost(productsJsonFile);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationMarketyoProductsImportPost(productsJsonFile);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationMarketyoProductsImportPost: $e\n');
 }
 ```
@@ -141,7 +129,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **productsJsonFile** | **Uint8List**|  | [optional] 
+ **productsJsonFile** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -149,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -163,21 +151,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var delaySeconds = 56; // int | 
+final api = Openapi().getIntegrationApi();
+final int delaySeconds = 56; // int | 
 
-try { 
-    var result = api_instance.apiIntegrationTestGet(delaySeconds);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationTestGet(delaySeconds);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationTestGet: $e\n');
 }
 ```
@@ -194,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -208,23 +192,19 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var regionErpId = regionErpId_example; // String | 
-var productErpId = productErpId_example; // String | 
-var log = true; // bool | 
+final api = Openapi().getIntegrationApi();
+final String regionErpId = regionErpId_example; // String | 
+final String productErpId = productErpId_example; // String | 
+final bool log = true; // bool | 
 
-try { 
-    var result = api_instance.apiIntegrationUpdateProductFromOlimposGet(regionErpId, productErpId, log);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationUpdateProductFromOlimposGet(regionErpId, productErpId, log);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationUpdateProductFromOlimposGet: $e\n');
 }
 ```
@@ -243,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -257,23 +237,19 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new IntegrationApi();
-var regionErpId = regionErpId_example; // String | 
-var productErpId = productErpId_example; // String | 
-var log = true; // bool | 
+final api = Openapi().getIntegrationApi();
+final String regionErpId = regionErpId_example; // String | 
+final String productErpId = productErpId_example; // String | 
+final bool log = true; // bool | 
 
-try { 
-    var result = api_instance.apiIntegrationUpdateProductFromOlimposPost(regionErpId, productErpId, log);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiIntegrationUpdateProductFromOlimposPost(regionErpId, productErpId, log);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationApi->apiIntegrationUpdateProductFromOlimposPost: $e\n');
 }
 ```
@@ -292,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

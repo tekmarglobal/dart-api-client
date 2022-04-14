@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiRegisterSendSmsPost**](RegisterApi.md#apiregistersendsmspost) | **post** /api/Register/SendSms | 
-[**apiRegisterVerifySmsPost**](RegisterApi.md#apiregisterverifysmspost) | **post** /api/Register/VerifySms | 
+[**apiRegisterSendSmsPost**](RegisterApi.md#apiregistersendsmspost) | **POST** /api/Register/SendSms | 
+[**apiRegisterVerifySmsPost**](RegisterApi.md#apiregisterverifysmspost) | **POST** /api/Register/VerifySms | 
 
 
 # **apiRegisterSendSmsPost**
@@ -18,21 +18,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new RegisterApi();
-var body = new RegisterServiceSmsRequest(); // RegisterServiceSmsRequest | 
+final api = Openapi().getRegisterApi();
+final RegisterServiceSmsRequest body = ; // RegisterServiceSmsRequest | 
 
-try { 
-    var result = api_instance.apiRegisterSendSmsPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiRegisterSendSmsPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
 }
 ```
@@ -49,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -63,21 +59,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new RegisterApi();
-var body = new RegisterServiceVerifyRequest(); // RegisterServiceVerifyRequest | 
+final api = Openapi().getRegisterApi();
+final RegisterServiceVerifyRequest body = ; // RegisterServiceVerifyRequest | 
 
-try { 
-    var result = api_instance.apiRegisterVerifySmsPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiRegisterVerifySmsPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
 }
 ```
@@ -94,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

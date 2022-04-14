@@ -1,13 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/api.dart';
-import 'package:openapi/api/product_api.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 
 /// tests for ProductApi
@@ -27,6 +19,11 @@ void main() {
 
     //Future<RestResultOfProductServiceFavoriteListResponse> apiProductGetFavoriteListPost() async
     test('test apiProductGetFavoriteListPost', () async {
+      // TODO
+    });
+
+    //Future apiProductImage2ProductErpIdImagetypeGet(String productErpId, int imagetype) async
+    test('test apiProductImage2ProductErpIdImagetypeGet', () async {
       // TODO
     });
 
@@ -52,16 +49,6 @@ void main() {
 
     //Future<RestResultOfProductServiceRecommendProductResponse> apiProductRecommendProductPost({ ProductServiceRecommendProductRequest body }) async
     test('test apiProductRecommendProductPost', () async {
-      // TODO
-    });
-
-    //Future<String> apiProductUpdateProductFromOlimposGet({ String regionErpId, String productErpId, bool log }) async
-    test('test apiProductUpdateProductFromOlimposGet', () async {
-      // TODO
-    });
-
-    //Future<String> apiProductUpdateProductFromOlimposPost({ String regionErpId, String productErpId, bool log }) async
-    test('test apiProductUpdateProductFromOlimposPost', () async {
       // TODO
     });
 

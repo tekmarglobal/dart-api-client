@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** |  | [optional] 
 **success** | **bool** |  | [optional] 
-**missingConditions** | **BuiltList<String>** |  | [optional] 
+**missingConditions** | **BuiltList&lt;String&gt;** |  | [optional] 
 **cart** | [**CartServiceCartResponse**](CartServiceCartResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

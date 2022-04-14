@@ -59,7 +59,7 @@
             "in": "body",
             "name": "body",
             "schema": {
-              "$ref": "#/definitions/AccountServiceVersionRequest"
+              "$ref": "#/definitions/AccountServiceCheckVersionRequest"
             }
           }
         ],
@@ -67,7 +67,7 @@
           "200": {
             "description": "Success",
             "schema": {
-              "$ref": "#/definitions/RestResultOfAccountServiceVersionResponse"
+              "$ref": "#/definitions/RestResultOfAccountServiceCheckVersionResponse"
             }
           }
         }
@@ -2556,7 +2556,35 @@
         }
       }
     },
-    "RestResultOfAccountServiceVersionResponse": {
+    "AccountServiceCheckVersionRequest": {
+      "type": "object",
+      "properties": {
+        "appVersion": {
+          "type": "string"
+        },
+        "platform": {
+          "type": "string"
+        },
+        "isWeb": {
+          "type": "boolean"
+        }
+      }
+    },
+    "AccountServiceCheckVersionResponse": {
+      "type": "object",
+      "properties": {
+        "latestVersion": {
+          "type": "string"
+        },
+        "isMandatory": {
+          "type": "boolean"
+        },
+        "isNewVersionAvailable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "RestResultOfAccountServiceCheckVersionResponse": {
       "type": "object",
       "properties": {
         "success": {
@@ -2566,7 +2594,7 @@
           "type": "string"
         },
         "data": {
-          "$ref": "#/definitions/AccountServiceVersionResponse"
+          "$ref": "#/definitions/AccountServiceCheckVersionResponse"
         }
       }
     },
@@ -4947,18 +4975,5 @@
         }
       }
     }
-  },
-  "securityDefinitions": {
-    "Bearer": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header",
-      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \n                      Enter 'Bearer' [space] and then your token in the text input below.\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
-    }
-  },
-  "security": [
-    {
-      "Bearer": [ ]
-    }
-  ]
+  }
 }

@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/cart_service_campaign_response.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for CartServiceCampaignResponse
 void main() {
@@ -34,6 +27,11 @@ void main() {
       // TODO
     });
 
+    // String smallImage
+    test('to test the property `smallImage`', () async {
+      // TODO
+    });
+
     // String conditions
     test('to test the property `conditions`', () async {
       // TODO
@@ -44,17 +42,15 @@ void main() {
       // TODO
     });
 
-    // CartServiceLinkTypes linkType
-    test('to test the property `linkType`', () async {
+    // BuiltList<int> productIds
+    test('to test the property `productIds`', () async {
       // TODO
     });
 
-    // BuiltList<int> ids
-    test('to test the property `ids`', () async {
+    // double discount
+    test('to test the property `discount`', () async {
       // TODO
     });
-
 
   });
-
 }

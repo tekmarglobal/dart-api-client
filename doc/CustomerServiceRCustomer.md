@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **gender** | **int** |  | [optional] 
 **allowSms** | **bool** |  | [optional] 
 **allowEmail** | **bool** |  | [optional] 
-**address** | [**BuiltList<CustomerServiceRAddress>**](CustomerServiceRAddress.md) |  | [optional] 
+**address** | [**BuiltList&lt;CustomerServiceRAddress&gt;**](CustomerServiceRAddress.md) |  | [optional] 
 **registered** | **bool** |  | [optional] 
 **lastOrder** | **int** |  | [optional] 
 **identificationNumber** | **String** |  | [optional] 

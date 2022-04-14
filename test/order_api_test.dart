@@ -1,13 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/api.dart';
-import 'package:openapi/api/order_api.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 
 /// tests for OrderApi
@@ -30,8 +22,8 @@ void main() {
       // TODO
     });
 
-    //Future<String> apiOrderSendmailPost() async
-    test('test apiOrderSendmailPost', () async {
+    //Future<RestResultOfOrderServiceOrderResponse> apiOrderPatchOrderPost({ OrderServicePatchOrderRequest body }) async
+    test('test apiOrderPatchOrderPost', () async {
       // TODO
     });
 

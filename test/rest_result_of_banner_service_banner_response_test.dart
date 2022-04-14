@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/rest_result_of_banner_service_banner_response.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for RestResultOfBannerServiceBannerResponse
 void main() {
@@ -29,7 +22,5 @@ void main() {
       // TODO
     });
 
-
   });
-
 }

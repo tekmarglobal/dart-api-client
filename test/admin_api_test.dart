@@ -1,13 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/api.dart';
-import 'package:openapi/api/admin_api.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 
 /// tests for AdminApi
@@ -32,11 +24,6 @@ void main() {
 
     //Future<RestResultOfListOfAdminServiceTimeSlotResponse> apiAdminGenerateTimeSlotsPost({ int region }) async
     test('test apiAdminGenerateTimeSlotsPost', () async {
-      // TODO
-    });
-
-    //Future<RestResultOfKilerConfiguration> apiAdminGetConfigurationGet() async
-    test('test apiAdminGetConfigurationGet', () async {
       // TODO
     });
 
@@ -65,7 +52,7 @@ void main() {
       // TODO
     });
 
-    //Future<RestResultOfAdminServiceUploadImageResponse> apiAdminUploadProductImagePost({ Uint8List file }) async
+    //Future<RestResultOfAdminServiceUploadImageResponse> apiAdminUploadProductImagePost({ MultipartFile file }) async
     test('test apiAdminUploadProductImagePost', () async {
       // TODO
     });

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **minQuantity** | **double** |  | [optional] 
 **quantityStep** | **double** |  | [optional] 
 **initalQuantity** | **double** |  | [optional] 
-**prices** | [**BuiltList<ProductServiceRProductPrice>**](ProductServiceRProductPrice.md) |  | [optional] 
+**prices** | [**BuiltList&lt;ProductServiceRProductPrice&gt;**](ProductServiceRProductPrice.md) |  | [optional] 
 **eId** | **String** |  | [optional] 
 **barcode** | **String** |  | [optional] 
 **unitId** | **int** |  | [optional] 

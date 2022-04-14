@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCustomerDeleteAddressPost**](CustomerApi.md#apicustomerdeleteaddresspost) | **post** /api/Customer/DeleteAddress | 
-[**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apicustomergetcustomeradressespost) | **post** /api/Customer/GetCustomerAdresses | 
-[**apiCustomerGetCustomerMessageGet**](CustomerApi.md#apicustomergetcustomermessageget) | **get** /api/Customer/GetCustomerMessage | 
-[**apiCustomerPost**](CustomerApi.md#apicustomerpost) | **post** /api/Customer | 
-[**apiCustomerUpdateAddressPost**](CustomerApi.md#apicustomerupdateaddresspost) | **post** /api/Customer/UpdateAddress | 
-[**apiCustomerUpdateCustomerDefultAddressPost**](CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **post** /api/Customer/UpdateCustomerDefultAddress | 
-[**apiCustomerUpdateCustomerPost**](CustomerApi.md#apicustomerupdatecustomerpost) | **post** /api/Customer/UpdateCustomer | 
+[**apiCustomerDeleteAddressPost**](CustomerApi.md#apicustomerdeleteaddresspost) | **POST** /api/Customer/DeleteAddress | 
+[**apiCustomerGetCustomerAdressesPost**](CustomerApi.md#apicustomergetcustomeradressespost) | **POST** /api/Customer/GetCustomerAdresses | 
+[**apiCustomerGetCustomerMessageGet**](CustomerApi.md#apicustomergetcustomermessageget) | **GET** /api/Customer/GetCustomerMessage | 
+[**apiCustomerPost**](CustomerApi.md#apicustomerpost) | **POST** /api/Customer | 
+[**apiCustomerUpdateAddressPost**](CustomerApi.md#apicustomerupdateaddresspost) | **POST** /api/Customer/UpdateAddress | 
+[**apiCustomerUpdateCustomerDefultAddressPost**](CustomerApi.md#apicustomerupdatecustomerdefultaddresspost) | **POST** /api/Customer/UpdateCustomerDefultAddress | 
+[**apiCustomerUpdateCustomerPost**](CustomerApi.md#apicustomerupdatecustomerpost) | **POST** /api/Customer/UpdateCustomer | 
 
 
 # **apiCustomerDeleteAddressPost**
@@ -23,21 +23,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
-var body = new CustomerServiceDeleteAddressRequest(); // CustomerServiceDeleteAddressRequest | 
+final api = Openapi().getCustomerApi();
+final CustomerServiceDeleteAddressRequest body = ; // CustomerServiceDeleteAddressRequest | 
 
-try { 
-    var result = api_instance.apiCustomerDeleteAddressPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerDeleteAddressPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n');
 }
 ```
@@ -54,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -68,20 +64,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
+final api = Openapi().getCustomerApi();
 
-try { 
-    var result = api_instance.apiCustomerGetCustomerAdressesPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerGetCustomerAdressesPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerGetCustomerAdressesPost: $e\n');
 }
 ```
@@ -95,7 +87,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,22 +101,18 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
-var startSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-var endSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final api = Openapi().getCustomerApi();
+final DateTime startSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endSendDate = 2013-10-20T19:20:30+01:00; // DateTime | 
 
-try { 
-    var result = api_instance.apiCustomerGetCustomerMessageGet(startSendDate, endSendDate);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerGetCustomerMessageGet(startSendDate, endSendDate);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerGetCustomerMessageGet: $e\n');
 }
 ```
@@ -142,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -156,20 +144,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
+final api = Openapi().getCustomerApi();
 
-try { 
-    var result = api_instance.apiCustomerPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerPost: $e\n');
 }
 ```
@@ -183,7 +167,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -197,21 +181,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
-var body = new CustomerServiceCustomerAddressRequest(); // CustomerServiceCustomerAddressRequest | 
+final api = Openapi().getCustomerApi();
+final CustomerServiceCustomerAddressRequest body = ; // CustomerServiceCustomerAddressRequest | 
 
-try { 
-    var result = api_instance.apiCustomerUpdateAddressPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerUpdateAddressPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n');
 }
 ```
@@ -228,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -242,21 +222,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
-var body = new CustomerServiceNewCustomerDefaultAddress(); // CustomerServiceNewCustomerDefaultAddress | 
+final api = Openapi().getCustomerApi();
+final CustomerServiceNewCustomerDefaultAddress body = ; // CustomerServiceNewCustomerDefaultAddress | 
 
-try { 
-    var result = api_instance.apiCustomerUpdateCustomerDefultAddressPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerUpdateCustomerDefultAddressPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n');
 }
 ```
@@ -273,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -287,21 +263,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CustomerApi();
-var body = new CustomerServiceNewCustomerRequest(); // CustomerServiceNewCustomerRequest | 
+final api = Openapi().getCustomerApi();
+final CustomerServiceNewCustomerRequest body = ; // CustomerServiceNewCustomerRequest | 
 
-try { 
-    var result = api_instance.apiCustomerUpdateCustomerPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCustomerUpdateCustomerPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n');
 }
 ```
@@ -318,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

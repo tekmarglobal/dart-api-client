@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **post** /api/Order/CreateOrder | 
-[**apiOrderGetOrderListPost**](OrderApi.md#apiordergetorderlistpost) | **post** /api/Order/GetOrderList | 
-[**apiOrderGetOrderPost**](OrderApi.md#apiordergetorderpost) | **post** /api/Order/GetOrder | 
-[**apiOrderPatchOrderPost**](OrderApi.md#apiorderpatchorderpost) | **post** /api/Order/PatchOrder | 
-[**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **post** /api/Order/UpdateStatus | 
+[**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
+[**apiOrderGetOrderListPost**](OrderApi.md#apiordergetorderlistpost) | **POST** /api/Order/GetOrderList | 
+[**apiOrderGetOrderPost**](OrderApi.md#apiordergetorderpost) | **POST** /api/Order/GetOrder | 
+[**apiOrderPatchOrderPost**](OrderApi.md#apiorderpatchorderpost) | **POST** /api/Order/PatchOrder | 
+[**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **POST** /api/Order/UpdateStatus | 
 
 
 # **apiOrderCreateOrderPost**
@@ -21,21 +21,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new OrderApi();
-var body = new OrderServiceOrderRequest(); // OrderServiceOrderRequest | 
+final api = Openapi().getOrderApi();
+final OrderServiceOrderRequest body = ; // OrderServiceOrderRequest | 
 
-try { 
-    var result = api_instance.apiOrderCreateOrderPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiOrderCreateOrderPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
 }
 ```
@@ -52,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,20 +62,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new OrderApi();
+final api = Openapi().getOrderApi();
 
-try { 
-    var result = api_instance.apiOrderGetOrderListPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiOrderGetOrderListPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderGetOrderListPost: $e\n');
 }
 ```
@@ -93,7 +85,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -107,21 +99,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new OrderApi();
-var body = new OrderServiceGetOrderRequest(); // OrderServiceGetOrderRequest | 
+final api = Openapi().getOrderApi();
+final OrderServiceGetOrderRequest body = ; // OrderServiceGetOrderRequest | 
 
-try { 
-    var result = api_instance.apiOrderGetOrderPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiOrderGetOrderPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
 }
 ```
@@ -138,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -152,21 +140,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new OrderApi();
-var body = new OrderServicePatchOrderRequest(); // OrderServicePatchOrderRequest | 
+final api = Openapi().getOrderApi();
+final OrderServicePatchOrderRequest body = ; // OrderServicePatchOrderRequest | 
 
-try { 
-    var result = api_instance.apiOrderPatchOrderPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiOrderPatchOrderPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderPatchOrderPost: $e\n');
 }
 ```
@@ -183,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -197,21 +181,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new OrderApi();
-var body = new OrderServiceUpdateOrderRequest(); // OrderServiceUpdateOrderRequest | 
+final api = Openapi().getOrderApi();
+final OrderServiceUpdateOrderRequest body = ; // OrderServiceUpdateOrderRequest | 
 
-try { 
-    var result = api_instance.apiOrderUpdateStatusPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiOrderUpdateStatusPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
 }
 ```
@@ -228,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

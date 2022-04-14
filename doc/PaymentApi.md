@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiPaymentCheckTransactionPost**](PaymentApi.md#apipaymentchecktransactionpost) | **post** /api/Payment/CheckTransaction | 
-[**apiPaymentCreatePaymentPost**](PaymentApi.md#apipaymentcreatepaymentpost) | **post** /api/Payment/CreatePayment | 
-[**apiPaymentCreatePaymentReturnUrlPost**](PaymentApi.md#apipaymentcreatepaymentreturnurlpost) | **post** /api/Payment/CreatePaymentReturnUrl | 
-[**apiPaymentGetPaymentTypesPost**](PaymentApi.md#apipaymentgetpaymenttypespost) | **post** /api/Payment/GetPaymentTypes | 
-[**apiPaymentPaymentFailPost**](PaymentApi.md#apipaymentpaymentfailpost) | **post** /api/Payment/PaymentFail | 
-[**apiPaymentPaymentSuccessPost**](PaymentApi.md#apipaymentpaymentsuccesspost) | **post** /api/Payment/PaymentSuccess | 
+[**apiPaymentCheckTransactionPost**](PaymentApi.md#apipaymentchecktransactionpost) | **POST** /api/Payment/CheckTransaction | 
+[**apiPaymentCreatePaymentPost**](PaymentApi.md#apipaymentcreatepaymentpost) | **POST** /api/Payment/CreatePayment | 
+[**apiPaymentCreatePaymentReturnUrlPost**](PaymentApi.md#apipaymentcreatepaymentreturnurlpost) | **POST** /api/Payment/CreatePaymentReturnUrl | 
+[**apiPaymentGetPaymentTypesPost**](PaymentApi.md#apipaymentgetpaymenttypespost) | **POST** /api/Payment/GetPaymentTypes | 
+[**apiPaymentPaymentFailPost**](PaymentApi.md#apipaymentpaymentfailpost) | **POST** /api/Payment/PaymentFail | 
+[**apiPaymentPaymentSuccessPost**](PaymentApi.md#apipaymentpaymentsuccesspost) | **POST** /api/Payment/PaymentSuccess | 
 
 
 # **apiPaymentCheckTransactionPost**
@@ -22,21 +22,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
-var body = new PaymentServicePaymentTransactionRequest(); // PaymentServicePaymentTransactionRequest | 
+final api = Openapi().getPaymentApi();
+final PaymentServicePaymentTransactionRequest body = ; // PaymentServicePaymentTransactionRequest | 
 
-try { 
-    var result = api_instance.apiPaymentCheckTransactionPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiPaymentCheckTransactionPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCheckTransactionPost: $e\n');
 }
 ```
@@ -53,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -67,21 +63,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
-var body = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest | 
+final api = Openapi().getPaymentApi();
+final PaymentServicePaymentRequest body = ; // PaymentServicePaymentRequest | 
 
-try { 
-    var result = api_instance.apiPaymentCreatePaymentPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiPaymentCreatePaymentPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n');
 }
 ```
@@ -98,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -112,20 +104,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
-var body = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest | 
+final api = Openapi().getPaymentApi();
+final PaymentServicePaymentRequest body = ; // PaymentServicePaymentRequest | 
 
-try { 
-    api_instance.apiPaymentCreatePaymentReturnUrlPost(body);
-} catch (e) {
+try {
+    api.apiPaymentCreatePaymentReturnUrlPost(body);
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCreatePaymentReturnUrlPost: $e\n');
 }
 ```
@@ -142,7 +130,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -156,20 +144,16 @@ void (empty response body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
+final api = Openapi().getPaymentApi();
 
-try { 
-    var result = api_instance.apiPaymentGetPaymentTypesPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiPaymentGetPaymentTypesPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentGetPaymentTypesPost: $e\n');
 }
 ```
@@ -183,7 +167,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -197,19 +181,15 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
+final api = Openapi().getPaymentApi();
 
-try { 
-    api_instance.apiPaymentPaymentFailPost();
-} catch (e) {
+try {
+    api.apiPaymentPaymentFailPost();
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentPaymentFailPost: $e\n');
 }
 ```
@@ -223,7 +203,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -237,19 +217,15 @@ void (empty response body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new PaymentApi();
+final api = Openapi().getPaymentApi();
 
-try { 
-    api_instance.apiPaymentPaymentSuccessPost();
-} catch (e) {
+try {
+    api.apiPaymentPaymentSuccessPost();
+} catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentPaymentSuccessPost: $e\n');
 }
 ```
@@ -263,7 +239,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

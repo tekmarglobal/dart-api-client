@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **minimunCartAmount** | **double** |  | [optional] 
 **regionMail** | **String** |  | [optional] 
 **active** | **bool** |  | [optional] 
-**neighborhoods** | [**BuiltList<AdminServiceAdminNeighborResponse>**](AdminServiceAdminNeighborResponse.md) |  | [optional] 
+**neighborhoods** | [**BuiltList&lt;AdminServiceAdminNeighborResponse&gt;**](AdminServiceAdminNeighborResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

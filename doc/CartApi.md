@@ -9,17 +9,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCartAddCampaignByCodePost**](CartApi.md#apicartaddcampaignbycodepost) | **post** /api/Cart/AddCampaignByCode | 
-[**apiCartApplyCampaignPost**](CartApi.md#apicartapplycampaignpost) | **post** /api/Cart/ApplyCampaign | 
-[**apiCartCreateCartPost**](CartApi.md#apicartcreatecartpost) | **post** /api/Cart/CreateCart | 
-[**apiCartDeleteCardDelete**](CartApi.md#apicartdeletecarddelete) | **delete** /api/Cart/DeleteCard | 
-[**apiCartDeleteCartDelete**](CartApi.md#apicartdeletecartdelete) | **delete** /api/Cart/DeleteCart | 
-[**apiCartGetCampaignsGet**](CartApi.md#apicartgetcampaignsget) | **get** /api/Cart/GetCampaigns | 
-[**apiCartGetTimeSlotsPost**](CartApi.md#apicartgettimeslotspost) | **post** /api/Cart/GetTimeSlots | 
-[**apiCartPost**](CartApi.md#apicartpost) | **post** /api/Cart | 
-[**apiCartUpdateCartPost**](CartApi.md#apicartupdatecartpost) | **post** /api/Cart/UpdateCart | 
-[**apiCartUpdateCartRegionPost**](CartApi.md#apicartupdatecartregionpost) | **post** /api/Cart/UpdateCartRegion | 
-[**apiCartUpdateTimeslotPost**](CartApi.md#apicartupdatetimeslotpost) | **post** /api/Cart/UpdateTimeslot | 
+[**apiCartAddCampaignByCodePost**](CartApi.md#apicartaddcampaignbycodepost) | **POST** /api/Cart/AddCampaignByCode | 
+[**apiCartApplyCampaignPost**](CartApi.md#apicartapplycampaignpost) | **POST** /api/Cart/ApplyCampaign | 
+[**apiCartCreateCartPost**](CartApi.md#apicartcreatecartpost) | **POST** /api/Cart/CreateCart | 
+[**apiCartDeleteCardDelete**](CartApi.md#apicartdeletecarddelete) | **DELETE** /api/Cart/DeleteCard | 
+[**apiCartDeleteCartDelete**](CartApi.md#apicartdeletecartdelete) | **DELETE** /api/Cart/DeleteCart | 
+[**apiCartGetCampaignsGet**](CartApi.md#apicartgetcampaignsget) | **GET** /api/Cart/GetCampaigns | 
+[**apiCartGetTimeSlotsPost**](CartApi.md#apicartgettimeslotspost) | **POST** /api/Cart/GetTimeSlots | 
+[**apiCartPost**](CartApi.md#apicartpost) | **POST** /api/Cart | 
+[**apiCartUpdateCartPost**](CartApi.md#apicartupdatecartpost) | **POST** /api/Cart/UpdateCart | 
+[**apiCartUpdateCartRegionPost**](CartApi.md#apicartupdatecartregionpost) | **POST** /api/Cart/UpdateCartRegion | 
+[**apiCartUpdateTimeslotPost**](CartApi.md#apicartupdatetimeslotpost) | **POST** /api/Cart/UpdateTimeslot | 
 
 
 # **apiCartAddCampaignByCodePost**
@@ -27,21 +27,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var campaignCode = campaignCode_example; // String | 
+final api = Openapi().getCartApi();
+final String campaignCode = campaignCode_example; // String | 
 
-try { 
-    var result = api_instance.apiCartAddCampaignByCodePost(campaignCode);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartAddCampaignByCodePost(campaignCode);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartAddCampaignByCodePost: $e\n');
 }
 ```
@@ -58,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -72,21 +68,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var campaignId = 56; // int | 
+final api = Openapi().getCartApi();
+final int campaignId = 56; // int | 
 
-try { 
-    var result = api_instance.apiCartApplyCampaignPost(campaignId);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartApplyCampaignPost(campaignId);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartApplyCampaignPost: $e\n');
 }
 ```
@@ -103,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -117,21 +109,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var body = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest | 
+final api = Openapi().getCartApi();
+final CartServiceCreateCartRequest body = ; // CartServiceCreateCartRequest | 
 
-try { 
-    var result = api_instance.apiCartCreateCartPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartCreateCartPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartCreateCartPost: $e\n');
 }
 ```
@@ -148,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -162,20 +150,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
+final api = Openapi().getCartApi();
 
-try { 
-    var result = api_instance.apiCartDeleteCardDelete();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartDeleteCardDelete();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartDeleteCardDelete: $e\n');
 }
 ```
@@ -189,7 +173,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -203,20 +187,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
+final api = Openapi().getCartApi();
 
-try { 
-    var result = api_instance.apiCartDeleteCartDelete();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartDeleteCartDelete();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartDeleteCartDelete: $e\n');
 }
 ```
@@ -230,7 +210,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -244,20 +224,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
+final api = Openapi().getCartApi();
 
-try { 
-    var result = api_instance.apiCartGetCampaignsGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartGetCampaignsGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartGetCampaignsGet: $e\n');
 }
 ```
@@ -271,7 +247,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -285,20 +261,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
+final api = Openapi().getCartApi();
 
-try { 
-    var result = api_instance.apiCartGetTimeSlotsPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartGetTimeSlotsPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartGetTimeSlotsPost: $e\n');
 }
 ```
@@ -312,7 +284,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -326,20 +298,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
+final api = Openapi().getCartApi();
 
-try { 
-    var result = api_instance.apiCartPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartPost: $e\n');
 }
 ```
@@ -353,7 +321,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -367,21 +335,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var body = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest | 
+final api = Openapi().getCartApi();
+final CartServiceUpdateCartRequest body = ; // CartServiceUpdateCartRequest | 
 
-try { 
-    var result = api_instance.apiCartUpdateCartPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartUpdateCartPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartUpdateCartPost: $e\n');
 }
 ```
@@ -398,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,21 +376,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var body = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest | 
+final api = Openapi().getCartApi();
+final CartServiceUpdateCartRegionRequest body = ; // CartServiceUpdateCartRegionRequest | 
 
-try { 
-    var result = api_instance.apiCartUpdateCartRegionPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartUpdateCartRegionPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartUpdateCartRegionPost: $e\n');
 }
 ```
@@ -443,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -457,21 +417,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CartApi();
-var body = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest | 
+final api = Openapi().getCartApi();
+final CartServiceUpdateTimeslotRequest body = ; // CartServiceUpdateTimeslotRequest | 
 
-try { 
-    var result = api_instance.apiCartUpdateTimeslotPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCartUpdateTimeslotPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CartApi->apiCartUpdateTimeslotPost: $e\n');
 }
 ```
@@ -488,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

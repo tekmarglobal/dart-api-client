@@ -9,15 +9,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiProductAddToFavoriteListPost**](ProductApi.md#apiproductaddtofavoritelistpost) | **post** /api/Product/AddToFavoriteList | 
-[**apiProductDeleteFavoriteDelete**](ProductApi.md#apiproductdeletefavoritedelete) | **delete** /api/Product/DeleteFavorite | 
-[**apiProductGetFavoriteListPost**](ProductApi.md#apiproductgetfavoritelistpost) | **post** /api/Product/GetFavoriteList | 
-[**apiProductImage2ProductErpIdImagetypeGet**](ProductApi.md#apiproductimage2producterpidimagetypeget) | **get** /api/Product/image2/{productErpId}/{imagetype} | 
-[**apiProductPost**](ProductApi.md#apiproductpost) | **post** /api/Product | 
-[**apiProductProductAlternativesPost**](ProductApi.md#apiproductproductalternativespost) | **post** /api/Product/ProductAlternatives | 
-[**apiProductProductListPost**](ProductApi.md#apiproductproductlistpost) | **post** /api/Product/ProductList | 
-[**apiProductProductSearchPost**](ProductApi.md#apiproductproductsearchpost) | **post** /api/Product/ProductSearch | 
-[**apiProductRecommendProductPost**](ProductApi.md#apiproductrecommendproductpost) | **post** /api/Product/RecommendProduct | 
+[**apiProductAddToFavoriteListPost**](ProductApi.md#apiproductaddtofavoritelistpost) | **POST** /api/Product/AddToFavoriteList | 
+[**apiProductDeleteFavoriteDelete**](ProductApi.md#apiproductdeletefavoritedelete) | **DELETE** /api/Product/DeleteFavorite | 
+[**apiProductGetFavoriteListPost**](ProductApi.md#apiproductgetfavoritelistpost) | **POST** /api/Product/GetFavoriteList | 
+[**apiProductImage2ProductErpIdImagetypeGet**](ProductApi.md#apiproductimage2producterpidimagetypeget) | **GET** /api/Product/image2/{productErpId}/{imagetype} | 
+[**apiProductPost**](ProductApi.md#apiproductpost) | **POST** /api/Product | 
+[**apiProductProductAlternativesPost**](ProductApi.md#apiproductproductalternativespost) | **POST** /api/Product/ProductAlternatives | 
+[**apiProductProductListPost**](ProductApi.md#apiproductproductlistpost) | **POST** /api/Product/ProductList | 
+[**apiProductProductSearchPost**](ProductApi.md#apiproductproductsearchpost) | **POST** /api/Product/ProductSearch | 
+[**apiProductRecommendProductPost**](ProductApi.md#apiproductrecommendproductpost) | **POST** /api/Product/RecommendProduct | 
 
 
 # **apiProductAddToFavoriteListPost**
@@ -25,21 +25,17 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceFavoriteRequest body = ; // ProductServiceFavoriteRequest | 
 
-try { 
-    var result = api_instance.apiProductAddToFavoriteListPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductAddToFavoriteListPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
 }
 ```
@@ -56,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -70,21 +66,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceFavoriteRequest body = ; // ProductServiceFavoriteRequest | 
 
-try { 
-    var result = api_instance.apiProductDeleteFavoriteDelete(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductDeleteFavoriteDelete(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
 }
 ```
@@ -101,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -115,20 +107,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
+final api = Openapi().getProductApi();
 
-try { 
-    var result = api_instance.apiProductGetFavoriteListPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductGetFavoriteListPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductGetFavoriteListPost: $e\n');
 }
 ```
@@ -142,7 +130,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -156,21 +144,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var productErpId = productErpId_example; // String | 
-var imagetype = 56; // int | 
+final api = Openapi().getProductApi();
+final String productErpId = productErpId_example; // String | 
+final int imagetype = 56; // int | 
 
-try { 
-    api_instance.apiProductImage2ProductErpIdImagetypeGet(productErpId, imagetype);
-} catch (e) {
+try {
+    api.apiProductImage2ProductErpIdImagetypeGet(productErpId, imagetype);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductImage2ProductErpIdImagetypeGet: $e\n');
 }
 ```
@@ -188,7 +172,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -202,21 +186,17 @@ void (empty response body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceProductRequest(); // ProductServiceProductRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceProductRequest body = ; // ProductServiceProductRequest | 
 
-try { 
-    var result = api_instance.apiProductPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductPost: $e\n');
 }
 ```
@@ -233,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -247,21 +227,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceProductAlternativesRequest(); // ProductServiceProductAlternativesRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceProductAlternativesRequest body = ; // ProductServiceProductAlternativesRequest | 
 
-try { 
-    var result = api_instance.apiProductProductAlternativesPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductProductAlternativesPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductProductAlternativesPost: $e\n');
 }
 ```
@@ -278,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -292,20 +268,16 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
+final api = Openapi().getProductApi();
 
-try { 
-    var result = api_instance.apiProductProductListPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductProductListPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductProductListPost: $e\n');
 }
 ```
@@ -319,7 +291,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -333,21 +305,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceSearchProductRequest body = ; // ProductServiceSearchProductRequest | 
 
-try { 
-    var result = api_instance.apiProductProductSearchPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductProductSearchPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
 }
 ```
@@ -364,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -378,21 +346,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new ProductApi();
-var body = new ProductServiceRecommendProductRequest(); // ProductServiceRecommendProductRequest | 
+final api = Openapi().getProductApi();
+final ProductServiceRecommendProductRequest body = ; // ProductServiceRecommendProductRequest | 
 
-try { 
-    var result = api_instance.apiProductRecommendProductPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiProductRecommendProductPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductRecommendProductPost: $e\n');
 }
 ```
@@ -409,7 +373,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

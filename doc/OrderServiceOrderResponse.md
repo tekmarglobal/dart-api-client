@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **billingAdrress** | **String** |  | [optional] 
 **productTotal** | **double** |  | [optional] 
 **orderTotal** | **double** |  | [optional] 
-**orderProducts** | [**BuiltList<OrderServiceROrderProducts>**](OrderServiceROrderProducts.md) |  | [optional] 
+**orderProducts** | [**BuiltList&lt;OrderServiceROrderProducts&gt;**](OrderServiceROrderProducts.md) |  | [optional] 
 **orderNote** | **String** |  | [optional] 
 **paymentType** | **String** |  | [optional] 
 **productDiscountsTotal** | **double** |  | [optional] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **deliveryTimeStart** | [**DateTime**](DateTime.md) |  | [optional] 
 **deliveryTimeEnd** | [**DateTime**](DateTime.md) |  | [optional] 
 **region** | **int** |  | [optional] 
-**appliedCampaigns** | [**BuiltList<OrderServiceCampaignResponse>**](OrderServiceCampaignResponse.md) |  | [optional] 
+**appliedCampaigns** | [**BuiltList&lt;OrderServiceCampaignResponse&gt;**](OrderServiceCampaignResponse.md) |  | [optional] 
 **campaignTotalDiscount** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

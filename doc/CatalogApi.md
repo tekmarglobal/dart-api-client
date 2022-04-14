@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiCatalogAllCategoriesGet**](CatalogApi.md#apicatalogallcategoriesget) | **get** /api/Catalog/allCategories | 
-[**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apicatalogallcategoriesregionget) | **get** /api/Catalog/allCategoriesRegion | 
-[**apiCatalogCreateCategoryPost**](CatalogApi.md#apicatalogcreatecategorypost) | **post** /api/Catalog/createCategory | 
-[**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apicatalogdeletecategorydelete) | **delete** /api/Catalog/deleteCategory | 
-[**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **post** /api/Catalog/ImportCategoriesFromOlimpos | 
-[**apiCatalogPost**](CatalogApi.md#apicatalogpost) | **post** /api/Catalog | 
-[**apiCatalogUpdateCategoryPut**](CatalogApi.md#apicatalogupdatecategoryput) | **put** /api/Catalog/updateCategory | 
+[**apiCatalogAllCategoriesGet**](CatalogApi.md#apicatalogallcategoriesget) | **GET** /api/Catalog/allCategories | 
+[**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apicatalogallcategoriesregionget) | **GET** /api/Catalog/allCategoriesRegion | 
+[**apiCatalogCreateCategoryPost**](CatalogApi.md#apicatalogcreatecategorypost) | **POST** /api/Catalog/createCategory | 
+[**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apicatalogdeletecategorydelete) | **DELETE** /api/Catalog/deleteCategory | 
+[**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **POST** /api/Catalog/ImportCategoriesFromOlimpos | 
+[**apiCatalogPost**](CatalogApi.md#apicatalogpost) | **POST** /api/Catalog | 
+[**apiCatalogUpdateCategoryPut**](CatalogApi.md#apicatalogupdatecategoryput) | **PUT** /api/Catalog/updateCategory | 
 
 
 # **apiCatalogAllCategoriesGet**
@@ -23,20 +23,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
+final api = Openapi().getCatalogApi();
 
-try { 
-    var result = api_instance.apiCatalogAllCategoriesGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogAllCategoriesGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogAllCategoriesGet: $e\n');
 }
 ```
@@ -50,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -64,21 +60,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
-var neighborhood = 56; // int | 
+final api = Openapi().getCatalogApi();
+final int neighborhood = 56; // int | 
 
-try { 
-    var result = api_instance.apiCatalogAllCategoriesRegionGet(neighborhood);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogAllCategoriesRegionGet(neighborhood);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogAllCategoriesRegionGet: $e\n');
 }
 ```
@@ -95,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,24 +101,20 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
-var name = name_example; // String | 
-var parent = 56; // int | 
-var level = 56; // int | 
-var showInMenu = true; // bool | 
+final api = Openapi().getCatalogApi();
+final String name = name_example; // String | 
+final int parent = 56; // int | 
+final int level = 56; // int | 
+final bool showInMenu = true; // bool | 
 
-try { 
-    var result = api_instance.apiCatalogCreateCategoryPost(name, parent, level, showInMenu);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogCreateCategoryPost(name, parent, level, showInMenu);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogCreateCategoryPost: $e\n');
 }
 ```
@@ -146,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -160,21 +148,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
-var id = 56; // int | 
+final api = Openapi().getCatalogApi();
+final int id = 56; // int | 
 
-try { 
-    var result = api_instance.apiCatalogDeleteCategoryDelete(id);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogDeleteCategoryDelete(id);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogDeleteCategoryDelete: $e\n');
 }
 ```
@@ -191,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -205,19 +189,15 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
+final api = Openapi().getCatalogApi();
 
-try { 
-    api_instance.apiCatalogImportCategoriesFromOlimposPost();
-} catch (e) {
+try {
+    api.apiCatalogImportCategoriesFromOlimposPost();
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogImportCategoriesFromOlimposPost: $e\n');
 }
 ```
@@ -231,7 +211,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -245,24 +225,20 @@ void (empty response body)
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
-var categoryId = 56; // int | 
-var regionId = 56; // int | 
-var withProducts = true; // bool | 
-var nestingLevel = 56; // int | 
+final api = Openapi().getCatalogApi();
+final int categoryId = 56; // int | 
+final int regionId = 56; // int | 
+final bool withProducts = true; // bool | 
+final int nestingLevel = 56; // int | 
 
-try { 
-    var result = api_instance.apiCatalogPost(categoryId, regionId, withProducts, nestingLevel);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogPost(categoryId, regionId, withProducts, nestingLevel);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogPost: $e\n');
 }
 ```
@@ -282,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -296,24 +272,20 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new CatalogApi();
-var id = 56; // int | 
-var name = name_example; // String | 
-var parent = 56; // int | 
-var level = 56; // int | 
+final api = Openapi().getCatalogApi();
+final int id = 56; // int | 
+final String name = name_example; // String | 
+final int parent = 56; // int | 
+final int level = 56; // int | 
 
-try { 
-    var result = api_instance.apiCatalogUpdateCategoryPut(id, name, parent, level);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiCatalogUpdateCategoryPut(id, name, parent, level);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CatalogApi->apiCatalogUpdateCategoryPut: $e\n');
 }
 ```
@@ -333,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

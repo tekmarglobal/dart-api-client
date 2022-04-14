@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiMigrationCreateregionpriceGet**](MigrationApi.md#apimigrationcreateregionpriceget) | **get** /api/Migration/createregionprice | 
-[**apiMigrationUpdateCitiesFromRestGet**](MigrationApi.md#apimigrationupdatecitiesfromrestget) | **get** /api/Migration/UpdateCitiesFromRest | 
+[**apiMigrationCreateregionpriceGet**](MigrationApi.md#apimigrationcreateregionpriceget) | **GET** /api/Migration/createregionprice | 
+[**apiMigrationUpdateCitiesFromRestGet**](MigrationApi.md#apimigrationupdatecitiesfromrestget) | **GET** /api/Migration/UpdateCitiesFromRest | 
 
 
 # **apiMigrationCreateregionpriceGet**
@@ -18,20 +18,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MigrationApi();
+final api = Openapi().getMigrationApi();
 
-try { 
-    var result = api_instance.apiMigrationCreateregionpriceGet();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiMigrationCreateregionpriceGet();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling MigrationApi->apiMigrationCreateregionpriceGet: $e\n');
 }
 ```
@@ -45,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -59,19 +55,15 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new MigrationApi();
+final api = Openapi().getMigrationApi();
 
-try { 
-    api_instance.apiMigrationUpdateCitiesFromRestGet();
-} catch (e) {
+try {
+    api.apiMigrationUpdateCitiesFromRestGet();
+} catch on DioError (e) {
     print('Exception when calling MigrationApi->apiMigrationUpdateCitiesFromRestGet: $e\n');
 }
 ```
@@ -85,7 +77,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

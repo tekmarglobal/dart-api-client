@@ -1,13 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/api.dart';
-import 'package:openapi/api/cart_api.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 
 /// tests for CartApi
@@ -15,6 +7,16 @@ void main() {
   final instance = Openapi().getCartApi();
 
   group(CartApi, () {
+    //Future<RestResultOfListOfCartServiceCampaignResponse> apiCartAddCampaignByCodePost({ String campaignCode }) async
+    test('test apiCartAddCampaignByCodePost', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfCartServiceCampaignApplyResponse> apiCartApplyCampaignPost({ int campaignId }) async
+    test('test apiCartApplyCampaignPost', () async {
+      // TODO
+    });
+
     //Future<RestResultOfCartServiceCreateCartResponse> apiCartCreateCartPost({ CartServiceCreateCartRequest body }) async
     test('test apiCartCreateCartPost', () async {
       // TODO
@@ -27,6 +29,11 @@ void main() {
 
     //Future<RestResultOfCartServiceCartResponse> apiCartDeleteCartDelete() async
     test('test apiCartDeleteCartDelete', () async {
+      // TODO
+    });
+
+    //Future<RestResultOfListOfCartServiceCampaignResponse> apiCartGetCampaignsGet() async
+    test('test apiCartGetCampaignsGet', () async {
       // TODO
     });
 

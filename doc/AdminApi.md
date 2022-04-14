@@ -9,16 +9,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAdminBranchPost**](AdminApi.md#apiadminbranchpost) | **post** /api/Admin/Branch | 
-[**apiAdminCompaniesPost**](AdminApi.md#apiadmincompaniespost) | **post** /api/Admin/Companies | 
-[**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiadmingeneratetimeslotsget) | **get** /api/Admin/GenerateTimeSlots | 
-[**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiadmingeneratetimeslotspost) | **post** /api/Admin/GenerateTimeSlots | 
-[**apiAdminGetProductGet**](AdminApi.md#apiadmingetproductget) | **get** /api/Admin/GetProduct | 
-[**apiAdminRegionNeighborhoodPost**](AdminApi.md#apiadminregionneighborhoodpost) | **post** /api/Admin/RegionNeighborhood | 
-[**apiAdminRegionPopulationGet**](AdminApi.md#apiadminregionpopulationget) | **get** /api/Admin/RegionPopulation | 
-[**apiAdminRegionPost**](AdminApi.md#apiadminregionpost) | **post** /api/Admin/Region | 
-[**apiAdminUpdateRegionNeighborhoodPost**](AdminApi.md#apiadminupdateregionneighborhoodpost) | **post** /api/Admin/UpdateRegionNeighborhood | 
-[**apiAdminUploadProductImagePost**](AdminApi.md#apiadminuploadproductimagepost) | **post** /api/Admin/UploadProductImage | 
+[**apiAdminBranchPost**](AdminApi.md#apiadminbranchpost) | **POST** /api/Admin/Branch | 
+[**apiAdminCompaniesPost**](AdminApi.md#apiadmincompaniespost) | **POST** /api/Admin/Companies | 
+[**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiadmingeneratetimeslotsget) | **GET** /api/Admin/GenerateTimeSlots | 
+[**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiadmingeneratetimeslotspost) | **POST** /api/Admin/GenerateTimeSlots | 
+[**apiAdminGetProductGet**](AdminApi.md#apiadmingetproductget) | **GET** /api/Admin/GetProduct | 
+[**apiAdminRegionNeighborhoodPost**](AdminApi.md#apiadminregionneighborhoodpost) | **POST** /api/Admin/RegionNeighborhood | 
+[**apiAdminRegionPopulationGet**](AdminApi.md#apiadminregionpopulationget) | **GET** /api/Admin/RegionPopulation | 
+[**apiAdminRegionPost**](AdminApi.md#apiadminregionpost) | **POST** /api/Admin/Region | 
+[**apiAdminUpdateRegionNeighborhoodPost**](AdminApi.md#apiadminupdateregionneighborhoodpost) | **POST** /api/Admin/UpdateRegionNeighborhood | 
+[**apiAdminUploadProductImagePost**](AdminApi.md#apiadminuploadproductimagepost) | **POST** /api/Admin/UploadProductImage | 
 
 
 # **apiAdminBranchPost**
@@ -26,20 +26,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
+final api = Openapi().getAdminApi();
 
-try { 
-    var result = api_instance.apiAdminBranchPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminBranchPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminBranchPost: $e\n');
 }
 ```
@@ -53,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -67,20 +63,16 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
+final api = Openapi().getAdminApi();
 
-try { 
-    var result = api_instance.apiAdminCompaniesPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminCompaniesPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminCompaniesPost: $e\n');
 }
 ```
@@ -94,7 +86,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,21 +100,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var region = 56; // int | 
+final api = Openapi().getAdminApi();
+final int region = 56; // int | 
 
-try { 
-    var result = api_instance.apiAdminGenerateTimeSlotsGet(region);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminGenerateTimeSlotsGet(region);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsGet: $e\n');
 }
 ```
@@ -139,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -153,21 +141,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var region = 56; // int | 
+final api = Openapi().getAdminApi();
+final int region = 56; // int | 
 
-try { 
-    var result = api_instance.apiAdminGenerateTimeSlotsPost(region);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminGenerateTimeSlotsPost(region);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminGenerateTimeSlotsPost: $e\n');
 }
 ```
@@ -184,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -198,22 +182,18 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var erpId = erpId_example; // String | 
-var productId = 56; // int | 
+final api = Openapi().getAdminApi();
+final String erpId = erpId_example; // String | 
+final int productId = 56; // int | 
 
-try { 
-    var result = api_instance.apiAdminGetProductGet(erpId, productId);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminGetProductGet(erpId, productId);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminGetProductGet: $e\n');
 }
 ```
@@ -231,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -245,21 +225,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var body = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest | 
+final api = Openapi().getAdminApi();
+final AdminServiceRegionNeighborhoodRequest body = ; // AdminServiceRegionNeighborhoodRequest | 
 
-try { 
-    var result = api_instance.apiAdminRegionNeighborhoodPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminRegionNeighborhoodPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminRegionNeighborhoodPost: $e\n');
 }
 ```
@@ -276,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -290,21 +266,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var gpsId = 56; // int | 
+final api = Openapi().getAdminApi();
+final int gpsId = 56; // int | 
 
-try { 
-    var result = api_instance.apiAdminRegionPopulationGet(gpsId);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminRegionPopulationGet(gpsId);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminRegionPopulationGet: $e\n');
 }
 ```
@@ -321,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -335,21 +307,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var regionId = 56; // int | 
+final api = Openapi().getAdminApi();
+final int regionId = 56; // int | 
 
-try { 
-    var result = api_instance.apiAdminRegionPost(regionId);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminRegionPost(regionId);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminRegionPost: $e\n');
 }
 ```
@@ -366,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -380,21 +348,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var body = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest | 
+final api = Openapi().getAdminApi();
+final AdminServiceUpdateRegionNeighborhoodRequest body = ; // AdminServiceUpdateRegionNeighborhoodRequest | 
 
-try { 
-    var result = api_instance.apiAdminUpdateRegionNeighborhoodPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminUpdateRegionNeighborhoodPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminUpdateRegionNeighborhoodPost: $e\n');
 }
 ```
@@ -411,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -425,21 +389,17 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new AdminApi();
-var file = BINARY_DATA_HERE; // Uint8List | 
+final api = Openapi().getAdminApi();
+final MultipartFile file = BINARY_DATA_HERE; // MultipartFile | 
 
-try { 
-    var result = api_instance.apiAdminUploadProductImagePost(file);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiAdminUploadProductImagePost(file);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AdminApi->apiAdminUploadProductImagePost: $e\n');
 }
 ```
@@ -448,7 +408,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **Uint8List**|  | [optional] 
+ **file** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -456,7 +416,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 

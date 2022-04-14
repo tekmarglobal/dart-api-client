@@ -1,12 +1,5 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-import 'package:openapi/model/cart_service_r_cart_item_impact.dart';
 import 'package:test/test.dart';
+import 'package:openapi/openapi.dart';
 
 // tests for CartServiceRCartItemImpact
 void main() {
@@ -34,7 +27,5 @@ void main() {
       // TODO
     });
 
-
   });
-
 }

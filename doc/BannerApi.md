@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiBannerGetBannersPost**](BannerApi.md#apibannergetbannerspost) | **post** /api/Banner/GetBanners | 
-[**apiBannerUpdateBannerPost**](BannerApi.md#apibannerupdatebannerpost) | **post** /api/Banner/UpdateBanner | 
+[**apiBannerGetBannersPost**](BannerApi.md#apibannergetbannerspost) | **POST** /api/Banner/GetBanners | 
+[**apiBannerUpdateBannerPost**](BannerApi.md#apibannerupdatebannerpost) | **POST** /api/Banner/UpdateBanner | 
 
 
 # **apiBannerGetBannersPost**
@@ -18,20 +18,16 @@ Method | HTTP request | Description
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new BannerApi();
+final api = Openapi().getBannerApi();
 
-try { 
-    var result = api_instance.apiBannerGetBannersPost();
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiBannerGetBannersPost();
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling BannerApi->apiBannerGetBannersPost: $e\n');
 }
 ```
@@ -45,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -59,21 +55,17 @@ This endpoint does not need any parameter.
 
 
 
-### Example 
+### Example
 ```dart
 import 'package:openapi/api.dart';
-// TODO Configure API key authorization: Bearer
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-var api_instance = new BannerApi();
-var body = new BannerServiceBannerRequest(); // BannerServiceBannerRequest | 
+final api = Openapi().getBannerApi();
+final BannerServiceBannerRequest body = ; // BannerServiceBannerRequest | 
 
-try { 
-    var result = api_instance.apiBannerUpdateBannerPost(body);
-    print(result);
-} catch (e) {
+try {
+    final response = api.apiBannerUpdateBannerPost(body);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n');
 }
 ```
@@ -90,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+No authorization required
 
 ### HTTP request headers
 
