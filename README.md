@@ -79,7 +79,7 @@ Class | Method | HTTP request | Description
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminRegionPost**](doc/AdminApi.md#apiadminregionpost) | **POST** /api/Admin/Region | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminUpdateRegionNeighborhoodPost**](doc/AdminApi.md#apiadminupdateregionneighborhoodpost) | **POST** /api/Admin/UpdateRegionNeighborhood | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminUploadProductImagePost**](doc/AdminApi.md#apiadminuploadproductimagepost) | **POST** /api/Admin/UploadProductImage | 
-[*AffiliateApi*](doc/AffiliateApi.md) | [**apiAffiliateDetailGet**](doc/AffiliateApi.md#apiaffiliatedetailget) | **GET** /api/Affiliate/detail | 
+[*AffiliateApi*](doc/AffiliateApi.md) | [**apiAffiliateDetailUrllinkGet**](doc/AffiliateApi.md#apiaffiliatedetailurllinkget) | **GET** /api/Affiliate/detail/{urllink} | 
 [*AffiliateApi*](doc/AffiliateApi.md) | [**apiAffiliateGetShareLinkPost**](doc/AffiliateApi.md#apiaffiliategetsharelinkpost) | **POST** /api/Affiliate/GetShareLink | 
 [*AffiliateApi*](doc/AffiliateApi.md) | [**apiAffiliateShareLinkClickedPost**](doc/AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **POST** /api/Affiliate/ShareLinkClicked | 
 [*BannerApi*](doc/BannerApi.md) | [**apiBannerGetBannersPost**](doc/BannerApi.md#apibannergetbannerspost) | **POST** /api/Banner/GetBanners | 
@@ -285,7 +285,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## Bearer
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 
 ## Author

@@ -13,6 +13,8 @@ part 'account_service_check_version_response.g.dart';
 /// * [latestVersion] 
 /// * [isMandatory] 
 /// * [isNewVersionAvailable] 
+/// * [iosMarketId] 
+/// * [androidMarketId] 
 abstract class AccountServiceCheckVersionResponse implements Built<AccountServiceCheckVersionResponse, AccountServiceCheckVersionResponseBuilder> {
     @BuiltValueField(wireName: r'latestVersion')
     String? get latestVersion;
@@ -22,6 +24,12 @@ abstract class AccountServiceCheckVersionResponse implements Built<AccountServic
 
     @BuiltValueField(wireName: r'isNewVersionAvailable')
     bool? get isNewVersionAvailable;
+
+    @BuiltValueField(wireName: r'iosMarketId')
+    String? get iosMarketId;
+
+    @BuiltValueField(wireName: r'androidMarketId')
+    String? get androidMarketId;
 
     AccountServiceCheckVersionResponse._();
 
@@ -63,6 +71,18 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
                 ..add(serializers.serialize(object.isNewVersionAvailable,
                     specifiedType: const FullType(bool)));
         }
+        if (object.iosMarketId != null) {
+            result
+                ..add(r'iosMarketId')
+                ..add(serializers.serialize(object.iosMarketId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.androidMarketId != null) {
+            result
+                ..add(r'androidMarketId')
+                ..add(serializers.serialize(object.androidMarketId,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -92,6 +112,16 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     result.isNewVersionAvailable = valueDes;
+                    break;
+                case r'iosMarketId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.iosMarketId = valueDes;
+                    break;
+                case r'androidMarketId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.androidMarketId = valueDes;
                     break;
             }
         }

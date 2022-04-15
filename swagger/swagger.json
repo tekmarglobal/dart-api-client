@@ -475,15 +475,16 @@
         }
       }
     },
-    "/api/Affiliate/detail": {
+    "/api/Affiliate/detail/{urllink}": {
       "get": {
         "tags": [
           "Affiliate"
         ],
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "urlLink",
+            "required": true,
             "type": "string"
           }
         ],
@@ -2581,6 +2582,12 @@
         },
         "isNewVersionAvailable": {
           "type": "boolean"
+        },
+        "iosMarketId": {
+          "type": "string"
+        },
+        "androidMarketId": {
+          "type": "string"
         }
       }
     },
@@ -4975,5 +4982,18 @@
         }
       }
     }
-  }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \n                      Enter 'Bearer' [space] and then your token in the text input below.\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

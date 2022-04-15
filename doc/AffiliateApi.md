@@ -9,27 +9,31 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiAffiliateDetailGet**](AffiliateApi.md#apiaffiliatedetailget) | **GET** /api/Affiliate/detail | 
+[**apiAffiliateDetailUrllinkGet**](AffiliateApi.md#apiaffiliatedetailurllinkget) | **GET** /api/Affiliate/detail/{urllink} | 
 [**apiAffiliateGetShareLinkPost**](AffiliateApi.md#apiaffiliategetsharelinkpost) | **POST** /api/Affiliate/GetShareLink | 
 [**apiAffiliateShareLinkClickedPost**](AffiliateApi.md#apiaffiliatesharelinkclickedpost) | **POST** /api/Affiliate/ShareLinkClicked | 
 
 
-# **apiAffiliateDetailGet**
-> apiAffiliateDetailGet(urlLink)
+# **apiAffiliateDetailUrllinkGet**
+> apiAffiliateDetailUrllinkGet(urlLink)
 
 
 
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAffiliateApi();
 final String urlLink = urlLink_example; // String | 
 
 try {
-    api.apiAffiliateDetailGet(urlLink);
+    api.apiAffiliateDetailUrllinkGet(urlLink);
 } catch on DioError (e) {
-    print('Exception when calling AffiliateApi->apiAffiliateDetailGet: $e\n');
+    print('Exception when calling AffiliateApi->apiAffiliateDetailUrllinkGet: $e\n');
 }
 ```
 
@@ -37,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **urlLink** | **String**|  | [optional] 
+ **urlLink** | **String**|  | 
 
 ### Return type
 
@@ -45,7 +49,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -62,6 +66,10 @@ No authorization required
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAffiliateApi();
 final AffiliateServiceLinkRequest body = ; // AffiliateServiceLinkRequest | 
@@ -86,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -103,6 +111,10 @@ No authorization required
 ### Example
 ```dart
 import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAffiliateApi();
 final String key = key_example; // String | 
@@ -127,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

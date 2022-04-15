@@ -14,6 +14,10 @@ class _$AccountServiceCheckVersionResponse
   final bool? isMandatory;
   @override
   final bool? isNewVersionAvailable;
+  @override
+  final String? iosMarketId;
+  @override
+  final String? androidMarketId;
 
   factory _$AccountServiceCheckVersionResponse(
           [void Function(AccountServiceCheckVersionResponseBuilder)?
@@ -22,7 +26,11 @@ class _$AccountServiceCheckVersionResponse
           .build();
 
   _$AccountServiceCheckVersionResponse._(
-      {this.latestVersion, this.isMandatory, this.isNewVersionAvailable})
+      {this.latestVersion,
+      this.isMandatory,
+      this.isNewVersionAvailable,
+      this.iosMarketId,
+      this.androidMarketId})
       : super._();
 
   @override
@@ -40,13 +48,19 @@ class _$AccountServiceCheckVersionResponse
     return other is AccountServiceCheckVersionResponse &&
         latestVersion == other.latestVersion &&
         isMandatory == other.isMandatory &&
-        isNewVersionAvailable == other.isNewVersionAvailable;
+        isNewVersionAvailable == other.isNewVersionAvailable &&
+        iosMarketId == other.iosMarketId &&
+        androidMarketId == other.androidMarketId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, latestVersion.hashCode), isMandatory.hashCode),
-        isNewVersionAvailable.hashCode));
+    return $jf($jc(
+        $jc(
+            $jc($jc($jc(0, latestVersion.hashCode), isMandatory.hashCode),
+                isNewVersionAvailable.hashCode),
+            iosMarketId.hashCode),
+        androidMarketId.hashCode));
   }
 
   @override
@@ -54,7 +68,9 @@ class _$AccountServiceCheckVersionResponse
     return (newBuiltValueToStringHelper('AccountServiceCheckVersionResponse')
           ..add('latestVersion', latestVersion)
           ..add('isMandatory', isMandatory)
-          ..add('isNewVersionAvailable', isNewVersionAvailable))
+          ..add('isNewVersionAvailable', isNewVersionAvailable)
+          ..add('iosMarketId', iosMarketId)
+          ..add('androidMarketId', androidMarketId))
         .toString();
   }
 }
@@ -79,6 +95,15 @@ class AccountServiceCheckVersionResponseBuilder
   set isNewVersionAvailable(bool? isNewVersionAvailable) =>
       _$this._isNewVersionAvailable = isNewVersionAvailable;
 
+  String? _iosMarketId;
+  String? get iosMarketId => _$this._iosMarketId;
+  set iosMarketId(String? iosMarketId) => _$this._iosMarketId = iosMarketId;
+
+  String? _androidMarketId;
+  String? get androidMarketId => _$this._androidMarketId;
+  set androidMarketId(String? androidMarketId) =>
+      _$this._androidMarketId = androidMarketId;
+
   AccountServiceCheckVersionResponseBuilder() {
     AccountServiceCheckVersionResponse._defaults(this);
   }
@@ -89,6 +114,8 @@ class AccountServiceCheckVersionResponseBuilder
       _latestVersion = $v.latestVersion;
       _isMandatory = $v.isMandatory;
       _isNewVersionAvailable = $v.isNewVersionAvailable;
+      _iosMarketId = $v.iosMarketId;
+      _androidMarketId = $v.androidMarketId;
       _$v = null;
     }
     return this;
@@ -112,7 +139,9 @@ class AccountServiceCheckVersionResponseBuilder
         new _$AccountServiceCheckVersionResponse._(
             latestVersion: latestVersion,
             isMandatory: isMandatory,
-            isNewVersionAvailable: isNewVersionAvailable);
+            isNewVersionAvailable: isNewVersionAvailable,
+            iosMarketId: iosMarketId,
+            androidMarketId: androidMarketId);
     replace(_$result);
     return _$result;
   }
