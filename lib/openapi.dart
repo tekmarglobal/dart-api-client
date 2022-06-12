@@ -75,9 +75,11 @@ export 'package:openapi/src/model/definition_service_branch_response.dart';
 export 'package:openapi/src/model/definition_service_cities_response.dart';
 export 'package:openapi/src/model/definition_service_counties_request.dart';
 export 'package:openapi/src/model/definition_service_counties_response.dart';
+export 'package:openapi/src/model/definition_service_delivery_type.dart';
 export 'package:openapi/src/model/definition_service_faq_response.dart';
 export 'package:openapi/src/model/definition_service_neighbor_request.dart';
 export 'package:openapi/src/model/definition_service_neighbor_response.dart';
+export 'package:openapi/src/model/definition_service_self_pickup_point.dart';
 export 'package:openapi/src/model/definition_service_update_agreement_request.dart';
 export 'package:openapi/src/model/order_service_campaign_response.dart';
 export 'package:openapi/src/model/order_service_get_order_list_response.dart';
@@ -136,8 +138,10 @@ export 'package:openapi/src/model/rest_result_of_list_of_customer_service_custom
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_agreement_response.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_cities_response.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_counties_response.dart';
+export 'package:openapi/src/model/rest_result_of_list_of_definition_service_delivery_type.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_faq_response.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_neighbor_response.dart';
+export 'package:openapi/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_product_service_r_product.dart';
 export 'package:openapi/src/model/rest_result_of_order_service_get_order_list_response.dart';
 export 'package:openapi/src/model/rest_result_of_order_service_order_response.dart';
@@ -151,4 +155,3 @@ export 'package:openapi/src/model/rest_result_of_register_service_login_response
 export 'package:openapi/src/model/rest_result_of_register_service_sms_response.dart';
 export 'package:openapi/src/model/rest_result_of_system_int32.dart';
 export 'package:openapi/src/model/rest_result_of_system_object.dart';
-export 'package:openapi/kiler_interceptor.dart';

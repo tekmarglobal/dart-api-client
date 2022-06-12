@@ -1440,6 +1440,102 @@
         }
       }
     },
+    "/api/Definition/DeliveryTypes": {
+      "get": {
+        "tags": [
+          "Definition"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfDefinitionServiceDeliveryType"
+            }
+          }
+        }
+      }
+    },
+    "/api/Definition/GetAllSelfPickupPoints": {
+      "get": {
+        "tags": [
+          "Definition"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfDefinitionServiceSelfPickupPoint"
+            }
+          }
+        }
+      }
+    },
+    "/api/Definition/GetSelfPickupPointsInCity": {
+      "get": {
+        "tags": [
+          "Definition"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "cityId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfDefinitionServiceSelfPickupPoint"
+            }
+          }
+        }
+      }
+    },
+    "/api/Definition/GetSelfPickupPointInCounty": {
+      "get": {
+        "tags": [
+          "Definition"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "countyId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfDefinitionServiceSelfPickupPoint"
+            }
+          }
+        }
+      }
+    },
     "/api/Definition/Hello": {
       "get": {
         "tags": [
@@ -1676,25 +1772,15 @@
         }
       }
     },
-    "/api/Integration/MarketyoCategoriesImport": {
+    "/api/Integration/MarketyoCategoriesImportFromApi": {
       "post": {
         "tags": [
           "Integration"
-        ],
-        "consumes": [
-          "multipart/form-data"
         ],
         "produces": [
           "text/plain",
           "application/json",
           "text/json"
-        ],
-        "parameters": [
-          {
-            "in": "formData",
-            "name": "categoriesJsonFile",
-            "type": "file"
-          }
         ],
         "responses": {
           "200": {
@@ -1706,25 +1792,35 @@
         }
       }
     },
-    "/api/Integration/MarketyoProductsImport": {
+    "/api/Integration/MarketyoProductImportFromApi": {
       "post": {
         "tags": [
           "Integration"
-        ],
-        "consumes": [
-          "multipart/form-data"
         ],
         "produces": [
           "text/plain",
           "application/json",
           "text/json"
         ],
-        "parameters": [
-          {
-            "in": "formData",
-            "name": "productsJsonFile",
-            "type": "file"
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "string"
+            }
           }
+        }
+      }
+    },
+    "/api/Integration/MarketyoProductCategoriesImportFromApi": {
+      "post": {
+        "tags": [
+          "Integration"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
         ],
         "responses": {
           "200": {
@@ -4010,6 +4106,75 @@
         }
       }
     },
+    "DefinitionServiceDeliveryType": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "discountPercentage": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "RestResultOfListOfDefinitionServiceDeliveryType": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DefinitionServiceDeliveryType"
+          }
+        }
+      }
+    },
+    "DefinitionServiceSelfPickupPoint": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "regionId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "RestResultOfListOfDefinitionServiceSelfPickupPoint": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DefinitionServiceSelfPickupPoint"
+          }
+        }
+      }
+    },
     "DefinitionServiceCitiesResponse": {
       "type": "object",
       "properties": {
@@ -4544,6 +4709,14 @@
         },
         "paymentTypeCode": {
           "type": "string"
+        },
+        "deliveryTypeId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "channelId": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     },

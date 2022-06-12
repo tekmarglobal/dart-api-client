@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/definition_service_counties_request.dart';
 import 'package:openapi/src/model/definition_service_neighbor_request.dart';
 import 'package:openapi/src/model/definition_service_update_agreement_request.dart';
@@ -15,8 +16,10 @@ import 'package:openapi/src/model/rest_result_of_definition_service_upload_count
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_agreement_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_cities_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_counties_response.dart';
+import 'package:openapi/src/model/rest_result_of_list_of_definition_service_delivery_type.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_faq_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_neighbor_response.dart';
+import 'package:openapi/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart';
 
 class DefinitionApi {
 
@@ -284,6 +287,85 @@ class DefinitionApi {
     );
   }
 
+  /// apiDefinitionDeliveryTypesGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceDeliveryType] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfListOfDefinitionServiceDeliveryType>> apiDefinitionDeliveryTypesGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Definition/DeliveryTypes';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfListOfDefinitionServiceDeliveryType _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfListOfDefinitionServiceDeliveryType);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfListOfDefinitionServiceDeliveryType;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfListOfDefinitionServiceDeliveryType>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
   /// apiDefinitionFaqGet
   /// 
   ///
@@ -352,6 +434,257 @@ class DefinitionApi {
     }
 
     return Response<RestResultOfListOfDefinitionServiceFaqResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiDefinitionGetAllSelfPickupPointsGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceSelfPickupPoint] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>> apiDefinitionGetAllSelfPickupPointsGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Definition/GetAllSelfPickupPoints';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiDefinitionGetSelfPickupPointInCountyGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [countyId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceSelfPickupPoint] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>> apiDefinitionGetSelfPickupPointInCountyGet({ 
+    int? countyId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Definition/GetSelfPickupPointInCounty';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (countyId != null) r'countyId': encodeQueryParameter(_serializers, countyId, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiDefinitionGetSelfPickupPointsInCityGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cityId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceSelfPickupPoint] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>> apiDefinitionGetSelfPickupPointsInCityGet({ 
+    int? cityId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Definition/GetSelfPickupPointsInCity';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (cityId != null) r'cityId': encodeQueryParameter(_serializers, cityId, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

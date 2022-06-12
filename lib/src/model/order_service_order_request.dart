@@ -17,6 +17,8 @@ part 'order_service_order_request.g.dart';
 /// * [paymentCode] 
 /// * [orderNote] 
 /// * [paymentTypeCode] 
+/// * [deliveryTypeId] 
+/// * [channelId] 
 abstract class OrderServiceOrderRequest implements Built<OrderServiceOrderRequest, OrderServiceOrderRequestBuilder> {
     @BuiltValueField(wireName: r'deliveryAddressId')
     int? get deliveryAddressId;
@@ -38,6 +40,12 @@ abstract class OrderServiceOrderRequest implements Built<OrderServiceOrderReques
 
     @BuiltValueField(wireName: r'paymentTypeCode')
     String? get paymentTypeCode;
+
+    @BuiltValueField(wireName: r'deliveryTypeId')
+    int? get deliveryTypeId;
+
+    @BuiltValueField(wireName: r'channelId')
+    int? get channelId;
 
     OrderServiceOrderRequest._();
 
@@ -103,6 +111,18 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
                 ..add(serializers.serialize(object.paymentTypeCode,
                     specifiedType: const FullType(String)));
         }
+        if (object.deliveryTypeId != null) {
+            result
+                ..add(r'deliveryTypeId')
+                ..add(serializers.serialize(object.deliveryTypeId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.channelId != null) {
+            result
+                ..add(r'channelId')
+                ..add(serializers.serialize(object.channelId,
+                    specifiedType: const FullType(int)));
+        }
         return result;
     }
 
@@ -152,6 +172,16 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.paymentTypeCode = valueDes;
+                    break;
+                case r'deliveryTypeId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.deliveryTypeId = valueDes;
+                    break;
+                case r'channelId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.channelId = valueDes;
                     break;
             }
         }

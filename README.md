@@ -116,14 +116,19 @@ Class | Method | HTTP request | Description
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionAgreementGet**](doc/DefinitionApi.md#apidefinitionagreementget) | **GET** /api/Definition/Agreement | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionCitiesPost**](doc/DefinitionApi.md#apidefinitioncitiespost) | **POST** /api/Definition/Cities | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionCountiesPost**](doc/DefinitionApi.md#apidefinitioncountiespost) | **POST** /api/Definition/Counties | 
+[*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionDeliveryTypesGet**](doc/DefinitionApi.md#apidefinitiondeliverytypesget) | **GET** /api/Definition/DeliveryTypes | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionFaqGet**](doc/DefinitionApi.md#apidefinitionfaqget) | **GET** /api/Definition/Faq | 
+[*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetAllSelfPickupPointsGet**](doc/DefinitionApi.md#apidefinitiongetallselfpickuppointsget) | **GET** /api/Definition/GetAllSelfPickupPoints | 
+[*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetSelfPickupPointInCountyGet**](doc/DefinitionApi.md#apidefinitiongetselfpickuppointincountyget) | **GET** /api/Definition/GetSelfPickupPointInCounty | 
+[*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetSelfPickupPointsInCityGet**](doc/DefinitionApi.md#apidefinitiongetselfpickuppointsincityget) | **GET** /api/Definition/GetSelfPickupPointsInCity | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionHelloGet**](doc/DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionNeighborhoodPost**](doc/DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionUpdateAgreementLogPost**](doc/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionUploadCountriesToFirebasePost**](doc/DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **POST** /api/Definition/UploadCountriesToFirebase | 
-[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCategoriesImportPost**](doc/IntegrationApi.md#apiintegrationmarketyocategoriesimportpost) | **POST** /api/Integration/MarketyoCategoriesImport | 
+[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCategoriesImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyocategoriesimportfromapipost) | **POST** /api/Integration/MarketyoCategoriesImportFromApi | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCustomersImportPost**](doc/IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **POST** /api/Integration/MarketyoCustomersImport | 
-[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoProductsImportPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductsimportpost) | **POST** /api/Integration/MarketyoProductsImport | 
+[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoProductCategoriesImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductcategoriesimportfromapipost) | **POST** /api/Integration/MarketyoProductCategoriesImportFromApi | 
+[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoProductImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductimportfromapipost) | **POST** /api/Integration/MarketyoProductImportFromApi | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationTestGet**](doc/IntegrationApi.md#apiintegrationtestget) | **GET** /api/Integration/test | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationUpdateProductFromOlimposGet**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **GET** /api/Integration/UpdateProductFromOlimpos | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
@@ -205,9 +210,11 @@ Class | Method | HTTP request | Description
  - [DefinitionServiceCitiesResponse](doc/DefinitionServiceCitiesResponse.md)
  - [DefinitionServiceCountiesRequest](doc/DefinitionServiceCountiesRequest.md)
  - [DefinitionServiceCountiesResponse](doc/DefinitionServiceCountiesResponse.md)
+ - [DefinitionServiceDeliveryType](doc/DefinitionServiceDeliveryType.md)
  - [DefinitionServiceFaqResponse](doc/DefinitionServiceFaqResponse.md)
  - [DefinitionServiceNeighborRequest](doc/DefinitionServiceNeighborRequest.md)
  - [DefinitionServiceNeighborResponse](doc/DefinitionServiceNeighborResponse.md)
+ - [DefinitionServiceSelfPickupPoint](doc/DefinitionServiceSelfPickupPoint.md)
  - [DefinitionServiceUpdateAgreementRequest](doc/DefinitionServiceUpdateAgreementRequest.md)
  - [OrderServiceCampaignResponse](doc/OrderServiceCampaignResponse.md)
  - [OrderServiceGetOrderListResponse](doc/OrderServiceGetOrderListResponse.md)
@@ -266,8 +273,10 @@ Class | Method | HTTP request | Description
  - [RestResultOfListOfDefinitionServiceAgreementResponse](doc/RestResultOfListOfDefinitionServiceAgreementResponse.md)
  - [RestResultOfListOfDefinitionServiceCitiesResponse](doc/RestResultOfListOfDefinitionServiceCitiesResponse.md)
  - [RestResultOfListOfDefinitionServiceCountiesResponse](doc/RestResultOfListOfDefinitionServiceCountiesResponse.md)
+ - [RestResultOfListOfDefinitionServiceDeliveryType](doc/RestResultOfListOfDefinitionServiceDeliveryType.md)
  - [RestResultOfListOfDefinitionServiceFaqResponse](doc/RestResultOfListOfDefinitionServiceFaqResponse.md)
  - [RestResultOfListOfDefinitionServiceNeighborResponse](doc/RestResultOfListOfDefinitionServiceNeighborResponse.md)
+ - [RestResultOfListOfDefinitionServiceSelfPickupPoint](doc/RestResultOfListOfDefinitionServiceSelfPickupPoint.md)
  - [RestResultOfListOfProductServiceRProduct](doc/RestResultOfListOfProductServiceRProduct.md)
  - [RestResultOfOrderServiceGetOrderListResponse](doc/RestResultOfOrderServiceGetOrderListResponse.md)
  - [RestResultOfOrderServiceOrderResponse](doc/RestResultOfOrderServiceOrderResponse.md)

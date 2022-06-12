@@ -9,16 +9,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiIntegrationMarketyoCategoriesImportPost**](IntegrationApi.md#apiintegrationmarketyocategoriesimportpost) | **POST** /api/Integration/MarketyoCategoriesImport | 
+[**apiIntegrationMarketyoCategoriesImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyocategoriesimportfromapipost) | **POST** /api/Integration/MarketyoCategoriesImportFromApi | 
 [**apiIntegrationMarketyoCustomersImportPost**](IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **POST** /api/Integration/MarketyoCustomersImport | 
-[**apiIntegrationMarketyoProductsImportPost**](IntegrationApi.md#apiintegrationmarketyoproductsimportpost) | **POST** /api/Integration/MarketyoProductsImport | 
+[**apiIntegrationMarketyoProductCategoriesImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyoproductcategoriesimportfromapipost) | **POST** /api/Integration/MarketyoProductCategoriesImportFromApi | 
+[**apiIntegrationMarketyoProductImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyoproductimportfromapipost) | **POST** /api/Integration/MarketyoProductImportFromApi | 
 [**apiIntegrationTestGet**](IntegrationApi.md#apiintegrationtestget) | **GET** /api/Integration/test | 
 [**apiIntegrationUpdateProductFromOlimposGet**](IntegrationApi.md#apiintegrationupdateproductfromolimposget) | **GET** /api/Integration/UpdateProductFromOlimpos | 
 [**apiIntegrationUpdateProductFromOlimposPost**](IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
 
 
-# **apiIntegrationMarketyoCategoriesImportPost**
-> String apiIntegrationMarketyoCategoriesImportPost(categoriesJsonFile)
+# **apiIntegrationMarketyoCategoriesImportFromApiPost**
+> String apiIntegrationMarketyoCategoriesImportFromApiPost()
 
 
 
@@ -31,21 +32,17 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getIntegrationApi();
-final MultipartFile categoriesJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
 try {
-    final response = api.apiIntegrationMarketyoCategoriesImportPost(categoriesJsonFile);
+    final response = api.apiIntegrationMarketyoCategoriesImportFromApiPost();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling IntegrationApi->apiIntegrationMarketyoCategoriesImportPost: $e\n');
+    print('Exception when calling IntegrationApi->apiIntegrationMarketyoCategoriesImportFromApiPost: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoriesJsonFile** | **MultipartFile**|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -57,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -113,8 +110,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiIntegrationMarketyoProductsImportPost**
-> String apiIntegrationMarketyoProductsImportPost(productsJsonFile)
+# **apiIntegrationMarketyoProductCategoriesImportFromApiPost**
+> String apiIntegrationMarketyoProductCategoriesImportFromApiPost()
 
 
 
@@ -127,21 +124,17 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getIntegrationApi();
-final MultipartFile productsJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
 try {
-    final response = api.apiIntegrationMarketyoProductsImportPost(productsJsonFile);
+    final response = api.apiIntegrationMarketyoProductCategoriesImportFromApiPost();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling IntegrationApi->apiIntegrationMarketyoProductsImportPost: $e\n');
+    print('Exception when calling IntegrationApi->apiIntegrationMarketyoProductCategoriesImportFromApiPost: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **productsJsonFile** | **MultipartFile**|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -153,7 +146,48 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiIntegrationMarketyoProductImportFromApiPost**
+> String apiIntegrationMarketyoProductImportFromApiPost()
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getIntegrationApi();
+
+try {
+    final response = api.apiIntegrationMarketyoProductImportFromApiPost();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling IntegrationApi->apiIntegrationMarketyoProductImportFromApiPost: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

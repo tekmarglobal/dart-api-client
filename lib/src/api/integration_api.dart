@@ -17,11 +17,10 @@ class IntegrationApi {
 
   const IntegrationApi(this._dio, this._serializers);
 
-  /// apiIntegrationMarketyoCategoriesImportPost
+  /// apiIntegrationMarketyoCategoriesImportFromApiPost
   /// 
   ///
   /// Parameters:
-  /// * [categoriesJsonFile] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -31,8 +30,7 @@ class IntegrationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<String>> apiIntegrationMarketyoCategoriesImportPost({ 
-    MultipartFile? categoriesJsonFile,
+  Future<Response<String>> apiIntegrationMarketyoCategoriesImportFromApiPost({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -40,7 +38,7 @@ class IntegrationApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/Integration/MarketyoCategoriesImport';
+    final _path = r'/api/Integration/MarketyoCategoriesImportFromApi';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -57,31 +55,11 @@ class IntegrationApi {
         ],
         ...?extra,
       },
-      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
-    dynamic _bodyData;
-
-    try {
-      _bodyData = FormData.fromMap(<String, dynamic>{
-        if (categoriesJsonFile != null) r'categoriesJsonFile': categoriesJsonFile,
-      });
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
     final _response = await _dio.request<Object>(
       _path,
-      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
@@ -225,11 +203,10 @@ class IntegrationApi {
     );
   }
 
-  /// apiIntegrationMarketyoProductsImportPost
+  /// apiIntegrationMarketyoProductCategoriesImportFromApiPost
   /// 
   ///
   /// Parameters:
-  /// * [productsJsonFile] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -239,8 +216,7 @@ class IntegrationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<String>> apiIntegrationMarketyoProductsImportPost({ 
-    MultipartFile? productsJsonFile,
+  Future<Response<String>> apiIntegrationMarketyoProductCategoriesImportFromApiPost({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -248,7 +224,7 @@ class IntegrationApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/Integration/MarketyoProductsImport';
+    final _path = r'/api/Integration/MarketyoProductCategoriesImportFromApi';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -265,31 +241,86 @@ class IntegrationApi {
         ],
         ...?extra,
       },
-      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
-    dynamic _bodyData;
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    String _responseData;
 
     try {
-      _bodyData = FormData.fromMap(<String, dynamic>{
-        if (productsJsonFile != null) r'productsJsonFile': productsJsonFile,
-      });
+      _responseData = _response.data as String;
 
-    } catch(error, stackTrace) {
+    } catch (error, stackTrace) {
       throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _response.requestOptions,
+        response: _response,
         type: DioErrorType.other,
         error: error,
       )..stackTrace = stackTrace;
     }
 
+    return Response<String>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiIntegrationMarketyoProductImportFromApiPost
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [String] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<String>> apiIntegrationMarketyoProductImportFromApiPost({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Integration/MarketyoProductImportFromApi';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
     final _response = await _dio.request<Object>(
       _path,
-      data: _bodyData,
       options: _options,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,

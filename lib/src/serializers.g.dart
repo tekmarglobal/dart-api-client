@@ -57,9 +57,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DefinitionServiceCitiesResponse.serializer)
       ..add(DefinitionServiceCountiesRequest.serializer)
       ..add(DefinitionServiceCountiesResponse.serializer)
+      ..add(DefinitionServiceDeliveryType.serializer)
       ..add(DefinitionServiceFaqResponse.serializer)
       ..add(DefinitionServiceNeighborRequest.serializer)
       ..add(DefinitionServiceNeighborResponse.serializer)
+      ..add(DefinitionServiceSelfPickupPoint.serializer)
       ..add(DefinitionServiceUpdateAgreementRequest.serializer)
       ..add(OrderServiceCampaignResponse.serializer)
       ..add(OrderServiceGetOrderListResponse.serializer)
@@ -118,8 +120,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RestResultOfListOfDefinitionServiceAgreementResponse.serializer)
       ..add(RestResultOfListOfDefinitionServiceCitiesResponse.serializer)
       ..add(RestResultOfListOfDefinitionServiceCountiesResponse.serializer)
+      ..add(RestResultOfListOfDefinitionServiceDeliveryType.serializer)
       ..add(RestResultOfListOfDefinitionServiceFaqResponse.serializer)
       ..add(RestResultOfListOfDefinitionServiceNeighborResponse.serializer)
+      ..add(RestResultOfListOfDefinitionServiceSelfPickupPoint.serializer)
       ..add(RestResultOfListOfProductServiceRProduct.serializer)
       ..add(RestResultOfOrderServiceGetOrderListResponse.serializer)
       ..add(RestResultOfOrderServiceOrderResponse.serializer)
@@ -235,12 +239,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<DefinitionServiceCountiesResponse>())
       ..addBuilderFactory(
           const FullType(
+              BuiltList, const [const FullType(DefinitionServiceDeliveryType)]),
+          () => new ListBuilder<DefinitionServiceDeliveryType>())
+      ..addBuilderFactory(
+          const FullType(
               BuiltList, const [const FullType(DefinitionServiceFaqResponse)]),
           () => new ListBuilder<DefinitionServiceFaqResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(DefinitionServiceNeighborResponse)]),
           () => new ListBuilder<DefinitionServiceNeighborResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(DefinitionServiceSelfPickupPoint)]),
+          () => new ListBuilder<DefinitionServiceSelfPickupPoint>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(OrderServiceOrders)]),
           () => new ListBuilder<OrderServiceOrders>())

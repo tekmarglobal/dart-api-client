@@ -60,9 +60,11 @@ doc/DefinitionServiceBranchResponse.md
 doc/DefinitionServiceCitiesResponse.md
 doc/DefinitionServiceCountiesRequest.md
 doc/DefinitionServiceCountiesResponse.md
+doc/DefinitionServiceDeliveryType.md
 doc/DefinitionServiceFaqResponse.md
 doc/DefinitionServiceNeighborRequest.md
 doc/DefinitionServiceNeighborResponse.md
+doc/DefinitionServiceSelfPickupPoint.md
 doc/DefinitionServiceUpdateAgreementRequest.md
 doc/IntegrationApi.md
 doc/MigrationApi.md
@@ -127,8 +129,10 @@ doc/RestResultOfListOfCustomerServiceCustomerMessageResponse.md
 doc/RestResultOfListOfDefinitionServiceAgreementResponse.md
 doc/RestResultOfListOfDefinitionServiceCitiesResponse.md
 doc/RestResultOfListOfDefinitionServiceCountiesResponse.md
+doc/RestResultOfListOfDefinitionServiceDeliveryType.md
 doc/RestResultOfListOfDefinitionServiceFaqResponse.md
 doc/RestResultOfListOfDefinitionServiceNeighborResponse.md
+doc/RestResultOfListOfDefinitionServiceSelfPickupPoint.md
 doc/RestResultOfListOfProductServiceRProduct.md
 doc/RestResultOfOrderServiceGetOrderListResponse.md
 doc/RestResultOfOrderServiceOrderResponse.md
@@ -217,9 +221,11 @@ lib/src/model/definition_service_branch_response.dart
 lib/src/model/definition_service_cities_response.dart
 lib/src/model/definition_service_counties_request.dart
 lib/src/model/definition_service_counties_response.dart
+lib/src/model/definition_service_delivery_type.dart
 lib/src/model/definition_service_faq_response.dart
 lib/src/model/definition_service_neighbor_request.dart
 lib/src/model/definition_service_neighbor_response.dart
+lib/src/model/definition_service_self_pickup_point.dart
 lib/src/model/definition_service_update_agreement_request.dart
 lib/src/model/order_service_campaign_response.dart
 lib/src/model/order_service_get_order_list_response.dart
@@ -278,8 +284,10 @@ lib/src/model/rest_result_of_list_of_customer_service_customer_message_response.
 lib/src/model/rest_result_of_list_of_definition_service_agreement_response.dart
 lib/src/model/rest_result_of_list_of_definition_service_cities_response.dart
 lib/src/model/rest_result_of_list_of_definition_service_counties_response.dart
+lib/src/model/rest_result_of_list_of_definition_service_delivery_type.dart
 lib/src/model/rest_result_of_list_of_definition_service_faq_response.dart
 lib/src/model/rest_result_of_list_of_definition_service_neighbor_response.dart
+lib/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart
 lib/src/model/rest_result_of_list_of_product_service_r_product.dart
 lib/src/model/rest_result_of_order_service_get_order_list_response.dart
 lib/src/model/rest_result_of_order_service_order_response.dart
@@ -295,3 +303,7 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/definition_service_delivery_type_test.dart
+test/definition_service_self_pickup_point_test.dart
+test/rest_result_of_list_of_definition_service_delivery_type_test.dart
+test/rest_result_of_list_of_definition_service_self_pickup_point_test.dart

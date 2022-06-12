@@ -62,9 +62,11 @@ import 'package:openapi/src/model/definition_service_branch_response.dart';
 import 'package:openapi/src/model/definition_service_cities_response.dart';
 import 'package:openapi/src/model/definition_service_counties_request.dart';
 import 'package:openapi/src/model/definition_service_counties_response.dart';
+import 'package:openapi/src/model/definition_service_delivery_type.dart';
 import 'package:openapi/src/model/definition_service_faq_response.dart';
 import 'package:openapi/src/model/definition_service_neighbor_request.dart';
 import 'package:openapi/src/model/definition_service_neighbor_response.dart';
+import 'package:openapi/src/model/definition_service_self_pickup_point.dart';
 import 'package:openapi/src/model/definition_service_update_agreement_request.dart';
 import 'package:openapi/src/model/order_service_campaign_response.dart';
 import 'package:openapi/src/model/order_service_get_order_list_response.dart';
@@ -123,8 +125,10 @@ import 'package:openapi/src/model/rest_result_of_list_of_customer_service_custom
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_agreement_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_cities_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_counties_response.dart';
+import 'package:openapi/src/model/rest_result_of_list_of_definition_service_delivery_type.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_faq_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_neighbor_response.dart';
+import 'package:openapi/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_product_service_r_product.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_get_order_list_response.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_order_response.dart';
@@ -192,9 +196,11 @@ part 'serializers.g.dart';
   DefinitionServiceCitiesResponse,
   DefinitionServiceCountiesRequest,
   DefinitionServiceCountiesResponse,
+  DefinitionServiceDeliveryType,
   DefinitionServiceFaqResponse,
   DefinitionServiceNeighborRequest,
   DefinitionServiceNeighborResponse,
+  DefinitionServiceSelfPickupPoint,
   DefinitionServiceUpdateAgreementRequest,
   OrderServiceCampaignResponse,
   OrderServiceGetOrderListResponse,
@@ -253,8 +259,10 @@ part 'serializers.g.dart';
   RestResultOfListOfDefinitionServiceAgreementResponse,
   RestResultOfListOfDefinitionServiceCitiesResponse,
   RestResultOfListOfDefinitionServiceCountiesResponse,
+  RestResultOfListOfDefinitionServiceDeliveryType,
   RestResultOfListOfDefinitionServiceFaqResponse,
   RestResultOfListOfDefinitionServiceNeighborResponse,
+  RestResultOfListOfDefinitionServiceSelfPickupPoint,
   RestResultOfListOfProductServiceRProduct,
   RestResultOfOrderServiceGetOrderListResponse,
   RestResultOfOrderServiceOrderResponse,

@@ -21,6 +21,10 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
   final String? orderNote;
   @override
   final String? paymentTypeCode;
+  @override
+  final int? deliveryTypeId;
+  @override
+  final int? channelId;
 
   factory _$OrderServiceOrderRequest(
           [void Function(OrderServiceOrderRequestBuilder)? updates]) =>
@@ -33,7 +37,9 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
       this.timeSlotId,
       this.paymentCode,
       this.orderNote,
-      this.paymentTypeCode})
+      this.paymentTypeCode,
+      this.deliveryTypeId,
+      this.channelId})
       : super._();
 
   @override
@@ -55,7 +61,9 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
         timeSlotId == other.timeSlotId &&
         paymentCode == other.paymentCode &&
         orderNote == other.orderNote &&
-        paymentTypeCode == other.paymentTypeCode;
+        paymentTypeCode == other.paymentTypeCode &&
+        deliveryTypeId == other.deliveryTypeId &&
+        channelId == other.channelId;
   }
 
   @override
@@ -65,13 +73,17 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc(0, deliveryAddressId.hashCode),
-                            billingAddressId.hashCode),
-                        timeStotId.hashCode),
-                    timeSlotId.hashCode),
-                paymentCode.hashCode),
-            orderNote.hashCode),
-        paymentTypeCode.hashCode));
+                        $jc(
+                            $jc(
+                                $jc($jc(0, deliveryAddressId.hashCode),
+                                    billingAddressId.hashCode),
+                                timeStotId.hashCode),
+                            timeSlotId.hashCode),
+                        paymentCode.hashCode),
+                    orderNote.hashCode),
+                paymentTypeCode.hashCode),
+            deliveryTypeId.hashCode),
+        channelId.hashCode));
   }
 
   @override
@@ -83,7 +95,9 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
           ..add('timeSlotId', timeSlotId)
           ..add('paymentCode', paymentCode)
           ..add('orderNote', orderNote)
-          ..add('paymentTypeCode', paymentTypeCode))
+          ..add('paymentTypeCode', paymentTypeCode)
+          ..add('deliveryTypeId', deliveryTypeId)
+          ..add('channelId', channelId))
         .toString();
   }
 }
@@ -124,6 +138,15 @@ class OrderServiceOrderRequestBuilder
   set paymentTypeCode(String? paymentTypeCode) =>
       _$this._paymentTypeCode = paymentTypeCode;
 
+  int? _deliveryTypeId;
+  int? get deliveryTypeId => _$this._deliveryTypeId;
+  set deliveryTypeId(int? deliveryTypeId) =>
+      _$this._deliveryTypeId = deliveryTypeId;
+
+  int? _channelId;
+  int? get channelId => _$this._channelId;
+  set channelId(int? channelId) => _$this._channelId = channelId;
+
   OrderServiceOrderRequestBuilder() {
     OrderServiceOrderRequest._defaults(this);
   }
@@ -138,6 +161,8 @@ class OrderServiceOrderRequestBuilder
       _paymentCode = $v.paymentCode;
       _orderNote = $v.orderNote;
       _paymentTypeCode = $v.paymentTypeCode;
+      _deliveryTypeId = $v.deliveryTypeId;
+      _channelId = $v.channelId;
       _$v = null;
     }
     return this;
@@ -164,7 +189,9 @@ class OrderServiceOrderRequestBuilder
             timeSlotId: timeSlotId,
             paymentCode: paymentCode,
             orderNote: orderNote,
-            paymentTypeCode: paymentTypeCode);
+            paymentTypeCode: paymentTypeCode,
+            deliveryTypeId: deliveryTypeId,
+            channelId: channelId);
     replace(_$result);
     return _$result;
   }
