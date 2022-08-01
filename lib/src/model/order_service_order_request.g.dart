@@ -22,7 +22,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
   @override
   final String? paymentTypeCode;
   @override
-  final int? deliveryTypeId;
+  final String? deliveryType;
   @override
   final int? channelId;
 
@@ -38,7 +38,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
       this.paymentCode,
       this.orderNote,
       this.paymentTypeCode,
-      this.deliveryTypeId,
+      this.deliveryType,
       this.channelId})
       : super._();
 
@@ -62,7 +62,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
         paymentCode == other.paymentCode &&
         orderNote == other.orderNote &&
         paymentTypeCode == other.paymentTypeCode &&
-        deliveryTypeId == other.deliveryTypeId &&
+        deliveryType == other.deliveryType &&
         channelId == other.channelId;
   }
 
@@ -82,7 +82,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
                         paymentCode.hashCode),
                     orderNote.hashCode),
                 paymentTypeCode.hashCode),
-            deliveryTypeId.hashCode),
+            deliveryType.hashCode),
         channelId.hashCode));
   }
 
@@ -96,7 +96,7 @@ class _$OrderServiceOrderRequest extends OrderServiceOrderRequest {
           ..add('paymentCode', paymentCode)
           ..add('orderNote', orderNote)
           ..add('paymentTypeCode', paymentTypeCode)
-          ..add('deliveryTypeId', deliveryTypeId)
+          ..add('deliveryType', deliveryType)
           ..add('channelId', channelId))
         .toString();
   }
@@ -138,10 +138,9 @@ class OrderServiceOrderRequestBuilder
   set paymentTypeCode(String? paymentTypeCode) =>
       _$this._paymentTypeCode = paymentTypeCode;
 
-  int? _deliveryTypeId;
-  int? get deliveryTypeId => _$this._deliveryTypeId;
-  set deliveryTypeId(int? deliveryTypeId) =>
-      _$this._deliveryTypeId = deliveryTypeId;
+  String? _deliveryType;
+  String? get deliveryType => _$this._deliveryType;
+  set deliveryType(String? deliveryType) => _$this._deliveryType = deliveryType;
 
   int? _channelId;
   int? get channelId => _$this._channelId;
@@ -161,7 +160,7 @@ class OrderServiceOrderRequestBuilder
       _paymentCode = $v.paymentCode;
       _orderNote = $v.orderNote;
       _paymentTypeCode = $v.paymentTypeCode;
-      _deliveryTypeId = $v.deliveryTypeId;
+      _deliveryType = $v.deliveryType;
       _channelId = $v.channelId;
       _$v = null;
     }
@@ -190,7 +189,7 @@ class OrderServiceOrderRequestBuilder
             paymentCode: paymentCode,
             orderNote: orderNote,
             paymentTypeCode: paymentTypeCode,
-            deliveryTypeId: deliveryTypeId,
+            deliveryType: deliveryType,
             channelId: channelId);
     replace(_$result);
     return _$result;

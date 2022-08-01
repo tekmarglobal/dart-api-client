@@ -126,7 +126,7 @@ Class | Method | HTTP request | Description
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionUpdateAgreementLogPost**](doc/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionUploadCountriesToFirebasePost**](doc/DefinitionApi.md#apidefinitionuploadcountriestofirebasepost) | **POST** /api/Definition/UploadCountriesToFirebase | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCategoriesImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyocategoriesimportfromapipost) | **POST** /api/Integration/MarketyoCategoriesImportFromApi | 
-[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCustomersImportPost**](doc/IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **POST** /api/Integration/MarketyoCustomersImport | 
+[*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoCustomersImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyocustomersimportfromapipost) | **POST** /api/Integration/MarketyoCustomersImportFromApi | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoProductCategoriesImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductcategoriesimportfromapipost) | **POST** /api/Integration/MarketyoProductCategoriesImportFromApi | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationMarketyoProductImportFromApiPost**](doc/IntegrationApi.md#apiintegrationmarketyoproductimportfromapipost) | **POST** /api/Integration/MarketyoProductImportFromApi | 
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationTestGet**](doc/IntegrationApi.md#apiintegrationtestget) | **GET** /api/Integration/test | 

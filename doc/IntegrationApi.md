@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiIntegrationMarketyoCategoriesImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyocategoriesimportfromapipost) | **POST** /api/Integration/MarketyoCategoriesImportFromApi | 
-[**apiIntegrationMarketyoCustomersImportPost**](IntegrationApi.md#apiintegrationmarketyocustomersimportpost) | **POST** /api/Integration/MarketyoCustomersImport | 
+[**apiIntegrationMarketyoCustomersImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyocustomersimportfromapipost) | **POST** /api/Integration/MarketyoCustomersImportFromApi | 
 [**apiIntegrationMarketyoProductCategoriesImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyoproductcategoriesimportfromapipost) | **POST** /api/Integration/MarketyoProductCategoriesImportFromApi | 
 [**apiIntegrationMarketyoProductImportFromApiPost**](IntegrationApi.md#apiintegrationmarketyoproductimportfromapipost) | **POST** /api/Integration/MarketyoProductImportFromApi | 
 [**apiIntegrationTestGet**](IntegrationApi.md#apiintegrationtestget) | **GET** /api/Integration/test | 
@@ -59,8 +59,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiIntegrationMarketyoCustomersImportPost**
-> String apiIntegrationMarketyoCustomersImportPost(importBannedUser, minimumOrderCount, minimumOrderAmount, customerJsonFile)
+# **apiIntegrationMarketyoCustomersImportFromApiPost**
+> String apiIntegrationMarketyoCustomersImportFromApiPost(importBannedUser, minimumOrderCount, minimumOrderAmount)
 
 
 
@@ -76,13 +76,12 @@ final api = Openapi().getIntegrationApi();
 final bool importBannedUser = true; // bool | 
 final int minimumOrderCount = 56; // int | 
 final double minimumOrderAmount = 1.2; // double | 
-final MultipartFile customerJsonFile = BINARY_DATA_HERE; // MultipartFile | 
 
 try {
-    final response = api.apiIntegrationMarketyoCustomersImportPost(importBannedUser, minimumOrderCount, minimumOrderAmount, customerJsonFile);
+    final response = api.apiIntegrationMarketyoCustomersImportFromApiPost(importBannedUser, minimumOrderCount, minimumOrderAmount);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling IntegrationApi->apiIntegrationMarketyoCustomersImportPost: $e\n');
+    print('Exception when calling IntegrationApi->apiIntegrationMarketyoCustomersImportFromApiPost: $e\n');
 }
 ```
 
@@ -93,7 +92,6 @@ Name | Type | Description  | Notes
  **importBannedUser** | **bool**|  | [optional] 
  **minimumOrderCount** | **int**|  | [optional] 
  **minimumOrderAmount** | **double**|  | [optional] 
- **customerJsonFile** | **MultipartFile**|  | [optional] 
 
 ### Return type
 
@@ -105,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

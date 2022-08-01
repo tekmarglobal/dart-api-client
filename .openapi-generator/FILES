@@ -303,7 +303,3 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/definition_service_delivery_type_test.dart
-test/definition_service_self_pickup_point_test.dart
-test/rest_result_of_list_of_definition_service_delivery_type_test.dart
-test/rest_result_of_list_of_definition_service_self_pickup_point_test.dart

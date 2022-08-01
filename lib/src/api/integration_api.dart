@@ -92,14 +92,13 @@ class IntegrationApi {
     );
   }
 
-  /// apiIntegrationMarketyoCustomersImportPost
+  /// apiIntegrationMarketyoCustomersImportFromApiPost
   /// 
   ///
   /// Parameters:
   /// * [importBannedUser] 
   /// * [minimumOrderCount] 
   /// * [minimumOrderAmount] 
-  /// * [customerJsonFile] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -109,11 +108,10 @@ class IntegrationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<String>> apiIntegrationMarketyoCustomersImportPost({ 
+  Future<Response<String>> apiIntegrationMarketyoCustomersImportFromApiPost({ 
     bool? importBannedUser,
     int? minimumOrderCount,
     double? minimumOrderAmount,
-    MultipartFile? customerJsonFile,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -121,7 +119,7 @@ class IntegrationApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/Integration/MarketyoCustomersImport';
+    final _path = r'/api/Integration/MarketyoCustomersImportFromApi';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -138,7 +136,6 @@ class IntegrationApi {
         ],
         ...?extra,
       },
-      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
@@ -148,28 +145,8 @@ class IntegrationApi {
       if (minimumOrderAmount != null) r'minimumOrderAmount': encodeQueryParameter(_serializers, minimumOrderAmount, const FullType(double)),
     };
 
-    dynamic _bodyData;
-
-    try {
-      _bodyData = FormData.fromMap(<String, dynamic>{
-        if (customerJsonFile != null) r'customerJsonFile': customerJsonFile,
-      });
-
-    } catch(error, stackTrace) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-          queryParameters: _queryParameters,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
     final _response = await _dio.request<Object>(
       _path,
-      data: _bodyData,
       options: _options,
       queryParameters: _queryParameters,
       cancelToken: cancelToken,

@@ -1832,13 +1832,10 @@
         }
       }
     },
-    "/api/Integration/MarketyoCustomersImport": {
+    "/api/Integration/MarketyoCustomersImportFromApi": {
       "post": {
         "tags": [
           "Integration"
-        ],
-        "consumes": [
-          "multipart/form-data"
         ],
         "produces": [
           "text/plain",
@@ -1862,11 +1859,6 @@
             "name": "minimumOrderAmount",
             "type": "number",
             "format": "double"
-          },
-          {
-            "in": "formData",
-            "name": "customerJsonFile",
-            "type": "file"
           }
         ],
         "responses": {
@@ -4710,9 +4702,8 @@
         "paymentTypeCode": {
           "type": "string"
         },
-        "deliveryTypeId": {
-          "format": "int32",
-          "type": "integer"
+        "deliveryType": {
+          "type": "string"
         },
         "channelId": {
           "format": "int32",
