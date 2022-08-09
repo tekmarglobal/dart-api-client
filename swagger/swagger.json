@@ -880,6 +880,62 @@
         }
       }
     },
+    "/api/Catalog/getNeighborhoodCatalog": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "neighborhood",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfCatalogServiceRCategory"
+            }
+          }
+        }
+      }
+    },
+    "/api/Catalog/getRegionCatalog": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "region",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfCatalogServiceRCategory"
+            }
+          }
+        }
+      }
+    },
     "/api/Catalog/allCategories": {
       "get": {
         "tags": [

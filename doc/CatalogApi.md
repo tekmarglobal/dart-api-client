@@ -13,6 +13,8 @@ Method | HTTP request | Description
 [**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apicatalogallcategoriesregionget) | **GET** /api/Catalog/allCategoriesRegion | 
 [**apiCatalogCreateCategoryPost**](CatalogApi.md#apicatalogcreatecategorypost) | **POST** /api/Catalog/createCategory | 
 [**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apicatalogdeletecategorydelete) | **DELETE** /api/Catalog/deleteCategory | 
+[**apiCatalogGetNeighborhoodCatalogGet**](CatalogApi.md#apicataloggetneighborhoodcatalogget) | **GET** /api/Catalog/getNeighborhoodCatalog | 
+[**apiCatalogGetRegionCatalogGet**](CatalogApi.md#apicataloggetregioncatalogget) | **GET** /api/Catalog/getRegionCatalog | 
 [**apiCatalogImportCategoriesFromOlimposPost**](CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **POST** /api/Catalog/ImportCategoriesFromOlimpos | 
 [**apiCatalogPost**](CatalogApi.md#apicatalogpost) | **POST** /api/Catalog | 
 [**apiCatalogUpdateCategoryPut**](CatalogApi.md#apicatalogupdatecategoryput) | **PUT** /api/Catalog/updateCategory | 
@@ -184,6 +186,96 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfCatalogServiceRCategory**](RestResultOfCatalogServiceRCategory.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCatalogGetNeighborhoodCatalogGet**
+> RestResultOfCatalogServiceRCategory apiCatalogGetNeighborhoodCatalogGet(neighborhood)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getCatalogApi();
+final int neighborhood = 56; // int | 
+
+try {
+    final response = api.apiCatalogGetNeighborhoodCatalogGet(neighborhood);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling CatalogApi->apiCatalogGetNeighborhoodCatalogGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **neighborhood** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfCatalogServiceRCategory**](RestResultOfCatalogServiceRCategory.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCatalogGetRegionCatalogGet**
+> RestResultOfCatalogServiceRCategory apiCatalogGetRegionCatalogGet(region)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getCatalogApi();
+final int region = 56; // int | 
+
+try {
+    final response = api.apiCatalogGetRegionCatalogGet(region);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling CatalogApi->apiCatalogGetRegionCatalogGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **int**|  | [optional] 
 
 ### Return type
 

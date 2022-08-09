@@ -99,6 +99,8 @@ Class | Method | HTTP request | Description
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogAllCategoriesRegionGet**](doc/CatalogApi.md#apicatalogallcategoriesregionget) | **GET** /api/Catalog/allCategoriesRegion | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogCreateCategoryPost**](doc/CatalogApi.md#apicatalogcreatecategorypost) | **POST** /api/Catalog/createCategory | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogDeleteCategoryDelete**](doc/CatalogApi.md#apicatalogdeletecategorydelete) | **DELETE** /api/Catalog/deleteCategory | 
+[*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogGetNeighborhoodCatalogGet**](doc/CatalogApi.md#apicataloggetneighborhoodcatalogget) | **GET** /api/Catalog/getNeighborhoodCatalog | 
+[*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogGetRegionCatalogGet**](doc/CatalogApi.md#apicataloggetregioncatalogget) | **GET** /api/Catalog/getRegionCatalog | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogImportCategoriesFromOlimposPost**](doc/CatalogApi.md#apicatalogimportcategoriesfromolimpospost) | **POST** /api/Catalog/ImportCategoriesFromOlimpos | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogPost**](doc/CatalogApi.md#apicatalogpost) | **POST** /api/Catalog | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogUpdateCategoryPut**](doc/CatalogApi.md#apicatalogupdatecategoryput) | **PUT** /api/Catalog/updateCategory | 
