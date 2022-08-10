@@ -11,9 +11,13 @@ part 'cart_service_create_cart_request.g.dart';
 ///
 /// Properties:
 /// * [neighborhoodId] 
+/// * [regionId] 
 abstract class CartServiceCreateCartRequest implements Built<CartServiceCreateCartRequest, CartServiceCreateCartRequestBuilder> {
     @BuiltValueField(wireName: r'neighborhoodId')
     int? get neighborhoodId;
+
+    @BuiltValueField(wireName: r'regionId')
+    int? get regionId;
 
     CartServiceCreateCartRequest._();
 
@@ -43,6 +47,12 @@ class _$CartServiceCreateCartRequestSerializer implements StructuredSerializer<C
                 ..add(serializers.serialize(object.neighborhoodId,
                     specifiedType: const FullType(int)));
         }
+        if (object.regionId != null) {
+            result
+                ..add(r'regionId')
+                ..add(serializers.serialize(object.regionId,
+                    specifiedType: const FullType(int)));
+        }
         return result;
     }
 
@@ -62,6 +72,11 @@ class _$CartServiceCreateCartRequestSerializer implements StructuredSerializer<C
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     result.neighborhoodId = valueDes;
+                    break;
+                case r'regionId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.regionId = valueDes;
                     break;
             }
         }

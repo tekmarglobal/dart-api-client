@@ -9,12 +9,15 @@ part of 'cart_service_create_cart_request.dart';
 class _$CartServiceCreateCartRequest extends CartServiceCreateCartRequest {
   @override
   final int? neighborhoodId;
+  @override
+  final int? regionId;
 
   factory _$CartServiceCreateCartRequest(
           [void Function(CartServiceCreateCartRequestBuilder)? updates]) =>
       (new CartServiceCreateCartRequestBuilder()..update(updates)).build();
 
-  _$CartServiceCreateCartRequest._({this.neighborhoodId}) : super._();
+  _$CartServiceCreateCartRequest._({this.neighborhoodId, this.regionId})
+      : super._();
 
   @override
   CartServiceCreateCartRequest rebuild(
@@ -29,18 +32,20 @@ class _$CartServiceCreateCartRequest extends CartServiceCreateCartRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is CartServiceCreateCartRequest &&
-        neighborhoodId == other.neighborhoodId;
+        neighborhoodId == other.neighborhoodId &&
+        regionId == other.regionId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, neighborhoodId.hashCode));
+    return $jf($jc($jc(0, neighborhoodId.hashCode), regionId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CartServiceCreateCartRequest')
-          ..add('neighborhoodId', neighborhoodId))
+          ..add('neighborhoodId', neighborhoodId)
+          ..add('regionId', regionId))
         .toString();
   }
 }
@@ -56,6 +61,10 @@ class CartServiceCreateCartRequestBuilder
   set neighborhoodId(int? neighborhoodId) =>
       _$this._neighborhoodId = neighborhoodId;
 
+  int? _regionId;
+  int? get regionId => _$this._regionId;
+  set regionId(int? regionId) => _$this._regionId = regionId;
+
   CartServiceCreateCartRequestBuilder() {
     CartServiceCreateCartRequest._defaults(this);
   }
@@ -64,6 +73,7 @@ class CartServiceCreateCartRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _neighborhoodId = $v.neighborhoodId;
+      _regionId = $v.regionId;
       _$v = null;
     }
     return this;
@@ -83,7 +93,8 @@ class CartServiceCreateCartRequestBuilder
   @override
   _$CartServiceCreateCartRequest build() {
     final _$result = _$v ??
-        new _$CartServiceCreateCartRequest._(neighborhoodId: neighborhoodId);
+        new _$CartServiceCreateCartRequest._(
+            neighborhoodId: neighborhoodId, regionId: regionId);
     replace(_$result);
     return _$result;
   }

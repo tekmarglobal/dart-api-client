@@ -11,6 +11,8 @@ class _$CartServiceUpdateCartRegionRequest
   @override
   final int? neighborhoodId;
   @override
+  final int? regionId;
+  @override
   final bool? isForce;
 
   factory _$CartServiceUpdateCartRegionRequest(
@@ -19,7 +21,8 @@ class _$CartServiceUpdateCartRegionRequest
       (new CartServiceUpdateCartRegionRequestBuilder()..update(updates))
           .build();
 
-  _$CartServiceUpdateCartRegionRequest._({this.neighborhoodId, this.isForce})
+  _$CartServiceUpdateCartRegionRequest._(
+      {this.neighborhoodId, this.regionId, this.isForce})
       : super._();
 
   @override
@@ -36,18 +39,21 @@ class _$CartServiceUpdateCartRegionRequest
     if (identical(other, this)) return true;
     return other is CartServiceUpdateCartRegionRequest &&
         neighborhoodId == other.neighborhoodId &&
+        regionId == other.regionId &&
         isForce == other.isForce;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, neighborhoodId.hashCode), isForce.hashCode));
+    return $jf($jc($jc($jc(0, neighborhoodId.hashCode), regionId.hashCode),
+        isForce.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CartServiceUpdateCartRegionRequest')
           ..add('neighborhoodId', neighborhoodId)
+          ..add('regionId', regionId)
           ..add('isForce', isForce))
         .toString();
   }
@@ -64,6 +70,10 @@ class CartServiceUpdateCartRegionRequestBuilder
   set neighborhoodId(int? neighborhoodId) =>
       _$this._neighborhoodId = neighborhoodId;
 
+  int? _regionId;
+  int? get regionId => _$this._regionId;
+  set regionId(int? regionId) => _$this._regionId = regionId;
+
   bool? _isForce;
   bool? get isForce => _$this._isForce;
   set isForce(bool? isForce) => _$this._isForce = isForce;
@@ -76,6 +86,7 @@ class CartServiceUpdateCartRegionRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _neighborhoodId = $v.neighborhoodId;
+      _regionId = $v.regionId;
       _isForce = $v.isForce;
       _$v = null;
     }
@@ -98,7 +109,9 @@ class CartServiceUpdateCartRegionRequestBuilder
   _$CartServiceUpdateCartRegionRequest build() {
     final _$result = _$v ??
         new _$CartServiceUpdateCartRegionRequest._(
-            neighborhoodId: neighborhoodId, isForce: isForce);
+            neighborhoodId: neighborhoodId,
+            regionId: regionId,
+            isForce: isForce);
     replace(_$result);
     return _$result;
   }

@@ -11,10 +11,14 @@ part 'cart_service_update_cart_region_request.g.dart';
 ///
 /// Properties:
 /// * [neighborhoodId] 
+/// * [regionId] 
 /// * [isForce] 
 abstract class CartServiceUpdateCartRegionRequest implements Built<CartServiceUpdateCartRegionRequest, CartServiceUpdateCartRegionRequestBuilder> {
     @BuiltValueField(wireName: r'neighborhoodId')
     int? get neighborhoodId;
+
+    @BuiltValueField(wireName: r'regionId')
+    int? get regionId;
 
     @BuiltValueField(wireName: r'isForce')
     bool? get isForce;
@@ -47,6 +51,12 @@ class _$CartServiceUpdateCartRegionRequestSerializer implements StructuredSerial
                 ..add(serializers.serialize(object.neighborhoodId,
                     specifiedType: const FullType(int)));
         }
+        if (object.regionId != null) {
+            result
+                ..add(r'regionId')
+                ..add(serializers.serialize(object.regionId,
+                    specifiedType: const FullType(int)));
+        }
         if (object.isForce != null) {
             result
                 ..add(r'isForce')
@@ -72,6 +82,11 @@ class _$CartServiceUpdateCartRegionRequestSerializer implements StructuredSerial
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     result.neighborhoodId = valueDes;
+                    break;
+                case r'regionId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.regionId = valueDes;
                     break;
                 case r'isForce':
                     final valueDes = serializers.deserialize(value,

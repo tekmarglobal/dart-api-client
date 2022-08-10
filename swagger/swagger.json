@@ -3372,6 +3372,10 @@
         "neighborhoodId": {
           "format": "int32",
           "type": "integer"
+        },
+        "regionId": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     },
@@ -3433,6 +3437,10 @@
       "type": "object",
       "properties": {
         "neighborhoodId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "regionId": {
           "format": "int32",
           "type": "integer"
         },
