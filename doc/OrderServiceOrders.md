@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **orderId** | **int** |  | [optional] 
 **orderDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **deliveryAddress** | **String** |  | [optional] 
+**deliveryTypeCode** | **String** |  | [optional] 
 **billingAddress** | **String** |  | [optional] 
 **productTotal** | **double** |  | [optional] 
 **orderTotal** | **double** |  | [optional] 

@@ -14,6 +14,8 @@ class _$OrderServiceOrders extends OrderServiceOrders {
   @override
   final String? deliveryAddress;
   @override
+  final String? deliveryTypeCode;
+  @override
   final String? billingAddress;
   @override
   final double? productTotal;
@@ -56,6 +58,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
       {this.orderId,
       this.orderDate,
       this.deliveryAddress,
+      this.deliveryTypeCode,
       this.billingAddress,
       this.productTotal,
       this.orderTotal,
@@ -91,6 +94,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
         orderId == other.orderId &&
         orderDate == other.orderDate &&
         deliveryAddress == other.deliveryAddress &&
+        deliveryTypeCode == other.deliveryTypeCode &&
         billingAddress == other.billingAddress &&
         productTotal == other.productTotal &&
         orderTotal == other.orderTotal &&
@@ -130,23 +134,13 @@ class _$OrderServiceOrders extends OrderServiceOrders {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                $jc(
-                                                                                    0,
-                                                                                    orderId
-                                                                                        .hashCode),
-                                                                                orderDate
-                                                                                    .hashCode),
-                                                                            deliveryAddress
-                                                                                .hashCode),
-                                                                        billingAddress
-                                                                            .hashCode),
-                                                                    productTotal
-                                                                        .hashCode),
-                                                                orderTotal
-                                                                    .hashCode),
-                                                            productDiscountsTotal
-                                                                .hashCode),
+                                                                            $jc($jc($jc(0, orderId.hashCode), orderDate.hashCode),
+                                                                                deliveryAddress.hashCode),
+                                                                            deliveryTypeCode.hashCode),
+                                                                        billingAddress.hashCode),
+                                                                    productTotal.hashCode),
+                                                                orderTotal.hashCode),
+                                                            productDiscountsTotal.hashCode),
                                                         bagAmount.hashCode),
                                                     bagTotal.hashCode),
                                                 orderNote.hashCode),
@@ -168,6 +162,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
           ..add('orderId', orderId)
           ..add('orderDate', orderDate)
           ..add('deliveryAddress', deliveryAddress)
+          ..add('deliveryTypeCode', deliveryTypeCode)
           ..add('billingAddress', billingAddress)
           ..add('productTotal', productTotal)
           ..add('orderTotal', orderTotal)
@@ -205,6 +200,11 @@ class OrderServiceOrdersBuilder
   String? get deliveryAddress => _$this._deliveryAddress;
   set deliveryAddress(String? deliveryAddress) =>
       _$this._deliveryAddress = deliveryAddress;
+
+  String? _deliveryTypeCode;
+  String? get deliveryTypeCode => _$this._deliveryTypeCode;
+  set deliveryTypeCode(String? deliveryTypeCode) =>
+      _$this._deliveryTypeCode = deliveryTypeCode;
 
   String? _billingAddress;
   String? get billingAddress => _$this._billingAddress;
@@ -289,6 +289,7 @@ class OrderServiceOrdersBuilder
       _orderId = $v.orderId;
       _orderDate = $v.orderDate;
       _deliveryAddress = $v.deliveryAddress;
+      _deliveryTypeCode = $v.deliveryTypeCode;
       _billingAddress = $v.billingAddress;
       _productTotal = $v.productTotal;
       _orderTotal = $v.orderTotal;
@@ -331,6 +332,7 @@ class OrderServiceOrdersBuilder
               orderId: orderId,
               orderDate: orderDate,
               deliveryAddress: deliveryAddress,
+              deliveryTypeCode: deliveryTypeCode,
               billingAddress: billingAddress,
               productTotal: productTotal,
               orderTotal: orderTotal,

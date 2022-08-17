@@ -47,6 +47,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
   final BuiltList<OrderServiceCampaignResponse>? appliedCampaigns;
   @override
   final double? campaignTotalDiscount;
+  @override
+  final String? deliveryTypeCode;
 
   factory _$OrderServiceOrderResponse(
           [void Function(OrderServiceOrderResponseBuilder)? updates]) =>
@@ -72,7 +74,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
       this.deliveryTimeEnd,
       this.region,
       this.appliedCampaigns,
-      this.campaignTotalDiscount})
+      this.campaignTotalDiscount,
+      this.deliveryTypeCode})
       : super._();
 
   @override
@@ -107,7 +110,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
         deliveryTimeEnd == other.deliveryTimeEnd &&
         region == other.region &&
         appliedCampaigns == other.appliedCampaigns &&
-        campaignTotalDiscount == other.campaignTotalDiscount;
+        campaignTotalDiscount == other.campaignTotalDiscount &&
+        deliveryTypeCode == other.deliveryTypeCode;
   }
 
   @override
@@ -130,36 +134,26 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc(
-                                                                                $jc(
-                                                                                    0,
-                                                                                    id
-                                                                                        .hashCode),
-                                                                                uuid
-                                                                                    .hashCode),
-                                                                            customer
-                                                                                .hashCode),
-                                                                        orderDate
-                                                                            .hashCode),
-                                                                    deliveryAddress
-                                                                        .hashCode),
-                                                                billingAdrress
-                                                                    .hashCode),
-                                                            productTotal
-                                                                .hashCode),
-                                                        orderTotal.hashCode),
-                                                    orderProducts.hashCode),
-                                                orderNote.hashCode),
-                                            paymentType.hashCode),
-                                        productDiscountsTotal.hashCode),
-                                    fee.hashCode),
-                                bagAmount.hashCode),
-                            bagTotal.hashCode),
-                        deliveryTimeStart.hashCode),
-                    deliveryTimeEnd.hashCode),
-                region.hashCode),
-            appliedCampaigns.hashCode),
-        campaignTotalDiscount.hashCode));
+                                                                            $jc($jc($jc(0, id.hashCode), uuid.hashCode),
+                                                                                customer.hashCode),
+                                                                            orderDate.hashCode),
+                                                                        deliveryAddress.hashCode),
+                                                                    billingAdrress.hashCode),
+                                                                productTotal.hashCode),
+                                                            orderTotal.hashCode),
+                                                        orderProducts.hashCode),
+                                                    orderNote.hashCode),
+                                                paymentType.hashCode),
+                                            productDiscountsTotal.hashCode),
+                                        fee.hashCode),
+                                    bagAmount.hashCode),
+                                bagTotal.hashCode),
+                            deliveryTimeStart.hashCode),
+                        deliveryTimeEnd.hashCode),
+                    region.hashCode),
+                appliedCampaigns.hashCode),
+            campaignTotalDiscount.hashCode),
+        deliveryTypeCode.hashCode));
   }
 
   @override
@@ -184,7 +178,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
           ..add('deliveryTimeEnd', deliveryTimeEnd)
           ..add('region', region)
           ..add('appliedCampaigns', appliedCampaigns)
-          ..add('campaignTotalDiscount', campaignTotalDiscount))
+          ..add('campaignTotalDiscount', campaignTotalDiscount)
+          ..add('deliveryTypeCode', deliveryTypeCode))
         .toString();
   }
 }
@@ -286,6 +281,11 @@ class OrderServiceOrderResponseBuilder
   set campaignTotalDiscount(double? campaignTotalDiscount) =>
       _$this._campaignTotalDiscount = campaignTotalDiscount;
 
+  String? _deliveryTypeCode;
+  String? get deliveryTypeCode => _$this._deliveryTypeCode;
+  set deliveryTypeCode(String? deliveryTypeCode) =>
+      _$this._deliveryTypeCode = deliveryTypeCode;
+
   OrderServiceOrderResponseBuilder() {
     OrderServiceOrderResponse._defaults(this);
   }
@@ -313,6 +313,7 @@ class OrderServiceOrderResponseBuilder
       _region = $v.region;
       _appliedCampaigns = $v.appliedCampaigns?.toBuilder();
       _campaignTotalDiscount = $v.campaignTotalDiscount;
+      _deliveryTypeCode = $v.deliveryTypeCode;
       _$v = null;
     }
     return this;
@@ -354,7 +355,8 @@ class OrderServiceOrderResponseBuilder
               deliveryTimeEnd: deliveryTimeEnd,
               region: region,
               appliedCampaigns: _appliedCampaigns?.build(),
-              campaignTotalDiscount: campaignTotalDiscount);
+              campaignTotalDiscount: campaignTotalDiscount,
+              deliveryTypeCode: deliveryTypeCode);
     } catch (_) {
       late String _$failedField;
       try {

@@ -33,6 +33,7 @@ part 'order_service_order_response.g.dart';
 /// * [region] 
 /// * [appliedCampaigns] 
 /// * [campaignTotalDiscount] 
+/// * [deliveryTypeCode] 
 abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderResponse, OrderServiceOrderResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     int? get id;
@@ -93,6 +94,9 @@ abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderRespo
 
     @BuiltValueField(wireName: r'campaignTotalDiscount')
     double? get campaignTotalDiscount;
+
+    @BuiltValueField(wireName: r'deliveryTypeCode')
+    String? get deliveryTypeCode;
 
     OrderServiceOrderResponse._();
 
@@ -236,6 +240,12 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                 ..add(serializers.serialize(object.campaignTotalDiscount,
                     specifiedType: const FullType(double)));
         }
+        if (object.deliveryTypeCode != null) {
+            result
+                ..add(r'deliveryTypeCode')
+                ..add(serializers.serialize(object.deliveryTypeCode,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -350,6 +360,11 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
                     result.campaignTotalDiscount = valueDes;
+                    break;
+                case r'deliveryTypeCode':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.deliveryTypeCode = valueDes;
                     break;
             }
         }

@@ -14,6 +14,7 @@ part 'order_service_orders.g.dart';
 /// * [orderId] 
 /// * [orderDate] 
 /// * [deliveryAddress] 
+/// * [deliveryTypeCode] 
 /// * [billingAddress] 
 /// * [productTotal] 
 /// * [orderTotal] 
@@ -40,6 +41,9 @@ abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServ
 
     @BuiltValueField(wireName: r'deliveryAddress')
     String? get deliveryAddress;
+
+    @BuiltValueField(wireName: r'deliveryTypeCode')
+    String? get deliveryTypeCode;
 
     @BuiltValueField(wireName: r'billingAddress')
     String? get billingAddress;
@@ -130,6 +134,12 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
             result
                 ..add(r'deliveryAddress')
                 ..add(serializers.serialize(object.deliveryAddress,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.deliveryTypeCode != null) {
+            result
+                ..add(r'deliveryTypeCode')
+                ..add(serializers.serialize(object.deliveryTypeCode,
                     specifiedType: const FullType(String)));
         }
         if (object.billingAddress != null) {
@@ -263,6 +273,11 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.deliveryAddress = valueDes;
+                    break;
+                case r'deliveryTypeCode':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.deliveryTypeCode = valueDes;
                     break;
                 case r'billingAddress':
                     final valueDes = serializers.deserialize(value,

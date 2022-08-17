@@ -4608,6 +4608,9 @@
         "campaignTotalDiscount": {
           "format": "double",
           "type": "number"
+        },
+        "deliveryTypeCode": {
+          "type": "string"
         }
       }
     },
@@ -4648,6 +4651,9 @@
           "type": "string"
         },
         "deliveryAddress": {
+          "type": "string"
+        },
+        "deliveryTypeCode": {
           "type": "string"
         },
         "billingAddress": {
