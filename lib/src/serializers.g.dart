@@ -135,6 +135,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RestResultOfProductServiceRecommendProductResponse.serializer)
       ..add(RestResultOfRegisterServiceLoginResponse.serializer)
       ..add(RestResultOfRegisterServiceSmsResponse.serializer)
+      ..add(RestResultOfSystemBoolean.serializer)
       ..add(RestResultOfSystemInt32.serializer)
       ..add(RestResultOfSystemObject.serializer)
       ..addBuilderFactory(
