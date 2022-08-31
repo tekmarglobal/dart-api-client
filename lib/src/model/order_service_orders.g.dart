@@ -48,6 +48,8 @@ class _$OrderServiceOrders extends OrderServiceOrders {
   @override
   final DateTime? editUntil;
   @override
+  final double? deliveryTypeDiscount;
+  @override
   final OrderServiceOrderStatus? status;
 
   factory _$OrderServiceOrders(
@@ -75,6 +77,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
       this.fee,
       this.region,
       this.editUntil,
+      this.deliveryTypeDiscount,
       this.status})
       : super._();
 
@@ -111,6 +114,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
         fee == other.fee &&
         region == other.region &&
         editUntil == other.editUntil &&
+        deliveryTypeDiscount == other.deliveryTypeDiscount &&
         status == other.status;
   }
 
@@ -134,25 +138,25 @@ class _$OrderServiceOrders extends OrderServiceOrders {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc(0, orderId.hashCode), orderDate.hashCode),
-                                                                                deliveryAddress.hashCode),
-                                                                            deliveryTypeCode.hashCode),
-                                                                        billingAddress.hashCode),
-                                                                    productTotal.hashCode),
-                                                                orderTotal.hashCode),
-                                                            productDiscountsTotal.hashCode),
-                                                        bagAmount.hashCode),
-                                                    bagTotal.hashCode),
-                                                orderNote.hashCode),
-                                            active.hashCode),
-                                        cityName.hashCode),
-                                    countyName.hashCode),
-                                paymentType.hashCode),
-                            deliveryTimeStart.hashCode),
-                        deliveryTimeEnd.hashCode),
-                    fee.hashCode),
-                region.hashCode),
-            editUntil.hashCode),
+                                                                            $jc($jc($jc($jc(0, orderId.hashCode), orderDate.hashCode), deliveryAddress.hashCode),
+                                                                                deliveryTypeCode.hashCode),
+                                                                            billingAddress.hashCode),
+                                                                        productTotal.hashCode),
+                                                                    orderTotal.hashCode),
+                                                                productDiscountsTotal.hashCode),
+                                                            bagAmount.hashCode),
+                                                        bagTotal.hashCode),
+                                                    orderNote.hashCode),
+                                                active.hashCode),
+                                            cityName.hashCode),
+                                        countyName.hashCode),
+                                    paymentType.hashCode),
+                                deliveryTimeStart.hashCode),
+                            deliveryTimeEnd.hashCode),
+                        fee.hashCode),
+                    region.hashCode),
+                editUntil.hashCode),
+            deliveryTypeDiscount.hashCode),
         status.hashCode));
   }
 
@@ -179,6 +183,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
           ..add('fee', fee)
           ..add('region', region)
           ..add('editUntil', editUntil)
+          ..add('deliveryTypeDiscount', deliveryTypeDiscount)
           ..add('status', status))
         .toString();
   }
@@ -274,6 +279,11 @@ class OrderServiceOrdersBuilder
   DateTime? get editUntil => _$this._editUntil;
   set editUntil(DateTime? editUntil) => _$this._editUntil = editUntil;
 
+  double? _deliveryTypeDiscount;
+  double? get deliveryTypeDiscount => _$this._deliveryTypeDiscount;
+  set deliveryTypeDiscount(double? deliveryTypeDiscount) =>
+      _$this._deliveryTypeDiscount = deliveryTypeDiscount;
+
   OrderServiceOrderStatusBuilder? _status;
   OrderServiceOrderStatusBuilder get status =>
       _$this._status ??= new OrderServiceOrderStatusBuilder();
@@ -306,6 +316,7 @@ class OrderServiceOrdersBuilder
       _fee = $v.fee;
       _region = $v.region;
       _editUntil = $v.editUntil;
+      _deliveryTypeDiscount = $v.deliveryTypeDiscount;
       _status = $v.status?.toBuilder();
       _$v = null;
     }
@@ -349,6 +360,7 @@ class OrderServiceOrdersBuilder
               fee: fee,
               region: region,
               editUntil: editUntil,
+              deliveryTypeDiscount: deliveryTypeDiscount,
               status: _status?.build());
     } catch (_) {
       late String _$failedField;

@@ -133,6 +133,26 @@
         }
       }
     },
+    "/api/Account/DeleteAccount": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
     "/api/Admin/GenerateTimeSlots": {
       "post": {
         "tags": [
@@ -848,6 +868,38 @@
         "responses": {
           "200": {
             "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Catalog/allCategoriesRegionProductsID": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "neighborhood",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "int32",
+                "type": "integer"
+              }
+            }
           }
         }
       }
@@ -4609,6 +4661,10 @@
           "format": "double",
           "type": "number"
         },
+        "deliveryTypeDiscount": {
+          "format": "double",
+          "type": "number"
+        },
         "deliveryTypeCode": {
           "type": "string"
         }
@@ -4713,6 +4769,10 @@
         "editUntil": {
           "format": "date-time",
           "type": "string"
+        },
+        "deliveryTypeDiscount": {
+          "format": "double",
+          "type": "number"
         },
         "status": {
           "$ref": "#/definitions/OrderServiceOrderStatus"

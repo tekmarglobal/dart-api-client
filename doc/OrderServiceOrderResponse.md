@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **region** | **int** |  | [optional] 
 **appliedCampaigns** | [**BuiltList&lt;OrderServiceCampaignResponse&gt;**](OrderServiceCampaignResponse.md) |  | [optional] 
 **campaignTotalDiscount** | **double** |  | [optional] 
+**deliveryTypeDiscount** | **double** |  | [optional] 
 **deliveryTypeCode** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

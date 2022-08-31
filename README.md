@@ -65,6 +65,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountCheckversionPost**](doc/AccountApi.md#apiaccountcheckversionpost) | **POST** /api/Account/checkversion | 
+[*AccountApi*](doc/AccountApi.md) | [**apiAccountDeleteAccountGet**](doc/AccountApi.md#apiaccountdeleteaccountget) | **GET** /api/Account/DeleteAccount | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountFirebaseTokenGet**](doc/AccountApi.md#apiaccountfirebasetokenget) | **GET** /api/Account/FirebaseToken | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountLoginPost**](doc/AccountApi.md#apiaccountloginpost) | **POST** /api/Account/login | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountLogoutGet**](doc/AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
@@ -97,6 +98,7 @@ Class | Method | HTTP request | Description
 [*CartApi*](doc/CartApi.md) | [**apiCartUpdateTimeslotPost**](doc/CartApi.md#apicartupdatetimeslotpost) | **POST** /api/Cart/UpdateTimeslot | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogAllCategoriesGet**](doc/CatalogApi.md#apicatalogallcategoriesget) | **GET** /api/Catalog/allCategories | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogAllCategoriesRegionGet**](doc/CatalogApi.md#apicatalogallcategoriesregionget) | **GET** /api/Catalog/allCategoriesRegion | 
+[*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogAllCategoriesRegionProductsIDGet**](doc/CatalogApi.md#apicatalogallcategoriesregionproductsidget) | **GET** /api/Catalog/allCategoriesRegionProductsID | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogCreateCategoryPost**](doc/CatalogApi.md#apicatalogcreatecategorypost) | **POST** /api/Catalog/createCategory | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogDeleteCategoryDelete**](doc/CatalogApi.md#apicatalogdeletecategorydelete) | **DELETE** /api/Catalog/deleteCategory | 
 [*CatalogApi*](doc/CatalogApi.md) | [**apiCatalogGetNeighborhoodCatalogGet**](doc/CatalogApi.md#apicataloggetneighborhoodcatalogget) | **GET** /api/Catalog/getNeighborhoodCatalog | 

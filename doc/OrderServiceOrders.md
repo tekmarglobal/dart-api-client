@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **fee** | **double** |  | [optional] 
 **region** | **int** |  | [optional] 
 **editUntil** | [**DateTime**](DateTime.md) |  | [optional] 
+**deliveryTypeDiscount** | **double** |  | [optional] 
 **status** | [**OrderServiceOrderStatus**](OrderServiceOrderStatus.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

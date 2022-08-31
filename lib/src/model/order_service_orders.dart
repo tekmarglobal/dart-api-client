@@ -31,6 +31,7 @@ part 'order_service_orders.g.dart';
 /// * [fee] 
 /// * [region] 
 /// * [editUntil] 
+/// * [deliveryTypeDiscount] 
 /// * [status] 
 abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServiceOrdersBuilder> {
     @BuiltValueField(wireName: r'orderId')
@@ -92,6 +93,9 @@ abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServ
 
     @BuiltValueField(wireName: r'editUntil')
     DateTime? get editUntil;
+
+    @BuiltValueField(wireName: r'deliveryTypeDiscount')
+    double? get deliveryTypeDiscount;
 
     @BuiltValueField(wireName: r'status')
     OrderServiceOrderStatus? get status;
@@ -238,6 +242,12 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                 ..add(serializers.serialize(object.editUntil,
                     specifiedType: const FullType(DateTime)));
         }
+        if (object.deliveryTypeDiscount != null) {
+            result
+                ..add(r'deliveryTypeDiscount')
+                ..add(serializers.serialize(object.deliveryTypeDiscount,
+                    specifiedType: const FullType(double)));
+        }
         if (object.status != null) {
             result
                 ..add(r'status')
@@ -358,6 +368,11 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
                     result.editUntil = valueDes;
+                    break;
+                case r'deliveryTypeDiscount':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    result.deliveryTypeDiscount = valueDes;
                     break;
                 case r'status':
                     final valueDes = serializers.deserialize(value,

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiCatalogAllCategoriesGet**](CatalogApi.md#apicatalogallcategoriesget) | **GET** /api/Catalog/allCategories | 
 [**apiCatalogAllCategoriesRegionGet**](CatalogApi.md#apicatalogallcategoriesregionget) | **GET** /api/Catalog/allCategoriesRegion | 
+[**apiCatalogAllCategoriesRegionProductsIDGet**](CatalogApi.md#apicatalogallcategoriesregionproductsidget) | **GET** /api/Catalog/allCategoriesRegionProductsID | 
 [**apiCatalogCreateCategoryPost**](CatalogApi.md#apicatalogcreatecategorypost) | **POST** /api/Catalog/createCategory | 
 [**apiCatalogDeleteCategoryDelete**](CatalogApi.md#apicatalogdeletecategorydelete) | **DELETE** /api/Catalog/deleteCategory | 
 [**apiCatalogGetNeighborhoodCatalogGet**](CatalogApi.md#apicataloggetneighborhoodcatalogget) | **GET** /api/Catalog/getNeighborhoodCatalog | 
@@ -94,6 +95,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestResultOfCatalogServiceRCategory**](RestResultOfCatalogServiceRCategory.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiCatalogAllCategoriesRegionProductsIDGet**
+> BuiltList<int> apiCatalogAllCategoriesRegionProductsIDGet(neighborhood)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getCatalogApi();
+final int neighborhood = 56; // int | 
+
+try {
+    final response = api.apiCatalogAllCategoriesRegionProductsIDGet(neighborhood);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling CatalogApi->apiCatalogAllCategoriesRegionProductsIDGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **neighborhood** | **int**|  | [optional] 
+
+### Return type
+
+**BuiltList&lt;int&gt;**
 
 ### Authorization
 

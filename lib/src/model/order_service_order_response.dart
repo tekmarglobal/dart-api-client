@@ -33,6 +33,7 @@ part 'order_service_order_response.g.dart';
 /// * [region] 
 /// * [appliedCampaigns] 
 /// * [campaignTotalDiscount] 
+/// * [deliveryTypeDiscount] 
 /// * [deliveryTypeCode] 
 abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderResponse, OrderServiceOrderResponseBuilder> {
     @BuiltValueField(wireName: r'id')
@@ -94,6 +95,9 @@ abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderRespo
 
     @BuiltValueField(wireName: r'campaignTotalDiscount')
     double? get campaignTotalDiscount;
+
+    @BuiltValueField(wireName: r'deliveryTypeDiscount')
+    double? get deliveryTypeDiscount;
 
     @BuiltValueField(wireName: r'deliveryTypeCode')
     String? get deliveryTypeCode;
@@ -240,6 +244,12 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                 ..add(serializers.serialize(object.campaignTotalDiscount,
                     specifiedType: const FullType(double)));
         }
+        if (object.deliveryTypeDiscount != null) {
+            result
+                ..add(r'deliveryTypeDiscount')
+                ..add(serializers.serialize(object.deliveryTypeDiscount,
+                    specifiedType: const FullType(double)));
+        }
         if (object.deliveryTypeCode != null) {
             result
                 ..add(r'deliveryTypeCode')
@@ -360,6 +370,11 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
                     result.campaignTotalDiscount = valueDes;
+                    break;
+                case r'deliveryTypeDiscount':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    result.deliveryTypeDiscount = valueDes;
                     break;
                 case r'deliveryTypeCode':
                     final valueDes = serializers.deserialize(value,

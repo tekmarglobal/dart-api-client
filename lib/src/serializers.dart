@@ -278,6 +278,10 @@ part 'serializers.g.dart';
   RestResultOfSystemObject,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(int)]),
+        () => ListBuilder<int>(),
+      )
       ..add(const DateSerializer())
       ..add(Iso8601DateTimeSerializer()))
     .build();
