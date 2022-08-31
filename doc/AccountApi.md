@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiAccountCheckversionPost**](AccountApi.md#apiaccountcheckversionpost) | **POST** /api/Account/checkversion | 
-[**apiAccountDeleteAccountGet**](AccountApi.md#apiaccountdeleteaccountget) | **GET** /api/Account/DeleteAccount | 
+[**apiAccountDeleteAccountDelete**](AccountApi.md#apiaccountdeleteaccountdelete) | **DELETE** /api/Account/DeleteAccount | 
 [**apiAccountFirebaseTokenGet**](AccountApi.md#apiaccountfirebasetokenget) | **GET** /api/Account/FirebaseToken | 
 [**apiAccountLoginPost**](AccountApi.md#apiaccountloginpost) | **POST** /api/Account/login | 
 [**apiAccountLogoutGet**](AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
@@ -62,8 +62,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **apiAccountDeleteAccountGet**
-> bool apiAccountDeleteAccountGet()
+# **apiAccountDeleteAccountDelete**
+> RestResultOfSystemBoolean apiAccountDeleteAccountDelete()
 
 
 
@@ -78,10 +78,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getAccountApi();
 
 try {
-    final response = api.apiAccountDeleteAccountGet();
+    final response = api.apiAccountDeleteAccountDelete();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling AccountApi->apiAccountDeleteAccountGet: $e\n');
+    print('Exception when calling AccountApi->apiAccountDeleteAccountDelete: $e\n');
 }
 ```
 
@@ -90,7 +90,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**bool**
+[**RestResultOfSystemBoolean**](RestResultOfSystemBoolean.md)
 
 ### Authorization
 

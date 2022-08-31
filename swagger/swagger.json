@@ -134,7 +134,7 @@
       }
     },
     "/api/Account/DeleteAccount": {
-      "get": {
+      "delete": {
         "tags": [
           "Account"
         ],
@@ -147,7 +147,7 @@
           "200": {
             "description": "Success",
             "schema": {
-              "type": "boolean"
+              "$ref": "#/definitions/RestResultOfSystemBoolean"
             }
           }
         }
@@ -2812,6 +2812,20 @@
         },
         "data": {
           "type": "object"
+        }
+      }
+    },
+    "RestResultOfSystemBoolean": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "boolean"
         }
       }
     },

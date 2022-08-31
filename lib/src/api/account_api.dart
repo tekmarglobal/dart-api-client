@@ -11,6 +11,7 @@ import 'package:openapi/src/model/account_service_check_version_request.dart';
 import 'package:openapi/src/model/account_service_login_request.dart';
 import 'package:openapi/src/model/rest_result_of_account_service_check_version_response.dart';
 import 'package:openapi/src/model/rest_result_of_account_service_login_response.dart';
+import 'package:openapi/src/model/rest_result_of_system_boolean.dart';
 import 'package:openapi/src/model/rest_result_of_system_object.dart';
 
 class AccountApi {
@@ -121,7 +122,7 @@ class AccountApi {
     );
   }
 
-  /// apiAccountDeleteAccountGet
+  /// apiAccountDeleteAccountDelete
   /// 
   ///
   /// Parameters:
@@ -132,9 +133,9 @@ class AccountApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [bool] as data
+  /// Returns a [Future] containing a [Response] with a [RestResultOfSystemBoolean] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<bool>> apiAccountDeleteAccountGet({ 
+  Future<Response<RestResultOfSystemBoolean>> apiAccountDeleteAccountDelete({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -144,7 +145,7 @@ class AccountApi {
   }) async {
     final _path = r'/api/Account/DeleteAccount';
     final _options = Options(
-      method: r'GET',
+      method: r'DELETE',
       headers: <String, dynamic>{
         ...?headers,
       },
@@ -170,10 +171,14 @@ class AccountApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    bool _responseData;
+    RestResultOfSystemBoolean _responseData;
 
     try {
-      _responseData = _response.data as bool;
+      const _responseType = FullType(RestResultOfSystemBoolean);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfSystemBoolean;
 
     } catch (error, stackTrace) {
       throw DioError(
@@ -184,7 +189,7 @@ class AccountApi {
       )..stackTrace = stackTrace;
     }
 
-    return Response<bool>(
+    return Response<RestResultOfSystemBoolean>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -140,6 +140,7 @@ import 'package:openapi/src/model/rest_result_of_product_service_r_product.dart'
 import 'package:openapi/src/model/rest_result_of_product_service_recommend_product_response.dart';
 import 'package:openapi/src/model/rest_result_of_register_service_login_response.dart';
 import 'package:openapi/src/model/rest_result_of_register_service_sms_response.dart';
+import 'package:openapi/src/model/rest_result_of_system_boolean.dart';
 import 'package:openapi/src/model/rest_result_of_system_int32.dart';
 import 'package:openapi/src/model/rest_result_of_system_object.dart';
 
@@ -274,6 +275,7 @@ part 'serializers.g.dart';
   RestResultOfProductServiceRecommendProductResponse,
   RestResultOfRegisterServiceLoginResponse,
   RestResultOfRegisterServiceSmsResponse,
+  RestResultOfSystemBoolean,
   RestResultOfSystemInt32,
   RestResultOfSystemObject,
 ])

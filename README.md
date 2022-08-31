@@ -65,7 +65,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountCheckversionPost**](doc/AccountApi.md#apiaccountcheckversionpost) | **POST** /api/Account/checkversion | 
-[*AccountApi*](doc/AccountApi.md) | [**apiAccountDeleteAccountGet**](doc/AccountApi.md#apiaccountdeleteaccountget) | **GET** /api/Account/DeleteAccount | 
+[*AccountApi*](doc/AccountApi.md) | [**apiAccountDeleteAccountDelete**](doc/AccountApi.md#apiaccountdeleteaccountdelete) | **DELETE** /api/Account/DeleteAccount | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountFirebaseTokenGet**](doc/AccountApi.md#apiaccountfirebasetokenget) | **GET** /api/Account/FirebaseToken | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountLoginPost**](doc/AccountApi.md#apiaccountloginpost) | **POST** /api/Account/login | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountLogoutGet**](doc/AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
@@ -292,6 +292,7 @@ Class | Method | HTTP request | Description
  - [RestResultOfProductServiceRecommendProductResponse](doc/RestResultOfProductServiceRecommendProductResponse.md)
  - [RestResultOfRegisterServiceLoginResponse](doc/RestResultOfRegisterServiceLoginResponse.md)
  - [RestResultOfRegisterServiceSmsResponse](doc/RestResultOfRegisterServiceSmsResponse.md)
+ - [RestResultOfSystemBoolean](doc/RestResultOfSystemBoolean.md)
  - [RestResultOfSystemInt32](doc/RestResultOfSystemInt32.md)
  - [RestResultOfSystemObject](doc/RestResultOfSystemObject.md)
 

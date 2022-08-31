@@ -144,6 +144,7 @@ doc/RestResultOfProductServiceRProduct.md
 doc/RestResultOfProductServiceRecommendProductResponse.md
 doc/RestResultOfRegisterServiceLoginResponse.md
 doc/RestResultOfRegisterServiceSmsResponse.md
+doc/RestResultOfSystemBoolean.md
 doc/RestResultOfSystemInt32.md
 doc/RestResultOfSystemObject.md
 lib/openapi.dart
@@ -299,6 +300,7 @@ lib/src/model/rest_result_of_product_service_r_product.dart
 lib/src/model/rest_result_of_product_service_recommend_product_response.dart
 lib/src/model/rest_result_of_register_service_login_response.dart
 lib/src/model/rest_result_of_register_service_sms_response.dart
+lib/src/model/rest_result_of_system_boolean.dart
 lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart

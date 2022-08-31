@@ -153,5 +153,6 @@ export 'package:openapi/src/model/rest_result_of_product_service_r_product.dart'
 export 'package:openapi/src/model/rest_result_of_product_service_recommend_product_response.dart';
 export 'package:openapi/src/model/rest_result_of_register_service_login_response.dart';
 export 'package:openapi/src/model/rest_result_of_register_service_sms_response.dart';
+export 'package:openapi/src/model/rest_result_of_system_boolean.dart';
 export 'package:openapi/src/model/rest_result_of_system_int32.dart';
 export 'package:openapi/src/model/rest_result_of_system_object.dart';
