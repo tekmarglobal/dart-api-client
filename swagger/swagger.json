@@ -1796,6 +1796,14 @@
           "application/json",
           "text/json"
         ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "getAcceptedAgreement",
+            "type": "boolean",
+            "default": false
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -2191,6 +2199,40 @@
             "description": "Success",
             "schema": {
               "$ref": "#/definitions/RestResultOfOrderServiceOrderResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/Checkout": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/OrderServiceCheckoutRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfListOfOrderServiceCheckoutItem"
             }
           }
         }
@@ -4877,6 +4919,47 @@
         },
         "paymentCode": {
           "type": "string"
+        }
+      }
+    },
+    "OrderServiceCheckoutRequest": {
+      "type": "object",
+      "properties": {
+        "deliveryTypeCode": {
+          "type": "string"
+        },
+        "timeSlotId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "OrderServiceCheckoutItem": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "amount": {
+          "format": "double",
+          "type": "number"
+        }
+      }
+    },
+    "RestResultOfListOfOrderServiceCheckoutItem": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrderServiceCheckoutItem"
+          }
         }
       }
     },

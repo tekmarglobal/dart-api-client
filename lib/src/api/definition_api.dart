@@ -33,6 +33,7 @@ class DefinitionApi {
   /// 
   ///
   /// Parameters:
+  /// * [getAcceptedAgreement] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -43,6 +44,7 @@ class DefinitionApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceAgreementResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfDefinitionServiceAgreementResponse>> apiDefinitionAgreementGet({ 
+    bool? getAcceptedAgreement = false,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -70,9 +72,14 @@ class DefinitionApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (getAcceptedAgreement != null) r'getAcceptedAgreement': encodeQueryParameter(_serializers, getAcceptedAgreement, const FullType(bool)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

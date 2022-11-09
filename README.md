@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationCreateregionpriceGet**](doc/MigrationApi.md#apimigrationcreateregionpriceget) | **GET** /api/Migration/createregionprice | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationUpdateCitiesFromRestGet**](doc/MigrationApi.md#apimigrationupdatecitiesfromrestget) | **GET** /api/Migration/UpdateCitiesFromRest | 
+[*OrderApi*](doc/OrderApi.md) | [**apiOrderCheckoutPost**](doc/OrderApi.md#apiordercheckoutpost) | **POST** /api/Order/Checkout | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCreateOrderPost**](doc/OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderGetOrderListPost**](doc/OrderApi.md#apiordergetorderlistpost) | **POST** /api/Order/GetOrderList | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderGetOrderPost**](doc/OrderApi.md#apiordergetorderpost) | **POST** /api/Order/GetOrder | 
@@ -221,6 +222,8 @@ Class | Method | HTTP request | Description
  - [DefinitionServiceSelfPickupPoint](doc/DefinitionServiceSelfPickupPoint.md)
  - [DefinitionServiceUpdateAgreementRequest](doc/DefinitionServiceUpdateAgreementRequest.md)
  - [OrderServiceCampaignResponse](doc/OrderServiceCampaignResponse.md)
+ - [OrderServiceCheckoutItem](doc/OrderServiceCheckoutItem.md)
+ - [OrderServiceCheckoutRequest](doc/OrderServiceCheckoutRequest.md)
  - [OrderServiceGetOrderListResponse](doc/OrderServiceGetOrderListResponse.md)
  - [OrderServiceGetOrderRequest](doc/OrderServiceGetOrderRequest.md)
  - [OrderServiceOrderRequest](doc/OrderServiceOrderRequest.md)
@@ -281,6 +284,7 @@ Class | Method | HTTP request | Description
  - [RestResultOfListOfDefinitionServiceFaqResponse](doc/RestResultOfListOfDefinitionServiceFaqResponse.md)
  - [RestResultOfListOfDefinitionServiceNeighborResponse](doc/RestResultOfListOfDefinitionServiceNeighborResponse.md)
  - [RestResultOfListOfDefinitionServiceSelfPickupPoint](doc/RestResultOfListOfDefinitionServiceSelfPickupPoint.md)
+ - [RestResultOfListOfOrderServiceCheckoutItem](doc/RestResultOfListOfOrderServiceCheckoutItem.md)
  - [RestResultOfListOfProductServiceRProduct](doc/RestResultOfListOfProductServiceRProduct.md)
  - [RestResultOfOrderServiceGetOrderListResponse](doc/RestResultOfOrderServiceGetOrderListResponse.md)
  - [RestResultOfOrderServiceOrderResponse](doc/RestResultOfOrderServiceOrderResponse.md)

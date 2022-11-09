@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 
 # **apiDefinitionAgreementGet**
-> RestResultOfListOfDefinitionServiceAgreementResponse apiDefinitionAgreementGet()
+> RestResultOfListOfDefinitionServiceAgreementResponse apiDefinitionAgreementGet(getAcceptedAgreement)
 
 
 
@@ -37,9 +37,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getDefinitionApi();
+final bool getAcceptedAgreement = true; // bool | 
 
 try {
-    final response = api.apiDefinitionAgreementGet();
+    final response = api.apiDefinitionAgreementGet(getAcceptedAgreement);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionAgreementGet: $e\n');
@@ -47,7 +48,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getAcceptedAgreement** | **bool**|  | [optional] [default to false]
 
 ### Return type
 

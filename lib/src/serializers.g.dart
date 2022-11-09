@@ -64,6 +64,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DefinitionServiceSelfPickupPoint.serializer)
       ..add(DefinitionServiceUpdateAgreementRequest.serializer)
       ..add(OrderServiceCampaignResponse.serializer)
+      ..add(OrderServiceCheckoutItem.serializer)
+      ..add(OrderServiceCheckoutRequest.serializer)
       ..add(OrderServiceGetOrderListResponse.serializer)
       ..add(OrderServiceGetOrderRequest.serializer)
       ..add(OrderServiceOrderRequest.serializer)
@@ -124,6 +126,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RestResultOfListOfDefinitionServiceFaqResponse.serializer)
       ..add(RestResultOfListOfDefinitionServiceNeighborResponse.serializer)
       ..add(RestResultOfListOfDefinitionServiceSelfPickupPoint.serializer)
+      ..add(RestResultOfListOfOrderServiceCheckoutItem.serializer)
       ..add(RestResultOfListOfProductServiceRProduct.serializer)
       ..add(RestResultOfOrderServiceGetOrderListResponse.serializer)
       ..add(RestResultOfOrderServiceOrderResponse.serializer)
@@ -254,6 +257,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(DefinitionServiceSelfPickupPoint)]),
           () => new ListBuilder<DefinitionServiceSelfPickupPoint>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(OrderServiceCheckoutItem)]),
+          () => new ListBuilder<OrderServiceCheckoutItem>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(OrderServiceOrders)]),
           () => new ListBuilder<OrderServiceOrders>())
