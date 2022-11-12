@@ -360,3 +360,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.idea/.idea.Kiler.Dotnet.ApiClient/.idea/workspace.xml
+.idea/.idea.Kiler.Dotnet.ApiClient/.idea/vcs.xml
+.idea/.idea.Kiler.Dotnet.ApiClient/.idea/indexLayout.xml
+.idea/.idea.Kiler.Dotnet.ApiClient/.idea/.name
