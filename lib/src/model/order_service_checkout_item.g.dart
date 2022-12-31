@@ -11,12 +11,15 @@ class _$OrderServiceCheckoutItem extends OrderServiceCheckoutItem {
   final String? type;
   @override
   final double? amount;
+  @override
+  final bool? isDiscount;
 
   factory _$OrderServiceCheckoutItem(
           [void Function(OrderServiceCheckoutItemBuilder)? updates]) =>
       (new OrderServiceCheckoutItemBuilder()..update(updates)).build();
 
-  _$OrderServiceCheckoutItem._({this.type, this.amount}) : super._();
+  _$OrderServiceCheckoutItem._({this.type, this.amount, this.isDiscount})
+      : super._();
 
   @override
   OrderServiceCheckoutItem rebuild(
@@ -32,19 +35,22 @@ class _$OrderServiceCheckoutItem extends OrderServiceCheckoutItem {
     if (identical(other, this)) return true;
     return other is OrderServiceCheckoutItem &&
         type == other.type &&
-        amount == other.amount;
+        amount == other.amount &&
+        isDiscount == other.isDiscount;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, type.hashCode), amount.hashCode));
+    return $jf(
+        $jc($jc($jc(0, type.hashCode), amount.hashCode), isDiscount.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('OrderServiceCheckoutItem')
           ..add('type', type)
-          ..add('amount', amount))
+          ..add('amount', amount)
+          ..add('isDiscount', isDiscount))
         .toString();
   }
 }
@@ -62,6 +68,10 @@ class OrderServiceCheckoutItemBuilder
   double? get amount => _$this._amount;
   set amount(double? amount) => _$this._amount = amount;
 
+  bool? _isDiscount;
+  bool? get isDiscount => _$this._isDiscount;
+  set isDiscount(bool? isDiscount) => _$this._isDiscount = isDiscount;
+
   OrderServiceCheckoutItemBuilder() {
     OrderServiceCheckoutItem._defaults(this);
   }
@@ -71,6 +81,7 @@ class OrderServiceCheckoutItemBuilder
     if ($v != null) {
       _type = $v.type;
       _amount = $v.amount;
+      _isDiscount = $v.isDiscount;
       _$v = null;
     }
     return this;
@@ -89,8 +100,9 @@ class OrderServiceCheckoutItemBuilder
 
   @override
   _$OrderServiceCheckoutItem build() {
-    final _$result =
-        _$v ?? new _$OrderServiceCheckoutItem._(type: type, amount: amount);
+    final _$result = _$v ??
+        new _$OrderServiceCheckoutItem._(
+            type: type, amount: amount, isDiscount: isDiscount);
     replace(_$result);
     return _$result;
   }

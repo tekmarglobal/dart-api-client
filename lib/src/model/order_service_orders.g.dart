@@ -16,6 +16,8 @@ class _$OrderServiceOrders extends OrderServiceOrders {
   @override
   final String? deliveryTypeCode;
   @override
+  final OrderServiceDepotDetail? depot;
+  @override
   final String? billingAddress;
   @override
   final double? productTotal;
@@ -61,6 +63,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
       this.orderDate,
       this.deliveryAddress,
       this.deliveryTypeCode,
+      this.depot,
       this.billingAddress,
       this.productTotal,
       this.orderTotal,
@@ -98,6 +101,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
         orderDate == other.orderDate &&
         deliveryAddress == other.deliveryAddress &&
         deliveryTypeCode == other.deliveryTypeCode &&
+        depot == other.depot &&
         billingAddress == other.billingAddress &&
         productTotal == other.productTotal &&
         orderTotal == other.orderTotal &&
@@ -138,8 +142,8 @@ class _$OrderServiceOrders extends OrderServiceOrders {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc(0, orderId.hashCode), orderDate.hashCode), deliveryAddress.hashCode),
-                                                                                deliveryTypeCode.hashCode),
+                                                                            $jc($jc($jc($jc($jc(0, orderId.hashCode), orderDate.hashCode), deliveryAddress.hashCode), deliveryTypeCode.hashCode),
+                                                                                depot.hashCode),
                                                                             billingAddress.hashCode),
                                                                         productTotal.hashCode),
                                                                     orderTotal.hashCode),
@@ -167,6 +171,7 @@ class _$OrderServiceOrders extends OrderServiceOrders {
           ..add('orderDate', orderDate)
           ..add('deliveryAddress', deliveryAddress)
           ..add('deliveryTypeCode', deliveryTypeCode)
+          ..add('depot', depot)
           ..add('billingAddress', billingAddress)
           ..add('productTotal', productTotal)
           ..add('orderTotal', orderTotal)
@@ -210,6 +215,11 @@ class OrderServiceOrdersBuilder
   String? get deliveryTypeCode => _$this._deliveryTypeCode;
   set deliveryTypeCode(String? deliveryTypeCode) =>
       _$this._deliveryTypeCode = deliveryTypeCode;
+
+  OrderServiceDepotDetailBuilder? _depot;
+  OrderServiceDepotDetailBuilder get depot =>
+      _$this._depot ??= new OrderServiceDepotDetailBuilder();
+  set depot(OrderServiceDepotDetailBuilder? depot) => _$this._depot = depot;
 
   String? _billingAddress;
   String? get billingAddress => _$this._billingAddress;
@@ -300,6 +310,7 @@ class OrderServiceOrdersBuilder
       _orderDate = $v.orderDate;
       _deliveryAddress = $v.deliveryAddress;
       _deliveryTypeCode = $v.deliveryTypeCode;
+      _depot = $v.depot?.toBuilder();
       _billingAddress = $v.billingAddress;
       _productTotal = $v.productTotal;
       _orderTotal = $v.orderTotal;
@@ -344,6 +355,7 @@ class OrderServiceOrdersBuilder
               orderDate: orderDate,
               deliveryAddress: deliveryAddress,
               deliveryTypeCode: deliveryTypeCode,
+              depot: _depot?.build(),
               billingAddress: billingAddress,
               productTotal: productTotal,
               orderTotal: orderTotal,
@@ -365,6 +377,9 @@ class OrderServiceOrdersBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'depot';
+        _depot?.build();
+
         _$failedField = 'status';
         _status?.build();
       } catch (e) {

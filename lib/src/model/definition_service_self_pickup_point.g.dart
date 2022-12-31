@@ -16,13 +16,25 @@ class _$DefinitionServiceSelfPickupPoint
   final double? longitude;
   @override
   final int? regionId;
+  @override
+  final int? cityId;
+  @override
+  final int? countryId;
+  @override
+  final int? neighborhoodId;
 
   factory _$DefinitionServiceSelfPickupPoint(
           [void Function(DefinitionServiceSelfPickupPointBuilder)? updates]) =>
       (new DefinitionServiceSelfPickupPointBuilder()..update(updates)).build();
 
   _$DefinitionServiceSelfPickupPoint._(
-      {this.name, this.latitude, this.longitude, this.regionId})
+      {this.name,
+      this.latitude,
+      this.longitude,
+      this.regionId,
+      this.cityId,
+      this.countryId,
+      this.neighborhoodId})
       : super._();
 
   @override
@@ -41,14 +53,24 @@ class _$DefinitionServiceSelfPickupPoint
         name == other.name &&
         latitude == other.latitude &&
         longitude == other.longitude &&
-        regionId == other.regionId;
+        regionId == other.regionId &&
+        cityId == other.cityId &&
+        countryId == other.countryId &&
+        neighborhoodId == other.neighborhoodId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, name.hashCode), latitude.hashCode), longitude.hashCode),
-        regionId.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, name.hashCode), latitude.hashCode),
+                        longitude.hashCode),
+                    regionId.hashCode),
+                cityId.hashCode),
+            countryId.hashCode),
+        neighborhoodId.hashCode));
   }
 
   @override
@@ -57,7 +79,10 @@ class _$DefinitionServiceSelfPickupPoint
           ..add('name', name)
           ..add('latitude', latitude)
           ..add('longitude', longitude)
-          ..add('regionId', regionId))
+          ..add('regionId', regionId)
+          ..add('cityId', cityId)
+          ..add('countryId', countryId)
+          ..add('neighborhoodId', neighborhoodId))
         .toString();
   }
 }
@@ -84,6 +109,19 @@ class DefinitionServiceSelfPickupPointBuilder
   int? get regionId => _$this._regionId;
   set regionId(int? regionId) => _$this._regionId = regionId;
 
+  int? _cityId;
+  int? get cityId => _$this._cityId;
+  set cityId(int? cityId) => _$this._cityId = cityId;
+
+  int? _countryId;
+  int? get countryId => _$this._countryId;
+  set countryId(int? countryId) => _$this._countryId = countryId;
+
+  int? _neighborhoodId;
+  int? get neighborhoodId => _$this._neighborhoodId;
+  set neighborhoodId(int? neighborhoodId) =>
+      _$this._neighborhoodId = neighborhoodId;
+
   DefinitionServiceSelfPickupPointBuilder() {
     DefinitionServiceSelfPickupPoint._defaults(this);
   }
@@ -95,6 +133,9 @@ class DefinitionServiceSelfPickupPointBuilder
       _latitude = $v.latitude;
       _longitude = $v.longitude;
       _regionId = $v.regionId;
+      _cityId = $v.cityId;
+      _countryId = $v.countryId;
+      _neighborhoodId = $v.neighborhoodId;
       _$v = null;
     }
     return this;
@@ -118,7 +159,10 @@ class DefinitionServiceSelfPickupPointBuilder
             name: name,
             latitude: latitude,
             longitude: longitude,
-            regionId: regionId);
+            regionId: regionId,
+            cityId: cityId,
+            countryId: countryId,
+            neighborhoodId: neighborhoodId);
     replace(_$result);
     return _$result;
   }

@@ -51,6 +51,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
   final double? deliveryTypeDiscount;
   @override
   final String? deliveryTypeCode;
+  @override
+  final OrderServiceDepotDetail? depot;
 
   factory _$OrderServiceOrderResponse(
           [void Function(OrderServiceOrderResponseBuilder)? updates]) =>
@@ -78,7 +80,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
       this.appliedCampaigns,
       this.campaignTotalDiscount,
       this.deliveryTypeDiscount,
-      this.deliveryTypeCode})
+      this.deliveryTypeCode,
+      this.depot})
       : super._();
 
   @override
@@ -115,7 +118,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
         appliedCampaigns == other.appliedCampaigns &&
         campaignTotalDiscount == other.campaignTotalDiscount &&
         deliveryTypeDiscount == other.deliveryTypeDiscount &&
-        deliveryTypeCode == other.deliveryTypeCode;
+        deliveryTypeCode == other.deliveryTypeCode &&
+        depot == other.depot;
   }
 
   @override
@@ -138,26 +142,26 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc(0, id.hashCode), uuid.hashCode), customer.hashCode),
-                                                                                orderDate.hashCode),
-                                                                            deliveryAddress.hashCode),
-                                                                        billingAdrress.hashCode),
-                                                                    productTotal.hashCode),
-                                                                orderTotal.hashCode),
-                                                            orderProducts.hashCode),
-                                                        orderNote.hashCode),
-                                                    paymentType.hashCode),
-                                                productDiscountsTotal.hashCode),
-                                            fee.hashCode),
-                                        bagAmount.hashCode),
-                                    bagTotal.hashCode),
-                                deliveryTimeStart.hashCode),
-                            deliveryTimeEnd.hashCode),
-                        region.hashCode),
-                    appliedCampaigns.hashCode),
-                campaignTotalDiscount.hashCode),
-            deliveryTypeDiscount.hashCode),
-        deliveryTypeCode.hashCode));
+                                                                            $jc($jc($jc($jc($jc(0, id.hashCode), uuid.hashCode), customer.hashCode), orderDate.hashCode),
+                                                                                deliveryAddress.hashCode),
+                                                                            billingAdrress.hashCode),
+                                                                        productTotal.hashCode),
+                                                                    orderTotal.hashCode),
+                                                                orderProducts.hashCode),
+                                                            orderNote.hashCode),
+                                                        paymentType.hashCode),
+                                                    productDiscountsTotal.hashCode),
+                                                fee.hashCode),
+                                            bagAmount.hashCode),
+                                        bagTotal.hashCode),
+                                    deliveryTimeStart.hashCode),
+                                deliveryTimeEnd.hashCode),
+                            region.hashCode),
+                        appliedCampaigns.hashCode),
+                    campaignTotalDiscount.hashCode),
+                deliveryTypeDiscount.hashCode),
+            deliveryTypeCode.hashCode),
+        depot.hashCode));
   }
 
   @override
@@ -184,7 +188,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
           ..add('appliedCampaigns', appliedCampaigns)
           ..add('campaignTotalDiscount', campaignTotalDiscount)
           ..add('deliveryTypeDiscount', deliveryTypeDiscount)
-          ..add('deliveryTypeCode', deliveryTypeCode))
+          ..add('deliveryTypeCode', deliveryTypeCode)
+          ..add('depot', depot))
         .toString();
   }
 }
@@ -296,6 +301,11 @@ class OrderServiceOrderResponseBuilder
   set deliveryTypeCode(String? deliveryTypeCode) =>
       _$this._deliveryTypeCode = deliveryTypeCode;
 
+  OrderServiceDepotDetailBuilder? _depot;
+  OrderServiceDepotDetailBuilder get depot =>
+      _$this._depot ??= new OrderServiceDepotDetailBuilder();
+  set depot(OrderServiceDepotDetailBuilder? depot) => _$this._depot = depot;
+
   OrderServiceOrderResponseBuilder() {
     OrderServiceOrderResponse._defaults(this);
   }
@@ -325,6 +335,7 @@ class OrderServiceOrderResponseBuilder
       _campaignTotalDiscount = $v.campaignTotalDiscount;
       _deliveryTypeDiscount = $v.deliveryTypeDiscount;
       _deliveryTypeCode = $v.deliveryTypeCode;
+      _depot = $v.depot?.toBuilder();
       _$v = null;
     }
     return this;
@@ -368,7 +379,8 @@ class OrderServiceOrderResponseBuilder
               appliedCampaigns: _appliedCampaigns?.build(),
               campaignTotalDiscount: campaignTotalDiscount,
               deliveryTypeDiscount: deliveryTypeDiscount,
-              deliveryTypeCode: deliveryTypeCode);
+              deliveryTypeCode: deliveryTypeCode,
+              depot: _depot?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -377,6 +389,9 @@ class OrderServiceOrderResponseBuilder
 
         _$failedField = 'appliedCampaigns';
         _appliedCampaigns?.build();
+
+        _$failedField = 'depot';
+        _depot?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'OrderServiceOrderResponse', _$failedField, e.toString());
