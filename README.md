@@ -71,6 +71,8 @@ Class | Method | HTTP request | Description
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountLogoutGet**](doc/AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
 [*AccountApi*](doc/AccountApi.md) | [**apiAccountWhoAmIGet**](doc/AccountApi.md#apiaccountwhoamiget) | **GET** /api/Account/WhoAmI | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminBranchPost**](doc/AdminApi.md#apiadminbranchpost) | **POST** /api/Admin/Branch | 
+[*AdminApi*](doc/AdminApi.md) | [**apiAdminCheckRegionStatusForNeighborhoodPost**](doc/AdminApi.md#apiadmincheckregionstatusforneighborhoodpost) | **POST** /api/Admin/CheckRegionStatusForNeighborhood | 
+[*AdminApi*](doc/AdminApi.md) | [**apiAdminCheckRegionStatusPost**](doc/AdminApi.md#apiadmincheckregionstatuspost) | **POST** /api/Admin/CheckRegionStatus | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminCompaniesPost**](doc/AdminApi.md#apiadmincompaniespost) | **POST** /api/Admin/Companies | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminGenerateTimeSlotsGet**](doc/AdminApi.md#apiadmingeneratetimeslotsget) | **GET** /api/Admin/GenerateTimeSlots | 
 [*AdminApi*](doc/AdminApi.md) | [**apiAdminGenerateTimeSlotsPost**](doc/AdminApi.md#apiadmingeneratetimeslotspost) | **POST** /api/Admin/GenerateTimeSlots | 
@@ -176,6 +178,7 @@ Class | Method | HTTP request | Description
  - [AdminServiceCompanyResponse](doc/AdminServiceCompanyResponse.md)
  - [AdminServiceRegionNeighborhoodRequest](doc/AdminServiceRegionNeighborhoodRequest.md)
  - [AdminServiceRegionResponse](doc/AdminServiceRegionResponse.md)
+ - [AdminServiceRegionStatusCode](doc/AdminServiceRegionStatusCode.md)
  - [AdminServiceTimeSlotResponse](doc/AdminServiceTimeSlotResponse.md)
  - [AdminServiceUpdateRegionNeighborhoodRequest](doc/AdminServiceUpdateRegionNeighborhoodRequest.md)
  - [AdminServiceUploadImageResponse](doc/AdminServiceUploadImageResponse.md)
@@ -224,6 +227,7 @@ Class | Method | HTTP request | Description
  - [OrderServiceCampaignResponse](doc/OrderServiceCampaignResponse.md)
  - [OrderServiceCheckoutItem](doc/OrderServiceCheckoutItem.md)
  - [OrderServiceCheckoutRequest](doc/OrderServiceCheckoutRequest.md)
+ - [OrderServiceDepotDetail](doc/OrderServiceDepotDetail.md)
  - [OrderServiceGetOrderListResponse](doc/OrderServiceGetOrderListResponse.md)
  - [OrderServiceGetOrderRequest](doc/OrderServiceGetOrderRequest.md)
  - [OrderServiceOrderRequest](doc/OrderServiceOrderRequest.md)
@@ -256,6 +260,7 @@ Class | Method | HTTP request | Description
  - [RestResultOfAccountServiceCheckVersionResponse](doc/RestResultOfAccountServiceCheckVersionResponse.md)
  - [RestResultOfAccountServiceLoginResponse](doc/RestResultOfAccountServiceLoginResponse.md)
  - [RestResultOfAdminServiceAdminNeighborResponse](doc/RestResultOfAdminServiceAdminNeighborResponse.md)
+ - [RestResultOfAdminServiceRegionStatusCode](doc/RestResultOfAdminServiceRegionStatusCode.md)
  - [RestResultOfAdminServiceUploadImageResponse](doc/RestResultOfAdminServiceUploadImageResponse.md)
  - [RestResultOfBannerServiceBannerResponse](doc/RestResultOfBannerServiceBannerResponse.md)
  - [RestResultOfCartServiceCampaignApplyResponse](doc/RestResultOfCartServiceCampaignApplyResponse.md)

@@ -5,6 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/order_service_campaign_response.dart';
 import 'package:openapi/src/model/order_service_r_order_products.dart';
+import 'package:openapi/src/model/order_service_depot_detail.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -35,6 +36,7 @@ part 'order_service_order_response.g.dart';
 /// * [campaignTotalDiscount] 
 /// * [deliveryTypeDiscount] 
 /// * [deliveryTypeCode] 
+/// * [depot] 
 abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderResponse, OrderServiceOrderResponseBuilder> {
     @BuiltValueField(wireName: r'id')
     int? get id;
@@ -101,6 +103,9 @@ abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderRespo
 
     @BuiltValueField(wireName: r'deliveryTypeCode')
     String? get deliveryTypeCode;
+
+    @BuiltValueField(wireName: r'depot')
+    OrderServiceDepotDetail? get depot;
 
     OrderServiceOrderResponse._();
 
@@ -256,6 +261,12 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                 ..add(serializers.serialize(object.deliveryTypeCode,
                     specifiedType: const FullType(String)));
         }
+        if (object.depot != null) {
+            result
+                ..add(r'depot')
+                ..add(serializers.serialize(object.depot,
+                    specifiedType: const FullType(OrderServiceDepotDetail)));
+        }
         return result;
     }
 
@@ -380,6 +391,11 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.deliveryTypeCode = valueDes;
+                    break;
+                case r'depot':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(OrderServiceDepotDetail)) as OrderServiceDepotDetail;
+                    result.depot.replace(valueDes);
                     break;
             }
         }

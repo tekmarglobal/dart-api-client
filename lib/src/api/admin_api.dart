@@ -11,6 +11,7 @@ import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/admin_service_region_neighborhood_request.dart';
 import 'package:openapi/src/model/admin_service_update_region_neighborhood_request.dart';
 import 'package:openapi/src/model/rest_result_of_admin_service_admin_neighbor_response.dart';
+import 'package:openapi/src/model/rest_result_of_admin_service_region_status_code.dart';
 import 'package:openapi/src/model/rest_result_of_admin_service_upload_image_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_admin_service_admin_neighbor_response.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_admin_service_branch_response.dart';
@@ -95,6 +96,178 @@ class AdminApi {
     }
 
     return Response<RestResultOfListOfAdminServiceBranchResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiAdminCheckRegionStatusForNeighborhoodPost
+  /// 
+  ///
+  /// Parameters:
+  /// * [regionId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfAdminServiceRegionStatusCode] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfAdminServiceRegionStatusCode>> apiAdminCheckRegionStatusForNeighborhoodPost({ 
+    int? regionId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Admin/CheckRegionStatusForNeighborhood';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (regionId != null) r'regionId': encodeQueryParameter(_serializers, regionId, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfAdminServiceRegionStatusCode _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfAdminServiceRegionStatusCode);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfAdminServiceRegionStatusCode;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfAdminServiceRegionStatusCode>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiAdminCheckRegionStatusPost
+  /// 
+  ///
+  /// Parameters:
+  /// * [regionId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfAdminServiceRegionStatusCode] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfAdminServiceRegionStatusCode>> apiAdminCheckRegionStatusPost({ 
+    int? regionId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Admin/CheckRegionStatus';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (regionId != null) r'regionId': encodeQueryParameter(_serializers, regionId, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfAdminServiceRegionStatusCode _responseData;
+
+    try {
+      const _responseType = FullType(RestResultOfAdminServiceRegionStatusCode);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as RestResultOfAdminServiceRegionStatusCode;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      )..stackTrace = stackTrace;
+    }
+
+    return Response<RestResultOfAdminServiceRegionStatusCode>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

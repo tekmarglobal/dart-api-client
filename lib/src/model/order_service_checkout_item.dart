@@ -12,12 +12,16 @@ part 'order_service_checkout_item.g.dart';
 /// Properties:
 /// * [type] 
 /// * [amount] 
+/// * [isDiscount] 
 abstract class OrderServiceCheckoutItem implements Built<OrderServiceCheckoutItem, OrderServiceCheckoutItemBuilder> {
     @BuiltValueField(wireName: r'type')
     String? get type;
 
     @BuiltValueField(wireName: r'amount')
     double? get amount;
+
+    @BuiltValueField(wireName: r'isDiscount')
+    bool? get isDiscount;
 
     OrderServiceCheckoutItem._();
 
@@ -53,6 +57,12 @@ class _$OrderServiceCheckoutItemSerializer implements StructuredSerializer<Order
                 ..add(serializers.serialize(object.amount,
                     specifiedType: const FullType(double)));
         }
+        if (object.isDiscount != null) {
+            result
+                ..add(r'isDiscount')
+                ..add(serializers.serialize(object.isDiscount,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -77,6 +87,11 @@ class _$OrderServiceCheckoutItemSerializer implements StructuredSerializer<Order
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
                     result.amount = valueDes;
+                    break;
+                case r'isDiscount':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    result.isDiscount = valueDes;
                     break;
             }
         }

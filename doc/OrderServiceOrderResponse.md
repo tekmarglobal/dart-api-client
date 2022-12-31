@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **campaignTotalDiscount** | **double** |  | [optional] 
 **deliveryTypeDiscount** | **double** |  | [optional] 
 **deliveryTypeCode** | **String** |  | [optional] 
+**depot** | [**OrderServiceDepotDetail**](OrderServiceDepotDetail.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

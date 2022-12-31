@@ -23,6 +23,7 @@ import 'package:openapi/src/model/admin_service_branch_response.dart';
 import 'package:openapi/src/model/admin_service_company_response.dart';
 import 'package:openapi/src/model/admin_service_region_neighborhood_request.dart';
 import 'package:openapi/src/model/admin_service_region_response.dart';
+import 'package:openapi/src/model/admin_service_region_status_code.dart';
 import 'package:openapi/src/model/admin_service_time_slot_response.dart';
 import 'package:openapi/src/model/admin_service_update_region_neighborhood_request.dart';
 import 'package:openapi/src/model/admin_service_upload_image_response.dart';
@@ -71,6 +72,7 @@ import 'package:openapi/src/model/definition_service_update_agreement_request.da
 import 'package:openapi/src/model/order_service_campaign_response.dart';
 import 'package:openapi/src/model/order_service_checkout_item.dart';
 import 'package:openapi/src/model/order_service_checkout_request.dart';
+import 'package:openapi/src/model/order_service_depot_detail.dart';
 import 'package:openapi/src/model/order_service_get_order_list_response.dart';
 import 'package:openapi/src/model/order_service_get_order_request.dart';
 import 'package:openapi/src/model/order_service_order_request.dart';
@@ -103,6 +105,7 @@ import 'package:openapi/src/model/register_service_version_response.dart';
 import 'package:openapi/src/model/rest_result_of_account_service_check_version_response.dart';
 import 'package:openapi/src/model/rest_result_of_account_service_login_response.dart';
 import 'package:openapi/src/model/rest_result_of_admin_service_admin_neighbor_response.dart';
+import 'package:openapi/src/model/rest_result_of_admin_service_region_status_code.dart';
 import 'package:openapi/src/model/rest_result_of_admin_service_upload_image_response.dart';
 import 'package:openapi/src/model/rest_result_of_banner_service_banner_response.dart';
 import 'package:openapi/src/model/rest_result_of_cart_service_campaign_apply_response.dart';
@@ -161,6 +164,7 @@ part 'serializers.g.dart';
   AdminServiceCompanyResponse,
   AdminServiceRegionNeighborhoodRequest,
   AdminServiceRegionResponse,
+  AdminServiceRegionStatusCode,
   AdminServiceTimeSlotResponse,
   AdminServiceUpdateRegionNeighborhoodRequest,
   AdminServiceUploadImageResponse,
@@ -209,6 +213,7 @@ part 'serializers.g.dart';
   OrderServiceCampaignResponse,
   OrderServiceCheckoutItem,
   OrderServiceCheckoutRequest,
+  OrderServiceDepotDetail,
   OrderServiceGetOrderListResponse,
   OrderServiceGetOrderRequest,
   OrderServiceOrderRequest,
@@ -241,6 +246,7 @@ part 'serializers.g.dart';
   RestResultOfAccountServiceCheckVersionResponse,
   RestResultOfAccountServiceLoginResponse,
   RestResultOfAdminServiceAdminNeighborResponse,
+  RestResultOfAdminServiceRegionStatusCode,
   RestResultOfAdminServiceUploadImageResponse,
   RestResultOfBannerServiceBannerResponse,
   RestResultOfCartServiceCampaignApplyResponse,

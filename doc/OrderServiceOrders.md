@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **orderDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **deliveryAddress** | **String** |  | [optional] 
 **deliveryTypeCode** | **String** |  | [optional] 
+**depot** | [**OrderServiceDepotDetail**](OrderServiceDepotDetail.md) |  | [optional] 
 **billingAddress** | **String** |  | [optional] 
 **productTotal** | **double** |  | [optional] 
 **orderTotal** | **double** |  | [optional] 

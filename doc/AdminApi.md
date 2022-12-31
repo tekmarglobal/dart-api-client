@@ -10,6 +10,8 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiAdminBranchPost**](AdminApi.md#apiadminbranchpost) | **POST** /api/Admin/Branch | 
+[**apiAdminCheckRegionStatusForNeighborhoodPost**](AdminApi.md#apiadmincheckregionstatusforneighborhoodpost) | **POST** /api/Admin/CheckRegionStatusForNeighborhood | 
+[**apiAdminCheckRegionStatusPost**](AdminApi.md#apiadmincheckregionstatuspost) | **POST** /api/Admin/CheckRegionStatus | 
 [**apiAdminCompaniesPost**](AdminApi.md#apiadmincompaniespost) | **POST** /api/Admin/Companies | 
 [**apiAdminGenerateTimeSlotsGet**](AdminApi.md#apiadmingeneratetimeslotsget) | **GET** /api/Admin/GenerateTimeSlots | 
 [**apiAdminGenerateTimeSlotsPost**](AdminApi.md#apiadmingeneratetimeslotspost) | **POST** /api/Admin/GenerateTimeSlots | 
@@ -50,6 +52,96 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestResultOfListOfAdminServiceBranchResponse**](RestResultOfListOfAdminServiceBranchResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiAdminCheckRegionStatusForNeighborhoodPost**
+> RestResultOfAdminServiceRegionStatusCode apiAdminCheckRegionStatusForNeighborhoodPost(regionId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getAdminApi();
+final int regionId = 56; // int | 
+
+try {
+    final response = api.apiAdminCheckRegionStatusForNeighborhoodPost(regionId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling AdminApi->apiAdminCheckRegionStatusForNeighborhoodPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfAdminServiceRegionStatusCode**](RestResultOfAdminServiceRegionStatusCode.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiAdminCheckRegionStatusPost**
+> RestResultOfAdminServiceRegionStatusCode apiAdminCheckRegionStatusPost(regionId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getAdminApi();
+final int regionId = 56; // int | 
+
+try {
+    final response = api.apiAdminCheckRegionStatusPost(regionId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling AdminApi->apiAdminCheckRegionStatusPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfAdminServiceRegionStatusCode**](RestResultOfAdminServiceRegionStatusCode.md)
 
 ### Authorization
 

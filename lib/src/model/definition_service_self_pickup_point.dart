@@ -14,6 +14,9 @@ part 'definition_service_self_pickup_point.g.dart';
 /// * [latitude] 
 /// * [longitude] 
 /// * [regionId] 
+/// * [cityId] 
+/// * [countryId] 
+/// * [neighborhoodId] 
 abstract class DefinitionServiceSelfPickupPoint implements Built<DefinitionServiceSelfPickupPoint, DefinitionServiceSelfPickupPointBuilder> {
     @BuiltValueField(wireName: r'name')
     String? get name;
@@ -26,6 +29,15 @@ abstract class DefinitionServiceSelfPickupPoint implements Built<DefinitionServi
 
     @BuiltValueField(wireName: r'regionId')
     int? get regionId;
+
+    @BuiltValueField(wireName: r'cityId')
+    int? get cityId;
+
+    @BuiltValueField(wireName: r'countryId')
+    int? get countryId;
+
+    @BuiltValueField(wireName: r'neighborhoodId')
+    int? get neighborhoodId;
 
     DefinitionServiceSelfPickupPoint._();
 
@@ -73,6 +85,24 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
                 ..add(serializers.serialize(object.regionId,
                     specifiedType: const FullType(int)));
         }
+        if (object.cityId != null) {
+            result
+                ..add(r'cityId')
+                ..add(serializers.serialize(object.cityId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.countryId != null) {
+            result
+                ..add(r'countryId')
+                ..add(serializers.serialize(object.countryId,
+                    specifiedType: const FullType(int)));
+        }
+        if (object.neighborhoodId != null) {
+            result
+                ..add(r'neighborhoodId')
+                ..add(serializers.serialize(object.neighborhoodId,
+                    specifiedType: const FullType(int)));
+        }
         return result;
     }
 
@@ -107,6 +137,21 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     result.regionId = valueDes;
+                    break;
+                case r'cityId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.cityId = valueDes;
+                    break;
+                case r'countryId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.countryId = valueDes;
+                    break;
+                case r'neighborhoodId':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    result.neighborhoodId = valueDes;
                     break;
             }
         }

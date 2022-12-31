@@ -3,6 +3,7 @@
 //
 
 import 'package:openapi/src/model/order_service_order_status.dart';
+import 'package:openapi/src/model/order_service_depot_detail.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,6 +16,7 @@ part 'order_service_orders.g.dart';
 /// * [orderDate] 
 /// * [deliveryAddress] 
 /// * [deliveryTypeCode] 
+/// * [depot] 
 /// * [billingAddress] 
 /// * [productTotal] 
 /// * [orderTotal] 
@@ -45,6 +47,9 @@ abstract class OrderServiceOrders implements Built<OrderServiceOrders, OrderServ
 
     @BuiltValueField(wireName: r'deliveryTypeCode')
     String? get deliveryTypeCode;
+
+    @BuiltValueField(wireName: r'depot')
+    OrderServiceDepotDetail? get depot;
 
     @BuiltValueField(wireName: r'billingAddress')
     String? get billingAddress;
@@ -145,6 +150,12 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                 ..add(r'deliveryTypeCode')
                 ..add(serializers.serialize(object.deliveryTypeCode,
                     specifiedType: const FullType(String)));
+        }
+        if (object.depot != null) {
+            result
+                ..add(r'depot')
+                ..add(serializers.serialize(object.depot,
+                    specifiedType: const FullType(OrderServiceDepotDetail)));
         }
         if (object.billingAddress != null) {
             result
@@ -288,6 +299,11 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.deliveryTypeCode = valueDes;
+                    break;
+                case r'depot':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(OrderServiceDepotDetail)) as OrderServiceDepotDetail;
+                    result.depot.replace(valueDes);
                     break;
                 case r'billingAddress':
                     final valueDes = serializers.deserialize(value,

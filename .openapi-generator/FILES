@@ -14,6 +14,7 @@ doc/AdminServiceBranchResponse.md
 doc/AdminServiceCompanyResponse.md
 doc/AdminServiceRegionNeighborhoodRequest.md
 doc/AdminServiceRegionResponse.md
+doc/AdminServiceRegionStatusCode.md
 doc/AdminServiceTimeSlotResponse.md
 doc/AdminServiceUpdateRegionNeighborhoodRequest.md
 doc/AdminServiceUploadImageResponse.md
@@ -72,6 +73,7 @@ doc/OrderApi.md
 doc/OrderServiceCampaignResponse.md
 doc/OrderServiceCheckoutItem.md
 doc/OrderServiceCheckoutRequest.md
+doc/OrderServiceDepotDetail.md
 doc/OrderServiceGetOrderListResponse.md
 doc/OrderServiceGetOrderRequest.md
 doc/OrderServiceOrderRequest.md
@@ -107,6 +109,7 @@ doc/RegisterServiceVersionResponse.md
 doc/RestResultOfAccountServiceCheckVersionResponse.md
 doc/RestResultOfAccountServiceLoginResponse.md
 doc/RestResultOfAdminServiceAdminNeighborResponse.md
+doc/RestResultOfAdminServiceRegionStatusCode.md
 doc/RestResultOfAdminServiceUploadImageResponse.md
 doc/RestResultOfBannerServiceBannerResponse.md
 doc/RestResultOfCartServiceCampaignApplyResponse.md
@@ -185,6 +188,7 @@ lib/src/model/admin_service_branch_response.dart
 lib/src/model/admin_service_company_response.dart
 lib/src/model/admin_service_region_neighborhood_request.dart
 lib/src/model/admin_service_region_response.dart
+lib/src/model/admin_service_region_status_code.dart
 lib/src/model/admin_service_time_slot_response.dart
 lib/src/model/admin_service_update_region_neighborhood_request.dart
 lib/src/model/admin_service_upload_image_response.dart
@@ -234,6 +238,7 @@ lib/src/model/definition_service_update_agreement_request.dart
 lib/src/model/order_service_campaign_response.dart
 lib/src/model/order_service_checkout_item.dart
 lib/src/model/order_service_checkout_request.dart
+lib/src/model/order_service_depot_detail.dart
 lib/src/model/order_service_get_order_list_response.dart
 lib/src/model/order_service_get_order_request.dart
 lib/src/model/order_service_order_request.dart
@@ -266,6 +271,7 @@ lib/src/model/register_service_version_response.dart
 lib/src/model/rest_result_of_account_service_check_version_response.dart
 lib/src/model/rest_result_of_account_service_login_response.dart
 lib/src/model/rest_result_of_admin_service_admin_neighbor_response.dart
+lib/src/model/rest_result_of_admin_service_region_status_code.dart
 lib/src/model/rest_result_of_admin_service_upload_image_response.dart
 lib/src/model/rest_result_of_banner_service_banner_response.dart
 lib/src/model/rest_result_of_cart_service_campaign_apply_response.dart
@@ -311,6 +317,6 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/order_service_checkout_item_test.dart
-test/order_service_checkout_request_test.dart
-test/rest_result_of_list_of_order_service_checkout_item_test.dart
+test/admin_service_region_status_code_test.dart
+test/order_service_depot_detail_test.dart
+test/rest_result_of_admin_service_region_status_code_test.dart

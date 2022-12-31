@@ -303,6 +303,62 @@
         }
       }
     },
+    "/api/Admin/CheckRegionStatus": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "regionId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfAdminServiceRegionStatusCode"
+            }
+          }
+        }
+      }
+    },
+    "/api/Admin/CheckRegionStatusForNeighborhood": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "regionId",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/RestResultOfAdminServiceRegionStatusCode"
+            }
+          }
+        }
+      }
+    },
     "/api/Admin/RegionNeighborhood": {
       "post": {
         "tags": [
@@ -3109,6 +3165,29 @@
         }
       }
     },
+    "AdminServiceRegionStatusCode": {
+      "format": "int32",
+      "enum": [
+        0,
+        1,
+        2
+      ],
+      "type": "integer"
+    },
+    "RestResultOfAdminServiceRegionStatusCode": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/AdminServiceRegionStatusCode"
+        }
+      }
+    },
     "AdminServiceRegionNeighborhoodRequest": {
       "type": "object",
       "properties": {
@@ -4319,6 +4398,18 @@
         "regionId": {
           "format": "int32",
           "type": "integer"
+        },
+        "cityId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "countryId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "neighborhoodId": {
+          "format": "int32",
+          "type": "integer"
         }
       }
     },
@@ -4635,6 +4726,23 @@
         }
       }
     },
+    "OrderServiceDepotDetail": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "regionId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "OrderServiceOrderResponse": {
       "type": "object",
       "properties": {
@@ -4723,6 +4831,9 @@
         },
         "deliveryTypeCode": {
           "type": "string"
+        },
+        "depot": {
+          "$ref": "#/definitions/OrderServiceDepotDetail"
         }
       }
     },
@@ -4767,6 +4878,9 @@
         },
         "deliveryTypeCode": {
           "type": "string"
+        },
+        "depot": {
+          "$ref": "#/definitions/OrderServiceDepotDetail"
         },
         "billingAddress": {
           "type": "string"
@@ -4943,6 +5057,9 @@
         "amount": {
           "format": "double",
           "type": "number"
+        },
+        "isDiscount": {
+          "type": "boolean"
         }
       }
     },
