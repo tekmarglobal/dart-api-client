@@ -4410,6 +4410,9 @@
         "neighborhoodId": {
           "format": "int32",
           "type": "integer"
+        },
+        "depotAddress": {
+          "type": "string"
         }
       }
     },

@@ -17,6 +17,7 @@ part 'definition_service_self_pickup_point.g.dart';
 /// * [cityId] 
 /// * [countryId] 
 /// * [neighborhoodId] 
+/// * [depotAddress] 
 abstract class DefinitionServiceSelfPickupPoint implements Built<DefinitionServiceSelfPickupPoint, DefinitionServiceSelfPickupPointBuilder> {
     @BuiltValueField(wireName: r'name')
     String? get name;
@@ -38,6 +39,9 @@ abstract class DefinitionServiceSelfPickupPoint implements Built<DefinitionServi
 
     @BuiltValueField(wireName: r'neighborhoodId')
     int? get neighborhoodId;
+
+    @BuiltValueField(wireName: r'depotAddress')
+    String? get depotAddress;
 
     DefinitionServiceSelfPickupPoint._();
 
@@ -103,6 +107,12 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
                 ..add(serializers.serialize(object.neighborhoodId,
                     specifiedType: const FullType(int)));
         }
+        if (object.depotAddress != null) {
+            result
+                ..add(r'depotAddress')
+                ..add(serializers.serialize(object.depotAddress,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -152,6 +162,11 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     result.neighborhoodId = valueDes;
+                    break;
+                case r'depotAddress':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    result.depotAddress = valueDes;
                     break;
             }
         }

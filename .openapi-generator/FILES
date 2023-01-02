@@ -317,6 +317,3 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/admin_service_region_status_code_test.dart
-test/order_service_depot_detail_test.dart
-test/rest_result_of_admin_service_region_status_code_test.dart
