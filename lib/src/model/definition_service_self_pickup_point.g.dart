@@ -22,6 +22,8 @@ class _$DefinitionServiceSelfPickupPoint
   final int? countryId;
   @override
   final int? neighborhoodId;
+  @override
+  final String? depotAddress;
 
   factory _$DefinitionServiceSelfPickupPoint(
           [void Function(DefinitionServiceSelfPickupPointBuilder)? updates]) =>
@@ -34,7 +36,8 @@ class _$DefinitionServiceSelfPickupPoint
       this.regionId,
       this.cityId,
       this.countryId,
-      this.neighborhoodId})
+      this.neighborhoodId,
+      this.depotAddress})
       : super._();
 
   @override
@@ -56,7 +59,8 @@ class _$DefinitionServiceSelfPickupPoint
         regionId == other.regionId &&
         cityId == other.cityId &&
         countryId == other.countryId &&
-        neighborhoodId == other.neighborhoodId;
+        neighborhoodId == other.neighborhoodId &&
+        depotAddress == other.depotAddress;
   }
 
   @override
@@ -65,12 +69,14 @@ class _$DefinitionServiceSelfPickupPoint
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, name.hashCode), latitude.hashCode),
-                        longitude.hashCode),
-                    regionId.hashCode),
-                cityId.hashCode),
-            countryId.hashCode),
-        neighborhoodId.hashCode));
+                    $jc(
+                        $jc($jc($jc(0, name.hashCode), latitude.hashCode),
+                            longitude.hashCode),
+                        regionId.hashCode),
+                    cityId.hashCode),
+                countryId.hashCode),
+            neighborhoodId.hashCode),
+        depotAddress.hashCode));
   }
 
   @override
@@ -82,7 +88,8 @@ class _$DefinitionServiceSelfPickupPoint
           ..add('regionId', regionId)
           ..add('cityId', cityId)
           ..add('countryId', countryId)
-          ..add('neighborhoodId', neighborhoodId))
+          ..add('neighborhoodId', neighborhoodId)
+          ..add('depotAddress', depotAddress))
         .toString();
   }
 }
@@ -122,6 +129,10 @@ class DefinitionServiceSelfPickupPointBuilder
   set neighborhoodId(int? neighborhoodId) =>
       _$this._neighborhoodId = neighborhoodId;
 
+  String? _depotAddress;
+  String? get depotAddress => _$this._depotAddress;
+  set depotAddress(String? depotAddress) => _$this._depotAddress = depotAddress;
+
   DefinitionServiceSelfPickupPointBuilder() {
     DefinitionServiceSelfPickupPoint._defaults(this);
   }
@@ -136,6 +147,7 @@ class DefinitionServiceSelfPickupPointBuilder
       _cityId = $v.cityId;
       _countryId = $v.countryId;
       _neighborhoodId = $v.neighborhoodId;
+      _depotAddress = $v.depotAddress;
       _$v = null;
     }
     return this;
@@ -162,7 +174,8 @@ class DefinitionServiceSelfPickupPointBuilder
             regionId: regionId,
             cityId: cityId,
             countryId: countryId,
-            neighborhoodId: neighborhoodId);
+            neighborhoodId: neighborhoodId,
+            depotAddress: depotAddress);
     replace(_$result);
     return _$result;
   }
