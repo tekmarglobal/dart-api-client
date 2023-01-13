@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**apiDefinitionGetAllSelfPickupPointsGet**](DefinitionApi.md#apidefinitiongetallselfpickuppointsget) | **GET** /api/Definition/GetAllSelfPickupPoints | 
 [**apiDefinitionGetSelfPickupPointInCountyGet**](DefinitionApi.md#apidefinitiongetselfpickuppointincountyget) | **GET** /api/Definition/GetSelfPickupPointInCounty | 
 [**apiDefinitionGetSelfPickupPointsInCityGet**](DefinitionApi.md#apidefinitiongetselfpickuppointsincityget) | **GET** /api/Definition/GetSelfPickupPointsInCity | 
+[**apiDefinitionGetSelfPickupPointsInNeighborhoodGet**](DefinitionApi.md#apidefinitiongetselfpickuppointsinneighborhoodget) | **GET** /api/Definition/GetSelfPickupPointsInNeighborhood | 
 [**apiDefinitionHelloGet**](DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
 [**apiDefinitionNeighborhoodPost**](DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
 [**apiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
@@ -351,6 +352,51 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cityId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfListOfDefinitionServiceSelfPickupPoint**](RestResultOfListOfDefinitionServiceSelfPickupPoint.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiDefinitionGetSelfPickupPointsInNeighborhoodGet**
+> RestResultOfListOfDefinitionServiceSelfPickupPoint apiDefinitionGetSelfPickupPointsInNeighborhoodGet(neighborhood)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getDefinitionApi();
+final int neighborhood = 56; // int | 
+
+try {
+    final response = api.apiDefinitionGetSelfPickupPointsInNeighborhoodGet(neighborhood);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DefinitionApi->apiDefinitionGetSelfPickupPointsInNeighborhoodGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **neighborhood** | **int**|  | [optional] 
 
 ### Return type
 

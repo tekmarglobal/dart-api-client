@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetAllSelfPickupPointsGet**](doc/DefinitionApi.md#apidefinitiongetallselfpickuppointsget) | **GET** /api/Definition/GetAllSelfPickupPoints | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetSelfPickupPointInCountyGet**](doc/DefinitionApi.md#apidefinitiongetselfpickuppointincountyget) | **GET** /api/Definition/GetSelfPickupPointInCounty | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetSelfPickupPointsInCityGet**](doc/DefinitionApi.md#apidefinitiongetselfpickuppointsincityget) | **GET** /api/Definition/GetSelfPickupPointsInCity | 
+[*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionGetSelfPickupPointsInNeighborhoodGet**](doc/DefinitionApi.md#apidefinitiongetselfpickuppointsinneighborhoodget) | **GET** /api/Definition/GetSelfPickupPointsInNeighborhood | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionHelloGet**](doc/DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionNeighborhoodPost**](doc/DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
 [*DefinitionApi*](doc/DefinitionApi.md) | [**apiDefinitionUpdateAgreementLogPost**](doc/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
