@@ -36,10 +36,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         /// <param name="type">type.</param>
         /// <param name="amount">amount.</param>
-        public OrderServiceCheckoutItem(string type = default(string), double amount = default(double))
+        /// <param name="isDiscount">isDiscount.</param>
+        public OrderServiceCheckoutItem(string type = default(string), double amount = default(double), bool isDiscount = default(bool))
         {
             this.Type = type;
             this.Amount = amount;
+            this.IsDiscount = isDiscount;
         }
 
         /// <summary>
@@ -55,6 +57,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         public double Amount { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsDiscount
+        /// </summary>
+        [DataMember(Name = "isDiscount", EmitDefaultValue = true)]
+        public bool IsDiscount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -64,6 +72,7 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("class OrderServiceCheckoutItem {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
+            sb.Append("  IsDiscount: ").Append(IsDiscount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +116,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 (
                     this.Amount == input.Amount ||
                     this.Amount.Equals(input.Amount)
+                ) && 
+                (
+                    this.IsDiscount == input.IsDiscount ||
+                    this.IsDiscount.Equals(input.IsDiscount)
                 );
         }
 
@@ -124,6 +137,7 @@ namespace Kiler.Dotnet.ApiClient.Model
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsDiscount.GetHashCode();
                 return hashCode;
             }
         }

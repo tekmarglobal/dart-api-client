@@ -4319,6 +4319,21 @@
         "regionId": {
           "format": "int32",
           "type": "integer"
+        },
+        "cityId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "countryId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "neighborhoodId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "depotAddress": {
+          "type": "string"
         }
       }
     },
@@ -4635,6 +4650,23 @@
         }
       }
     },
+    "OrderServiceDepotDetail": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "longitude": {
+          "format": "double",
+          "type": "number"
+        },
+        "regionId": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
     "OrderServiceOrderResponse": {
       "type": "object",
       "properties": {
@@ -4723,6 +4755,9 @@
         },
         "deliveryTypeCode": {
           "type": "string"
+        },
+        "depot": {
+          "$ref": "#/definitions/OrderServiceDepotDetail"
         }
       }
     },
@@ -4767,6 +4802,9 @@
         },
         "deliveryTypeCode": {
           "type": "string"
+        },
+        "depot": {
+          "$ref": "#/definitions/OrderServiceDepotDetail"
         },
         "billingAddress": {
           "type": "string"
@@ -4943,6 +4981,9 @@
         "amount": {
           "format": "double",
           "type": "number"
+        },
+        "isDiscount": {
+          "type": "boolean"
         }
       }
     },
@@ -5379,7 +5420,7 @@
       "type": "apiKey",
       "name": "Authorization",
       "in": "header",
-      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \n                      Enter 'Bearer' [space] and then your token in the text input below.\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
+      "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \r\n                      Enter 'Bearer' [space] and then your token in the text input below.\r\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'"
     }
   },
   "security": [

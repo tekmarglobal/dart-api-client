@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **OrderDate** | **DateTime** |  | [optional] 
 **DeliveryAddress** | **string** |  | [optional] 
 **DeliveryTypeCode** | **string** |  | [optional] 
+**Depot** | [**OrderServiceDepotDetail**](OrderServiceDepotDetail.md) |  | [optional] 
 **BillingAddress** | **string** |  | [optional] 
 **ProductTotal** | **double** |  | [optional] 
 **OrderTotal** | **double** |  | [optional] 

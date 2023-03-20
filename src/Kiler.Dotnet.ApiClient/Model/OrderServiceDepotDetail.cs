@@ -26,39 +26,23 @@ using OpenAPIDateConverter = Kiler.Dotnet.ApiClient.Client.OpenAPIDateConverter;
 namespace Kiler.Dotnet.ApiClient.Model
 {
     /// <summary>
-    /// DefinitionServiceSelfPickupPoint
+    /// OrderServiceDepotDetail
     /// </summary>
-    [DataContract(Name = "DefinitionServiceSelfPickupPoint")]
-    public partial class DefinitionServiceSelfPickupPoint : IEquatable<DefinitionServiceSelfPickupPoint>, IValidatableObject
+    [DataContract(Name = "OrderServiceDepotDetail")]
+    public partial class OrderServiceDepotDetail : IEquatable<OrderServiceDepotDetail>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DefinitionServiceSelfPickupPoint" /> class.
+        /// Initializes a new instance of the <see cref="OrderServiceDepotDetail" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
         /// <param name="latitude">latitude.</param>
         /// <param name="longitude">longitude.</param>
         /// <param name="regionId">regionId.</param>
-        /// <param name="cityId">cityId.</param>
-        /// <param name="countryId">countryId.</param>
-        /// <param name="neighborhoodId">neighborhoodId.</param>
-        /// <param name="depotAddress">depotAddress.</param>
-        public DefinitionServiceSelfPickupPoint(string name = default(string), double latitude = default(double), double longitude = default(double), int regionId = default(int), int cityId = default(int), int countryId = default(int), int neighborhoodId = default(int), string depotAddress = default(string))
+        public OrderServiceDepotDetail(double latitude = default(double), double longitude = default(double), int regionId = default(int))
         {
-            this.Name = name;
             this.Latitude = latitude;
             this.Longitude = longitude;
             this.RegionId = regionId;
-            this.CityId = cityId;
-            this.CountryId = countryId;
-            this.NeighborhoodId = neighborhoodId;
-            this.DepotAddress = depotAddress;
         }
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
-        public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Latitude
@@ -79,45 +63,16 @@ namespace Kiler.Dotnet.ApiClient.Model
         public int RegionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CityId
-        /// </summary>
-        [DataMember(Name = "cityId", EmitDefaultValue = false)]
-        public int CityId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CountryId
-        /// </summary>
-        [DataMember(Name = "countryId", EmitDefaultValue = false)]
-        public int CountryId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NeighborhoodId
-        /// </summary>
-        [DataMember(Name = "neighborhoodId", EmitDefaultValue = false)]
-        public int NeighborhoodId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DepotAddress
-        /// </summary>
-        [DataMember(Name = "depotAddress", EmitDefaultValue = false)]
-        public string DepotAddress { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class DefinitionServiceSelfPickupPoint {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class OrderServiceDepotDetail {\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
             sb.Append("  Longitude: ").Append(Longitude).Append("\n");
             sb.Append("  RegionId: ").Append(RegionId).Append("\n");
-            sb.Append("  CityId: ").Append(CityId).Append("\n");
-            sb.Append("  CountryId: ").Append(CountryId).Append("\n");
-            sb.Append("  NeighborhoodId: ").Append(NeighborhoodId).Append("\n");
-            sb.Append("  DepotAddress: ").Append(DepotAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,26 +93,21 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as DefinitionServiceSelfPickupPoint);
+            return this.Equals(input as OrderServiceDepotDetail);
         }
 
         /// <summary>
-        /// Returns true if DefinitionServiceSelfPickupPoint instances are equal
+        /// Returns true if OrderServiceDepotDetail instances are equal
         /// </summary>
-        /// <param name="input">Instance of DefinitionServiceSelfPickupPoint to be compared</param>
+        /// <param name="input">Instance of OrderServiceDepotDetail to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DefinitionServiceSelfPickupPoint input)
+        public bool Equals(OrderServiceDepotDetail input)
         {
             if (input == null)
             {
                 return false;
             }
             return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
                 (
                     this.Latitude == input.Latitude ||
                     this.Latitude.Equals(input.Latitude)
@@ -169,23 +119,6 @@ namespace Kiler.Dotnet.ApiClient.Model
                 (
                     this.RegionId == input.RegionId ||
                     this.RegionId.Equals(input.RegionId)
-                ) && 
-                (
-                    this.CityId == input.CityId ||
-                    this.CityId.Equals(input.CityId)
-                ) && 
-                (
-                    this.CountryId == input.CountryId ||
-                    this.CountryId.Equals(input.CountryId)
-                ) && 
-                (
-                    this.NeighborhoodId == input.NeighborhoodId ||
-                    this.NeighborhoodId.Equals(input.NeighborhoodId)
-                ) && 
-                (
-                    this.DepotAddress == input.DepotAddress ||
-                    (this.DepotAddress != null &&
-                    this.DepotAddress.Equals(input.DepotAddress))
                 );
         }
 
@@ -198,20 +131,9 @@ namespace Kiler.Dotnet.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
                 hashCode = (hashCode * 59) + this.Latitude.GetHashCode();
                 hashCode = (hashCode * 59) + this.Longitude.GetHashCode();
                 hashCode = (hashCode * 59) + this.RegionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.CityId.GetHashCode();
-                hashCode = (hashCode * 59) + this.CountryId.GetHashCode();
-                hashCode = (hashCode * 59) + this.NeighborhoodId.GetHashCode();
-                if (this.DepotAddress != null)
-                {
-                    hashCode = (hashCode * 59) + this.DepotAddress.GetHashCode();
-                }
                 return hashCode;
             }
         }

@@ -38,6 +38,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="orderDate">orderDate.</param>
         /// <param name="deliveryAddress">deliveryAddress.</param>
         /// <param name="deliveryTypeCode">deliveryTypeCode.</param>
+        /// <param name="depot">depot.</param>
         /// <param name="billingAddress">billingAddress.</param>
         /// <param name="productTotal">productTotal.</param>
         /// <param name="orderTotal">orderTotal.</param>
@@ -56,12 +57,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="editUntil">editUntil.</param>
         /// <param name="deliveryTypeDiscount">deliveryTypeDiscount.</param>
         /// <param name="status">status.</param>
-        public OrderServiceOrders(int orderId = default(int), DateTime orderDate = default(DateTime), string deliveryAddress = default(string), string deliveryTypeCode = default(string), string billingAddress = default(string), double productTotal = default(double), double orderTotal = default(double), double productDiscountsTotal = default(double), int bagAmount = default(int), double bagTotal = default(double), string orderNote = default(string), bool active = default(bool), string cityName = default(string), string countyName = default(string), string paymentType = default(string), DateTime deliveryTimeStart = default(DateTime), DateTime deliveryTimeEnd = default(DateTime), double fee = default(double), int region = default(int), DateTime editUntil = default(DateTime), double deliveryTypeDiscount = default(double), OrderServiceOrderStatus status = default(OrderServiceOrderStatus))
+        public OrderServiceOrders(int orderId = default(int), DateTime orderDate = default(DateTime), string deliveryAddress = default(string), string deliveryTypeCode = default(string), OrderServiceDepotDetail depot = default(OrderServiceDepotDetail), string billingAddress = default(string), double productTotal = default(double), double orderTotal = default(double), double productDiscountsTotal = default(double), int bagAmount = default(int), double bagTotal = default(double), string orderNote = default(string), bool active = default(bool), string cityName = default(string), string countyName = default(string), string paymentType = default(string), DateTime deliveryTimeStart = default(DateTime), DateTime deliveryTimeEnd = default(DateTime), double fee = default(double), int region = default(int), DateTime editUntil = default(DateTime), double deliveryTypeDiscount = default(double), OrderServiceOrderStatus status = default(OrderServiceOrderStatus))
         {
             this.OrderId = orderId;
             this.OrderDate = orderDate;
             this.DeliveryAddress = deliveryAddress;
             this.DeliveryTypeCode = deliveryTypeCode;
+            this.Depot = depot;
             this.BillingAddress = billingAddress;
             this.ProductTotal = productTotal;
             this.OrderTotal = orderTotal;
@@ -105,6 +107,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = false)]
         public string DeliveryTypeCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Depot
+        /// </summary>
+        [DataMember(Name = "depot", EmitDefaultValue = false)]
+        public OrderServiceDepotDetail Depot { get; set; }
 
         /// <summary>
         /// Gets or Sets BillingAddress
@@ -226,6 +234,7 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("  OrderDate: ").Append(OrderDate).Append("\n");
             sb.Append("  DeliveryAddress: ").Append(DeliveryAddress).Append("\n");
             sb.Append("  DeliveryTypeCode: ").Append(DeliveryTypeCode).Append("\n");
+            sb.Append("  Depot: ").Append(Depot).Append("\n");
             sb.Append("  BillingAddress: ").Append(BillingAddress).Append("\n");
             sb.Append("  ProductTotal: ").Append(ProductTotal).Append("\n");
             sb.Append("  OrderTotal: ").Append(OrderTotal).Append("\n");
@@ -297,6 +306,11 @@ namespace Kiler.Dotnet.ApiClient.Model
                     this.DeliveryTypeCode == input.DeliveryTypeCode ||
                     (this.DeliveryTypeCode != null &&
                     this.DeliveryTypeCode.Equals(input.DeliveryTypeCode))
+                ) && 
+                (
+                    this.Depot == input.Depot ||
+                    (this.Depot != null &&
+                    this.Depot.Equals(input.Depot))
                 ) && 
                 (
                     this.BillingAddress == input.BillingAddress ||
@@ -402,6 +416,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 if (this.DeliveryTypeCode != null)
                 {
                     hashCode = (hashCode * 59) + this.DeliveryTypeCode.GetHashCode();
+                }
+                if (this.Depot != null)
+                {
+                    hashCode = (hashCode * 59) + this.Depot.GetHashCode();
                 }
                 if (this.BillingAddress != null)
                 {

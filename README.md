@@ -266,6 +266,7 @@ Class | Method | HTTP request | Description
  - [Model.OrderServiceCampaignResponse](docs/OrderServiceCampaignResponse.md)
  - [Model.OrderServiceCheckoutItem](docs/OrderServiceCheckoutItem.md)
  - [Model.OrderServiceCheckoutRequest](docs/OrderServiceCheckoutRequest.md)
+ - [Model.OrderServiceDepotDetail](docs/OrderServiceDepotDetail.md)
  - [Model.OrderServiceGetOrderListResponse](docs/OrderServiceGetOrderListResponse.md)
  - [Model.OrderServiceGetOrderRequest](docs/OrderServiceGetOrderRequest.md)
  - [Model.OrderServiceOrderRequest](docs/OrderServiceOrderRequest.md)

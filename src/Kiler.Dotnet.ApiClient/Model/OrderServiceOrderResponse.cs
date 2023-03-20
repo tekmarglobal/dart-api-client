@@ -56,7 +56,8 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="campaignTotalDiscount">campaignTotalDiscount.</param>
         /// <param name="deliveryTypeDiscount">deliveryTypeDiscount.</param>
         /// <param name="deliveryTypeCode">deliveryTypeCode.</param>
-        public OrderServiceOrderResponse(int id = default(int), string uuid = default(string), int customer = default(int), DateTime orderDate = default(DateTime), string deliveryAddress = default(string), string billingAdrress = default(string), double productTotal = default(double), double orderTotal = default(double), List<OrderServiceROrderProducts> orderProducts = default(List<OrderServiceROrderProducts>), string orderNote = default(string), string paymentType = default(string), double productDiscountsTotal = default(double), double fee = default(double), int bagAmount = default(int), double bagTotal = default(double), DateTime deliveryTimeStart = default(DateTime), DateTime deliveryTimeEnd = default(DateTime), int region = default(int), List<OrderServiceCampaignResponse> appliedCampaigns = default(List<OrderServiceCampaignResponse>), double campaignTotalDiscount = default(double), double deliveryTypeDiscount = default(double), string deliveryTypeCode = default(string))
+        /// <param name="depot">depot.</param>
+        public OrderServiceOrderResponse(int id = default(int), string uuid = default(string), int customer = default(int), DateTime orderDate = default(DateTime), string deliveryAddress = default(string), string billingAdrress = default(string), double productTotal = default(double), double orderTotal = default(double), List<OrderServiceROrderProducts> orderProducts = default(List<OrderServiceROrderProducts>), string orderNote = default(string), string paymentType = default(string), double productDiscountsTotal = default(double), double fee = default(double), int bagAmount = default(int), double bagTotal = default(double), DateTime deliveryTimeStart = default(DateTime), DateTime deliveryTimeEnd = default(DateTime), int region = default(int), List<OrderServiceCampaignResponse> appliedCampaigns = default(List<OrderServiceCampaignResponse>), double campaignTotalDiscount = default(double), double deliveryTypeDiscount = default(double), string deliveryTypeCode = default(string), OrderServiceDepotDetail depot = default(OrderServiceDepotDetail))
         {
             this.Id = id;
             this.Uuid = uuid;
@@ -80,6 +81,7 @@ namespace Kiler.Dotnet.ApiClient.Model
             this.CampaignTotalDiscount = campaignTotalDiscount;
             this.DeliveryTypeDiscount = deliveryTypeDiscount;
             this.DeliveryTypeCode = deliveryTypeCode;
+            this.Depot = depot;
         }
 
         /// <summary>
@@ -215,6 +217,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         public string DeliveryTypeCode { get; set; }
 
         /// <summary>
+        /// Gets or Sets Depot
+        /// </summary>
+        [DataMember(Name = "depot", EmitDefaultValue = false)]
+        public OrderServiceDepotDetail Depot { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -244,6 +252,7 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("  CampaignTotalDiscount: ").Append(CampaignTotalDiscount).Append("\n");
             sb.Append("  DeliveryTypeDiscount: ").Append(DeliveryTypeDiscount).Append("\n");
             sb.Append("  DeliveryTypeCode: ").Append(DeliveryTypeCode).Append("\n");
+            sb.Append("  Depot: ").Append(Depot).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +388,11 @@ namespace Kiler.Dotnet.ApiClient.Model
                     this.DeliveryTypeCode == input.DeliveryTypeCode ||
                     (this.DeliveryTypeCode != null &&
                     this.DeliveryTypeCode.Equals(input.DeliveryTypeCode))
+                ) && 
+                (
+                    this.Depot == input.Depot ||
+                    (this.Depot != null &&
+                    this.Depot.Equals(input.Depot))
                 );
         }
 
@@ -445,6 +459,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 if (this.DeliveryTypeCode != null)
                 {
                     hashCode = (hashCode * 59) + this.DeliveryTypeCode.GetHashCode();
+                }
+                if (this.Depot != null)
+                {
+                    hashCode = (hashCode * 59) + this.Depot.GetHashCode();
                 }
                 return hashCode;
             }

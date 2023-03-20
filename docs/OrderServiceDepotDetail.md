@@ -1,12 +1,12 @@
-# Kiler.Dotnet.ApiClient.Model.OrderServiceCheckoutItem
+# Kiler.Dotnet.ApiClient.Model.OrderServiceDepotDetail
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** |  | [optional] 
-**Amount** | **double** |  | [optional] 
-**IsDiscount** | **bool** |  | [optional] 
+**Latitude** | **double** |  | [optional] 
+**Longitude** | **double** |  | [optional] 
+**RegionId** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
