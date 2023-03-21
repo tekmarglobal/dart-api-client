@@ -79,11 +79,11 @@ namespace Example
             // config.ApiKeyPrefix.Add("Authorization", "Bearer");
 
             var apiInstance = new AccountApi(config);
-            var body = new AccountServiceCheckVersionRequest(); // AccountServiceCheckVersionRequest |  (optional) 
+            var accountServiceCheckVersionRequest = new AccountServiceCheckVersionRequest(); // AccountServiceCheckVersionRequest |  (optional) 
 
             try
             {
-                RestResultOfAccountServiceCheckVersionResponse result = apiInstance.ApiAccountCheckversionPost(body);
+                RestResultOfAccountServiceCheckVersionResponse result = apiInstance.ApiAccountCheckversionPost(accountServiceCheckVersionRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -112,6 +112,8 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**ApiAccountLogoutGet**](docs/AccountApi.md#apiaccountlogoutget) | **GET** /api/Account/Logout | 
 *AccountApi* | [**ApiAccountWhoAmIGet**](docs/AccountApi.md#apiaccountwhoamiget) | **GET** /api/Account/WhoAmI | 
 *AdminApi* | [**ApiAdminBranchPost**](docs/AdminApi.md#apiadminbranchpost) | **POST** /api/Admin/Branch | 
+*AdminApi* | [**ApiAdminCheckRegionStatusForNeighborhoodPost**](docs/AdminApi.md#apiadmincheckregionstatusforneighborhoodpost) | **POST** /api/Admin/CheckRegionStatusForNeighborhood | 
+*AdminApi* | [**ApiAdminCheckRegionStatusPost**](docs/AdminApi.md#apiadmincheckregionstatuspost) | **POST** /api/Admin/CheckRegionStatus | 
 *AdminApi* | [**ApiAdminCompaniesPost**](docs/AdminApi.md#apiadmincompaniespost) | **POST** /api/Admin/Companies | 
 *AdminApi* | [**ApiAdminGenerateTimeSlotsGet**](docs/AdminApi.md#apiadmingeneratetimeslotsget) | **GET** /api/Admin/GenerateTimeSlots | 
 *AdminApi* | [**ApiAdminGenerateTimeSlotsPost**](docs/AdminApi.md#apiadmingeneratetimeslotspost) | **POST** /api/Admin/GenerateTimeSlots | 
@@ -166,6 +168,7 @@ Class | Method | HTTP request | Description
 *DefinitionApi* | [**ApiDefinitionGetAllSelfPickupPointsGet**](docs/DefinitionApi.md#apidefinitiongetallselfpickuppointsget) | **GET** /api/Definition/GetAllSelfPickupPoints | 
 *DefinitionApi* | [**ApiDefinitionGetSelfPickupPointInCountyGet**](docs/DefinitionApi.md#apidefinitiongetselfpickuppointincountyget) | **GET** /api/Definition/GetSelfPickupPointInCounty | 
 *DefinitionApi* | [**ApiDefinitionGetSelfPickupPointsInCityGet**](docs/DefinitionApi.md#apidefinitiongetselfpickuppointsincityget) | **GET** /api/Definition/GetSelfPickupPointsInCity | 
+*DefinitionApi* | [**ApiDefinitionGetSelfPickupPointsInNeighborhoodGet**](docs/DefinitionApi.md#apidefinitiongetselfpickuppointsinneighborhoodget) | **GET** /api/Definition/GetSelfPickupPointsInNeighborhood | 
 *DefinitionApi* | [**ApiDefinitionHelloGet**](docs/DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
 *DefinitionApi* | [**ApiDefinitionNeighborhoodPost**](docs/DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
 *DefinitionApi* | [**ApiDefinitionUpdateAgreementLogPost**](docs/DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
@@ -218,6 +221,7 @@ Class | Method | HTTP request | Description
  - [Model.AdminServiceCompanyResponse](docs/AdminServiceCompanyResponse.md)
  - [Model.AdminServiceRegionNeighborhoodRequest](docs/AdminServiceRegionNeighborhoodRequest.md)
  - [Model.AdminServiceRegionResponse](docs/AdminServiceRegionResponse.md)
+ - [Model.AdminServiceRegionStatusCode](docs/AdminServiceRegionStatusCode.md)
  - [Model.AdminServiceTimeSlotResponse](docs/AdminServiceTimeSlotResponse.md)
  - [Model.AdminServiceUpdateRegionNeighborhoodRequest](docs/AdminServiceUpdateRegionNeighborhoodRequest.md)
  - [Model.AdminServiceUploadImageResponse](docs/AdminServiceUploadImageResponse.md)
@@ -299,6 +303,7 @@ Class | Method | HTTP request | Description
  - [Model.RestResultOfAccountServiceCheckVersionResponse](docs/RestResultOfAccountServiceCheckVersionResponse.md)
  - [Model.RestResultOfAccountServiceLoginResponse](docs/RestResultOfAccountServiceLoginResponse.md)
  - [Model.RestResultOfAdminServiceAdminNeighborResponse](docs/RestResultOfAdminServiceAdminNeighborResponse.md)
+ - [Model.RestResultOfAdminServiceRegionStatusCode](docs/RestResultOfAdminServiceRegionStatusCode.md)
  - [Model.RestResultOfAdminServiceUploadImageResponse](docs/RestResultOfAdminServiceUploadImageResponse.md)
  - [Model.RestResultOfBannerServiceBannerResponse](docs/RestResultOfBannerServiceBannerResponse.md)
  - [Model.RestResultOfCartServiceCampaignApplyResponse](docs/RestResultOfCartServiceCampaignApplyResponse.md)

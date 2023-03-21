@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceFavoriteListResponse</returns>
-        RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest));
+        RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest));
 
         /// <summary>
         /// 
@@ -41,16 +41,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceFavoriteListResponse</returns>
-        ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostWithHttpInfo(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest));
+        ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostWithHttpInfo(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceFavoriteListResponse</returns>
-        RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest));
+        RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest));
 
         /// <summary>
         /// 
@@ -59,9 +59,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceFavoriteListResponse</returns>
-        ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteWithHttpInfo(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest));
+        ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteWithHttpInfo(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -102,9 +102,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceRProduct</returns>
-        RestResultOfProductServiceRProduct ApiProductPost(ProductServiceProductRequest body = default(ProductServiceProductRequest));
+        RestResultOfProductServiceRProduct ApiProductPost(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest));
 
         /// <summary>
         /// 
@@ -113,16 +113,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceRProduct</returns>
-        ApiResponse<RestResultOfProductServiceRProduct> ApiProductPostWithHttpInfo(ProductServiceProductRequest body = default(ProductServiceProductRequest));
+        ApiResponse<RestResultOfProductServiceRProduct> ApiProductPostWithHttpInfo(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <returns>RestResultOfListOfProductServiceRProduct</returns>
-        RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest));
+        RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest));
 
         /// <summary>
         /// 
@@ -131,9 +131,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfProductServiceRProduct</returns>
-        ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostWithHttpInfo(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest));
+        ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostWithHttpInfo(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -154,9 +154,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <returns>RestResultOfListOfProductServiceRProduct</returns>
-        RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest));
+        RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest));
 
         /// <summary>
         /// 
@@ -165,16 +165,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfProductServiceRProduct</returns>
-        ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostWithHttpInfo(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest));
+        ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostWithHttpInfo(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceRecommendProductResponse</returns>
-        RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest));
+        RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest));
 
         /// <summary>
         /// 
@@ -183,9 +183,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceRecommendProductResponse</returns>
-        ApiResponse<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostWithHttpInfo(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest));
+        ApiResponse<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostWithHttpInfo(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest));
         #endregion Synchronous Operations
     }
 
@@ -202,10 +202,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceFavoriteListResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -214,10 +214,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceFavoriteListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductAddToFavoriteListPostWithHttpInfoAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductAddToFavoriteListPostWithHttpInfoAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -225,10 +225,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceFavoriteListResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -237,10 +237,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceFavoriteListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -294,10 +294,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceRProduct</returns>
-        System.Threading.Tasks.Task<RestResultOfProductServiceRProduct> ApiProductPostAsync(ProductServiceProductRequest body = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfProductServiceRProduct> ApiProductPostAsync(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -306,10 +306,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceRProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceRProduct>> ApiProductPostWithHttpInfoAsync(ProductServiceProductRequest body = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceRProduct>> ApiProductPostWithHttpInfoAsync(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -317,10 +317,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfProductServiceRProduct</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostAsync(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostAsync(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -329,10 +329,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfProductServiceRProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductAlternativesPostWithHttpInfoAsync(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductAlternativesPostWithHttpInfoAsync(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -361,10 +361,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfProductServiceRProduct</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostAsync(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostAsync(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -373,10 +373,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfProductServiceRProduct)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductSearchPostWithHttpInfoAsync(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductSearchPostWithHttpInfoAsync(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -384,10 +384,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceRecommendProductResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostAsync(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostAsync(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -396,10 +396,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceRecommendProductResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceRecommendProductResponse>> ApiProductRecommendProductPostWithHttpInfoAsync(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfProductServiceRecommendProductResponse>> ApiProductRecommendProductPostWithHttpInfoAsync(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -524,11 +524,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceFavoriteListResponse</returns>
-        public RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest))
+        public RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = ApiProductAddToFavoriteListPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = ApiProductAddToFavoriteListPostWithHttpInfo(productServiceFavoriteRequest);
             return localVarResponse.Data;
         }
 
@@ -536,9 +536,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceFavoriteListResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostWithHttpInfo(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostWithHttpInfo(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -567,7 +567,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceFavoriteRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -593,12 +593,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceFavoriteListResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductAddToFavoriteListPostAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = await ApiProductAddToFavoriteListPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = await ApiProductAddToFavoriteListPostWithHttpInfoAsync(productServiceFavoriteRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -606,10 +606,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceFavoriteListResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductAddToFavoriteListPostWithHttpInfoAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductAddToFavoriteListPostWithHttpInfoAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -639,7 +639,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceFavoriteRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -666,11 +666,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceFavoriteListResponse</returns>
-        public RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest))
+        public RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = ApiProductDeleteFavoriteDeleteWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = ApiProductDeleteFavoriteDeleteWithHttpInfo(productServiceFavoriteRequest);
             return localVarResponse.Data;
         }
 
@@ -678,9 +678,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceFavoriteListResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteWithHttpInfo(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteWithHttpInfo(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -709,7 +709,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceFavoriteRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -735,12 +735,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceFavoriteListResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfProductServiceFavoriteListResponse> ApiProductDeleteFavoriteDeleteAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = await ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse> localVarResponse = await ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(productServiceFavoriteRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -748,10 +748,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceFavoriteRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceFavoriteListResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(ProductServiceFavoriteRequest body = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceFavoriteListResponse>> ApiProductDeleteFavoriteDeleteWithHttpInfoAsync(ProductServiceFavoriteRequest productServiceFavoriteRequest = default(ProductServiceFavoriteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -781,7 +781,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceFavoriteRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1084,11 +1084,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceRProduct</returns>
-        public RestResultOfProductServiceRProduct ApiProductPost(ProductServiceProductRequest body = default(ProductServiceProductRequest))
+        public RestResultOfProductServiceRProduct ApiProductPost(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> localVarResponse = ApiProductPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> localVarResponse = ApiProductPostWithHttpInfo(productServiceProductRequest);
             return localVarResponse.Data;
         }
 
@@ -1096,9 +1096,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceRProduct</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> ApiProductPostWithHttpInfo(ProductServiceProductRequest body = default(ProductServiceProductRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> ApiProductPostWithHttpInfo(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1127,7 +1127,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1153,12 +1153,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceRProduct</returns>
-        public async System.Threading.Tasks.Task<RestResultOfProductServiceRProduct> ApiProductPostAsync(ProductServiceProductRequest body = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfProductServiceRProduct> ApiProductPostAsync(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> localVarResponse = await ApiProductPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct> localVarResponse = await ApiProductPostWithHttpInfoAsync(productServiceProductRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1166,10 +1166,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceRProduct)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct>> ApiProductPostWithHttpInfoAsync(ProductServiceProductRequest body = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRProduct>> ApiProductPostWithHttpInfoAsync(ProductServiceProductRequest productServiceProductRequest = default(ProductServiceProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1199,7 +1199,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1226,11 +1226,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <returns>RestResultOfListOfProductServiceRProduct</returns>
-        public RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest))
+        public RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = ApiProductProductAlternativesPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = ApiProductProductAlternativesPostWithHttpInfo(productServiceProductAlternativesRequest);
             return localVarResponse.Data;
         }
 
@@ -1238,9 +1238,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfProductServiceRProduct</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostWithHttpInfo(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostWithHttpInfo(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1269,7 +1269,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceProductAlternativesRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1295,12 +1295,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfProductServiceRProduct</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostAsync(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductAlternativesPostAsync(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = await ApiProductProductAlternativesPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = await ApiProductProductAlternativesPostWithHttpInfoAsync(productServiceProductAlternativesRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1308,10 +1308,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceProductAlternativesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfProductServiceRProduct)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductAlternativesPostWithHttpInfoAsync(ProductServiceProductAlternativesRequest body = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductAlternativesPostWithHttpInfoAsync(ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = default(ProductServiceProductAlternativesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1341,7 +1341,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceProductAlternativesRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1498,11 +1498,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <returns>RestResultOfListOfProductServiceRProduct</returns>
-        public RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest))
+        public RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = ApiProductProductSearchPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = ApiProductProductSearchPostWithHttpInfo(productServiceSearchProductRequest);
             return localVarResponse.Data;
         }
 
@@ -1510,9 +1510,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfProductServiceRProduct</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostWithHttpInfo(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostWithHttpInfo(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1541,7 +1541,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceSearchProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1567,12 +1567,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfProductServiceRProduct</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostAsync(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfProductServiceRProduct> ApiProductProductSearchPostAsync(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = await ApiProductProductSearchPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct> localVarResponse = await ApiProductProductSearchPostWithHttpInfoAsync(productServiceSearchProductRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1580,10 +1580,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceSearchProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfProductServiceRProduct)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductSearchPostWithHttpInfoAsync(ProductServiceSearchProductRequest body = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfProductServiceRProduct>> ApiProductProductSearchPostWithHttpInfoAsync(ProductServiceSearchProductRequest productServiceSearchProductRequest = default(ProductServiceSearchProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1613,7 +1613,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceSearchProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1640,11 +1640,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <returns>RestResultOfProductServiceRecommendProductResponse</returns>
-        public RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest))
+        public RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> localVarResponse = ApiProductRecommendProductPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> localVarResponse = ApiProductRecommendProductPostWithHttpInfo(productServiceRecommendProductRequest);
             return localVarResponse.Data;
         }
 
@@ -1652,9 +1652,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfProductServiceRecommendProductResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostWithHttpInfo(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostWithHttpInfo(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1683,7 +1683,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceRecommendProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1709,12 +1709,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfProductServiceRecommendProductResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostAsync(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfProductServiceRecommendProductResponse> ApiProductRecommendProductPostAsync(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> localVarResponse = await ApiProductRecommendProductPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse> localVarResponse = await ApiProductRecommendProductPostWithHttpInfoAsync(productServiceRecommendProductRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1722,10 +1722,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="productServiceRecommendProductRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfProductServiceRecommendProductResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse>> ApiProductRecommendProductPostWithHttpInfoAsync(ProductServiceRecommendProductRequest body = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfProductServiceRecommendProductResponse>> ApiProductRecommendProductPostWithHttpInfoAsync(ProductServiceRecommendProductRequest productServiceRecommendProductRequest = default(ProductServiceRecommendProductRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1755,7 +1755,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = productServiceRecommendProductRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

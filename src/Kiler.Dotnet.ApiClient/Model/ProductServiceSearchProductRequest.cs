@@ -45,7 +45,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets ProductName
         /// </summary>
-        [DataMember(Name = "productName", EmitDefaultValue = false)]
+        [DataMember(Name = "productName", EmitDefaultValue = true)]
         public string ProductName { get; set; }
 
         /// <summary>

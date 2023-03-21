@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Image** | **string** |  | [optional] 
 **SmallImage** | **string** |  | [optional] 
 **Conditions** | **string** |  | [optional] 
-**DisplayPriority** | **int** |  | [optional] 
+**DisplayPriority** | **int?** |  | [optional] 
 **ProductIds** | **List&lt;int&gt;** |  | [optional] 
 **Discount** | **double** |  | [optional] 
 

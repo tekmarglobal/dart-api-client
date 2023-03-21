@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <returns>bool</returns>
-        bool ApiCrmCallPost(CrmServiceCallRequest body = default(CrmServiceCallRequest));
+        bool ApiCrmCallPost(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest));
 
         /// <summary>
         /// 
@@ -41,16 +41,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <returns>ApiResponse of bool</returns>
-        ApiResponse<bool> ApiCrmCallPostWithHttpInfo(CrmServiceCallRequest body = default(CrmServiceCallRequest));
+        ApiResponse<bool> ApiCrmCallPostWithHttpInfo(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <returns>RestResultOfCrmServiceTicketResponse</returns>
-        RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost(CrmServiceTicketRequest body = default(CrmServiceTicketRequest));
+        RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest));
 
         /// <summary>
         /// 
@@ -59,9 +59,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCrmServiceTicketResponse</returns>
-        ApiResponse<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostWithHttpInfo(CrmServiceTicketRequest body = default(CrmServiceTicketRequest));
+        ApiResponse<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostWithHttpInfo(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -116,10 +116,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        System.Threading.Tasks.Task<bool> ApiCrmCallPostAsync(CrmServiceCallRequest body = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<bool> ApiCrmCallPostAsync(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -128,10 +128,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool>> ApiCrmCallPostWithHttpInfoAsync(CrmServiceCallRequest body = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<bool>> ApiCrmCallPostWithHttpInfoAsync(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -139,10 +139,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCrmServiceTicketResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostAsync(CrmServiceTicketRequest body = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostAsync(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -151,10 +151,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCrmServiceTicketResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCrmServiceTicketResponse>> ApiCrmCreateTicketPostWithHttpInfoAsync(CrmServiceTicketRequest body = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCrmServiceTicketResponse>> ApiCrmCreateTicketPostWithHttpInfoAsync(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -327,11 +327,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <returns>bool</returns>
-        public bool ApiCrmCallPost(CrmServiceCallRequest body = default(CrmServiceCallRequest))
+        public bool ApiCrmCallPost(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> localVarResponse = ApiCrmCallPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> localVarResponse = ApiCrmCallPostWithHttpInfo(crmServiceCallRequest);
             return localVarResponse.Data;
         }
 
@@ -339,9 +339,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <returns>ApiResponse of bool</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> ApiCrmCallPostWithHttpInfo(CrmServiceCallRequest body = default(CrmServiceCallRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> ApiCrmCallPostWithHttpInfo(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -370,7 +370,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = crmServiceCallRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -396,12 +396,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        public async System.Threading.Tasks.Task<bool> ApiCrmCallPostAsync(CrmServiceCallRequest body = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<bool> ApiCrmCallPostAsync(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> localVarResponse = await ApiCrmCallPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<bool> localVarResponse = await ApiCrmCallPostWithHttpInfoAsync(crmServiceCallRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -409,10 +409,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceCallRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<bool>> ApiCrmCallPostWithHttpInfoAsync(CrmServiceCallRequest body = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<bool>> ApiCrmCallPostWithHttpInfoAsync(CrmServiceCallRequest crmServiceCallRequest = default(CrmServiceCallRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -442,7 +442,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = crmServiceCallRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -469,11 +469,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <returns>RestResultOfCrmServiceTicketResponse</returns>
-        public RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost(CrmServiceTicketRequest body = default(CrmServiceTicketRequest))
+        public RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> localVarResponse = ApiCrmCreateTicketPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> localVarResponse = ApiCrmCreateTicketPostWithHttpInfo(crmServiceTicketRequest);
             return localVarResponse.Data;
         }
 
@@ -481,9 +481,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCrmServiceTicketResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostWithHttpInfo(CrmServiceTicketRequest body = default(CrmServiceTicketRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostWithHttpInfo(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -512,7 +512,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = crmServiceTicketRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -538,12 +538,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCrmServiceTicketResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostAsync(CrmServiceTicketRequest body = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCrmServiceTicketResponse> ApiCrmCreateTicketPostAsync(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> localVarResponse = await ApiCrmCreateTicketPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse> localVarResponse = await ApiCrmCreateTicketPostWithHttpInfoAsync(crmServiceTicketRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -551,10 +551,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="crmServiceTicketRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCrmServiceTicketResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse>> ApiCrmCreateTicketPostWithHttpInfoAsync(CrmServiceTicketRequest body = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCrmServiceTicketResponse>> ApiCrmCreateTicketPostWithHttpInfoAsync(CrmServiceTicketRequest crmServiceTicketRequest = default(CrmServiceTicketRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -584,7 +584,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = crmServiceTicketRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

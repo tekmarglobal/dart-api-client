@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="apiregistersendsmspost"></a>
 # **ApiRegisterSendSmsPost**
-> RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost (RegisterServiceSmsRequest body = null)
+> RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost (RegisterServiceSmsRequest registerServiceSmsRequest = null)
 
 
 
@@ -36,11 +36,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new RegisterApi(config);
-            var body = new RegisterServiceSmsRequest(); // RegisterServiceSmsRequest |  (optional) 
+            var registerServiceSmsRequest = new RegisterServiceSmsRequest(); // RegisterServiceSmsRequest |  (optional) 
 
             try
             {
-                RestResultOfRegisterServiceSmsResponse result = apiInstance.ApiRegisterSendSmsPost(body);
+                RestResultOfRegisterServiceSmsResponse result = apiInstance.ApiRegisterSendSmsPost(registerServiceSmsRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -58,7 +58,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RegisterServiceSmsRequest**](RegisterServiceSmsRequest.md)|  | [optional] 
+ **registerServiceSmsRequest** | [**RegisterServiceSmsRequest**](RegisterServiceSmsRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 <a name="apiregisterverifysmspost"></a>
 # **ApiRegisterVerifySmsPost**
-> RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost (RegisterServiceVerifyRequest body = null)
+> RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost (RegisterServiceVerifyRequest registerServiceVerifyRequest = null)
 
 
 
@@ -109,11 +109,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new RegisterApi(config);
-            var body = new RegisterServiceVerifyRequest(); // RegisterServiceVerifyRequest |  (optional) 
+            var registerServiceVerifyRequest = new RegisterServiceVerifyRequest(); // RegisterServiceVerifyRequest |  (optional) 
 
             try
             {
-                RestResultOfRegisterServiceLoginResponse result = apiInstance.ApiRegisterVerifySmsPost(body);
+                RestResultOfRegisterServiceLoginResponse result = apiInstance.ApiRegisterVerifySmsPost(registerServiceVerifyRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -131,7 +131,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RegisterServiceVerifyRequest**](RegisterServiceVerifyRequest.md)|  | [optional] 
+ **registerServiceVerifyRequest** | [**RegisterServiceVerifyRequest**](RegisterServiceVerifyRequest.md)|  | [optional] 
 
 ### Return type
 

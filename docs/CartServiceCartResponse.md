@@ -5,15 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CartId** | **int** |  | [optional] 
-**Customer** | **int** |  | [optional] 
-**CartTotal** | **double** |  | [optional] 
-**RegionId** | **int** |  | [optional] 
+**Customer** | **int?** |  | [optional] 
+**CartTotal** | **double?** |  | [optional] 
+**RegionId** | **int?** |  | [optional] 
 **DeviceToken** | **string** |  | [optional] 
-**BagTotal** | **double** |  | [optional] 
-**BagAmount** | **int** |  | [optional] 
-**EstimatedFee** | **double** |  | [optional] 
+**BagTotal** | **double?** |  | [optional] 
+**BagAmount** | **int?** |  | [optional] 
+**EstimatedFee** | **double?** |  | [optional] 
 **AppliedCampaigns** | [**List&lt;CartServiceCampaignResponse&gt;**](CartServiceCampaignResponse.md) |  | [optional] 
-**CampaignTotalDiscount** | **double** |  | [optional] 
+**CampaignTotalDiscount** | **double?** |  | [optional] 
 **CartProducts** | [**List&lt;CartServiceRCartProducts&gt;**](CartServiceRCartProducts.md) |  | [optional] 
 **CardProducts** | [**List&lt;CartServiceRCartProducts&gt;**](CartServiceRCartProducts.md) |  | [optional] 
 

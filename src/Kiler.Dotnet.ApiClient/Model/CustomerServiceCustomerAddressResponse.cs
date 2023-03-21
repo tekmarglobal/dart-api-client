@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name = "address", EmitDefaultValue = false)]
+        [DataMember(Name = "address", EmitDefaultValue = true)]
         public List<CustomerServiceRAddress> Address { get; set; }
 
         /// <summary>

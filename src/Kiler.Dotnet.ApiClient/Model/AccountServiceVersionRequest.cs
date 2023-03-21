@@ -49,19 +49,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
         /// Gets or Sets _Version
         /// </summary>
-        [DataMember(Name = "version", EmitDefaultValue = false)]
+        [DataMember(Name = "version", EmitDefaultValue = true)]
         public string _Version { get; set; }
 
         /// <summary>
         /// Gets or Sets Platform
         /// </summary>
-        [DataMember(Name = "platform", EmitDefaultValue = false)]
+        [DataMember(Name = "platform", EmitDefaultValue = true)]
         public string Platform { get; set; }
 
         /// <summary>

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**ApiDefinitionGetAllSelfPickupPointsGet**](DefinitionApi.md#apidefinitiongetallselfpickuppointsget) | **GET** /api/Definition/GetAllSelfPickupPoints | 
 [**ApiDefinitionGetSelfPickupPointInCountyGet**](DefinitionApi.md#apidefinitiongetselfpickuppointincountyget) | **GET** /api/Definition/GetSelfPickupPointInCounty | 
 [**ApiDefinitionGetSelfPickupPointsInCityGet**](DefinitionApi.md#apidefinitiongetselfpickuppointsincityget) | **GET** /api/Definition/GetSelfPickupPointsInCity | 
+[**ApiDefinitionGetSelfPickupPointsInNeighborhoodGet**](DefinitionApi.md#apidefinitiongetselfpickuppointsinneighborhoodget) | **GET** /api/Definition/GetSelfPickupPointsInNeighborhood | 
 [**ApiDefinitionHelloGet**](DefinitionApi.md#apidefinitionhelloget) | **GET** /api/Definition/Hello | 
 [**ApiDefinitionNeighborhoodPost**](DefinitionApi.md#apidefinitionneighborhoodpost) | **POST** /api/Definition/Neighborhood | 
 [**ApiDefinitionUpdateAgreementLogPost**](DefinitionApi.md#apidefinitionupdateagreementlogpost) | **POST** /api/Definition/UpdateAgreementLog | 
@@ -162,7 +163,7 @@ This endpoint does not need any parameter.
 
 <a name="apidefinitioncountiespost"></a>
 # **ApiDefinitionCountiesPost**
-> RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost (DefinitionServiceCountiesRequest body = null)
+> RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost (DefinitionServiceCountiesRequest definitionServiceCountiesRequest = null)
 
 
 
@@ -188,11 +189,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new DefinitionApi(config);
-            var body = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest |  (optional) 
+            var definitionServiceCountiesRequest = new DefinitionServiceCountiesRequest(); // DefinitionServiceCountiesRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfDefinitionServiceCountiesResponse result = apiInstance.ApiDefinitionCountiesPost(body);
+                RestResultOfListOfDefinitionServiceCountiesResponse result = apiInstance.ApiDefinitionCountiesPost(definitionServiceCountiesRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -210,7 +211,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
+ **definitionServiceCountiesRequest** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -586,6 +587,79 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="apidefinitiongetselfpickuppointsinneighborhoodget"></a>
+# **ApiDefinitionGetSelfPickupPointsInNeighborhoodGet**
+> RestResultOfListOfDefinitionServiceSelfPickupPoint ApiDefinitionGetSelfPickupPointsInNeighborhoodGet (int? neighborhood = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Kiler.Dotnet.ApiClient.Api;
+using Kiler.Dotnet.ApiClient.Client;
+using Kiler.Dotnet.ApiClient.Model;
+
+namespace Example
+{
+    public class ApiDefinitionGetSelfPickupPointsInNeighborhoodGetExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure API key authorization: Bearer
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new DefinitionApi(config);
+            var neighborhood = 56;  // int? |  (optional) 
+
+            try
+            {
+                RestResultOfListOfDefinitionServiceSelfPickupPoint result = apiInstance.ApiDefinitionGetSelfPickupPointsInNeighborhoodGet(neighborhood);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling DefinitionApi.ApiDefinitionGetSelfPickupPointsInNeighborhoodGet: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **neighborhood** | **int?**|  | [optional] 
+
+### Return type
+
+[**RestResultOfListOfDefinitionServiceSelfPickupPoint**](RestResultOfListOfDefinitionServiceSelfPickupPoint.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="apidefinitionhelloget"></a>
 # **ApiDefinitionHelloGet**
 > string ApiDefinitionHelloGet ()
@@ -657,7 +731,7 @@ This endpoint does not need any parameter.
 
 <a name="apidefinitionneighborhoodpost"></a>
 # **ApiDefinitionNeighborhoodPost**
-> RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost (DefinitionServiceNeighborRequest body = null)
+> RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost (DefinitionServiceNeighborRequest definitionServiceNeighborRequest = null)
 
 
 
@@ -683,11 +757,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new DefinitionApi(config);
-            var body = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest |  (optional) 
+            var definitionServiceNeighborRequest = new DefinitionServiceNeighborRequest(); // DefinitionServiceNeighborRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfDefinitionServiceNeighborResponse result = apiInstance.ApiDefinitionNeighborhoodPost(body);
+                RestResultOfListOfDefinitionServiceNeighborResponse result = apiInstance.ApiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -705,7 +779,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
+ **definitionServiceNeighborRequest** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -730,7 +804,7 @@ Name | Type | Description  | Notes
 
 <a name="apidefinitionupdateagreementlogpost"></a>
 # **ApiDefinitionUpdateAgreementLogPost**
-> RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost (DefinitionServiceUpdateAgreementRequest body = null)
+> RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost (DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = null)
 
 
 
@@ -756,11 +830,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new DefinitionApi(config);
-            var body = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest |  (optional) 
+            var definitionServiceUpdateAgreementRequest = new DefinitionServiceUpdateAgreementRequest(); // DefinitionServiceUpdateAgreementRequest |  (optional) 
 
             try
             {
-                RestResultOfDefinitionServiceUpdateAgreementLogResponse result = apiInstance.ApiDefinitionUpdateAgreementLogPost(body);
+                RestResultOfDefinitionServiceUpdateAgreementLogResponse result = apiInstance.ApiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -778,7 +852,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
+ **definitionServiceUpdateAgreementRequest** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
 
 ### Return type
 

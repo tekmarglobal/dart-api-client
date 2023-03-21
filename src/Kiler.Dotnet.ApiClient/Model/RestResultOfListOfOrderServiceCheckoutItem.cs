@@ -53,13 +53,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
+        [DataMember(Name = "message", EmitDefaultValue = true)]
         public string Message { get; set; }
 
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name = "data", EmitDefaultValue = false)]
+        [DataMember(Name = "data", EmitDefaultValue = true)]
         public List<OrderServiceCheckoutItem> Data { get; set; }
 
         /// <summary>

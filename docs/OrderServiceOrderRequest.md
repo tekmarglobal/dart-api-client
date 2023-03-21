@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **OrderNote** | **string** |  | [optional] 
 **PaymentTypeCode** | **string** |  | [optional] 
 **DeliveryType** | **string** |  | [optional] 
-**ChannelId** | **int** |  | [optional] 
+**ChannelId** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -51,7 +51,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets StateMessage
         /// </summary>
-        [DataMember(Name = "stateMessage", EmitDefaultValue = false)]
+        [DataMember(Name = "stateMessage", EmitDefaultValue = true)]
         public string StateMessage { get; set; }
 
         /// <summary>

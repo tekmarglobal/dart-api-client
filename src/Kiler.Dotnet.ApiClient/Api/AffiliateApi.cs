@@ -48,9 +48,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <returns>string</returns>
-        string ApiAffiliateGetShareLinkPost(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest));
+        string ApiAffiliateGetShareLinkPost(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest));
 
         /// <summary>
         /// 
@@ -59,9 +59,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ApiAffiliateGetShareLinkPostWithHttpInfo(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest));
+        ApiResponse<string> ApiAffiliateGetShareLinkPostWithHttpInfo(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -119,10 +119,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ApiAffiliateGetShareLinkPostAsync(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<string> ApiAffiliateGetShareLinkPostAsync(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -131,10 +131,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ApiAffiliateGetShareLinkPostWithHttpInfoAsync(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<string>> ApiAffiliateGetShareLinkPostWithHttpInfoAsync(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -422,11 +422,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <returns>string</returns>
-        public string ApiAffiliateGetShareLinkPost(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest))
+        public string ApiAffiliateGetShareLinkPost(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<string> localVarResponse = ApiAffiliateGetShareLinkPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<string> localVarResponse = ApiAffiliateGetShareLinkPostWithHttpInfo(affiliateServiceLinkRequest);
             return localVarResponse.Data;
         }
 
@@ -434,9 +434,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<string> ApiAffiliateGetShareLinkPostWithHttpInfo(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<string> ApiAffiliateGetShareLinkPostWithHttpInfo(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -465,7 +465,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = affiliateServiceLinkRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -491,12 +491,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ApiAffiliateGetShareLinkPostAsync(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<string> ApiAffiliateGetShareLinkPostAsync(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<string> localVarResponse = await ApiAffiliateGetShareLinkPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<string> localVarResponse = await ApiAffiliateGetShareLinkPostWithHttpInfoAsync(affiliateServiceLinkRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -504,10 +504,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="affiliateServiceLinkRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<string>> ApiAffiliateGetShareLinkPostWithHttpInfoAsync(AffiliateServiceLinkRequest body = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<string>> ApiAffiliateGetShareLinkPostWithHttpInfoAsync(AffiliateServiceLinkRequest affiliateServiceLinkRequest = default(AffiliateServiceLinkRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -537,7 +537,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = affiliateServiceLinkRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="apiproductaddtofavoritelistpost"></a>
 # **ApiProductAddToFavoriteListPost**
-> RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost (ProductServiceFavoriteRequest body = null)
+> RestResultOfProductServiceFavoriteListResponse ApiProductAddToFavoriteListPost (ProductServiceFavoriteRequest productServiceFavoriteRequest = null)
 
 
 
@@ -43,11 +43,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest |  (optional) 
+            var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest |  (optional) 
 
             try
             {
-                RestResultOfProductServiceFavoriteListResponse result = apiInstance.ApiProductAddToFavoriteListPost(body);
+                RestResultOfProductServiceFavoriteListResponse result = apiInstance.ApiProductAddToFavoriteListPost(productServiceFavoriteRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -65,7 +65,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 <a name="apiproductdeletefavoritedelete"></a>
 # **ApiProductDeleteFavoriteDelete**
-> RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete (ProductServiceFavoriteRequest body = null)
+> RestResultOfProductServiceFavoriteListResponse ApiProductDeleteFavoriteDelete (ProductServiceFavoriteRequest productServiceFavoriteRequest = null)
 
 
 
@@ -116,11 +116,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest |  (optional) 
+            var productServiceFavoriteRequest = new ProductServiceFavoriteRequest(); // ProductServiceFavoriteRequest |  (optional) 
 
             try
             {
-                RestResultOfProductServiceFavoriteListResponse result = apiInstance.ApiProductDeleteFavoriteDelete(body);
+                RestResultOfProductServiceFavoriteListResponse result = apiInstance.ApiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -138,7 +138,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -306,7 +306,7 @@ void (empty response body)
 
 <a name="apiproductpost"></a>
 # **ApiProductPost**
-> RestResultOfProductServiceRProduct ApiProductPost (ProductServiceProductRequest body = null)
+> RestResultOfProductServiceRProduct ApiProductPost (ProductServiceProductRequest productServiceProductRequest = null)
 
 
 
@@ -332,11 +332,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceProductRequest(); // ProductServiceProductRequest |  (optional) 
+            var productServiceProductRequest = new ProductServiceProductRequest(); // ProductServiceProductRequest |  (optional) 
 
             try
             {
-                RestResultOfProductServiceRProduct result = apiInstance.ApiProductPost(body);
+                RestResultOfProductServiceRProduct result = apiInstance.ApiProductPost(productServiceProductRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -354,7 +354,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
+ **productServiceProductRequest** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 <a name="apiproductproductalternativespost"></a>
 # **ApiProductProductAlternativesPost**
-> RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost (ProductServiceProductAlternativesRequest body = null)
+> RestResultOfListOfProductServiceRProduct ApiProductProductAlternativesPost (ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = null)
 
 
 
@@ -405,11 +405,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceProductAlternativesRequest(); // ProductServiceProductAlternativesRequest |  (optional) 
+            var productServiceProductAlternativesRequest = new ProductServiceProductAlternativesRequest(); // ProductServiceProductAlternativesRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfProductServiceRProduct result = apiInstance.ApiProductProductAlternativesPost(body);
+                RestResultOfListOfProductServiceRProduct result = apiInstance.ApiProductProductAlternativesPost(productServiceProductAlternativesRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -427,7 +427,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceProductAlternativesRequest**](ProductServiceProductAlternativesRequest.md)|  | [optional] 
+ **productServiceProductAlternativesRequest** | [**ProductServiceProductAlternativesRequest**](ProductServiceProductAlternativesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -521,7 +521,7 @@ This endpoint does not need any parameter.
 
 <a name="apiproductproductsearchpost"></a>
 # **ApiProductProductSearchPost**
-> RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost (ProductServiceSearchProductRequest body = null)
+> RestResultOfListOfProductServiceRProduct ApiProductProductSearchPost (ProductServiceSearchProductRequest productServiceSearchProductRequest = null)
 
 
 
@@ -547,11 +547,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest |  (optional) 
+            var productServiceSearchProductRequest = new ProductServiceSearchProductRequest(); // ProductServiceSearchProductRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfProductServiceRProduct result = apiInstance.ApiProductProductSearchPost(body);
+                RestResultOfListOfProductServiceRProduct result = apiInstance.ApiProductProductSearchPost(productServiceSearchProductRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -569,7 +569,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
+ **productServiceSearchProductRequest** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 <a name="apiproductrecommendproductpost"></a>
 # **ApiProductRecommendProductPost**
-> RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost (ProductServiceRecommendProductRequest body = null)
+> RestResultOfProductServiceRecommendProductResponse ApiProductRecommendProductPost (ProductServiceRecommendProductRequest productServiceRecommendProductRequest = null)
 
 
 
@@ -620,11 +620,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new ProductApi(config);
-            var body = new ProductServiceRecommendProductRequest(); // ProductServiceRecommendProductRequest |  (optional) 
+            var productServiceRecommendProductRequest = new ProductServiceRecommendProductRequest(); // ProductServiceRecommendProductRequest |  (optional) 
 
             try
             {
-                RestResultOfProductServiceRecommendProductResponse result = apiInstance.ApiProductRecommendProductPost(body);
+                RestResultOfProductServiceRecommendProductResponse result = apiInstance.ApiProductRecommendProductPost(productServiceRecommendProductRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -642,7 +642,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceRecommendProductRequest**](ProductServiceRecommendProductRequest.md)|  | [optional] 
+ **productServiceRecommendProductRequest** | [**ProductServiceRecommendProductRequest**](ProductServiceRecommendProductRequest.md)|  | [optional] 
 
 ### Return type
 

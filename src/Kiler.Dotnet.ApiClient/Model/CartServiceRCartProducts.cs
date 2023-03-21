@@ -44,7 +44,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="productId">productId.</param>
         /// <param name="unitId">unitId.</param>
         /// <param name="isActive">isActive.</param>
-        public CartServiceRCartProducts(int regionProductId = default(int), double quantity = default(double), double listPrice = default(double), double price = default(double), double amount = default(double), double discountAmount = default(double), string name = default(string), int productId = default(int), int unitId = default(int), bool isActive = default(bool))
+        public CartServiceRCartProducts(int regionProductId = default(int), double? quantity = default(double?), double? listPrice = default(double?), double? price = default(double?), double? amount = default(double?), double? discountAmount = default(double?), string name = default(string), int productId = default(int), int unitId = default(int), bool isActive = default(bool))
         {
             this.RegionProductId = regionProductId;
             this.Quantity = quantity;
@@ -67,37 +67,37 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
-        [DataMember(Name = "quantity", EmitDefaultValue = false)]
-        public double Quantity { get; set; }
+        [DataMember(Name = "quantity", EmitDefaultValue = true)]
+        public double? Quantity { get; set; }
 
         /// <summary>
         /// Gets or Sets ListPrice
         /// </summary>
-        [DataMember(Name = "listPrice", EmitDefaultValue = false)]
-        public double ListPrice { get; set; }
+        [DataMember(Name = "listPrice", EmitDefaultValue = true)]
+        public double? ListPrice { get; set; }
 
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public double Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public double? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", EmitDefaultValue = false)]
-        public double Amount { get; set; }
+        [DataMember(Name = "amount", EmitDefaultValue = true)]
+        public double? Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets DiscountAmount
         /// </summary>
-        [DataMember(Name = "discountAmount", EmitDefaultValue = false)]
-        public double DiscountAmount { get; set; }
+        [DataMember(Name = "discountAmount", EmitDefaultValue = true)]
+        public double? DiscountAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -177,23 +177,28 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Quantity == input.Quantity ||
-                    this.Quantity.Equals(input.Quantity)
+                    (this.Quantity != null &&
+                    this.Quantity.Equals(input.Quantity))
                 ) && 
                 (
                     this.ListPrice == input.ListPrice ||
-                    this.ListPrice.Equals(input.ListPrice)
+                    (this.ListPrice != null &&
+                    this.ListPrice.Equals(input.ListPrice))
                 ) && 
                 (
                     this.Price == input.Price ||
-                    this.Price.Equals(input.Price)
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
                 ) && 
                 (
                     this.Amount == input.Amount ||
-                    this.Amount.Equals(input.Amount)
+                    (this.Amount != null &&
+                    this.Amount.Equals(input.Amount))
                 ) && 
                 (
                     this.DiscountAmount == input.DiscountAmount ||
-                    this.DiscountAmount.Equals(input.DiscountAmount)
+                    (this.DiscountAmount != null &&
+                    this.DiscountAmount.Equals(input.DiscountAmount))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -224,11 +229,26 @@ namespace Kiler.Dotnet.ApiClient.Model
             {
                 int hashCode = 41;
                 hashCode = (hashCode * 59) + this.RegionProductId.GetHashCode();
-                hashCode = (hashCode * 59) + this.Quantity.GetHashCode();
-                hashCode = (hashCode * 59) + this.ListPrice.GetHashCode();
-                hashCode = (hashCode * 59) + this.Price.GetHashCode();
-                hashCode = (hashCode * 59) + this.Amount.GetHashCode();
-                hashCode = (hashCode * 59) + this.DiscountAmount.GetHashCode();
+                if (this.Quantity != null)
+                {
+                    hashCode = (hashCode * 59) + this.Quantity.GetHashCode();
+                }
+                if (this.ListPrice != null)
+                {
+                    hashCode = (hashCode * 59) + this.ListPrice.GetHashCode();
+                }
+                if (this.Price != null)
+                {
+                    hashCode = (hashCode * 59) + this.Price.GetHashCode();
+                }
+                if (this.Amount != null)
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
+                if (this.DiscountAmount != null)
+                {
+                    hashCode = (hashCode * 59) + this.DiscountAmount.GetHashCode();
+                }
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();

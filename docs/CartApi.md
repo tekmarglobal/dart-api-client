@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 <a name="apicartcreatecartpost"></a>
 # **ApiCartCreateCartPost**
-> RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost (CartServiceCreateCartRequest body = null)
+> RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost (CartServiceCreateCartRequest cartServiceCreateCartRequest = null)
 
 
 
@@ -191,11 +191,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var body = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest |  (optional) 
+            var cartServiceCreateCartRequest = new CartServiceCreateCartRequest(); // CartServiceCreateCartRequest |  (optional) 
 
             try
             {
-                RestResultOfCartServiceCreateCartResponse result = apiInstance.ApiCartCreateCartPost(body);
+                RestResultOfCartServiceCreateCartResponse result = apiInstance.ApiCartCreateCartPost(cartServiceCreateCartRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -213,7 +213,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CartServiceCreateCartRequest**](CartServiceCreateCartRequest.md)|  | [optional] 
+ **cartServiceCreateCartRequest** | [**CartServiceCreateCartRequest**](CartServiceCreateCartRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -583,7 +583,7 @@ This endpoint does not need any parameter.
 
 <a name="apicartupdatecartpost"></a>
 # **ApiCartUpdateCartPost**
-> RestResultOfCartServiceCartResponse ApiCartUpdateCartPost (CartServiceUpdateCartRequest body = null)
+> RestResultOfCartServiceCartResponse ApiCartUpdateCartPost (CartServiceUpdateCartRequest cartServiceUpdateCartRequest = null)
 
 
 
@@ -609,11 +609,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var body = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest |  (optional) 
+            var cartServiceUpdateCartRequest = new CartServiceUpdateCartRequest(); // CartServiceUpdateCartRequest |  (optional) 
 
             try
             {
-                RestResultOfCartServiceCartResponse result = apiInstance.ApiCartUpdateCartPost(body);
+                RestResultOfCartServiceCartResponse result = apiInstance.ApiCartUpdateCartPost(cartServiceUpdateCartRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -631,7 +631,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CartServiceUpdateCartRequest**](CartServiceUpdateCartRequest.md)|  | [optional] 
+ **cartServiceUpdateCartRequest** | [**CartServiceUpdateCartRequest**](CartServiceUpdateCartRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 <a name="apicartupdatecartregionpost"></a>
 # **ApiCartUpdateCartRegionPost**
-> RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost (CartServiceUpdateCartRegionRequest body = null)
+> RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost (CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = null)
 
 
 
@@ -682,11 +682,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var body = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest |  (optional) 
+            var cartServiceUpdateCartRegionRequest = new CartServiceUpdateCartRegionRequest(); // CartServiceUpdateCartRegionRequest |  (optional) 
 
             try
             {
-                RestResultOfCartServiceUpdateCartRegionResponse result = apiInstance.ApiCartUpdateCartRegionPost(body);
+                RestResultOfCartServiceUpdateCartRegionResponse result = apiInstance.ApiCartUpdateCartRegionPost(cartServiceUpdateCartRegionRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -704,7 +704,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CartServiceUpdateCartRegionRequest**](CartServiceUpdateCartRegionRequest.md)|  | [optional] 
+ **cartServiceUpdateCartRegionRequest** | [**CartServiceUpdateCartRegionRequest**](CartServiceUpdateCartRegionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 <a name="apicartupdatetimeslotpost"></a>
 # **ApiCartUpdateTimeslotPost**
-> RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost (CartServiceUpdateTimeslotRequest body = null)
+> RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost (CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = null)
 
 
 
@@ -755,11 +755,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CartApi(config);
-            var body = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest |  (optional) 
+            var cartServiceUpdateTimeslotRequest = new CartServiceUpdateTimeslotRequest(); // CartServiceUpdateTimeslotRequest |  (optional) 
 
             try
             {
-                RestResultOfCartServiceCartResponse result = apiInstance.ApiCartUpdateTimeslotPost(body);
+                RestResultOfCartServiceCartResponse result = apiInstance.ApiCartUpdateTimeslotPost(cartServiceUpdateTimeslotRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -777,7 +777,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CartServiceUpdateTimeslotRequest**](CartServiceUpdateTimeslotRequest.md)|  | [optional] 
+ **cartServiceUpdateTimeslotRequest** | [**CartServiceUpdateTimeslotRequest**](CartServiceUpdateTimeslotRequest.md)|  | [optional] 
 
 ### Return type
 

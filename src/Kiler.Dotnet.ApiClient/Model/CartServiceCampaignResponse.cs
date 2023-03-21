@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="displayPriority">displayPriority.</param>
         /// <param name="productIds">productIds.</param>
         /// <param name="discount">discount.</param>
-        public CartServiceCampaignResponse(int id = default(int), string name = default(string), string description = default(string), string image = default(string), string smallImage = default(string), string conditions = default(string), int displayPriority = default(int), List<int> productIds = default(List<int>), double discount = default(double))
+        public CartServiceCampaignResponse(int id = default(int), string name = default(string), string description = default(string), string image = default(string), string smallImage = default(string), string conditions = default(string), int? displayPriority = default(int?), List<int> productIds = default(List<int>), double discount = default(double))
         {
             this.Id = id;
             this.Name = name;
@@ -65,43 +65,43 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Image
         /// </summary>
-        [DataMember(Name = "image", EmitDefaultValue = false)]
+        [DataMember(Name = "image", EmitDefaultValue = true)]
         public string Image { get; set; }
 
         /// <summary>
         /// Gets or Sets SmallImage
         /// </summary>
-        [DataMember(Name = "smallImage", EmitDefaultValue = false)]
+        [DataMember(Name = "smallImage", EmitDefaultValue = true)]
         public string SmallImage { get; set; }
 
         /// <summary>
         /// Gets or Sets Conditions
         /// </summary>
-        [DataMember(Name = "conditions", EmitDefaultValue = false)]
+        [DataMember(Name = "conditions", EmitDefaultValue = true)]
         public string Conditions { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayPriority
         /// </summary>
-        [DataMember(Name = "displayPriority", EmitDefaultValue = false)]
-        public int DisplayPriority { get; set; }
+        [DataMember(Name = "displayPriority", EmitDefaultValue = true)]
+        public int? DisplayPriority { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductIds
         /// </summary>
-        [DataMember(Name = "productIds", EmitDefaultValue = false)]
+        [DataMember(Name = "productIds", EmitDefaultValue = true)]
         public List<int> ProductIds { get; set; }
 
         /// <summary>
@@ -193,7 +193,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.DisplayPriority == input.DisplayPriority ||
-                    this.DisplayPriority.Equals(input.DisplayPriority)
+                    (this.DisplayPriority != null &&
+                    this.DisplayPriority.Equals(input.DisplayPriority))
                 ) && 
                 (
                     this.ProductIds == input.ProductIds ||
@@ -237,7 +238,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Conditions.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.DisplayPriority.GetHashCode();
+                if (this.DisplayPriority != null)
+                {
+                    hashCode = (hashCode * 59) + this.DisplayPriority.GetHashCode();
+                }
                 if (this.ProductIds != null)
                 {
                     hashCode = (hashCode * 59) + this.ProductIds.GetHashCode();

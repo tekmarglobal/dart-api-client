@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RegionProductId** | **int** |  | [optional] 
-**Quantity** | **double** |  | [optional] 
-**ListPrice** | **double** |  | [optional] 
-**Price** | **double** |  | [optional] 
-**Amount** | **double** |  | [optional] 
-**DiscountAmount** | **double** |  | [optional] 
+**Quantity** | **double?** |  | [optional] 
+**ListPrice** | **double?** |  | [optional] 
+**Price** | **double?** |  | [optional] 
+**Amount** | **double?** |  | [optional] 
+**DiscountAmount** | **double?** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **ProductId** | **int** |  | [optional] 
 **UnitId** | **int** |  | [optional] 

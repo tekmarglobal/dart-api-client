@@ -63,19 +63,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets CityName
         /// </summary>
-        [DataMember(Name = "cityName", EmitDefaultValue = false)]
+        [DataMember(Name = "cityName", EmitDefaultValue = true)]
         public string CityName { get; set; }
 
         /// <summary>
         /// Gets or Sets CountyName
         /// </summary>
-        [DataMember(Name = "countyName", EmitDefaultValue = false)]
+        [DataMember(Name = "countyName", EmitDefaultValue = true)]
         public string CountyName { get; set; }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets RegionName
         /// </summary>
-        [DataMember(Name = "regionName", EmitDefaultValue = false)]
+        [DataMember(Name = "regionName", EmitDefaultValue = true)]
         public string RegionName { get; set; }
 
         /// <summary>
@@ -99,14 +99,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Branch
         /// </summary>
-        [DataMember(Name = "branch", EmitDefaultValue = false)]
+        [DataMember(Name = "branch", EmitDefaultValue = true)]
         public List<AdminServiceBranchResponse> Branch { get; set; }
 
         /// <summary>
         /// Gets or Sets Population
         /// </summary>
-        [DataMember(Name = "population", EmitDefaultValue = false)]
-        public int Population { get; private set; }
+        [DataMember(Name = "population", EmitDefaultValue = true)]
+        public int? Population { get; private set; }
 
         /// <summary>
         /// Returns false as Population should not be serialized given that it's read-only.
@@ -208,7 +208,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Population == input.Population ||
-                    this.Population.Equals(input.Population)
+                    (this.Population != null &&
+                    this.Population.Equals(input.Population))
                 );
         }
 
@@ -244,7 +245,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Branch.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.Population.GetHashCode();
+                if (this.Population != null)
+                {
+                    hashCode = (hashCode * 59) + this.Population.GetHashCode();
+                }
                 return hashCode;
             }
         }

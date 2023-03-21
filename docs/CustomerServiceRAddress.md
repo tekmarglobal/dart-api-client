@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdressId** | **int** |  | [optional] 
 **AddressId** | **int** |  | [optional] 
-**CustomerId** | **int** |  | [optional] 
+**CustomerId** | **int?** |  | [optional] 
 **FullAddress** | **string** |  | [optional] 
 **Building** | **string** |  | [optional] 
 **Floor** | **string** |  | [optional] 

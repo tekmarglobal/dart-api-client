@@ -46,7 +46,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="campaignTotalDiscount">campaignTotalDiscount.</param>
         /// <param name="cartProducts">cartProducts.</param>
         /// <param name="cardProducts">cardProducts.</param>
-        public CartServiceCartResponse(int cartId = default(int), int customer = default(int), double cartTotal = default(double), int regionId = default(int), string deviceToken = default(string), double bagTotal = default(double), int bagAmount = default(int), double estimatedFee = default(double), List<CartServiceCampaignResponse> appliedCampaigns = default(List<CartServiceCampaignResponse>), double campaignTotalDiscount = default(double), List<CartServiceRCartProducts> cartProducts = default(List<CartServiceRCartProducts>), List<CartServiceRCartProducts> cardProducts = default(List<CartServiceRCartProducts>))
+        public CartServiceCartResponse(int cartId = default(int), int? customer = default(int?), double? cartTotal = default(double?), int? regionId = default(int?), string deviceToken = default(string), double? bagTotal = default(double?), int? bagAmount = default(int?), double? estimatedFee = default(double?), List<CartServiceCampaignResponse> appliedCampaigns = default(List<CartServiceCampaignResponse>), double? campaignTotalDiscount = default(double?), List<CartServiceRCartProducts> cartProducts = default(List<CartServiceRCartProducts>), List<CartServiceRCartProducts> cardProducts = default(List<CartServiceRCartProducts>))
         {
             this.CartId = cartId;
             this.Customer = customer;
@@ -71,67 +71,67 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
-        [DataMember(Name = "customer", EmitDefaultValue = false)]
-        public int Customer { get; set; }
+        [DataMember(Name = "customer", EmitDefaultValue = true)]
+        public int? Customer { get; set; }
 
         /// <summary>
         /// Gets or Sets CartTotal
         /// </summary>
-        [DataMember(Name = "cartTotal", EmitDefaultValue = false)]
-        public double CartTotal { get; set; }
+        [DataMember(Name = "cartTotal", EmitDefaultValue = true)]
+        public double? CartTotal { get; set; }
 
         /// <summary>
         /// Gets or Sets RegionId
         /// </summary>
-        [DataMember(Name = "regionId", EmitDefaultValue = false)]
-        public int RegionId { get; set; }
+        [DataMember(Name = "regionId", EmitDefaultValue = true)]
+        public int? RegionId { get; set; }
 
         /// <summary>
         /// Gets or Sets DeviceToken
         /// </summary>
-        [DataMember(Name = "deviceToken", EmitDefaultValue = false)]
+        [DataMember(Name = "deviceToken", EmitDefaultValue = true)]
         public string DeviceToken { get; set; }
 
         /// <summary>
         /// Gets or Sets BagTotal
         /// </summary>
-        [DataMember(Name = "bagTotal", EmitDefaultValue = false)]
-        public double BagTotal { get; set; }
+        [DataMember(Name = "bagTotal", EmitDefaultValue = true)]
+        public double? BagTotal { get; set; }
 
         /// <summary>
         /// Gets or Sets BagAmount
         /// </summary>
-        [DataMember(Name = "bagAmount", EmitDefaultValue = false)]
-        public int BagAmount { get; set; }
+        [DataMember(Name = "bagAmount", EmitDefaultValue = true)]
+        public int? BagAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets EstimatedFee
         /// </summary>
-        [DataMember(Name = "estimatedFee", EmitDefaultValue = false)]
-        public double EstimatedFee { get; set; }
+        [DataMember(Name = "estimatedFee", EmitDefaultValue = true)]
+        public double? EstimatedFee { get; set; }
 
         /// <summary>
         /// Gets or Sets AppliedCampaigns
         /// </summary>
-        [DataMember(Name = "appliedCampaigns", EmitDefaultValue = false)]
+        [DataMember(Name = "appliedCampaigns", EmitDefaultValue = true)]
         public List<CartServiceCampaignResponse> AppliedCampaigns { get; set; }
 
         /// <summary>
         /// Gets or Sets CampaignTotalDiscount
         /// </summary>
-        [DataMember(Name = "campaignTotalDiscount", EmitDefaultValue = false)]
-        public double CampaignTotalDiscount { get; set; }
+        [DataMember(Name = "campaignTotalDiscount", EmitDefaultValue = true)]
+        public double? CampaignTotalDiscount { get; set; }
 
         /// <summary>
         /// Gets or Sets CartProducts
         /// </summary>
-        [DataMember(Name = "cartProducts", EmitDefaultValue = false)]
+        [DataMember(Name = "cartProducts", EmitDefaultValue = true)]
         public List<CartServiceRCartProducts> CartProducts { get; set; }
 
         /// <summary>
         /// Gets or Sets CardProducts
         /// </summary>
-        [DataMember(Name = "cardProducts", EmitDefaultValue = false)]
+        [DataMember(Name = "cardProducts", EmitDefaultValue = true)]
         public List<CartServiceRCartProducts> CardProducts { get; set; }
 
         /// <summary>
@@ -195,15 +195,18 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Customer == input.Customer ||
-                    this.Customer.Equals(input.Customer)
+                    (this.Customer != null &&
+                    this.Customer.Equals(input.Customer))
                 ) && 
                 (
                     this.CartTotal == input.CartTotal ||
-                    this.CartTotal.Equals(input.CartTotal)
+                    (this.CartTotal != null &&
+                    this.CartTotal.Equals(input.CartTotal))
                 ) && 
                 (
                     this.RegionId == input.RegionId ||
-                    this.RegionId.Equals(input.RegionId)
+                    (this.RegionId != null &&
+                    this.RegionId.Equals(input.RegionId))
                 ) && 
                 (
                     this.DeviceToken == input.DeviceToken ||
@@ -212,15 +215,18 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.BagTotal == input.BagTotal ||
-                    this.BagTotal.Equals(input.BagTotal)
+                    (this.BagTotal != null &&
+                    this.BagTotal.Equals(input.BagTotal))
                 ) && 
                 (
                     this.BagAmount == input.BagAmount ||
-                    this.BagAmount.Equals(input.BagAmount)
+                    (this.BagAmount != null &&
+                    this.BagAmount.Equals(input.BagAmount))
                 ) && 
                 (
                     this.EstimatedFee == input.EstimatedFee ||
-                    this.EstimatedFee.Equals(input.EstimatedFee)
+                    (this.EstimatedFee != null &&
+                    this.EstimatedFee.Equals(input.EstimatedFee))
                 ) && 
                 (
                     this.AppliedCampaigns == input.AppliedCampaigns ||
@@ -230,7 +236,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.CampaignTotalDiscount == input.CampaignTotalDiscount ||
-                    this.CampaignTotalDiscount.Equals(input.CampaignTotalDiscount)
+                    (this.CampaignTotalDiscount != null &&
+                    this.CampaignTotalDiscount.Equals(input.CampaignTotalDiscount))
                 ) && 
                 (
                     this.CartProducts == input.CartProducts ||
@@ -256,21 +263,42 @@ namespace Kiler.Dotnet.ApiClient.Model
             {
                 int hashCode = 41;
                 hashCode = (hashCode * 59) + this.CartId.GetHashCode();
-                hashCode = (hashCode * 59) + this.Customer.GetHashCode();
-                hashCode = (hashCode * 59) + this.CartTotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.RegionId.GetHashCode();
+                if (this.Customer != null)
+                {
+                    hashCode = (hashCode * 59) + this.Customer.GetHashCode();
+                }
+                if (this.CartTotal != null)
+                {
+                    hashCode = (hashCode * 59) + this.CartTotal.GetHashCode();
+                }
+                if (this.RegionId != null)
+                {
+                    hashCode = (hashCode * 59) + this.RegionId.GetHashCode();
+                }
                 if (this.DeviceToken != null)
                 {
                     hashCode = (hashCode * 59) + this.DeviceToken.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.BagTotal.GetHashCode();
-                hashCode = (hashCode * 59) + this.BagAmount.GetHashCode();
-                hashCode = (hashCode * 59) + this.EstimatedFee.GetHashCode();
+                if (this.BagTotal != null)
+                {
+                    hashCode = (hashCode * 59) + this.BagTotal.GetHashCode();
+                }
+                if (this.BagAmount != null)
+                {
+                    hashCode = (hashCode * 59) + this.BagAmount.GetHashCode();
+                }
+                if (this.EstimatedFee != null)
+                {
+                    hashCode = (hashCode * 59) + this.EstimatedFee.GetHashCode();
+                }
                 if (this.AppliedCampaigns != null)
                 {
                     hashCode = (hashCode * 59) + this.AppliedCampaigns.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.CampaignTotalDiscount.GetHashCode();
+                if (this.CampaignTotalDiscount != null)
+                {
+                    hashCode = (hashCode * 59) + this.CampaignTotalDiscount.GetHashCode();
+                }
                 if (this.CartProducts != null)
                 {
                     hashCode = (hashCode * 59) + this.CartProducts.GetHashCode();

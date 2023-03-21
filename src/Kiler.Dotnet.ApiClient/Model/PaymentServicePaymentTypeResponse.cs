@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets PaymentTypeList
         /// </summary>
-        [DataMember(Name = "paymentTypeList", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentTypeList", EmitDefaultValue = true)]
         public List<PaymentServiceRPaymentType> PaymentTypeList { get; set; }
 
         /// <summary>

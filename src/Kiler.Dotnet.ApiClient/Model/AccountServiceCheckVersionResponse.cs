@@ -51,7 +51,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets LatestVersion
         /// </summary>
-        [DataMember(Name = "latestVersion", EmitDefaultValue = false)]
+        [DataMember(Name = "latestVersion", EmitDefaultValue = true)]
         public string LatestVersion { get; set; }
 
         /// <summary>
@@ -69,13 +69,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets IosMarketId
         /// </summary>
-        [DataMember(Name = "iosMarketId", EmitDefaultValue = false)]
+        [DataMember(Name = "iosMarketId", EmitDefaultValue = true)]
         public string IosMarketId { get; set; }
 
         /// <summary>
         /// Gets or Sets AndroidMarketId
         /// </summary>
-        [DataMember(Name = "androidMarketId", EmitDefaultValue = false)]
+        [DataMember(Name = "androidMarketId", EmitDefaultValue = true)]
         public string AndroidMarketId { get; set; }
 
         /// <summary>

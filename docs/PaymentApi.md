@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="apipaymentchecktransactionpost"></a>
 # **ApiPaymentCheckTransactionPost**
-> RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost (PaymentServicePaymentTransactionRequest body = null)
+> RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost (PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = null)
 
 
 
@@ -40,11 +40,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new PaymentApi(config);
-            var body = new PaymentServicePaymentTransactionRequest(); // PaymentServicePaymentTransactionRequest |  (optional) 
+            var paymentServicePaymentTransactionRequest = new PaymentServicePaymentTransactionRequest(); // PaymentServicePaymentTransactionRequest |  (optional) 
 
             try
             {
-                RestResultOfPaymentServicePaymentTransactionResponse result = apiInstance.ApiPaymentCheckTransactionPost(body);
+                RestResultOfPaymentServicePaymentTransactionResponse result = apiInstance.ApiPaymentCheckTransactionPost(paymentServicePaymentTransactionRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentTransactionRequest**](PaymentServicePaymentTransactionRequest.md)|  | [optional] 
+ **paymentServicePaymentTransactionRequest** | [**PaymentServicePaymentTransactionRequest**](PaymentServicePaymentTransactionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 <a name="apipaymentcreatepaymentpost"></a>
 # **ApiPaymentCreatePaymentPost**
-> RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost (PaymentServicePaymentRequest body = null)
+> RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost (PaymentServicePaymentRequest paymentServicePaymentRequest = null)
 
 
 
@@ -113,11 +113,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new PaymentApi(config);
-            var body = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest |  (optional) 
+            var paymentServicePaymentRequest = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest |  (optional) 
 
             try
             {
-                RestResultOfPaymentServicePaymentResponse result = apiInstance.ApiPaymentCreatePaymentPost(body);
+                RestResultOfPaymentServicePaymentResponse result = apiInstance.ApiPaymentCreatePaymentPost(paymentServicePaymentRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -135,7 +135,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
+ **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 <a name="apipaymentcreatepaymentreturnurlpost"></a>
 # **ApiPaymentCreatePaymentReturnUrlPost**
-> void ApiPaymentCreatePaymentReturnUrlPost (PaymentServicePaymentRequest body = null)
+> void ApiPaymentCreatePaymentReturnUrlPost (PaymentServicePaymentRequest paymentServicePaymentRequest = null)
 
 
 
@@ -186,11 +186,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new PaymentApi(config);
-            var body = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest |  (optional) 
+            var paymentServicePaymentRequest = new PaymentServicePaymentRequest(); // PaymentServicePaymentRequest |  (optional) 
 
             try
             {
-                apiInstance.ApiPaymentCreatePaymentReturnUrlPost(body);
+                apiInstance.ApiPaymentCreatePaymentReturnUrlPost(paymentServicePaymentRequest);
             }
             catch (ApiException  e)
             {
@@ -207,7 +207,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
+ **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 

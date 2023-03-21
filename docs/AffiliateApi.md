@@ -83,7 +83,7 @@ void (empty response body)
 
 <a name="apiaffiliategetsharelinkpost"></a>
 # **ApiAffiliateGetShareLinkPost**
-> string ApiAffiliateGetShareLinkPost (AffiliateServiceLinkRequest body = null)
+> string ApiAffiliateGetShareLinkPost (AffiliateServiceLinkRequest affiliateServiceLinkRequest = null)
 
 
 
@@ -109,11 +109,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AffiliateApi(config);
-            var body = new AffiliateServiceLinkRequest(); // AffiliateServiceLinkRequest |  (optional) 
+            var affiliateServiceLinkRequest = new AffiliateServiceLinkRequest(); // AffiliateServiceLinkRequest |  (optional) 
 
             try
             {
-                string result = apiInstance.ApiAffiliateGetShareLinkPost(body);
+                string result = apiInstance.ApiAffiliateGetShareLinkPost(affiliateServiceLinkRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -131,7 +131,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AffiliateServiceLinkRequest**](AffiliateServiceLinkRequest.md)|  | [optional] 
+ **affiliateServiceLinkRequest** | [**AffiliateServiceLinkRequest**](AffiliateServiceLinkRequest.md)|  | [optional] 
 
 ### Return type
 

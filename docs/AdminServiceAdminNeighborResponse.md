@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **RegionName** | **string** |  | [optional] 
 **GpsId** | **int** |  | [optional] 
 **Branch** | [**List&lt;AdminServiceBranchResponse&gt;**](AdminServiceBranchResponse.md) |  | [optional] 
-**Population** | **int** |  | [optional] [readonly] 
+**Population** | **int?** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

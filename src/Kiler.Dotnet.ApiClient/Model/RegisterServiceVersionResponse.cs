@@ -45,7 +45,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets LatestCode
         /// </summary>
-        [DataMember(Name = "latestCode", EmitDefaultValue = false)]
+        [DataMember(Name = "latestCode", EmitDefaultValue = true)]
         public string LatestCode { get; set; }
 
         /// <summary>

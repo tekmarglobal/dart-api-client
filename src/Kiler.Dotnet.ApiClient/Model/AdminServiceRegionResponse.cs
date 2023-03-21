@@ -69,13 +69,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = false)]
+        [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets RegionMail
         /// </summary>
-        [DataMember(Name = "regionMail", EmitDefaultValue = false)]
+        [DataMember(Name = "regionMail", EmitDefaultValue = true)]
         public string RegionMail { get; set; }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Neighborhoods
         /// </summary>
-        [DataMember(Name = "neighborhoods", EmitDefaultValue = false)]
+        [DataMember(Name = "neighborhoods", EmitDefaultValue = true)]
         public List<AdminServiceAdminNeighborResponse> Neighborhoods { get; set; }
 
         /// <summary>

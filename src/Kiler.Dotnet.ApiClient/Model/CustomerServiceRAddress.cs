@@ -58,7 +58,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="taxNumber">taxNumber.</param>
         /// <param name="phoneNumber">phoneNumber.</param>
         /// <param name="active">active.</param>
-        public CustomerServiceRAddress(int adressId = default(int), int addressId = default(int), int customerId = default(int), string fullAddress = default(string), string building = default(string), string floor = default(string), string door = default(string), string postalCode = default(string), string description = default(string), int neighborhoodId = default(int), string neighborhoodName = default(string), int cityId = default(int), string cityName = default(string), int countyId = default(int), string countyName = default(string), string street = default(string), string customerName = default(string), string customerSurname = default(string), bool isindividual = default(bool), string companyName = default(string), string taxOffice = default(string), string taxNumber = default(string), string phoneNumber = default(string), bool active = default(bool))
+        public CustomerServiceRAddress(int adressId = default(int), int addressId = default(int), int? customerId = default(int?), string fullAddress = default(string), string building = default(string), string floor = default(string), string door = default(string), string postalCode = default(string), string description = default(string), int neighborhoodId = default(int), string neighborhoodName = default(string), int cityId = default(int), string cityName = default(string), int countyId = default(int), string countyName = default(string), string street = default(string), string customerName = default(string), string customerSurname = default(string), bool isindividual = default(bool), string companyName = default(string), string taxOffice = default(string), string taxNumber = default(string), string phoneNumber = default(string), bool active = default(bool))
         {
             this.AdressId = adressId;
             this.AddressId = addressId;
@@ -101,43 +101,43 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
-        [DataMember(Name = "customerId", EmitDefaultValue = false)]
-        public int CustomerId { get; set; }
+        [DataMember(Name = "customerId", EmitDefaultValue = true)]
+        public int? CustomerId { get; set; }
 
         /// <summary>
         /// Gets or Sets FullAddress
         /// </summary>
-        [DataMember(Name = "fullAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "fullAddress", EmitDefaultValue = true)]
         public string FullAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets Building
         /// </summary>
-        [DataMember(Name = "building", EmitDefaultValue = false)]
+        [DataMember(Name = "building", EmitDefaultValue = true)]
         public string Building { get; set; }
 
         /// <summary>
         /// Gets or Sets Floor
         /// </summary>
-        [DataMember(Name = "floor", EmitDefaultValue = false)]
+        [DataMember(Name = "floor", EmitDefaultValue = true)]
         public string Floor { get; set; }
 
         /// <summary>
         /// Gets or Sets Door
         /// </summary>
-        [DataMember(Name = "door", EmitDefaultValue = false)]
+        [DataMember(Name = "door", EmitDefaultValue = true)]
         public string Door { get; set; }
 
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
-        [DataMember(Name = "postalCode", EmitDefaultValue = false)]
+        [DataMember(Name = "postalCode", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets NeighborhoodName
         /// </summary>
-        [DataMember(Name = "neighborhoodName", EmitDefaultValue = false)]
+        [DataMember(Name = "neighborhoodName", EmitDefaultValue = true)]
         public string NeighborhoodName { get; set; }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CityName
         /// </summary>
-        [DataMember(Name = "cityName", EmitDefaultValue = false)]
+        [DataMember(Name = "cityName", EmitDefaultValue = true)]
         public string CityName { get; set; }
 
         /// <summary>
@@ -173,13 +173,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CountyName
         /// </summary>
-        [DataMember(Name = "countyName", EmitDefaultValue = false)]
+        [DataMember(Name = "countyName", EmitDefaultValue = true)]
         public string CountyName { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; private set; }
 
         /// <summary>
@@ -193,19 +193,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Street
         /// </summary>
-        [DataMember(Name = "street", EmitDefaultValue = false)]
+        [DataMember(Name = "street", EmitDefaultValue = true)]
         public string Street { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
-        [DataMember(Name = "customerName", EmitDefaultValue = false)]
+        [DataMember(Name = "customerName", EmitDefaultValue = true)]
         public string CustomerName { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerSurname
         /// </summary>
-        [DataMember(Name = "customerSurname", EmitDefaultValue = false)]
+        [DataMember(Name = "customerSurname", EmitDefaultValue = true)]
         public string CustomerSurname { get; set; }
 
         /// <summary>
@@ -217,25 +217,25 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CompanyName
         /// </summary>
-        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxOffice
         /// </summary>
-        [DataMember(Name = "taxOffice", EmitDefaultValue = false)]
+        [DataMember(Name = "taxOffice", EmitDefaultValue = true)]
         public string TaxOffice { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxNumber
         /// </summary>
-        [DataMember(Name = "taxNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "taxNumber", EmitDefaultValue = true)]
         public string TaxNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
@@ -322,7 +322,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.CustomerId == input.CustomerId ||
-                    this.CustomerId.Equals(input.CustomerId)
+                    (this.CustomerId != null &&
+                    this.CustomerId.Equals(input.CustomerId))
                 ) && 
                 (
                     this.FullAddress == input.FullAddress ||
@@ -442,7 +443,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 int hashCode = 41;
                 hashCode = (hashCode * 59) + this.AdressId.GetHashCode();
                 hashCode = (hashCode * 59) + this.AddressId.GetHashCode();
-                hashCode = (hashCode * 59) + this.CustomerId.GetHashCode();
+                if (this.CustomerId != null)
+                {
+                    hashCode = (hashCode * 59) + this.CustomerId.GetHashCode();
+                }
                 if (this.FullAddress != null)
                 {
                     hashCode = (hashCode * 59) + this.FullAddress.GetHashCode();

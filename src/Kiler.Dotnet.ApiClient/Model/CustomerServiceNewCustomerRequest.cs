@@ -61,13 +61,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Surname
         /// </summary>
-        [DataMember(Name = "surname", EmitDefaultValue = false)]
+        [DataMember(Name = "surname", EmitDefaultValue = true)]
         public string Surname { get; set; }
 
         /// <summary>
@@ -79,13 +79,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name = "phone", EmitDefaultValue = false)]
+        [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets IdentificationNumber
         /// </summary>
-        [DataMember(Name = "identificationNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "identificationNumber", EmitDefaultValue = true)]
         public string IdentificationNumber { get; set; }
 
         /// <summary>

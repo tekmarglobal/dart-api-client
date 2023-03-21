@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="paymentTypeCode">paymentTypeCode.</param>
         /// <param name="deliveryType">deliveryType.</param>
         /// <param name="channelId">channelId.</param>
-        public OrderServiceOrderRequest(int deliveryAddressId = default(int), int billingAddressId = default(int), int timeStotId = default(int), int timeSlotId = default(int), string paymentCode = default(string), string orderNote = default(string), string paymentTypeCode = default(string), string deliveryType = default(string), int channelId = default(int))
+        public OrderServiceOrderRequest(int deliveryAddressId = default(int), int billingAddressId = default(int), int timeStotId = default(int), int timeSlotId = default(int), string paymentCode = default(string), string orderNote = default(string), string paymentTypeCode = default(string), string deliveryType = default(string), int? channelId = default(int?))
         {
             this.DeliveryAddressId = deliveryAddressId;
             this.BillingAddressId = billingAddressId;
@@ -83,32 +83,32 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets PaymentCode
         /// </summary>
-        [DataMember(Name = "paymentCode", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentCode", EmitDefaultValue = true)]
         public string PaymentCode { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderNote
         /// </summary>
-        [DataMember(Name = "orderNote", EmitDefaultValue = false)]
+        [DataMember(Name = "orderNote", EmitDefaultValue = true)]
         public string OrderNote { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentTypeCode
         /// </summary>
-        [DataMember(Name = "paymentTypeCode", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentTypeCode", EmitDefaultValue = true)]
         public string PaymentTypeCode { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryType
         /// </summary>
-        [DataMember(Name = "deliveryType", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryType", EmitDefaultValue = true)]
         public string DeliveryType { get; set; }
 
         /// <summary>
         /// Gets or Sets ChannelId
         /// </summary>
-        [DataMember(Name = "channelId", EmitDefaultValue = false)]
-        public int ChannelId { get; set; }
+        [DataMember(Name = "channelId", EmitDefaultValue = true)]
+        public int? ChannelId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -200,7 +200,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.ChannelId == input.ChannelId ||
-                    this.ChannelId.Equals(input.ChannelId)
+                    (this.ChannelId != null &&
+                    this.ChannelId.Equals(input.ChannelId))
                 );
         }
 
@@ -233,7 +234,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.DeliveryType.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.ChannelId.GetHashCode();
+                if (this.ChannelId != null)
+                {
+                    hashCode = (hashCode * 59) + this.ChannelId.GetHashCode();
+                }
                 return hashCode;
             }
         }

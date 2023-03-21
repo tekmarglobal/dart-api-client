@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Products
         /// </summary>
-        [DataMember(Name = "products", EmitDefaultValue = false)]
+        [DataMember(Name = "products", EmitDefaultValue = true)]
         public List<ProductServiceRProduct> Products { get; set; }
 
         /// <summary>

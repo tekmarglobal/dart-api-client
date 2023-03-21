@@ -36,7 +36,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         /// <param name="phoneNumber">phoneNumber.</param>
         /// <param name="order">order.</param>
-        public CrmServiceTicketRequest(string phoneNumber = default(string), int order = default(int))
+        public CrmServiceTicketRequest(string phoneNumber = default(string), int? order = default(int?))
         {
             this.PhoneNumber = phoneNumber;
             this.Order = order;
@@ -45,14 +45,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
-        [DataMember(Name = "order", EmitDefaultValue = false)]
-        public int Order { get; set; }
+        [DataMember(Name = "order", EmitDefaultValue = true)]
+        public int? Order { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -106,7 +106,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Order == input.Order ||
-                    this.Order.Equals(input.Order)
+                    (this.Order != null &&
+                    this.Order.Equals(input.Order))
                 );
         }
 
@@ -123,7 +124,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.PhoneNumber.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.Order.GetHashCode();
+                if (this.Order != null)
+                {
+                    hashCode = (hashCode * 59) + this.Order.GetHashCode();
+                }
                 return hashCode;
             }
         }

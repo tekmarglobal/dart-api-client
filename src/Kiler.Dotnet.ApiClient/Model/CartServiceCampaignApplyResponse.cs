@@ -49,7 +49,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "message", EmitDefaultValue = false)]
+        [DataMember(Name = "message", EmitDefaultValue = true)]
         public string Message { get; set; }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets MissingConditions
         /// </summary>
-        [DataMember(Name = "missingConditions", EmitDefaultValue = false)]
+        [DataMember(Name = "missingConditions", EmitDefaultValue = true)]
         public List<string> MissingConditions { get; set; }
 
         /// <summary>

@@ -47,13 +47,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets AppVersion
         /// </summary>
-        [DataMember(Name = "appVersion", EmitDefaultValue = false)]
+        [DataMember(Name = "appVersion", EmitDefaultValue = true)]
         public string AppVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets Platform
         /// </summary>
-        [DataMember(Name = "platform", EmitDefaultValue = false)]
+        [DataMember(Name = "platform", EmitDefaultValue = true)]
         public string Platform { get; set; }
 
         /// <summary>

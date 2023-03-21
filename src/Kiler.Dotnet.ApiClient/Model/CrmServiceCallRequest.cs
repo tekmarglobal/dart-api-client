@@ -45,13 +45,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Extention
         /// </summary>
-        [DataMember(Name = "extention", EmitDefaultValue = false)]
+        [DataMember(Name = "extention", EmitDefaultValue = true)]
         public string Extention { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>

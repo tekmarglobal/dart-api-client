@@ -44,7 +44,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="unitId">unitId.</param>
         /// <param name="active">active.</param>
         /// <param name="barcode">barcode.</param>
-        public OrderServiceROrderProducts(int productId = default(int), string name = default(string), double listPrice = default(double), double price = default(double), double discount = default(double), double quantity = default(double), string brandName = default(string), int unitId = default(int), bool active = default(bool), string barcode = default(string))
+        public OrderServiceROrderProducts(int productId = default(int), string name = default(string), double listPrice = default(double), double price = default(double), double discount = default(double), double quantity = default(double), string brandName = default(string), int? unitId = default(int?), bool active = default(bool), string barcode = default(string))
         {
             this.ProductId = productId;
             this.Name = name;
@@ -67,7 +67,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -97,14 +97,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets BrandName
         /// </summary>
-        [DataMember(Name = "brandName", EmitDefaultValue = false)]
+        [DataMember(Name = "brandName", EmitDefaultValue = true)]
         public string BrandName { get; set; }
 
         /// <summary>
         /// Gets or Sets UnitId
         /// </summary>
-        [DataMember(Name = "unitId", EmitDefaultValue = false)]
-        public int UnitId { get; set; }
+        [DataMember(Name = "unitId", EmitDefaultValue = true)]
+        public int? UnitId { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
@@ -115,7 +115,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Barcode
         /// </summary>
-        [DataMember(Name = "barcode", EmitDefaultValue = false)]
+        [DataMember(Name = "barcode", EmitDefaultValue = true)]
         public string Barcode { get; set; }
 
         /// <summary>
@@ -203,7 +203,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.UnitId == input.UnitId ||
-                    this.UnitId.Equals(input.UnitId)
+                    (this.UnitId != null &&
+                    this.UnitId.Equals(input.UnitId))
                 ) && 
                 (
                     this.Active == input.Active ||
@@ -238,7 +239,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.BrandName.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
+                if (this.UnitId != null)
+                {
+                    hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Active.GetHashCode();
                 if (this.Barcode != null)
                 {

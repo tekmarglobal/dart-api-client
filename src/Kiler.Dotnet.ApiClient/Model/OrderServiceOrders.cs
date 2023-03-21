@@ -99,13 +99,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets DeliveryAddress
         /// </summary>
-        [DataMember(Name = "deliveryAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryAddress", EmitDefaultValue = true)]
         public string DeliveryAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets DeliveryTypeCode
         /// </summary>
-        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = true)]
         public string DeliveryTypeCode { get; set; }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets BillingAddress
         /// </summary>
-        [DataMember(Name = "billingAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "billingAddress", EmitDefaultValue = true)]
         public string BillingAddress { get; set; }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets OrderNote
         /// </summary>
-        [DataMember(Name = "orderNote", EmitDefaultValue = false)]
+        [DataMember(Name = "orderNote", EmitDefaultValue = true)]
         public string OrderNote { get; set; }
 
         /// <summary>
@@ -165,19 +165,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CityName
         /// </summary>
-        [DataMember(Name = "cityName", EmitDefaultValue = false)]
+        [DataMember(Name = "cityName", EmitDefaultValue = true)]
         public string CityName { get; set; }
 
         /// <summary>
         /// Gets or Sets CountyName
         /// </summary>
-        [DataMember(Name = "countyName", EmitDefaultValue = false)]
+        [DataMember(Name = "countyName", EmitDefaultValue = true)]
         public string CountyName { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentType
         /// </summary>
-        [DataMember(Name = "paymentType", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentType", EmitDefaultValue = true)]
         public string PaymentType { get; set; }
 
         /// <summary>

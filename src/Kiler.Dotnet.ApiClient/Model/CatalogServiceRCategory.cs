@@ -67,19 +67,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Products
         /// </summary>
-        [DataMember(Name = "products", EmitDefaultValue = false)]
+        [DataMember(Name = "products", EmitDefaultValue = true)]
         public List<CatalogServiceRProduct> Products { get; set; }
 
         /// <summary>
         /// Gets or Sets SubCategories
         /// </summary>
-        [DataMember(Name = "subCategories", EmitDefaultValue = false)]
+        [DataMember(Name = "subCategories", EmitDefaultValue = true)]
         public List<CatalogServiceRCategory> SubCategories { get; set; }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets MenuName
         /// </summary>
-        [DataMember(Name = "menuName", EmitDefaultValue = false)]
+        [DataMember(Name = "menuName", EmitDefaultValue = true)]
         public string MenuName { get; set; }
 
         /// <summary>

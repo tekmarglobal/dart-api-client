@@ -79,7 +79,7 @@ This endpoint does not need any parameter.
 
 <a name="apibannerupdatebannerpost"></a>
 # **ApiBannerUpdateBannerPost**
-> RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost (BannerServiceBannerRequest body = null)
+> RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost (BannerServiceBannerRequest bannerServiceBannerRequest = null)
 
 
 
@@ -105,11 +105,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new BannerApi(config);
-            var body = new BannerServiceBannerRequest(); // BannerServiceBannerRequest |  (optional) 
+            var bannerServiceBannerRequest = new BannerServiceBannerRequest(); // BannerServiceBannerRequest |  (optional) 
 
             try
             {
-                RestResultOfBannerServiceBannerResponse result = apiInstance.ApiBannerUpdateBannerPost(body);
+                RestResultOfBannerServiceBannerResponse result = apiInstance.ApiBannerUpdateBannerPost(bannerServiceBannerRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -127,7 +127,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BannerServiceBannerRequest**](BannerServiceBannerRequest.md)|  | [optional] 
+ **bannerServiceBannerRequest** | [**BannerServiceBannerRequest**](BannerServiceBannerRequest.md)|  | [optional] 
 
 ### Return type
 

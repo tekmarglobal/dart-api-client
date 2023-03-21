@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <returns>RestResultOfAccountServiceCheckVersionResponse</returns>
-        RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest));
+        RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest));
 
         /// <summary>
         /// 
@@ -41,9 +41,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAccountServiceCheckVersionResponse</returns>
-        ApiResponse<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostWithHttpInfo(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest));
+        ApiResponse<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostWithHttpInfo(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -80,9 +80,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <returns>RestResultOfAccountServiceLoginResponse</returns>
-        RestResultOfAccountServiceLoginResponse ApiAccountLoginPost(AccountServiceLoginRequest body = default(AccountServiceLoginRequest));
+        RestResultOfAccountServiceLoginResponse ApiAccountLoginPost(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest));
 
         /// <summary>
         /// 
@@ -91,9 +91,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAccountServiceLoginResponse</returns>
-        ApiResponse<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostWithHttpInfo(AccountServiceLoginRequest body = default(AccountServiceLoginRequest));
+        ApiResponse<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostWithHttpInfo(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -142,10 +142,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAccountServiceCheckVersionResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostAsync(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostAsync(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -154,10 +154,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAccountServiceCheckVersionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfAccountServiceCheckVersionResponse>> ApiAccountCheckversionPostWithHttpInfoAsync(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfAccountServiceCheckVersionResponse>> ApiAccountCheckversionPostWithHttpInfoAsync(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -207,10 +207,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAccountServiceLoginResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostAsync(AccountServiceLoginRequest body = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostAsync(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -219,10 +219,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAccountServiceLoginResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfAccountServiceLoginResponse>> ApiAccountLoginPostWithHttpInfoAsync(AccountServiceLoginRequest body = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfAccountServiceLoginResponse>> ApiAccountLoginPostWithHttpInfoAsync(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -389,11 +389,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <returns>RestResultOfAccountServiceCheckVersionResponse</returns>
-        public RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest))
+        public RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> localVarResponse = ApiAccountCheckversionPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> localVarResponse = ApiAccountCheckversionPostWithHttpInfo(accountServiceCheckVersionRequest);
             return localVarResponse.Data;
         }
 
@@ -401,9 +401,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAccountServiceCheckVersionResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostWithHttpInfo(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostWithHttpInfo(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -432,7 +432,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = accountServiceCheckVersionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -458,12 +458,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAccountServiceCheckVersionResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostAsync(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfAccountServiceCheckVersionResponse> ApiAccountCheckversionPostAsync(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> localVarResponse = await ApiAccountCheckversionPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse> localVarResponse = await ApiAccountCheckversionPostWithHttpInfoAsync(accountServiceCheckVersionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -471,10 +471,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceCheckVersionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAccountServiceCheckVersionResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse>> ApiAccountCheckversionPostWithHttpInfoAsync(AccountServiceCheckVersionRequest body = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceCheckVersionResponse>> ApiAccountCheckversionPostWithHttpInfoAsync(AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = default(AccountServiceCheckVersionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -504,7 +504,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = accountServiceCheckVersionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -791,11 +791,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <returns>RestResultOfAccountServiceLoginResponse</returns>
-        public RestResultOfAccountServiceLoginResponse ApiAccountLoginPost(AccountServiceLoginRequest body = default(AccountServiceLoginRequest))
+        public RestResultOfAccountServiceLoginResponse ApiAccountLoginPost(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> localVarResponse = ApiAccountLoginPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> localVarResponse = ApiAccountLoginPostWithHttpInfo(accountServiceLoginRequest);
             return localVarResponse.Data;
         }
 
@@ -803,9 +803,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAccountServiceLoginResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostWithHttpInfo(AccountServiceLoginRequest body = default(AccountServiceLoginRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostWithHttpInfo(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -834,7 +834,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = accountServiceLoginRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -860,12 +860,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAccountServiceLoginResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostAsync(AccountServiceLoginRequest body = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfAccountServiceLoginResponse> ApiAccountLoginPostAsync(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> localVarResponse = await ApiAccountLoginPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse> localVarResponse = await ApiAccountLoginPostWithHttpInfoAsync(accountServiceLoginRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -873,10 +873,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="accountServiceLoginRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAccountServiceLoginResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse>> ApiAccountLoginPostWithHttpInfoAsync(AccountServiceLoginRequest body = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAccountServiceLoginResponse>> ApiAccountLoginPostWithHttpInfoAsync(AccountServiceLoginRequest accountServiceLoginRequest = default(AccountServiceLoginRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -906,7 +906,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = accountServiceLoginRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

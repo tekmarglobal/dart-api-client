@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <returns>RestResultOfRegisterServiceSmsResponse</returns>
-        RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest));
+        RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest));
 
         /// <summary>
         /// 
@@ -41,16 +41,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfRegisterServiceSmsResponse</returns>
-        ApiResponse<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostWithHttpInfo(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest));
+        ApiResponse<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostWithHttpInfo(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <returns>RestResultOfRegisterServiceLoginResponse</returns>
-        RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest));
+        RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest));
 
         /// <summary>
         /// 
@@ -59,9 +59,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfRegisterServiceLoginResponse</returns>
-        ApiResponse<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostWithHttpInfo(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest));
+        ApiResponse<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostWithHttpInfo(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest));
         #endregion Synchronous Operations
     }
 
@@ -78,10 +78,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfRegisterServiceSmsResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostAsync(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostAsync(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -90,10 +90,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfRegisterServiceSmsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfRegisterServiceSmsResponse>> ApiRegisterSendSmsPostWithHttpInfoAsync(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfRegisterServiceSmsResponse>> ApiRegisterSendSmsPostWithHttpInfoAsync(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -101,10 +101,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfRegisterServiceLoginResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostAsync(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostAsync(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -113,10 +113,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfRegisterServiceLoginResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfRegisterServiceLoginResponse>> ApiRegisterVerifySmsPostWithHttpInfoAsync(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfRegisterServiceLoginResponse>> ApiRegisterVerifySmsPostWithHttpInfoAsync(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -241,11 +241,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <returns>RestResultOfRegisterServiceSmsResponse</returns>
-        public RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest))
+        public RestResultOfRegisterServiceSmsResponse ApiRegisterSendSmsPost(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> localVarResponse = ApiRegisterSendSmsPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> localVarResponse = ApiRegisterSendSmsPostWithHttpInfo(registerServiceSmsRequest);
             return localVarResponse.Data;
         }
 
@@ -253,9 +253,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfRegisterServiceSmsResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostWithHttpInfo(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostWithHttpInfo(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -284,7 +284,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = registerServiceSmsRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -310,12 +310,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfRegisterServiceSmsResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostAsync(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfRegisterServiceSmsResponse> ApiRegisterSendSmsPostAsync(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> localVarResponse = await ApiRegisterSendSmsPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse> localVarResponse = await ApiRegisterSendSmsPostWithHttpInfoAsync(registerServiceSmsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -323,10 +323,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceSmsRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfRegisterServiceSmsResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse>> ApiRegisterSendSmsPostWithHttpInfoAsync(RegisterServiceSmsRequest body = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceSmsResponse>> ApiRegisterSendSmsPostWithHttpInfoAsync(RegisterServiceSmsRequest registerServiceSmsRequest = default(RegisterServiceSmsRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -356,7 +356,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = registerServiceSmsRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -383,11 +383,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <returns>RestResultOfRegisterServiceLoginResponse</returns>
-        public RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest))
+        public RestResultOfRegisterServiceLoginResponse ApiRegisterVerifySmsPost(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> localVarResponse = ApiRegisterVerifySmsPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> localVarResponse = ApiRegisterVerifySmsPostWithHttpInfo(registerServiceVerifyRequest);
             return localVarResponse.Data;
         }
 
@@ -395,9 +395,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfRegisterServiceLoginResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostWithHttpInfo(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostWithHttpInfo(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -426,7 +426,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = registerServiceVerifyRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -452,12 +452,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfRegisterServiceLoginResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostAsync(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfRegisterServiceLoginResponse> ApiRegisterVerifySmsPostAsync(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> localVarResponse = await ApiRegisterVerifySmsPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse> localVarResponse = await ApiRegisterVerifySmsPostWithHttpInfoAsync(registerServiceVerifyRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -465,10 +465,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="registerServiceVerifyRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfRegisterServiceLoginResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse>> ApiRegisterVerifySmsPostWithHttpInfoAsync(RegisterServiceVerifyRequest body = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfRegisterServiceLoginResponse>> ApiRegisterVerifySmsPostWithHttpInfoAsync(RegisterServiceVerifyRequest registerServiceVerifyRequest = default(RegisterServiceVerifyRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -498,7 +498,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = registerServiceVerifyRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

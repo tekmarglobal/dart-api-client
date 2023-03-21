@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="apiaccountcheckversionpost"></a>
 # **ApiAccountCheckversionPost**
-> RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost (AccountServiceCheckVersionRequest body = null)
+> RestResultOfAccountServiceCheckVersionResponse ApiAccountCheckversionPost (AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = null)
 
 
 
@@ -40,11 +40,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AccountApi(config);
-            var body = new AccountServiceCheckVersionRequest(); // AccountServiceCheckVersionRequest |  (optional) 
+            var accountServiceCheckVersionRequest = new AccountServiceCheckVersionRequest(); // AccountServiceCheckVersionRequest |  (optional) 
 
             try
             {
-                RestResultOfAccountServiceCheckVersionResponse result = apiInstance.ApiAccountCheckversionPost(body);
+                RestResultOfAccountServiceCheckVersionResponse result = apiInstance.ApiAccountCheckversionPost(accountServiceCheckVersionRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccountServiceCheckVersionRequest**](AccountServiceCheckVersionRequest.md)|  | [optional] 
+ **accountServiceCheckVersionRequest** | [**AccountServiceCheckVersionRequest**](AccountServiceCheckVersionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -225,7 +225,7 @@ This endpoint does not need any parameter.
 
 <a name="apiaccountloginpost"></a>
 # **ApiAccountLoginPost**
-> RestResultOfAccountServiceLoginResponse ApiAccountLoginPost (AccountServiceLoginRequest body = null)
+> RestResultOfAccountServiceLoginResponse ApiAccountLoginPost (AccountServiceLoginRequest accountServiceLoginRequest = null)
 
 
 
@@ -251,11 +251,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AccountApi(config);
-            var body = new AccountServiceLoginRequest(); // AccountServiceLoginRequest |  (optional) 
+            var accountServiceLoginRequest = new AccountServiceLoginRequest(); // AccountServiceLoginRequest |  (optional) 
 
             try
             {
-                RestResultOfAccountServiceLoginResponse result = apiInstance.ApiAccountLoginPost(body);
+                RestResultOfAccountServiceLoginResponse result = apiInstance.ApiAccountLoginPost(accountServiceLoginRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -273,7 +273,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
+ **accountServiceLoginRequest** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
 
 ### Return type
 

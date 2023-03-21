@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Prices** | [**List&lt;CatalogServiceRProductPrice&gt;**](CatalogServiceRProductPrice.md) |  | [optional] [readonly] 
 **EId** | **string** |  | [optional] 
 **Barcode** | **string** |  | [optional] 
-**UnitId** | **int** |  | [optional] 
+**UnitId** | **int?** |  | [optional] 
 **UnitName** | **string** |  | [optional] 
 **Active** | **bool** |  | [optional] 
 **MenuName** | **string** |  | [optional] 

@@ -51,7 +51,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets PaymentCode
         /// </summary>
-        [DataMember(Name = "paymentCode", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentCode", EmitDefaultValue = true)]
         public string PaymentCode { get; set; }
 
         /// <summary>

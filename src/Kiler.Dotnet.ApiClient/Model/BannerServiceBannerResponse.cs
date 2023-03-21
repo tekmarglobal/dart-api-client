@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets BannerList
         /// </summary>
-        [DataMember(Name = "bannerList", EmitDefaultValue = false)]
+        [DataMember(Name = "bannerList", EmitDefaultValue = true)]
         public List<BannerServiceRBanner> BannerList { get; set; }
 
         /// <summary>

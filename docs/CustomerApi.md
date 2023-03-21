@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="apicustomerdeleteaddresspost"></a>
 # **ApiCustomerDeleteAddressPost**
-> RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost (CustomerServiceDeleteAddressRequest body = null)
+> RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost (CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = null)
 
 
 
@@ -41,11 +41,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var body = new CustomerServiceDeleteAddressRequest(); // CustomerServiceDeleteAddressRequest |  (optional) 
+            var customerServiceDeleteAddressRequest = new CustomerServiceDeleteAddressRequest(); // CustomerServiceDeleteAddressRequest |  (optional) 
 
             try
             {
-                RestResultOfCustomerServiceDeleteAddressResponse result = apiInstance.ApiCustomerDeleteAddressPost(body);
+                RestResultOfCustomerServiceDeleteAddressResponse result = apiInstance.ApiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -63,7 +63,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceDeleteAddressRequest**](CustomerServiceDeleteAddressRequest.md)|  | [optional] 
+ **customerServiceDeleteAddressRequest** | [**CustomerServiceDeleteAddressRequest**](CustomerServiceDeleteAddressRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -301,7 +301,7 @@ This endpoint does not need any parameter.
 
 <a name="apicustomerupdateaddresspost"></a>
 # **ApiCustomerUpdateAddressPost**
-> RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost (CustomerServiceCustomerAddressRequest body = null)
+> RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost (CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = null)
 
 
 
@@ -327,11 +327,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var body = new CustomerServiceCustomerAddressRequest(); // CustomerServiceCustomerAddressRequest |  (optional) 
+            var customerServiceCustomerAddressRequest = new CustomerServiceCustomerAddressRequest(); // CustomerServiceCustomerAddressRequest |  (optional) 
 
             try
             {
-                RestResultOfCustomerServiceCustomerAddressResponse result = apiInstance.ApiCustomerUpdateAddressPost(body);
+                RestResultOfCustomerServiceCustomerAddressResponse result = apiInstance.ApiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -349,7 +349,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceCustomerAddressRequest**](CustomerServiceCustomerAddressRequest.md)|  | [optional] 
+ **customerServiceCustomerAddressRequest** | [**CustomerServiceCustomerAddressRequest**](CustomerServiceCustomerAddressRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 <a name="apicustomerupdatecustomerdefultaddresspost"></a>
 # **ApiCustomerUpdateCustomerDefultAddressPost**
-> RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost (CustomerServiceNewCustomerDefaultAddress body = null)
+> RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost (CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = null)
 
 
 
@@ -400,11 +400,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var body = new CustomerServiceNewCustomerDefaultAddress(); // CustomerServiceNewCustomerDefaultAddress |  (optional) 
+            var customerServiceNewCustomerDefaultAddress = new CustomerServiceNewCustomerDefaultAddress(); // CustomerServiceNewCustomerDefaultAddress |  (optional) 
 
             try
             {
-                RestResultOfCustomerServiceCustomerResponse result = apiInstance.ApiCustomerUpdateCustomerDefultAddressPost(body);
+                RestResultOfCustomerServiceCustomerResponse result = apiInstance.ApiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -422,7 +422,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceNewCustomerDefaultAddress**](CustomerServiceNewCustomerDefaultAddress.md)|  | [optional] 
+ **customerServiceNewCustomerDefaultAddress** | [**CustomerServiceNewCustomerDefaultAddress**](CustomerServiceNewCustomerDefaultAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 <a name="apicustomerupdatecustomerpost"></a>
 # **ApiCustomerUpdateCustomerPost**
-> RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost (CustomerServiceNewCustomerRequest body = null)
+> RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost (CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = null)
 
 
 
@@ -473,11 +473,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CustomerApi(config);
-            var body = new CustomerServiceNewCustomerRequest(); // CustomerServiceNewCustomerRequest |  (optional) 
+            var customerServiceNewCustomerRequest = new CustomerServiceNewCustomerRequest(); // CustomerServiceNewCustomerRequest |  (optional) 
 
             try
             {
-                RestResultOfCustomerServiceCustomerResponse result = apiInstance.ApiCustomerUpdateCustomerPost(body);
+                RestResultOfCustomerServiceCustomerResponse result = apiInstance.ApiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -495,7 +495,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceNewCustomerRequest**](CustomerServiceNewCustomerRequest.md)|  | [optional] 
+ **customerServiceNewCustomerRequest** | [**CustomerServiceNewCustomerRequest**](CustomerServiceNewCustomerRequest.md)|  | [optional] 
 
 ### Return type
 

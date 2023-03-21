@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="apiordercheckoutpost"></a>
 # **ApiOrderCheckoutPost**
-> RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost (OrderServiceCheckoutRequest body = null)
+> RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost (OrderServiceCheckoutRequest orderServiceCheckoutRequest = null)
 
 
 
@@ -40,11 +40,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var body = new OrderServiceCheckoutRequest(); // OrderServiceCheckoutRequest |  (optional) 
+            var orderServiceCheckoutRequest = new OrderServiceCheckoutRequest(); // OrderServiceCheckoutRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfOrderServiceCheckoutItem result = apiInstance.ApiOrderCheckoutPost(body);
+                RestResultOfListOfOrderServiceCheckoutItem result = apiInstance.ApiOrderCheckoutPost(orderServiceCheckoutRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -62,7 +62,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceCheckoutRequest**](OrderServiceCheckoutRequest.md)|  | [optional] 
+ **orderServiceCheckoutRequest** | [**OrderServiceCheckoutRequest**](OrderServiceCheckoutRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 <a name="apiordercreateorderpost"></a>
 # **ApiOrderCreateOrderPost**
-> RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost (OrderServiceOrderRequest body = null)
+> RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost (OrderServiceOrderRequest orderServiceOrderRequest = null)
 
 
 
@@ -113,11 +113,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var body = new OrderServiceOrderRequest(); // OrderServiceOrderRequest |  (optional) 
+            var orderServiceOrderRequest = new OrderServiceOrderRequest(); // OrderServiceOrderRequest |  (optional) 
 
             try
             {
-                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderCreateOrderPost(body);
+                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderCreateOrderPost(orderServiceOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -135,7 +135,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
+ **orderServiceOrderRequest** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -229,7 +229,7 @@ This endpoint does not need any parameter.
 
 <a name="apiordergetorderpost"></a>
 # **ApiOrderGetOrderPost**
-> RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost (OrderServiceGetOrderRequest body = null)
+> RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost (OrderServiceGetOrderRequest orderServiceGetOrderRequest = null)
 
 
 
@@ -255,11 +255,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var body = new OrderServiceGetOrderRequest(); // OrderServiceGetOrderRequest |  (optional) 
+            var orderServiceGetOrderRequest = new OrderServiceGetOrderRequest(); // OrderServiceGetOrderRequest |  (optional) 
 
             try
             {
-                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderGetOrderPost(body);
+                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderGetOrderPost(orderServiceGetOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -277,7 +277,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
+ **orderServiceGetOrderRequest** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 <a name="apiorderpatchorderpost"></a>
 # **ApiOrderPatchOrderPost**
-> RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost (OrderServicePatchOrderRequest body = null)
+> RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost (OrderServicePatchOrderRequest orderServicePatchOrderRequest = null)
 
 
 
@@ -328,11 +328,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var body = new OrderServicePatchOrderRequest(); // OrderServicePatchOrderRequest |  (optional) 
+            var orderServicePatchOrderRequest = new OrderServicePatchOrderRequest(); // OrderServicePatchOrderRequest |  (optional) 
 
             try
             {
-                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderPatchOrderPost(body);
+                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderPatchOrderPost(orderServicePatchOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -350,7 +350,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServicePatchOrderRequest**](OrderServicePatchOrderRequest.md)|  | [optional] 
+ **orderServicePatchOrderRequest** | [**OrderServicePatchOrderRequest**](OrderServicePatchOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 <a name="apiorderupdatestatuspost"></a>
 # **ApiOrderUpdateStatusPost**
-> RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost (OrderServiceUpdateOrderRequest body = null)
+> RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost (OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = null)
 
 
 
@@ -401,11 +401,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new OrderApi(config);
-            var body = new OrderServiceUpdateOrderRequest(); // OrderServiceUpdateOrderRequest |  (optional) 
+            var orderServiceUpdateOrderRequest = new OrderServiceUpdateOrderRequest(); // OrderServiceUpdateOrderRequest |  (optional) 
 
             try
             {
-                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderUpdateStatusPost(body);
+                RestResultOfOrderServiceOrderResponse result = apiInstance.ApiOrderUpdateStatusPost(orderServiceUpdateOrderRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -423,7 +423,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
+ **orderServiceUpdateOrderRequest** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
 
 ### Return type
 

@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets OrderList
         /// </summary>
-        [DataMember(Name = "orderList", EmitDefaultValue = false)]
+        [DataMember(Name = "orderList", EmitDefaultValue = true)]
         public List<OrderServiceOrders> OrderList { get; set; }
 
         /// <summary>

@@ -93,7 +93,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Uuid
         /// </summary>
-        [DataMember(Name = "uuid", EmitDefaultValue = false)]
+        [DataMember(Name = "uuid", EmitDefaultValue = true)]
         public string Uuid { get; set; }
 
         /// <summary>
@@ -111,13 +111,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets DeliveryAddress
         /// </summary>
-        [DataMember(Name = "deliveryAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryAddress", EmitDefaultValue = true)]
         public string DeliveryAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets BillingAdrress
         /// </summary>
-        [DataMember(Name = "billingAdrress", EmitDefaultValue = false)]
+        [DataMember(Name = "billingAdrress", EmitDefaultValue = true)]
         public string BillingAdrress { get; set; }
 
         /// <summary>
@@ -135,19 +135,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets OrderProducts
         /// </summary>
-        [DataMember(Name = "orderProducts", EmitDefaultValue = false)]
+        [DataMember(Name = "orderProducts", EmitDefaultValue = true)]
         public List<OrderServiceROrderProducts> OrderProducts { get; set; }
 
         /// <summary>
         /// Gets or Sets OrderNote
         /// </summary>
-        [DataMember(Name = "orderNote", EmitDefaultValue = false)]
+        [DataMember(Name = "orderNote", EmitDefaultValue = true)]
         public string OrderNote { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentType
         /// </summary>
-        [DataMember(Name = "paymentType", EmitDefaultValue = false)]
+        [DataMember(Name = "paymentType", EmitDefaultValue = true)]
         public string PaymentType { get; set; }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets AppliedCampaigns
         /// </summary>
-        [DataMember(Name = "appliedCampaigns", EmitDefaultValue = false)]
+        [DataMember(Name = "appliedCampaigns", EmitDefaultValue = true)]
         public List<OrderServiceCampaignResponse> AppliedCampaigns { get; set; }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets DeliveryTypeCode
         /// </summary>
-        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = true)]
         public string DeliveryTypeCode { get; set; }
 
         /// <summary>

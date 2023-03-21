@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets ResponseHtml
         /// </summary>
-        [DataMember(Name = "responseHtml", EmitDefaultValue = false)]
+        [DataMember(Name = "responseHtml", EmitDefaultValue = true)]
         public string ResponseHtml { get; set; }
 
         /// <summary>

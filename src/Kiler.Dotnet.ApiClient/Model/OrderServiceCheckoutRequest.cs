@@ -45,7 +45,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets DeliveryTypeCode
         /// </summary>
-        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = false)]
+        [DataMember(Name = "deliveryTypeCode", EmitDefaultValue = true)]
         public string DeliveryTypeCode { get; set; }
 
         /// <summary>

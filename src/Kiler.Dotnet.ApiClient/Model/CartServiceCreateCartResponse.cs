@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Messages
         /// </summary>
-        [DataMember(Name = "messages", EmitDefaultValue = false)]
+        [DataMember(Name = "messages", EmitDefaultValue = true)]
         public string Messages { get; set; }
 
         /// <summary>

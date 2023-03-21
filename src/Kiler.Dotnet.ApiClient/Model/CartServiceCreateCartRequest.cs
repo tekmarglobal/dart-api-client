@@ -36,7 +36,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         /// <param name="neighborhoodId">neighborhoodId.</param>
         /// <param name="regionId">regionId.</param>
-        public CartServiceCreateCartRequest(int neighborhoodId = default(int), int regionId = default(int))
+        public CartServiceCreateCartRequest(int? neighborhoodId = default(int?), int? regionId = default(int?))
         {
             this.NeighborhoodId = neighborhoodId;
             this.RegionId = regionId;
@@ -45,14 +45,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets NeighborhoodId
         /// </summary>
-        [DataMember(Name = "neighborhoodId", EmitDefaultValue = false)]
-        public int NeighborhoodId { get; set; }
+        [DataMember(Name = "neighborhoodId", EmitDefaultValue = true)]
+        public int? NeighborhoodId { get; set; }
 
         /// <summary>
         /// Gets or Sets RegionId
         /// </summary>
-        [DataMember(Name = "regionId", EmitDefaultValue = false)]
-        public int RegionId { get; set; }
+        [DataMember(Name = "regionId", EmitDefaultValue = true)]
+        public int? RegionId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +101,13 @@ namespace Kiler.Dotnet.ApiClient.Model
             return 
                 (
                     this.NeighborhoodId == input.NeighborhoodId ||
-                    this.NeighborhoodId.Equals(input.NeighborhoodId)
+                    (this.NeighborhoodId != null &&
+                    this.NeighborhoodId.Equals(input.NeighborhoodId))
                 ) && 
                 (
                     this.RegionId == input.RegionId ||
-                    this.RegionId.Equals(input.RegionId)
+                    (this.RegionId != null &&
+                    this.RegionId.Equals(input.RegionId))
                 );
         }
 
@@ -118,8 +120,14 @@ namespace Kiler.Dotnet.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.NeighborhoodId.GetHashCode();
-                hashCode = (hashCode * 59) + this.RegionId.GetHashCode();
+                if (this.NeighborhoodId != null)
+                {
+                    hashCode = (hashCode * 59) + this.NeighborhoodId.GetHashCode();
+                }
+                if (this.RegionId != null)
+                {
+                    hashCode = (hashCode * 59) + this.RegionId.GetHashCode();
+                }
                 return hashCode;
             }
         }

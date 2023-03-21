@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Token** | **string** |  | [optional] 
-**CustomerId** | **int** |  | [optional] 
+**CustomerId** | **int?** |  | [optional] 
 **Registered** | **bool** |  | [optional] 
 **FirebaseToken** | **string** |  | [optional] [readonly] 
 **VersionResponse** | [**AccountServiceVersionResponse**](AccountServiceVersionResponse.md) |  | [optional] 

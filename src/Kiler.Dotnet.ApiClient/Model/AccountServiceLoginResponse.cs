@@ -38,7 +38,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="customerId">customerId.</param>
         /// <param name="registered">registered.</param>
         /// <param name="versionResponse">versionResponse.</param>
-        public AccountServiceLoginResponse(string token = default(string), int customerId = default(int), bool registered = default(bool), AccountServiceVersionResponse versionResponse = default(AccountServiceVersionResponse))
+        public AccountServiceLoginResponse(string token = default(string), int? customerId = default(int?), bool registered = default(bool), AccountServiceVersionResponse versionResponse = default(AccountServiceVersionResponse))
         {
             this.Token = token;
             this.CustomerId = customerId;
@@ -49,14 +49,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Token
         /// </summary>
-        [DataMember(Name = "token", EmitDefaultValue = false)]
+        [DataMember(Name = "token", EmitDefaultValue = true)]
         public string Token { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerId
         /// </summary>
-        [DataMember(Name = "customerId", EmitDefaultValue = false)]
-        public int CustomerId { get; set; }
+        [DataMember(Name = "customerId", EmitDefaultValue = true)]
+        public int? CustomerId { get; set; }
 
         /// <summary>
         /// Gets or Sets Registered
@@ -67,7 +67,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets FirebaseToken
         /// </summary>
-        [DataMember(Name = "firebaseToken", EmitDefaultValue = false)]
+        [DataMember(Name = "firebaseToken", EmitDefaultValue = true)]
         public string FirebaseToken { get; private set; }
 
         /// <summary>
@@ -139,7 +139,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.CustomerId == input.CustomerId ||
-                    this.CustomerId.Equals(input.CustomerId)
+                    (this.CustomerId != null &&
+                    this.CustomerId.Equals(input.CustomerId))
                 ) && 
                 (
                     this.Registered == input.Registered ||
@@ -170,7 +171,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Token.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.CustomerId.GetHashCode();
+                if (this.CustomerId != null)
+                {
+                    hashCode = (hashCode * 59) + this.CustomerId.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Registered.GetHashCode();
                 if (this.FirebaseToken != null)
                 {

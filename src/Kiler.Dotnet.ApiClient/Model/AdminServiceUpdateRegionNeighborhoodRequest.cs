@@ -51,7 +51,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Neighborhood
         /// </summary>
-        [DataMember(Name = "neighborhood", EmitDefaultValue = false)]
+        [DataMember(Name = "neighborhood", EmitDefaultValue = true)]
         public List<int> Neighborhood { get; set; }
 
         /// <summary>

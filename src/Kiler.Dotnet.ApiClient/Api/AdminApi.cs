@@ -46,6 +46,42 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>RestResultOfAdminServiceRegionStatusCode</returns>
+        RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusForNeighborhoodPost(int? regionId = default(int?));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfAdminServiceRegionStatusCode</returns>
+        ApiResponse<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfo(int? regionId = default(int?));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>RestResultOfAdminServiceRegionStatusCode</returns>
+        RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusPost(int? regionId = default(int?));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfAdminServiceRegionStatusCode</returns>
+        ApiResponse<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusPostWithHttpInfo(int? regionId = default(int?));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>RestResultOfListOfAdminServiceCompanyResponse</returns>
         RestResultOfListOfAdminServiceCompanyResponse ApiAdminCompaniesPost();
 
@@ -118,9 +154,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest));
+        RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest));
 
         /// <summary>
         /// 
@@ -129,9 +165,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostWithHttpInfo(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest));
+        ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostWithHttpInfo(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -172,9 +208,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>RestResultOfAdminServiceAdminNeighborResponse</returns>
-        RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest));
+        RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest));
 
         /// <summary>
         /// 
@@ -183,9 +219,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAdminServiceAdminNeighborResponse</returns>
-        ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest));
+        ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -234,6 +270,52 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfAdminServiceBranchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfAdminServiceBranchResponse>> ApiAdminBranchPostWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfAdminServiceRegionStatusCode</returns>
+        System.Threading.Tasks.Task<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusForNeighborhoodPostAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfAdminServiceRegionStatusCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfAdminServiceRegionStatusCode>> ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfoAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfAdminServiceRegionStatusCode</returns>
+        System.Threading.Tasks.Task<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusPostAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfAdminServiceRegionStatusCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfAdminServiceRegionStatusCode>> ApiAdminCheckRegionStatusPostWithHttpInfoAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -333,10 +415,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostAsync(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostAsync(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -345,10 +427,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfAdminServiceAdminNeighborResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse>> ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse>> ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -402,10 +484,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAdminServiceAdminNeighborResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostAsync(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostAsync(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -414,10 +496,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAdminServiceAdminNeighborResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfAdminServiceAdminNeighborResponse>> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfAdminServiceAdminNeighborResponse>> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -682,6 +764,290 @@ namespace Kiler.Dotnet.ApiClient.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ApiAdminBranchPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>RestResultOfAdminServiceRegionStatusCode</returns>
+        public RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusForNeighborhoodPost(int? regionId = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> localVarResponse = ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfo(regionId);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfAdminServiceRegionStatusCode</returns>
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfo(int? regionId = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (regionId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "regionId", regionId));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<RestResultOfAdminServiceRegionStatusCode>("/api/Admin/CheckRegionStatusForNeighborhood", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiAdminCheckRegionStatusForNeighborhoodPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfAdminServiceRegionStatusCode</returns>
+        public async System.Threading.Tasks.Task<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusForNeighborhoodPostAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> localVarResponse = await ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfoAsync(regionId, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfAdminServiceRegionStatusCode)</returns>
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode>> ApiAdminCheckRegionStatusForNeighborhoodPostWithHttpInfoAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (regionId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "regionId", regionId));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RestResultOfAdminServiceRegionStatusCode>("/api/Admin/CheckRegionStatusForNeighborhood", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiAdminCheckRegionStatusForNeighborhoodPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>RestResultOfAdminServiceRegionStatusCode</returns>
+        public RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusPost(int? regionId = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> localVarResponse = ApiAdminCheckRegionStatusPostWithHttpInfo(regionId);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfAdminServiceRegionStatusCode</returns>
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusPostWithHttpInfo(int? regionId = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (regionId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "regionId", regionId));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<RestResultOfAdminServiceRegionStatusCode>("/api/Admin/CheckRegionStatus", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiAdminCheckRegionStatusPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfAdminServiceRegionStatusCode</returns>
+        public async System.Threading.Tasks.Task<RestResultOfAdminServiceRegionStatusCode> ApiAdminCheckRegionStatusPostAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode> localVarResponse = await ApiAdminCheckRegionStatusPostWithHttpInfoAsync(regionId, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="regionId"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfAdminServiceRegionStatusCode)</returns>
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceRegionStatusCode>> ApiAdminCheckRegionStatusPostWithHttpInfoAsync(int? regionId = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (regionId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "regionId", regionId));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RestResultOfAdminServiceRegionStatusCode>("/api/Admin/CheckRegionStatus", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiAdminCheckRegionStatusPost", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -1263,11 +1629,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        public RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest))
+        public RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> localVarResponse = ApiAdminRegionNeighborhoodPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> localVarResponse = ApiAdminRegionNeighborhoodPostWithHttpInfo(adminServiceRegionNeighborhoodRequest);
             return localVarResponse.Data;
         }
 
@@ -1275,9 +1641,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostWithHttpInfo(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostWithHttpInfo(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1306,7 +1672,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = adminServiceRegionNeighborhoodRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1332,12 +1698,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfAdminServiceAdminNeighborResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostAsync(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfAdminServiceAdminNeighborResponse> ApiAdminRegionNeighborhoodPostAsync(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> localVarResponse = await ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse> localVarResponse = await ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(adminServiceRegionNeighborhoodRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1345,10 +1711,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfAdminServiceAdminNeighborResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse>> ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceRegionNeighborhoodRequest body = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfAdminServiceAdminNeighborResponse>> ApiAdminRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = default(AdminServiceRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1378,7 +1744,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = adminServiceRegionNeighborhoodRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1689,11 +2055,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>RestResultOfAdminServiceAdminNeighborResponse</returns>
-        public RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest))
+        public RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> localVarResponse = ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> localVarResponse = ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(adminServiceUpdateRegionNeighborhoodRequest);
             return localVarResponse.Data;
         }
 
@@ -1701,9 +2067,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfAdminServiceAdminNeighborResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfo(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1732,7 +2098,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = adminServiceUpdateRegionNeighborhoodRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1758,12 +2124,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfAdminServiceAdminNeighborResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostAsync(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfAdminServiceAdminNeighborResponse> ApiAdminUpdateRegionNeighborhoodPostAsync(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> localVarResponse = await ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse> localVarResponse = await ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(adminServiceUpdateRegionNeighborhoodRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1771,10 +2137,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="adminServiceUpdateRegionNeighborhoodRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfAdminServiceAdminNeighborResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse>> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceUpdateRegionNeighborhoodRequest body = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfAdminServiceAdminNeighborResponse>> ApiAdminUpdateRegionNeighborhoodPostWithHttpInfoAsync(AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = default(AdminServiceUpdateRegionNeighborhoodRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1804,7 +2170,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = adminServiceUpdateRegionNeighborhoodRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

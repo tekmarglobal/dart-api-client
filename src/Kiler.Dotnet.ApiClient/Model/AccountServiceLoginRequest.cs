@@ -45,7 +45,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets SessionId
         /// </summary>
-        [DataMember(Name = "sessionId", EmitDefaultValue = false)]
+        [DataMember(Name = "sessionId", EmitDefaultValue = true)]
         public string SessionId { get; set; }
 
         /// <summary>

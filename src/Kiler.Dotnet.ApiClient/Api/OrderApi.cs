@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <returns>RestResultOfListOfOrderServiceCheckoutItem</returns>
-        RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest));
+        RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest));
 
         /// <summary>
         /// 
@@ -41,16 +41,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfOrderServiceCheckoutItem</returns>
-        ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostWithHttpInfo(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest));
+        ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostWithHttpInfo(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost(OrderServiceOrderRequest body = default(OrderServiceOrderRequest));
+        RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest));
 
         /// <summary>
         /// 
@@ -59,9 +59,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostWithHttpInfo(OrderServiceOrderRequest body = default(OrderServiceOrderRequest));
+        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostWithHttpInfo(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -82,9 +82,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest));
+        RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest));
 
         /// <summary>
         /// 
@@ -93,16 +93,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostWithHttpInfo(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest));
+        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostWithHttpInfo(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest));
+        RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest));
 
         /// <summary>
         /// 
@@ -111,16 +111,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostWithHttpInfo(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest));
+        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostWithHttpInfo(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest));
+        RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest));
 
         /// <summary>
         /// 
@@ -129,9 +129,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostWithHttpInfo(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest));
+        ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostWithHttpInfo(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest));
         #endregion Synchronous Operations
     }
 
@@ -148,10 +148,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfOrderServiceCheckoutItem</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostAsync(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostAsync(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -160,10 +160,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfOrderServiceCheckoutItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfOrderServiceCheckoutItem>> ApiOrderCheckoutPostWithHttpInfoAsync(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfOrderServiceCheckoutItem>> ApiOrderCheckoutPostWithHttpInfoAsync(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -171,10 +171,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostAsync(OrderServiceOrderRequest body = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostAsync(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -183,10 +183,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderCreateOrderPostWithHttpInfoAsync(OrderServiceOrderRequest body = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderCreateOrderPostWithHttpInfoAsync(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -215,10 +215,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostAsync(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostAsync(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -227,10 +227,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderGetOrderPostWithHttpInfoAsync(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderGetOrderPostWithHttpInfoAsync(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -238,10 +238,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostAsync(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostAsync(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -250,10 +250,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderPatchOrderPostWithHttpInfoAsync(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderPatchOrderPostWithHttpInfoAsync(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -261,10 +261,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostAsync(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostAsync(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -273,10 +273,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderUpdateStatusPostWithHttpInfoAsync(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderUpdateStatusPostWithHttpInfoAsync(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -401,11 +401,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <returns>RestResultOfListOfOrderServiceCheckoutItem</returns>
-        public RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest))
+        public RestResultOfListOfOrderServiceCheckoutItem ApiOrderCheckoutPost(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> localVarResponse = ApiOrderCheckoutPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> localVarResponse = ApiOrderCheckoutPostWithHttpInfo(orderServiceCheckoutRequest);
             return localVarResponse.Data;
         }
 
@@ -413,9 +413,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfOrderServiceCheckoutItem</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostWithHttpInfo(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostWithHttpInfo(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -444,7 +444,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceCheckoutRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -470,12 +470,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfOrderServiceCheckoutItem</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostAsync(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfOrderServiceCheckoutItem> ApiOrderCheckoutPostAsync(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> localVarResponse = await ApiOrderCheckoutPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem> localVarResponse = await ApiOrderCheckoutPostWithHttpInfoAsync(orderServiceCheckoutRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -483,10 +483,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceCheckoutRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfOrderServiceCheckoutItem)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem>> ApiOrderCheckoutPostWithHttpInfoAsync(OrderServiceCheckoutRequest body = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfOrderServiceCheckoutItem>> ApiOrderCheckoutPostWithHttpInfoAsync(OrderServiceCheckoutRequest orderServiceCheckoutRequest = default(OrderServiceCheckoutRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -516,7 +516,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceCheckoutRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -543,11 +543,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        public RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost(OrderServiceOrderRequest body = default(OrderServiceOrderRequest))
+        public RestResultOfOrderServiceOrderResponse ApiOrderCreateOrderPost(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderCreateOrderPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderCreateOrderPostWithHttpInfo(orderServiceOrderRequest);
             return localVarResponse.Data;
         }
 
@@ -555,9 +555,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostWithHttpInfo(OrderServiceOrderRequest body = default(OrderServiceOrderRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostWithHttpInfo(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -586,7 +586,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -612,12 +612,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostAsync(OrderServiceOrderRequest body = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderCreateOrderPostAsync(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderCreateOrderPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderCreateOrderPostWithHttpInfoAsync(orderServiceOrderRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -625,10 +625,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderCreateOrderPostWithHttpInfoAsync(OrderServiceOrderRequest body = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderCreateOrderPostWithHttpInfoAsync(OrderServiceOrderRequest orderServiceOrderRequest = default(OrderServiceOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -658,7 +658,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -815,11 +815,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        public RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest))
+        public RestResultOfOrderServiceOrderResponse ApiOrderGetOrderPost(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderGetOrderPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderGetOrderPostWithHttpInfo(orderServiceGetOrderRequest);
             return localVarResponse.Data;
         }
 
@@ -827,9 +827,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostWithHttpInfo(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostWithHttpInfo(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -858,7 +858,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceGetOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -884,12 +884,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostAsync(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderGetOrderPostAsync(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderGetOrderPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderGetOrderPostWithHttpInfoAsync(orderServiceGetOrderRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -897,10 +897,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceGetOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderGetOrderPostWithHttpInfoAsync(OrderServiceGetOrderRequest body = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderGetOrderPostWithHttpInfoAsync(OrderServiceGetOrderRequest orderServiceGetOrderRequest = default(OrderServiceGetOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -930,7 +930,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceGetOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -957,11 +957,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        public RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest))
+        public RestResultOfOrderServiceOrderResponse ApiOrderPatchOrderPost(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderPatchOrderPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderPatchOrderPostWithHttpInfo(orderServicePatchOrderRequest);
             return localVarResponse.Data;
         }
 
@@ -969,9 +969,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostWithHttpInfo(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostWithHttpInfo(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1000,7 +1000,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServicePatchOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1026,12 +1026,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostAsync(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderPatchOrderPostAsync(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderPatchOrderPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderPatchOrderPostWithHttpInfoAsync(orderServicePatchOrderRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1039,10 +1039,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServicePatchOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderPatchOrderPostWithHttpInfoAsync(OrderServicePatchOrderRequest body = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderPatchOrderPostWithHttpInfoAsync(OrderServicePatchOrderRequest orderServicePatchOrderRequest = default(OrderServicePatchOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1072,7 +1072,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServicePatchOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1099,11 +1099,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <returns>RestResultOfOrderServiceOrderResponse</returns>
-        public RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest))
+        public RestResultOfOrderServiceOrderResponse ApiOrderUpdateStatusPost(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderUpdateStatusPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = ApiOrderUpdateStatusPostWithHttpInfo(orderServiceUpdateOrderRequest);
             return localVarResponse.Data;
         }
 
@@ -1111,9 +1111,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfOrderServiceOrderResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostWithHttpInfo(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostWithHttpInfo(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1142,7 +1142,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceUpdateOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1168,12 +1168,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfOrderServiceOrderResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostAsync(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfOrderServiceOrderResponse> ApiOrderUpdateStatusPostAsync(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderUpdateStatusPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse> localVarResponse = await ApiOrderUpdateStatusPostWithHttpInfoAsync(orderServiceUpdateOrderRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1181,10 +1181,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="orderServiceUpdateOrderRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfOrderServiceOrderResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderUpdateStatusPostWithHttpInfoAsync(OrderServiceUpdateOrderRequest body = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfOrderServiceOrderResponse>> ApiOrderUpdateStatusPostWithHttpInfoAsync(OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = default(OrderServiceUpdateOrderRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1214,7 +1214,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = orderServiceUpdateOrderRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

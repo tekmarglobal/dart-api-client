@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="phoneNumber">phoneNumber.</param>
         /// <param name="createdAt">createdAt.</param>
         /// <param name="order">order.</param>
-        public CrmServiceTicketResponse(int id = default(int), string name = default(string), int customer = default(int), bool active = default(bool), int ticketCategory = default(int), int status = default(int), string phoneNumber = default(string), DateTime createdAt = default(DateTime), int order = default(int))
+        public CrmServiceTicketResponse(int id = default(int), string name = default(string), int? customer = default(int?), bool active = default(bool), int ticketCategory = default(int), int status = default(int), string phoneNumber = default(string), DateTime createdAt = default(DateTime), int? order = default(int?))
         {
             this.Id = id;
             this.Name = name;
@@ -65,14 +65,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
-        [DataMember(Name = "customer", EmitDefaultValue = false)]
-        public int Customer { get; set; }
+        [DataMember(Name = "customer", EmitDefaultValue = true)]
+        public int? Customer { get; set; }
 
         /// <summary>
         /// Gets or Sets Active
@@ -95,7 +95,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
-        [DataMember(Name = "order", EmitDefaultValue = false)]
-        public int Order { get; set; }
+        [DataMember(Name = "order", EmitDefaultValue = true)]
+        public int? Order { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -173,7 +173,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Customer == input.Customer ||
-                    this.Customer.Equals(input.Customer)
+                    (this.Customer != null &&
+                    this.Customer.Equals(input.Customer))
                 ) && 
                 (
                     this.Active == input.Active ||
@@ -199,7 +200,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Order == input.Order ||
-                    this.Order.Equals(input.Order)
+                    (this.Order != null &&
+                    this.Order.Equals(input.Order))
                 );
         }
 
@@ -217,7 +219,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.Customer.GetHashCode();
+                if (this.Customer != null)
+                {
+                    hashCode = (hashCode * 59) + this.Customer.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Active.GetHashCode();
                 hashCode = (hashCode * 59) + this.TicketCategory.GetHashCode();
                 hashCode = (hashCode * 59) + this.Status.GetHashCode();
@@ -229,7 +234,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.Order.GetHashCode();
+                if (this.Order != null)
+                {
+                    hashCode = (hashCode * 59) + this.Order.GetHashCode();
+                }
                 return hashCode;
             }
         }

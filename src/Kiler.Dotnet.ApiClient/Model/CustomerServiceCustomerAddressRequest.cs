@@ -85,7 +85,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -103,43 +103,43 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Building
         /// </summary>
-        [DataMember(Name = "building", EmitDefaultValue = false)]
+        [DataMember(Name = "building", EmitDefaultValue = true)]
         public string Building { get; set; }
 
         /// <summary>
         /// Gets or Sets Floor
         /// </summary>
-        [DataMember(Name = "floor", EmitDefaultValue = false)]
+        [DataMember(Name = "floor", EmitDefaultValue = true)]
         public string Floor { get; set; }
 
         /// <summary>
         /// Gets or Sets Door
         /// </summary>
-        [DataMember(Name = "door", EmitDefaultValue = false)]
+        [DataMember(Name = "door", EmitDefaultValue = true)]
         public string Door { get; set; }
 
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
-        [DataMember(Name = "postalCode", EmitDefaultValue = false)]
+        [DataMember(Name = "postalCode", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
-        [DataMember(Name = "customerName", EmitDefaultValue = false)]
+        [DataMember(Name = "customerName", EmitDefaultValue = true)]
         public string CustomerName { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerSurname
         /// </summary>
-        [DataMember(Name = "customerSurname", EmitDefaultValue = false)]
+        [DataMember(Name = "customerSurname", EmitDefaultValue = true)]
         public string CustomerSurname { get; set; }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Street
         /// </summary>
-        [DataMember(Name = "street", EmitDefaultValue = false)]
+        [DataMember(Name = "street", EmitDefaultValue = true)]
         public string Street { get; set; }
 
         /// <summary>
@@ -169,25 +169,25 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CompanyName
         /// </summary>
-        [DataMember(Name = "companyName", EmitDefaultValue = false)]
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
         public string CompanyName { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxOffice
         /// </summary>
-        [DataMember(Name = "taxOffice", EmitDefaultValue = false)]
+        [DataMember(Name = "taxOffice", EmitDefaultValue = true)]
         public string TaxOffice { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxNumber
         /// </summary>
-        [DataMember(Name = "taxNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "taxNumber", EmitDefaultValue = true)]
         public string TaxNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name = "phoneNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "phoneNumber", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>

@@ -69,13 +69,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CartNote
         /// </summary>
-        [DataMember(Name = "cartNote", EmitDefaultValue = false)]
+        [DataMember(Name = "cartNote", EmitDefaultValue = true)]
         public string CartNote { get; set; }
 
         /// <summary>
         /// Gets or Sets ProductNote
         /// </summary>
-        [DataMember(Name = "productNote", EmitDefaultValue = false)]
+        [DataMember(Name = "productNote", EmitDefaultValue = true)]
         public string ProductNote { get; set; }
 
         /// <summary>

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="apicrmcallpost"></a>
 # **ApiCrmCallPost**
-> bool ApiCrmCallPost (CrmServiceCallRequest body = null)
+> bool ApiCrmCallPost (CrmServiceCallRequest crmServiceCallRequest = null)
 
 
 
@@ -38,11 +38,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CrmApi(config);
-            var body = new CrmServiceCallRequest(); // CrmServiceCallRequest |  (optional) 
+            var crmServiceCallRequest = new CrmServiceCallRequest(); // CrmServiceCallRequest |  (optional) 
 
             try
             {
-                bool result = apiInstance.ApiCrmCallPost(body);
+                bool result = apiInstance.ApiCrmCallPost(crmServiceCallRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -60,7 +60,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CrmServiceCallRequest**](CrmServiceCallRequest.md)|  | [optional] 
+ **crmServiceCallRequest** | [**CrmServiceCallRequest**](CrmServiceCallRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="apicrmcreateticketpost"></a>
 # **ApiCrmCreateTicketPost**
-> RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost (CrmServiceTicketRequest body = null)
+> RestResultOfCrmServiceTicketResponse ApiCrmCreateTicketPost (CrmServiceTicketRequest crmServiceTicketRequest = null)
 
 
 
@@ -111,11 +111,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new CrmApi(config);
-            var body = new CrmServiceTicketRequest(); // CrmServiceTicketRequest |  (optional) 
+            var crmServiceTicketRequest = new CrmServiceTicketRequest(); // CrmServiceTicketRequest |  (optional) 
 
             try
             {
-                RestResultOfCrmServiceTicketResponse result = apiInstance.ApiCrmCreateTicketPost(body);
+                RestResultOfCrmServiceTicketResponse result = apiInstance.ApiCrmCreateTicketPost(crmServiceTicketRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -133,7 +133,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CrmServiceTicketRequest**](CrmServiceTicketRequest.md)|  | [optional] 
+ **crmServiceTicketRequest** | [**CrmServiceTicketRequest**](CrmServiceTicketRequest.md)|  | [optional] 
 
 ### Return type
 

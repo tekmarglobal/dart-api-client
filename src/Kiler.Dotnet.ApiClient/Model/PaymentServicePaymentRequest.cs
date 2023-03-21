@@ -57,19 +57,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CartNumber
         /// </summary>
-        [DataMember(Name = "cartNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "cartNumber", EmitDefaultValue = true)]
         public string CartNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpiryDate
         /// </summary>
-        [DataMember(Name = "expiryDate", EmitDefaultValue = false)]
+        [DataMember(Name = "expiryDate", EmitDefaultValue = true)]
         public string ExpiryDate { get; set; }
 
         /// <summary>
         /// Gets or Sets CartCvv
         /// </summary>
-        [DataMember(Name = "cartCvv", EmitDefaultValue = false)]
+        [DataMember(Name = "cartCvv", EmitDefaultValue = true)]
         public string CartCvv { get; set; }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets TransactionUid
         /// </summary>
-        [DataMember(Name = "transactionUid", EmitDefaultValue = false)]
+        [DataMember(Name = "transactionUid", EmitDefaultValue = true)]
         public string TransactionUid { get; set; }
 
         /// <summary>

@@ -57,7 +57,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets DepotAddress
         /// </summary>
-        [DataMember(Name = "depotAddress", EmitDefaultValue = false)]
+        [DataMember(Name = "depotAddress", EmitDefaultValue = true)]
         public string DepotAddress { get; set; }
 
         /// <summary>

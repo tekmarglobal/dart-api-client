@@ -64,9 +64,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <returns>RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest));
+        RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest));
 
         /// <summary>
         /// 
@@ -75,9 +75,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostWithHttpInfo(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest));
+        ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostWithHttpInfo(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -166,6 +166,24 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <returns>RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        RestResultOfListOfDefinitionServiceSelfPickupPoint ApiDefinitionGetSelfPickupPointsInNeighborhoodGet(int? neighborhood = default(int?));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfo(int? neighborhood = default(int?));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         string ApiDefinitionHelloGet();
 
@@ -182,9 +200,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <returns>RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest));
+        RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest));
 
         /// <summary>
         /// 
@@ -193,16 +211,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostWithHttpInfo(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest));
+        ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostWithHttpInfo(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <returns>RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest));
+        RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest));
 
         /// <summary>
         /// 
@@ -211,9 +229,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostWithHttpInfo(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest));
+        ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostWithHttpInfo(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -290,10 +308,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostAsync(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostAsync(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -302,10 +320,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceCountiesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse>> ApiDefinitionCountiesPostWithHttpInfoAsync(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse>> ApiDefinitionCountiesPostWithHttpInfoAsync(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -422,6 +440,29 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceSelfPickupPoint> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetAsync(int? neighborhood = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceSelfPickupPoint)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint>> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfoAsync(int? neighborhood = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> ApiDefinitionHelloGetAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -443,10 +484,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostAsync(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostAsync(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -455,10 +496,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceNeighborResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse>> ApiDefinitionNeighborhoodPostWithHttpInfoAsync(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse>> ApiDefinitionNeighborhoodPostWithHttpInfoAsync(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -466,10 +507,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostAsync(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostAsync(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -478,10 +519,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfDefinitionServiceUpdateAgreementLogResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -899,11 +940,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <returns>RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        public RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest))
+        public RestResultOfListOfDefinitionServiceCountiesResponse ApiDefinitionCountiesPost(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> localVarResponse = ApiDefinitionCountiesPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> localVarResponse = ApiDefinitionCountiesPostWithHttpInfo(definitionServiceCountiesRequest);
             return localVarResponse.Data;
         }
 
@@ -911,9 +952,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostWithHttpInfo(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostWithHttpInfo(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -942,7 +983,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceCountiesRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -968,12 +1009,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfDefinitionServiceCountiesResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostAsync(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceCountiesResponse> ApiDefinitionCountiesPostAsync(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> localVarResponse = await ApiDefinitionCountiesPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse> localVarResponse = await ApiDefinitionCountiesPostWithHttpInfoAsync(definitionServiceCountiesRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -981,10 +1022,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceCountiesRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceCountiesResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse>> ApiDefinitionCountiesPostWithHttpInfoAsync(DefinitionServiceCountiesRequest body = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceCountiesResponse>> ApiDefinitionCountiesPostWithHttpInfoAsync(DefinitionServiceCountiesRequest definitionServiceCountiesRequest = default(DefinitionServiceCountiesRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1014,7 +1055,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceCountiesRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1715,6 +1756,148 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <returns>RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        public RestResultOfListOfDefinitionServiceSelfPickupPoint ApiDefinitionGetSelfPickupPointsInNeighborhoodGet(int? neighborhood = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint> localVarResponse = ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfo(neighborhood);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfo(int? neighborhood = default(int?))
+        {
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (neighborhood != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "neighborhood", neighborhood));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RestResultOfListOfDefinitionServiceSelfPickupPoint>("/api/Definition/GetSelfPickupPointsInNeighborhood", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiDefinitionGetSelfPickupPointsInNeighborhoodGet", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfListOfDefinitionServiceSelfPickupPoint</returns>
+        public async System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceSelfPickupPoint> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetAsync(int? neighborhood = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint> localVarResponse = await ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfoAsync(neighborhood, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="neighborhood"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceSelfPickupPoint)</returns>
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceSelfPickupPoint>> ApiDefinitionGetSelfPickupPointsInNeighborhoodGetWithHttpInfoAsync(int? neighborhood = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            if (neighborhood != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Kiler.Dotnet.ApiClient.Client.ClientUtils.ParameterToMultiMap("", "neighborhood", neighborhood));
+            }
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RestResultOfListOfDefinitionServiceSelfPickupPoint>("/api/Definition/GetSelfPickupPointsInNeighborhood", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiDefinitionGetSelfPickupPointsInNeighborhoodGet", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
         public string ApiDefinitionHelloGet()
         {
@@ -1845,11 +2028,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <returns>RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        public RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest))
+        public RestResultOfListOfDefinitionServiceNeighborResponse ApiDefinitionNeighborhoodPost(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> localVarResponse = ApiDefinitionNeighborhoodPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> localVarResponse = ApiDefinitionNeighborhoodPostWithHttpInfo(definitionServiceNeighborRequest);
             return localVarResponse.Data;
         }
 
@@ -1857,9 +2040,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostWithHttpInfo(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostWithHttpInfo(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1888,7 +2071,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceNeighborRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1914,12 +2097,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfListOfDefinitionServiceNeighborResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostAsync(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfListOfDefinitionServiceNeighborResponse> ApiDefinitionNeighborhoodPostAsync(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> localVarResponse = await ApiDefinitionNeighborhoodPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse> localVarResponse = await ApiDefinitionNeighborhoodPostWithHttpInfoAsync(definitionServiceNeighborRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1927,10 +2110,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceNeighborRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfListOfDefinitionServiceNeighborResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse>> ApiDefinitionNeighborhoodPostWithHttpInfoAsync(DefinitionServiceNeighborRequest body = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfListOfDefinitionServiceNeighborResponse>> ApiDefinitionNeighborhoodPostWithHttpInfoAsync(DefinitionServiceNeighborRequest definitionServiceNeighborRequest = default(DefinitionServiceNeighborRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1960,7 +2143,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceNeighborRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1987,11 +2170,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <returns>RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        public RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest))
+        public RestResultOfDefinitionServiceUpdateAgreementLogResponse ApiDefinitionUpdateAgreementLogPost(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> localVarResponse = ApiDefinitionUpdateAgreementLogPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> localVarResponse = ApiDefinitionUpdateAgreementLogPostWithHttpInfo(definitionServiceUpdateAgreementRequest);
             return localVarResponse.Data;
         }
 
@@ -1999,9 +2182,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostWithHttpInfo(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostWithHttpInfo(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -2030,7 +2213,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceUpdateAgreementRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2056,12 +2239,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfDefinitionServiceUpdateAgreementLogResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostAsync(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfDefinitionServiceUpdateAgreementLogResponse> ApiDefinitionUpdateAgreementLogPostAsync(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> localVarResponse = await ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse> localVarResponse = await ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(definitionServiceUpdateAgreementRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2069,10 +2252,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="definitionServiceUpdateAgreementRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfDefinitionServiceUpdateAgreementLogResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(DefinitionServiceUpdateAgreementRequest body = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> ApiDefinitionUpdateAgreementLogPostWithHttpInfoAsync(DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = default(DefinitionServiceUpdateAgreementRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -2102,7 +2285,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = definitionServiceUpdateAgreementRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

@@ -49,7 +49,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="identificationNumber">identificationNumber.</param>
         /// <param name="defaultAddress">defaultAddress.</param>
         /// <param name="invoiceAddress">invoiceAddress.</param>
-        public CustomerServiceRCustomer(int id = default(int), string customerName = default(string), string customerSurname = default(string), DateTime birthDate = default(DateTime), string phone = default(string), string email = default(string), int gender = default(int), bool allowSms = default(bool), bool allowEmail = default(bool), List<CustomerServiceRAddress> address = default(List<CustomerServiceRAddress>), bool registered = default(bool), int lastOrder = default(int), string identificationNumber = default(string), int defaultAddress = default(int), int invoiceAddress = default(int))
+        public CustomerServiceRCustomer(int id = default(int), string customerName = default(string), string customerSurname = default(string), DateTime? birthDate = default(DateTime?), string phone = default(string), string email = default(string), int? gender = default(int?), bool? allowSms = default(bool?), bool? allowEmail = default(bool?), List<CustomerServiceRAddress> address = default(List<CustomerServiceRAddress>), bool registered = default(bool), int lastOrder = default(int), string identificationNumber = default(string), int? defaultAddress = default(int?), int? invoiceAddress = default(int?))
         {
             this.Id = id;
             this.CustomerName = customerName;
@@ -77,55 +77,55 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
-        [DataMember(Name = "customerName", EmitDefaultValue = false)]
+        [DataMember(Name = "customerName", EmitDefaultValue = true)]
         public string CustomerName { get; set; }
 
         /// <summary>
         /// Gets or Sets CustomerSurname
         /// </summary>
-        [DataMember(Name = "customerSurname", EmitDefaultValue = false)]
+        [DataMember(Name = "customerSurname", EmitDefaultValue = true)]
         public string CustomerSurname { get; set; }
 
         /// <summary>
         /// Gets or Sets BirthDate
         /// </summary>
-        [DataMember(Name = "birthDate", EmitDefaultValue = false)]
-        public DateTime BirthDate { get; set; }
+        [DataMember(Name = "birthDate", EmitDefaultValue = true)]
+        public DateTime? BirthDate { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name = "phone", EmitDefaultValue = false)]
+        [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name = "email", EmitDefaultValue = false)]
+        [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Gender
         /// </summary>
-        [DataMember(Name = "gender", EmitDefaultValue = false)]
-        public int Gender { get; set; }
+        [DataMember(Name = "gender", EmitDefaultValue = true)]
+        public int? Gender { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowSms
         /// </summary>
         [DataMember(Name = "allowSms", EmitDefaultValue = true)]
-        public bool AllowSms { get; set; }
+        public bool? AllowSms { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowEmail
         /// </summary>
         [DataMember(Name = "allowEmail", EmitDefaultValue = true)]
-        public bool AllowEmail { get; set; }
+        public bool? AllowEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name = "address", EmitDefaultValue = false)]
+        [DataMember(Name = "address", EmitDefaultValue = true)]
         public List<CustomerServiceRAddress> Address { get; set; }
 
         /// <summary>
@@ -143,20 +143,20 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets IdentificationNumber
         /// </summary>
-        [DataMember(Name = "identificationNumber", EmitDefaultValue = false)]
+        [DataMember(Name = "identificationNumber", EmitDefaultValue = true)]
         public string IdentificationNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultAddress
         /// </summary>
-        [DataMember(Name = "defaultAddress", EmitDefaultValue = false)]
-        public int DefaultAddress { get; set; }
+        [DataMember(Name = "defaultAddress", EmitDefaultValue = true)]
+        public int? DefaultAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets InvoiceAddress
         /// </summary>
-        [DataMember(Name = "invoiceAddress", EmitDefaultValue = false)]
-        public int InvoiceAddress { get; set; }
+        [DataMember(Name = "invoiceAddress", EmitDefaultValue = true)]
+        public int? InvoiceAddress { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -247,15 +247,18 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.Gender == input.Gender ||
-                    this.Gender.Equals(input.Gender)
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 ) && 
                 (
                     this.AllowSms == input.AllowSms ||
-                    this.AllowSms.Equals(input.AllowSms)
+                    (this.AllowSms != null &&
+                    this.AllowSms.Equals(input.AllowSms))
                 ) && 
                 (
                     this.AllowEmail == input.AllowEmail ||
-                    this.AllowEmail.Equals(input.AllowEmail)
+                    (this.AllowEmail != null &&
+                    this.AllowEmail.Equals(input.AllowEmail))
                 ) && 
                 (
                     this.Address == input.Address ||
@@ -278,11 +281,13 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.DefaultAddress == input.DefaultAddress ||
-                    this.DefaultAddress.Equals(input.DefaultAddress)
+                    (this.DefaultAddress != null &&
+                    this.DefaultAddress.Equals(input.DefaultAddress))
                 ) && 
                 (
                     this.InvoiceAddress == input.InvoiceAddress ||
-                    this.InvoiceAddress.Equals(input.InvoiceAddress)
+                    (this.InvoiceAddress != null &&
+                    this.InvoiceAddress.Equals(input.InvoiceAddress))
                 );
         }
 
@@ -316,9 +321,18 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Email.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.Gender.GetHashCode();
-                hashCode = (hashCode * 59) + this.AllowSms.GetHashCode();
-                hashCode = (hashCode * 59) + this.AllowEmail.GetHashCode();
+                if (this.Gender != null)
+                {
+                    hashCode = (hashCode * 59) + this.Gender.GetHashCode();
+                }
+                if (this.AllowSms != null)
+                {
+                    hashCode = (hashCode * 59) + this.AllowSms.GetHashCode();
+                }
+                if (this.AllowEmail != null)
+                {
+                    hashCode = (hashCode * 59) + this.AllowEmail.GetHashCode();
+                }
                 if (this.Address != null)
                 {
                     hashCode = (hashCode * 59) + this.Address.GetHashCode();
@@ -329,8 +343,14 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.IdentificationNumber.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.DefaultAddress.GetHashCode();
-                hashCode = (hashCode * 59) + this.InvoiceAddress.GetHashCode();
+                if (this.DefaultAddress != null)
+                {
+                    hashCode = (hashCode * 59) + this.DefaultAddress.GetHashCode();
+                }
+                if (this.InvoiceAddress != null)
+                {
+                    hashCode = (hashCode * 59) + this.InvoiceAddress.GetHashCode();
+                }
                 return hashCode;
             }
         }

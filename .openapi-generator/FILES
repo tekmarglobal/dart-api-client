@@ -15,6 +15,7 @@ docs/AdminServiceBranchResponse.md
 docs/AdminServiceCompanyResponse.md
 docs/AdminServiceRegionNeighborhoodRequest.md
 docs/AdminServiceRegionResponse.md
+docs/AdminServiceRegionStatusCode.md
 docs/AdminServiceTimeSlotResponse.md
 docs/AdminServiceUpdateRegionNeighborhoodRequest.md
 docs/AdminServiceUploadImageResponse.md
@@ -109,6 +110,7 @@ docs/RegisterServiceVersionResponse.md
 docs/RestResultOfAccountServiceCheckVersionResponse.md
 docs/RestResultOfAccountServiceLoginResponse.md
 docs/RestResultOfAdminServiceAdminNeighborResponse.md
+docs/RestResultOfAdminServiceRegionStatusCode.md
 docs/RestResultOfAdminServiceUploadImageResponse.md
 docs/RestResultOfBannerServiceBannerResponse.md
 docs/RestResultOfCartServiceCampaignApplyResponse.md
@@ -154,7 +156,8 @@ docs/RestResultOfSystemInt32.md
 docs/RestResultOfSystemObject.md
 git_push.sh
 src/Kiler.Dotnet.ApiClient.Test/Kiler.Dotnet.ApiClient.Test.csproj
-src/Kiler.Dotnet.ApiClient.Test/Model/OrderServiceDepotDetailTests.cs
+src/Kiler.Dotnet.ApiClient.Test/Model/AdminServiceRegionStatusCodeTests.cs
+src/Kiler.Dotnet.ApiClient.Test/Model/RestResultOfAdminServiceRegionStatusCodeTests.cs
 src/Kiler.Dotnet.ApiClient/Api/AccountApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AdminApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AffiliateApi.cs
@@ -199,6 +202,7 @@ src/Kiler.Dotnet.ApiClient/Model/AdminServiceBranchResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceCompanyResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceRegionNeighborhoodRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceRegionResponse.cs
+src/Kiler.Dotnet.ApiClient/Model/AdminServiceRegionStatusCode.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceTimeSlotResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceUpdateRegionNeighborhoodRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceUploadImageResponse.cs
@@ -280,6 +284,7 @@ src/Kiler.Dotnet.ApiClient/Model/RegisterServiceVersionResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfAccountServiceCheckVersionResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfAccountServiceLoginResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfAdminServiceAdminNeighborResponse.cs
+src/Kiler.Dotnet.ApiClient/Model/RestResultOfAdminServiceRegionStatusCode.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfAdminServiceUploadImageResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfBannerServiceBannerResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfCartServiceCampaignApplyResponse.cs

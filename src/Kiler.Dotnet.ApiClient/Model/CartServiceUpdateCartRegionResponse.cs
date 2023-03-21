@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets CartItemImpacts
         /// </summary>
-        [DataMember(Name = "cartItemImpacts", EmitDefaultValue = false)]
+        [DataMember(Name = "cartItemImpacts", EmitDefaultValue = true)]
         public List<CartServiceRCartItemImpact> CartItemImpacts { get; set; }
 
         /// <summary>

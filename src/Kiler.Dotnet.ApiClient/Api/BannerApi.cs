@@ -46,9 +46,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <returns>RestResultOfBannerServiceBannerResponse</returns>
-        RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost(BannerServiceBannerRequest body = default(BannerServiceBannerRequest));
+        RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest));
 
         /// <summary>
         /// 
@@ -57,9 +57,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfBannerServiceBannerResponse</returns>
-        ApiResponse<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostWithHttpInfo(BannerServiceBannerRequest body = default(BannerServiceBannerRequest));
+        ApiResponse<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostWithHttpInfo(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest));
         #endregion Synchronous Operations
     }
 
@@ -97,10 +97,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfBannerServiceBannerResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostAsync(BannerServiceBannerRequest body = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostAsync(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -109,10 +109,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfBannerServiceBannerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfBannerServiceBannerResponse>> ApiBannerUpdateBannerPostWithHttpInfoAsync(BannerServiceBannerRequest body = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfBannerServiceBannerResponse>> ApiBannerUpdateBannerPostWithHttpInfoAsync(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -367,11 +367,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <returns>RestResultOfBannerServiceBannerResponse</returns>
-        public RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost(BannerServiceBannerRequest body = default(BannerServiceBannerRequest))
+        public RestResultOfBannerServiceBannerResponse ApiBannerUpdateBannerPost(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> localVarResponse = ApiBannerUpdateBannerPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> localVarResponse = ApiBannerUpdateBannerPostWithHttpInfo(bannerServiceBannerRequest);
             return localVarResponse.Data;
         }
 
@@ -379,9 +379,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfBannerServiceBannerResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostWithHttpInfo(BannerServiceBannerRequest body = default(BannerServiceBannerRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostWithHttpInfo(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -410,7 +410,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = bannerServiceBannerRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -436,12 +436,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfBannerServiceBannerResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostAsync(BannerServiceBannerRequest body = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfBannerServiceBannerResponse> ApiBannerUpdateBannerPostAsync(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> localVarResponse = await ApiBannerUpdateBannerPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse> localVarResponse = await ApiBannerUpdateBannerPostWithHttpInfoAsync(bannerServiceBannerRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -449,10 +449,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="bannerServiceBannerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfBannerServiceBannerResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse>> ApiBannerUpdateBannerPostWithHttpInfoAsync(BannerServiceBannerRequest body = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfBannerServiceBannerResponse>> ApiBannerUpdateBannerPostWithHttpInfoAsync(BannerServiceBannerRequest bannerServiceBannerRequest = default(BannerServiceBannerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -482,7 +482,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = bannerServiceBannerRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

@@ -66,9 +66,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCreateCartResponse</returns>
-        RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest));
+        RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest));
 
         /// <summary>
         /// 
@@ -77,9 +77,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCreateCartResponse</returns>
-        ApiResponse<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostWithHttpInfo(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest));
+        ApiResponse<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostWithHttpInfo(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -164,9 +164,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCartResponse</returns>
-        RestResultOfCartServiceCartResponse ApiCartUpdateCartPost(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest));
+        RestResultOfCartServiceCartResponse ApiCartUpdateCartPost(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest));
 
         /// <summary>
         /// 
@@ -175,16 +175,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCartResponse</returns>
-        ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostWithHttpInfo(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest));
+        ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostWithHttpInfo(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest));
+        RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest));
 
         /// <summary>
         /// 
@@ -193,16 +193,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostWithHttpInfo(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest));
+        ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostWithHttpInfo(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCartResponse</returns>
-        RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest));
+        RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest));
 
         /// <summary>
         /// 
@@ -211,9 +211,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCartResponse</returns>
-        ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostWithHttpInfo(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest));
+        ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostWithHttpInfo(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest));
         #endregion Synchronous Operations
     }
 
@@ -276,10 +276,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCreateCartResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostAsync(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostAsync(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -288,10 +288,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCreateCartResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCreateCartResponse>> ApiCartCreateCartPostWithHttpInfoAsync(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCreateCartResponse>> ApiCartCreateCartPostWithHttpInfoAsync(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -404,10 +404,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCartResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostAsync(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostAsync(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -416,10 +416,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCartResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateCartPostWithHttpInfoAsync(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateCartPostWithHttpInfoAsync(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -427,10 +427,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostAsync(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostAsync(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -439,10 +439,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceUpdateCartRegionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse>> ApiCartUpdateCartRegionPostWithHttpInfoAsync(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse>> ApiCartUpdateCartRegionPostWithHttpInfoAsync(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -450,10 +450,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCartResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostAsync(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostAsync(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -462,10 +462,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCartResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateTimeslotPostWithHttpInfoAsync(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateTimeslotPostWithHttpInfoAsync(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -874,11 +874,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCreateCartResponse</returns>
-        public RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest))
+        public RestResultOfCartServiceCreateCartResponse ApiCartCreateCartPost(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> localVarResponse = ApiCartCreateCartPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> localVarResponse = ApiCartCreateCartPostWithHttpInfo(cartServiceCreateCartRequest);
             return localVarResponse.Data;
         }
 
@@ -886,9 +886,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCreateCartResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostWithHttpInfo(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostWithHttpInfo(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -917,7 +917,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceCreateCartRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -943,12 +943,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCreateCartResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostAsync(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCartServiceCreateCartResponse> ApiCartCreateCartPostAsync(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> localVarResponse = await ApiCartCreateCartPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse> localVarResponse = await ApiCartCreateCartPostWithHttpInfoAsync(cartServiceCreateCartRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -956,10 +956,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceCreateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCreateCartResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse>> ApiCartCreateCartPostWithHttpInfoAsync(CartServiceCreateCartRequest body = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCreateCartResponse>> ApiCartCreateCartPostWithHttpInfoAsync(CartServiceCreateCartRequest cartServiceCreateCartRequest = default(CartServiceCreateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -989,7 +989,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceCreateCartRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1666,11 +1666,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCartResponse</returns>
-        public RestResultOfCartServiceCartResponse ApiCartUpdateCartPost(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest))
+        public RestResultOfCartServiceCartResponse ApiCartUpdateCartPost(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = ApiCartUpdateCartPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = ApiCartUpdateCartPostWithHttpInfo(cartServiceUpdateCartRequest);
             return localVarResponse.Data;
         }
 
@@ -1678,9 +1678,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCartResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostWithHttpInfo(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostWithHttpInfo(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1709,7 +1709,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateCartRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1735,12 +1735,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCartResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostAsync(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateCartPostAsync(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = await ApiCartUpdateCartPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = await ApiCartUpdateCartPostWithHttpInfoAsync(cartServiceUpdateCartRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1748,10 +1748,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCartResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateCartPostWithHttpInfoAsync(CartServiceUpdateCartRequest body = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateCartPostWithHttpInfoAsync(CartServiceUpdateCartRequest cartServiceUpdateCartRequest = default(CartServiceUpdateCartRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1781,7 +1781,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateCartRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1808,11 +1808,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        public RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest))
+        public RestResultOfCartServiceUpdateCartRegionResponse ApiCartUpdateCartRegionPost(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> localVarResponse = ApiCartUpdateCartRegionPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> localVarResponse = ApiCartUpdateCartRegionPostWithHttpInfo(cartServiceUpdateCartRegionRequest);
             return localVarResponse.Data;
         }
 
@@ -1820,9 +1820,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostWithHttpInfo(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostWithHttpInfo(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1851,7 +1851,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateCartRegionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1877,12 +1877,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceUpdateCartRegionResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostAsync(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCartServiceUpdateCartRegionResponse> ApiCartUpdateCartRegionPostAsync(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> localVarResponse = await ApiCartUpdateCartRegionPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse> localVarResponse = await ApiCartUpdateCartRegionPostWithHttpInfoAsync(cartServiceUpdateCartRegionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1890,10 +1890,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateCartRegionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceUpdateCartRegionResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse>> ApiCartUpdateCartRegionPostWithHttpInfoAsync(CartServiceUpdateCartRegionRequest body = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceUpdateCartRegionResponse>> ApiCartUpdateCartRegionPostWithHttpInfoAsync(CartServiceUpdateCartRegionRequest cartServiceUpdateCartRegionRequest = default(CartServiceUpdateCartRegionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1923,7 +1923,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateCartRegionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1950,11 +1950,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <returns>RestResultOfCartServiceCartResponse</returns>
-        public RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest))
+        public RestResultOfCartServiceCartResponse ApiCartUpdateTimeslotPost(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = ApiCartUpdateTimeslotPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = ApiCartUpdateTimeslotPostWithHttpInfo(cartServiceUpdateTimeslotRequest);
             return localVarResponse.Data;
         }
 
@@ -1962,9 +1962,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCartServiceCartResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostWithHttpInfo(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostWithHttpInfo(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1993,7 +1993,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateTimeslotRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -2019,12 +2019,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCartServiceCartResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostAsync(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCartServiceCartResponse> ApiCartUpdateTimeslotPostAsync(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = await ApiCartUpdateTimeslotPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse> localVarResponse = await ApiCartUpdateTimeslotPostWithHttpInfoAsync(cartServiceUpdateTimeslotRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2032,10 +2032,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="cartServiceUpdateTimeslotRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCartServiceCartResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateTimeslotPostWithHttpInfoAsync(CartServiceUpdateTimeslotRequest body = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCartServiceCartResponse>> ApiCartUpdateTimeslotPostWithHttpInfoAsync(CartServiceUpdateTimeslotRequest cartServiceUpdateTimeslotRequest = default(CartServiceUpdateTimeslotRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -2065,7 +2065,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = cartServiceUpdateTimeslotRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

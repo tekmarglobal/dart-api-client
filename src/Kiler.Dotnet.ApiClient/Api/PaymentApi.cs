@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <returns>RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest));
+        RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest));
 
         /// <summary>
         /// 
@@ -41,16 +41,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostWithHttpInfo(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest));
+        ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostWithHttpInfo(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>RestResultOfPaymentServicePaymentResponse</returns>
-        RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest));
+        RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest));
 
         /// <summary>
         /// 
@@ -59,16 +59,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfPaymentServicePaymentResponse</returns>
-        ApiResponse<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostWithHttpInfo(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest));
+        ApiResponse<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostWithHttpInfo(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns></returns>
-        void ApiPaymentCreatePaymentReturnUrlPost(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest));
+        void ApiPaymentCreatePaymentReturnUrlPost(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest));
 
         /// <summary>
         /// 
@@ -77,9 +77,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest));
+        ApiResponse<Object> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -144,10 +144,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostAsync(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostAsync(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -156,10 +156,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfPaymentServicePaymentTransactionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse>> ApiPaymentCheckTransactionPostWithHttpInfoAsync(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse>> ApiPaymentCheckTransactionPostWithHttpInfoAsync(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -167,10 +167,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfPaymentServicePaymentResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -179,10 +179,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfPaymentServicePaymentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfPaymentServicePaymentResponse>> ApiPaymentCreatePaymentPostWithHttpInfoAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfPaymentServicePaymentResponse>> ApiPaymentCreatePaymentPostWithHttpInfoAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -190,10 +190,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ApiPaymentCreatePaymentReturnUrlPostAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task ApiPaymentCreatePaymentReturnUrlPostAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -202,10 +202,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -393,11 +393,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <returns>RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        public RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest))
+        public RestResultOfPaymentServicePaymentTransactionResponse ApiPaymentCheckTransactionPost(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> localVarResponse = ApiPaymentCheckTransactionPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> localVarResponse = ApiPaymentCheckTransactionPostWithHttpInfo(paymentServicePaymentTransactionRequest);
             return localVarResponse.Data;
         }
 
@@ -405,9 +405,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostWithHttpInfo(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostWithHttpInfo(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -436,7 +436,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentTransactionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -462,12 +462,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfPaymentServicePaymentTransactionResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostAsync(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentTransactionResponse> ApiPaymentCheckTransactionPostAsync(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> localVarResponse = await ApiPaymentCheckTransactionPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse> localVarResponse = await ApiPaymentCheckTransactionPostWithHttpInfoAsync(paymentServicePaymentTransactionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -475,10 +475,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentTransactionRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfPaymentServicePaymentTransactionResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse>> ApiPaymentCheckTransactionPostWithHttpInfoAsync(PaymentServicePaymentTransactionRequest body = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentTransactionResponse>> ApiPaymentCheckTransactionPostWithHttpInfoAsync(PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = default(PaymentServicePaymentTransactionRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -508,7 +508,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentTransactionRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -535,11 +535,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>RestResultOfPaymentServicePaymentResponse</returns>
-        public RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest))
+        public RestResultOfPaymentServicePaymentResponse ApiPaymentCreatePaymentPost(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> localVarResponse = ApiPaymentCreatePaymentPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> localVarResponse = ApiPaymentCreatePaymentPostWithHttpInfo(paymentServicePaymentRequest);
             return localVarResponse.Data;
         }
 
@@ -547,9 +547,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfPaymentServicePaymentResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostWithHttpInfo(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostWithHttpInfo(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -578,7 +578,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -604,12 +604,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfPaymentServicePaymentResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfPaymentServicePaymentResponse> ApiPaymentCreatePaymentPostAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> localVarResponse = await ApiPaymentCreatePaymentPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse> localVarResponse = await ApiPaymentCreatePaymentPostWithHttpInfoAsync(paymentServicePaymentRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -617,10 +617,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfPaymentServicePaymentResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse>> ApiPaymentCreatePaymentPostWithHttpInfoAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServicePaymentResponse>> ApiPaymentCreatePaymentPostWithHttpInfoAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -650,7 +650,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -677,20 +677,20 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns></returns>
-        public void ApiPaymentCreatePaymentReturnUrlPost(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest))
+        public void ApiPaymentCreatePaymentReturnUrlPost(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest))
         {
-            ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(body);
+            ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(paymentServicePaymentRequest);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<Object> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<Object> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfo(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -716,7 +716,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -742,22 +742,22 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ApiPaymentCreatePaymentReturnUrlPostAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task ApiPaymentCreatePaymentReturnUrlPostAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            await ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(paymentServicePaymentRequest, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="paymentServicePaymentRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<Object>> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(PaymentServicePaymentRequest body = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<Object>> ApiPaymentCreatePaymentReturnUrlPostWithHttpInfoAsync(PaymentServicePaymentRequest paymentServicePaymentRequest = default(PaymentServicePaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -784,7 +784,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = paymentServicePaymentRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets TransactionUid
         /// </summary>
-        [DataMember(Name = "transactionUid", EmitDefaultValue = false)]
+        [DataMember(Name = "transactionUid", EmitDefaultValue = true)]
         public string TransactionUid { get; set; }
 
         /// <summary>

@@ -5,6 +5,8 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ApiAdminBranchPost**](AdminApi.md#apiadminbranchpost) | **POST** /api/Admin/Branch | 
+[**ApiAdminCheckRegionStatusForNeighborhoodPost**](AdminApi.md#apiadmincheckregionstatusforneighborhoodpost) | **POST** /api/Admin/CheckRegionStatusForNeighborhood | 
+[**ApiAdminCheckRegionStatusPost**](AdminApi.md#apiadmincheckregionstatuspost) | **POST** /api/Admin/CheckRegionStatus | 
 [**ApiAdminCompaniesPost**](AdminApi.md#apiadmincompaniespost) | **POST** /api/Admin/Companies | 
 [**ApiAdminGenerateTimeSlotsGet**](AdminApi.md#apiadmingeneratetimeslotsget) | **GET** /api/Admin/GenerateTimeSlots | 
 [**ApiAdminGenerateTimeSlotsPost**](AdminApi.md#apiadmingeneratetimeslotspost) | **POST** /api/Admin/GenerateTimeSlots | 
@@ -67,6 +69,152 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**RestResultOfListOfAdminServiceBranchResponse**](RestResultOfListOfAdminServiceBranchResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="apiadmincheckregionstatusforneighborhoodpost"></a>
+# **ApiAdminCheckRegionStatusForNeighborhoodPost**
+> RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusForNeighborhoodPost (int? regionId = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Kiler.Dotnet.ApiClient.Api;
+using Kiler.Dotnet.ApiClient.Client;
+using Kiler.Dotnet.ApiClient.Model;
+
+namespace Example
+{
+    public class ApiAdminCheckRegionStatusForNeighborhoodPostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure API key authorization: Bearer
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new AdminApi(config);
+            var regionId = 56;  // int? |  (optional) 
+
+            try
+            {
+                RestResultOfAdminServiceRegionStatusCode result = apiInstance.ApiAdminCheckRegionStatusForNeighborhoodPost(regionId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AdminApi.ApiAdminCheckRegionStatusForNeighborhoodPost: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int?**|  | [optional] 
+
+### Return type
+
+[**RestResultOfAdminServiceRegionStatusCode**](RestResultOfAdminServiceRegionStatusCode.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="apiadmincheckregionstatuspost"></a>
+# **ApiAdminCheckRegionStatusPost**
+> RestResultOfAdminServiceRegionStatusCode ApiAdminCheckRegionStatusPost (int? regionId = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Kiler.Dotnet.ApiClient.Api;
+using Kiler.Dotnet.ApiClient.Client;
+using Kiler.Dotnet.ApiClient.Model;
+
+namespace Example
+{
+    public class ApiAdminCheckRegionStatusPostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure API key authorization: Bearer
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new AdminApi(config);
+            var regionId = 56;  // int? |  (optional) 
+
+            try
+            {
+                RestResultOfAdminServiceRegionStatusCode result = apiInstance.ApiAdminCheckRegionStatusPost(regionId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling AdminApi.ApiAdminCheckRegionStatusPost: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **int?**|  | [optional] 
+
+### Return type
+
+[**RestResultOfAdminServiceRegionStatusCode**](RestResultOfAdminServiceRegionStatusCode.md)
 
 ### Authorization
 
@@ -377,7 +525,7 @@ Name | Type | Description  | Notes
 
 <a name="apiadminregionneighborhoodpost"></a>
 # **ApiAdminRegionNeighborhoodPost**
-> RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost (AdminServiceRegionNeighborhoodRequest body = null)
+> RestResultOfListOfAdminServiceAdminNeighborResponse ApiAdminRegionNeighborhoodPost (AdminServiceRegionNeighborhoodRequest adminServiceRegionNeighborhoodRequest = null)
 
 
 
@@ -403,11 +551,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AdminApi(config);
-            var body = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest |  (optional) 
+            var adminServiceRegionNeighborhoodRequest = new AdminServiceRegionNeighborhoodRequest(); // AdminServiceRegionNeighborhoodRequest |  (optional) 
 
             try
             {
-                RestResultOfListOfAdminServiceAdminNeighborResponse result = apiInstance.ApiAdminRegionNeighborhoodPost(body);
+                RestResultOfListOfAdminServiceAdminNeighborResponse result = apiInstance.ApiAdminRegionNeighborhoodPost(adminServiceRegionNeighborhoodRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -425,7 +573,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AdminServiceRegionNeighborhoodRequest**](AdminServiceRegionNeighborhoodRequest.md)|  | [optional] 
+ **adminServiceRegionNeighborhoodRequest** | [**AdminServiceRegionNeighborhoodRequest**](AdminServiceRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -596,7 +744,7 @@ Name | Type | Description  | Notes
 
 <a name="apiadminupdateregionneighborhoodpost"></a>
 # **ApiAdminUpdateRegionNeighborhoodPost**
-> RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost (AdminServiceUpdateRegionNeighborhoodRequest body = null)
+> RestResultOfAdminServiceAdminNeighborResponse ApiAdminUpdateRegionNeighborhoodPost (AdminServiceUpdateRegionNeighborhoodRequest adminServiceUpdateRegionNeighborhoodRequest = null)
 
 
 
@@ -622,11 +770,11 @@ namespace Example
             // config.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new AdminApi(config);
-            var body = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest |  (optional) 
+            var adminServiceUpdateRegionNeighborhoodRequest = new AdminServiceUpdateRegionNeighborhoodRequest(); // AdminServiceUpdateRegionNeighborhoodRequest |  (optional) 
 
             try
             {
-                RestResultOfAdminServiceAdminNeighborResponse result = apiInstance.ApiAdminUpdateRegionNeighborhoodPost(body);
+                RestResultOfAdminServiceAdminNeighborResponse result = apiInstance.ApiAdminUpdateRegionNeighborhoodPost(adminServiceUpdateRegionNeighborhoodRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -644,7 +792,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AdminServiceUpdateRegionNeighborhoodRequest**](AdminServiceUpdateRegionNeighborhoodRequest.md)|  | [optional] 
+ **adminServiceUpdateRegionNeighborhoodRequest** | [**AdminServiceUpdateRegionNeighborhoodRequest**](AdminServiceUpdateRegionNeighborhoodRequest.md)|  | [optional] 
 
 ### Return type
 

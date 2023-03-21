@@ -30,9 +30,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest));
+        RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest));
 
         /// <summary>
         /// 
@@ -41,9 +41,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostWithHttpInfo(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest));
+        ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostWithHttpInfo(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest));
         /// <summary>
         /// 
         /// </summary>
@@ -100,9 +100,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest));
+        RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest));
 
         /// <summary>
         /// 
@@ -111,16 +111,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostWithHttpInfo(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest));
+        ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostWithHttpInfo(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerResponse</returns>
-        RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress));
+        RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress));
 
         /// <summary>
         /// 
@@ -129,16 +129,16 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerResponse</returns>
-        ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress));
+        ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress));
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerResponse</returns>
-        RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest));
+        RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest));
 
         /// <summary>
         /// 
@@ -147,9 +147,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerResponse</returns>
-        ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostWithHttpInfo(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest));
+        ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostWithHttpInfo(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest));
         #endregion Synchronous Operations
     }
 
@@ -166,10 +166,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostAsync(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostAsync(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -178,10 +178,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceDeleteAddressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse>> ApiCustomerDeleteAddressPostWithHttpInfoAsync(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse>> ApiCustomerDeleteAddressPostWithHttpInfoAsync(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -256,10 +256,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostAsync(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostAsync(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -268,10 +268,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerAddressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse>> ApiCustomerUpdateAddressPostWithHttpInfoAsync(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse>> ApiCustomerUpdateAddressPostWithHttpInfoAsync(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -279,10 +279,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostAsync(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostAsync(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -291,10 +291,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -302,10 +302,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerResponse</returns>
-        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostAsync(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostAsync(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -314,10 +314,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// 
         /// </remarks>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerPostWithHttpInfoAsync(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerPostWithHttpInfoAsync(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -442,11 +442,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        public RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest))
+        public RestResultOfCustomerServiceDeleteAddressResponse ApiCustomerDeleteAddressPost(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> localVarResponse = ApiCustomerDeleteAddressPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> localVarResponse = ApiCustomerDeleteAddressPostWithHttpInfo(customerServiceDeleteAddressRequest);
             return localVarResponse.Data;
         }
 
@@ -454,9 +454,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostWithHttpInfo(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostWithHttpInfo(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -485,7 +485,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceDeleteAddressRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -511,12 +511,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceDeleteAddressResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostAsync(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceDeleteAddressResponse> ApiCustomerDeleteAddressPostAsync(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> localVarResponse = await ApiCustomerDeleteAddressPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse> localVarResponse = await ApiCustomerDeleteAddressPostWithHttpInfoAsync(customerServiceDeleteAddressRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -524,10 +524,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceDeleteAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceDeleteAddressResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse>> ApiCustomerDeleteAddressPostWithHttpInfoAsync(CustomerServiceDeleteAddressRequest body = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceDeleteAddressResponse>> ApiCustomerDeleteAddressPostWithHttpInfoAsync(CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = default(CustomerServiceDeleteAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -557,7 +557,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceDeleteAddressRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -998,11 +998,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        public RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest))
+        public RestResultOfCustomerServiceCustomerAddressResponse ApiCustomerUpdateAddressPost(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> localVarResponse = ApiCustomerUpdateAddressPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> localVarResponse = ApiCustomerUpdateAddressPostWithHttpInfo(customerServiceCustomerAddressRequest);
             return localVarResponse.Data;
         }
 
@@ -1010,9 +1010,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostWithHttpInfo(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostWithHttpInfo(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1041,7 +1041,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceCustomerAddressRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1067,12 +1067,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerAddressResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostAsync(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerAddressResponse> ApiCustomerUpdateAddressPostAsync(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> localVarResponse = await ApiCustomerUpdateAddressPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse> localVarResponse = await ApiCustomerUpdateAddressPostWithHttpInfoAsync(customerServiceCustomerAddressRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1080,10 +1080,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceCustomerAddressRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerAddressResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse>> ApiCustomerUpdateAddressPostWithHttpInfoAsync(CustomerServiceCustomerAddressRequest body = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerAddressResponse>> ApiCustomerUpdateAddressPostWithHttpInfoAsync(CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = default(CustomerServiceCustomerAddressRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1113,7 +1113,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceCustomerAddressRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1140,11 +1140,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerResponse</returns>
-        public RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress))
+        public RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerDefultAddressPost(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(customerServiceNewCustomerDefaultAddress);
             return localVarResponse.Data;
         }
 
@@ -1152,9 +1152,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfo(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1183,7 +1183,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceNewCustomerDefaultAddress;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1209,12 +1209,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostAsync(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerDefultAddressPostAsync(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = await ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = await ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(customerServiceNewCustomerDefaultAddress, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1222,10 +1222,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerDefaultAddress"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(CustomerServiceNewCustomerDefaultAddress body = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerDefultAddressPostWithHttpInfoAsync(CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = default(CustomerServiceNewCustomerDefaultAddress), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1255,7 +1255,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceNewCustomerDefaultAddress;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1282,11 +1282,11 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <returns>RestResultOfCustomerServiceCustomerResponse</returns>
-        public RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest))
+        public RestResultOfCustomerServiceCustomerResponse ApiCustomerUpdateCustomerPost(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = ApiCustomerUpdateCustomerPostWithHttpInfo(body);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = ApiCustomerUpdateCustomerPostWithHttpInfo(customerServiceNewCustomerRequest);
             return localVarResponse.Data;
         }
 
@@ -1294,9 +1294,9 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <returns>ApiResponse of RestResultOfCustomerServiceCustomerResponse</returns>
-        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostWithHttpInfo(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest))
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostWithHttpInfo(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest))
         {
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
 
@@ -1325,7 +1325,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceNewCustomerRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -1351,12 +1351,12 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RestResultOfCustomerServiceCustomerResponse</returns>
-        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostAsync(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RestResultOfCustomerServiceCustomerResponse> ApiCustomerUpdateCustomerPostAsync(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = await ApiCustomerUpdateCustomerPostWithHttpInfoAsync(body, cancellationToken).ConfigureAwait(false);
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse> localVarResponse = await ApiCustomerUpdateCustomerPostWithHttpInfoAsync(customerServiceNewCustomerRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1364,10 +1364,10 @@ namespace Kiler.Dotnet.ApiClient.Api
         ///  
         /// </summary>
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="customerServiceNewCustomerRequest"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RestResultOfCustomerServiceCustomerResponse)</returns>
-        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerPostWithHttpInfoAsync(CustomerServiceNewCustomerRequest body = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfCustomerServiceCustomerResponse>> ApiCustomerUpdateCustomerPostWithHttpInfoAsync(CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = default(CustomerServiceNewCustomerRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
@@ -1397,7 +1397,7 @@ namespace Kiler.Dotnet.ApiClient.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = body;
+            localVarRequestOptions.Data = customerServiceNewCustomerRequest;
 
             // authentication (Bearer) required
             if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))

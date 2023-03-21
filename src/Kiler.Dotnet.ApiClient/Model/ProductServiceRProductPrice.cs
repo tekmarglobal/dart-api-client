@@ -36,7 +36,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         /// <param name="price">price.</param>
         /// <param name="listPrice">listPrice.</param>
-        public ProductServiceRProductPrice(double price = default(double), double listPrice = default(double))
+        public ProductServiceRProductPrice(double? price = default(double?), double? listPrice = default(double?))
         {
             this.Price = price;
             this.ListPrice = listPrice;
@@ -45,14 +45,14 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
-        [DataMember(Name = "price", EmitDefaultValue = false)]
-        public double Price { get; set; }
+        [DataMember(Name = "price", EmitDefaultValue = true)]
+        public double? Price { get; set; }
 
         /// <summary>
         /// Gets or Sets ListPrice
         /// </summary>
-        [DataMember(Name = "listPrice", EmitDefaultValue = false)]
-        public double ListPrice { get; set; }
+        [DataMember(Name = "listPrice", EmitDefaultValue = true)]
+        public double? ListPrice { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -101,11 +101,13 @@ namespace Kiler.Dotnet.ApiClient.Model
             return 
                 (
                     this.Price == input.Price ||
-                    this.Price.Equals(input.Price)
+                    (this.Price != null &&
+                    this.Price.Equals(input.Price))
                 ) && 
                 (
                     this.ListPrice == input.ListPrice ||
-                    this.ListPrice.Equals(input.ListPrice)
+                    (this.ListPrice != null &&
+                    this.ListPrice.Equals(input.ListPrice))
                 );
         }
 
@@ -118,8 +120,14 @@ namespace Kiler.Dotnet.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Price.GetHashCode();
-                hashCode = (hashCode * 59) + this.ListPrice.GetHashCode();
+                if (this.Price != null)
+                {
+                    hashCode = (hashCode * 59) + this.Price.GetHashCode();
+                }
+                if (this.ListPrice != null)
+                {
+                    hashCode = (hashCode * 59) + this.ListPrice.GetHashCode();
+                }
                 return hashCode;
             }
         }

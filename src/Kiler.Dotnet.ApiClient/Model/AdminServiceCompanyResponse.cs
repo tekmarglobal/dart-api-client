@@ -45,13 +45,13 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Color
         /// </summary>
-        [DataMember(Name = "color", EmitDefaultValue = false)]
+        [DataMember(Name = "color", EmitDefaultValue = true)]
         public string Color { get; set; }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Regions
         /// </summary>
-        [DataMember(Name = "regions", EmitDefaultValue = false)]
+        [DataMember(Name = "regions", EmitDefaultValue = true)]
         public List<AdminServiceRegionResponse> Regions { get; private set; }
 
         /// <summary>

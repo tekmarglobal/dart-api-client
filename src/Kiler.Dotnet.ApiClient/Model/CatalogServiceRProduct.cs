@@ -48,7 +48,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="unitName">unitName.</param>
         /// <param name="active">active.</param>
         /// <param name="menuName">menuName.</param>
-        public CatalogServiceRProduct(int id = default(int), string name = default(string), string description = default(string), string brandName = default(string), double maxQuantity = default(double), double minQuantity = default(double), double quantityStep = default(double), double initalQuantity = default(double), string eId = default(string), string barcode = default(string), int unitId = default(int), string unitName = default(string), bool active = default(bool), string menuName = default(string))
+        public CatalogServiceRProduct(int id = default(int), string name = default(string), string description = default(string), string brandName = default(string), double maxQuantity = default(double), double minQuantity = default(double), double quantityStep = default(double), double initalQuantity = default(double), string eId = default(string), string barcode = default(string), int? unitId = default(int?), string unitName = default(string), bool active = default(bool), string menuName = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -75,19 +75,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = false)]
+        [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets BrandName
         /// </summary>
-        [DataMember(Name = "brandName", EmitDefaultValue = false)]
+        [DataMember(Name = "brandName", EmitDefaultValue = true)]
         public string BrandName { get; set; }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Prices
         /// </summary>
-        [DataMember(Name = "prices", EmitDefaultValue = false)]
+        [DataMember(Name = "prices", EmitDefaultValue = true)]
         public List<CatalogServiceRProductPrice> Prices { get; private set; }
 
         /// <summary>
@@ -131,25 +131,25 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets EId
         /// </summary>
-        [DataMember(Name = "eId", EmitDefaultValue = false)]
+        [DataMember(Name = "eId", EmitDefaultValue = true)]
         public string EId { get; set; }
 
         /// <summary>
         /// Gets or Sets Barcode
         /// </summary>
-        [DataMember(Name = "barcode", EmitDefaultValue = false)]
+        [DataMember(Name = "barcode", EmitDefaultValue = true)]
         public string Barcode { get; set; }
 
         /// <summary>
         /// Gets or Sets UnitId
         /// </summary>
-        [DataMember(Name = "unitId", EmitDefaultValue = false)]
-        public int UnitId { get; set; }
+        [DataMember(Name = "unitId", EmitDefaultValue = true)]
+        public int? UnitId { get; set; }
 
         /// <summary>
         /// Gets or Sets UnitName
         /// </summary>
-        [DataMember(Name = "unitName", EmitDefaultValue = false)]
+        [DataMember(Name = "unitName", EmitDefaultValue = true)]
         public string UnitName { get; set; }
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets MenuName
         /// </summary>
-        [DataMember(Name = "menuName", EmitDefaultValue = false)]
+        [DataMember(Name = "menuName", EmitDefaultValue = true)]
         public string MenuName { get; set; }
 
         /// <summary>
@@ -275,7 +275,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.UnitId == input.UnitId ||
-                    this.UnitId.Equals(input.UnitId)
+                    (this.UnitId != null &&
+                    this.UnitId.Equals(input.UnitId))
                 ) && 
                 (
                     this.UnitName == input.UnitName ||
@@ -331,7 +332,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 {
                     hashCode = (hashCode * 59) + this.Barcode.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
+                if (this.UnitId != null)
+                {
+                    hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
+                }
                 if (this.UnitName != null)
                 {
                     hashCode = (hashCode * 59) + this.UnitName.GetHashCode();

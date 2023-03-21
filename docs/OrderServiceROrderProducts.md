@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Discount** | **double** |  | [optional] 
 **Quantity** | **double** |  | [optional] 
 **BrandName** | **string** |  | [optional] 
-**UnitId** | **int** |  | [optional] 
+**UnitId** | **int?** |  | [optional] 
 **Active** | **bool** |  | [optional] 
 **Barcode** | **string** |  | [optional] 
 

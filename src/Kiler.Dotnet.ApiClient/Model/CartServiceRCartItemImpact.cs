@@ -38,7 +38,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="productName">productName.</param>
         /// <param name="oldPrice">oldPrice.</param>
         /// <param name="newPrice">newPrice.</param>
-        public CartServiceRCartItemImpact(int productId = default(int), string productName = default(string), double oldPrice = default(double), double newPrice = default(double))
+        public CartServiceRCartItemImpact(int productId = default(int), string productName = default(string), double oldPrice = default(double), double? newPrice = default(double?))
         {
             this.ProductId = productId;
             this.ProductName = productName;
@@ -55,7 +55,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets ProductName
         /// </summary>
-        [DataMember(Name = "productName", EmitDefaultValue = false)]
+        [DataMember(Name = "productName", EmitDefaultValue = true)]
         public string ProductName { get; set; }
 
         /// <summary>
@@ -67,8 +67,8 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets NewPrice
         /// </summary>
-        [DataMember(Name = "newPrice", EmitDefaultValue = false)]
-        public double NewPrice { get; set; }
+        [DataMember(Name = "newPrice", EmitDefaultValue = true)]
+        public double? NewPrice { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -132,7 +132,8 @@ namespace Kiler.Dotnet.ApiClient.Model
                 ) && 
                 (
                     this.NewPrice == input.NewPrice ||
-                    this.NewPrice.Equals(input.NewPrice)
+                    (this.NewPrice != null &&
+                    this.NewPrice.Equals(input.NewPrice))
                 );
         }
 
@@ -151,7 +152,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                     hashCode = (hashCode * 59) + this.ProductName.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.OldPrice.GetHashCode();
-                hashCode = (hashCode * 59) + this.NewPrice.GetHashCode();
+                if (this.NewPrice != null)
+                {
+                    hashCode = (hashCode * 59) + this.NewPrice.GetHashCode();
+                }
                 return hashCode;
             }
         }

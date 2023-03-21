@@ -43,7 +43,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name = "result", EmitDefaultValue = false)]
+        [DataMember(Name = "result", EmitDefaultValue = true)]
         public string Result { get; set; }
 
         /// <summary>

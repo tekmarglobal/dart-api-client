@@ -40,7 +40,7 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="id">id.</param>
         /// <param name="sendDate">sendDate.</param>
         /// <param name="readDate">readDate.</param>
-        public CustomerServiceCustomerMessageResponse(string title = default(string), string detail = default(string), string category = default(string), int id = default(int), DateTime sendDate = default(DateTime), DateTime readDate = default(DateTime))
+        public CustomerServiceCustomerMessageResponse(string title = default(string), string detail = default(string), string category = default(string), int id = default(int), DateTime sendDate = default(DateTime), DateTime? readDate = default(DateTime?))
         {
             this.Title = title;
             this.Detail = detail;
@@ -53,19 +53,19 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
-        [DataMember(Name = "title", EmitDefaultValue = false)]
+        [DataMember(Name = "title", EmitDefaultValue = true)]
         public string Title { get; set; }
 
         /// <summary>
         /// Gets or Sets Detail
         /// </summary>
-        [DataMember(Name = "detail", EmitDefaultValue = false)]
+        [DataMember(Name = "detail", EmitDefaultValue = true)]
         public string Detail { get; set; }
 
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
-        [DataMember(Name = "category", EmitDefaultValue = false)]
+        [DataMember(Name = "category", EmitDefaultValue = true)]
         public string Category { get; set; }
 
         /// <summary>
@@ -83,8 +83,8 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <summary>
         /// Gets or Sets ReadDate
         /// </summary>
-        [DataMember(Name = "readDate", EmitDefaultValue = false)]
-        public DateTime ReadDate { get; set; }
+        [DataMember(Name = "readDate", EmitDefaultValue = true)]
+        public DateTime? ReadDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
