@@ -156,8 +156,6 @@ docs/RestResultOfSystemInt32.md
 docs/RestResultOfSystemObject.md
 git_push.sh
 src/Kiler.Dotnet.ApiClient.Test/Kiler.Dotnet.ApiClient.Test.csproj
-src/Kiler.Dotnet.ApiClient.Test/Model/AdminServiceRegionStatusCodeTests.cs
-src/Kiler.Dotnet.ApiClient.Test/Model/RestResultOfAdminServiceRegionStatusCodeTests.cs
 src/Kiler.Dotnet.ApiClient/Api/AccountApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AdminApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AffiliateApi.cs

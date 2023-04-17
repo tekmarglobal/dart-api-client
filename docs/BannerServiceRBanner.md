@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **Active** | **bool** |  | [optional] 
 **Image** | **string** |  | [optional] 
+**WebImage** | **string** |  | [optional] 
 **Index** | **int** |  | [optional] 
 **Id** | **int** |  | [optional] 
 

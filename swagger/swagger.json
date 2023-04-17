@@ -4552,6 +4552,10 @@
             "type": "string",
             "nullable": true
           },
+          "webImage": {
+            "type": "string",
+            "nullable": true
+          },
           "index": {
             "type": "integer",
             "format": "int32"
@@ -4710,6 +4714,26 @@
           },
           "isActive": {
             "type": "boolean"
+          },
+          "quantityStep": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "initalQuantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maxQuantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "minQuantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false

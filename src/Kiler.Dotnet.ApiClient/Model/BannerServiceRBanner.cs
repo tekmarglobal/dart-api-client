@@ -37,13 +37,15 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="name">name.</param>
         /// <param name="active">active.</param>
         /// <param name="image">image.</param>
+        /// <param name="webImage">webImage.</param>
         /// <param name="index">index.</param>
         /// <param name="id">id.</param>
-        public BannerServiceRBanner(string name = default(string), bool active = default(bool), string image = default(string), int index = default(int), int id = default(int))
+        public BannerServiceRBanner(string name = default(string), bool active = default(bool), string image = default(string), string webImage = default(string), int index = default(int), int id = default(int))
         {
             this.Name = name;
             this.Active = active;
             this.Image = image;
+            this.WebImage = webImage;
             this.Index = index;
             this.Id = id;
         }
@@ -65,6 +67,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// </summary>
         [DataMember(Name = "image", EmitDefaultValue = true)]
         public string Image { get; set; }
+
+        /// <summary>
+        /// Gets or Sets WebImage
+        /// </summary>
+        [DataMember(Name = "webImage", EmitDefaultValue = true)]
+        public string WebImage { get; set; }
 
         /// <summary>
         /// Gets or Sets Index
@@ -89,6 +97,7 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Image: ").Append(Image).Append("\n");
+            sb.Append("  WebImage: ").Append(WebImage).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
@@ -141,6 +150,11 @@ namespace Kiler.Dotnet.ApiClient.Model
                     this.Image.Equals(input.Image))
                 ) && 
                 (
+                    this.WebImage == input.WebImage ||
+                    (this.WebImage != null &&
+                    this.WebImage.Equals(input.WebImage))
+                ) && 
+                (
                     this.Index == input.Index ||
                     this.Index.Equals(input.Index)
                 ) && 
@@ -167,6 +181,10 @@ namespace Kiler.Dotnet.ApiClient.Model
                 if (this.Image != null)
                 {
                     hashCode = (hashCode * 59) + this.Image.GetHashCode();
+                }
+                if (this.WebImage != null)
+                {
+                    hashCode = (hashCode * 59) + this.WebImage.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.Index.GetHashCode();
                 hashCode = (hashCode * 59) + this.Id.GetHashCode();

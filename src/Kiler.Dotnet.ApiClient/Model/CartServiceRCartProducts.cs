@@ -44,7 +44,11 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="productId">productId.</param>
         /// <param name="unitId">unitId.</param>
         /// <param name="isActive">isActive.</param>
-        public CartServiceRCartProducts(int regionProductId = default(int), double? quantity = default(double?), double? listPrice = default(double?), double? price = default(double?), double? amount = default(double?), double? discountAmount = default(double?), string name = default(string), int productId = default(int), int unitId = default(int), bool isActive = default(bool))
+        /// <param name="quantityStep">quantityStep.</param>
+        /// <param name="initalQuantity">initalQuantity.</param>
+        /// <param name="maxQuantity">maxQuantity.</param>
+        /// <param name="minQuantity">minQuantity.</param>
+        public CartServiceRCartProducts(int regionProductId = default(int), double? quantity = default(double?), double? listPrice = default(double?), double? price = default(double?), double? amount = default(double?), double? discountAmount = default(double?), string name = default(string), int productId = default(int), int unitId = default(int), bool isActive = default(bool), double? quantityStep = default(double?), double? initalQuantity = default(double?), double? maxQuantity = default(double?), double? minQuantity = default(double?))
         {
             this.RegionProductId = regionProductId;
             this.Quantity = quantity;
@@ -56,6 +60,10 @@ namespace Kiler.Dotnet.ApiClient.Model
             this.ProductId = productId;
             this.UnitId = unitId;
             this.IsActive = isActive;
+            this.QuantityStep = quantityStep;
+            this.InitalQuantity = initalQuantity;
+            this.MaxQuantity = maxQuantity;
+            this.MinQuantity = minQuantity;
         }
 
         /// <summary>
@@ -119,6 +127,30 @@ namespace Kiler.Dotnet.ApiClient.Model
         public bool IsActive { get; set; }
 
         /// <summary>
+        /// Gets or Sets QuantityStep
+        /// </summary>
+        [DataMember(Name = "quantityStep", EmitDefaultValue = true)]
+        public double? QuantityStep { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InitalQuantity
+        /// </summary>
+        [DataMember(Name = "initalQuantity", EmitDefaultValue = true)]
+        public double? InitalQuantity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MaxQuantity
+        /// </summary>
+        [DataMember(Name = "maxQuantity", EmitDefaultValue = true)]
+        public double? MaxQuantity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MinQuantity
+        /// </summary>
+        [DataMember(Name = "minQuantity", EmitDefaultValue = true)]
+        public double? MinQuantity { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -136,6 +168,10 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("  ProductId: ").Append(ProductId).Append("\n");
             sb.Append("  UnitId: ").Append(UnitId).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
+            sb.Append("  QuantityStep: ").Append(QuantityStep).Append("\n");
+            sb.Append("  InitalQuantity: ").Append(InitalQuantity).Append("\n");
+            sb.Append("  MaxQuantity: ").Append(MaxQuantity).Append("\n");
+            sb.Append("  MinQuantity: ").Append(MinQuantity).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +252,26 @@ namespace Kiler.Dotnet.ApiClient.Model
                 (
                     this.IsActive == input.IsActive ||
                     this.IsActive.Equals(input.IsActive)
+                ) && 
+                (
+                    this.QuantityStep == input.QuantityStep ||
+                    (this.QuantityStep != null &&
+                    this.QuantityStep.Equals(input.QuantityStep))
+                ) && 
+                (
+                    this.InitalQuantity == input.InitalQuantity ||
+                    (this.InitalQuantity != null &&
+                    this.InitalQuantity.Equals(input.InitalQuantity))
+                ) && 
+                (
+                    this.MaxQuantity == input.MaxQuantity ||
+                    (this.MaxQuantity != null &&
+                    this.MaxQuantity.Equals(input.MaxQuantity))
+                ) && 
+                (
+                    this.MinQuantity == input.MinQuantity ||
+                    (this.MinQuantity != null &&
+                    this.MinQuantity.Equals(input.MinQuantity))
                 );
         }
 
@@ -256,6 +312,22 @@ namespace Kiler.Dotnet.ApiClient.Model
                 hashCode = (hashCode * 59) + this.ProductId.GetHashCode();
                 hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsActive.GetHashCode();
+                if (this.QuantityStep != null)
+                {
+                    hashCode = (hashCode * 59) + this.QuantityStep.GetHashCode();
+                }
+                if (this.InitalQuantity != null)
+                {
+                    hashCode = (hashCode * 59) + this.InitalQuantity.GetHashCode();
+                }
+                if (this.MaxQuantity != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaxQuantity.GetHashCode();
+                }
+                if (this.MinQuantity != null)
+                {
+                    hashCode = (hashCode * 59) + this.MinQuantity.GetHashCode();
+                }
                 return hashCode;
             }
         }
