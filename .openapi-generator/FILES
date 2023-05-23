@@ -323,6 +323,3 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/payment_service_sodexo_payment_request_test.dart
-test/payment_service_sodexo_payment_response_test.dart
-test/rest_result_of_payment_service_sodexo_payment_response_test.dart
