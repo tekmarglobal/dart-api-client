@@ -80,43 +80,43 @@ class _$CartServiceCampaignResponseSerializer implements StructuredSerializer<Ca
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.image != null) {
             result
                 ..add(r'image')
                 ..add(serializers.serialize(object.image,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.smallImage != null) {
             result
                 ..add(r'smallImage')
                 ..add(serializers.serialize(object.smallImage,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.conditions != null) {
             result
                 ..add(r'conditions')
                 ..add(serializers.serialize(object.conditions,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.displayPriority != null) {
             result
                 ..add(r'displayPriority')
                 ..add(serializers.serialize(object.displayPriority,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.productIds != null) {
             result
                 ..add(r'productIds')
                 ..add(serializers.serialize(object.productIds,
-                    specifiedType: const FullType(BuiltList, [FullType(int)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(int)])));
         }
         if (object.discount != null) {
             result
@@ -146,37 +146,44 @@ class _$CartServiceCampaignResponseSerializer implements StructuredSerializer<Ca
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.description = valueDes;
                     break;
                 case r'image':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.image = valueDes;
                     break;
                 case r'smallImage':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.smallImage = valueDes;
                     break;
                 case r'conditions':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.conditions = valueDes;
                     break;
                 case r'displayPriority':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.displayPriority = valueDes;
                     break;
                 case r'productIds':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(int)])) as BuiltList<int>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(int)])) as BuiltList<int>?;
+                    if (valueDes == null) continue;
                     result.productIds.replace(valueDes);
                     break;
                 case r'discount':

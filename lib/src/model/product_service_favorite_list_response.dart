@@ -43,7 +43,7 @@ class _$ProductServiceFavoriteListResponseSerializer implements StructuredSerial
             result
                 ..add(r'products')
                 ..add(serializers.serialize(object.products,
-                    specifiedType: const FullType(BuiltList, [FullType(ProductServiceRProduct)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$ProductServiceFavoriteListResponseSerializer implements StructuredSerial
             switch (key) {
                 case r'products':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(ProductServiceRProduct)])) as BuiltList<ProductServiceRProduct>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)])) as BuiltList<ProductServiceRProduct>?;
+                    if (valueDes == null) continue;
                     result.products.replace(valueDes);
                     break;
             }

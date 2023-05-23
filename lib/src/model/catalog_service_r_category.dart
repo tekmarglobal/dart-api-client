@@ -79,19 +79,19 @@ class _$CatalogServiceRCategorySerializer implements StructuredSerializer<Catalo
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.products != null) {
             result
                 ..add(r'products')
                 ..add(serializers.serialize(object.products,
-                    specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRProduct)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRProduct)])));
         }
         if (object.subCategories != null) {
             result
                 ..add(r'subCategories')
                 ..add(serializers.serialize(object.subCategories,
-                    specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRCategory)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRCategory)])));
         }
         if (object.order != null) {
             result
@@ -103,7 +103,7 @@ class _$CatalogServiceRCategorySerializer implements StructuredSerializer<Catalo
             result
                 ..add(r'menuName')
                 ..add(serializers.serialize(object.menuName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -132,17 +132,20 @@ class _$CatalogServiceRCategorySerializer implements StructuredSerializer<Catalo
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'products':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRProduct)])) as BuiltList<CatalogServiceRProduct>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRProduct)])) as BuiltList<CatalogServiceRProduct>?;
+                    if (valueDes == null) continue;
                     result.products.replace(valueDes);
                     break;
                 case r'subCategories':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRCategory)])) as BuiltList<CatalogServiceRCategory>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRCategory)])) as BuiltList<CatalogServiceRCategory>?;
+                    if (valueDes == null) continue;
                     result.subCategories.replace(valueDes);
                     break;
                 case r'order':
@@ -152,7 +155,8 @@ class _$CatalogServiceRCategorySerializer implements StructuredSerializer<Catalo
                     break;
                 case r'menuName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.menuName = valueDes;
                     break;
             }

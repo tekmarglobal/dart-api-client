@@ -47,10 +47,10 @@ import 'package:openapi/openapi.dart';
 
 
 final api = Openapi().getAccountApi();
-final AccountServiceCheckVersionRequest body = ; // AccountServiceCheckVersionRequest | 
+final AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = ; // AccountServiceCheckVersionRequest | 
 
 try {
-    final response = await api.apiAccountCheckversionPost(body);
+    final response = await api.apiAccountCheckversionPost(accountServiceCheckVersionRequest);
     print(response);
 } catch on DioError (e) {
     print("Exception when calling AccountApi->apiAccountCheckversionPost: $e\n");
@@ -153,6 +153,7 @@ Class | Method | HTTP request | Description
 [*PaymentApi*](doc/PaymentApi.md) | [**apiPaymentGetPaymentTypesPost**](doc/PaymentApi.md#apipaymentgetpaymenttypespost) | **POST** /api/Payment/GetPaymentTypes | 
 [*PaymentApi*](doc/PaymentApi.md) | [**apiPaymentPaymentFailPost**](doc/PaymentApi.md#apipaymentpaymentfailpost) | **POST** /api/Payment/PaymentFail | 
 [*PaymentApi*](doc/PaymentApi.md) | [**apiPaymentPaymentSuccessPost**](doc/PaymentApi.md#apipaymentpaymentsuccesspost) | **POST** /api/Payment/PaymentSuccess | 
+[*PaymentApi*](doc/PaymentApi.md) | [**apiPaymentSodexoPaymentPost**](doc/PaymentApi.md#apipaymentsodexopaymentpost) | **POST** /api/Payment/SodexoPayment | 
 [*ProductApi*](doc/ProductApi.md) | [**apiProductAddToFavoriteListPost**](doc/ProductApi.md#apiproductaddtofavoritelistpost) | **POST** /api/Product/AddToFavoriteList | 
 [*ProductApi*](doc/ProductApi.md) | [**apiProductDeleteFavoriteDelete**](doc/ProductApi.md#apiproductdeletefavoritedelete) | **DELETE** /api/Product/DeleteFavorite | 
 [*ProductApi*](doc/ProductApi.md) | [**apiProductGetFavoriteListPost**](doc/ProductApi.md#apiproductgetfavoritelistpost) | **POST** /api/Product/GetFavoriteList | 
@@ -244,6 +245,8 @@ Class | Method | HTTP request | Description
  - [PaymentServicePaymentTransactionResponse](doc/PaymentServicePaymentTransactionResponse.md)
  - [PaymentServicePaymentTypeResponse](doc/PaymentServicePaymentTypeResponse.md)
  - [PaymentServiceRPaymentType](doc/PaymentServiceRPaymentType.md)
+ - [PaymentServiceSodexoPaymentRequest](doc/PaymentServiceSodexoPaymentRequest.md)
+ - [PaymentServiceSodexoPaymentResponse](doc/PaymentServiceSodexoPaymentResponse.md)
  - [ProductServiceFavoriteListResponse](doc/ProductServiceFavoriteListResponse.md)
  - [ProductServiceFavoriteRequest](doc/ProductServiceFavoriteRequest.md)
  - [ProductServiceProductAlternativesRequest](doc/ProductServiceProductAlternativesRequest.md)
@@ -297,6 +300,7 @@ Class | Method | HTTP request | Description
  - [RestResultOfPaymentServicePaymentResponse](doc/RestResultOfPaymentServicePaymentResponse.md)
  - [RestResultOfPaymentServicePaymentTransactionResponse](doc/RestResultOfPaymentServicePaymentTransactionResponse.md)
  - [RestResultOfPaymentServicePaymentTypeResponse](doc/RestResultOfPaymentServicePaymentTypeResponse.md)
+ - [RestResultOfPaymentServiceSodexoPaymentResponse](doc/RestResultOfPaymentServiceSodexoPaymentResponse.md)
  - [RestResultOfProductServiceFavoriteListResponse](doc/RestResultOfProductServiceFavoriteListResponse.md)
  - [RestResultOfProductServiceRProduct](doc/RestResultOfProductServiceRProduct.md)
  - [RestResultOfProductServiceRecommendProductResponse](doc/RestResultOfProductServiceRecommendProductResponse.md)

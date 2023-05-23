@@ -45,13 +45,13 @@ class _$CrmServiceTicketRequestSerializer implements StructuredSerializer<CrmSer
             result
                 ..add(r'phoneNumber')
                 ..add(serializers.serialize(object.phoneNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.order != null) {
             result
                 ..add(r'order')
                 ..add(serializers.serialize(object.order,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$CrmServiceTicketRequestSerializer implements StructuredSerializer<CrmSer
             switch (key) {
                 case r'phoneNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phoneNumber = valueDes;
                     break;
                 case r'order':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.order = valueDes;
                     break;
             }

@@ -46,7 +46,7 @@ class _$AccountServiceLoginRequestSerializer implements StructuredSerializer<Acc
             result
                 ..add(r'sessionId')
                 ..add(serializers.serialize(object.sessionId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.versionRequest != null) {
             result
@@ -71,7 +71,8 @@ class _$AccountServiceLoginRequestSerializer implements StructuredSerializer<Acc
             switch (key) {
                 case r'sessionId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.sessionId = valueDes;
                     break;
                 case r'versionRequest':

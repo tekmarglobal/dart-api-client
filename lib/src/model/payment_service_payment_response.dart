@@ -41,7 +41,7 @@ class _$PaymentServicePaymentResponseSerializer implements StructuredSerializer<
             result
                 ..add(r'responseHtml')
                 ..add(serializers.serialize(object.responseHtml,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -60,7 +60,8 @@ class _$PaymentServicePaymentResponseSerializer implements StructuredSerializer<
             switch (key) {
                 case r'responseHtml':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.responseHtml = valueDes;
                     break;
             }

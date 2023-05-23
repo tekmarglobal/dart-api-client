@@ -41,7 +41,7 @@ class _$CartServiceCreateCartResponseSerializer implements StructuredSerializer<
             result
                 ..add(r'messages')
                 ..add(serializers.serialize(object.messages,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -60,7 +60,8 @@ class _$CartServiceCreateCartResponseSerializer implements StructuredSerializer<
             switch (key) {
                 case r'messages':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.messages = valueDes;
                     break;
             }

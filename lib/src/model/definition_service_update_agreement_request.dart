@@ -45,7 +45,7 @@ class _$DefinitionServiceUpdateAgreementRequestSerializer implements StructuredS
             result
                 ..add(r'code')
                 ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.accept != null) {
             result
@@ -70,7 +70,8 @@ class _$DefinitionServiceUpdateAgreementRequestSerializer implements StructuredS
             switch (key) {
                 case r'code':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.code = valueDes;
                     break;
                 case r'accept':

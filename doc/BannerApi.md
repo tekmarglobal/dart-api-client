@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiBannerUpdateBannerPost**
-> RestResultOfBannerServiceBannerResponse apiBannerUpdateBannerPost(body)
+> RestResultOfBannerServiceBannerResponse apiBannerUpdateBannerPost(bannerServiceBannerRequest)
 
 
 
@@ -68,10 +68,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getBannerApi();
-final BannerServiceBannerRequest body = ; // BannerServiceBannerRequest | 
+final BannerServiceBannerRequest bannerServiceBannerRequest = ; // BannerServiceBannerRequest | 
 
 try {
-    final response = api.apiBannerUpdateBannerPost(body);
+    final response = api.apiBannerUpdateBannerPost(bannerServiceBannerRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling BannerApi->apiBannerUpdateBannerPost: $e\n');
@@ -82,7 +82,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BannerServiceBannerRequest**](BannerServiceBannerRequest.md)|  | [optional] 
+ **bannerServiceBannerRequest** | [**BannerServiceBannerRequest**](BannerServiceBannerRequest.md)|  | [optional] 
 
 ### Return type
 

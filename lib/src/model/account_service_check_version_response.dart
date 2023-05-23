@@ -57,7 +57,7 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
             result
                 ..add(r'latestVersion')
                 ..add(serializers.serialize(object.latestVersion,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.isMandatory != null) {
             result
@@ -75,13 +75,13 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
             result
                 ..add(r'iosMarketId')
                 ..add(serializers.serialize(object.iosMarketId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.androidMarketId != null) {
             result
                 ..add(r'androidMarketId')
                 ..add(serializers.serialize(object.androidMarketId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -100,7 +100,8 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
             switch (key) {
                 case r'latestVersion':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.latestVersion = valueDes;
                     break;
                 case r'isMandatory':
@@ -115,12 +116,14 @@ class _$AccountServiceCheckVersionResponseSerializer implements StructuredSerial
                     break;
                 case r'iosMarketId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.iosMarketId = valueDes;
                     break;
                 case r'androidMarketId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.androidMarketId = valueDes;
                     break;
             }

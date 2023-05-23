@@ -67,25 +67,25 @@ class _$OrderServiceCampaignResponseSerializer implements StructuredSerializer<O
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.image != null) {
             result
                 ..add(r'image')
                 ..add(serializers.serialize(object.image,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.smallImage != null) {
             result
                 ..add(r'smallImage')
                 ..add(serializers.serialize(object.smallImage,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.discount != null) {
             result
@@ -115,22 +115,26 @@ class _$OrderServiceCampaignResponseSerializer implements StructuredSerializer<O
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.description = valueDes;
                     break;
                 case r'image':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.image = valueDes;
                     break;
                 case r'smallImage':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.smallImage = valueDes;
                     break;
                 case r'discount':

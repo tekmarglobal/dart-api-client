@@ -18,6 +18,10 @@ Name | Type | Description | Notes
 **productId** | **int** |  | [optional] 
 **unitId** | **int** |  | [optional] 
 **isActive** | **bool** |  | [optional] 
+**quantityStep** | **double** |  | [optional] 
+**initalQuantity** | **double** |  | [optional] 
+**maxQuantity** | **double** |  | [optional] 
+**minQuantity** | **double** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

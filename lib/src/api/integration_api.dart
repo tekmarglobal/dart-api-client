@@ -141,8 +141,8 @@ class IntegrationApi {
 
     final _queryParameters = <String, dynamic>{
       if (importBannedUser != null) r'importBannedUser': encodeQueryParameter(_serializers, importBannedUser, const FullType(bool)),
-      if (minimumOrderCount != null) r'minimumOrderCount': encodeQueryParameter(_serializers, minimumOrderCount, const FullType(int)),
-      if (minimumOrderAmount != null) r'minimumOrderAmount': encodeQueryParameter(_serializers, minimumOrderAmount, const FullType(double)),
+      r'minimumOrderCount': encodeQueryParameter(_serializers, minimumOrderCount, const FullType(int)),
+      r'minimumOrderAmount': encodeQueryParameter(_serializers, minimumOrderAmount, const FullType(double)),
     };
 
     final _response = await _dio.request<Object>(
@@ -460,8 +460,8 @@ class IntegrationApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (regionErpId != null) r'regionErpId': encodeQueryParameter(_serializers, regionErpId, const FullType(String)),
-      if (productErpId != null) r'productErpId': encodeQueryParameter(_serializers, productErpId, const FullType(String)),
+      r'regionErpId': encodeQueryParameter(_serializers, regionErpId, const FullType(String)),
+      r'productErpId': encodeQueryParameter(_serializers, productErpId, const FullType(String)),
       if (log != null) r'log': encodeQueryParameter(_serializers, log, const FullType(bool)),
     };
 
@@ -548,8 +548,8 @@ class IntegrationApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (regionErpId != null) r'regionErpId': encodeQueryParameter(_serializers, regionErpId, const FullType(String)),
-      if (productErpId != null) r'productErpId': encodeQueryParameter(_serializers, productErpId, const FullType(String)),
+      r'regionErpId': encodeQueryParameter(_serializers, regionErpId, const FullType(String)),
+      r'productErpId': encodeQueryParameter(_serializers, productErpId, const FullType(String)),
       if (log != null) r'log': encodeQueryParameter(_serializers, log, const FullType(bool)),
     };
 

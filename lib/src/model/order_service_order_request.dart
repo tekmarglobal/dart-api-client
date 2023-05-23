@@ -97,31 +97,31 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
             result
                 ..add(r'paymentCode')
                 ..add(serializers.serialize(object.paymentCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.orderNote != null) {
             result
                 ..add(r'orderNote')
                 ..add(serializers.serialize(object.orderNote,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.paymentTypeCode != null) {
             result
                 ..add(r'paymentTypeCode')
                 ..add(serializers.serialize(object.paymentTypeCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.deliveryType != null) {
             result
                 ..add(r'deliveryType')
                 ..add(serializers.serialize(object.deliveryType,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.channelId != null) {
             result
                 ..add(r'channelId')
                 ..add(serializers.serialize(object.channelId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -160,27 +160,32 @@ class _$OrderServiceOrderRequestSerializer implements StructuredSerializer<Order
                     break;
                 case r'paymentCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.paymentCode = valueDes;
                     break;
                 case r'orderNote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.orderNote = valueDes;
                     break;
                 case r'paymentTypeCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.paymentTypeCode = valueDes;
                     break;
                 case r'deliveryType':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryType = valueDes;
                     break;
                 case r'channelId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.channelId = valueDes;
                     break;
             }

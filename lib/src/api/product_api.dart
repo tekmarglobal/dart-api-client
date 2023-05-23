@@ -29,7 +29,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceFavoriteRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -40,7 +40,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfProductServiceFavoriteListResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfProductServiceFavoriteListResponse>> apiProductAddToFavoriteListPost({ 
-    ProductServiceFavoriteRequest? body,
+    ProductServiceFavoriteRequest? productServiceFavoriteRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -73,7 +73,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceFavoriteRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceFavoriteRequest == null ? null : _serializers.serialize(productServiceFavoriteRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -129,7 +129,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceFavoriteRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -140,7 +140,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfProductServiceFavoriteListResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfProductServiceFavoriteListResponse>> apiProductDeleteFavoriteDelete({ 
-    ProductServiceFavoriteRequest? body,
+    ProductServiceFavoriteRequest? productServiceFavoriteRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -173,7 +173,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceFavoriteRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceFavoriteRequest == null ? null : _serializers.serialize(productServiceFavoriteRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -364,7 +364,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceProductRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -375,7 +375,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfProductServiceRProduct] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfProductServiceRProduct>> apiProductPost({ 
-    ProductServiceProductRequest? body,
+    ProductServiceProductRequest? productServiceProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -408,7 +408,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceProductRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceProductRequest == null ? null : _serializers.serialize(productServiceProductRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -464,7 +464,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceProductAlternativesRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -475,7 +475,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfProductServiceRProduct] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfProductServiceRProduct>> apiProductProductAlternativesPost({ 
-    ProductServiceProductAlternativesRequest? body,
+    ProductServiceProductAlternativesRequest? productServiceProductAlternativesRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -508,7 +508,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceProductAlternativesRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceProductAlternativesRequest == null ? null : _serializers.serialize(productServiceProductAlternativesRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -643,7 +643,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceSearchProductRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -654,7 +654,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfProductServiceRProduct] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfProductServiceRProduct>> apiProductProductSearchPost({ 
-    ProductServiceSearchProductRequest? body,
+    ProductServiceSearchProductRequest? productServiceSearchProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -687,7 +687,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceSearchProductRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceSearchProductRequest == null ? null : _serializers.serialize(productServiceSearchProductRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -743,7 +743,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [productServiceRecommendProductRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -754,7 +754,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfProductServiceRecommendProductResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfProductServiceRecommendProductResponse>> apiProductRecommendProductPost({ 
-    ProductServiceRecommendProductRequest? body,
+    ProductServiceRecommendProductRequest? productServiceRecommendProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -787,7 +787,7 @@ class ProductApi {
 
     try {
       const _type = FullType(ProductServiceRecommendProductRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = productServiceRecommendProductRequest == null ? null : _serializers.serialize(productServiceRecommendProductRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

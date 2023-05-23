@@ -61,19 +61,19 @@ class _$CustomerServiceCustomerMessageResponseSerializer implements StructuredSe
             result
                 ..add(r'title')
                 ..add(serializers.serialize(object.title,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.detail != null) {
             result
                 ..add(r'detail')
                 ..add(serializers.serialize(object.detail,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.category != null) {
             result
                 ..add(r'category')
                 ..add(serializers.serialize(object.category,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.id != null) {
             result
@@ -91,7 +91,7 @@ class _$CustomerServiceCustomerMessageResponseSerializer implements StructuredSe
             result
                 ..add(r'readDate')
                 ..add(serializers.serialize(object.readDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         return result;
     }
@@ -110,17 +110,20 @@ class _$CustomerServiceCustomerMessageResponseSerializer implements StructuredSe
             switch (key) {
                 case r'title':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.title = valueDes;
                     break;
                 case r'detail':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.detail = valueDes;
                     break;
                 case r'category':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.category = valueDes;
                     break;
                 case r'id':
@@ -135,7 +138,8 @@ class _$CustomerServiceCustomerMessageResponseSerializer implements StructuredSe
                     break;
                 case r'readDate':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
                     result.readDate = valueDes;
                     break;
             }

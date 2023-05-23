@@ -90,6 +90,8 @@ doc/PaymentServicePaymentTransactionRequest.md
 doc/PaymentServicePaymentTransactionResponse.md
 doc/PaymentServicePaymentTypeResponse.md
 doc/PaymentServiceRPaymentType.md
+doc/PaymentServiceSodexoPaymentRequest.md
+doc/PaymentServiceSodexoPaymentResponse.md
 doc/ProductApi.md
 doc/ProductServiceFavoriteListResponse.md
 doc/ProductServiceFavoriteRequest.md
@@ -145,6 +147,7 @@ doc/RestResultOfOrderServiceOrderResponse.md
 doc/RestResultOfPaymentServicePaymentResponse.md
 doc/RestResultOfPaymentServicePaymentTransactionResponse.md
 doc/RestResultOfPaymentServicePaymentTypeResponse.md
+doc/RestResultOfPaymentServiceSodexoPaymentResponse.md
 doc/RestResultOfProductServiceFavoriteListResponse.md
 doc/RestResultOfProductServiceRProduct.md
 doc/RestResultOfProductServiceRecommendProductResponse.md
@@ -254,6 +257,8 @@ lib/src/model/payment_service_payment_transaction_request.dart
 lib/src/model/payment_service_payment_transaction_response.dart
 lib/src/model/payment_service_payment_type_response.dart
 lib/src/model/payment_service_r_payment_type.dart
+lib/src/model/payment_service_sodexo_payment_request.dart
+lib/src/model/payment_service_sodexo_payment_response.dart
 lib/src/model/product_service_favorite_list_response.dart
 lib/src/model/product_service_favorite_request.dart
 lib/src/model/product_service_product_alternatives_request.dart
@@ -307,6 +312,7 @@ lib/src/model/rest_result_of_order_service_order_response.dart
 lib/src/model/rest_result_of_payment_service_payment_response.dart
 lib/src/model/rest_result_of_payment_service_payment_transaction_response.dart
 lib/src/model/rest_result_of_payment_service_payment_type_response.dart
+lib/src/model/rest_result_of_payment_service_sodexo_payment_response.dart
 lib/src/model/rest_result_of_product_service_favorite_list_response.dart
 lib/src/model/rest_result_of_product_service_r_product.dart
 lib/src/model/rest_result_of_product_service_recommend_product_response.dart
@@ -317,3 +323,6 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/payment_service_sodexo_payment_request_test.dart
+test/payment_service_sodexo_payment_response_test.dart
+test/rest_result_of_payment_service_sodexo_payment_response_test.dart

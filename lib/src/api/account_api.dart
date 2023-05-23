@@ -26,7 +26,7 @@ class AccountApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [accountServiceCheckVersionRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class AccountApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfAccountServiceCheckVersionResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfAccountServiceCheckVersionResponse>> apiAccountCheckversionPost({ 
-    AccountServiceCheckVersionRequest? body,
+    AccountServiceCheckVersionRequest? accountServiceCheckVersionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -70,7 +70,7 @@ class AccountApi {
 
     try {
       const _type = FullType(AccountServiceCheckVersionRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = accountServiceCheckVersionRequest == null ? null : _serializers.serialize(accountServiceCheckVersionRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -280,7 +280,7 @@ class AccountApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [accountServiceLoginRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -291,7 +291,7 @@ class AccountApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfAccountServiceLoginResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfAccountServiceLoginResponse>> apiAccountLoginPost({ 
-    AccountServiceLoginRequest? body,
+    AccountServiceLoginRequest? accountServiceLoginRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -324,7 +324,7 @@ class AccountApi {
 
     try {
       const _type = FullType(AccountServiceLoginRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = accountServiceLoginRequest == null ? null : _serializers.serialize(accountServiceLoginRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

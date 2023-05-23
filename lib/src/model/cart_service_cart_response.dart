@@ -94,67 +94,67 @@ class _$CartServiceCartResponseSerializer implements StructuredSerializer<CartSe
             result
                 ..add(r'customer')
                 ..add(serializers.serialize(object.customer,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.cartTotal != null) {
             result
                 ..add(r'cartTotal')
                 ..add(serializers.serialize(object.cartTotal,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.regionId != null) {
             result
                 ..add(r'regionId')
                 ..add(serializers.serialize(object.regionId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.deviceToken != null) {
             result
                 ..add(r'deviceToken')
                 ..add(serializers.serialize(object.deviceToken,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.bagTotal != null) {
             result
                 ..add(r'bagTotal')
                 ..add(serializers.serialize(object.bagTotal,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.bagAmount != null) {
             result
                 ..add(r'bagAmount')
                 ..add(serializers.serialize(object.bagAmount,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.estimatedFee != null) {
             result
                 ..add(r'estimatedFee')
                 ..add(serializers.serialize(object.estimatedFee,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.appliedCampaigns != null) {
             result
                 ..add(r'appliedCampaigns')
                 ..add(serializers.serialize(object.appliedCampaigns,
-                    specifiedType: const FullType(BuiltList, [FullType(CartServiceCampaignResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceCampaignResponse)])));
         }
         if (object.campaignTotalDiscount != null) {
             result
                 ..add(r'campaignTotalDiscount')
                 ..add(serializers.serialize(object.campaignTotalDiscount,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.cartProducts != null) {
             result
                 ..add(r'cartProducts')
                 ..add(serializers.serialize(object.cartProducts,
-                    specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartProducts)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartProducts)])));
         }
         if (object.cardProducts != null) {
             result
                 ..add(r'cardProducts')
                 ..add(serializers.serialize(object.cardProducts,
-                    specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartProducts)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartProducts)])));
         }
         return result;
     }
@@ -178,57 +178,68 @@ class _$CartServiceCartResponseSerializer implements StructuredSerializer<CartSe
                     break;
                 case r'customer':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.customer = valueDes;
                     break;
                 case r'cartTotal':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.cartTotal = valueDes;
                     break;
                 case r'regionId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.regionId = valueDes;
                     break;
                 case r'deviceToken':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deviceToken = valueDes;
                     break;
                 case r'bagTotal':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.bagTotal = valueDes;
                     break;
                 case r'bagAmount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.bagAmount = valueDes;
                     break;
                 case r'estimatedFee':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.estimatedFee = valueDes;
                     break;
                 case r'appliedCampaigns':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CartServiceCampaignResponse)])) as BuiltList<CartServiceCampaignResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceCampaignResponse)])) as BuiltList<CartServiceCampaignResponse>?;
+                    if (valueDes == null) continue;
                     result.appliedCampaigns.replace(valueDes);
                     break;
                 case r'campaignTotalDiscount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.campaignTotalDiscount = valueDes;
                     break;
                 case r'cartProducts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartProducts)])) as BuiltList<CartServiceRCartProducts>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartProducts)])) as BuiltList<CartServiceRCartProducts>?;
+                    if (valueDes == null) continue;
                     result.cartProducts.replace(valueDes);
                     break;
                 case r'cardProducts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartProducts)])) as BuiltList<CartServiceRCartProducts>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartProducts)])) as BuiltList<CartServiceRCartProducts>?;
+                    if (valueDes == null) continue;
                     result.cardProducts.replace(valueDes);
                     break;
             }

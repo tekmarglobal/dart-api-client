@@ -43,7 +43,7 @@ class _$BannerServiceBannerResponseSerializer implements StructuredSerializer<Ba
             result
                 ..add(r'bannerList')
                 ..add(serializers.serialize(object.bannerList,
-                    specifiedType: const FullType(BuiltList, [FullType(BannerServiceRBanner)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(BannerServiceRBanner)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$BannerServiceBannerResponseSerializer implements StructuredSerializer<Ba
             switch (key) {
                 case r'bannerList':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(BannerServiceRBanner)])) as BuiltList<BannerServiceRBanner>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(BannerServiceRBanner)])) as BuiltList<BannerServiceRBanner>?;
+                    if (valueDes == null) continue;
                     result.bannerList.replace(valueDes);
                     break;
             }

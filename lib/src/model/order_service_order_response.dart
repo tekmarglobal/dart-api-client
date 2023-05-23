@@ -139,7 +139,7 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
             result
                 ..add(r'uuid')
                 ..add(serializers.serialize(object.uuid,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customer != null) {
             result
@@ -157,13 +157,13 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
             result
                 ..add(r'deliveryAddress')
                 ..add(serializers.serialize(object.deliveryAddress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.billingAdrress != null) {
             result
                 ..add(r'billingAdrress')
                 ..add(serializers.serialize(object.billingAdrress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.productTotal != null) {
             result
@@ -181,19 +181,19 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
             result
                 ..add(r'orderProducts')
                 ..add(serializers.serialize(object.orderProducts,
-                    specifiedType: const FullType(BuiltList, [FullType(OrderServiceROrderProducts)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceROrderProducts)])));
         }
         if (object.orderNote != null) {
             result
                 ..add(r'orderNote')
                 ..add(serializers.serialize(object.orderNote,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.paymentType != null) {
             result
                 ..add(r'paymentType')
                 ..add(serializers.serialize(object.paymentType,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.productDiscountsTotal != null) {
             result
@@ -241,7 +241,7 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
             result
                 ..add(r'appliedCampaigns')
                 ..add(serializers.serialize(object.appliedCampaigns,
-                    specifiedType: const FullType(BuiltList, [FullType(OrderServiceCampaignResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceCampaignResponse)])));
         }
         if (object.campaignTotalDiscount != null) {
             result
@@ -259,7 +259,7 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
             result
                 ..add(r'deliveryTypeCode')
                 ..add(serializers.serialize(object.deliveryTypeCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.depot != null) {
             result
@@ -289,7 +289,8 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     break;
                 case r'uuid':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.uuid = valueDes;
                     break;
                 case r'customer':
@@ -304,12 +305,14 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     break;
                 case r'deliveryAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryAddress = valueDes;
                     break;
                 case r'billingAdrress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.billingAdrress = valueDes;
                     break;
                 case r'productTotal':
@@ -324,17 +327,20 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     break;
                 case r'orderProducts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(OrderServiceROrderProducts)])) as BuiltList<OrderServiceROrderProducts>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceROrderProducts)])) as BuiltList<OrderServiceROrderProducts>?;
+                    if (valueDes == null) continue;
                     result.orderProducts.replace(valueDes);
                     break;
                 case r'orderNote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.orderNote = valueDes;
                     break;
                 case r'paymentType':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.paymentType = valueDes;
                     break;
                 case r'productDiscountsTotal':
@@ -374,7 +380,8 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     break;
                 case r'appliedCampaigns':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(OrderServiceCampaignResponse)])) as BuiltList<OrderServiceCampaignResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceCampaignResponse)])) as BuiltList<OrderServiceCampaignResponse>?;
+                    if (valueDes == null) continue;
                     result.appliedCampaigns.replace(valueDes);
                     break;
                 case r'campaignTotalDiscount':
@@ -389,7 +396,8 @@ class _$OrderServiceOrderResponseSerializer implements StructuredSerializer<Orde
                     break;
                 case r'deliveryTypeCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryTypeCode = valueDes;
                     break;
                 case r'depot':

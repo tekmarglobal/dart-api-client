@@ -105,19 +105,19 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.brandName != null) {
             result
                 ..add(r'brandName')
                 ..add(serializers.serialize(object.brandName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.maxQuantity != null) {
             result
@@ -147,31 +147,31 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
             result
                 ..add(r'prices')
                 ..add(serializers.serialize(object.prices,
-                    specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRProductPrice)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRProductPrice)])));
         }
         if (object.eId != null) {
             result
                 ..add(r'eId')
                 ..add(serializers.serialize(object.eId,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.barcode != null) {
             result
                 ..add(r'barcode')
                 ..add(serializers.serialize(object.barcode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.unitId != null) {
             result
                 ..add(r'unitId')
                 ..add(serializers.serialize(object.unitId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.unitName != null) {
             result
                 ..add(r'unitName')
                 ..add(serializers.serialize(object.unitName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -183,7 +183,7 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
             result
                 ..add(r'menuName')
                 ..add(serializers.serialize(object.menuName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -207,17 +207,20 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.description = valueDes;
                     break;
                 case r'brandName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.brandName = valueDes;
                     break;
                 case r'maxQuantity':
@@ -242,27 +245,32 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
                     break;
                 case r'prices':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CatalogServiceRProductPrice)])) as BuiltList<CatalogServiceRProductPrice>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CatalogServiceRProductPrice)])) as BuiltList<CatalogServiceRProductPrice>?;
+                    if (valueDes == null) continue;
                     result.prices.replace(valueDes);
                     break;
                 case r'eId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.eId = valueDes;
                     break;
                 case r'barcode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.barcode = valueDes;
                     break;
                 case r'unitId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.unitId = valueDes;
                     break;
                 case r'unitName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.unitName = valueDes;
                     break;
                 case r'active':
@@ -272,7 +280,8 @@ class _$CatalogServiceRProductSerializer implements StructuredSerializer<Catalog
                     break;
                 case r'menuName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.menuName = valueDes;
                     break;
             }

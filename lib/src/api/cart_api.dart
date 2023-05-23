@@ -71,7 +71,7 @@ class CartApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (campaignCode != null) r'campaignCode': encodeQueryParameter(_serializers, campaignCode, const FullType(String)),
+      r'campaignCode': encodeQueryParameter(_serializers, campaignCode, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(
@@ -203,7 +203,7 @@ class CartApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [cartServiceCreateCartRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -214,7 +214,7 @@ class CartApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCartServiceCreateCartResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCartServiceCreateCartResponse>> apiCartCreateCartPost({ 
-    CartServiceCreateCartRequest? body,
+    CartServiceCreateCartRequest? cartServiceCreateCartRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -247,7 +247,7 @@ class CartApi {
 
     try {
       const _type = FullType(CartServiceCreateCartRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = cartServiceCreateCartRequest == null ? null : _serializers.serialize(cartServiceCreateCartRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -698,7 +698,7 @@ class CartApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [cartServiceUpdateCartRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -709,7 +709,7 @@ class CartApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCartServiceCartResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCartServiceCartResponse>> apiCartUpdateCartPost({ 
-    CartServiceUpdateCartRequest? body,
+    CartServiceUpdateCartRequest? cartServiceUpdateCartRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -742,7 +742,7 @@ class CartApi {
 
     try {
       const _type = FullType(CartServiceUpdateCartRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = cartServiceUpdateCartRequest == null ? null : _serializers.serialize(cartServiceUpdateCartRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -798,7 +798,7 @@ class CartApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [cartServiceUpdateCartRegionRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -809,7 +809,7 @@ class CartApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCartServiceUpdateCartRegionResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCartServiceUpdateCartRegionResponse>> apiCartUpdateCartRegionPost({ 
-    CartServiceUpdateCartRegionRequest? body,
+    CartServiceUpdateCartRegionRequest? cartServiceUpdateCartRegionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -842,7 +842,7 @@ class CartApi {
 
     try {
       const _type = FullType(CartServiceUpdateCartRegionRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = cartServiceUpdateCartRegionRequest == null ? null : _serializers.serialize(cartServiceUpdateCartRegionRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -898,7 +898,7 @@ class CartApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [cartServiceUpdateTimeslotRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -909,7 +909,7 @@ class CartApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCartServiceCartResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCartServiceCartResponse>> apiCartUpdateTimeslotPost({ 
-    CartServiceUpdateTimeslotRequest? body,
+    CartServiceUpdateTimeslotRequest? cartServiceUpdateTimeslotRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -942,7 +942,7 @@ class CartApi {
 
     try {
       const _type = FullType(CartServiceUpdateTimeslotRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = cartServiceUpdateTimeslotRequest == null ? null : _serializers.serialize(cartServiceUpdateTimeslotRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

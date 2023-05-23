@@ -51,7 +51,7 @@ class _$OrderServicePatchOrderRequestSerializer implements StructuredSerializer<
             result
                 ..add(r'paymentCode')
                 ..add(serializers.serialize(object.paymentCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -75,7 +75,8 @@ class _$OrderServicePatchOrderRequestSerializer implements StructuredSerializer<
                     break;
                 case r'paymentCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.paymentCode = valueDes;
                     break;
             }

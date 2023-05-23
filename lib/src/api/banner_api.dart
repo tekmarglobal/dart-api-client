@@ -101,7 +101,7 @@ class BannerApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [bannerServiceBannerRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -112,7 +112,7 @@ class BannerApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfBannerServiceBannerResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfBannerServiceBannerResponse>> apiBannerUpdateBannerPost({ 
-    BannerServiceBannerRequest? body,
+    BannerServiceBannerRequest? bannerServiceBannerRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -145,7 +145,7 @@ class BannerApi {
 
     try {
       const _type = FullType(BannerServiceBannerRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = bannerServiceBannerRequest == null ? null : _serializers.serialize(bannerServiceBannerRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

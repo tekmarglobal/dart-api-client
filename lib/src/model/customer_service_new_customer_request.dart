@@ -77,13 +77,13 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.surname != null) {
             result
                 ..add(r'surname')
                 ..add(serializers.serialize(object.surname,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.birthDate != null) {
             result
@@ -95,13 +95,13 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.email != null) {
             result
                 ..add(r'email')
                 ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.allowSms != null) {
             result
@@ -131,7 +131,7 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
             result
                 ..add(r'identificationNumber')
                 ..add(serializers.serialize(object.identificationNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -150,12 +150,14 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'surname':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.surname = valueDes;
                     break;
                 case r'birthDate':
@@ -165,12 +167,14 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
                     break;
                 case r'phone':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phone = valueDes;
                     break;
                 case r'email':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.email = valueDes;
                     break;
                 case r'allowSms':
@@ -195,7 +199,8 @@ class _$CustomerServiceNewCustomerRequestSerializer implements StructuredSeriali
                     break;
                 case r'identificationNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.identificationNumber = valueDes;
                     break;
             }

@@ -43,7 +43,7 @@ class _$CustomerServiceCustomerAddressResponseSerializer implements StructuredSe
             result
                 ..add(r'address')
                 ..add(serializers.serialize(object.address,
-                    specifiedType: const FullType(BuiltList, [FullType(CustomerServiceRAddress)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CustomerServiceRAddress)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$CustomerServiceCustomerAddressResponseSerializer implements StructuredSe
             switch (key) {
                 case r'address':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CustomerServiceRAddress)])) as BuiltList<CustomerServiceRAddress>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CustomerServiceRAddress)])) as BuiltList<CustomerServiceRAddress>?;
+                    if (valueDes == null) continue;
                     result.address.replace(valueDes);
                     break;
             }

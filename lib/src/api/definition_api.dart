@@ -198,7 +198,7 @@ class DefinitionApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [definitionServiceCountiesRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -209,7 +209,7 @@ class DefinitionApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceCountiesResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfDefinitionServiceCountiesResponse>> apiDefinitionCountiesPost({ 
-    DefinitionServiceCountiesRequest? body,
+    DefinitionServiceCountiesRequest? definitionServiceCountiesRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -242,7 +242,7 @@ class DefinitionApi {
 
     try {
       const _type = FullType(DefinitionServiceCountiesRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = definitionServiceCountiesRequest == null ? null : _serializers.serialize(definitionServiceCountiesRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -868,7 +868,7 @@ class DefinitionApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [definitionServiceNeighborRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -879,7 +879,7 @@ class DefinitionApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfDefinitionServiceNeighborResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfDefinitionServiceNeighborResponse>> apiDefinitionNeighborhoodPost({ 
-    DefinitionServiceNeighborRequest? body,
+    DefinitionServiceNeighborRequest? definitionServiceNeighborRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -912,7 +912,7 @@ class DefinitionApi {
 
     try {
       const _type = FullType(DefinitionServiceNeighborRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = definitionServiceNeighborRequest == null ? null : _serializers.serialize(definitionServiceNeighborRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -968,7 +968,7 @@ class DefinitionApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [definitionServiceUpdateAgreementRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -979,7 +979,7 @@ class DefinitionApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfDefinitionServiceUpdateAgreementLogResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>> apiDefinitionUpdateAgreementLogPost({ 
-    DefinitionServiceUpdateAgreementRequest? body,
+    DefinitionServiceUpdateAgreementRequest? definitionServiceUpdateAgreementRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1012,7 +1012,7 @@ class DefinitionApi {
 
     try {
       const _type = FullType(DefinitionServiceUpdateAgreementRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = definitionServiceUpdateAgreementRequest == null ? null : _serializers.serialize(definitionServiceUpdateAgreementRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

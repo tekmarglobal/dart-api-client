@@ -57,13 +57,13 @@ class _$RestResultOfListOfDefinitionServiceCountiesResponseSerializer implements
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(BuiltList, [FullType(DefinitionServiceCountiesResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceCountiesResponse)])));
         }
         return result;
     }
@@ -87,12 +87,14 @@ class _$RestResultOfListOfDefinitionServiceCountiesResponseSerializer implements
                     break;
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'data':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(DefinitionServiceCountiesResponse)])) as BuiltList<DefinitionServiceCountiesResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceCountiesResponse)])) as BuiltList<DefinitionServiceCountiesResponse>?;
+                    if (valueDes == null) continue;
                     result.data.replace(valueDes);
                     break;
             }

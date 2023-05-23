@@ -24,7 +24,7 @@ class RegisterApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [registerServiceSmsRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class RegisterApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfRegisterServiceSmsResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfRegisterServiceSmsResponse>> apiRegisterSendSmsPost({ 
-    RegisterServiceSmsRequest? body,
+    RegisterServiceSmsRequest? registerServiceSmsRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -68,7 +68,7 @@ class RegisterApi {
 
     try {
       const _type = FullType(RegisterServiceSmsRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = registerServiceSmsRequest == null ? null : _serializers.serialize(registerServiceSmsRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -124,7 +124,7 @@ class RegisterApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [registerServiceVerifyRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -135,7 +135,7 @@ class RegisterApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfRegisterServiceLoginResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfRegisterServiceLoginResponse>> apiRegisterVerifySmsPost({ 
-    RegisterServiceVerifyRequest? body,
+    RegisterServiceVerifyRequest? registerServiceVerifyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -168,7 +168,7 @@ class RegisterApi {
 
     try {
       const _type = FullType(RegisterServiceVerifyRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = registerServiceVerifyRequest == null ? null : _serializers.serialize(registerServiceVerifyRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

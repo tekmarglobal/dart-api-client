@@ -20,6 +20,10 @@ part 'cart_service_r_cart_products.g.dart';
 /// * [productId] 
 /// * [unitId] 
 /// * [isActive] 
+/// * [quantityStep] 
+/// * [initalQuantity] 
+/// * [maxQuantity] 
+/// * [minQuantity] 
 abstract class CartServiceRCartProducts implements Built<CartServiceRCartProducts, CartServiceRCartProductsBuilder> {
     @BuiltValueField(wireName: r'regionProductId')
     int? get regionProductId;
@@ -50,6 +54,18 @@ abstract class CartServiceRCartProducts implements Built<CartServiceRCartProduct
 
     @BuiltValueField(wireName: r'isActive')
     bool? get isActive;
+
+    @BuiltValueField(wireName: r'quantityStep')
+    double? get quantityStep;
+
+    @BuiltValueField(wireName: r'initalQuantity')
+    double? get initalQuantity;
+
+    @BuiltValueField(wireName: r'maxQuantity')
+    double? get maxQuantity;
+
+    @BuiltValueField(wireName: r'minQuantity')
+    double? get minQuantity;
 
     CartServiceRCartProducts._();
 
@@ -83,37 +99,37 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
             result
                 ..add(r'quantity')
                 ..add(serializers.serialize(object.quantity,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.listPrice != null) {
             result
                 ..add(r'listPrice')
                 ..add(serializers.serialize(object.listPrice,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.price != null) {
             result
                 ..add(r'price')
                 ..add(serializers.serialize(object.price,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.amount != null) {
             result
                 ..add(r'amount')
                 ..add(serializers.serialize(object.amount,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.discountAmount != null) {
             result
                 ..add(r'discountAmount')
                 ..add(serializers.serialize(object.discountAmount,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.name != null) {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.productId != null) {
             result
@@ -132,6 +148,30 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
                 ..add(r'isActive')
                 ..add(serializers.serialize(object.isActive,
                     specifiedType: const FullType(bool)));
+        }
+        if (object.quantityStep != null) {
+            result
+                ..add(r'quantityStep')
+                ..add(serializers.serialize(object.quantityStep,
+                    specifiedType: const FullType.nullable(double)));
+        }
+        if (object.initalQuantity != null) {
+            result
+                ..add(r'initalQuantity')
+                ..add(serializers.serialize(object.initalQuantity,
+                    specifiedType: const FullType.nullable(double)));
+        }
+        if (object.maxQuantity != null) {
+            result
+                ..add(r'maxQuantity')
+                ..add(serializers.serialize(object.maxQuantity,
+                    specifiedType: const FullType.nullable(double)));
+        }
+        if (object.minQuantity != null) {
+            result
+                ..add(r'minQuantity')
+                ..add(serializers.serialize(object.minQuantity,
+                    specifiedType: const FullType.nullable(double)));
         }
         return result;
     }
@@ -155,32 +195,38 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
                     break;
                 case r'quantity':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.quantity = valueDes;
                     break;
                 case r'listPrice':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.listPrice = valueDes;
                     break;
                 case r'price':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.price = valueDes;
                     break;
                 case r'amount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.amount = valueDes;
                     break;
                 case r'discountAmount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.discountAmount = valueDes;
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'productId':
@@ -197,6 +243,30 @@ class _$CartServiceRCartProductsSerializer implements StructuredSerializer<CartS
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     result.isActive = valueDes;
+                    break;
+                case r'quantityStep':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.quantityStep = valueDes;
+                    break;
+                case r'initalQuantity':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.initalQuantity = valueDes;
+                    break;
+                case r'maxQuantity':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.maxQuantity = valueDes;
+                    break;
+                case r'minQuantity':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
+                    result.minQuantity = valueDes;
                     break;
             }
         }

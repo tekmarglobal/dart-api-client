@@ -143,13 +143,13 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
             result
                 ..add(r'deliveryAddress')
                 ..add(serializers.serialize(object.deliveryAddress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.deliveryTypeCode != null) {
             result
                 ..add(r'deliveryTypeCode')
                 ..add(serializers.serialize(object.deliveryTypeCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.depot != null) {
             result
@@ -161,7 +161,7 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
             result
                 ..add(r'billingAddress')
                 ..add(serializers.serialize(object.billingAddress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.productTotal != null) {
             result
@@ -197,7 +197,7 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
             result
                 ..add(r'orderNote')
                 ..add(serializers.serialize(object.orderNote,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -209,19 +209,19 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
             result
                 ..add(r'cityName')
                 ..add(serializers.serialize(object.cityName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.countyName != null) {
             result
                 ..add(r'countyName')
                 ..add(serializers.serialize(object.countyName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.paymentType != null) {
             result
                 ..add(r'paymentType')
                 ..add(serializers.serialize(object.paymentType,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.deliveryTimeStart != null) {
             result
@@ -292,12 +292,14 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     break;
                 case r'deliveryAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryAddress = valueDes;
                     break;
                 case r'deliveryTypeCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryTypeCode = valueDes;
                     break;
                 case r'depot':
@@ -307,7 +309,8 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     break;
                 case r'billingAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.billingAddress = valueDes;
                     break;
                 case r'productTotal':
@@ -337,7 +340,8 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     break;
                 case r'orderNote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.orderNote = valueDes;
                     break;
                 case r'active':
@@ -347,17 +351,20 @@ class _$OrderServiceOrdersSerializer implements StructuredSerializer<OrderServic
                     break;
                 case r'cityName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cityName = valueDes;
                     break;
                 case r'countyName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.countyName = valueDes;
                     break;
                 case r'paymentType':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.paymentType = valueDes;
                     break;
                 case r'deliveryTimeStart':

@@ -69,19 +69,19 @@ class _$PaymentServicePaymentRequestSerializer implements StructuredSerializer<P
             result
                 ..add(r'cartNumber')
                 ..add(serializers.serialize(object.cartNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.expiryDate != null) {
             result
                 ..add(r'expiryDate')
                 ..add(serializers.serialize(object.expiryDate,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cartCvv != null) {
             result
                 ..add(r'cartCvv')
                 ..add(serializers.serialize(object.cartCvv,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.posId != null) {
             result
@@ -105,7 +105,7 @@ class _$PaymentServicePaymentRequestSerializer implements StructuredSerializer<P
             result
                 ..add(r'transactionUid')
                 ..add(serializers.serialize(object.transactionUid,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cardType != null) {
             result
@@ -130,17 +130,20 @@ class _$PaymentServicePaymentRequestSerializer implements StructuredSerializer<P
             switch (key) {
                 case r'cartNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cartNumber = valueDes;
                     break;
                 case r'expiryDate':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.expiryDate = valueDes;
                     break;
                 case r'cartCvv':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cartCvv = valueDes;
                     break;
                 case r'posId':
@@ -160,7 +163,8 @@ class _$PaymentServicePaymentRequestSerializer implements StructuredSerializer<P
                     break;
                 case r'transactionUid':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.transactionUid = valueDes;
                     break;
                 case r'cardType':

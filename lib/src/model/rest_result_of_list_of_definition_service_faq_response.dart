@@ -57,13 +57,13 @@ class _$RestResultOfListOfDefinitionServiceFaqResponseSerializer implements Stru
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(BuiltList, [FullType(DefinitionServiceFaqResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceFaqResponse)])));
         }
         return result;
     }
@@ -87,12 +87,14 @@ class _$RestResultOfListOfDefinitionServiceFaqResponseSerializer implements Stru
                     break;
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'data':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(DefinitionServiceFaqResponse)])) as BuiltList<DefinitionServiceFaqResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceFaqResponse)])) as BuiltList<DefinitionServiceFaqResponse>?;
+                    if (valueDes == null) continue;
                     result.data.replace(valueDes);
                     break;
             }

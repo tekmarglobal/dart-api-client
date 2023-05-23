@@ -41,7 +41,7 @@ class _$ProductServiceRecommendProductResponseSerializer implements StructuredSe
             result
                 ..add(r'result')
                 ..add(serializers.serialize(object.result,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -60,7 +60,8 @@ class _$ProductServiceRecommendProductResponseSerializer implements StructuredSe
             switch (key) {
                 case r'result':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.result = valueDes;
                     break;
             }

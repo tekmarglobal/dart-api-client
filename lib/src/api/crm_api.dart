@@ -24,7 +24,7 @@ class CrmApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [crmServiceCallRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class CrmApi {
   /// Returns a [Future] containing a [Response] with a [bool] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<bool>> apiCrmCallPost({ 
-    CrmServiceCallRequest? body,
+    CrmServiceCallRequest? crmServiceCallRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -68,7 +68,7 @@ class CrmApi {
 
     try {
       const _type = FullType(CrmServiceCallRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = crmServiceCallRequest == null ? null : _serializers.serialize(crmServiceCallRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -120,7 +120,7 @@ class CrmApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [crmServiceTicketRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -131,7 +131,7 @@ class CrmApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCrmServiceTicketResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCrmServiceTicketResponse>> apiCrmCreateTicketPost({ 
-    CrmServiceTicketRequest? body,
+    CrmServiceTicketRequest? crmServiceTicketRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -164,7 +164,7 @@ class CrmApi {
 
     try {
       const _type = FullType(CrmServiceTicketRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = crmServiceTicketRequest == null ? null : _serializers.serialize(crmServiceTicketRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -262,7 +262,7 @@ class CrmApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (phoneNumber != null) r'PhoneNumber': encodeQueryParameter(_serializers, phoneNumber, const FullType(String)),
+      r'PhoneNumber': encodeQueryParameter(_serializers, phoneNumber, const FullType(String)),
       if (getName != null) r'GetName': encodeQueryParameter(_serializers, getName, const FullType(bool)),
     };
 
@@ -345,7 +345,7 @@ class CrmApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (orderNo != null) r'orderNo': encodeQueryParameter(_serializers, orderNo, const FullType(String)),
+      r'orderNo': encodeQueryParameter(_serializers, orderNo, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

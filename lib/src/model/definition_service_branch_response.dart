@@ -49,7 +49,7 @@ class _$DefinitionServiceBranchResponseSerializer implements StructuredSerialize
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.latitude != null) {
             result
@@ -80,7 +80,8 @@ class _$DefinitionServiceBranchResponseSerializer implements StructuredSerialize
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'latitude':

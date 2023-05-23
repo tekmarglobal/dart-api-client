@@ -149,43 +149,43 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'customerId')
                 ..add(serializers.serialize(object.customerId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.fullAddress != null) {
             result
                 ..add(r'fullAddress')
                 ..add(serializers.serialize(object.fullAddress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.building != null) {
             result
                 ..add(r'building')
                 ..add(serializers.serialize(object.building,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.floor != null) {
             result
                 ..add(r'floor')
                 ..add(serializers.serialize(object.floor,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.door != null) {
             result
                 ..add(r'door')
                 ..add(serializers.serialize(object.door,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.postalCode != null) {
             result
                 ..add(r'postalCode')
                 ..add(serializers.serialize(object.postalCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.description != null) {
             result
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.neighborhoodId != null) {
             result
@@ -197,7 +197,7 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'neighborhoodName')
                 ..add(serializers.serialize(object.neighborhoodName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cityId != null) {
             result
@@ -209,7 +209,7 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'cityName')
                 ..add(serializers.serialize(object.cityName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.countyId != null) {
             result
@@ -221,31 +221,31 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'countyName')
                 ..add(serializers.serialize(object.countyName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.name != null) {
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.street != null) {
             result
                 ..add(r'street')
                 ..add(serializers.serialize(object.street,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customerName != null) {
             result
                 ..add(r'customerName')
                 ..add(serializers.serialize(object.customerName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customerSurname != null) {
             result
                 ..add(r'customerSurname')
                 ..add(serializers.serialize(object.customerSurname,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.isindividual != null) {
             result
@@ -257,25 +257,25 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
             result
                 ..add(r'companyName')
                 ..add(serializers.serialize(object.companyName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.taxOffice != null) {
             result
                 ..add(r'taxOffice')
                 ..add(serializers.serialize(object.taxOffice,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.taxNumber != null) {
             result
                 ..add(r'taxNumber')
                 ..add(serializers.serialize(object.taxNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.phoneNumber != null) {
             result
                 ..add(r'phoneNumber')
                 ..add(serializers.serialize(object.phoneNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -310,37 +310,44 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                     break;
                 case r'customerId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.customerId = valueDes;
                     break;
                 case r'fullAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.fullAddress = valueDes;
                     break;
                 case r'building':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.building = valueDes;
                     break;
                 case r'floor':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.floor = valueDes;
                     break;
                 case r'door':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.door = valueDes;
                     break;
                 case r'postalCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.postalCode = valueDes;
                     break;
                 case r'description':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.description = valueDes;
                     break;
                 case r'neighborhoodId':
@@ -350,7 +357,8 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                     break;
                 case r'neighborhoodName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.neighborhoodName = valueDes;
                     break;
                 case r'cityId':
@@ -360,7 +368,8 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                     break;
                 case r'cityName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cityName = valueDes;
                     break;
                 case r'countyId':
@@ -370,27 +379,32 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                     break;
                 case r'countyName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.countyName = valueDes;
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'street':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.street = valueDes;
                     break;
                 case r'customerName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.customerName = valueDes;
                     break;
                 case r'customerSurname':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.customerSurname = valueDes;
                     break;
                 case r'isindividual':
@@ -400,22 +414,26 @@ class _$CustomerServiceRAddressSerializer implements StructuredSerializer<Custom
                     break;
                 case r'companyName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.companyName = valueDes;
                     break;
                 case r'taxOffice':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.taxOffice = valueDes;
                     break;
                 case r'taxNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.taxNumber = valueDes;
                     break;
                 case r'phoneNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phoneNumber = valueDes;
                     break;
                 case r'active':

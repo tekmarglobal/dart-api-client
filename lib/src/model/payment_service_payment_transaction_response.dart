@@ -51,7 +51,7 @@ class _$PaymentServicePaymentTransactionResponseSerializer implements Structured
             result
                 ..add(r'stateMessage')
                 ..add(serializers.serialize(object.stateMessage,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -75,7 +75,8 @@ class _$PaymentServicePaymentTransactionResponseSerializer implements Structured
                     break;
                 case r'stateMessage':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.stateMessage = valueDes;
                     break;
             }

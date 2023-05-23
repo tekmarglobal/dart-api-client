@@ -58,13 +58,13 @@ class _$RegisterServiceLoginResponseSerializer implements StructuredSerializer<R
             result
                 ..add(r'token')
                 ..add(serializers.serialize(object.token,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customerId != null) {
             result
                 ..add(r'customerId')
                 ..add(serializers.serialize(object.customerId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.registered != null) {
             result
@@ -76,7 +76,7 @@ class _$RegisterServiceLoginResponseSerializer implements StructuredSerializer<R
             result
                 ..add(r'firebaseToken')
                 ..add(serializers.serialize(object.firebaseToken,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.versionResponse != null) {
             result
@@ -101,12 +101,14 @@ class _$RegisterServiceLoginResponseSerializer implements StructuredSerializer<R
             switch (key) {
                 case r'token':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.token = valueDes;
                     break;
                 case r'customerId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.customerId = valueDes;
                     break;
                 case r'registered':
@@ -116,7 +118,8 @@ class _$RegisterServiceLoginResponseSerializer implements StructuredSerializer<R
                     break;
                 case r'firebaseToken':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.firebaseToken = valueDes;
                     break;
                 case r'versionResponse':

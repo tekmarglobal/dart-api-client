@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **apiRegisterSendSmsPost**
-> RestResultOfRegisterServiceSmsResponse apiRegisterSendSmsPost(body)
+> RestResultOfRegisterServiceSmsResponse apiRegisterSendSmsPost(registerServiceSmsRequest)
 
 
 
@@ -27,10 +27,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getRegisterApi();
-final RegisterServiceSmsRequest body = ; // RegisterServiceSmsRequest | 
+final RegisterServiceSmsRequest registerServiceSmsRequest = ; // RegisterServiceSmsRequest | 
 
 try {
-    final response = api.apiRegisterSendSmsPost(body);
+    final response = api.apiRegisterSendSmsPost(registerServiceSmsRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling RegisterApi->apiRegisterSendSmsPost: $e\n');
@@ -41,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RegisterServiceSmsRequest**](RegisterServiceSmsRequest.md)|  | [optional] 
+ **registerServiceSmsRequest** | [**RegisterServiceSmsRequest**](RegisterServiceSmsRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiRegisterVerifySmsPost**
-> RestResultOfRegisterServiceLoginResponse apiRegisterVerifySmsPost(body)
+> RestResultOfRegisterServiceLoginResponse apiRegisterVerifySmsPost(registerServiceVerifyRequest)
 
 
 
@@ -72,10 +72,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getRegisterApi();
-final RegisterServiceVerifyRequest body = ; // RegisterServiceVerifyRequest | 
+final RegisterServiceVerifyRequest registerServiceVerifyRequest = ; // RegisterServiceVerifyRequest | 
 
 try {
-    final response = api.apiRegisterVerifySmsPost(body);
+    final response = api.apiRegisterVerifySmsPost(registerServiceVerifyRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling RegisterApi->apiRegisterVerifySmsPost: $e\n');
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RegisterServiceVerifyRequest**](RegisterServiceVerifyRequest.md)|  | [optional] 
+ **registerServiceVerifyRequest** | [**RegisterServiceVerifyRequest**](RegisterServiceVerifyRequest.md)|  | [optional] 
 
 ### Return type
 

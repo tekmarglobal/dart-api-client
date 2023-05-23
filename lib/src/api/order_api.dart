@@ -28,7 +28,7 @@ class OrderApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [orderServiceCheckoutRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,7 +39,7 @@ class OrderApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfOrderServiceCheckoutItem] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfOrderServiceCheckoutItem>> apiOrderCheckoutPost({ 
-    OrderServiceCheckoutRequest? body,
+    OrderServiceCheckoutRequest? orderServiceCheckoutRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -72,7 +72,7 @@ class OrderApi {
 
     try {
       const _type = FullType(OrderServiceCheckoutRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = orderServiceCheckoutRequest == null ? null : _serializers.serialize(orderServiceCheckoutRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -128,7 +128,7 @@ class OrderApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [orderServiceOrderRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -139,7 +139,7 @@ class OrderApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfOrderServiceOrderResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderCreateOrderPost({ 
-    OrderServiceOrderRequest? body,
+    OrderServiceOrderRequest? orderServiceOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -172,7 +172,7 @@ class OrderApi {
 
     try {
       const _type = FullType(OrderServiceOrderRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = orderServiceOrderRequest == null ? null : _serializers.serialize(orderServiceOrderRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -307,7 +307,7 @@ class OrderApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [orderServiceGetOrderRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -318,7 +318,7 @@ class OrderApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfOrderServiceOrderResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderGetOrderPost({ 
-    OrderServiceGetOrderRequest? body,
+    OrderServiceGetOrderRequest? orderServiceGetOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -351,7 +351,7 @@ class OrderApi {
 
     try {
       const _type = FullType(OrderServiceGetOrderRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = orderServiceGetOrderRequest == null ? null : _serializers.serialize(orderServiceGetOrderRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -407,7 +407,7 @@ class OrderApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [orderServicePatchOrderRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -418,7 +418,7 @@ class OrderApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfOrderServiceOrderResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderPatchOrderPost({ 
-    OrderServicePatchOrderRequest? body,
+    OrderServicePatchOrderRequest? orderServicePatchOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -451,7 +451,7 @@ class OrderApi {
 
     try {
       const _type = FullType(OrderServicePatchOrderRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = orderServicePatchOrderRequest == null ? null : _serializers.serialize(orderServicePatchOrderRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -507,7 +507,7 @@ class OrderApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [orderServiceUpdateOrderRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -518,7 +518,7 @@ class OrderApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfOrderServiceOrderResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfOrderServiceOrderResponse>> apiOrderUpdateStatusPost({ 
-    OrderServiceUpdateOrderRequest? body,
+    OrderServiceUpdateOrderRequest? orderServiceUpdateOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -551,7 +551,7 @@ class OrderApi {
 
     try {
       const _type = FullType(OrderServiceUpdateOrderRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = orderServiceUpdateOrderRequest == null ? null : _serializers.serialize(orderServiceUpdateOrderRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

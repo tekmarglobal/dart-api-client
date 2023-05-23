@@ -81,19 +81,19 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cityName != null) {
             result
                 ..add(r'cityName')
                 ..add(serializers.serialize(object.cityName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.countyName != null) {
             result
                 ..add(r'countyName')
                 ..add(serializers.serialize(object.countyName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.region != null) {
             result
@@ -105,7 +105,7 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
             result
                 ..add(r'regionName')
                 ..add(serializers.serialize(object.regionName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.gpsId != null) {
             result
@@ -117,13 +117,13 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
             result
                 ..add(r'branch')
                 ..add(serializers.serialize(object.branch,
-                    specifiedType: const FullType(BuiltList, [FullType(AdminServiceBranchResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceBranchResponse)])));
         }
         if (object.population != null) {
             result
                 ..add(r'population')
                 ..add(serializers.serialize(object.population,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -147,17 +147,20 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'cityName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cityName = valueDes;
                     break;
                 case r'countyName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.countyName = valueDes;
                     break;
                 case r'region':
@@ -167,7 +170,8 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
                     break;
                 case r'regionName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.regionName = valueDes;
                     break;
                 case r'gpsId':
@@ -177,12 +181,14 @@ class _$AdminServiceAdminNeighborResponseSerializer implements StructuredSeriali
                     break;
                 case r'branch':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(AdminServiceBranchResponse)])) as BuiltList<AdminServiceBranchResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceBranchResponse)])) as BuiltList<AdminServiceBranchResponse>?;
+                    if (valueDes == null) continue;
                     result.branch.replace(valueDes);
                     break;
                 case r'population':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.population = valueDes;
                     break;
             }

@@ -45,13 +45,13 @@ class _$CrmServiceCallRequestSerializer implements StructuredSerializer<CrmServi
             result
                 ..add(r'extention')
                 ..add(serializers.serialize(object.extention,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.phoneNumber != null) {
             result
                 ..add(r'phoneNumber')
                 ..add(serializers.serialize(object.phoneNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$CrmServiceCallRequestSerializer implements StructuredSerializer<CrmServi
             switch (key) {
                 case r'extention':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.extention = valueDes;
                     break;
                 case r'phoneNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phoneNumber = valueDes;
                     break;
             }

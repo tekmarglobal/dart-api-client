@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **apiAccountCheckversionPost**
-> RestResultOfAccountServiceCheckVersionResponse apiAccountCheckversionPost(body)
+> RestResultOfAccountServiceCheckVersionResponse apiAccountCheckversionPost(accountServiceCheckVersionRequest)
 
 
 
@@ -31,10 +31,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAccountApi();
-final AccountServiceCheckVersionRequest body = ; // AccountServiceCheckVersionRequest | 
+final AccountServiceCheckVersionRequest accountServiceCheckVersionRequest = ; // AccountServiceCheckVersionRequest | 
 
 try {
-    final response = api.apiAccountCheckversionPost(body);
+    final response = api.apiAccountCheckversionPost(accountServiceCheckVersionRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountCheckversionPost: $e\n');
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccountServiceCheckVersionRequest**](AccountServiceCheckVersionRequest.md)|  | [optional] 
+ **accountServiceCheckVersionRequest** | [**AccountServiceCheckVersionRequest**](AccountServiceCheckVersionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -145,7 +145,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAccountLoginPost**
-> RestResultOfAccountServiceLoginResponse apiAccountLoginPost(body)
+> RestResultOfAccountServiceLoginResponse apiAccountLoginPost(accountServiceLoginRequest)
 
 
 
@@ -158,10 +158,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAccountApi();
-final AccountServiceLoginRequest body = ; // AccountServiceLoginRequest | 
+final AccountServiceLoginRequest accountServiceLoginRequest = ; // AccountServiceLoginRequest | 
 
 try {
-    final response = api.apiAccountLoginPost(body);
+    final response = api.apiAccountLoginPost(accountServiceLoginRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AccountApi->apiAccountLoginPost: $e\n');
@@ -172,7 +172,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
+ **accountServiceLoginRequest** | [**AccountServiceLoginRequest**](AccountServiceLoginRequest.md)|  | [optional] 
 
 ### Return type
 

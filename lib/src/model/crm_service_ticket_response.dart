@@ -79,13 +79,13 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customer != null) {
             result
                 ..add(r'customer')
                 ..add(serializers.serialize(object.customer,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.active != null) {
             result
@@ -109,7 +109,7 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
             result
                 ..add(r'phoneNumber')
                 ..add(serializers.serialize(object.phoneNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.createdAt != null) {
             result
@@ -121,7 +121,7 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
             result
                 ..add(r'order')
                 ..add(serializers.serialize(object.order,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -145,12 +145,14 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'customer':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.customer = valueDes;
                     break;
                 case r'active':
@@ -170,7 +172,8 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
                     break;
                 case r'phoneNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phoneNumber = valueDes;
                     break;
                 case r'createdAt':
@@ -180,7 +183,8 @@ class _$CrmServiceTicketResponseSerializer implements StructuredSerializer<CrmSe
                     break;
                 case r'order':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.order = valueDes;
                     break;
             }

@@ -45,13 +45,13 @@ class _$CatalogServiceRProductPriceSerializer implements StructuredSerializer<Ca
             result
                 ..add(r'price')
                 ..add(serializers.serialize(object.price,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.listPrice != null) {
             result
                 ..add(r'listPrice')
                 ..add(serializers.serialize(object.listPrice,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$CatalogServiceRProductPriceSerializer implements StructuredSerializer<Ca
             switch (key) {
                 case r'price':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.price = valueDes;
                     break;
                 case r'listPrice':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.listPrice = valueDes;
                     break;
             }

@@ -52,7 +52,7 @@ class _$AdminServiceUpdateRegionNeighborhoodRequestSerializer implements Structu
             result
                 ..add(r'neighborhood')
                 ..add(serializers.serialize(object.neighborhood,
-                    specifiedType: const FullType(BuiltList, [FullType(int)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(int)])));
         }
         return result;
     }
@@ -76,7 +76,8 @@ class _$AdminServiceUpdateRegionNeighborhoodRequestSerializer implements Structu
                     break;
                 case r'neighborhood':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(int)])) as BuiltList<int>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(int)])) as BuiltList<int>?;
+                    if (valueDes == null) continue;
                     result.neighborhood.replace(valueDes);
                     break;
             }

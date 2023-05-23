@@ -43,7 +43,7 @@ class _$OrderServiceGetOrderListResponseSerializer implements StructuredSerializ
             result
                 ..add(r'orderList')
                 ..add(serializers.serialize(object.orderList,
-                    specifiedType: const FullType(BuiltList, [FullType(OrderServiceOrders)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceOrders)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$OrderServiceGetOrderListResponseSerializer implements StructuredSerializ
             switch (key) {
                 case r'orderList':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(OrderServiceOrders)])) as BuiltList<OrderServiceOrders>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(OrderServiceOrders)])) as BuiltList<OrderServiceOrders>?;
+                    if (valueDes == null) continue;
                     result.orderList.replace(valueDes);
                     break;
             }

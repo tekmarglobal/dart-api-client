@@ -105,55 +105,55 @@ class _$CustomerServiceRCustomerSerializer implements StructuredSerializer<Custo
             result
                 ..add(r'customerName')
                 ..add(serializers.serialize(object.customerName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.customerSurname != null) {
             result
                 ..add(r'customerSurname')
                 ..add(serializers.serialize(object.customerSurname,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.birthDate != null) {
             result
                 ..add(r'birthDate')
                 ..add(serializers.serialize(object.birthDate,
-                    specifiedType: const FullType(DateTime)));
+                    specifiedType: const FullType.nullable(DateTime)));
         }
         if (object.phone != null) {
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.email != null) {
             result
                 ..add(r'email')
                 ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.gender != null) {
             result
                 ..add(r'gender')
                 ..add(serializers.serialize(object.gender,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.allowSms != null) {
             result
                 ..add(r'allowSms')
                 ..add(serializers.serialize(object.allowSms,
-                    specifiedType: const FullType(bool)));
+                    specifiedType: const FullType.nullable(bool)));
         }
         if (object.allowEmail != null) {
             result
                 ..add(r'allowEmail')
                 ..add(serializers.serialize(object.allowEmail,
-                    specifiedType: const FullType(bool)));
+                    specifiedType: const FullType.nullable(bool)));
         }
         if (object.address != null) {
             result
                 ..add(r'address')
                 ..add(serializers.serialize(object.address,
-                    specifiedType: const FullType(BuiltList, [FullType(CustomerServiceRAddress)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CustomerServiceRAddress)])));
         }
         if (object.registered != null) {
             result
@@ -171,19 +171,19 @@ class _$CustomerServiceRCustomerSerializer implements StructuredSerializer<Custo
             result
                 ..add(r'identificationNumber')
                 ..add(serializers.serialize(object.identificationNumber,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.defaultAddress != null) {
             result
                 ..add(r'defaultAddress')
                 ..add(serializers.serialize(object.defaultAddress,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.invoiceAddress != null) {
             result
                 ..add(r'invoiceAddress')
                 ..add(serializers.serialize(object.invoiceAddress,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -207,47 +207,56 @@ class _$CustomerServiceRCustomerSerializer implements StructuredSerializer<Custo
                     break;
                 case r'customerName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.customerName = valueDes;
                     break;
                 case r'customerSurname':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.customerSurname = valueDes;
                     break;
                 case r'birthDate':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
                     result.birthDate = valueDes;
                     break;
                 case r'phone':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phone = valueDes;
                     break;
                 case r'email':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.email = valueDes;
                     break;
                 case r'gender':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.gender = valueDes;
                     break;
                 case r'allowSms':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
+                        specifiedType: const FullType.nullable(bool)) as bool?;
+                    if (valueDes == null) continue;
                     result.allowSms = valueDes;
                     break;
                 case r'allowEmail':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
+                        specifiedType: const FullType.nullable(bool)) as bool?;
+                    if (valueDes == null) continue;
                     result.allowEmail = valueDes;
                     break;
                 case r'address':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CustomerServiceRAddress)])) as BuiltList<CustomerServiceRAddress>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CustomerServiceRAddress)])) as BuiltList<CustomerServiceRAddress>?;
+                    if (valueDes == null) continue;
                     result.address.replace(valueDes);
                     break;
                 case r'registered':
@@ -262,17 +271,20 @@ class _$CustomerServiceRCustomerSerializer implements StructuredSerializer<Custo
                     break;
                 case r'identificationNumber':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.identificationNumber = valueDes;
                     break;
                 case r'defaultAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.defaultAddress = valueDes;
                     break;
                 case r'invoiceAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.invoiceAddress = valueDes;
                     break;
             }

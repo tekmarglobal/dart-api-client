@@ -111,7 +111,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionCountiesPost**
-> RestResultOfListOfDefinitionServiceCountiesResponse apiDefinitionCountiesPost(body)
+> RestResultOfListOfDefinitionServiceCountiesResponse apiDefinitionCountiesPost(definitionServiceCountiesRequest)
 
 
 
@@ -124,10 +124,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getDefinitionApi();
-final DefinitionServiceCountiesRequest body = ; // DefinitionServiceCountiesRequest | 
+final DefinitionServiceCountiesRequest definitionServiceCountiesRequest = ; // DefinitionServiceCountiesRequest | 
 
 try {
-    final response = api.apiDefinitionCountiesPost(body);
+    final response = api.apiDefinitionCountiesPost(definitionServiceCountiesRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionCountiesPost: $e\n');
@@ -138,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
+ **definitionServiceCountiesRequest** | [**DefinitionServiceCountiesRequest**](DefinitionServiceCountiesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -455,7 +455,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionNeighborhoodPost**
-> RestResultOfListOfDefinitionServiceNeighborResponse apiDefinitionNeighborhoodPost(body)
+> RestResultOfListOfDefinitionServiceNeighborResponse apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest)
 
 
 
@@ -468,10 +468,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getDefinitionApi();
-final DefinitionServiceNeighborRequest body = ; // DefinitionServiceNeighborRequest | 
+final DefinitionServiceNeighborRequest definitionServiceNeighborRequest = ; // DefinitionServiceNeighborRequest | 
 
 try {
-    final response = api.apiDefinitionNeighborhoodPost(body);
+    final response = api.apiDefinitionNeighborhoodPost(definitionServiceNeighborRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionNeighborhoodPost: $e\n');
@@ -482,7 +482,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
+ **definitionServiceNeighborRequest** | [**DefinitionServiceNeighborRequest**](DefinitionServiceNeighborRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiDefinitionUpdateAgreementLogPost**
-> RestResultOfDefinitionServiceUpdateAgreementLogResponse apiDefinitionUpdateAgreementLogPost(body)
+> RestResultOfDefinitionServiceUpdateAgreementLogResponse apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest)
 
 
 
@@ -513,10 +513,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getDefinitionApi();
-final DefinitionServiceUpdateAgreementRequest body = ; // DefinitionServiceUpdateAgreementRequest | 
+final DefinitionServiceUpdateAgreementRequest definitionServiceUpdateAgreementRequest = ; // DefinitionServiceUpdateAgreementRequest | 
 
 try {
-    final response = api.apiDefinitionUpdateAgreementLogPost(body);
+    final response = api.apiDefinitionUpdateAgreementLogPost(definitionServiceUpdateAgreementRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling DefinitionApi->apiDefinitionUpdateAgreementLogPost: $e\n');
@@ -527,7 +527,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
+ **definitionServiceUpdateAgreementRequest** | [**DefinitionServiceUpdateAgreementRequest**](DefinitionServiceUpdateAgreementRequest.md)|  | [optional] 
 
 ### Return type
 

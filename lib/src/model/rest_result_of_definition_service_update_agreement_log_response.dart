@@ -56,7 +56,7 @@ class _$RestResultOfDefinitionServiceUpdateAgreementLogResponseSerializer implem
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
@@ -86,7 +86,8 @@ class _$RestResultOfDefinitionServiceUpdateAgreementLogResponseSerializer implem
                     break;
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'data':

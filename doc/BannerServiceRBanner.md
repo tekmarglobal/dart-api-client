@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **image** | **String** |  | [optional] 
+**webImage** | **String** |  | [optional] 
 **index** | **int** |  | [optional] 
 **id** | **int** |  | [optional] 
 

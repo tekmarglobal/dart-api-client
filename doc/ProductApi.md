@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **apiProductAddToFavoriteListPost**
-> RestResultOfProductServiceFavoriteListResponse apiProductAddToFavoriteListPost(body)
+> RestResultOfProductServiceFavoriteListResponse apiProductAddToFavoriteListPost(productServiceFavoriteRequest)
 
 
 
@@ -34,10 +34,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceFavoriteRequest body = ; // ProductServiceFavoriteRequest | 
+final ProductServiceFavoriteRequest productServiceFavoriteRequest = ; // ProductServiceFavoriteRequest | 
 
 try {
-    final response = api.apiProductAddToFavoriteListPost(body);
+    final response = api.apiProductAddToFavoriteListPost(productServiceFavoriteRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductAddToFavoriteListPost: $e\n');
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductDeleteFavoriteDelete**
-> RestResultOfProductServiceFavoriteListResponse apiProductDeleteFavoriteDelete(body)
+> RestResultOfProductServiceFavoriteListResponse apiProductDeleteFavoriteDelete(productServiceFavoriteRequest)
 
 
 
@@ -79,10 +79,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceFavoriteRequest body = ; // ProductServiceFavoriteRequest | 
+final ProductServiceFavoriteRequest productServiceFavoriteRequest = ; // ProductServiceFavoriteRequest | 
 
 try {
-    final response = api.apiProductDeleteFavoriteDelete(body);
+    final response = api.apiProductDeleteFavoriteDelete(productServiceFavoriteRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductDeleteFavoriteDelete: $e\n');
@@ -93,7 +93,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
+ **productServiceFavoriteRequest** | [**ProductServiceFavoriteRequest**](ProductServiceFavoriteRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -198,7 +198,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductPost**
-> RestResultOfProductServiceRProduct apiProductPost(body)
+> RestResultOfProductServiceRProduct apiProductPost(productServiceProductRequest)
 
 
 
@@ -211,10 +211,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceProductRequest body = ; // ProductServiceProductRequest | 
+final ProductServiceProductRequest productServiceProductRequest = ; // ProductServiceProductRequest | 
 
 try {
-    final response = api.apiProductPost(body);
+    final response = api.apiProductPost(productServiceProductRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductPost: $e\n');
@@ -225,7 +225,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
+ **productServiceProductRequest** | [**ProductServiceProductRequest**](ProductServiceProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductProductAlternativesPost**
-> RestResultOfListOfProductServiceRProduct apiProductProductAlternativesPost(body)
+> RestResultOfListOfProductServiceRProduct apiProductProductAlternativesPost(productServiceProductAlternativesRequest)
 
 
 
@@ -256,10 +256,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceProductAlternativesRequest body = ; // ProductServiceProductAlternativesRequest | 
+final ProductServiceProductAlternativesRequest productServiceProductAlternativesRequest = ; // ProductServiceProductAlternativesRequest | 
 
 try {
-    final response = api.apiProductProductAlternativesPost(body);
+    final response = api.apiProductProductAlternativesPost(productServiceProductAlternativesRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductProductAlternativesPost: $e\n');
@@ -270,7 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceProductAlternativesRequest**](ProductServiceProductAlternativesRequest.md)|  | [optional] 
+ **productServiceProductAlternativesRequest** | [**ProductServiceProductAlternativesRequest**](ProductServiceProductAlternativesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -329,7 +329,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductProductSearchPost**
-> RestResultOfListOfProductServiceRProduct apiProductProductSearchPost(body)
+> RestResultOfListOfProductServiceRProduct apiProductProductSearchPost(productServiceSearchProductRequest)
 
 
 
@@ -342,10 +342,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceSearchProductRequest body = ; // ProductServiceSearchProductRequest | 
+final ProductServiceSearchProductRequest productServiceSearchProductRequest = ; // ProductServiceSearchProductRequest | 
 
 try {
-    final response = api.apiProductProductSearchPost(body);
+    final response = api.apiProductProductSearchPost(productServiceSearchProductRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductProductSearchPost: $e\n');
@@ -356,7 +356,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
+ **productServiceSearchProductRequest** | [**ProductServiceSearchProductRequest**](ProductServiceSearchProductRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiProductRecommendProductPost**
-> RestResultOfProductServiceRecommendProductResponse apiProductRecommendProductPost(body)
+> RestResultOfProductServiceRecommendProductResponse apiProductRecommendProductPost(productServiceRecommendProductRequest)
 
 
 
@@ -387,10 +387,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getProductApi();
-final ProductServiceRecommendProductRequest body = ; // ProductServiceRecommendProductRequest | 
+final ProductServiceRecommendProductRequest productServiceRecommendProductRequest = ; // ProductServiceRecommendProductRequest | 
 
 try {
-    final response = api.apiProductRecommendProductPost(body);
+    final response = api.apiProductRecommendProductPost(productServiceRecommendProductRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->apiProductRecommendProductPost: $e\n');
@@ -401,7 +401,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ProductServiceRecommendProductRequest**](ProductServiceRecommendProductRequest.md)|  | [optional] 
+ **productServiceRecommendProductRequest** | [**ProductServiceRecommendProductRequest**](ProductServiceRecommendProductRequest.md)|  | [optional] 
 
 ### Return type
 

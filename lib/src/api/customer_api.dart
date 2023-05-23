@@ -29,7 +29,7 @@ class CustomerApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [customerServiceDeleteAddressRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -40,7 +40,7 @@ class CustomerApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCustomerServiceDeleteAddressResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCustomerServiceDeleteAddressResponse>> apiCustomerDeleteAddressPost({ 
-    CustomerServiceDeleteAddressRequest? body,
+    CustomerServiceDeleteAddressRequest? customerServiceDeleteAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -73,7 +73,7 @@ class CustomerApi {
 
     try {
       const _type = FullType(CustomerServiceDeleteAddressRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = customerServiceDeleteAddressRequest == null ? null : _serializers.serialize(customerServiceDeleteAddressRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -250,8 +250,8 @@ class CustomerApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (startSendDate != null) r'startSendDate': encodeQueryParameter(_serializers, startSendDate, const FullType(DateTime)),
-      if (endSendDate != null) r'endSendDate': encodeQueryParameter(_serializers, endSendDate, const FullType(DateTime)),
+      r'startSendDate': encodeQueryParameter(_serializers, startSendDate, const FullType(DateTime)),
+      r'endSendDate': encodeQueryParameter(_serializers, endSendDate, const FullType(DateTime)),
     };
 
     final _response = await _dio.request<Object>(
@@ -376,7 +376,7 @@ class CustomerApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [customerServiceCustomerAddressRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -387,7 +387,7 @@ class CustomerApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCustomerServiceCustomerAddressResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCustomerServiceCustomerAddressResponse>> apiCustomerUpdateAddressPost({ 
-    CustomerServiceCustomerAddressRequest? body,
+    CustomerServiceCustomerAddressRequest? customerServiceCustomerAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -420,7 +420,7 @@ class CustomerApi {
 
     try {
       const _type = FullType(CustomerServiceCustomerAddressRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = customerServiceCustomerAddressRequest == null ? null : _serializers.serialize(customerServiceCustomerAddressRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -476,7 +476,7 @@ class CustomerApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [customerServiceNewCustomerDefaultAddress] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -487,7 +487,7 @@ class CustomerApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCustomerServiceCustomerResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerDefultAddressPost({ 
-    CustomerServiceNewCustomerDefaultAddress? body,
+    CustomerServiceNewCustomerDefaultAddress? customerServiceNewCustomerDefaultAddress,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -520,7 +520,7 @@ class CustomerApi {
 
     try {
       const _type = FullType(CustomerServiceNewCustomerDefaultAddress);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = customerServiceNewCustomerDefaultAddress == null ? null : _serializers.serialize(customerServiceNewCustomerDefaultAddress, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -576,7 +576,7 @@ class CustomerApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [customerServiceNewCustomerRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -587,7 +587,7 @@ class CustomerApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfCustomerServiceCustomerResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfCustomerServiceCustomerResponse>> apiCustomerUpdateCustomerPost({ 
-    CustomerServiceNewCustomerRequest? body,
+    CustomerServiceNewCustomerRequest? customerServiceNewCustomerRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -620,7 +620,7 @@ class CustomerApi {
 
     try {
       const _type = FullType(CustomerServiceNewCustomerRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = customerServiceNewCustomerRequest == null ? null : _serializers.serialize(customerServiceNewCustomerRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(

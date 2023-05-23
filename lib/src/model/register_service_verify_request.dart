@@ -45,13 +45,13 @@ class _$RegisterServiceVerifyRequestSerializer implements StructuredSerializer<R
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.smsCode != null) {
             result
                 ..add(r'smsCode')
                 ..add(serializers.serialize(object.smsCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$RegisterServiceVerifyRequestSerializer implements StructuredSerializer<R
             switch (key) {
                 case r'phone':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phone = valueDes;
                     break;
                 case r'smsCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.smsCode = valueDes;
                     break;
             }

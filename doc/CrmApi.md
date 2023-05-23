@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **apiCrmCallPost**
-> bool apiCrmCallPost(body)
+> bool apiCrmCallPost(crmServiceCallRequest)
 
 
 
@@ -29,10 +29,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCrmApi();
-final CrmServiceCallRequest body = ; // CrmServiceCallRequest | 
+final CrmServiceCallRequest crmServiceCallRequest = ; // CrmServiceCallRequest | 
 
 try {
-    final response = api.apiCrmCallPost(body);
+    final response = api.apiCrmCallPost(crmServiceCallRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CrmApi->apiCrmCallPost: $e\n');
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CrmServiceCallRequest**](CrmServiceCallRequest.md)|  | [optional] 
+ **crmServiceCallRequest** | [**CrmServiceCallRequest**](CrmServiceCallRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCrmCreateTicketPost**
-> RestResultOfCrmServiceTicketResponse apiCrmCreateTicketPost(body)
+> RestResultOfCrmServiceTicketResponse apiCrmCreateTicketPost(crmServiceTicketRequest)
 
 
 
@@ -74,10 +74,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCrmApi();
-final CrmServiceTicketRequest body = ; // CrmServiceTicketRequest | 
+final CrmServiceTicketRequest crmServiceTicketRequest = ; // CrmServiceTicketRequest | 
 
 try {
-    final response = api.apiCrmCreateTicketPost(body);
+    final response = api.apiCrmCreateTicketPost(crmServiceTicketRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CrmApi->apiCrmCreateTicketPost: $e\n');
@@ -88,7 +88,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CrmServiceTicketRequest**](CrmServiceTicketRequest.md)|  | [optional] 
+ **crmServiceTicketRequest** | [**CrmServiceTicketRequest**](CrmServiceTicketRequest.md)|  | [optional] 
 
 ### Return type
 

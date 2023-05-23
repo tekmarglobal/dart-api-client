@@ -41,7 +41,7 @@ class _$RegisterServiceSmsRequestSerializer implements StructuredSerializer<Regi
             result
                 ..add(r'phone')
                 ..add(serializers.serialize(object.phone,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -60,7 +60,8 @@ class _$RegisterServiceSmsRequestSerializer implements StructuredSerializer<Regi
             switch (key) {
                 case r'phone':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.phone = valueDes;
                     break;
             }

@@ -69,7 +69,7 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.latitude != null) {
             result
@@ -111,7 +111,7 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
             result
                 ..add(r'depotAddress')
                 ..add(serializers.serialize(object.depotAddress,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -130,7 +130,8 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'latitude':
@@ -165,7 +166,8 @@ class _$DefinitionServiceSelfPickupPointSerializer implements StructuredSerializ
                     break;
                 case r'depotAddress':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.depotAddress = valueDes;
                     break;
             }

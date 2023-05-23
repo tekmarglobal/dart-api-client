@@ -56,13 +56,13 @@ class _$RestResultOfSystemObjectSerializer implements StructuredSerializer<RestR
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
                 ..add(r'data')
                 ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(JsonObject)));
+                    specifiedType: const FullType.nullable(JsonObject)));
         }
         return result;
     }
@@ -86,12 +86,14 @@ class _$RestResultOfSystemObjectSerializer implements StructuredSerializer<RestR
                     break;
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'data':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(JsonObject)) as JsonObject;
+                        specifiedType: const FullType.nullable(JsonObject)) as JsonObject?;
+                    if (valueDes == null) continue;
                     result.data = valueDes;
                     break;
             }

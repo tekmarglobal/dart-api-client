@@ -43,7 +43,7 @@ class _$PaymentServicePaymentTypeResponseSerializer implements StructuredSeriali
             result
                 ..add(r'paymentTypeList')
                 ..add(serializers.serialize(object.paymentTypeList,
-                    specifiedType: const FullType(BuiltList, [FullType(PaymentServiceRPaymentType)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$PaymentServicePaymentTypeResponseSerializer implements StructuredSeriali
             switch (key) {
                 case r'paymentTypeList':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(PaymentServiceRPaymentType)])) as BuiltList<PaymentServiceRPaymentType>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)])) as BuiltList<PaymentServiceRPaymentType>?;
+                    if (valueDes == null) continue;
                     result.paymentTypeList.replace(valueDes);
                     break;
             }

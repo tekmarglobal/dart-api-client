@@ -45,7 +45,7 @@ class _$ProductServiceSearchProductRequestSerializer implements StructuredSerial
             result
                 ..add(r'productName')
                 ..add(serializers.serialize(object.productName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.region != null) {
             result
@@ -70,7 +70,8 @@ class _$ProductServiceSearchProductRequestSerializer implements StructuredSerial
             switch (key) {
                 case r'productName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.productName = valueDes;
                     break;
                 case r'region':

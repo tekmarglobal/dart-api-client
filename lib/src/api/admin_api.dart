@@ -402,7 +402,7 @@ class AdminApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (region != null) r'region': encodeQueryParameter(_serializers, region, const FullType(int)),
+      r'region': encodeQueryParameter(_serializers, region, const FullType(int)),
     };
 
     final _response = await _dio.request<Object>(
@@ -488,7 +488,7 @@ class AdminApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (region != null) r'region': encodeQueryParameter(_serializers, region, const FullType(int)),
+      r'region': encodeQueryParameter(_serializers, region, const FullType(int)),
     };
 
     final _response = await _dio.request<Object>(
@@ -576,7 +576,7 @@ class AdminApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (erpId != null) r'erpId': encodeQueryParameter(_serializers, erpId, const FullType(String)),
+      r'erpId': encodeQueryParameter(_serializers, erpId, const FullType(String)),
       if (productId != null) r'productId': encodeQueryParameter(_serializers, productId, const FullType(int)),
     };
 
@@ -619,7 +619,7 @@ class AdminApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [adminServiceRegionNeighborhoodRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -630,7 +630,7 @@ class AdminApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfListOfAdminServiceAdminNeighborResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfListOfAdminServiceAdminNeighborResponse>> apiAdminRegionNeighborhoodPost({ 
-    AdminServiceRegionNeighborhoodRequest? body,
+    AdminServiceRegionNeighborhoodRequest? adminServiceRegionNeighborhoodRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -663,7 +663,7 @@ class AdminApi {
 
     try {
       const _type = FullType(AdminServiceRegionNeighborhoodRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = adminServiceRegionNeighborhoodRequest == null ? null : _serializers.serialize(adminServiceRegionNeighborhoodRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -845,7 +845,7 @@ class AdminApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (regionId != null) r'regionId': encodeQueryParameter(_serializers, regionId, const FullType(int)),
+      r'regionId': encodeQueryParameter(_serializers, regionId, const FullType(int)),
     };
 
     final _response = await _dio.request<Object>(
@@ -891,7 +891,7 @@ class AdminApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [adminServiceUpdateRegionNeighborhoodRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -902,7 +902,7 @@ class AdminApi {
   /// Returns a [Future] containing a [Response] with a [RestResultOfAdminServiceAdminNeighborResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<RestResultOfAdminServiceAdminNeighborResponse>> apiAdminUpdateRegionNeighborhoodPost({ 
-    AdminServiceUpdateRegionNeighborhoodRequest? body,
+    AdminServiceUpdateRegionNeighborhoodRequest? adminServiceUpdateRegionNeighborhoodRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -935,7 +935,7 @@ class AdminApi {
 
     try {
       const _type = FullType(AdminServiceUpdateRegionNeighborhoodRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = adminServiceUpdateRegionNeighborhoodRequest == null ? null : _serializers.serialize(adminServiceUpdateRegionNeighborhoodRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -1035,7 +1035,7 @@ class AdminApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        if (file != null) r'file': file,
+        r'file': file,
       });
 
     } catch(error, stackTrace) {

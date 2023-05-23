@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **apiCustomerDeleteAddressPost**
-> RestResultOfCustomerServiceDeleteAddressResponse apiCustomerDeleteAddressPost(body)
+> RestResultOfCustomerServiceDeleteAddressResponse apiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest)
 
 
 
@@ -32,10 +32,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCustomerApi();
-final CustomerServiceDeleteAddressRequest body = ; // CustomerServiceDeleteAddressRequest | 
+final CustomerServiceDeleteAddressRequest customerServiceDeleteAddressRequest = ; // CustomerServiceDeleteAddressRequest | 
 
 try {
-    final response = api.apiCustomerDeleteAddressPost(body);
+    final response = api.apiCustomerDeleteAddressPost(customerServiceDeleteAddressRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerDeleteAddressPost: $e\n');
@@ -46,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceDeleteAddressRequest**](CustomerServiceDeleteAddressRequest.md)|  | [optional] 
+ **customerServiceDeleteAddressRequest** | [**CustomerServiceDeleteAddressRequest**](CustomerServiceDeleteAddressRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -193,7 +193,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateAddressPost**
-> RestResultOfCustomerServiceCustomerAddressResponse apiCustomerUpdateAddressPost(body)
+> RestResultOfCustomerServiceCustomerAddressResponse apiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest)
 
 
 
@@ -206,10 +206,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCustomerApi();
-final CustomerServiceCustomerAddressRequest body = ; // CustomerServiceCustomerAddressRequest | 
+final CustomerServiceCustomerAddressRequest customerServiceCustomerAddressRequest = ; // CustomerServiceCustomerAddressRequest | 
 
 try {
-    final response = api.apiCustomerUpdateAddressPost(body);
+    final response = api.apiCustomerUpdateAddressPost(customerServiceCustomerAddressRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateAddressPost: $e\n');
@@ -220,7 +220,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceCustomerAddressRequest**](CustomerServiceCustomerAddressRequest.md)|  | [optional] 
+ **customerServiceCustomerAddressRequest** | [**CustomerServiceCustomerAddressRequest**](CustomerServiceCustomerAddressRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateCustomerDefultAddressPost**
-> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerDefultAddressPost(body)
+> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress)
 
 
 
@@ -251,10 +251,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCustomerApi();
-final CustomerServiceNewCustomerDefaultAddress body = ; // CustomerServiceNewCustomerDefaultAddress | 
+final CustomerServiceNewCustomerDefaultAddress customerServiceNewCustomerDefaultAddress = ; // CustomerServiceNewCustomerDefaultAddress | 
 
 try {
-    final response = api.apiCustomerUpdateCustomerDefultAddressPost(body);
+    final response = api.apiCustomerUpdateCustomerDefultAddressPost(customerServiceNewCustomerDefaultAddress);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateCustomerDefultAddressPost: $e\n');
@@ -265,7 +265,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceNewCustomerDefaultAddress**](CustomerServiceNewCustomerDefaultAddress.md)|  | [optional] 
+ **customerServiceNewCustomerDefaultAddress** | [**CustomerServiceNewCustomerDefaultAddress**](CustomerServiceNewCustomerDefaultAddress.md)|  | [optional] 
 
 ### Return type
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiCustomerUpdateCustomerPost**
-> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerPost(body)
+> RestResultOfCustomerServiceCustomerResponse apiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest)
 
 
 
@@ -296,10 +296,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getCustomerApi();
-final CustomerServiceNewCustomerRequest body = ; // CustomerServiceNewCustomerRequest | 
+final CustomerServiceNewCustomerRequest customerServiceNewCustomerRequest = ; // CustomerServiceNewCustomerRequest | 
 
 try {
-    final response = api.apiCustomerUpdateCustomerPost(body);
+    final response = api.apiCustomerUpdateCustomerPost(customerServiceNewCustomerRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling CustomerApi->apiCustomerUpdateCustomerPost: $e\n');
@@ -310,7 +310,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CustomerServiceNewCustomerRequest**](CustomerServiceNewCustomerRequest.md)|  | [optional] 
+ **customerServiceNewCustomerRequest** | [**CustomerServiceNewCustomerRequest**](CustomerServiceNewCustomerRequest.md)|  | [optional] 
 
 ### Return type
 

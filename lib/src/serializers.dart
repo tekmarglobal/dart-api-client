@@ -88,6 +88,8 @@ import 'package:openapi/src/model/payment_service_payment_transaction_request.da
 import 'package:openapi/src/model/payment_service_payment_transaction_response.dart';
 import 'package:openapi/src/model/payment_service_payment_type_response.dart';
 import 'package:openapi/src/model/payment_service_r_payment_type.dart';
+import 'package:openapi/src/model/payment_service_sodexo_payment_request.dart';
+import 'package:openapi/src/model/payment_service_sodexo_payment_response.dart';
 import 'package:openapi/src/model/product_service_favorite_list_response.dart';
 import 'package:openapi/src/model/product_service_favorite_request.dart';
 import 'package:openapi/src/model/product_service_product_alternatives_request.dart';
@@ -141,6 +143,7 @@ import 'package:openapi/src/model/rest_result_of_order_service_order_response.da
 import 'package:openapi/src/model/rest_result_of_payment_service_payment_response.dart';
 import 'package:openapi/src/model/rest_result_of_payment_service_payment_transaction_response.dart';
 import 'package:openapi/src/model/rest_result_of_payment_service_payment_type_response.dart';
+import 'package:openapi/src/model/rest_result_of_payment_service_sodexo_payment_response.dart';
 import 'package:openapi/src/model/rest_result_of_product_service_favorite_list_response.dart';
 import 'package:openapi/src/model/rest_result_of_product_service_r_product.dart';
 import 'package:openapi/src/model/rest_result_of_product_service_recommend_product_response.dart';
@@ -229,6 +232,8 @@ part 'serializers.g.dart';
   PaymentServicePaymentTransactionResponse,
   PaymentServicePaymentTypeResponse,
   PaymentServiceRPaymentType,
+  PaymentServiceSodexoPaymentRequest,
+  PaymentServiceSodexoPaymentResponse,
   ProductServiceFavoriteListResponse,
   ProductServiceFavoriteRequest,
   ProductServiceProductAlternativesRequest,
@@ -282,6 +287,7 @@ part 'serializers.g.dart';
   RestResultOfPaymentServicePaymentResponse,
   RestResultOfPaymentServicePaymentTransactionResponse,
   RestResultOfPaymentServicePaymentTypeResponse,
+  RestResultOfPaymentServiceSodexoPaymentResponse,
   RestResultOfProductServiceFavoriteListResponse,
   RestResultOfProductServiceRProduct,
   RestResultOfProductServiceRecommendProductResponse,

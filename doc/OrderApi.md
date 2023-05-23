@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **apiOrderCheckoutPost**
-> RestResultOfListOfOrderServiceCheckoutItem apiOrderCheckoutPost(body)
+> RestResultOfListOfOrderServiceCheckoutItem apiOrderCheckoutPost(orderServiceCheckoutRequest)
 
 
 
@@ -31,10 +31,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getOrderApi();
-final OrderServiceCheckoutRequest body = ; // OrderServiceCheckoutRequest | 
+final OrderServiceCheckoutRequest orderServiceCheckoutRequest = ; // OrderServiceCheckoutRequest | 
 
 try {
-    final response = api.apiOrderCheckoutPost(body);
+    final response = api.apiOrderCheckoutPost(orderServiceCheckoutRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderCheckoutPost: $e\n');
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceCheckoutRequest**](OrderServiceCheckoutRequest.md)|  | [optional] 
+ **orderServiceCheckoutRequest** | [**OrderServiceCheckoutRequest**](OrderServiceCheckoutRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderCreateOrderPost**
-> RestResultOfOrderServiceOrderResponse apiOrderCreateOrderPost(body)
+> RestResultOfOrderServiceOrderResponse apiOrderCreateOrderPost(orderServiceOrderRequest)
 
 
 
@@ -76,10 +76,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getOrderApi();
-final OrderServiceOrderRequest body = ; // OrderServiceOrderRequest | 
+final OrderServiceOrderRequest orderServiceOrderRequest = ; // OrderServiceOrderRequest | 
 
 try {
-    final response = api.apiOrderCreateOrderPost(body);
+    final response = api.apiOrderCreateOrderPost(orderServiceOrderRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderCreateOrderPost: $e\n');
@@ -90,7 +90,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
+ **orderServiceOrderRequest** | [**OrderServiceOrderRequest**](OrderServiceOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -149,7 +149,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderGetOrderPost**
-> RestResultOfOrderServiceOrderResponse apiOrderGetOrderPost(body)
+> RestResultOfOrderServiceOrderResponse apiOrderGetOrderPost(orderServiceGetOrderRequest)
 
 
 
@@ -162,10 +162,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getOrderApi();
-final OrderServiceGetOrderRequest body = ; // OrderServiceGetOrderRequest | 
+final OrderServiceGetOrderRequest orderServiceGetOrderRequest = ; // OrderServiceGetOrderRequest | 
 
 try {
-    final response = api.apiOrderGetOrderPost(body);
+    final response = api.apiOrderGetOrderPost(orderServiceGetOrderRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderGetOrderPost: $e\n');
@@ -176,7 +176,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
+ **orderServiceGetOrderRequest** | [**OrderServiceGetOrderRequest**](OrderServiceGetOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderPatchOrderPost**
-> RestResultOfOrderServiceOrderResponse apiOrderPatchOrderPost(body)
+> RestResultOfOrderServiceOrderResponse apiOrderPatchOrderPost(orderServicePatchOrderRequest)
 
 
 
@@ -207,10 +207,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getOrderApi();
-final OrderServicePatchOrderRequest body = ; // OrderServicePatchOrderRequest | 
+final OrderServicePatchOrderRequest orderServicePatchOrderRequest = ; // OrderServicePatchOrderRequest | 
 
 try {
-    final response = api.apiOrderPatchOrderPost(body);
+    final response = api.apiOrderPatchOrderPost(orderServicePatchOrderRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderPatchOrderPost: $e\n');
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServicePatchOrderRequest**](OrderServicePatchOrderRequest.md)|  | [optional] 
+ **orderServicePatchOrderRequest** | [**OrderServicePatchOrderRequest**](OrderServicePatchOrderRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderUpdateStatusPost**
-> RestResultOfOrderServiceOrderResponse apiOrderUpdateStatusPost(body)
+> RestResultOfOrderServiceOrderResponse apiOrderUpdateStatusPost(orderServiceUpdateOrderRequest)
 
 
 
@@ -252,10 +252,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getOrderApi();
-final OrderServiceUpdateOrderRequest body = ; // OrderServiceUpdateOrderRequest | 
+final OrderServiceUpdateOrderRequest orderServiceUpdateOrderRequest = ; // OrderServiceUpdateOrderRequest | 
 
 try {
-    final response = api.apiOrderUpdateStatusPost(body);
+    final response = api.apiOrderUpdateStatusPost(orderServiceUpdateOrderRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling OrderApi->apiOrderUpdateStatusPost: $e\n');
@@ -266,7 +266,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
+ **orderServiceUpdateOrderRequest** | [**OrderServiceUpdateOrderRequest**](OrderServiceUpdateOrderRequest.md)|  | [optional] 
 
 ### Return type
 

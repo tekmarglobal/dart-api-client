@@ -55,13 +55,13 @@ class _$DefinitionServiceCountiesResponseSerializer implements StructuredSeriali
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cityName != null) {
             result
                 ..add(r'cityName')
                 ..add(serializers.serialize(object.cityName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -85,12 +85,14 @@ class _$DefinitionServiceCountiesResponseSerializer implements StructuredSeriali
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'cityName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cityName = valueDes;
                     break;
             }

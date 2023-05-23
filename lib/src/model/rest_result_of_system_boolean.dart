@@ -55,7 +55,7 @@ class _$RestResultOfSystemBooleanSerializer implements StructuredSerializer<Rest
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.data != null) {
             result
@@ -85,7 +85,8 @@ class _$RestResultOfSystemBooleanSerializer implements StructuredSerializer<Rest
                     break;
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'data':

@@ -59,13 +59,13 @@ class _$AdminServiceCompanyResponseSerializer implements StructuredSerializer<Ad
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.color != null) {
             result
                 ..add(r'color')
                 ..add(serializers.serialize(object.color,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.population != null) {
             result
@@ -77,7 +77,7 @@ class _$AdminServiceCompanyResponseSerializer implements StructuredSerializer<Ad
             result
                 ..add(r'regions')
                 ..add(serializers.serialize(object.regions,
-                    specifiedType: const FullType(BuiltList, [FullType(AdminServiceRegionResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceRegionResponse)])));
         }
         if (object.id != null) {
             result
@@ -102,12 +102,14 @@ class _$AdminServiceCompanyResponseSerializer implements StructuredSerializer<Ad
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'color':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.color = valueDes;
                     break;
                 case r'population':
@@ -117,7 +119,8 @@ class _$AdminServiceCompanyResponseSerializer implements StructuredSerializer<Ad
                     break;
                 case r'regions':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(AdminServiceRegionResponse)])) as BuiltList<AdminServiceRegionResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceRegionResponse)])) as BuiltList<AdminServiceRegionResponse>?;
+                    if (valueDes == null) continue;
                     result.regions.replace(valueDes);
                     break;
                 case r'id':

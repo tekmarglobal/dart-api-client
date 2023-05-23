@@ -45,13 +45,13 @@ class _$CartServiceCreateCartRequestSerializer implements StructuredSerializer<C
             result
                 ..add(r'neighborhoodId')
                 ..add(serializers.serialize(object.neighborhoodId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.regionId != null) {
             result
                 ..add(r'regionId')
                 ..add(serializers.serialize(object.regionId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$CartServiceCreateCartRequestSerializer implements StructuredSerializer<C
             switch (key) {
                 case r'neighborhoodId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.neighborhoodId = valueDes;
                     break;
                 case r'regionId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.regionId = valueDes;
                     break;
             }

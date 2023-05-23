@@ -320,7 +320,7 @@ class CatalogApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (name != null) r'Name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      r'Name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (parent != null) r'Parent': encodeQueryParameter(_serializers, parent, const FullType(int)),
       if (level != null) r'Level': encodeQueryParameter(_serializers, level, const FullType(int)),
       if (showInMenu != null) r'ShowInMenu': encodeQueryParameter(_serializers, showInMenu, const FullType(bool)),
@@ -725,7 +725,7 @@ class CatalogApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (categoryId != null) r'CategoryId': encodeQueryParameter(_serializers, categoryId, const FullType(int)),
+      r'CategoryId': encodeQueryParameter(_serializers, categoryId, const FullType(int)),
       if (regionId != null) r'RegionId': encodeQueryParameter(_serializers, regionId, const FullType(int)),
       if (withProducts != null) r'WithProducts': encodeQueryParameter(_serializers, withProducts, const FullType(bool)),
       if (nestingLevel != null) r'NestingLevel': encodeQueryParameter(_serializers, nestingLevel, const FullType(int)),
@@ -821,7 +821,7 @@ class CatalogApi {
 
     final _queryParameters = <String, dynamic>{
       if (id != null) r'Id': encodeQueryParameter(_serializers, id, const FullType(int)),
-      if (name != null) r'Name': encodeQueryParameter(_serializers, name, const FullType(String)),
+      r'Name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (parent != null) r'Parent': encodeQueryParameter(_serializers, parent, const FullType(int)),
       if (level != null) r'Level': encodeQueryParameter(_serializers, level, const FullType(int)),
     };

@@ -75,13 +75,13 @@ class _$CartServiceUpdateCartRequestSerializer implements StructuredSerializer<C
             result
                 ..add(r'cartNote')
                 ..add(serializers.serialize(object.cartNote,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.productNote != null) {
             result
                 ..add(r'productNote')
                 ..add(serializers.serialize(object.productNote,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -115,12 +115,14 @@ class _$CartServiceUpdateCartRequestSerializer implements StructuredSerializer<C
                     break;
                 case r'cartNote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.cartNote = valueDes;
                     break;
                 case r'productNote':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.productNote = valueDes;
                     break;
             }

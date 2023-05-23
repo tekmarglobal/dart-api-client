@@ -89,13 +89,13 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.code != null) {
             result
                 ..add(r'code')
                 ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.freeDelivery != null) {
             result
@@ -131,7 +131,7 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
             result
                 ..add(r'regionMail')
                 ..add(serializers.serialize(object.regionMail,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -143,7 +143,7 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
             result
                 ..add(r'neighborhoods')
                 ..add(serializers.serialize(object.neighborhoods,
-                    specifiedType: const FullType(BuiltList, [FullType(AdminServiceAdminNeighborResponse)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceAdminNeighborResponse)])));
         }
         return result;
     }
@@ -167,12 +167,14 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'code':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.code = valueDes;
                     break;
                 case r'freeDelivery':
@@ -202,7 +204,8 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
                     break;
                 case r'regionMail':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.regionMail = valueDes;
                     break;
                 case r'active':
@@ -212,7 +215,8 @@ class _$AdminServiceRegionResponseSerializer implements StructuredSerializer<Adm
                     break;
                 case r'neighborhoods':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(AdminServiceAdminNeighborResponse)])) as BuiltList<AdminServiceAdminNeighborResponse>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(AdminServiceAdminNeighborResponse)])) as BuiltList<AdminServiceAdminNeighborResponse>?;
+                    if (valueDes == null) continue;
                     result.neighborhoods.replace(valueDes);
                     break;
             }

@@ -76,7 +76,7 @@ class AffiliateApi {
   /// 
   ///
   /// Parameters:
-  /// * [body] 
+  /// * [affiliateServiceLinkRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -87,7 +87,7 @@ class AffiliateApi {
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<String>> apiAffiliateGetShareLinkPost({ 
-    AffiliateServiceLinkRequest? body,
+    AffiliateServiceLinkRequest? affiliateServiceLinkRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -120,7 +120,7 @@ class AffiliateApi {
 
     try {
       const _type = FullType(AffiliateServiceLinkRequest);
-      _bodyData = body == null ? null : _serializers.serialize(body, specifiedType: _type);
+      _bodyData = affiliateServiceLinkRequest == null ? null : _serializers.serialize(affiliateServiceLinkRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioError(
@@ -212,7 +212,7 @@ class AffiliateApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (key != null) r'key': encodeQueryParameter(_serializers, key, const FullType(String)),
+      r'key': encodeQueryParameter(_serializers, key, const FullType(String)),
     };
 
     final _response = await _dio.request<Object>(

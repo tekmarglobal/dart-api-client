@@ -57,7 +57,7 @@ class _$BannerServiceBannerRequestSerializer implements StructuredSerializer<Ban
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -69,7 +69,7 @@ class _$BannerServiceBannerRequestSerializer implements StructuredSerializer<Ban
             result
                 ..add(r'image')
                 ..add(serializers.serialize(object.image,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.index != null) {
             result
@@ -100,7 +100,8 @@ class _$BannerServiceBannerRequestSerializer implements StructuredSerializer<Ban
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'active':
@@ -110,7 +111,8 @@ class _$BannerServiceBannerRequestSerializer implements StructuredSerializer<Ban
                     break;
                 case r'image':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.image = valueDes;
                     break;
                 case r'index':

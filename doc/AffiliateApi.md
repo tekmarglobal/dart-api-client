@@ -59,7 +59,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiAffiliateGetShareLinkPost**
-> String apiAffiliateGetShareLinkPost(body)
+> String apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest)
 
 
 
@@ -72,10 +72,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getAffiliateApi();
-final AffiliateServiceLinkRequest body = ; // AffiliateServiceLinkRequest | 
+final AffiliateServiceLinkRequest affiliateServiceLinkRequest = ; // AffiliateServiceLinkRequest | 
 
 try {
-    final response = api.apiAffiliateGetShareLinkPost(body);
+    final response = api.apiAffiliateGetShareLinkPost(affiliateServiceLinkRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AffiliateApi->apiAffiliateGetShareLinkPost: $e\n');
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AffiliateServiceLinkRequest**](AffiliateServiceLinkRequest.md)|  | [optional] 
+ **affiliateServiceLinkRequest** | [**AffiliateServiceLinkRequest**](AffiliateServiceLinkRequest.md)|  | [optional] 
 
 ### Return type
 

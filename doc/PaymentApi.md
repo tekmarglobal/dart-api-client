@@ -15,10 +15,11 @@ Method | HTTP request | Description
 [**apiPaymentGetPaymentTypesPost**](PaymentApi.md#apipaymentgetpaymenttypespost) | **POST** /api/Payment/GetPaymentTypes | 
 [**apiPaymentPaymentFailPost**](PaymentApi.md#apipaymentpaymentfailpost) | **POST** /api/Payment/PaymentFail | 
 [**apiPaymentPaymentSuccessPost**](PaymentApi.md#apipaymentpaymentsuccesspost) | **POST** /api/Payment/PaymentSuccess | 
+[**apiPaymentSodexoPaymentPost**](PaymentApi.md#apipaymentsodexopaymentpost) | **POST** /api/Payment/SodexoPayment | 
 
 
 # **apiPaymentCheckTransactionPost**
-> RestResultOfPaymentServicePaymentTransactionResponse apiPaymentCheckTransactionPost(body)
+> RestResultOfPaymentServicePaymentTransactionResponse apiPaymentCheckTransactionPost(paymentServicePaymentTransactionRequest)
 
 
 
@@ -31,10 +32,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getPaymentApi();
-final PaymentServicePaymentTransactionRequest body = ; // PaymentServicePaymentTransactionRequest | 
+final PaymentServicePaymentTransactionRequest paymentServicePaymentTransactionRequest = ; // PaymentServicePaymentTransactionRequest | 
 
 try {
-    final response = api.apiPaymentCheckTransactionPost(body);
+    final response = api.apiPaymentCheckTransactionPost(paymentServicePaymentTransactionRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCheckTransactionPost: $e\n');
@@ -45,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentTransactionRequest**](PaymentServicePaymentTransactionRequest.md)|  | [optional] 
+ **paymentServicePaymentTransactionRequest** | [**PaymentServicePaymentTransactionRequest**](PaymentServicePaymentTransactionRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -63,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiPaymentCreatePaymentPost**
-> RestResultOfPaymentServicePaymentResponse apiPaymentCreatePaymentPost(body)
+> RestResultOfPaymentServicePaymentResponse apiPaymentCreatePaymentPost(paymentServicePaymentRequest)
 
 
 
@@ -76,10 +77,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getPaymentApi();
-final PaymentServicePaymentRequest body = ; // PaymentServicePaymentRequest | 
+final PaymentServicePaymentRequest paymentServicePaymentRequest = ; // PaymentServicePaymentRequest | 
 
 try {
-    final response = api.apiPaymentCreatePaymentPost(body);
+    final response = api.apiPaymentCreatePaymentPost(paymentServicePaymentRequest);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCreatePaymentPost: $e\n');
@@ -90,7 +91,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
+ **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -108,7 +109,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiPaymentCreatePaymentReturnUrlPost**
-> apiPaymentCreatePaymentReturnUrlPost(body)
+> apiPaymentCreatePaymentReturnUrlPost(paymentServicePaymentRequest)
 
 
 
@@ -121,10 +122,10 @@ import 'package:openapi/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = Openapi().getPaymentApi();
-final PaymentServicePaymentRequest body = ; // PaymentServicePaymentRequest | 
+final PaymentServicePaymentRequest paymentServicePaymentRequest = ; // PaymentServicePaymentRequest | 
 
 try {
-    api.apiPaymentCreatePaymentReturnUrlPost(body);
+    api.apiPaymentCreatePaymentReturnUrlPost(paymentServicePaymentRequest);
 } catch on DioError (e) {
     print('Exception when calling PaymentApi->apiPaymentCreatePaymentReturnUrlPost: $e\n');
 }
@@ -134,7 +135,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
+ **paymentServicePaymentRequest** | [**PaymentServicePaymentRequest**](PaymentServicePaymentRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -269,6 +270,51 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiPaymentSodexoPaymentPost**
+> RestResultOfPaymentServiceSodexoPaymentResponse apiPaymentSodexoPaymentPost(paymentServiceSodexoPaymentRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getPaymentApi();
+final PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = ; // PaymentServiceSodexoPaymentRequest | 
+
+try {
+    final response = api.apiPaymentSodexoPaymentPost(paymentServiceSodexoPaymentRequest);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling PaymentApi->apiPaymentSodexoPaymentPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentServiceSodexoPaymentRequest** | [**PaymentServiceSodexoPaymentRequest**](PaymentServiceSodexoPaymentRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfPaymentServiceSodexoPaymentResponse**](RestResultOfPaymentServiceSodexoPaymentResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -59,7 +59,7 @@ class _$CartServiceRCartItemImpactSerializer implements StructuredSerializer<Car
             result
                 ..add(r'productName')
                 ..add(serializers.serialize(object.productName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.oldPrice != null) {
             result
@@ -71,7 +71,7 @@ class _$CartServiceRCartItemImpactSerializer implements StructuredSerializer<Car
             result
                 ..add(r'newPrice')
                 ..add(serializers.serialize(object.newPrice,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         return result;
     }
@@ -95,7 +95,8 @@ class _$CartServiceRCartItemImpactSerializer implements StructuredSerializer<Car
                     break;
                 case r'productName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.productName = valueDes;
                     break;
                 case r'oldPrice':
@@ -105,7 +106,8 @@ class _$CartServiceRCartItemImpactSerializer implements StructuredSerializer<Car
                     break;
                 case r'newPrice':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.newPrice = valueDes;
                     break;
             }

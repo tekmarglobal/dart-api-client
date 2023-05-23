@@ -45,13 +45,13 @@ class _$DefinitionServiceFaqResponseSerializer implements StructuredSerializer<D
             result
                 ..add(r'content')
                 ..add(serializers.serialize(object.content,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.title != null) {
             result
                 ..add(r'title')
                 ..add(serializers.serialize(object.title,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -70,12 +70,14 @@ class _$DefinitionServiceFaqResponseSerializer implements StructuredSerializer<D
             switch (key) {
                 case r'content':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.content = valueDes;
                     break;
                 case r'title':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.title = valueDes;
                     break;
             }

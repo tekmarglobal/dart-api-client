@@ -43,7 +43,7 @@ class _$CartServiceUpdateCartRegionResponseSerializer implements StructuredSeria
             result
                 ..add(r'cartItemImpacts')
                 ..add(serializers.serialize(object.cartItemImpacts,
-                    specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartItemImpact)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartItemImpact)])));
         }
         return result;
     }
@@ -62,7 +62,8 @@ class _$CartServiceUpdateCartRegionResponseSerializer implements StructuredSeria
             switch (key) {
                 case r'cartItemImpacts':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(CartServiceRCartItemImpact)])) as BuiltList<CartServiceRCartItemImpact>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(CartServiceRCartItemImpact)])) as BuiltList<CartServiceRCartItemImpact>?;
+                    if (valueDes == null) continue;
                     result.cartItemImpacts.replace(valueDes);
                     break;
             }

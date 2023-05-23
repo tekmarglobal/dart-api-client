@@ -83,7 +83,7 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.listPrice != null) {
             result
@@ -113,13 +113,13 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
             result
                 ..add(r'brandName')
                 ..add(serializers.serialize(object.brandName,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.unitId != null) {
             result
                 ..add(r'unitId')
                 ..add(serializers.serialize(object.unitId,
-                    specifiedType: const FullType(int)));
+                    specifiedType: const FullType.nullable(int)));
         }
         if (object.active != null) {
             result
@@ -131,7 +131,7 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
             result
                 ..add(r'barcode')
                 ..add(serializers.serialize(object.barcode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -155,7 +155,8 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'listPrice':
@@ -180,12 +181,14 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
                     break;
                 case r'brandName':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.brandName = valueDes;
                     break;
                 case r'unitId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
+                        specifiedType: const FullType.nullable(int)) as int?;
+                    if (valueDes == null) continue;
                     result.unitId = valueDes;
                     break;
                 case r'active':
@@ -195,7 +198,8 @@ class _$OrderServiceROrderProductsSerializer implements StructuredSerializer<Ord
                     break;
                 case r'barcode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.barcode = valueDes;
                     break;
             }

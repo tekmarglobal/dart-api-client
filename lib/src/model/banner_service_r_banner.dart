@@ -13,6 +13,7 @@ part 'banner_service_r_banner.g.dart';
 /// * [name] 
 /// * [active] 
 /// * [image] 
+/// * [webImage] 
 /// * [index] 
 /// * [id] 
 abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, BannerServiceRBannerBuilder> {
@@ -24,6 +25,9 @@ abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, Banne
 
     @BuiltValueField(wireName: r'image')
     String? get image;
+
+    @BuiltValueField(wireName: r'webImage')
+    String? get webImage;
 
     @BuiltValueField(wireName: r'index')
     int? get index;
@@ -57,7 +61,7 @@ class _$BannerServiceRBannerSerializer implements StructuredSerializer<BannerSer
             result
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.active != null) {
             result
@@ -69,7 +73,13 @@ class _$BannerServiceRBannerSerializer implements StructuredSerializer<BannerSer
             result
                 ..add(r'image')
                 ..add(serializers.serialize(object.image,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
+        }
+        if (object.webImage != null) {
+            result
+                ..add(r'webImage')
+                ..add(serializers.serialize(object.webImage,
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.index != null) {
             result
@@ -100,7 +110,8 @@ class _$BannerServiceRBannerSerializer implements StructuredSerializer<BannerSer
             switch (key) {
                 case r'name':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.name = valueDes;
                     break;
                 case r'active':
@@ -110,8 +121,15 @@ class _$BannerServiceRBannerSerializer implements StructuredSerializer<BannerSer
                     break;
                 case r'image':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.image = valueDes;
+                    break;
+                case r'webImage':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.webImage = valueDes;
                     break;
                 case r'index':
                     final valueDes = serializers.deserialize(value,

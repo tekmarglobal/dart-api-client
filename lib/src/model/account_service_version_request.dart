@@ -53,19 +53,19 @@ class _$AccountServiceVersionRequestSerializer implements StructuredSerializer<A
             result
                 ..add(r'code')
                 ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.version != null) {
             result
                 ..add(r'version')
                 ..add(serializers.serialize(object.version,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.platform != null) {
             result
                 ..add(r'platform')
                 ..add(serializers.serialize(object.platform,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.isWeb != null) {
             result
@@ -90,17 +90,20 @@ class _$AccountServiceVersionRequestSerializer implements StructuredSerializer<A
             switch (key) {
                 case r'code':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.code = valueDes;
                     break;
                 case r'version':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.version = valueDes;
                     break;
                 case r'platform':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.platform = valueDes;
                     break;
                 case r'isWeb':

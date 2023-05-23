@@ -49,13 +49,13 @@ class _$OrderServiceCheckoutItemSerializer implements StructuredSerializer<Order
             result
                 ..add(r'type')
                 ..add(serializers.serialize(object.type,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.amount != null) {
             result
                 ..add(r'amount')
                 ..add(serializers.serialize(object.amount,
-                    specifiedType: const FullType(double)));
+                    specifiedType: const FullType.nullable(double)));
         }
         if (object.isDiscount != null) {
             result
@@ -80,12 +80,14 @@ class _$OrderServiceCheckoutItemSerializer implements StructuredSerializer<Order
             switch (key) {
                 case r'type':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.type = valueDes;
                     break;
                 case r'amount':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
+                        specifiedType: const FullType.nullable(double)) as double?;
+                    if (valueDes == null) continue;
                     result.amount = valueDes;
                     break;
                 case r'isDiscount':

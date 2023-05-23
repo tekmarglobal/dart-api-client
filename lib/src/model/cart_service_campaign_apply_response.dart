@@ -55,7 +55,7 @@ class _$CartServiceCampaignApplyResponseSerializer implements StructuredSerializ
             result
                 ..add(r'message')
                 ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.success != null) {
             result
@@ -67,7 +67,7 @@ class _$CartServiceCampaignApplyResponseSerializer implements StructuredSerializ
             result
                 ..add(r'missingConditions')
                 ..add(serializers.serialize(object.missingConditions,
-                    specifiedType: const FullType(BuiltList, [FullType(String)])));
+                    specifiedType: const FullType.nullable(BuiltList, [FullType(String)])));
         }
         if (object.cart != null) {
             result
@@ -92,7 +92,8 @@ class _$CartServiceCampaignApplyResponseSerializer implements StructuredSerializ
             switch (key) {
                 case r'message':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.message = valueDes;
                     break;
                 case r'success':
@@ -102,7 +103,8 @@ class _$CartServiceCampaignApplyResponseSerializer implements StructuredSerializ
                     break;
                 case r'missingConditions':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltList, [FullType(String)])) as BuiltList<String>;
+                        specifiedType: const FullType.nullable(BuiltList, [FullType(String)])) as BuiltList<String>?;
+                    if (valueDes == null) continue;
                     result.missingConditions.replace(valueDes);
                     break;
                 case r'cart':

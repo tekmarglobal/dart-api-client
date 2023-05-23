@@ -101,6 +101,8 @@ export 'package:openapi/src/model/payment_service_payment_transaction_request.da
 export 'package:openapi/src/model/payment_service_payment_transaction_response.dart';
 export 'package:openapi/src/model/payment_service_payment_type_response.dart';
 export 'package:openapi/src/model/payment_service_r_payment_type.dart';
+export 'package:openapi/src/model/payment_service_sodexo_payment_request.dart';
+export 'package:openapi/src/model/payment_service_sodexo_payment_response.dart';
 export 'package:openapi/src/model/product_service_favorite_list_response.dart';
 export 'package:openapi/src/model/product_service_favorite_request.dart';
 export 'package:openapi/src/model/product_service_product_alternatives_request.dart';
@@ -154,6 +156,7 @@ export 'package:openapi/src/model/rest_result_of_order_service_order_response.da
 export 'package:openapi/src/model/rest_result_of_payment_service_payment_response.dart';
 export 'package:openapi/src/model/rest_result_of_payment_service_payment_transaction_response.dart';
 export 'package:openapi/src/model/rest_result_of_payment_service_payment_type_response.dart';
+export 'package:openapi/src/model/rest_result_of_payment_service_sodexo_payment_response.dart';
 export 'package:openapi/src/model/rest_result_of_product_service_favorite_list_response.dart';
 export 'package:openapi/src/model/rest_result_of_product_service_r_product.dart';
 export 'package:openapi/src/model/rest_result_of_product_service_recommend_product_response.dart';

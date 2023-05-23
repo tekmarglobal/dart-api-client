@@ -45,7 +45,7 @@ class _$RegisterServiceVersionResponseSerializer implements StructuredSerializer
             result
                 ..add(r'latestCode')
                 ..add(serializers.serialize(object.latestCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.isMandatory != null) {
             result
@@ -70,7 +70,8 @@ class _$RegisterServiceVersionResponseSerializer implements StructuredSerializer
             switch (key) {
                 case r'latestCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.latestCode = valueDes;
                     break;
                 case r'isMandatory':

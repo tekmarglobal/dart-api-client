@@ -45,7 +45,7 @@ class _$OrderServiceCheckoutRequestSerializer implements StructuredSerializer<Or
             result
                 ..add(r'deliveryTypeCode')
                 ..add(serializers.serialize(object.deliveryTypeCode,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.timeSlotId != null) {
             result
@@ -70,7 +70,8 @@ class _$OrderServiceCheckoutRequestSerializer implements StructuredSerializer<Or
             switch (key) {
                 case r'deliveryTypeCode':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.deliveryTypeCode = valueDes;
                     break;
                 case r'timeSlotId':

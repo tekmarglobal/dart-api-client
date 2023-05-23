@@ -41,7 +41,7 @@ class _$PaymentServicePaymentTransactionRequestSerializer implements StructuredS
             result
                 ..add(r'transactionUid')
                 ..add(serializers.serialize(object.transactionUid,
-                    specifiedType: const FullType(String)));
+                    specifiedType: const FullType.nullable(String)));
         }
         return result;
     }
@@ -60,7 +60,8 @@ class _$PaymentServicePaymentTransactionRequestSerializer implements StructuredS
             switch (key) {
                 case r'transactionUid':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
                     result.transactionUid = valueDes;
                     break;
             }
