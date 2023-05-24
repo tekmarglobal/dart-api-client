@@ -77,22 +77,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceBranchResponse _responseData;
+    RestResultOfListOfAdminServiceBranchResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceBranchResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceBranchResponse),
       ) as RestResultOfListOfAdminServiceBranchResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceBranchResponse>(
@@ -163,22 +164,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfAdminServiceRegionStatusCode _responseData;
+    RestResultOfAdminServiceRegionStatusCode? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfAdminServiceRegionStatusCode);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfAdminServiceRegionStatusCode),
       ) as RestResultOfAdminServiceRegionStatusCode;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfAdminServiceRegionStatusCode>(
@@ -249,22 +251,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfAdminServiceRegionStatusCode _responseData;
+    RestResultOfAdminServiceRegionStatusCode? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfAdminServiceRegionStatusCode);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfAdminServiceRegionStatusCode),
       ) as RestResultOfAdminServiceRegionStatusCode;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfAdminServiceRegionStatusCode>(
@@ -328,22 +331,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceCompanyResponse _responseData;
+    RestResultOfListOfAdminServiceCompanyResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceCompanyResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceCompanyResponse),
       ) as RestResultOfListOfAdminServiceCompanyResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceCompanyResponse>(
@@ -414,22 +418,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceTimeSlotResponse _responseData;
+    RestResultOfListOfAdminServiceTimeSlotResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceTimeSlotResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceTimeSlotResponse),
       ) as RestResultOfListOfAdminServiceTimeSlotResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceTimeSlotResponse>(
@@ -500,22 +505,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceTimeSlotResponse _responseData;
+    RestResultOfListOfAdminServiceTimeSlotResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceTimeSlotResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceTimeSlotResponse),
       ) as RestResultOfListOfAdminServiceTimeSlotResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceTimeSlotResponse>(
@@ -589,18 +595,20 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    String _responseData;
+    String? _responseData;
 
     try {
-      _responseData = _response.data as String;
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : rawResponse as String;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<String>(
@@ -671,9 +679,10 @@ class AdminApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -685,22 +694,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceAdminNeighborResponse _responseData;
+    RestResultOfListOfAdminServiceAdminNeighborResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceAdminNeighborResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceAdminNeighborResponse),
       ) as RestResultOfListOfAdminServiceAdminNeighborResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceAdminNeighborResponse>(
@@ -771,22 +781,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfSystemInt32 _responseData;
+    RestResultOfSystemInt32? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfSystemInt32);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfSystemInt32),
       ) as RestResultOfSystemInt32;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfSystemInt32>(
@@ -857,22 +868,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfAdminServiceRegionResponse _responseData;
+    RestResultOfListOfAdminServiceRegionResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfAdminServiceRegionResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfAdminServiceRegionResponse),
       ) as RestResultOfListOfAdminServiceRegionResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfAdminServiceRegionResponse>(
@@ -943,9 +955,10 @@ class AdminApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -957,22 +970,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfAdminServiceAdminNeighborResponse _responseData;
+    RestResultOfAdminServiceAdminNeighborResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfAdminServiceAdminNeighborResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfAdminServiceAdminNeighborResponse),
       ) as RestResultOfAdminServiceAdminNeighborResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfAdminServiceAdminNeighborResponse>(
@@ -1044,9 +1058,10 @@ class AdminApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -1058,22 +1073,23 @@ class AdminApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfAdminServiceUploadImageResponse _responseData;
+    RestResultOfAdminServiceUploadImageResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfAdminServiceUploadImageResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfAdminServiceUploadImageResponse),
       ) as RestResultOfAdminServiceUploadImageResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfAdminServiceUploadImageResponse>(

@@ -76,9 +76,10 @@ class RegisterApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -90,22 +91,23 @@ class RegisterApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfRegisterServiceSmsResponse _responseData;
+    RestResultOfRegisterServiceSmsResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfRegisterServiceSmsResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfRegisterServiceSmsResponse),
       ) as RestResultOfRegisterServiceSmsResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfRegisterServiceSmsResponse>(
@@ -176,9 +178,10 @@ class RegisterApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -190,22 +193,23 @@ class RegisterApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfRegisterServiceLoginResponse _responseData;
+    RestResultOfRegisterServiceLoginResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfRegisterServiceLoginResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfRegisterServiceLoginResponse),
       ) as RestResultOfRegisterServiceLoginResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfRegisterServiceLoginResponse>(

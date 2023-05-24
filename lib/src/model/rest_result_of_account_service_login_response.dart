@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:openapi/src/model/account_service_login_response.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -14,90 +15,132 @@ part 'rest_result_of_account_service_login_response.g.dart';
 /// * [success] 
 /// * [message] 
 /// * [data] 
+@BuiltValue()
 abstract class RestResultOfAccountServiceLoginResponse implements Built<RestResultOfAccountServiceLoginResponse, RestResultOfAccountServiceLoginResponseBuilder> {
-    @BuiltValueField(wireName: r'success')
-    bool? get success;
+  @BuiltValueField(wireName: r'success')
+  bool? get success;
 
-    @BuiltValueField(wireName: r'message')
-    String? get message;
+  @BuiltValueField(wireName: r'message')
+  String? get message;
 
-    @BuiltValueField(wireName: r'data')
-    AccountServiceLoginResponse? get data;
+  @BuiltValueField(wireName: r'data')
+  AccountServiceLoginResponse? get data;
 
-    RestResultOfAccountServiceLoginResponse._();
+  RestResultOfAccountServiceLoginResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(RestResultOfAccountServiceLoginResponseBuilder b) => b;
+  factory RestResultOfAccountServiceLoginResponse([void updates(RestResultOfAccountServiceLoginResponseBuilder b)]) = _$RestResultOfAccountServiceLoginResponse;
 
-    factory RestResultOfAccountServiceLoginResponse([void updates(RestResultOfAccountServiceLoginResponseBuilder b)]) = _$RestResultOfAccountServiceLoginResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(RestResultOfAccountServiceLoginResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<RestResultOfAccountServiceLoginResponse> get serializer => _$RestResultOfAccountServiceLoginResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<RestResultOfAccountServiceLoginResponse> get serializer => _$RestResultOfAccountServiceLoginResponseSerializer();
 }
 
-class _$RestResultOfAccountServiceLoginResponseSerializer implements StructuredSerializer<RestResultOfAccountServiceLoginResponse> {
-    @override
-    final Iterable<Type> types = const [RestResultOfAccountServiceLoginResponse, _$RestResultOfAccountServiceLoginResponse];
+class _$RestResultOfAccountServiceLoginResponseSerializer implements PrimitiveSerializer<RestResultOfAccountServiceLoginResponse> {
+  @override
+  final Iterable<Type> types = const [RestResultOfAccountServiceLoginResponse, _$RestResultOfAccountServiceLoginResponse];
 
-    @override
-    final String wireName = r'RestResultOfAccountServiceLoginResponse';
+  @override
+  final String wireName = r'RestResultOfAccountServiceLoginResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, RestResultOfAccountServiceLoginResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.success != null) {
-            result
-                ..add(r'success')
-                ..add(serializers.serialize(object.success,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.message != null) {
-            result
-                ..add(r'message')
-                ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.data != null) {
-            result
-                ..add(r'data')
-                ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType(AccountServiceLoginResponse)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    RestResultOfAccountServiceLoginResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.success != null) {
+      yield r'success';
+      yield serializers.serialize(
+        object.success,
+        specifiedType: const FullType(bool),
+      );
     }
-
-    @override
-    RestResultOfAccountServiceLoginResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = RestResultOfAccountServiceLoginResponseBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'success':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.success = valueDes;
-                    break;
-                case r'message':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.message = valueDes;
-                    break;
-                case r'data':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(AccountServiceLoginResponse)) as AccountServiceLoginResponse;
-                    result.data.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+    if (object.message != null) {
+      yield r'message';
+      yield serializers.serialize(
+        object.message,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType(AccountServiceLoginResponse),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    RestResultOfAccountServiceLoginResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required RestResultOfAccountServiceLoginResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'success':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.success = valueDes;
+          break;
+        case r'message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.message = valueDes;
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(AccountServiceLoginResponse),
+          ) as AccountServiceLoginResponse;
+          result.data.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  RestResultOfAccountServiceLoginResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = RestResultOfAccountServiceLoginResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

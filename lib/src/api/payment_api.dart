@@ -79,9 +79,10 @@ class PaymentApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -93,22 +94,23 @@ class PaymentApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfPaymentServicePaymentTransactionResponse _responseData;
+    RestResultOfPaymentServicePaymentTransactionResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfPaymentServicePaymentTransactionResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfPaymentServicePaymentTransactionResponse),
       ) as RestResultOfPaymentServicePaymentTransactionResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfPaymentServicePaymentTransactionResponse>(
@@ -179,9 +181,10 @@ class PaymentApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -193,22 +196,23 @@ class PaymentApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfPaymentServicePaymentResponse _responseData;
+    RestResultOfPaymentServicePaymentResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfPaymentServicePaymentResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfPaymentServicePaymentResponse),
       ) as RestResultOfPaymentServicePaymentResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfPaymentServicePaymentResponse>(
@@ -279,9 +283,10 @@ class PaymentApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -345,22 +350,23 @@ class PaymentApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfPaymentServicePaymentTypeResponse _responseData;
+    RestResultOfPaymentServicePaymentTypeResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfPaymentServicePaymentTypeResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfPaymentServicePaymentTypeResponse),
       ) as RestResultOfPaymentServicePaymentTypeResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfPaymentServicePaymentTypeResponse>(
@@ -535,9 +541,10 @@ class PaymentApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -549,22 +556,23 @@ class PaymentApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfPaymentServiceSodexoPaymentResponse _responseData;
+    RestResultOfPaymentServiceSodexoPaymentResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfPaymentServiceSodexoPaymentResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfPaymentServiceSodexoPaymentResponse),
       ) as RestResultOfPaymentServiceSodexoPaymentResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfPaymentServiceSodexoPaymentResponse>(

@@ -85,22 +85,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceAgreementResponse _responseData;
+    RestResultOfListOfDefinitionServiceAgreementResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceAgreementResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceAgreementResponse),
       ) as RestResultOfListOfDefinitionServiceAgreementResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceAgreementResponse>(
@@ -164,22 +165,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceCitiesResponse _responseData;
+    RestResultOfListOfDefinitionServiceCitiesResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceCitiesResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceCitiesResponse),
       ) as RestResultOfListOfDefinitionServiceCitiesResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceCitiesResponse>(
@@ -250,9 +252,10 @@ class DefinitionApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -264,22 +267,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceCountiesResponse _responseData;
+    RestResultOfListOfDefinitionServiceCountiesResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceCountiesResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceCountiesResponse),
       ) as RestResultOfListOfDefinitionServiceCountiesResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceCountiesResponse>(
@@ -343,22 +347,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceDeliveryType _responseData;
+    RestResultOfListOfDefinitionServiceDeliveryType? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceDeliveryType);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceDeliveryType),
       ) as RestResultOfListOfDefinitionServiceDeliveryType;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceDeliveryType>(
@@ -422,22 +427,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceFaqResponse _responseData;
+    RestResultOfListOfDefinitionServiceFaqResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceFaqResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceFaqResponse),
       ) as RestResultOfListOfDefinitionServiceFaqResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceFaqResponse>(
@@ -501,22 +507,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+    RestResultOfListOfDefinitionServiceSelfPickupPoint? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint),
       ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
@@ -587,22 +594,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+    RestResultOfListOfDefinitionServiceSelfPickupPoint? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint),
       ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
@@ -673,22 +681,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+    RestResultOfListOfDefinitionServiceSelfPickupPoint? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint),
       ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
@@ -759,22 +768,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceSelfPickupPoint _responseData;
+    RestResultOfListOfDefinitionServiceSelfPickupPoint? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceSelfPickupPoint),
       ) as RestResultOfListOfDefinitionServiceSelfPickupPoint;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceSelfPickupPoint>(
@@ -838,18 +848,20 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    String _responseData;
+    String? _responseData;
 
     try {
-      _responseData = _response.data as String;
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : rawResponse as String;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<String>(
@@ -920,9 +932,10 @@ class DefinitionApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -934,22 +947,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfDefinitionServiceNeighborResponse _responseData;
+    RestResultOfListOfDefinitionServiceNeighborResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfDefinitionServiceNeighborResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfDefinitionServiceNeighborResponse),
       ) as RestResultOfListOfDefinitionServiceNeighborResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfDefinitionServiceNeighborResponse>(
@@ -1020,9 +1034,10 @@ class DefinitionApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -1034,22 +1049,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfDefinitionServiceUpdateAgreementLogResponse _responseData;
+    RestResultOfDefinitionServiceUpdateAgreementLogResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfDefinitionServiceUpdateAgreementLogResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfDefinitionServiceUpdateAgreementLogResponse),
       ) as RestResultOfDefinitionServiceUpdateAgreementLogResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfDefinitionServiceUpdateAgreementLogResponse>(
@@ -1113,22 +1129,23 @@ class DefinitionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfDefinitionServiceUploadCountriesResponse _responseData;
+    RestResultOfDefinitionServiceUploadCountriesResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfDefinitionServiceUploadCountriesResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfDefinitionServiceUploadCountriesResponse),
       ) as RestResultOfDefinitionServiceUploadCountriesResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfDefinitionServiceUploadCountriesResponse>(

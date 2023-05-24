@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:openapi/src/model/customer_service_r_customer.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -12,61 +13,97 @@ part 'customer_service_customer_response.g.dart';
 ///
 /// Properties:
 /// * [customer] 
+@BuiltValue()
 abstract class CustomerServiceCustomerResponse implements Built<CustomerServiceCustomerResponse, CustomerServiceCustomerResponseBuilder> {
-    @BuiltValueField(wireName: r'customer')
-    CustomerServiceRCustomer? get customer;
+  @BuiltValueField(wireName: r'customer')
+  CustomerServiceRCustomer? get customer;
 
-    CustomerServiceCustomerResponse._();
+  CustomerServiceCustomerResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(CustomerServiceCustomerResponseBuilder b) => b;
+  factory CustomerServiceCustomerResponse([void updates(CustomerServiceCustomerResponseBuilder b)]) = _$CustomerServiceCustomerResponse;
 
-    factory CustomerServiceCustomerResponse([void updates(CustomerServiceCustomerResponseBuilder b)]) = _$CustomerServiceCustomerResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(CustomerServiceCustomerResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<CustomerServiceCustomerResponse> get serializer => _$CustomerServiceCustomerResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<CustomerServiceCustomerResponse> get serializer => _$CustomerServiceCustomerResponseSerializer();
 }
 
-class _$CustomerServiceCustomerResponseSerializer implements StructuredSerializer<CustomerServiceCustomerResponse> {
-    @override
-    final Iterable<Type> types = const [CustomerServiceCustomerResponse, _$CustomerServiceCustomerResponse];
+class _$CustomerServiceCustomerResponseSerializer implements PrimitiveSerializer<CustomerServiceCustomerResponse> {
+  @override
+  final Iterable<Type> types = const [CustomerServiceCustomerResponse, _$CustomerServiceCustomerResponse];
 
-    @override
-    final String wireName = r'CustomerServiceCustomerResponse';
+  @override
+  final String wireName = r'CustomerServiceCustomerResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, CustomerServiceCustomerResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.customer != null) {
-            result
-                ..add(r'customer')
-                ..add(serializers.serialize(object.customer,
-                    specifiedType: const FullType(CustomerServiceRCustomer)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    CustomerServiceCustomerResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.customer != null) {
+      yield r'customer';
+      yield serializers.serialize(
+        object.customer,
+        specifiedType: const FullType(CustomerServiceRCustomer),
+      );
     }
+  }
 
-    @override
-    CustomerServiceCustomerResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = CustomerServiceCustomerResponseBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    CustomerServiceCustomerResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'customer':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(CustomerServiceRCustomer)) as CustomerServiceRCustomer;
-                    result.customer.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required CustomerServiceCustomerResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'customer':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(CustomerServiceRCustomer),
+          ) as CustomerServiceRCustomer;
+          result.customer.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  CustomerServiceCustomerResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = CustomerServiceCustomerResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

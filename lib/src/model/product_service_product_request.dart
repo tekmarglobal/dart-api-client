@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,61 +12,97 @@ part 'product_service_product_request.g.dart';
 ///
 /// Properties:
 /// * [id] 
+@BuiltValue()
 abstract class ProductServiceProductRequest implements Built<ProductServiceProductRequest, ProductServiceProductRequestBuilder> {
-    @BuiltValueField(wireName: r'id')
-    int? get id;
+  @BuiltValueField(wireName: r'id')
+  int? get id;
 
-    ProductServiceProductRequest._();
+  ProductServiceProductRequest._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(ProductServiceProductRequestBuilder b) => b;
+  factory ProductServiceProductRequest([void updates(ProductServiceProductRequestBuilder b)]) = _$ProductServiceProductRequest;
 
-    factory ProductServiceProductRequest([void updates(ProductServiceProductRequestBuilder b)]) = _$ProductServiceProductRequest;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(ProductServiceProductRequestBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<ProductServiceProductRequest> get serializer => _$ProductServiceProductRequestSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<ProductServiceProductRequest> get serializer => _$ProductServiceProductRequestSerializer();
 }
 
-class _$ProductServiceProductRequestSerializer implements StructuredSerializer<ProductServiceProductRequest> {
-    @override
-    final Iterable<Type> types = const [ProductServiceProductRequest, _$ProductServiceProductRequest];
+class _$ProductServiceProductRequestSerializer implements PrimitiveSerializer<ProductServiceProductRequest> {
+  @override
+  final Iterable<Type> types = const [ProductServiceProductRequest, _$ProductServiceProductRequest];
 
-    @override
-    final String wireName = r'ProductServiceProductRequest';
+  @override
+  final String wireName = r'ProductServiceProductRequest';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, ProductServiceProductRequest object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.id != null) {
-            result
-                ..add(r'id')
-                ..add(serializers.serialize(object.id,
-                    specifiedType: const FullType(int)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    ProductServiceProductRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(int),
+      );
     }
+  }
 
-    @override
-    ProductServiceProductRequest deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = ProductServiceProductRequestBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    ProductServiceProductRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'id':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.id = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required ProductServiceProductRequestBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.id = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  ProductServiceProductRequest deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = ProductServiceProductRequestBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/payment_service_r_payment_type.dart';
 import 'package:built_value/built_value.dart';
@@ -13,62 +14,98 @@ part 'payment_service_payment_type_response.g.dart';
 ///
 /// Properties:
 /// * [paymentTypeList] 
+@BuiltValue()
 abstract class PaymentServicePaymentTypeResponse implements Built<PaymentServicePaymentTypeResponse, PaymentServicePaymentTypeResponseBuilder> {
-    @BuiltValueField(wireName: r'paymentTypeList')
-    BuiltList<PaymentServiceRPaymentType>? get paymentTypeList;
+  @BuiltValueField(wireName: r'paymentTypeList')
+  BuiltList<PaymentServiceRPaymentType>? get paymentTypeList;
 
-    PaymentServicePaymentTypeResponse._();
+  PaymentServicePaymentTypeResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(PaymentServicePaymentTypeResponseBuilder b) => b;
+  factory PaymentServicePaymentTypeResponse([void updates(PaymentServicePaymentTypeResponseBuilder b)]) = _$PaymentServicePaymentTypeResponse;
 
-    factory PaymentServicePaymentTypeResponse([void updates(PaymentServicePaymentTypeResponseBuilder b)]) = _$PaymentServicePaymentTypeResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(PaymentServicePaymentTypeResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<PaymentServicePaymentTypeResponse> get serializer => _$PaymentServicePaymentTypeResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<PaymentServicePaymentTypeResponse> get serializer => _$PaymentServicePaymentTypeResponseSerializer();
 }
 
-class _$PaymentServicePaymentTypeResponseSerializer implements StructuredSerializer<PaymentServicePaymentTypeResponse> {
-    @override
-    final Iterable<Type> types = const [PaymentServicePaymentTypeResponse, _$PaymentServicePaymentTypeResponse];
+class _$PaymentServicePaymentTypeResponseSerializer implements PrimitiveSerializer<PaymentServicePaymentTypeResponse> {
+  @override
+  final Iterable<Type> types = const [PaymentServicePaymentTypeResponse, _$PaymentServicePaymentTypeResponse];
 
-    @override
-    final String wireName = r'PaymentServicePaymentTypeResponse';
+  @override
+  final String wireName = r'PaymentServicePaymentTypeResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, PaymentServicePaymentTypeResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.paymentTypeList != null) {
-            result
-                ..add(r'paymentTypeList')
-                ..add(serializers.serialize(object.paymentTypeList,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)])));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    PaymentServicePaymentTypeResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.paymentTypeList != null) {
+      yield r'paymentTypeList';
+      yield serializers.serialize(
+        object.paymentTypeList,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)]),
+      );
     }
+  }
 
-    @override
-    PaymentServicePaymentTypeResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = PaymentServicePaymentTypeResponseBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    PaymentServicePaymentTypeResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'paymentTypeList':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)])) as BuiltList<PaymentServiceRPaymentType>?;
-                    if (valueDes == null) continue;
-                    result.paymentTypeList.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required PaymentServicePaymentTypeResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'paymentTypeList':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(PaymentServiceRPaymentType)]),
+          ) as BuiltList<PaymentServiceRPaymentType>?;
+          if (valueDes == null) continue;
+          result.paymentTypeList.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  PaymentServicePaymentTypeResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = PaymentServicePaymentTypeResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

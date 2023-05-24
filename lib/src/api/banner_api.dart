@@ -67,22 +67,23 @@ class BannerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfBannerServiceBannerResponse _responseData;
+    RestResultOfBannerServiceBannerResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfBannerServiceBannerResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfBannerServiceBannerResponse),
       ) as RestResultOfBannerServiceBannerResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfBannerServiceBannerResponse>(
@@ -153,9 +154,10 @@ class BannerApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -167,22 +169,23 @@ class BannerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfBannerServiceBannerResponse _responseData;
+    RestResultOfBannerServiceBannerResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfBannerServiceBannerResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfBannerServiceBannerResponse),
       ) as RestResultOfBannerServiceBannerResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfBannerServiceBannerResponse>(

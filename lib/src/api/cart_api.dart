@@ -83,22 +83,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfCartServiceCampaignResponse _responseData;
+    RestResultOfListOfCartServiceCampaignResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfCartServiceCampaignResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfCartServiceCampaignResponse),
       ) as RestResultOfListOfCartServiceCampaignResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfCartServiceCampaignResponse>(
@@ -169,22 +170,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCampaignApplyResponse _responseData;
+    RestResultOfCartServiceCampaignApplyResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCampaignApplyResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCampaignApplyResponse),
       ) as RestResultOfCartServiceCampaignApplyResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCampaignApplyResponse>(
@@ -255,9 +257,10 @@ class CartApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -269,22 +272,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCreateCartResponse _responseData;
+    RestResultOfCartServiceCreateCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCreateCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCreateCartResponse),
       ) as RestResultOfCartServiceCreateCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCreateCartResponse>(
@@ -348,22 +352,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCartResponse _responseData;
+    RestResultOfCartServiceCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCartResponse),
       ) as RestResultOfCartServiceCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCartResponse>(
@@ -427,22 +432,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCartResponse _responseData;
+    RestResultOfCartServiceCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCartResponse),
       ) as RestResultOfCartServiceCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCartResponse>(
@@ -506,22 +512,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfCartServiceCampaignResponse _responseData;
+    RestResultOfListOfCartServiceCampaignResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfCartServiceCampaignResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfCartServiceCampaignResponse),
       ) as RestResultOfListOfCartServiceCampaignResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfCartServiceCampaignResponse>(
@@ -585,22 +592,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfCartServiceTimeSlotsResponse _responseData;
+    RestResultOfListOfCartServiceTimeSlotsResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfCartServiceTimeSlotsResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfCartServiceTimeSlotsResponse),
       ) as RestResultOfListOfCartServiceTimeSlotsResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfCartServiceTimeSlotsResponse>(
@@ -664,22 +672,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCartResponse _responseData;
+    RestResultOfCartServiceCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCartResponse),
       ) as RestResultOfCartServiceCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCartResponse>(
@@ -750,9 +759,10 @@ class CartApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -764,22 +774,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCartResponse _responseData;
+    RestResultOfCartServiceCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCartResponse),
       ) as RestResultOfCartServiceCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCartResponse>(
@@ -850,9 +861,10 @@ class CartApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -864,22 +876,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceUpdateCartRegionResponse _responseData;
+    RestResultOfCartServiceUpdateCartRegionResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceUpdateCartRegionResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceUpdateCartRegionResponse),
       ) as RestResultOfCartServiceUpdateCartRegionResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceUpdateCartRegionResponse>(
@@ -950,9 +963,10 @@ class CartApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -964,22 +978,23 @@ class CartApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCartServiceCartResponse _responseData;
+    RestResultOfCartServiceCartResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCartServiceCartResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCartServiceCartResponse),
       ) as RestResultOfCartServiceCartResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCartServiceCartResponse>(

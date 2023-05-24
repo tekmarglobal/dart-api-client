@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,91 +14,133 @@ part 'account_service_version_response.g.dart';
 /// * [latestCode] 
 /// * [latestVersion] 
 /// * [isMandatory] 
+@BuiltValue()
 abstract class AccountServiceVersionResponse implements Built<AccountServiceVersionResponse, AccountServiceVersionResponseBuilder> {
-    @BuiltValueField(wireName: r'latestCode')
-    String? get latestCode;
+  @BuiltValueField(wireName: r'latestCode')
+  String? get latestCode;
 
-    @BuiltValueField(wireName: r'latestVersion')
-    String? get latestVersion;
+  @BuiltValueField(wireName: r'latestVersion')
+  String? get latestVersion;
 
-    @BuiltValueField(wireName: r'isMandatory')
-    bool? get isMandatory;
+  @BuiltValueField(wireName: r'isMandatory')
+  bool? get isMandatory;
 
-    AccountServiceVersionResponse._();
+  AccountServiceVersionResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(AccountServiceVersionResponseBuilder b) => b;
+  factory AccountServiceVersionResponse([void updates(AccountServiceVersionResponseBuilder b)]) = _$AccountServiceVersionResponse;
 
-    factory AccountServiceVersionResponse([void updates(AccountServiceVersionResponseBuilder b)]) = _$AccountServiceVersionResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(AccountServiceVersionResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<AccountServiceVersionResponse> get serializer => _$AccountServiceVersionResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<AccountServiceVersionResponse> get serializer => _$AccountServiceVersionResponseSerializer();
 }
 
-class _$AccountServiceVersionResponseSerializer implements StructuredSerializer<AccountServiceVersionResponse> {
-    @override
-    final Iterable<Type> types = const [AccountServiceVersionResponse, _$AccountServiceVersionResponse];
+class _$AccountServiceVersionResponseSerializer implements PrimitiveSerializer<AccountServiceVersionResponse> {
+  @override
+  final Iterable<Type> types = const [AccountServiceVersionResponse, _$AccountServiceVersionResponse];
 
-    @override
-    final String wireName = r'AccountServiceVersionResponse';
+  @override
+  final String wireName = r'AccountServiceVersionResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, AccountServiceVersionResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.latestCode != null) {
-            result
-                ..add(r'latestCode')
-                ..add(serializers.serialize(object.latestCode,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.latestVersion != null) {
-            result
-                ..add(r'latestVersion')
-                ..add(serializers.serialize(object.latestVersion,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.isMandatory != null) {
-            result
-                ..add(r'isMandatory')
-                ..add(serializers.serialize(object.isMandatory,
-                    specifiedType: const FullType(bool)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    AccountServiceVersionResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.latestCode != null) {
+      yield r'latestCode';
+      yield serializers.serialize(
+        object.latestCode,
+        specifiedType: const FullType.nullable(String),
+      );
     }
-
-    @override
-    AccountServiceVersionResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = AccountServiceVersionResponseBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'latestCode':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.latestCode = valueDes;
-                    break;
-                case r'latestVersion':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.latestVersion = valueDes;
-                    break;
-                case r'isMandatory':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.isMandatory = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+    if (object.latestVersion != null) {
+      yield r'latestVersion';
+      yield serializers.serialize(
+        object.latestVersion,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+    if (object.isMandatory != null) {
+      yield r'isMandatory';
+      yield serializers.serialize(
+        object.isMandatory,
+        specifiedType: const FullType(bool),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    AccountServiceVersionResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required AccountServiceVersionResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'latestCode':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.latestCode = valueDes;
+          break;
+        case r'latestVersion':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.latestVersion = valueDes;
+          break;
+        case r'isMandatory':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isMandatory = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  AccountServiceVersionResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = AccountServiceVersionResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

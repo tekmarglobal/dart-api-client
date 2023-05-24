@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/product_service_r_product.dart';
 import 'package:built_value/built_value.dart';
@@ -15,91 +16,133 @@ part 'rest_result_of_list_of_product_service_r_product.g.dart';
 /// * [success] 
 /// * [message] 
 /// * [data] 
+@BuiltValue()
 abstract class RestResultOfListOfProductServiceRProduct implements Built<RestResultOfListOfProductServiceRProduct, RestResultOfListOfProductServiceRProductBuilder> {
-    @BuiltValueField(wireName: r'success')
-    bool? get success;
+  @BuiltValueField(wireName: r'success')
+  bool? get success;
 
-    @BuiltValueField(wireName: r'message')
-    String? get message;
+  @BuiltValueField(wireName: r'message')
+  String? get message;
 
-    @BuiltValueField(wireName: r'data')
-    BuiltList<ProductServiceRProduct>? get data;
+  @BuiltValueField(wireName: r'data')
+  BuiltList<ProductServiceRProduct>? get data;
 
-    RestResultOfListOfProductServiceRProduct._();
+  RestResultOfListOfProductServiceRProduct._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(RestResultOfListOfProductServiceRProductBuilder b) => b;
+  factory RestResultOfListOfProductServiceRProduct([void updates(RestResultOfListOfProductServiceRProductBuilder b)]) = _$RestResultOfListOfProductServiceRProduct;
 
-    factory RestResultOfListOfProductServiceRProduct([void updates(RestResultOfListOfProductServiceRProductBuilder b)]) = _$RestResultOfListOfProductServiceRProduct;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(RestResultOfListOfProductServiceRProductBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<RestResultOfListOfProductServiceRProduct> get serializer => _$RestResultOfListOfProductServiceRProductSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<RestResultOfListOfProductServiceRProduct> get serializer => _$RestResultOfListOfProductServiceRProductSerializer();
 }
 
-class _$RestResultOfListOfProductServiceRProductSerializer implements StructuredSerializer<RestResultOfListOfProductServiceRProduct> {
-    @override
-    final Iterable<Type> types = const [RestResultOfListOfProductServiceRProduct, _$RestResultOfListOfProductServiceRProduct];
+class _$RestResultOfListOfProductServiceRProductSerializer implements PrimitiveSerializer<RestResultOfListOfProductServiceRProduct> {
+  @override
+  final Iterable<Type> types = const [RestResultOfListOfProductServiceRProduct, _$RestResultOfListOfProductServiceRProduct];
 
-    @override
-    final String wireName = r'RestResultOfListOfProductServiceRProduct';
+  @override
+  final String wireName = r'RestResultOfListOfProductServiceRProduct';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, RestResultOfListOfProductServiceRProduct object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.success != null) {
-            result
-                ..add(r'success')
-                ..add(serializers.serialize(object.success,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.message != null) {
-            result
-                ..add(r'message')
-                ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.data != null) {
-            result
-                ..add(r'data')
-                ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)])));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    RestResultOfListOfProductServiceRProduct object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.success != null) {
+      yield r'success';
+      yield serializers.serialize(
+        object.success,
+        specifiedType: const FullType(bool),
+      );
     }
-
-    @override
-    RestResultOfListOfProductServiceRProduct deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = RestResultOfListOfProductServiceRProductBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'success':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.success = valueDes;
-                    break;
-                case r'message':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.message = valueDes;
-                    break;
-                case r'data':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)])) as BuiltList<ProductServiceRProduct>?;
-                    if (valueDes == null) continue;
-                    result.data.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+    if (object.message != null) {
+      yield r'message';
+      yield serializers.serialize(
+        object.message,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)]),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    RestResultOfListOfProductServiceRProduct object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required RestResultOfListOfProductServiceRProductBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'success':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.success = valueDes;
+          break;
+        case r'message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.message = valueDes;
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(ProductServiceRProduct)]),
+          ) as BuiltList<ProductServiceRProduct>?;
+          if (valueDes == null) continue;
+          result.data.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  RestResultOfListOfProductServiceRProduct deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = RestResultOfListOfProductServiceRProductBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

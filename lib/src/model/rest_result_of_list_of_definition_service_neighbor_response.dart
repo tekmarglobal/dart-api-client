@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:openapi/src/model/definition_service_neighbor_response.dart';
 import 'package:built_value/built_value.dart';
@@ -15,91 +16,133 @@ part 'rest_result_of_list_of_definition_service_neighbor_response.g.dart';
 /// * [success] 
 /// * [message] 
 /// * [data] 
+@BuiltValue()
 abstract class RestResultOfListOfDefinitionServiceNeighborResponse implements Built<RestResultOfListOfDefinitionServiceNeighborResponse, RestResultOfListOfDefinitionServiceNeighborResponseBuilder> {
-    @BuiltValueField(wireName: r'success')
-    bool? get success;
+  @BuiltValueField(wireName: r'success')
+  bool? get success;
 
-    @BuiltValueField(wireName: r'message')
-    String? get message;
+  @BuiltValueField(wireName: r'message')
+  String? get message;
 
-    @BuiltValueField(wireName: r'data')
-    BuiltList<DefinitionServiceNeighborResponse>? get data;
+  @BuiltValueField(wireName: r'data')
+  BuiltList<DefinitionServiceNeighborResponse>? get data;
 
-    RestResultOfListOfDefinitionServiceNeighborResponse._();
+  RestResultOfListOfDefinitionServiceNeighborResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b) => b;
+  factory RestResultOfListOfDefinitionServiceNeighborResponse([void updates(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b)]) = _$RestResultOfListOfDefinitionServiceNeighborResponse;
 
-    factory RestResultOfListOfDefinitionServiceNeighborResponse([void updates(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b)]) = _$RestResultOfListOfDefinitionServiceNeighborResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(RestResultOfListOfDefinitionServiceNeighborResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<RestResultOfListOfDefinitionServiceNeighborResponse> get serializer => _$RestResultOfListOfDefinitionServiceNeighborResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<RestResultOfListOfDefinitionServiceNeighborResponse> get serializer => _$RestResultOfListOfDefinitionServiceNeighborResponseSerializer();
 }
 
-class _$RestResultOfListOfDefinitionServiceNeighborResponseSerializer implements StructuredSerializer<RestResultOfListOfDefinitionServiceNeighborResponse> {
-    @override
-    final Iterable<Type> types = const [RestResultOfListOfDefinitionServiceNeighborResponse, _$RestResultOfListOfDefinitionServiceNeighborResponse];
+class _$RestResultOfListOfDefinitionServiceNeighborResponseSerializer implements PrimitiveSerializer<RestResultOfListOfDefinitionServiceNeighborResponse> {
+  @override
+  final Iterable<Type> types = const [RestResultOfListOfDefinitionServiceNeighborResponse, _$RestResultOfListOfDefinitionServiceNeighborResponse];
 
-    @override
-    final String wireName = r'RestResultOfListOfDefinitionServiceNeighborResponse';
+  @override
+  final String wireName = r'RestResultOfListOfDefinitionServiceNeighborResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, RestResultOfListOfDefinitionServiceNeighborResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.success != null) {
-            result
-                ..add(r'success')
-                ..add(serializers.serialize(object.success,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.message != null) {
-            result
-                ..add(r'message')
-                ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.data != null) {
-            result
-                ..add(r'data')
-                ..add(serializers.serialize(object.data,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceNeighborResponse)])));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    RestResultOfListOfDefinitionServiceNeighborResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.success != null) {
+      yield r'success';
+      yield serializers.serialize(
+        object.success,
+        specifiedType: const FullType(bool),
+      );
     }
-
-    @override
-    RestResultOfListOfDefinitionServiceNeighborResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = RestResultOfListOfDefinitionServiceNeighborResponseBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'success':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.success = valueDes;
-                    break;
-                case r'message':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.message = valueDes;
-                    break;
-                case r'data':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceNeighborResponse)])) as BuiltList<DefinitionServiceNeighborResponse>?;
-                    if (valueDes == null) continue;
-                    result.data.replace(valueDes);
-                    break;
-            }
-        }
-        return result.build();
+    if (object.message != null) {
+      yield r'message';
+      yield serializers.serialize(
+        object.message,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceNeighborResponse)]),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    RestResultOfListOfDefinitionServiceNeighborResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required RestResultOfListOfDefinitionServiceNeighborResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'success':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.success = valueDes;
+          break;
+        case r'message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.message = valueDes;
+          break;
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(DefinitionServiceNeighborResponse)]),
+          ) as BuiltList<DefinitionServiceNeighborResponse>?;
+          if (valueDes == null) continue;
+          result.data.replace(valueDes);
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  RestResultOfListOfDefinitionServiceNeighborResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = RestResultOfListOfDefinitionServiceNeighborResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

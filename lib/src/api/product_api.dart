@@ -81,9 +81,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -95,22 +96,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfProductServiceFavoriteListResponse _responseData;
+    RestResultOfProductServiceFavoriteListResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfProductServiceFavoriteListResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfProductServiceFavoriteListResponse),
       ) as RestResultOfProductServiceFavoriteListResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfProductServiceFavoriteListResponse>(
@@ -181,9 +183,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -195,22 +198,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfProductServiceFavoriteListResponse _responseData;
+    RestResultOfProductServiceFavoriteListResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfProductServiceFavoriteListResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfProductServiceFavoriteListResponse),
       ) as RestResultOfProductServiceFavoriteListResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfProductServiceFavoriteListResponse>(
@@ -274,22 +278,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfProductServiceFavoriteListResponse _responseData;
+    RestResultOfProductServiceFavoriteListResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfProductServiceFavoriteListResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfProductServiceFavoriteListResponse),
       ) as RestResultOfProductServiceFavoriteListResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfProductServiceFavoriteListResponse>(
@@ -416,9 +421,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -430,22 +436,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfProductServiceRProduct _responseData;
+    RestResultOfProductServiceRProduct? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfProductServiceRProduct);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfProductServiceRProduct),
       ) as RestResultOfProductServiceRProduct;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfProductServiceRProduct>(
@@ -516,9 +523,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -530,22 +538,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfProductServiceRProduct _responseData;
+    RestResultOfListOfProductServiceRProduct? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfProductServiceRProduct);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfProductServiceRProduct),
       ) as RestResultOfListOfProductServiceRProduct;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfProductServiceRProduct>(
@@ -609,22 +618,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfProductServiceRProduct _responseData;
+    RestResultOfListOfProductServiceRProduct? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfProductServiceRProduct);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfProductServiceRProduct),
       ) as RestResultOfListOfProductServiceRProduct;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfProductServiceRProduct>(
@@ -695,9 +705,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -709,22 +720,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfProductServiceRProduct _responseData;
+    RestResultOfListOfProductServiceRProduct? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfProductServiceRProduct);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfProductServiceRProduct),
       ) as RestResultOfListOfProductServiceRProduct;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfProductServiceRProduct>(
@@ -795,9 +807,10 @@ class ProductApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -809,22 +822,23 @@ class ProductApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfProductServiceRecommendProductResponse _responseData;
+    RestResultOfProductServiceRecommendProductResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfProductServiceRecommendProductResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfProductServiceRecommendProductResponse),
       ) as RestResultOfProductServiceRecommendProductResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfProductServiceRecommendProductResponse>(

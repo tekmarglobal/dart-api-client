@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,62 +12,98 @@ part 'cart_service_create_cart_response.g.dart';
 ///
 /// Properties:
 /// * [messages] 
+@BuiltValue()
 abstract class CartServiceCreateCartResponse implements Built<CartServiceCreateCartResponse, CartServiceCreateCartResponseBuilder> {
-    @BuiltValueField(wireName: r'messages')
-    String? get messages;
+  @BuiltValueField(wireName: r'messages')
+  String? get messages;
 
-    CartServiceCreateCartResponse._();
+  CartServiceCreateCartResponse._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(CartServiceCreateCartResponseBuilder b) => b;
+  factory CartServiceCreateCartResponse([void updates(CartServiceCreateCartResponseBuilder b)]) = _$CartServiceCreateCartResponse;
 
-    factory CartServiceCreateCartResponse([void updates(CartServiceCreateCartResponseBuilder b)]) = _$CartServiceCreateCartResponse;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(CartServiceCreateCartResponseBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<CartServiceCreateCartResponse> get serializer => _$CartServiceCreateCartResponseSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<CartServiceCreateCartResponse> get serializer => _$CartServiceCreateCartResponseSerializer();
 }
 
-class _$CartServiceCreateCartResponseSerializer implements StructuredSerializer<CartServiceCreateCartResponse> {
-    @override
-    final Iterable<Type> types = const [CartServiceCreateCartResponse, _$CartServiceCreateCartResponse];
+class _$CartServiceCreateCartResponseSerializer implements PrimitiveSerializer<CartServiceCreateCartResponse> {
+  @override
+  final Iterable<Type> types = const [CartServiceCreateCartResponse, _$CartServiceCreateCartResponse];
 
-    @override
-    final String wireName = r'CartServiceCreateCartResponse';
+  @override
+  final String wireName = r'CartServiceCreateCartResponse';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, CartServiceCreateCartResponse object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.messages != null) {
-            result
-                ..add(r'messages')
-                ..add(serializers.serialize(object.messages,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    CartServiceCreateCartResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.messages != null) {
+      yield r'messages';
+      yield serializers.serialize(
+        object.messages,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+  }
 
-    @override
-    CartServiceCreateCartResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = CartServiceCreateCartResponseBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    CartServiceCreateCartResponse object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'messages':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.messages = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required CartServiceCreateCartResponseBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'messages':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.messages = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  CartServiceCreateCartResponse deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = CartServiceCreateCartResponseBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

@@ -68,22 +68,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -154,22 +155,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -240,22 +242,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<int> _responseData;
+    BuiltList<int>? _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(int)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(int)]),
       ) as BuiltList<int>;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<BuiltList<int>>(
@@ -335,22 +338,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -421,22 +425,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -507,22 +512,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -593,22 +599,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -740,22 +747,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(
@@ -835,22 +843,23 @@ class CatalogApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCatalogServiceRCategory _responseData;
+    RestResultOfCatalogServiceRCategory? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCatalogServiceRCategory);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCatalogServiceRCategory),
       ) as RestResultOfCatalogServiceRCategory;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCatalogServiceRCategory>(

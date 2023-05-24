@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,62 +12,98 @@ part 'product_service_recommend_product_request.g.dart';
 ///
 /// Properties:
 /// * [message] 
+@BuiltValue()
 abstract class ProductServiceRecommendProductRequest implements Built<ProductServiceRecommendProductRequest, ProductServiceRecommendProductRequestBuilder> {
-    @BuiltValueField(wireName: r'message')
-    String? get message;
+  @BuiltValueField(wireName: r'message')
+  String? get message;
 
-    ProductServiceRecommendProductRequest._();
+  ProductServiceRecommendProductRequest._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(ProductServiceRecommendProductRequestBuilder b) => b;
+  factory ProductServiceRecommendProductRequest([void updates(ProductServiceRecommendProductRequestBuilder b)]) = _$ProductServiceRecommendProductRequest;
 
-    factory ProductServiceRecommendProductRequest([void updates(ProductServiceRecommendProductRequestBuilder b)]) = _$ProductServiceRecommendProductRequest;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(ProductServiceRecommendProductRequestBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<ProductServiceRecommendProductRequest> get serializer => _$ProductServiceRecommendProductRequestSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<ProductServiceRecommendProductRequest> get serializer => _$ProductServiceRecommendProductRequestSerializer();
 }
 
-class _$ProductServiceRecommendProductRequestSerializer implements StructuredSerializer<ProductServiceRecommendProductRequest> {
-    @override
-    final Iterable<Type> types = const [ProductServiceRecommendProductRequest, _$ProductServiceRecommendProductRequest];
+class _$ProductServiceRecommendProductRequestSerializer implements PrimitiveSerializer<ProductServiceRecommendProductRequest> {
+  @override
+  final Iterable<Type> types = const [ProductServiceRecommendProductRequest, _$ProductServiceRecommendProductRequest];
 
-    @override
-    final String wireName = r'ProductServiceRecommendProductRequest';
+  @override
+  final String wireName = r'ProductServiceRecommendProductRequest';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, ProductServiceRecommendProductRequest object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.message != null) {
-            result
-                ..add(r'message')
-                ..add(serializers.serialize(object.message,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    ProductServiceRecommendProductRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.message != null) {
+      yield r'message';
+      yield serializers.serialize(
+        object.message,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+  }
 
-    @override
-    ProductServiceRecommendProductRequest deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = ProductServiceRecommendProductRequestBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    ProductServiceRecommendProductRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'message':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.message = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required ProductServiceRecommendProductRequestBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.message = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  ProductServiceRecommendProductRequest deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = ProductServiceRecommendProductRequestBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

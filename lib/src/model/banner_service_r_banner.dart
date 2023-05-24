@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -16,134 +17,185 @@ part 'banner_service_r_banner.g.dart';
 /// * [webImage] 
 /// * [index] 
 /// * [id] 
+@BuiltValue()
 abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, BannerServiceRBannerBuilder> {
-    @BuiltValueField(wireName: r'name')
-    String? get name;
+  @BuiltValueField(wireName: r'name')
+  String? get name;
 
-    @BuiltValueField(wireName: r'active')
-    bool? get active;
+  @BuiltValueField(wireName: r'active')
+  bool? get active;
 
-    @BuiltValueField(wireName: r'image')
-    String? get image;
+  @BuiltValueField(wireName: r'image')
+  String? get image;
 
-    @BuiltValueField(wireName: r'webImage')
-    String? get webImage;
+  @BuiltValueField(wireName: r'webImage')
+  String? get webImage;
 
-    @BuiltValueField(wireName: r'index')
-    int? get index;
+  @BuiltValueField(wireName: r'index')
+  int? get index;
 
-    @BuiltValueField(wireName: r'id')
-    int? get id;
+  @BuiltValueField(wireName: r'id')
+  int? get id;
 
-    BannerServiceRBanner._();
+  BannerServiceRBanner._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(BannerServiceRBannerBuilder b) => b;
+  factory BannerServiceRBanner([void updates(BannerServiceRBannerBuilder b)]) = _$BannerServiceRBanner;
 
-    factory BannerServiceRBanner([void updates(BannerServiceRBannerBuilder b)]) = _$BannerServiceRBanner;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(BannerServiceRBannerBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<BannerServiceRBanner> get serializer => _$BannerServiceRBannerSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<BannerServiceRBanner> get serializer => _$BannerServiceRBannerSerializer();
 }
 
-class _$BannerServiceRBannerSerializer implements StructuredSerializer<BannerServiceRBanner> {
-    @override
-    final Iterable<Type> types = const [BannerServiceRBanner, _$BannerServiceRBanner];
+class _$BannerServiceRBannerSerializer implements PrimitiveSerializer<BannerServiceRBanner> {
+  @override
+  final Iterable<Type> types = const [BannerServiceRBanner, _$BannerServiceRBanner];
 
-    @override
-    final String wireName = r'BannerServiceRBanner';
+  @override
+  final String wireName = r'BannerServiceRBanner';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, BannerServiceRBanner object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.name != null) {
-            result
-                ..add(r'name')
-                ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.active != null) {
-            result
-                ..add(r'active')
-                ..add(serializers.serialize(object.active,
-                    specifiedType: const FullType(bool)));
-        }
-        if (object.image != null) {
-            result
-                ..add(r'image')
-                ..add(serializers.serialize(object.image,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.webImage != null) {
-            result
-                ..add(r'webImage')
-                ..add(serializers.serialize(object.webImage,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        if (object.index != null) {
-            result
-                ..add(r'index')
-                ..add(serializers.serialize(object.index,
-                    specifiedType: const FullType(int)));
-        }
-        if (object.id != null) {
-            result
-                ..add(r'id')
-                ..add(serializers.serialize(object.id,
-                    specifiedType: const FullType(int)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    BannerServiceRBanner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType.nullable(String),
+      );
     }
-
-    @override
-    BannerServiceRBanner deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = BannerServiceRBannerBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'name':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.name = valueDes;
-                    break;
-                case r'active':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(bool)) as bool;
-                    result.active = valueDes;
-                    break;
-                case r'image':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.image = valueDes;
-                    break;
-                case r'webImage':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.webImage = valueDes;
-                    break;
-                case r'index':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.index = valueDes;
-                    break;
-                case r'id':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(int)) as int;
-                    result.id = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+    if (object.active != null) {
+      yield r'active';
+      yield serializers.serialize(
+        object.active,
+        specifiedType: const FullType(bool),
+      );
     }
+    if (object.image != null) {
+      yield r'image';
+      yield serializers.serialize(
+        object.image,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.webImage != null) {
+      yield r'webImage';
+      yield serializers.serialize(
+        object.webImage,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.index != null) {
+      yield r'index';
+      yield serializers.serialize(
+        object.index,
+        specifiedType: const FullType(int),
+      );
+    }
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(int),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    BannerServiceRBanner object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required BannerServiceRBannerBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.name = valueDes;
+          break;
+        case r'active':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.active = valueDes;
+          break;
+        case r'image':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.image = valueDes;
+          break;
+        case r'webImage':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.webImage = valueDes;
+          break;
+        case r'index':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.index = valueDes;
+          break;
+        case r'id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.id = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  BannerServiceRBanner deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = BannerServiceRBannerBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

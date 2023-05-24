@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_element
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,62 +12,98 @@ part 'payment_service_payment_transaction_request.g.dart';
 ///
 /// Properties:
 /// * [transactionUid] 
+@BuiltValue()
 abstract class PaymentServicePaymentTransactionRequest implements Built<PaymentServicePaymentTransactionRequest, PaymentServicePaymentTransactionRequestBuilder> {
-    @BuiltValueField(wireName: r'transactionUid')
-    String? get transactionUid;
+  @BuiltValueField(wireName: r'transactionUid')
+  String? get transactionUid;
 
-    PaymentServicePaymentTransactionRequest._();
+  PaymentServicePaymentTransactionRequest._();
 
-    @BuiltValueHook(initializeBuilder: true)
-    static void _defaults(PaymentServicePaymentTransactionRequestBuilder b) => b;
+  factory PaymentServicePaymentTransactionRequest([void updates(PaymentServicePaymentTransactionRequestBuilder b)]) = _$PaymentServicePaymentTransactionRequest;
 
-    factory PaymentServicePaymentTransactionRequest([void updates(PaymentServicePaymentTransactionRequestBuilder b)]) = _$PaymentServicePaymentTransactionRequest;
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(PaymentServicePaymentTransactionRequestBuilder b) => b;
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<PaymentServicePaymentTransactionRequest> get serializer => _$PaymentServicePaymentTransactionRequestSerializer();
+  @BuiltValueSerializer(custom: true)
+  static Serializer<PaymentServicePaymentTransactionRequest> get serializer => _$PaymentServicePaymentTransactionRequestSerializer();
 }
 
-class _$PaymentServicePaymentTransactionRequestSerializer implements StructuredSerializer<PaymentServicePaymentTransactionRequest> {
-    @override
-    final Iterable<Type> types = const [PaymentServicePaymentTransactionRequest, _$PaymentServicePaymentTransactionRequest];
+class _$PaymentServicePaymentTransactionRequestSerializer implements PrimitiveSerializer<PaymentServicePaymentTransactionRequest> {
+  @override
+  final Iterable<Type> types = const [PaymentServicePaymentTransactionRequest, _$PaymentServicePaymentTransactionRequest];
 
-    @override
-    final String wireName = r'PaymentServicePaymentTransactionRequest';
+  @override
+  final String wireName = r'PaymentServicePaymentTransactionRequest';
 
-    @override
-    Iterable<Object?> serialize(Serializers serializers, PaymentServicePaymentTransactionRequest object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object?>[];
-        if (object.transactionUid != null) {
-            result
-                ..add(r'transactionUid')
-                ..add(serializers.serialize(object.transactionUid,
-                    specifiedType: const FullType.nullable(String)));
-        }
-        return result;
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    PaymentServicePaymentTransactionRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.transactionUid != null) {
+      yield r'transactionUid';
+      yield serializers.serialize(
+        object.transactionUid,
+        specifiedType: const FullType.nullable(String),
+      );
     }
+  }
 
-    @override
-    PaymentServicePaymentTransactionRequest deserialize(Serializers serializers, Iterable<Object?> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = PaymentServicePaymentTransactionRequestBuilder();
+  @override
+  Object serialize(
+    Serializers serializers,
+    PaymentServicePaymentTransactionRequest object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
 
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final Object? value = iterator.current;
-            
-            switch (key) {
-                case r'transactionUid':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(String)) as String?;
-                    if (valueDes == null) continue;
-                    result.transactionUid = valueDes;
-                    break;
-            }
-        }
-        return result.build();
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required PaymentServicePaymentTransactionRequestBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'transactionUid':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.transactionUid = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
     }
+  }
+
+  @override
+  PaymentServicePaymentTransactionRequest deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = PaymentServicePaymentTransactionRequestBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
 }
 

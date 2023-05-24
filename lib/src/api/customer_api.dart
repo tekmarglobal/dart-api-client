@@ -81,9 +81,10 @@ class CustomerApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -95,22 +96,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceDeleteAddressResponse _responseData;
+    RestResultOfCustomerServiceDeleteAddressResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceDeleteAddressResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceDeleteAddressResponse),
       ) as RestResultOfCustomerServiceDeleteAddressResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceDeleteAddressResponse>(
@@ -174,22 +176,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceCustomerAddressResponse _responseData;
+    RestResultOfCustomerServiceCustomerAddressResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceCustomerAddressResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceCustomerAddressResponse),
       ) as RestResultOfCustomerServiceCustomerAddressResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
@@ -263,22 +266,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfListOfCustomerServiceCustomerMessageResponse _responseData;
+    RestResultOfListOfCustomerServiceCustomerMessageResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfListOfCustomerServiceCustomerMessageResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfListOfCustomerServiceCustomerMessageResponse),
       ) as RestResultOfListOfCustomerServiceCustomerMessageResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfListOfCustomerServiceCustomerMessageResponse>(
@@ -342,22 +346,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceCustomerResponse _responseData;
+    RestResultOfCustomerServiceCustomerResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceCustomerResponse),
       ) as RestResultOfCustomerServiceCustomerResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceCustomerResponse>(
@@ -428,9 +433,10 @@ class CustomerApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -442,22 +448,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceCustomerAddressResponse _responseData;
+    RestResultOfCustomerServiceCustomerAddressResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceCustomerAddressResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceCustomerAddressResponse),
       ) as RestResultOfCustomerServiceCustomerAddressResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceCustomerAddressResponse>(
@@ -528,9 +535,10 @@ class CustomerApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -542,22 +550,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceCustomerResponse _responseData;
+    RestResultOfCustomerServiceCustomerResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceCustomerResponse),
       ) as RestResultOfCustomerServiceCustomerResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceCustomerResponse>(
@@ -628,9 +637,10 @@ class CustomerApi {
           _dio.options,
           _path,
         ),
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     final _response = await _dio.request<Object>(
@@ -642,22 +652,23 @@ class CustomerApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    RestResultOfCustomerServiceCustomerResponse _responseData;
+    RestResultOfCustomerServiceCustomerResponse? _responseData;
 
     try {
-      const _responseType = FullType(RestResultOfCustomerServiceCustomerResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfCustomerServiceCustomerResponse),
       ) as RestResultOfCustomerServiceCustomerResponse;
 
     } catch (error, stackTrace) {
       throw DioError(
         requestOptions: _response.requestOptions,
         response: _response,
-        type: DioErrorType.other,
+        type: DioErrorType.unknown,
         error: error,
-      )..stackTrace = stackTrace;
+        stackTrace: stackTrace,
+      );
     }
 
     return Response<RestResultOfCustomerServiceCustomerResponse>(
