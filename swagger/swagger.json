@@ -6715,6 +6715,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

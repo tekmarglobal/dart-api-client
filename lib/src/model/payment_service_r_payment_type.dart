@@ -13,6 +13,7 @@ part 'payment_service_r_payment_type.g.dart';
 /// Properties:
 /// * [id] 
 /// * [name] 
+/// * [code] 
 @BuiltValue()
 abstract class PaymentServiceRPaymentType implements Built<PaymentServiceRPaymentType, PaymentServiceRPaymentTypeBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -20,6 +21,9 @@ abstract class PaymentServiceRPaymentType implements Built<PaymentServiceRPaymen
 
   @BuiltValueField(wireName: r'name')
   String? get name;
+
+  @BuiltValueField(wireName: r'code')
+  String? get code;
 
   PaymentServiceRPaymentType._();
 
@@ -55,6 +59,13 @@ class _$PaymentServiceRPaymentTypeSerializer implements PrimitiveSerializer<Paym
       yield r'name';
       yield serializers.serialize(
         object.name,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.code != null) {
+      yield r'code';
+      yield serializers.serialize(
+        object.code,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -95,6 +106,14 @@ class _$PaymentServiceRPaymentTypeSerializer implements PrimitiveSerializer<Paym
           ) as String?;
           if (valueDes == null) continue;
           result.name = valueDes;
+          break;
+        case r'code':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.code = valueDes;
           break;
         default:
           unhandled.add(key);

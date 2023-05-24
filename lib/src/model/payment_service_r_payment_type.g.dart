@@ -11,12 +11,14 @@ class _$PaymentServiceRPaymentType extends PaymentServiceRPaymentType {
   final int? id;
   @override
   final String? name;
+  @override
+  final String? code;
 
   factory _$PaymentServiceRPaymentType(
           [void Function(PaymentServiceRPaymentTypeBuilder)? updates]) =>
       (new PaymentServiceRPaymentTypeBuilder()..update(updates))._build();
 
-  _$PaymentServiceRPaymentType._({this.id, this.name}) : super._();
+  _$PaymentServiceRPaymentType._({this.id, this.name, this.code}) : super._();
 
   @override
   PaymentServiceRPaymentType rebuild(
@@ -32,19 +34,21 @@ class _$PaymentServiceRPaymentType extends PaymentServiceRPaymentType {
     if (identical(other, this)) return true;
     return other is PaymentServiceRPaymentType &&
         id == other.id &&
-        name == other.name;
+        name == other.name &&
+        code == other.code;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, id.hashCode), name.hashCode));
+    return $jf($jc($jc($jc(0, id.hashCode), name.hashCode), code.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'PaymentServiceRPaymentType')
           ..add('id', id)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('code', code))
         .toString();
   }
 }
@@ -62,6 +66,10 @@ class PaymentServiceRPaymentTypeBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  String? _code;
+  String? get code => _$this._code;
+  set code(String? code) => _$this._code = code;
+
   PaymentServiceRPaymentTypeBuilder() {
     PaymentServiceRPaymentType._defaults(this);
   }
@@ -71,6 +79,7 @@ class PaymentServiceRPaymentTypeBuilder
     if ($v != null) {
       _id = $v.id;
       _name = $v.name;
+      _code = $v.code;
       _$v = null;
     }
     return this;
@@ -91,8 +100,8 @@ class PaymentServiceRPaymentTypeBuilder
   PaymentServiceRPaymentType build() => _build();
 
   _$PaymentServiceRPaymentType _build() {
-    final _$result =
-        _$v ?? new _$PaymentServiceRPaymentType._(id: id, name: name);
+    final _$result = _$v ??
+        new _$PaymentServiceRPaymentType._(id: id, name: name, code: code);
     replace(_$result);
     return _$result;
   }
