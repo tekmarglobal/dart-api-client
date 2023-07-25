@@ -1,12 +1,13 @@
-# Kiler.Dotnet.ApiClient.Model.PaymentServiceRPaymentType
+# Kiler.Dotnet.ApiClient.Model.PaymentServiceSodexoPaymentRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Code** | **string** |  | [optional] 
+**GsmNumber** | **string** |  | [optional] 
+**OtpCode** | **string** |  | [optional] 
+**Amount** | **double** |  | [optional] 
+**TransactionUid** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

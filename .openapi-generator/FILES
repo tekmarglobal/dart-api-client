@@ -91,6 +91,8 @@ docs/PaymentServicePaymentTransactionRequest.md
 docs/PaymentServicePaymentTransactionResponse.md
 docs/PaymentServicePaymentTypeResponse.md
 docs/PaymentServiceRPaymentType.md
+docs/PaymentServiceSodexoPaymentRequest.md
+docs/PaymentServiceSodexoPaymentResponse.md
 docs/ProductApi.md
 docs/ProductServiceFavoriteListResponse.md
 docs/ProductServiceFavoriteRequest.md
@@ -146,6 +148,7 @@ docs/RestResultOfOrderServiceOrderResponse.md
 docs/RestResultOfPaymentServicePaymentResponse.md
 docs/RestResultOfPaymentServicePaymentTransactionResponse.md
 docs/RestResultOfPaymentServicePaymentTypeResponse.md
+docs/RestResultOfPaymentServiceSodexoPaymentResponse.md
 docs/RestResultOfProductServiceFavoriteListResponse.md
 docs/RestResultOfProductServiceRProduct.md
 docs/RestResultOfProductServiceRecommendProductResponse.md
@@ -156,6 +159,9 @@ docs/RestResultOfSystemInt32.md
 docs/RestResultOfSystemObject.md
 git_push.sh
 src/Kiler.Dotnet.ApiClient.Test/Kiler.Dotnet.ApiClient.Test.csproj
+src/Kiler.Dotnet.ApiClient.Test/Model/PaymentServiceSodexoPaymentRequestTests.cs
+src/Kiler.Dotnet.ApiClient.Test/Model/PaymentServiceSodexoPaymentResponseTests.cs
+src/Kiler.Dotnet.ApiClient.Test/Model/RestResultOfPaymentServiceSodexoPaymentResponseTests.cs
 src/Kiler.Dotnet.ApiClient/Api/AccountApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AdminApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AffiliateApi.cs
@@ -265,6 +271,8 @@ src/Kiler.Dotnet.ApiClient/Model/PaymentServicePaymentTransactionRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/PaymentServicePaymentTransactionResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/PaymentServicePaymentTypeResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/PaymentServiceRPaymentType.cs
+src/Kiler.Dotnet.ApiClient/Model/PaymentServiceSodexoPaymentRequest.cs
+src/Kiler.Dotnet.ApiClient/Model/PaymentServiceSodexoPaymentResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/ProductServiceFavoriteListResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/ProductServiceFavoriteRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/ProductServiceProductAlternativesRequest.cs
@@ -318,6 +326,7 @@ src/Kiler.Dotnet.ApiClient/Model/RestResultOfOrderServiceOrderResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfPaymentServicePaymentResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfPaymentServicePaymentTransactionResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfPaymentServicePaymentTypeResponse.cs
+src/Kiler.Dotnet.ApiClient/Model/RestResultOfPaymentServiceSodexoPaymentResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfProductServiceFavoriteListResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfProductServiceRProduct.cs
 src/Kiler.Dotnet.ApiClient/Model/RestResultOfProductServiceRecommendProductResponse.cs

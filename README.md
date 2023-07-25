@@ -194,6 +194,7 @@ Class | Method | HTTP request | Description
 *PaymentApi* | [**ApiPaymentGetPaymentTypesPost**](docs/PaymentApi.md#apipaymentgetpaymenttypespost) | **POST** /api/Payment/GetPaymentTypes | 
 *PaymentApi* | [**ApiPaymentPaymentFailPost**](docs/PaymentApi.md#apipaymentpaymentfailpost) | **POST** /api/Payment/PaymentFail | 
 *PaymentApi* | [**ApiPaymentPaymentSuccessPost**](docs/PaymentApi.md#apipaymentpaymentsuccesspost) | **POST** /api/Payment/PaymentSuccess | 
+*PaymentApi* | [**ApiPaymentSodexoPaymentPost**](docs/PaymentApi.md#apipaymentsodexopaymentpost) | **POST** /api/Payment/SodexoPayment | 
 *ProductApi* | [**ApiProductAddToFavoriteListPost**](docs/ProductApi.md#apiproductaddtofavoritelistpost) | **POST** /api/Product/AddToFavoriteList | 
 *ProductApi* | [**ApiProductDeleteFavoriteDelete**](docs/ProductApi.md#apiproductdeletefavoritedelete) | **DELETE** /api/Product/DeleteFavorite | 
 *ProductApi* | [**ApiProductGetFavoriteListPost**](docs/ProductApi.md#apiproductgetfavoritelistpost) | **POST** /api/Product/GetFavoriteList | 
@@ -286,6 +287,8 @@ Class | Method | HTTP request | Description
  - [Model.PaymentServicePaymentTransactionResponse](docs/PaymentServicePaymentTransactionResponse.md)
  - [Model.PaymentServicePaymentTypeResponse](docs/PaymentServicePaymentTypeResponse.md)
  - [Model.PaymentServiceRPaymentType](docs/PaymentServiceRPaymentType.md)
+ - [Model.PaymentServiceSodexoPaymentRequest](docs/PaymentServiceSodexoPaymentRequest.md)
+ - [Model.PaymentServiceSodexoPaymentResponse](docs/PaymentServiceSodexoPaymentResponse.md)
  - [Model.ProductServiceFavoriteListResponse](docs/ProductServiceFavoriteListResponse.md)
  - [Model.ProductServiceFavoriteRequest](docs/ProductServiceFavoriteRequest.md)
  - [Model.ProductServiceProductAlternativesRequest](docs/ProductServiceProductAlternativesRequest.md)
@@ -339,6 +342,7 @@ Class | Method | HTTP request | Description
  - [Model.RestResultOfPaymentServicePaymentResponse](docs/RestResultOfPaymentServicePaymentResponse.md)
  - [Model.RestResultOfPaymentServicePaymentTransactionResponse](docs/RestResultOfPaymentServicePaymentTransactionResponse.md)
  - [Model.RestResultOfPaymentServicePaymentTypeResponse](docs/RestResultOfPaymentServicePaymentTypeResponse.md)
+ - [Model.RestResultOfPaymentServiceSodexoPaymentResponse](docs/RestResultOfPaymentServiceSodexoPaymentResponse.md)
  - [Model.RestResultOfProductServiceFavoriteListResponse](docs/RestResultOfProductServiceFavoriteListResponse.md)
  - [Model.RestResultOfProductServiceRProduct](docs/RestResultOfProductServiceRProduct.md)
  - [Model.RestResultOfProductServiceRecommendProductResponse](docs/RestResultOfProductServiceRecommendProductResponse.md)

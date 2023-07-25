@@ -3398,6 +3398,54 @@
         }
       }
     },
+    "/api/Payment/SodexoPayment": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentServiceSodexoPaymentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentServiceSodexoPaymentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentServiceSodexoPaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfPaymentServiceSodexoPaymentResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfPaymentServiceSodexoPaymentResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfPaymentServiceSodexoPaymentResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Payment/CreatePaymentReturnUrl": {
       "post": {
         "tags": [
@@ -6667,6 +6715,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -6759,6 +6811,62 @@
           },
           "data": {
             "$ref": "#/components/schemas/PaymentServicePaymentResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentServiceSodexoPaymentRequest": {
+        "type": "object",
+        "properties": {
+          "gsmNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "otpCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "transactionUid": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentServiceSodexoPaymentResponse": {
+        "type": "object",
+        "properties": {
+          "rrn": {
+            "type": "string",
+            "nullable": true
+          },
+          "resultCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "resultMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestResultOfPaymentServiceSodexoPaymentResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/PaymentServiceSodexoPaymentResponse"
           }
         },
         "additionalProperties": false

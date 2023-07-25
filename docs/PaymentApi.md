@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**ApiPaymentGetPaymentTypesPost**](PaymentApi.md#apipaymentgetpaymenttypespost) | **POST** /api/Payment/GetPaymentTypes | 
 [**ApiPaymentPaymentFailPost**](PaymentApi.md#apipaymentpaymentfailpost) | **POST** /api/Payment/PaymentFail | 
 [**ApiPaymentPaymentSuccessPost**](PaymentApi.md#apipaymentpaymentsuccesspost) | **POST** /api/Payment/PaymentSuccess | 
+[**ApiPaymentSodexoPaymentPost**](PaymentApi.md#apipaymentsodexopaymentpost) | **POST** /api/Payment/SodexoPayment | 
 
 
 <a name="apipaymentchecktransactionpost"></a>
@@ -426,6 +427,79 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="apipaymentsodexopaymentpost"></a>
+# **ApiPaymentSodexoPaymentPost**
+> RestResultOfPaymentServiceSodexoPaymentResponse ApiPaymentSodexoPaymentPost (PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Kiler.Dotnet.ApiClient.Api;
+using Kiler.Dotnet.ApiClient.Client;
+using Kiler.Dotnet.ApiClient.Model;
+
+namespace Example
+{
+    public class ApiPaymentSodexoPaymentPostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost";
+            // Configure API key authorization: Bearer
+            config.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new PaymentApi(config);
+            var paymentServiceSodexoPaymentRequest = new PaymentServiceSodexoPaymentRequest(); // PaymentServiceSodexoPaymentRequest |  (optional) 
+
+            try
+            {
+                RestResultOfPaymentServiceSodexoPaymentResponse result = apiInstance.ApiPaymentSodexoPaymentPost(paymentServiceSodexoPaymentRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling PaymentApi.ApiPaymentSodexoPaymentPost: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentServiceSodexoPaymentRequest** | [**PaymentServiceSodexoPaymentRequest**](PaymentServiceSodexoPaymentRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfPaymentServiceSodexoPaymentResponse**](RestResultOfPaymentServiceSodexoPaymentResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
 
 
 ### HTTP response details

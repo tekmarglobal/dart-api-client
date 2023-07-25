@@ -26,41 +26,41 @@ using OpenAPIDateConverter = Kiler.Dotnet.ApiClient.Client.OpenAPIDateConverter;
 namespace Kiler.Dotnet.ApiClient.Model
 {
     /// <summary>
-    /// PaymentServiceRPaymentType
+    /// RestResultOfPaymentServiceSodexoPaymentResponse
     /// </summary>
-    [DataContract(Name = "PaymentServiceRPaymentType")]
-    public partial class PaymentServiceRPaymentType : IEquatable<PaymentServiceRPaymentType>, IValidatableObject
+    [DataContract(Name = "RestResultOfPaymentServiceSodexoPaymentResponse")]
+    public partial class RestResultOfPaymentServiceSodexoPaymentResponse : IEquatable<RestResultOfPaymentServiceSodexoPaymentResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentServiceRPaymentType" /> class.
+        /// Initializes a new instance of the <see cref="RestResultOfPaymentServiceSodexoPaymentResponse" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="code">code.</param>
-        public PaymentServiceRPaymentType(int id = default(int), string name = default(string), string code = default(string))
+        /// <param name="success">success.</param>
+        /// <param name="message">message.</param>
+        /// <param name="data">data.</param>
+        public RestResultOfPaymentServiceSodexoPaymentResponse(bool success = default(bool), string message = default(string), PaymentServiceSodexoPaymentResponse data = default(PaymentServiceSodexoPaymentResponse))
         {
-            this.Id = id;
-            this.Name = name;
-            this.Code = code;
+            this.Success = success;
+            this.Message = message;
+            this.Data = data;
         }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets Success
         /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
-        public int Id { get; set; }
+        [DataMember(Name = "success", EmitDefaultValue = true)]
+        public bool Success { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = true)]
-        public string Name { get; set; }
+        [DataMember(Name = "message", EmitDefaultValue = true)]
+        public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name = "code", EmitDefaultValue = true)]
-        public string Code { get; set; }
+        [DataMember(Name = "data", EmitDefaultValue = false)]
+        public PaymentServiceSodexoPaymentResponse Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -69,10 +69,10 @@ namespace Kiler.Dotnet.ApiClient.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentServiceRPaymentType {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("class RestResultOfPaymentServiceSodexoPaymentResponse {\n");
+            sb.Append("  Success: ").Append(Success).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,15 +93,15 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentServiceRPaymentType);
+            return this.Equals(input as RestResultOfPaymentServiceSodexoPaymentResponse);
         }
 
         /// <summary>
-        /// Returns true if PaymentServiceRPaymentType instances are equal
+        /// Returns true if RestResultOfPaymentServiceSodexoPaymentResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentServiceRPaymentType to be compared</param>
+        /// <param name="input">Instance of RestResultOfPaymentServiceSodexoPaymentResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentServiceRPaymentType input)
+        public bool Equals(RestResultOfPaymentServiceSodexoPaymentResponse input)
         {
             if (input == null)
             {
@@ -109,18 +109,18 @@ namespace Kiler.Dotnet.ApiClient.Model
             }
             return 
                 (
-                    this.Id == input.Id ||
-                    this.Id.Equals(input.Id)
+                    this.Success == input.Success ||
+                    this.Success.Equals(input.Success)
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 ) && 
                 (
-                    this.Code == input.Code ||
-                    (this.Code != null &&
-                    this.Code.Equals(input.Code))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -133,14 +133,14 @@ namespace Kiler.Dotnet.ApiClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                if (this.Name != null)
+                hashCode = (hashCode * 59) + this.Success.GetHashCode();
+                if (this.Message != null)
                 {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Message.GetHashCode();
                 }
-                if (this.Code != null)
+                if (this.Data != null)
                 {
-                    hashCode = (hashCode * 59) + this.Code.GetHashCode();
+                    hashCode = (hashCode * 59) + this.Data.GetHashCode();
                 }
                 return hashCode;
             }

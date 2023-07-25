@@ -128,6 +128,24 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ApiPaymentPaymentSuccessPostWithHttpInfo();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <returns>RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        RestResultOfPaymentServiceSodexoPaymentResponse ApiPaymentSodexoPaymentPost(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse> ApiPaymentSodexoPaymentPostWithHttpInfo(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest));
         #endregion Synchronous Operations
     }
 
@@ -269,6 +287,29 @@ namespace Kiler.Dotnet.ApiClient.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ApiPaymentPaymentSuccessPostWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        System.Threading.Tasks.Task<RestResultOfPaymentServiceSodexoPaymentResponse> ApiPaymentSodexoPaymentPostAsync(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfPaymentServiceSodexoPaymentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse>> ApiPaymentSodexoPaymentPostWithHttpInfoAsync(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1172,6 +1213,148 @@ namespace Kiler.Dotnet.ApiClient.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ApiPaymentPaymentSuccessPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <returns>RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        public RestResultOfPaymentServiceSodexoPaymentResponse ApiPaymentSodexoPaymentPost(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse> localVarResponse = ApiPaymentSodexoPaymentPostWithHttpInfo(paymentServiceSodexoPaymentRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <returns>ApiResponse of RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        public Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse> ApiPaymentSodexoPaymentPostWithHttpInfo(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest))
+        {
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json",
+                "text/json",
+                "application/_*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = paymentServiceSodexoPaymentRequest;
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<RestResultOfPaymentServiceSodexoPaymentResponse>("/api/Payment/SodexoPayment", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiPaymentSodexoPaymentPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RestResultOfPaymentServiceSodexoPaymentResponse</returns>
+        public async System.Threading.Tasks.Task<RestResultOfPaymentServiceSodexoPaymentResponse> ApiPaymentSodexoPaymentPostAsync(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse> localVarResponse = await ApiPaymentSodexoPaymentPostWithHttpInfoAsync(paymentServiceSodexoPaymentRequest, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="Kiler.Dotnet.ApiClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentServiceSodexoPaymentRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RestResultOfPaymentServiceSodexoPaymentResponse)</returns>
+        public async System.Threading.Tasks.Task<Kiler.Dotnet.ApiClient.Client.ApiResponse<RestResultOfPaymentServiceSodexoPaymentResponse>> ApiPaymentSodexoPaymentPostWithHttpInfoAsync(PaymentServiceSodexoPaymentRequest paymentServiceSodexoPaymentRequest = default(PaymentServiceSodexoPaymentRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Kiler.Dotnet.ApiClient.Client.RequestOptions localVarRequestOptions = new Kiler.Dotnet.ApiClient.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json", 
+                "text/json", 
+                "application/_*+json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+
+            var localVarContentType = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = Kiler.Dotnet.ApiClient.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = paymentServiceSodexoPaymentRequest;
+
+            // authentication (Bearer) required
+            if (!string.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", this.Configuration.GetApiKeyWithPrefix("Authorization"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<RestResultOfPaymentServiceSodexoPaymentResponse>("/api/Payment/SodexoPayment", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApiPaymentSodexoPaymentPost", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
