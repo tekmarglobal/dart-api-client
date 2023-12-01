@@ -31,6 +31,12 @@ namespace Kiler.Dotnet.ApiClient.Model
     [DataContract(Name = "BannerServiceRBanner")]
     public partial class BannerServiceRBanner : IEquatable<BannerServiceRBanner>, IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets NavigationType
+        /// </summary>
+        [DataMember(Name = "navigationType", EmitDefaultValue = false)]
+        public BannerServiceBannerNavigationType? NavigationType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BannerServiceRBanner" /> class.
         /// </summary>
@@ -40,7 +46,9 @@ namespace Kiler.Dotnet.ApiClient.Model
         /// <param name="webImage">webImage.</param>
         /// <param name="index">index.</param>
         /// <param name="id">id.</param>
-        public BannerServiceRBanner(string name = default(string), bool active = default(bool), string image = default(string), string webImage = default(string), int index = default(int), int id = default(int))
+        /// <param name="navigationType">navigationType.</param>
+        /// <param name="navigationId">navigationId.</param>
+        public BannerServiceRBanner(string name = default(string), bool active = default(bool), string image = default(string), string webImage = default(string), int index = default(int), int id = default(int), BannerServiceBannerNavigationType? navigationType = default(BannerServiceBannerNavigationType?), int? navigationId = default(int?))
         {
             this.Name = name;
             this.Active = active;
@@ -48,6 +56,8 @@ namespace Kiler.Dotnet.ApiClient.Model
             this.WebImage = webImage;
             this.Index = index;
             this.Id = id;
+            this.NavigationType = navigationType;
+            this.NavigationId = navigationId;
         }
 
         /// <summary>
@@ -87,6 +97,12 @@ namespace Kiler.Dotnet.ApiClient.Model
         public int Id { get; set; }
 
         /// <summary>
+        /// Gets or Sets NavigationId
+        /// </summary>
+        [DataMember(Name = "navigationId", EmitDefaultValue = true)]
+        public int? NavigationId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -100,6 +116,8 @@ namespace Kiler.Dotnet.ApiClient.Model
             sb.Append("  WebImage: ").Append(WebImage).Append("\n");
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  NavigationType: ").Append(NavigationType).Append("\n");
+            sb.Append("  NavigationId: ").Append(NavigationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -161,6 +179,15 @@ namespace Kiler.Dotnet.ApiClient.Model
                 (
                     this.Id == input.Id ||
                     this.Id.Equals(input.Id)
+                ) && 
+                (
+                    this.NavigationType == input.NavigationType ||
+                    this.NavigationType.Equals(input.NavigationType)
+                ) && 
+                (
+                    this.NavigationId == input.NavigationId ||
+                    (this.NavigationId != null &&
+                    this.NavigationId.Equals(input.NavigationId))
                 );
         }
 
@@ -188,6 +215,11 @@ namespace Kiler.Dotnet.ApiClient.Model
                 }
                 hashCode = (hashCode * 59) + this.Index.GetHashCode();
                 hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                hashCode = (hashCode * 59) + this.NavigationType.GetHashCode();
+                if (this.NavigationId != null)
+                {
+                    hashCode = (hashCode * 59) + this.NavigationId.GetHashCode();
+                }
                 return hashCode;
             }
         }

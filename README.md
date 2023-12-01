@@ -227,6 +227,7 @@ Class | Method | HTTP request | Description
  - [Model.AdminServiceUpdateRegionNeighborhoodRequest](docs/AdminServiceUpdateRegionNeighborhoodRequest.md)
  - [Model.AdminServiceUploadImageResponse](docs/AdminServiceUploadImageResponse.md)
  - [Model.AffiliateServiceLinkRequest](docs/AffiliateServiceLinkRequest.md)
+ - [Model.BannerServiceBannerNavigationType](docs/BannerServiceBannerNavigationType.md)
  - [Model.BannerServiceBannerRequest](docs/BannerServiceBannerRequest.md)
  - [Model.BannerServiceBannerResponse](docs/BannerServiceBannerResponse.md)
  - [Model.BannerServiceRBanner](docs/BannerServiceRBanner.md)

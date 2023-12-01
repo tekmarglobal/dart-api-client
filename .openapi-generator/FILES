@@ -22,6 +22,7 @@ docs/AdminServiceUploadImageResponse.md
 docs/AffiliateApi.md
 docs/AffiliateServiceLinkRequest.md
 docs/BannerApi.md
+docs/BannerServiceBannerNavigationType.md
 docs/BannerServiceBannerRequest.md
 docs/BannerServiceBannerResponse.md
 docs/BannerServiceRBanner.md
@@ -159,9 +160,7 @@ docs/RestResultOfSystemInt32.md
 docs/RestResultOfSystemObject.md
 git_push.sh
 src/Kiler.Dotnet.ApiClient.Test/Kiler.Dotnet.ApiClient.Test.csproj
-src/Kiler.Dotnet.ApiClient.Test/Model/PaymentServiceSodexoPaymentRequestTests.cs
-src/Kiler.Dotnet.ApiClient.Test/Model/PaymentServiceSodexoPaymentResponseTests.cs
-src/Kiler.Dotnet.ApiClient.Test/Model/RestResultOfPaymentServiceSodexoPaymentResponseTests.cs
+src/Kiler.Dotnet.ApiClient.Test/Model/BannerServiceBannerNavigationTypeTests.cs
 src/Kiler.Dotnet.ApiClient/Api/AccountApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AdminApi.cs
 src/Kiler.Dotnet.ApiClient/Api/AffiliateApi.cs
@@ -211,6 +210,7 @@ src/Kiler.Dotnet.ApiClient/Model/AdminServiceTimeSlotResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceUpdateRegionNeighborhoodRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/AdminServiceUploadImageResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/AffiliateServiceLinkRequest.cs
+src/Kiler.Dotnet.ApiClient/Model/BannerServiceBannerNavigationType.cs
 src/Kiler.Dotnet.ApiClient/Model/BannerServiceBannerRequest.cs
 src/Kiler.Dotnet.ApiClient/Model/BannerServiceBannerResponse.cs
 src/Kiler.Dotnet.ApiClient/Model/BannerServiceRBanner.cs

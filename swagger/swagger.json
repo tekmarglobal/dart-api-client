@@ -4586,6 +4586,16 @@
         },
         "additionalProperties": false
       },
+      "BannerServiceBannerNavigationType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "BannerServiceRBanner": {
         "type": "object",
         "properties": {
@@ -4611,6 +4621,14 @@
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "navigationType": {
+            "$ref": "#/components/schemas/BannerServiceBannerNavigationType"
+          },
+          "navigationId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
