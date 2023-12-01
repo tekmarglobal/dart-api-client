@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:openapi/src/model/banner_service_banner_navigation_type.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,6 +18,8 @@ part 'banner_service_r_banner.g.dart';
 /// * [webImage] 
 /// * [index] 
 /// * [id] 
+/// * [navigationType] 
+/// * [navigationId] 
 @BuiltValue()
 abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, BannerServiceRBannerBuilder> {
   @BuiltValueField(wireName: r'name')
@@ -36,6 +39,13 @@ abstract class BannerServiceRBanner implements Built<BannerServiceRBanner, Banne
 
   @BuiltValueField(wireName: r'id')
   int? get id;
+
+  @BuiltValueField(wireName: r'navigationType')
+  BannerServiceBannerNavigationType? get navigationType;
+  // enum navigationTypeEnum {  0,  1,  2,  3,  };
+
+  @BuiltValueField(wireName: r'navigationId')
+  int? get navigationId;
 
   BannerServiceRBanner._();
 
@@ -100,6 +110,20 @@ class _$BannerServiceRBannerSerializer implements PrimitiveSerializer<BannerServ
       yield serializers.serialize(
         object.id,
         specifiedType: const FullType(int),
+      );
+    }
+    if (object.navigationType != null) {
+      yield r'navigationType';
+      yield serializers.serialize(
+        object.navigationType,
+        specifiedType: const FullType(BannerServiceBannerNavigationType),
+      );
+    }
+    if (object.navigationId != null) {
+      yield r'navigationId';
+      yield serializers.serialize(
+        object.navigationId,
+        specifiedType: const FullType.nullable(int),
       );
     }
   }
@@ -169,6 +193,21 @@ class _$BannerServiceRBannerSerializer implements PrimitiveSerializer<BannerServ
             specifiedType: const FullType(int),
           ) as int;
           result.id = valueDes;
+          break;
+        case r'navigationType':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BannerServiceBannerNavigationType),
+          ) as BannerServiceBannerNavigationType;
+          result.navigationType = valueDes;
+          break;
+        case r'navigationId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
+          if (valueDes == null) continue;
+          result.navigationId = valueDes;
           break;
         default:
           unhandled.add(key);

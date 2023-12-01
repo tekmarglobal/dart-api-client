@@ -185,6 +185,7 @@ Class | Method | HTTP request | Description
  - [AdminServiceUpdateRegionNeighborhoodRequest](doc/AdminServiceUpdateRegionNeighborhoodRequest.md)
  - [AdminServiceUploadImageResponse](doc/AdminServiceUploadImageResponse.md)
  - [AffiliateServiceLinkRequest](doc/AffiliateServiceLinkRequest.md)
+ - [BannerServiceBannerNavigationType](doc/BannerServiceBannerNavigationType.md)
  - [BannerServiceBannerRequest](doc/BannerServiceBannerRequest.md)
  - [BannerServiceBannerResponse](doc/BannerServiceBannerResponse.md)
  - [BannerServiceRBanner](doc/BannerServiceRBanner.md)

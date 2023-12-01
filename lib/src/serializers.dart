@@ -30,6 +30,7 @@ import 'package:openapi/src/model/admin_service_time_slot_response.dart';
 import 'package:openapi/src/model/admin_service_update_region_neighborhood_request.dart';
 import 'package:openapi/src/model/admin_service_upload_image_response.dart';
 import 'package:openapi/src/model/affiliate_service_link_request.dart';
+import 'package:openapi/src/model/banner_service_banner_navigation_type.dart';
 import 'package:openapi/src/model/banner_service_banner_request.dart';
 import 'package:openapi/src/model/banner_service_banner_response.dart';
 import 'package:openapi/src/model/banner_service_r_banner.dart';
@@ -174,6 +175,7 @@ part 'serializers.g.dart';
   AdminServiceUpdateRegionNeighborhoodRequest,
   AdminServiceUploadImageResponse,
   AffiliateServiceLinkRequest,
+  BannerServiceBannerNavigationType,
   BannerServiceBannerRequest,
   BannerServiceBannerResponse,
   BannerServiceRBanner,
