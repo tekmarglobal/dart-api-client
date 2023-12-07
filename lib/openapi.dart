@@ -41,7 +41,6 @@ export 'package:openapi/src/model/admin_service_time_slot_response.dart';
 export 'package:openapi/src/model/admin_service_update_region_neighborhood_request.dart';
 export 'package:openapi/src/model/admin_service_upload_image_response.dart';
 export 'package:openapi/src/model/affiliate_service_link_request.dart';
-export 'package:openapi/src/model/banner_service_banner_navigation_type.dart';
 export 'package:openapi/src/model/banner_service_banner_request.dart';
 export 'package:openapi/src/model/banner_service_banner_response.dart';
 export 'package:openapi/src/model/banner_service_r_banner.dart';
