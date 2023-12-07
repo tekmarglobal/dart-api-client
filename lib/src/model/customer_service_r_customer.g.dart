@@ -92,37 +92,24 @@ class _$CustomerServiceRCustomer extends CustomerServiceRCustomer {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(0, id.hashCode),
-                                                            customerName
-                                                                .hashCode),
-                                                        customerSurname
-                                                            .hashCode),
-                                                    birthDate.hashCode),
-                                                phone.hashCode),
-                                            email.hashCode),
-                                        gender.hashCode),
-                                    allowSms.hashCode),
-                                allowEmail.hashCode),
-                            address.hashCode),
-                        registered.hashCode),
-                    lastOrder.hashCode),
-                identificationNumber.hashCode),
-            defaultAddress.hashCode),
-        invoiceAddress.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, customerName.hashCode);
+    _$hash = $jc(_$hash, customerSurname.hashCode);
+    _$hash = $jc(_$hash, birthDate.hashCode);
+    _$hash = $jc(_$hash, phone.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, gender.hashCode);
+    _$hash = $jc(_$hash, allowSms.hashCode);
+    _$hash = $jc(_$hash, allowEmail.hashCode);
+    _$hash = $jc(_$hash, address.hashCode);
+    _$hash = $jc(_$hash, registered.hashCode);
+    _$hash = $jc(_$hash, lastOrder.hashCode);
+    _$hash = $jc(_$hash, identificationNumber.hashCode);
+    _$hash = $jc(_$hash, defaultAddress.hashCode);
+    _$hash = $jc(_$hash, invoiceAddress.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -295,4 +282,4 @@ class CustomerServiceRCustomerBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

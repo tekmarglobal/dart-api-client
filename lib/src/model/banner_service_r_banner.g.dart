@@ -19,13 +19,24 @@ class _$BannerServiceRBanner extends BannerServiceRBanner {
   final int? index;
   @override
   final int? id;
+  @override
+  final String? navigationTypeCode;
+  @override
+  final int? navigationId;
 
   factory _$BannerServiceRBanner(
           [void Function(BannerServiceRBannerBuilder)? updates]) =>
       (new BannerServiceRBannerBuilder()..update(updates))._build();
 
   _$BannerServiceRBanner._(
-      {this.name, this.active, this.image, this.webImage, this.index, this.id})
+      {this.name,
+      this.active,
+      this.image,
+      this.webImage,
+      this.index,
+      this.id,
+      this.navigationTypeCode,
+      this.navigationId})
       : super._();
 
   @override
@@ -46,19 +57,24 @@ class _$BannerServiceRBanner extends BannerServiceRBanner {
         image == other.image &&
         webImage == other.webImage &&
         index == other.index &&
-        id == other.id;
+        id == other.id &&
+        navigationTypeCode == other.navigationTypeCode &&
+        navigationId == other.navigationId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, name.hashCode), active.hashCode),
-                    image.hashCode),
-                webImage.hashCode),
-            index.hashCode),
-        id.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, active.hashCode);
+    _$hash = $jc(_$hash, image.hashCode);
+    _$hash = $jc(_$hash, webImage.hashCode);
+    _$hash = $jc(_$hash, index.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, navigationTypeCode.hashCode);
+    _$hash = $jc(_$hash, navigationId.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69,7 +85,9 @@ class _$BannerServiceRBanner extends BannerServiceRBanner {
           ..add('image', image)
           ..add('webImage', webImage)
           ..add('index', index)
-          ..add('id', id))
+          ..add('id', id)
+          ..add('navigationTypeCode', navigationTypeCode)
+          ..add('navigationId', navigationId))
         .toString();
   }
 }
@@ -102,6 +120,15 @@ class BannerServiceRBannerBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
+  String? _navigationTypeCode;
+  String? get navigationTypeCode => _$this._navigationTypeCode;
+  set navigationTypeCode(String? navigationTypeCode) =>
+      _$this._navigationTypeCode = navigationTypeCode;
+
+  int? _navigationId;
+  int? get navigationId => _$this._navigationId;
+  set navigationId(int? navigationId) => _$this._navigationId = navigationId;
+
   BannerServiceRBannerBuilder() {
     BannerServiceRBanner._defaults(this);
   }
@@ -115,6 +142,8 @@ class BannerServiceRBannerBuilder
       _webImage = $v.webImage;
       _index = $v.index;
       _id = $v.id;
+      _navigationTypeCode = $v.navigationTypeCode;
+      _navigationId = $v.navigationId;
       _$v = null;
     }
     return this;
@@ -142,10 +171,12 @@ class BannerServiceRBannerBuilder
             image: image,
             webImage: webImage,
             index: index,
-            id: id);
+            id: id,
+            navigationTypeCode: navigationTypeCode,
+            navigationId: navigationId);
     replace(_$result);
     return _$result;
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

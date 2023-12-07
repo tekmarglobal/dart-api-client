@@ -76,24 +76,20 @@ class _$AdminServiceRegionResponse extends AdminServiceRegionResponse {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc($jc($jc(0, id.hashCode), name.hashCode),
-                                        code.hashCode),
-                                    freeDelivery.hashCode),
-                                freeDeliveryAmount.hashCode),
-                            timeSlotGenerationWindow.hashCode),
-                        lastTimeSlotGeneratedDate.hashCode),
-                    minimunCartAmount.hashCode),
-                regionMail.hashCode),
-            active.hashCode),
-        neighborhoods.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, code.hashCode);
+    _$hash = $jc(_$hash, freeDelivery.hashCode);
+    _$hash = $jc(_$hash, freeDeliveryAmount.hashCode);
+    _$hash = $jc(_$hash, timeSlotGenerationWindow.hashCode);
+    _$hash = $jc(_$hash, lastTimeSlotGeneratedDate.hashCode);
+    _$hash = $jc(_$hash, minimunCartAmount.hashCode);
+    _$hash = $jc(_$hash, regionMail.hashCode);
+    _$hash = $jc(_$hash, active.hashCode);
+    _$hash = $jc(_$hash, neighborhoods.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -240,4 +236,4 @@ class AdminServiceRegionResponseBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -124,44 +124,32 @@ class _$OrderServiceOrders extends OrderServiceOrders {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc(0, orderId.hashCode), orderDate.hashCode), deliveryAddress.hashCode), deliveryTypeCode.hashCode),
-                                                                                depot.hashCode),
-                                                                            billingAddress.hashCode),
-                                                                        productTotal.hashCode),
-                                                                    orderTotal.hashCode),
-                                                                productDiscountsTotal.hashCode),
-                                                            bagAmount.hashCode),
-                                                        bagTotal.hashCode),
-                                                    orderNote.hashCode),
-                                                active.hashCode),
-                                            cityName.hashCode),
-                                        countyName.hashCode),
-                                    paymentType.hashCode),
-                                deliveryTimeStart.hashCode),
-                            deliveryTimeEnd.hashCode),
-                        fee.hashCode),
-                    region.hashCode),
-                editUntil.hashCode),
-            deliveryTypeDiscount.hashCode),
-        status.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, orderId.hashCode);
+    _$hash = $jc(_$hash, orderDate.hashCode);
+    _$hash = $jc(_$hash, deliveryAddress.hashCode);
+    _$hash = $jc(_$hash, deliveryTypeCode.hashCode);
+    _$hash = $jc(_$hash, depot.hashCode);
+    _$hash = $jc(_$hash, billingAddress.hashCode);
+    _$hash = $jc(_$hash, productTotal.hashCode);
+    _$hash = $jc(_$hash, orderTotal.hashCode);
+    _$hash = $jc(_$hash, productDiscountsTotal.hashCode);
+    _$hash = $jc(_$hash, bagAmount.hashCode);
+    _$hash = $jc(_$hash, bagTotal.hashCode);
+    _$hash = $jc(_$hash, orderNote.hashCode);
+    _$hash = $jc(_$hash, active.hashCode);
+    _$hash = $jc(_$hash, cityName.hashCode);
+    _$hash = $jc(_$hash, countyName.hashCode);
+    _$hash = $jc(_$hash, paymentType.hashCode);
+    _$hash = $jc(_$hash, deliveryTimeStart.hashCode);
+    _$hash = $jc(_$hash, deliveryTimeEnd.hashCode);
+    _$hash = $jc(_$hash, fee.hashCode);
+    _$hash = $jc(_$hash, region.hashCode);
+    _$hash = $jc(_$hash, editUntil.hashCode);
+    _$hash = $jc(_$hash, deliveryTypeDiscount.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -395,4 +383,4 @@ class OrderServiceOrdersBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -88,36 +88,23 @@ class _$CartServiceRCartProducts extends CartServiceRCartProducts {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            0,
-                                                            regionProductId
-                                                                .hashCode),
-                                                        quantity.hashCode),
-                                                    listPrice.hashCode),
-                                                price.hashCode),
-                                            amount.hashCode),
-                                        discountAmount.hashCode),
-                                    name.hashCode),
-                                productId.hashCode),
-                            unitId.hashCode),
-                        isActive.hashCode),
-                    quantityStep.hashCode),
-                initalQuantity.hashCode),
-            maxQuantity.hashCode),
-        minQuantity.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, regionProductId.hashCode);
+    _$hash = $jc(_$hash, quantity.hashCode);
+    _$hash = $jc(_$hash, listPrice.hashCode);
+    _$hash = $jc(_$hash, price.hashCode);
+    _$hash = $jc(_$hash, amount.hashCode);
+    _$hash = $jc(_$hash, discountAmount.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, productId.hashCode);
+    _$hash = $jc(_$hash, unitId.hashCode);
+    _$hash = $jc(_$hash, isActive.hashCode);
+    _$hash = $jc(_$hash, quantityStep.hashCode);
+    _$hash = $jc(_$hash, initalQuantity.hashCode);
+    _$hash = $jc(_$hash, maxQuantity.hashCode);
+    _$hash = $jc(_$hash, minQuantity.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -267,4 +254,4 @@ class CartServiceRCartProductsBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint
