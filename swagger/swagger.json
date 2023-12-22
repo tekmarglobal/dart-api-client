@@ -3105,6 +3105,45 @@
         }
       }
     },
+    "/api/Order/CancelationOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Order/CreateOrder": {
       "post": {
         "tags": [
@@ -6587,6 +6626,35 @@
           },
           "data": {
             "$ref": "#/components/schemas/OrderServiceGetOrderListResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderServiceCancelationResponse": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RestResultOfOrderServiceCancelationResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/OrderServiceCancelationResponse"
           }
         },
         "additionalProperties": false

@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiOrderCancelationOrderPost**](OrderApi.md#apiordercancelationorderpost) | **POST** /api/Order/CancelationOrder | 
 [**apiOrderCheckoutPost**](OrderApi.md#apiordercheckoutpost) | **POST** /api/Order/Checkout | 
 [**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
 [**apiOrderGetOrderListPost**](OrderApi.md#apiordergetorderlistpost) | **POST** /api/Order/GetOrderList | 
@@ -16,6 +17,51 @@ Method | HTTP request | Description
 [**apiOrderPatchOrderPost**](OrderApi.md#apiorderpatchorderpost) | **POST** /api/Order/PatchOrder | 
 [**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **POST** /api/Order/UpdateStatus | 
 
+
+# **apiOrderCancelationOrderPost**
+> RestResultOfOrderServiceCancelationResponse apiOrderCancelationOrderPost(orderId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getOrderApi();
+final int orderId = 56; // int | 
+
+try {
+    final response = api.apiOrderCancelationOrderPost(orderId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OrderApi->apiOrderCancelationOrderPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfOrderServiceCancelationResponse**](RestResultOfOrderServiceCancelationResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderCheckoutPost**
 > RestResultOfListOfOrderServiceCheckoutItem apiOrderCheckoutPost(orderServiceCheckoutRequest)

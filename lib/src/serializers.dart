@@ -72,6 +72,7 @@ import 'package:openapi/src/model/definition_service_neighbor_response.dart';
 import 'package:openapi/src/model/definition_service_self_pickup_point.dart';
 import 'package:openapi/src/model/definition_service_update_agreement_request.dart';
 import 'package:openapi/src/model/order_service_campaign_response.dart';
+import 'package:openapi/src/model/order_service_cancelation_response.dart';
 import 'package:openapi/src/model/order_service_checkout_item.dart';
 import 'package:openapi/src/model/order_service_checkout_request.dart';
 import 'package:openapi/src/model/order_service_depot_detail.dart';
@@ -140,6 +141,7 @@ import 'package:openapi/src/model/rest_result_of_list_of_definition_service_neig
 import 'package:openapi/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_order_service_checkout_item.dart';
 import 'package:openapi/src/model/rest_result_of_list_of_product_service_r_product.dart';
+import 'package:openapi/src/model/rest_result_of_order_service_cancelation_response.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_get_order_list_response.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_order_response.dart';
 import 'package:openapi/src/model/rest_result_of_payment_service_payment_response.dart';
@@ -216,6 +218,7 @@ part 'serializers.g.dart';
   DefinitionServiceSelfPickupPoint,
   DefinitionServiceUpdateAgreementRequest,
   OrderServiceCampaignResponse,
+  OrderServiceCancelationResponse,
   OrderServiceCheckoutItem,
   OrderServiceCheckoutRequest,
   OrderServiceDepotDetail,
@@ -284,6 +287,7 @@ part 'serializers.g.dart';
   RestResultOfListOfDefinitionServiceSelfPickupPoint,
   RestResultOfListOfOrderServiceCheckoutItem,
   RestResultOfListOfProductServiceRProduct,
+  RestResultOfOrderServiceCancelationResponse,
   RestResultOfOrderServiceGetOrderListResponse,
   RestResultOfOrderServiceOrderResponse,
   RestResultOfPaymentServicePaymentResponse,

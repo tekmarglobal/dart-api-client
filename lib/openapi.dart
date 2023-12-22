@@ -83,6 +83,7 @@ export 'package:openapi/src/model/definition_service_neighbor_response.dart';
 export 'package:openapi/src/model/definition_service_self_pickup_point.dart';
 export 'package:openapi/src/model/definition_service_update_agreement_request.dart';
 export 'package:openapi/src/model/order_service_campaign_response.dart';
+export 'package:openapi/src/model/order_service_cancelation_response.dart';
 export 'package:openapi/src/model/order_service_checkout_item.dart';
 export 'package:openapi/src/model/order_service_checkout_request.dart';
 export 'package:openapi/src/model/order_service_depot_detail.dart';
@@ -151,6 +152,7 @@ export 'package:openapi/src/model/rest_result_of_list_of_definition_service_neig
 export 'package:openapi/src/model/rest_result_of_list_of_definition_service_self_pickup_point.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_order_service_checkout_item.dart';
 export 'package:openapi/src/model/rest_result_of_list_of_product_service_r_product.dart';
+export 'package:openapi/src/model/rest_result_of_order_service_cancelation_response.dart';
 export 'package:openapi/src/model/rest_result_of_order_service_get_order_list_response.dart';
 export 'package:openapi/src/model/rest_result_of_order_service_order_response.dart';
 export 'package:openapi/src/model/rest_result_of_payment_service_payment_response.dart';

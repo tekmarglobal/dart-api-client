@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationCreateregionpriceGet**](doc/MigrationApi.md#apimigrationcreateregionpriceget) | **GET** /api/Migration/createregionprice | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationUpdateCitiesFromRestGet**](doc/MigrationApi.md#apimigrationupdatecitiesfromrestget) | **GET** /api/Migration/UpdateCitiesFromRest | 
+[*OrderApi*](doc/OrderApi.md) | [**apiOrderCancelationOrderPost**](doc/OrderApi.md#apiordercancelationorderpost) | **POST** /api/Order/CancelationOrder | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCheckoutPost**](doc/OrderApi.md#apiordercheckoutpost) | **POST** /api/Order/Checkout | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCreateOrderPost**](doc/OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderGetOrderListPost**](doc/OrderApi.md#apiordergetorderlistpost) | **POST** /api/Order/GetOrderList | 
@@ -227,6 +228,7 @@ Class | Method | HTTP request | Description
  - [DefinitionServiceSelfPickupPoint](doc/DefinitionServiceSelfPickupPoint.md)
  - [DefinitionServiceUpdateAgreementRequest](doc/DefinitionServiceUpdateAgreementRequest.md)
  - [OrderServiceCampaignResponse](doc/OrderServiceCampaignResponse.md)
+ - [OrderServiceCancelationResponse](doc/OrderServiceCancelationResponse.md)
  - [OrderServiceCheckoutItem](doc/OrderServiceCheckoutItem.md)
  - [OrderServiceCheckoutRequest](doc/OrderServiceCheckoutRequest.md)
  - [OrderServiceDepotDetail](doc/OrderServiceDepotDetail.md)
@@ -295,6 +297,7 @@ Class | Method | HTTP request | Description
  - [RestResultOfListOfDefinitionServiceSelfPickupPoint](doc/RestResultOfListOfDefinitionServiceSelfPickupPoint.md)
  - [RestResultOfListOfOrderServiceCheckoutItem](doc/RestResultOfListOfOrderServiceCheckoutItem.md)
  - [RestResultOfListOfProductServiceRProduct](doc/RestResultOfListOfProductServiceRProduct.md)
+ - [RestResultOfOrderServiceCancelationResponse](doc/RestResultOfOrderServiceCancelationResponse.md)
  - [RestResultOfOrderServiceGetOrderListResponse](doc/RestResultOfOrderServiceGetOrderListResponse.md)
  - [RestResultOfOrderServiceOrderResponse](doc/RestResultOfOrderServiceOrderResponse.md)
  - [RestResultOfPaymentServicePaymentResponse](doc/RestResultOfPaymentServicePaymentResponse.md)
