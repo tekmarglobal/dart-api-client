@@ -38,6 +38,7 @@ part 'order_service_order_response.g.dart';
 /// * [deliveryTypeDiscount] 
 /// * [deliveryTypeCode] 
 /// * [depot] 
+/// * [orderStatusCode] 
 @BuiltValue()
 abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderResponse, OrderServiceOrderResponseBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -108,6 +109,9 @@ abstract class OrderServiceOrderResponse implements Built<OrderServiceOrderRespo
 
   @BuiltValueField(wireName: r'depot')
   OrderServiceDepotDetail? get depot;
+
+  @BuiltValueField(wireName: r'orderStatusCode')
+  String? get orderStatusCode;
 
   OrderServiceOrderResponse._();
 
@@ -291,6 +295,13 @@ class _$OrderServiceOrderResponseSerializer implements PrimitiveSerializer<Order
       yield serializers.serialize(
         object.depot,
         specifiedType: const FullType(OrderServiceDepotDetail),
+      );
+    }
+    if (object.orderStatusCode != null) {
+      yield r'orderStatusCode';
+      yield serializers.serialize(
+        object.orderStatusCode,
+        specifiedType: const FullType.nullable(String),
       );
     }
   }
@@ -484,6 +495,14 @@ class _$OrderServiceOrderResponseSerializer implements PrimitiveSerializer<Order
             specifiedType: const FullType(OrderServiceDepotDetail),
           ) as OrderServiceDepotDetail;
           result.depot.replace(valueDes);
+          break;
+        case r'orderStatusCode':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.orderStatusCode = valueDes;
           break;
         default:
           unhandled.add(key);

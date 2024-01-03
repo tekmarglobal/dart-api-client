@@ -53,6 +53,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
   final String? deliveryTypeCode;
   @override
   final OrderServiceDepotDetail? depot;
+  @override
+  final String? orderStatusCode;
 
   factory _$OrderServiceOrderResponse(
           [void Function(OrderServiceOrderResponseBuilder)? updates]) =>
@@ -81,7 +83,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
       this.campaignTotalDiscount,
       this.deliveryTypeDiscount,
       this.deliveryTypeCode,
-      this.depot})
+      this.depot,
+      this.orderStatusCode})
       : super._();
 
   @override
@@ -119,7 +122,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
         campaignTotalDiscount == other.campaignTotalDiscount &&
         deliveryTypeDiscount == other.deliveryTypeDiscount &&
         deliveryTypeCode == other.deliveryTypeCode &&
-        depot == other.depot;
+        depot == other.depot &&
+        orderStatusCode == other.orderStatusCode;
   }
 
   @override
@@ -148,6 +152,7 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
     _$hash = $jc(_$hash, deliveryTypeDiscount.hashCode);
     _$hash = $jc(_$hash, deliveryTypeCode.hashCode);
     _$hash = $jc(_$hash, depot.hashCode);
+    _$hash = $jc(_$hash, orderStatusCode.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -177,7 +182,8 @@ class _$OrderServiceOrderResponse extends OrderServiceOrderResponse {
           ..add('campaignTotalDiscount', campaignTotalDiscount)
           ..add('deliveryTypeDiscount', deliveryTypeDiscount)
           ..add('deliveryTypeCode', deliveryTypeCode)
-          ..add('depot', depot))
+          ..add('depot', depot)
+          ..add('orderStatusCode', orderStatusCode))
         .toString();
   }
 }
@@ -294,6 +300,11 @@ class OrderServiceOrderResponseBuilder
       _$this._depot ??= new OrderServiceDepotDetailBuilder();
   set depot(OrderServiceDepotDetailBuilder? depot) => _$this._depot = depot;
 
+  String? _orderStatusCode;
+  String? get orderStatusCode => _$this._orderStatusCode;
+  set orderStatusCode(String? orderStatusCode) =>
+      _$this._orderStatusCode = orderStatusCode;
+
   OrderServiceOrderResponseBuilder() {
     OrderServiceOrderResponse._defaults(this);
   }
@@ -324,6 +335,7 @@ class OrderServiceOrderResponseBuilder
       _deliveryTypeDiscount = $v.deliveryTypeDiscount;
       _deliveryTypeCode = $v.deliveryTypeCode;
       _depot = $v.depot?.toBuilder();
+      _orderStatusCode = $v.orderStatusCode;
       _$v = null;
     }
     return this;
@@ -370,7 +382,8 @@ class OrderServiceOrderResponseBuilder
               campaignTotalDiscount: campaignTotalDiscount,
               deliveryTypeDiscount: deliveryTypeDiscount,
               deliveryTypeCode: deliveryTypeCode,
-              depot: _depot?.build());
+              depot: _depot?.build(),
+              orderStatusCode: orderStatusCode);
     } catch (_) {
       late String _$failedField;
       try {

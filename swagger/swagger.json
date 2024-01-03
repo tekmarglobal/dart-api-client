@@ -6472,6 +6472,10 @@
           },
           "depot": {
             "$ref": "#/components/schemas/OrderServiceDepotDetail"
+          },
+          "orderStatusCode": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
