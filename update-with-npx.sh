@@ -1,4 +1,1 @@
-npx @openapitools/openapi-generator-cli generate -i swagger/swagger.json -g dart-dio --skip-validate-spec
-flutter pub get;flutter packages pub run build_runner build --delete-conflicting-outputs
-sed -i ''  's|//.*||g' .gitignore
-echo "DİKKAT!!! Gitte yeni eklenen dosya var mı (Unversioned file) mutlaka kontrol edin varsa git'e ekleyin. swagger.json dosyası da eklenmeli."
+npx @openapitools/openapi-generator-cli generate -i swagger/swagger.json -g typescript --additional-properties=npmName=kiler-restapi-client --skip-validate-spec
