@@ -1,82 +1,177 @@
-import { HttpLibrary } from "./http/http";
-import { Middleware, PromiseMiddleware, PromiseMiddlewareWrapper } from "./middleware";
-import { IsomorphicFetchHttpLibrary as DefaultHttpLibrary } from "./http/isomorphic-fetch";
-import { BaseServerConfiguration, server1 } from "./servers";
-import { configureAuthMethods, AuthMethods, AuthMethodsConfiguration } from "./auth/auth";
+import { HttpParameterCodec } from '@angular/common/http';
+import { Param } from './param';
 
-export interface Configuration {
-    readonly baseServer: BaseServerConfiguration;
-    readonly httpApi: HttpLibrary;
-    readonly middleware: Middleware[];
-    readonly authMethods: AuthMethods;
-}
-
-
-/**
- * Interface with which a configuration object can be configured.
- */
 export interface ConfigurationParameters {
     /**
-     * Default server to use - a list of available servers (according to the 
-     * OpenAPI yaml definition) is included in the `servers` const in `./servers`. You can also
-     * create your own server with the `ServerConfiguration` class from the same 
-     * file.
+     *  @deprecated Since 5.0. Use credentials instead
      */
-    baseServer?: BaseServerConfiguration;
+    apiKeys?: {[ key: string ]: string};
+    username?: string;
+    password?: string;
     /**
-     * HTTP library to use e.g. IsomorphicFetch. This can usually be skipped as 
-     * all generators come with a default library.
-     * If available, additional libraries can be imported from `./http/*`
+     *  @deprecated Since 5.0. Use credentials instead
      */
-    httpApi?: HttpLibrary;
-
+    accessToken?: string | (() => string);
+    basePath?: string;
+    withCredentials?: boolean;
     /**
-     * The middlewares which will be applied to requests and responses. You can 
-     * add any number of middleware components to modify requests before they 
-     * are sent or before they are deserialized by implementing the `Middleware`
-     * interface defined in `./middleware`
+     * Takes care of encoding query- and form-parameters.
      */
-    middleware?: Middleware[];
+    encoder?: HttpParameterCodec;
     /**
-     * Configures middleware functions that return promises instead of 
-     * Observables (which are used by `middleware`). Otherwise allows for the 
-     * same functionality as `middleware`, i.e., modifying requests before they 
-     * are sent and before they are deserialized.
+     * Override the default method for encoding path parameters in various
+     * <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#style-values">styles</a>.
+     * <p>
+     * See {@link README.md} for more details
+     * </p>
      */
-    promiseMiddleware?: PromiseMiddleware[];
+    encodeParam?: (param: Param) => string;
     /**
-     * Configuration for the available authentication methods (e.g., api keys) 
-     * according to the OpenAPI yaml definition. For the definition, please refer to 
-     * `./auth/auth`
+     * The keys are the names in the securitySchemes section of the OpenAPI
+     * document. They should map to the value used for authentication
+     * minus any standard prefixes such as 'Basic' or 'Bearer'.
      */
-    authMethods?: AuthMethodsConfiguration
+    credentials?: {[ key: string ]: string | (() => string | undefined)};
 }
 
-/**
- * Provide your `ConfigurationParameters` to this function to get a `Configuration`
- * object that can be used to configure your APIs (in the constructor or 
- * for each request individually).
- *
- * If a property is not included in conf, a default is used:
- *    - baseServer: server1
- *    - httpApi: IsomorphicFetchHttpLibrary
- *    - middleware: []
- *    - promiseMiddleware: []
- *    - authMethods: {}
- *
- * @param conf partial configuration
- */
-export function createConfiguration(conf: ConfigurationParameters = {}): Configuration {
-    const configuration: Configuration = {
-        baseServer: conf.baseServer !== undefined ? conf.baseServer : server1,
-        httpApi: conf.httpApi || new DefaultHttpLibrary(),
-        middleware: conf.middleware || [],
-        authMethods: configureAuthMethods(conf.authMethods)
-    };
-    if (conf.promiseMiddleware) {
-        conf.promiseMiddleware.forEach(
-            m => configuration.middleware.push(new PromiseMiddlewareWrapper(m))
-        );
+export class Configuration {
+    /**
+     *  @deprecated Since 5.0. Use credentials instead
+     */
+    apiKeys?: {[ key: string ]: string};
+    username?: string;
+    password?: string;
+    /**
+     *  @deprecated Since 5.0. Use credentials instead
+     */
+    accessToken?: string | (() => string);
+    basePath?: string;
+    withCredentials?: boolean;
+    /**
+     * Takes care of encoding query- and form-parameters.
+     */
+    encoder?: HttpParameterCodec;
+    /**
+     * Encoding of various path parameter
+     * <a href="https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#style-values">styles</a>.
+     * <p>
+     * See {@link README.md} for more details
+     * </p>
+     */
+    encodeParam: (param: Param) => string;
+    /**
+     * The keys are the names in the securitySchemes section of the OpenAPI
+     * document. They should map to the value used for authentication
+     * minus any standard prefixes such as 'Basic' or 'Bearer'.
+     */
+    credentials: {[ key: string ]: string | (() => string | undefined)};
+
+    constructor(configurationParameters: ConfigurationParameters = {}) {
+        this.apiKeys = configurationParameters.apiKeys;
+        this.username = configurationParameters.username;
+        this.password = configurationParameters.password;
+        this.accessToken = configurationParameters.accessToken;
+        this.basePath = configurationParameters.basePath;
+        this.withCredentials = configurationParameters.withCredentials;
+        this.encoder = configurationParameters.encoder;
+        if (configurationParameters.encodeParam) {
+            this.encodeParam = configurationParameters.encodeParam;
+        }
+        else {
+            this.encodeParam = param => this.defaultEncodeParam(param);
+        }
+        if (configurationParameters.credentials) {
+            this.credentials = configurationParameters.credentials;
+        }
+        else {
+            this.credentials = {};
+        }
+
+        // init default Bearer credential
+        if (!this.credentials['Bearer']) {
+            this.credentials['Bearer'] = () => {
+                if (this.apiKeys === null || this.apiKeys === undefined) {
+                    return undefined;
+                } else {
+                    return this.apiKeys['Bearer'] || this.apiKeys['Authorization'];
+                }
+            };
+        }
     }
-    return configuration;
+
+    /**
+     * Select the correct content-type to use for a request.
+     * Uses {@link Configuration#isJsonMime} to determine the correct content-type.
+     * If no content type is found return the first found type if the contentTypes is not empty
+     * @param contentTypes - the array of content types that are available for selection
+     * @returns the selected content-type or <code>undefined</code> if no selection could be made.
+     */
+    public selectHeaderContentType (contentTypes: string[]): string | undefined {
+        if (contentTypes.length === 0) {
+            return undefined;
+        }
+
+        const type = contentTypes.find((x: string) => this.isJsonMime(x));
+        if (type === undefined) {
+            return contentTypes[0];
+        }
+        return type;
+    }
+
+    /**
+     * Select the correct accept content-type to use for a request.
+     * Uses {@link Configuration#isJsonMime} to determine the correct accept content-type.
+     * If no content type is found return the first found type if the contentTypes is not empty
+     * @param accepts - the array of content types that are available for selection.
+     * @returns the selected content-type or <code>undefined</code> if no selection could be made.
+     */
+    public selectHeaderAccept(accepts: string[]): string | undefined {
+        if (accepts.length === 0) {
+            return undefined;
+        }
+
+        const type = accepts.find((x: string) => this.isJsonMime(x));
+        if (type === undefined) {
+            return accepts[0];
+        }
+        return type;
+    }
+
+    /**
+     * Check if the given MIME is a JSON MIME.
+     * JSON MIME examples:
+     *   application/json
+     *   application/json; charset=UTF8
+     *   APPLICATION/JSON
+     *   application/vnd.company+json
+     * @param mime - MIME (Multipurpose Internet Mail Extensions)
+     * @return True if the given MIME is JSON, false otherwise.
+     */
+    public isJsonMime(mime: string): boolean {
+        const jsonMime: RegExp = new RegExp('^(application\/json|[^;/ \t]+\/[^;/ \t]+[+]json)[ \t]*(;.*)?$', 'i');
+        return mime !== null && (jsonMime.test(mime) || mime.toLowerCase() === 'application/json-patch+json');
+    }
+
+    public lookupCredential(key: string): string | undefined {
+        const value = this.credentials[key];
+        return typeof value === 'function'
+            ? value()
+            : value;
+    }
+
+    private defaultEncodeParam(param: Param): string {
+        // This implementation exists as fallback for missing configuration
+        // and for backwards compatibility to older typescript-angular generator versions.
+        // It only works for the 'simple' parameter style.
+        // Date-handling only works for the 'date-time' format.
+        // All other styles and Date-formats are probably handled incorrectly.
+        //
+        // But: if that's all you need (i.e.: the most common use-case): no need for customization!
+
+        const value = param.dataFormat === 'date-time' && param.value instanceof Date
+            ? (param.value as Date).toISOString()
+            : param.value;
+
+        return encodeURIComponent(String(value));
+    }
 }

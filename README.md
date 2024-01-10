@@ -1,22 +1,20 @@
 ## kiler-restapi-client@v1
 
-This generator creates TypeScript/JavaScript client that utilizes fetch-api.
-
 ### Building
 
-To build and compile the typescript sources to javascript use:
+To install the required dependencies and to build the typescript sources run:
 ```
 npm install
 npm run build
 ```
 
-### Publishing
+### publishing
 
-First build the package then run ```npm publish```
+First build the package then run ```npm publish dist``` (don't forget to specify the `dist` folder!)
 
-### Consuming
+### consuming
 
-Navigate to the folder of your consuming project and run one of the following commands.
+Navigate to the folder of your consuming project and run one of next commands.
 
 _published:_
 
@@ -24,57 +22,205 @@ _published:_
 npm install kiler-restapi-client@v1 --save
 ```
 
-_unPublished (not recommended):_
+_without publishing (not recommended):_
 
 ```
-npm install PATH_TO_GENERATED_PACKAGE --save
+npm install PATH_TO_GENERATED_PACKAGE/dist.tgz --save
 ```
 
-### Usage
+_It's important to take the tgz file, otherwise you'll get trouble with links on windows_
 
-Below code snippet shows exemplary usage of the configuration and the API based 
-on the typical `PetStore` example used for OpenAPI. 
+_using `npm link`:_
+
+In PATH_TO_GENERATED_PACKAGE/dist:
+```
+npm link
+```
+
+In your project:
+```
+npm link kiler-restapi-client
+```
+
+__Note for Windows users:__ The Angular CLI has troubles to use linked npm packages.
+Please refer to this issue https://github.com/angular/angular-cli/issues/8284 for a solution / workaround.
+Published packages are not effected by this issue.
+
+
+#### General usage
+
+In your Angular project:
+
 
 ```
-import * as your_api from 'your_api_package'
+// without configuring providers
+import { ApiModule } from 'kiler-restapi-client';
+import { HttpClientModule } from '@angular/common/http';
 
-// Covers all auth methods included in your OpenAPI yaml definition
-const authConfig: your_api.AuthMethodsConfiguration = {
-    "api_key": "YOUR_API_KEY"
+@NgModule({
+    imports: [
+        ApiModule,
+        // make sure to import the HttpClientModule in the AppModule only,
+        // see https://github.com/angular/angular/issues/20575
+        HttpClientModule
+    ],
+    declarations: [ AppComponent ],
+    providers: [],
+    bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
+
+```
+// configuring providers
+import { ApiModule, Configuration, ConfigurationParameters } from 'kiler-restapi-client';
+
+export function apiConfigFactory (): Configuration {
+  const params: ConfigurationParameters = {
+    // set configuration parameters here.
+  }
+  return new Configuration(params);
 }
 
-// Implements a simple middleware to modify requests before (`pre`) they are sent
-// and after (`post`) they have been received 
-class Test implements your_api.Middleware {
-    pre(context: your_api.RequestContext): Promise<your_api.RequestContext> {
-        // Modify context here and return
-        return Promise.resolve(context);
-    }
-
-    post(context: your_api.ResponseContext): Promise<your_api.ResponseContext> {
-        return Promise.resolve(context);
-    }
-
-}
-
-// Create configuration parameter object
-const configurationParameters = {
-    httpApi: new your_api.JQueryHttpLibrary(), // Can also be ignored - default is usually fine
-    baseServer: your_api.servers[0], // First server is default
-    authMethods: authConfig, // No auth is default
-    promiseMiddleware: [new Test()],
-}
-
-// Convert to actual configuration
-const config = your_api.createConfiguration(configurationParameters);
-
-// Use configuration with your_api
-const api = new your_api.PetApi(config);
-your_api.Pet p = new your_api.Pet();
-p.name = "My new pet";
-p.photoUrls = [];
-p.tags = [];
-p.status = "available";
-Promise<your_api.Pet> createdPet = api.addPet(p);
+@NgModule({
+    imports: [ ApiModule.forRoot(apiConfigFactory) ],
+    declarations: [ AppComponent ],
+    providers: [],
+    bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
 
 ```
+// configuring providers with an authentication service that manages your access tokens
+import { ApiModule, Configuration } from 'kiler-restapi-client';
+
+@NgModule({
+    imports: [ ApiModule ],
+    declarations: [ AppComponent ],
+    providers: [
+      {
+        provide: Configuration,
+        useFactory: (authService: AuthService) => new Configuration(
+          {
+            basePath: environment.apiUrl,
+            accessToken: authService.getAccessToken.bind(authService)
+          }
+        ),
+        deps: [AuthService],
+        multi: false
+      }
+    ],
+    bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
+
+```
+import { DefaultApi } from 'kiler-restapi-client';
+
+export class AppComponent {
+    constructor(private apiGateway: DefaultApi) { }
+}
+```
+
+Note: The ApiModule is restricted to being instantiated once app wide.
+This is to ensure that all services are treated as singletons.
+
+#### Using multiple OpenAPI files / APIs / ApiModules
+In order to use multiple `ApiModules` generated from different OpenAPI files,
+you can create an alias name when importing the modules
+in order to avoid naming conflicts:
+```
+import { ApiModule } from 'my-api-path';
+import { ApiModule as OtherApiModule } from 'my-other-api-path';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    ApiModule,
+    OtherApiModule,
+    // make sure to import the HttpClientModule in the AppModule only,
+    // see https://github.com/angular/angular/issues/20575
+    HttpClientModule
+  ]
+})
+export class AppModule {
+
+}
+```
+
+
+### Set service base path
+If different than the generated base path, during app bootstrap, you can provide the base path to your service.
+
+```
+import { BASE_PATH } from 'kiler-restapi-client';
+
+bootstrap(AppComponent, [
+    { provide: BASE_PATH, useValue: 'https://your-web-service.com' },
+]);
+```
+or
+
+```
+import { BASE_PATH } from 'kiler-restapi-client';
+
+@NgModule({
+    imports: [],
+    declarations: [ AppComponent ],
+    providers: [ provide: BASE_PATH, useValue: 'https://your-web-service.com' ],
+    bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
+
+
+#### Using @angular/cli
+First extend your `src/environments/*.ts` files by adding the corresponding base path:
+
+```
+export const environment = {
+  production: false,
+  API_BASE_PATH: 'http://127.0.0.1:8080'
+};
+```
+
+In the src/app/app.module.ts:
+```
+import { BASE_PATH } from 'kiler-restapi-client';
+import { environment } from '../environments/environment';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [ ],
+  providers: [{ provide: BASE_PATH, useValue: environment.API_BASE_PATH }],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+```
+
+### Customizing path parameter encoding
+
+Without further customization, only [path-parameters][parameter-locations-url] of [style][style-values-url] 'simple'
+and Dates for format 'date-time' are encoded correctly.
+
+Other styles (e.g. "matrix") are not that easy to encode
+and thus are best delegated to other libraries (e.g.: [@honoluluhenk/http-param-expander]).
+
+To implement your own parameter encoding (or call another library),
+pass an arrow-function or method-reference to the `encodeParam` property of the Configuration-object
+(see [General Usage](#general-usage) above).
+
+Example value for use in your Configuration-Provider:
+```typescript
+new Configuration({
+    encodeParam: (param: Param) => myFancyParamEncoder(param),
+})
+```
+
+[parameter-locations-url]: https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#parameter-locations
+[style-values-url]: https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md#style-values
+[@honoluluhenk/http-param-expander]: https://www.npmjs.com/package/@honoluluhenk/http-param-expander
