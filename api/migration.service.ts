@@ -22,13 +22,16 @@ import { Observable }                                        from 'rxjs';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    MigrationServiceInterface
+} from './migration.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class MigrationService {
+export class MigrationService implements MigrationServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

@@ -19,22 +19,25 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { CrmServiceCallRequest } from '../model/crmServiceCallRequest';
+import { CrmServiceCallRequest } from '../model/crm-service-call-request';
 // @ts-ignore
-import { CrmServiceTicketRequest } from '../model/crmServiceTicketRequest';
+import { CrmServiceTicketRequest } from '../model/crm-service-ticket-request';
 // @ts-ignore
-import { RestResultOfCrmServiceTicketResponse } from '../model/restResultOfCrmServiceTicketResponse';
+import { RestResultOfCrmServiceTicketResponse } from '../model/rest-result-of-crm-service-ticket-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    CrmServiceInterface
+} from './crm.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CrmService {
+export class CrmService implements CrmServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

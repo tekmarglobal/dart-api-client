@@ -19,34 +19,37 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { OrderServiceCheckoutRequest } from '../model/orderServiceCheckoutRequest';
+import { OrderServiceCheckoutRequest } from '../model/order-service-checkout-request';
 // @ts-ignore
-import { OrderServiceGetOrderRequest } from '../model/orderServiceGetOrderRequest';
+import { OrderServiceGetOrderRequest } from '../model/order-service-get-order-request';
 // @ts-ignore
-import { OrderServiceOrderRequest } from '../model/orderServiceOrderRequest';
+import { OrderServiceOrderRequest } from '../model/order-service-order-request';
 // @ts-ignore
-import { OrderServicePatchOrderRequest } from '../model/orderServicePatchOrderRequest';
+import { OrderServicePatchOrderRequest } from '../model/order-service-patch-order-request';
 // @ts-ignore
-import { OrderServiceUpdateOrderRequest } from '../model/orderServiceUpdateOrderRequest';
+import { OrderServiceUpdateOrderRequest } from '../model/order-service-update-order-request';
 // @ts-ignore
-import { RestResultOfListOfOrderServiceCheckoutItem } from '../model/restResultOfListOfOrderServiceCheckoutItem';
+import { RestResultOfListOfOrderServiceCheckoutItem } from '../model/rest-result-of-list-of-order-service-checkout-item';
 // @ts-ignore
-import { RestResultOfOrderServiceCancelationResponse } from '../model/restResultOfOrderServiceCancelationResponse';
+import { RestResultOfOrderServiceCancelationResponse } from '../model/rest-result-of-order-service-cancelation-response';
 // @ts-ignore
-import { RestResultOfOrderServiceGetOrderListResponse } from '../model/restResultOfOrderServiceGetOrderListResponse';
+import { RestResultOfOrderServiceGetOrderListResponse } from '../model/rest-result-of-order-service-get-order-list-response';
 // @ts-ignore
-import { RestResultOfOrderServiceOrderResponse } from '../model/restResultOfOrderServiceOrderResponse';
+import { RestResultOfOrderServiceOrderResponse } from '../model/rest-result-of-order-service-order-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    OrderServiceInterface
+} from './order.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class OrderService implements OrderServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

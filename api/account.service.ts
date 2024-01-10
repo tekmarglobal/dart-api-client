@@ -19,28 +19,31 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { AccountServiceCheckVersionRequest } from '../model/accountServiceCheckVersionRequest';
+import { AccountServiceCheckVersionRequest } from '../model/account-service-check-version-request';
 // @ts-ignore
-import { AccountServiceLoginRequest } from '../model/accountServiceLoginRequest';
+import { AccountServiceLoginRequest } from '../model/account-service-login-request';
 // @ts-ignore
-import { RestResultOfAccountServiceCheckVersionResponse } from '../model/restResultOfAccountServiceCheckVersionResponse';
+import { RestResultOfAccountServiceCheckVersionResponse } from '../model/rest-result-of-account-service-check-version-response';
 // @ts-ignore
-import { RestResultOfAccountServiceLoginResponse } from '../model/restResultOfAccountServiceLoginResponse';
+import { RestResultOfAccountServiceLoginResponse } from '../model/rest-result-of-account-service-login-response';
 // @ts-ignore
-import { RestResultOfSystemBoolean } from '../model/restResultOfSystemBoolean';
+import { RestResultOfSystemBoolean } from '../model/rest-result-of-system-boolean';
 // @ts-ignore
-import { RestResultOfSystemObject } from '../model/restResultOfSystemObject';
+import { RestResultOfSystemObject } from '../model/rest-result-of-system-object';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    AccountServiceInterface
+} from './account.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class AccountService {
+export class AccountService implements AccountServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

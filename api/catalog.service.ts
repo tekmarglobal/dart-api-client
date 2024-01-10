@@ -19,18 +19,21 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { RestResultOfCatalogServiceRCategory } from '../model/restResultOfCatalogServiceRCategory';
+import { RestResultOfCatalogServiceRCategory } from '../model/rest-result-of-catalog-service-r-category';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    CatalogServiceInterface
+} from './catalog.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CatalogService {
+export class CatalogService implements CatalogServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

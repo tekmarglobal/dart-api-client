@@ -19,34 +19,37 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { ProductServiceFavoriteRequest } from '../model/productServiceFavoriteRequest';
+import { ProductServiceFavoriteRequest } from '../model/product-service-favorite-request';
 // @ts-ignore
-import { ProductServiceProductAlternativesRequest } from '../model/productServiceProductAlternativesRequest';
+import { ProductServiceProductAlternativesRequest } from '../model/product-service-product-alternatives-request';
 // @ts-ignore
-import { ProductServiceProductRequest } from '../model/productServiceProductRequest';
+import { ProductServiceProductRequest } from '../model/product-service-product-request';
 // @ts-ignore
-import { ProductServiceRecommendProductRequest } from '../model/productServiceRecommendProductRequest';
+import { ProductServiceRecommendProductRequest } from '../model/product-service-recommend-product-request';
 // @ts-ignore
-import { ProductServiceSearchProductRequest } from '../model/productServiceSearchProductRequest';
+import { ProductServiceSearchProductRequest } from '../model/product-service-search-product-request';
 // @ts-ignore
-import { RestResultOfListOfProductServiceRProduct } from '../model/restResultOfListOfProductServiceRProduct';
+import { RestResultOfListOfProductServiceRProduct } from '../model/rest-result-of-list-of-product-service-r-product';
 // @ts-ignore
-import { RestResultOfProductServiceFavoriteListResponse } from '../model/restResultOfProductServiceFavoriteListResponse';
+import { RestResultOfProductServiceFavoriteListResponse } from '../model/rest-result-of-product-service-favorite-list-response';
 // @ts-ignore
-import { RestResultOfProductServiceRProduct } from '../model/restResultOfProductServiceRProduct';
+import { RestResultOfProductServiceRProduct } from '../model/rest-result-of-product-service-r-product';
 // @ts-ignore
-import { RestResultOfProductServiceRecommendProductResponse } from '../model/restResultOfProductServiceRecommendProductResponse';
+import { RestResultOfProductServiceRecommendProductResponse } from '../model/rest-result-of-product-service-recommend-product-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    ProductServiceInterface
+} from './product.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProductService implements ProductServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

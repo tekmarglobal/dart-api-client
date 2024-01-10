@@ -19,32 +19,35 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { CustomerServiceCustomerAddressRequest } from '../model/customerServiceCustomerAddressRequest';
+import { CustomerServiceCustomerAddressRequest } from '../model/customer-service-customer-address-request';
 // @ts-ignore
-import { CustomerServiceDeleteAddressRequest } from '../model/customerServiceDeleteAddressRequest';
+import { CustomerServiceDeleteAddressRequest } from '../model/customer-service-delete-address-request';
 // @ts-ignore
-import { CustomerServiceNewCustomerDefaultAddress } from '../model/customerServiceNewCustomerDefaultAddress';
+import { CustomerServiceNewCustomerDefaultAddress } from '../model/customer-service-new-customer-default-address';
 // @ts-ignore
-import { CustomerServiceNewCustomerRequest } from '../model/customerServiceNewCustomerRequest';
+import { CustomerServiceNewCustomerRequest } from '../model/customer-service-new-customer-request';
 // @ts-ignore
-import { RestResultOfCustomerServiceCustomerAddressResponse } from '../model/restResultOfCustomerServiceCustomerAddressResponse';
+import { RestResultOfCustomerServiceCustomerAddressResponse } from '../model/rest-result-of-customer-service-customer-address-response';
 // @ts-ignore
-import { RestResultOfCustomerServiceCustomerResponse } from '../model/restResultOfCustomerServiceCustomerResponse';
+import { RestResultOfCustomerServiceCustomerResponse } from '../model/rest-result-of-customer-service-customer-response';
 // @ts-ignore
-import { RestResultOfCustomerServiceDeleteAddressResponse } from '../model/restResultOfCustomerServiceDeleteAddressResponse';
+import { RestResultOfCustomerServiceDeleteAddressResponse } from '../model/rest-result-of-customer-service-delete-address-response';
 // @ts-ignore
-import { RestResultOfListOfCustomerServiceCustomerMessageResponse } from '../model/restResultOfListOfCustomerServiceCustomerMessageResponse';
+import { RestResultOfListOfCustomerServiceCustomerMessageResponse } from '../model/rest-result-of-list-of-customer-service-customer-message-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    CustomerServiceInterface
+} from './customer.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
+export class CustomerService implements CustomerServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

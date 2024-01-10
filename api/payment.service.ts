@@ -19,30 +19,33 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { PaymentServicePaymentRequest } from '../model/paymentServicePaymentRequest';
+import { PaymentServicePaymentRequest } from '../model/payment-service-payment-request';
 // @ts-ignore
-import { PaymentServicePaymentTransactionRequest } from '../model/paymentServicePaymentTransactionRequest';
+import { PaymentServicePaymentTransactionRequest } from '../model/payment-service-payment-transaction-request';
 // @ts-ignore
-import { PaymentServiceSodexoPaymentRequest } from '../model/paymentServiceSodexoPaymentRequest';
+import { PaymentServiceSodexoPaymentRequest } from '../model/payment-service-sodexo-payment-request';
 // @ts-ignore
-import { RestResultOfPaymentServicePaymentResponse } from '../model/restResultOfPaymentServicePaymentResponse';
+import { RestResultOfPaymentServicePaymentResponse } from '../model/rest-result-of-payment-service-payment-response';
 // @ts-ignore
-import { RestResultOfPaymentServicePaymentTransactionResponse } from '../model/restResultOfPaymentServicePaymentTransactionResponse';
+import { RestResultOfPaymentServicePaymentTransactionResponse } from '../model/rest-result-of-payment-service-payment-transaction-response';
 // @ts-ignore
-import { RestResultOfPaymentServicePaymentTypeResponse } from '../model/restResultOfPaymentServicePaymentTypeResponse';
+import { RestResultOfPaymentServicePaymentTypeResponse } from '../model/rest-result-of-payment-service-payment-type-response';
 // @ts-ignore
-import { RestResultOfPaymentServiceSodexoPaymentResponse } from '../model/restResultOfPaymentServiceSodexoPaymentResponse';
+import { RestResultOfPaymentServiceSodexoPaymentResponse } from '../model/rest-result-of-payment-service-sodexo-payment-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    PaymentServiceInterface
+} from './payment.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class PaymentService {
+export class PaymentService implements PaymentServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

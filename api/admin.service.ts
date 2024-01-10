@@ -19,38 +19,41 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { AdminServiceRegionNeighborhoodRequest } from '../model/adminServiceRegionNeighborhoodRequest';
+import { AdminServiceRegionNeighborhoodRequest } from '../model/admin-service-region-neighborhood-request';
 // @ts-ignore
-import { AdminServiceUpdateRegionNeighborhoodRequest } from '../model/adminServiceUpdateRegionNeighborhoodRequest';
+import { AdminServiceUpdateRegionNeighborhoodRequest } from '../model/admin-service-update-region-neighborhood-request';
 // @ts-ignore
-import { RestResultOfAdminServiceAdminNeighborResponse } from '../model/restResultOfAdminServiceAdminNeighborResponse';
+import { RestResultOfAdminServiceAdminNeighborResponse } from '../model/rest-result-of-admin-service-admin-neighbor-response';
 // @ts-ignore
-import { RestResultOfAdminServiceRegionStatusCode } from '../model/restResultOfAdminServiceRegionStatusCode';
+import { RestResultOfAdminServiceRegionStatusCode } from '../model/rest-result-of-admin-service-region-status-code';
 // @ts-ignore
-import { RestResultOfAdminServiceUploadImageResponse } from '../model/restResultOfAdminServiceUploadImageResponse';
+import { RestResultOfAdminServiceUploadImageResponse } from '../model/rest-result-of-admin-service-upload-image-response';
 // @ts-ignore
-import { RestResultOfListOfAdminServiceAdminNeighborResponse } from '../model/restResultOfListOfAdminServiceAdminNeighborResponse';
+import { RestResultOfListOfAdminServiceAdminNeighborResponse } from '../model/rest-result-of-list-of-admin-service-admin-neighbor-response';
 // @ts-ignore
-import { RestResultOfListOfAdminServiceBranchResponse } from '../model/restResultOfListOfAdminServiceBranchResponse';
+import { RestResultOfListOfAdminServiceBranchResponse } from '../model/rest-result-of-list-of-admin-service-branch-response';
 // @ts-ignore
-import { RestResultOfListOfAdminServiceCompanyResponse } from '../model/restResultOfListOfAdminServiceCompanyResponse';
+import { RestResultOfListOfAdminServiceCompanyResponse } from '../model/rest-result-of-list-of-admin-service-company-response';
 // @ts-ignore
-import { RestResultOfListOfAdminServiceRegionResponse } from '../model/restResultOfListOfAdminServiceRegionResponse';
+import { RestResultOfListOfAdminServiceRegionResponse } from '../model/rest-result-of-list-of-admin-service-region-response';
 // @ts-ignore
-import { RestResultOfListOfAdminServiceTimeSlotResponse } from '../model/restResultOfListOfAdminServiceTimeSlotResponse';
+import { RestResultOfListOfAdminServiceTimeSlotResponse } from '../model/rest-result-of-list-of-admin-service-time-slot-response';
 // @ts-ignore
-import { RestResultOfSystemInt32 } from '../model/restResultOfSystemInt32';
+import { RestResultOfSystemInt32 } from '../model/rest-result-of-system-int32';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    AdminServiceInterface
+} from './admin.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class AdminService {
+export class AdminService implements AdminServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

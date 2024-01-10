@@ -19,18 +19,21 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { AffiliateServiceLinkRequest } from '../model/affiliateServiceLinkRequest';
+import { AffiliateServiceLinkRequest } from '../model/affiliate-service-link-request';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    AffiliateServiceInterface
+} from './affiliate.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class AffiliateService {
+export class AffiliateService implements AffiliateServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

@@ -22,13 +22,16 @@ import { Observable }                                        from 'rxjs';
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    IntegrationServiceInterface
+} from './integration.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class IntegrationService {
+export class IntegrationService implements IntegrationServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

@@ -19,40 +19,43 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { DefinitionServiceCountiesRequest } from '../model/definitionServiceCountiesRequest';
+import { DefinitionServiceCountiesRequest } from '../model/definition-service-counties-request';
 // @ts-ignore
-import { DefinitionServiceNeighborRequest } from '../model/definitionServiceNeighborRequest';
+import { DefinitionServiceNeighborRequest } from '../model/definition-service-neighbor-request';
 // @ts-ignore
-import { DefinitionServiceUpdateAgreementRequest } from '../model/definitionServiceUpdateAgreementRequest';
+import { DefinitionServiceUpdateAgreementRequest } from '../model/definition-service-update-agreement-request';
 // @ts-ignore
-import { RestResultOfDefinitionServiceUpdateAgreementLogResponse } from '../model/restResultOfDefinitionServiceUpdateAgreementLogResponse';
+import { RestResultOfDefinitionServiceUpdateAgreementLogResponse } from '../model/rest-result-of-definition-service-update-agreement-log-response';
 // @ts-ignore
-import { RestResultOfDefinitionServiceUploadCountriesResponse } from '../model/restResultOfDefinitionServiceUploadCountriesResponse';
+import { RestResultOfDefinitionServiceUploadCountriesResponse } from '../model/rest-result-of-definition-service-upload-countries-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceAgreementResponse } from '../model/restResultOfListOfDefinitionServiceAgreementResponse';
+import { RestResultOfListOfDefinitionServiceAgreementResponse } from '../model/rest-result-of-list-of-definition-service-agreement-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceCitiesResponse } from '../model/restResultOfListOfDefinitionServiceCitiesResponse';
+import { RestResultOfListOfDefinitionServiceCitiesResponse } from '../model/rest-result-of-list-of-definition-service-cities-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceCountiesResponse } from '../model/restResultOfListOfDefinitionServiceCountiesResponse';
+import { RestResultOfListOfDefinitionServiceCountiesResponse } from '../model/rest-result-of-list-of-definition-service-counties-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceDeliveryType } from '../model/restResultOfListOfDefinitionServiceDeliveryType';
+import { RestResultOfListOfDefinitionServiceDeliveryType } from '../model/rest-result-of-list-of-definition-service-delivery-type';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceFaqResponse } from '../model/restResultOfListOfDefinitionServiceFaqResponse';
+import { RestResultOfListOfDefinitionServiceFaqResponse } from '../model/rest-result-of-list-of-definition-service-faq-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceNeighborResponse } from '../model/restResultOfListOfDefinitionServiceNeighborResponse';
+import { RestResultOfListOfDefinitionServiceNeighborResponse } from '../model/rest-result-of-list-of-definition-service-neighbor-response';
 // @ts-ignore
-import { RestResultOfListOfDefinitionServiceSelfPickupPoint } from '../model/restResultOfListOfDefinitionServiceSelfPickupPoint';
+import { RestResultOfListOfDefinitionServiceSelfPickupPoint } from '../model/rest-result-of-list-of-definition-service-self-pickup-point';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    DefinitionServiceInterface
+} from './definition.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class DefinitionService {
+export class DefinitionService implements DefinitionServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

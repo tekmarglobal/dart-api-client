@@ -19,24 +19,27 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { RegisterServiceSmsRequest } from '../model/registerServiceSmsRequest';
+import { RegisterServiceSmsRequest } from '../model/register-service-sms-request';
 // @ts-ignore
-import { RegisterServiceVerifyRequest } from '../model/registerServiceVerifyRequest';
+import { RegisterServiceVerifyRequest } from '../model/register-service-verify-request';
 // @ts-ignore
-import { RestResultOfRegisterServiceLoginResponse } from '../model/restResultOfRegisterServiceLoginResponse';
+import { RestResultOfRegisterServiceLoginResponse } from '../model/rest-result-of-register-service-login-response';
 // @ts-ignore
-import { RestResultOfRegisterServiceSmsResponse } from '../model/restResultOfRegisterServiceSmsResponse';
+import { RestResultOfRegisterServiceSmsResponse } from '../model/rest-result-of-register-service-sms-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    RegisterServiceInterface
+} from './register.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterService {
+export class RegisterService implements RegisterServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

@@ -19,36 +19,39 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { CartServiceCreateCartRequest } from '../model/cartServiceCreateCartRequest';
+import { CartServiceCreateCartRequest } from '../model/cart-service-create-cart-request';
 // @ts-ignore
-import { CartServiceUpdateCartRegionRequest } from '../model/cartServiceUpdateCartRegionRequest';
+import { CartServiceUpdateCartRegionRequest } from '../model/cart-service-update-cart-region-request';
 // @ts-ignore
-import { CartServiceUpdateCartRequest } from '../model/cartServiceUpdateCartRequest';
+import { CartServiceUpdateCartRequest } from '../model/cart-service-update-cart-request';
 // @ts-ignore
-import { CartServiceUpdateTimeslotRequest } from '../model/cartServiceUpdateTimeslotRequest';
+import { CartServiceUpdateTimeslotRequest } from '../model/cart-service-update-timeslot-request';
 // @ts-ignore
-import { RestResultOfCartServiceCampaignApplyResponse } from '../model/restResultOfCartServiceCampaignApplyResponse';
+import { RestResultOfCartServiceCampaignApplyResponse } from '../model/rest-result-of-cart-service-campaign-apply-response';
 // @ts-ignore
-import { RestResultOfCartServiceCartResponse } from '../model/restResultOfCartServiceCartResponse';
+import { RestResultOfCartServiceCartResponse } from '../model/rest-result-of-cart-service-cart-response';
 // @ts-ignore
-import { RestResultOfCartServiceCreateCartResponse } from '../model/restResultOfCartServiceCreateCartResponse';
+import { RestResultOfCartServiceCreateCartResponse } from '../model/rest-result-of-cart-service-create-cart-response';
 // @ts-ignore
-import { RestResultOfCartServiceUpdateCartRegionResponse } from '../model/restResultOfCartServiceUpdateCartRegionResponse';
+import { RestResultOfCartServiceUpdateCartRegionResponse } from '../model/rest-result-of-cart-service-update-cart-region-response';
 // @ts-ignore
-import { RestResultOfListOfCartServiceCampaignResponse } from '../model/restResultOfListOfCartServiceCampaignResponse';
+import { RestResultOfListOfCartServiceCampaignResponse } from '../model/rest-result-of-list-of-cart-service-campaign-response';
 // @ts-ignore
-import { RestResultOfListOfCartServiceTimeSlotsResponse } from '../model/restResultOfListOfCartServiceTimeSlotsResponse';
+import { RestResultOfListOfCartServiceTimeSlotsResponse } from '../model/rest-result-of-list-of-cart-service-time-slots-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    CartServiceInterface
+} from './cart.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
+export class CartService implements CartServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();

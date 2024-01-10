@@ -19,20 +19,23 @@ import { CustomHttpParameterCodec }                          from '../encoder';
 import { Observable }                                        from 'rxjs';
 
 // @ts-ignore
-import { BannerServiceBannerRequest } from '../model/bannerServiceBannerRequest';
+import { BannerServiceBannerRequest } from '../model/banner-service-banner-request';
 // @ts-ignore
-import { RestResultOfBannerServiceBannerResponse } from '../model/restResultOfBannerServiceBannerResponse';
+import { RestResultOfBannerServiceBannerResponse } from '../model/rest-result-of-banner-service-banner-response';
 
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS }                     from '../variables';
 import { Configuration }                                     from '../configuration';
+import {
+    BannerServiceInterface
+} from './banner.serviceInterface';
 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class BannerService {
+export class BannerService implements BannerServiceInterface {
 
     protected basePath = 'http://localhost';
     public defaultHeaders = new HttpHeaders();
