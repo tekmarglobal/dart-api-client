@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:openapi/src/api_util.dart';
 import 'package:openapi/src/model/order_service_checkout_request.dart';
+import 'package:openapi/src/model/order_service_extra_order_message_request.dart';
 import 'package:openapi/src/model/order_service_get_order_request.dart';
 import 'package:openapi/src/model/order_service_order_request.dart';
 import 'package:openapi/src/model/order_service_patch_order_request.dart';
@@ -17,6 +18,7 @@ import 'package:openapi/src/model/rest_result_of_list_of_order_service_checkout_
 import 'package:openapi/src/model/rest_result_of_order_service_cancelation_response.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_get_order_list_response.dart';
 import 'package:openapi/src/model/rest_result_of_order_service_order_response.dart';
+import 'package:openapi/src/model/rest_result_of_system_boolean.dart';
 
 class OrderApi {
 
@@ -25,6 +27,198 @@ class OrderApi {
   final Serializers _serializers;
 
   const OrderApi(this._dio, this._serializers);
+
+  /// apiOrderAcceptCancelationGet
+  /// 
+  ///
+  /// Parameters:
+  /// * [cancellationRequestCode] 
+  /// * [orderId] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfOrderServiceCancelationResponse] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfOrderServiceCancelationResponse>> apiOrderAcceptCancelationGet({ 
+    String? cancellationRequestCode,
+    int? orderId,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Order/AcceptCancelation';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      r'cancellationRequestCode': encodeQueryParameter(_serializers, cancellationRequestCode, const FullType(String)),
+      if (orderId != null) r'orderId': encodeQueryParameter(_serializers, orderId, const FullType(int)),
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfOrderServiceCancelationResponse? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfOrderServiceCancelationResponse),
+      ) as RestResultOfOrderServiceCancelationResponse;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RestResultOfOrderServiceCancelationResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// apiOrderAddExtraMessageOrderPost
+  /// 
+  ///
+  /// Parameters:
+  /// * [orderServiceExtraOrderMessageRequest] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [RestResultOfSystemBoolean] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<RestResultOfSystemBoolean>> apiOrderAddExtraMessageOrderPost({ 
+    OrderServiceExtraOrderMessageRequest? orderServiceExtraOrderMessageRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/Order/AddExtraMessageOrder';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(OrderServiceExtraOrderMessageRequest);
+      _bodyData = orderServiceExtraOrderMessageRequest == null ? null : _serializers.serialize(orderServiceExtraOrderMessageRequest, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    RestResultOfSystemBoolean? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(RestResultOfSystemBoolean),
+      ) as RestResultOfSystemBoolean;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<RestResultOfSystemBoolean>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
 
   /// apiOrderCancelationOrderPost
   /// 

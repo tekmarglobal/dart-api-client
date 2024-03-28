@@ -9,6 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**apiOrderAcceptCancelationGet**](OrderApi.md#apiorderacceptcancelationget) | **GET** /api/Order/AcceptCancelation | 
+[**apiOrderAddExtraMessageOrderPost**](OrderApi.md#apiorderaddextramessageorderpost) | **POST** /api/Order/AddExtraMessageOrder | 
 [**apiOrderCancelationOrderPost**](OrderApi.md#apiordercancelationorderpost) | **POST** /api/Order/CancelationOrder | 
 [**apiOrderCheckoutPost**](OrderApi.md#apiordercheckoutpost) | **POST** /api/Order/Checkout | 
 [**apiOrderCreateOrderPost**](OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
@@ -17,6 +19,98 @@ Method | HTTP request | Description
 [**apiOrderPatchOrderPost**](OrderApi.md#apiorderpatchorderpost) | **POST** /api/Order/PatchOrder | 
 [**apiOrderUpdateStatusPost**](OrderApi.md#apiorderupdatestatuspost) | **POST** /api/Order/UpdateStatus | 
 
+
+# **apiOrderAcceptCancelationGet**
+> RestResultOfOrderServiceCancelationResponse apiOrderAcceptCancelationGet(cancellationRequestCode, orderId)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getOrderApi();
+final String cancellationRequestCode = cancellationRequestCode_example; // String | 
+final int orderId = 56; // int | 
+
+try {
+    final response = api.apiOrderAcceptCancelationGet(cancellationRequestCode, orderId);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OrderApi->apiOrderAcceptCancelationGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cancellationRequestCode** | **String**|  | [optional] 
+ **orderId** | **int**|  | [optional] 
+
+### Return type
+
+[**RestResultOfOrderServiceCancelationResponse**](RestResultOfOrderServiceCancelationResponse.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **apiOrderAddExtraMessageOrderPost**
+> RestResultOfSystemBoolean apiOrderAddExtraMessageOrderPost(orderServiceExtraOrderMessageRequest)
+
+
+
+### Example
+```dart
+import 'package:openapi/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = Openapi().getOrderApi();
+final OrderServiceExtraOrderMessageRequest orderServiceExtraOrderMessageRequest = ; // OrderServiceExtraOrderMessageRequest | 
+
+try {
+    final response = api.apiOrderAddExtraMessageOrderPost(orderServiceExtraOrderMessageRequest);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling OrderApi->apiOrderAddExtraMessageOrderPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderServiceExtraOrderMessageRequest** | [**OrderServiceExtraOrderMessageRequest**](OrderServiceExtraOrderMessageRequest.md)|  | [optional] 
+
+### Return type
+
+[**RestResultOfSystemBoolean**](RestResultOfSystemBoolean.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiOrderCancelationOrderPost**
 > RestResultOfOrderServiceCancelationResponse apiOrderCancelationOrderPost(orderId)

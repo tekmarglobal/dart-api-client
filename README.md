@@ -141,6 +141,8 @@ Class | Method | HTTP request | Description
 [*IntegrationApi*](doc/IntegrationApi.md) | [**apiIntegrationUpdateProductFromOlimposPost**](doc/IntegrationApi.md#apiintegrationupdateproductfromolimpospost) | **POST** /api/Integration/UpdateProductFromOlimpos | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationCreateregionpriceGet**](doc/MigrationApi.md#apimigrationcreateregionpriceget) | **GET** /api/Migration/createregionprice | 
 [*MigrationApi*](doc/MigrationApi.md) | [**apiMigrationUpdateCitiesFromRestGet**](doc/MigrationApi.md#apimigrationupdatecitiesfromrestget) | **GET** /api/Migration/UpdateCitiesFromRest | 
+[*OrderApi*](doc/OrderApi.md) | [**apiOrderAcceptCancelationGet**](doc/OrderApi.md#apiorderacceptcancelationget) | **GET** /api/Order/AcceptCancelation | 
+[*OrderApi*](doc/OrderApi.md) | [**apiOrderAddExtraMessageOrderPost**](doc/OrderApi.md#apiorderaddextramessageorderpost) | **POST** /api/Order/AddExtraMessageOrder | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCancelationOrderPost**](doc/OrderApi.md#apiordercancelationorderpost) | **POST** /api/Order/CancelationOrder | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCheckoutPost**](doc/OrderApi.md#apiordercheckoutpost) | **POST** /api/Order/Checkout | 
 [*OrderApi*](doc/OrderApi.md) | [**apiOrderCreateOrderPost**](doc/OrderApi.md#apiordercreateorderpost) | **POST** /api/Order/CreateOrder | 
@@ -232,6 +234,7 @@ Class | Method | HTTP request | Description
  - [OrderServiceCheckoutItem](doc/OrderServiceCheckoutItem.md)
  - [OrderServiceCheckoutRequest](doc/OrderServiceCheckoutRequest.md)
  - [OrderServiceDepotDetail](doc/OrderServiceDepotDetail.md)
+ - [OrderServiceExtraOrderMessageRequest](doc/OrderServiceExtraOrderMessageRequest.md)
  - [OrderServiceGetOrderListResponse](doc/OrderServiceGetOrderListResponse.md)
  - [OrderServiceGetOrderRequest](doc/OrderServiceGetOrderRequest.md)
  - [OrderServiceOrderRequest](doc/OrderServiceOrderRequest.md)

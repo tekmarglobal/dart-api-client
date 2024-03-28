@@ -76,6 +76,7 @@ import 'package:openapi/src/model/order_service_cancelation_response.dart';
 import 'package:openapi/src/model/order_service_checkout_item.dart';
 import 'package:openapi/src/model/order_service_checkout_request.dart';
 import 'package:openapi/src/model/order_service_depot_detail.dart';
+import 'package:openapi/src/model/order_service_extra_order_message_request.dart';
 import 'package:openapi/src/model/order_service_get_order_list_response.dart';
 import 'package:openapi/src/model/order_service_get_order_request.dart';
 import 'package:openapi/src/model/order_service_order_request.dart';
@@ -222,6 +223,7 @@ part 'serializers.g.dart';
   OrderServiceCheckoutItem,
   OrderServiceCheckoutRequest,
   OrderServiceDepotDetail,
+  OrderServiceExtraOrderMessageRequest,
   OrderServiceGetOrderListResponse,
   OrderServiceGetOrderRequest,
   OrderServiceOrderRequest,

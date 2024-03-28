@@ -87,6 +87,7 @@ export 'package:openapi/src/model/order_service_cancelation_response.dart';
 export 'package:openapi/src/model/order_service_checkout_item.dart';
 export 'package:openapi/src/model/order_service_checkout_request.dart';
 export 'package:openapi/src/model/order_service_depot_detail.dart';
+export 'package:openapi/src/model/order_service_extra_order_message_request.dart';
 export 'package:openapi/src/model/order_service_get_order_list_response.dart';
 export 'package:openapi/src/model/order_service_get_order_request.dart';
 export 'package:openapi/src/model/order_service_order_request.dart';
