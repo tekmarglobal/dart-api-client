@@ -329,4 +329,3 @@ lib/src/model/rest_result_of_system_int32.dart
 lib/src/model/rest_result_of_system_object.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/order_service_extra_order_message_request_test.dart
