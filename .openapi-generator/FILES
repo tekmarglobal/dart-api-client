@@ -99,6 +99,7 @@ model/order-service-cancelation-response.ts
 model/order-service-checkout-item.ts
 model/order-service-checkout-request.ts
 model/order-service-depot-detail.ts
+model/order-service-extra-order-message-request.ts
 model/order-service-get-order-list-response.ts
 model/order-service-get-order-request.ts
 model/order-service-order-request.ts

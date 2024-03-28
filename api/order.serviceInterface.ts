@@ -14,6 +14,7 @@ import { HttpHeaders }                                       from '@angular/comm
 import { Observable }                                        from 'rxjs';
 
 import { OrderServiceCheckoutRequest } from '../model/models';
+import { OrderServiceExtraOrderMessageRequest } from '../model/models';
 import { OrderServiceGetOrderRequest } from '../model/models';
 import { OrderServiceOrderRequest } from '../model/models';
 import { OrderServicePatchOrderRequest } from '../model/models';
@@ -22,6 +23,7 @@ import { RestResultOfListOfOrderServiceCheckoutItem } from '../model/models';
 import { RestResultOfOrderServiceCancelationResponse } from '../model/models';
 import { RestResultOfOrderServiceGetOrderListResponse } from '../model/models';
 import { RestResultOfOrderServiceOrderResponse } from '../model/models';
+import { RestResultOfSystemBoolean } from '../model/models';
 
 
 import { Configuration }                                     from '../configuration';
@@ -31,6 +33,21 @@ import { Configuration }                                     from '../configurat
 export interface OrderServiceInterface {
     defaultHeaders: HttpHeaders;
     configuration: Configuration;
+
+    /**
+     * 
+     * 
+     * @param cancellationRequestCode 
+     * @param orderId 
+     */
+    apiOrderAcceptCancelationGet(cancellationRequestCode?: string, orderId?: number, extraHttpRequestParams?: any): Observable<RestResultOfOrderServiceCancelationResponse>;
+
+    /**
+     * 
+     * 
+     * @param orderServiceExtraOrderMessageRequest 
+     */
+    apiOrderAddExtraMessageOrderPost(orderServiceExtraOrderMessageRequest?: OrderServiceExtraOrderMessageRequest, extraHttpRequestParams?: any): Observable<RestResultOfSystemBoolean>;
 
     /**
      * 

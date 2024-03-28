@@ -60,6 +60,7 @@ export * from './order-service-cancelation-response';
 export * from './order-service-checkout-item';
 export * from './order-service-checkout-request';
 export * from './order-service-depot-detail';
+export * from './order-service-extra-order-message-request';
 export * from './order-service-get-order-list-response';
 export * from './order-service-get-order-request';
 export * from './order-service-order-request';

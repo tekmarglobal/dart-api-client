@@ -3144,6 +3144,101 @@
         }
       }
     },
+    "/api/Order/AddExtraMessageOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderServiceExtraOrderMessageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderServiceExtraOrderMessageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderServiceExtraOrderMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfSystemBoolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfSystemBoolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfSystemBoolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/AcceptCancelation": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "cancellationRequestCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RestResultOfOrderServiceCancelationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Order/CreateOrder": {
       "post": {
         "tags": [
@@ -6659,6 +6754,20 @@
           },
           "data": {
             "$ref": "#/components/schemas/OrderServiceCancelationResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderServiceExtraOrderMessageRequest": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
